@@ -1,0 +1,20 @@
+-provide :title, 'Registrar Producto'
+%h2 Registrar producto
+=form_for @producto do |f|
+  %p
+    =f.label :nombre, "Nombre"
+    =f.text_field :nombre
+  %p    
+    =f.label :precio
+    =f.text_field :precio
+  %p
+    =f.label :descripcion, "Descripción"
+    =f.text_area :descripcion
+  %p
+    =f.label :ingredientes
+    =f.text_area :ingredientes
+  %p
+    =f.label :usos, "Forma de uso"
+    =f.text_area :usos
+  %p
+    =f.submit "Registrar"

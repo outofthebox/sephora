@@ -1,0 +1,8 @@
+-provide :title, @producto.nombre
+%h2
+  Producto: #{@producto.nombre}
+%ul
+  %li #{@producto.precio}
+  %li #{@producto.descripcion}
+  %li #{@producto.ingredientes}
+  %li #{@producto.usos}
