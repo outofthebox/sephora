@@ -1,0 +1,26 @@
+development:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: sephora_development
+  pool: 5
+  username: postgres
+  password: 123
+
+test:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: sephora_test
+  pool: 5
+  username: postgres
+  password: 123
+
+production:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: sephora_production
+  pool: 5
+  username: postgres
+  password: 123
