@@ -1,5 +1,6 @@
 class ProductosController < ApplicationController
   def index
+    @productos = Producto.all
   end
 
   def new
@@ -30,5 +31,10 @@ class ProductosController < ApplicationController
 
   def show
     @producto = Producto.find params[:id]
+  end
+
+  def destroy
+    Producto.delete params[:id]
+    redirect_to :root
   end
 end

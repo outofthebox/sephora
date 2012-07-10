@@ -1,3 +1,11 @@
 %ul
   %li
     =link_to "nuevo producto", new_producto_path
+-if @productos and @productos.any?
+  %h3 Nuestros Productos
+  %ul
+    -@productos.each do |producto|
+      %li
+        =link_to producto.nombre, producto_path(producto.id)
+        %small
+          =button_to "borrar", producto, :method => :delete
