@@ -3,23 +3,18 @@
 =form_for @producto do |f|
   %p
     =form_error @producto, :nombre
-    =f.label :nombre, "Nombre"
-    =f.text_field :nombre
-  %p    
+    =f.labelbrtext "Nombre", :nombre, :class => "big full"
+  %p
     =form_error @producto, :precio
-    =f.label :precio
-    =f.text_field :precio
+    =f.labelbrtext "Precio", :precio
   %p
     =form_error @producto, :descripcion
-    =f.label :descripcion, "Descripción"
-    =f.text_area :descripcion
+    =f.labelbrtextarea "Descripción", :descripcion, :class => "full"
   %p
     =form_error @producto, :ingredientes
-    =f.label :ingredientes
-    =f.text_area :ingredientes
+    =f.labelbrtextarea "Ingredientes", :ingredientes, :class => "full"
   %p
     =form_error @producto, :usos
-    =f.label :usos, "Forma de uso"
-    =f.text_area :usos
-  %p
+    =f.labelbrtextarea "Forma de uso", :usos, :class => "full"
+  %p.rgt
     =f.submit "Editar"
