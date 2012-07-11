@@ -10,7 +10,7 @@ class ProductosController < ApplicationController
   def create
     @producto = Producto.new params[:producto]
     if @producto.save
-      redirect_to edit_producto_path(@producto.id)
+      redirect_to producto_ver_path(@producto.slug)
     else
       render :new
     end
@@ -23,14 +23,14 @@ class ProductosController < ApplicationController
   def update
     @producto = Producto.find params[:id]
     if @producto.update_attributes params[:producto]
-      redirect_to edit_producto_path(@producto.id)
+      redirect_to producto_ver_path(@producto.slug)
     else
       render :edit
     end
   end
 
   def show
-    @producto = Producto.find params[:id]
+    @producto = Producto.where(:slug => params[:slug]).first
   end
 
   def destroy

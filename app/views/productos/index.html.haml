@@ -6,6 +6,6 @@
   %ul
     -@productos.each do |producto|
       %li
-        =link_to producto.nombre, producto_path(producto.id)
+        =link_to producto.nombre, producto_ver_path(producto.slug)
         %small
           =button_to "borrar", producto, :method => :delete

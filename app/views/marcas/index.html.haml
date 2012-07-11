@@ -6,6 +6,6 @@
   %ul
     -@marcas.each do |marca|
       %li
-        =link_to marca.marca, marca_path(marca.id)
+        =link_to marca.marca, marca_ver_path(marca.slug)
         %small
           =button_to "borrar", marca, :method => :delete

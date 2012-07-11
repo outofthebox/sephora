@@ -10,7 +10,7 @@ class MarcasController < ApplicationController
   def create
     @marca = Marca.new params[:marca]
     if @marca.save
-      redirect_to marca_path(@marca.id)
+      redirect_to marca_ver_path(@marca.slug)
     else
       render :new
     end
@@ -23,14 +23,14 @@ class MarcasController < ApplicationController
   def update
     @marca = Marca.find params[:id]
     if @marca.update_attributes params[:marca]
-      redirect_to marca_path(@marca.id)
+      redirect_to marca_ver_path(@marca.slug)
     else
       render :edit
     end
   end
 
   def show
-    @marca = Marca.find params[:id]
+    @marca = Marca.where(:slug => params[:slug]).first
   end
 
   def destroy
