@@ -1,6 +1,7 @@
 class Producto < ActiveRecord::Base
   validate :validar
-  attr_accessible :nombre, :precio, :descripcion, :ingredientes, :usos, :publicado
+  belongs_to :marca
+  attr_accessible :nombre, :precio, :descripcion, :ingredientes, :usos, :publicado, :marca_id
   before_save do
     self.slug = self.nombre.parameterize if new_record?
   end

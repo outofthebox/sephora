@@ -17,6 +17,8 @@
     =form_error @producto, :usos
     =f.labelbrtextarea "Forma de uso", :usos, :class => "full"
   %p
+    =f.select :marca_id, Marca.all.map{|m|[m.marca, m.id]}
+  %p
     =f.check_box :publicado
     =f.label :publicado, "Publicado"
   %p.rgt
