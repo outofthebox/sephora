@@ -10,4 +10,6 @@ Sephora::Application.routes.draw do
   
   get   "marca", :to => "marcas#index"
   get   "marca/:slug",  :to => "marcas#show", :as => "marca_ver"
+
+  get   "admin/productos", :to => "productos#index_admin"
 end

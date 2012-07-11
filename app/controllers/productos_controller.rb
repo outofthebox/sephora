@@ -1,6 +1,6 @@
 class ProductosController < ApplicationController
   def index
-    @productos = Producto.all
+    @productos = Producto.includes(:marca).where :publicado => true
   end
 
   def new
@@ -30,9 +30,14 @@ class ProductosController < ApplicationController
   end
 
   def show
-    @producto = Producto.where(:slug => params[:slug]).first
+    @producto = Producto.where(:slug => params[:slug], :publicado => true).first
   end
 
+  def index_admin
+    @productos = Producto.all
+    render :index
+  end
+  
   def destroy
     Producto.delete params[:id]
     redirect_to :root
