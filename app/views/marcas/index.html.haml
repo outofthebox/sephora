@@ -9,3 +9,5 @@
         =link_to marca.marca, marca_ver_path(marca.slug)
         %small
           =button_to "borrar", marca, :method => :delete
+          =link_to "editar", edit_marca_path(marca.id)
+
