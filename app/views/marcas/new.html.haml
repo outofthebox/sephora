@@ -1,0 +1,11 @@
+-provide :title, 'Registrar Producto'
+%h2 Registrar marca
+=form_for @marca do |f|
+  %p
+    =form_error @marca, :marca
+    =f.labelbrtext "Marca", :marca, :class => "big full"
+  %p
+    =form_error @marca, :descripcion
+    =f.labelbrtextarea "Descripción", :descripcion, :class => "full"
+  %p.rgt
+    =f.submit! "Registrar"

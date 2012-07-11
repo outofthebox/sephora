@@ -1,0 +1,11 @@
+%ul
+  %li
+    =link_to "nueva marca", new_marca_path
+-if @marcas and @marcas.any?
+  %h3 Nuestras Marcas
+  %ul
+    -@marcas.each do |marca|
+      %li
+        =link_to marca.marca, marca_path(marca.id)
+        %small
+          =button_to "borrar", marca, :method => :delete
