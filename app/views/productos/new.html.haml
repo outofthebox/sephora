@@ -2,18 +2,23 @@
 %h2 Registrar producto
 =form_for @producto do |f|
   %p
+    =form_error @producto, :nombre
     =f.label :nombre, "Nombre"
     =f.text_field :nombre
   %p    
+    =form_error @producto, :precio
     =f.label :precio
     =f.text_field :precio
   %p
+    =form_error @producto, :descripcion
     =f.label :descripcion, "Descripción"
     =f.text_area :descripcion
   %p
+    =form_error @producto, :ingredientes
     =f.label :ingredientes
     =f.text_area :ingredientes
   %p
+    =form_error @producto, :usos
     =f.label :usos, "Forma de uso"
     =f.text_area :usos
   %p
