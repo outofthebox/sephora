@@ -1,4 +1,5 @@
 Sephora::Application.routes.draw do
+  root :to => "paginas#home"
   root :to => "productos#index"
   scope :path_names => {:new => "registrar", :edit => "editar"} do
     resources :productos
@@ -12,4 +13,7 @@ Sephora::Application.routes.draw do
   get   "marca/:slug",  :to => "marcas#show", :as => "marca_ver"
 
   get   "admin/productos", :to => "productos#index_admin"
+
+  get   "contacto", :to => "paginas#contacto", :as => "contacto"
+  post  "contacto", :to => "paginas#contacto_post"
 end

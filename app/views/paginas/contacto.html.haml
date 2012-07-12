@@ -1,0 +1,15 @@
+- if flash[:contacto_exito]
+  %h2 Gracias por contactarnos, te enviaremos un e-mail pronto.
+- else
+  = form_for @contacto, :url => "/contacto#contacto" do |f|
+    %p
+      = form_error @contacto, :nombre
+      = f.text_field :nombre, :placeholder => "Nombre", :class => "texto"
+    %p
+      = form_error @contacto, :email
+      = f.email_field :email, :placeholder => "E-Mail", :class => "texto"
+    %p
+      = form_error @contacto, :mensaje
+      = f.text_area :mensaje, :placeholder => "Tu mensaje", :class => "texto", :rows => nil, :cols => nil
+    %p
+      = f.submit "Enviar", :class => "boton"

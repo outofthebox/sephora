@@ -4,6 +4,7 @@ gem 'rails', '3.2.0'
 gem 'pg'
 gem 'haml'
 gem 'jquery-rails'
+gem 'sendgrid'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
