@@ -6,10 +6,110 @@
   <!--[if gt IE 8]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
 %head
   %meta{:charset => "UTF-8"}
+  %link{ :rel => "shortcut icon", :href => "favicon.ico", :type => "image/x-icon"}/
   %title=yield :title
   = javascript_include_tag :modernizr
   = stylesheet_link_tag :application
   = csrf_meta_tags
 %body
-  = yield 
+  #head-sup.table.full
+  #wrap
+    #head
+      #contenme
+        #search
+          = form_for :buscar, { :url => '/buscar' } do |f|
+            %p.nowrap
+              = f.text_field :buscar, :class => 'input'
+              = f.submit '', :class => 'submit'
+        #logo
+      #menu
+        %ul.nobullet.nolist
+          %li MAQUILLAJE
+          %li SKINCARE
+          %li FRAGANCIAS
+          %li BAÑO / CUERPO
+          %li CABELLO
+          %li ACCESORIOS
+          %li HOMBRES
+          %li OBSEQUIOS
+          %li SOLUCIONES
+          %li TU LISTA
+          %li TENDENCIAS
+          %li.select
+            %select
+              %option MARCA
+              %option MARCA 1
+              %option MARCA 2
+              %option MARCA 3
+              %option MARCA 4
+
+    / GRITAMOS
+    = yield
+
+    #footer
+      #social
+        %ul.nolist
+          %li.noborder
+            #fb
+            %p.social Facebook
+            %p.leyenda PROMOCIONES
+            %p.leyenda2 EXCLUSIVAS
+            %p.leyenda3
+              para nuestros fans
+              %span.flecha
+                ►
+          %li
+            #pn
+            %p.social Pinterest
+            %p.leyenda INSPÍRATE
+            %p.leyenda2 con NUESTROS
+            %p.leyenda3
+              boards
+              %span.flecha
+                ►
+          %li
+            #tw
+            %p.social Twitter
+            %p.leyenda SIGUE
+            %p.leyenda2 NUESTRAS BEAUTY
+            %p.leyenda3
+              news al intante
+              %span.flecha
+                ►
+          %li
+            #yt
+            %p.social YouTube
+            %p.leyenda
+              MIRA
+              %span NUESTRAS
+            %p.leyenda2 últimas tendencias
+            %p.leyenda3
+              en nuestro canal
+              %span.flecha
+                ►
+
+      #sus-cata
+        #suscribete
+          %span#mail
+          %p
+            SUSCRÍBETE Y RECIBE LOS SEPHORA HIGHLIGHTS
+            #registrar
+        #cata-online
+          %p
+            DESCARGA<br />EL CATÁLOGO ONLINE
+            #descargar
+      #sephora-en
+        %p
+          SEPHORA en:
+          #bg
+          #gp
+      #footin
+        #links
+          %ul.nobullet.nolist.seplist
+            %li Contacto
+            %li Mapa del sitio
+            %li Poĺítica de privacidad
+            %li Empleo
+        #internacional
+
   = javascript_include_tag :application

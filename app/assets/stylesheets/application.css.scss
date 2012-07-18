@@ -1,3 +1,248 @@
 // = require reset
 // = require eses
 // = require_self
+@mixin inlineblock{
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline;
+}
+ul.seplist > li + li:before, ol.seplist > li + li:before{
+  content: '|';
+  color: #000;
+}
+
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+// BANDA NEGRA SUPERIOR
+#head-sup {
+  background: #231F20;
+  height: 40px;
+}
+
+// CONTENEDOR PRINCIPAL
+#wrap {
+  margin: 0 auto;
+  width: 960px;
+
+// SEPARADOR
+  #separador {
+    border-top: 1px solid #C1C1C1;
+    border-bottom: 1px solid #C1C1C1;
+    height: 40px;
+  }
+
+// HEADER SUPERIOR
+  #head {
+    height: 160px;
+    margin: 0 auto;
+    #contenme {
+      height: auto;
+      padding-top: 30px;
+      position: relative;
+      #search {
+        position: absolute;
+        margin: 0 10px 0;
+          input[type=text] {
+            margin:0;
+            height: 20px;
+            border: 1px solid black;
+            border-radius: 0;
+          }
+          .submit{
+            background: #000 image-url('buscar.png') no-repeat 0 0;
+            width: 26px;
+            height: 20px;
+            margin-left: -5px;
+            padding: 0;
+            border-radius: 0;
+            border: none;
+          }
+      }
+      #logo {
+        width: 300px;
+        height: 32px;
+        background: url('logo.png');
+        margin: 0 auto;
+      }
+    }
+    #menu {
+      font-size: 8pt;
+      text-align: center;
+      padding-top: 50px;
+      li {
+        padding: 0 0.4em;
+      }
+    }
+    .select select {
+      background: transparent;
+      width: 70px;
+      height: 20px;
+      display: inline;
+    }
+  }
+  #footer {
+    border-top: 3px solid #2c2728;
+    font-size: 8pt;
+    #social {
+      width: 815px;
+      height: auto;
+      margin: 0 auto;
+      padding-top: 10px;
+      ul {
+        width: auto;
+        height: 50px;
+        padding: 0;
+      }
+      .noborder { border: none; }
+      li {
+          display: -moz-inline-stack;
+          display: inline-block;
+          vertical-align: top;
+          zoom: 1;
+          *display: inline;
+        width: 178px; padding-left: 20px; border-left: 1px solid black;
+        #fb, #tw, #pn, #yt, #bg, #gp {
+          background: url('footer/social.png');
+          width: 31px; height: 31px;
+          float: left;
+          margin-top: 11px;
+        }
+        #fb {
+          background-position: 0px 0px;
+        }
+        #tw {
+          background-position: 0px -62px;
+        }
+        #pn {
+          background-position: 0px -31px;
+        }
+        #yt {
+          background-position: 0px -93px;
+        }
+        .social {
+          font-weight: bold;
+        }
+        p {
+          padding: 0;
+          margin: 0;
+          margin-top: -4px;
+          margin-left: 35px;
+
+          .leyenda {
+
+          }
+          .leyenda2 {
+
+          }
+          .leyenda3 {
+
+          }
+        }
+      }
+    }
+  }
+
+#registrar, #internacional, #descargar {
+  background:url(footer/botones.png);
+  height: 21px;
+}
+#registrar {
+  background-position: -239px 0px;
+  width: 93px;
+  float: right;
+  margin-top: 10px;
+}
+#internacional {
+  background-position: -93px 0px;
+  height: 23px;
+  width: 146px;
+}
+#descargar {
+  margin-top: 10px;
+  background-position: 0px 0px;
+  width: 93px;
+  float: right;
+}
+#sus-cata {
+  width: 100%;
+  border-top: 1px solid #C7C7C7;
+  border-bottom: 4px solid #2c2728;
+  height: 55px;
+  padding-top: 15px;
+
+
+  #suscribete {
+    width: 300px;
+    float: left;
+
+    #mail {
+      background: url('footer/mail.png');
+      width: 17px; height: 11px;
+      float: left;
+      margin: 15px 5px 5px;
+    }
+  }
+  #cata-online {
+    width: 275px;
+    float: right;
+  }
+
+  p { width: 175px; float: left; }
+}
+
+  #sephora-en {
+    text-align: right;
+    width: 100%;
+    margin-top: 10px;
+    p {
+      margin-right: 5px;
+      display: inline-block;
+    }
+    #bg, #gp {
+      background: url('footer/social.png');
+      width: 26px; height: 26px;
+      display: inline-block;
+    }
+    #bg {
+      background-position: 0px -124px;
+
+    }
+    #gp {
+      width: 26px; height: 26px;
+      background-position: 0px -150px;
+    }
+  }
+
+
+  #footin {
+    width: 100%;
+    border-top: 1px solid black;
+    height: 50px;
+    padding-top: 15px; 
+    #links {
+      float: left;
+      padding-top: 10px;
+    }
+
+    #internacional {
+      float: right;
+    }
+  }
+
+  #slider-home {
+    height: auto;
+    #producto {
+      height: auto;
+    }
+    #poster {
+      height: auto;
+
+    }
+  }
+
+
+}

@@ -109,6 +109,7 @@ ul.seplist > li + li:before, ol.seplist > li + li:before{
 
 /* --- Forms --- */
 input, textarea{
+  -webkit-appearance: none;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
