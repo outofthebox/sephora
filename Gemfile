@@ -6,6 +6,7 @@ gem 'haml'
 gem 'jquery-rails'
 gem 'sendgrid'
 gem 'hominid'
+gem 'paperclip', '~> 2.7'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

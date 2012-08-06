@@ -6,3 +6,5 @@
   %li #{@producto.descripcion}
   %li #{@producto.ingredientes}
   %li #{@producto.usos}
+  %li
+    =image_tag @producto.foto.url(:normal)

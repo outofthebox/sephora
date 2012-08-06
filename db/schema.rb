@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120711203607) do
+ActiveRecord::Schema.define(:version => 20120806183334) do
 
   create_table "marcas", :force => true do |t|
     t.string   "marca"
@@ -27,15 +27,19 @@ ActiveRecord::Schema.define(:version => 20120711203607) do
   create_table "productos", :force => true do |t|
     t.string   "nombre"
     t.text     "descripcion"
-    t.decimal  "precio",       :precision => 10, :scale => 2
-    t.boolean  "publicado",                                   :default => true
+    t.decimal  "precio",            :precision => 10, :scale => 2
+    t.boolean  "publicado",                                        :default => true
     t.text     "ingredientes"
     t.text     "usos"
     t.integer  "usuario_id"
-    t.datetime "created_at",                                                    :null => false
-    t.datetime "updated_at",                                                    :null => false
+    t.datetime "created_at",                                                         :null => false
+    t.datetime "updated_at",                                                         :null => false
     t.string   "slug"
     t.integer  "marca_id"
+    t.string   "foto_file_name"
+    t.string   "foto_content_type"
+    t.integer  "foto_file_size"
+    t.datetime "foto_updated_at"
   end
 
   add_index "productos", ["marca_id"], :name => "index_productos_on_marca_id"

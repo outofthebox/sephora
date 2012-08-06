@@ -19,6 +19,10 @@
   %p
     =f.select :marca_id, Marca.all.map{|m|[m.marca, m.id]}
   %p
+    =form_error @producto, :foto
+    =f.label :foto, "Sube la foto:"
+    =f.file_field :foto
+  %p.left
     =f.check_box :publicado
     =f.label :publicado, "Publicado"
   %p.rgt

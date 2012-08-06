@@ -109,7 +109,6 @@ ul.seplist > li + li:before, ol.seplist > li + li:before{
 
 /* --- Forms --- */
 input, textarea{
-  -webkit-appearance: none;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -176,7 +175,13 @@ table.zebra > tbody > tr:hover, table.zebra > tr:hover{
 }
 
 /* --- Media queries --- */
-@media (max-width: 35em){
+@media handheld,
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (orientation: landscape) and (max-device-width: 800px),
+  only screen and (max-device-width: 480px) and (resolution: 163dpi),
+  only screen and (max-device-width: 480px),
+  only screen and (max-width: 480px){
   .table, .table > .tcell{
     display: block;
     width: 100%;
@@ -225,6 +230,9 @@ table.zebra > tbody > tr:hover, table.zebra > tr:hover{
 .lt-ie9 .table, .lt-ie8 .table, .ie8 .table, .ie7 .table{
   white-space: nowrap;
   overflow: hidden;
+}
+.lt-ie8 .tcell, .ie7 .tcell{
+  display: inline !important;
 }
 .lt-ie9 .tcell, .lt-ie8 .tcell, .ie8 .tcell, .ie7 .tcell{
   display: inline !important;
