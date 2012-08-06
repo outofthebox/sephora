@@ -14,7 +14,7 @@ ul.seplist > li + li:before, ol.seplist > li + li:before{
 }
 
 body {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: HelveticaNeue, Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 // BANDA NEGRA SUPERIOR
@@ -73,6 +73,7 @@ body {
       font-size: 8pt;
       text-align: center;
       padding-top: 50px;
+      font-weight: bold; 
       li {
         padding: 0 0.4em;
       }
@@ -124,16 +125,16 @@ body {
           background-position: 0px -93px;
         }
         .social {
-          font-weight: bold;
         }
         p {
           padding: 0;
           margin: 0;
           margin-top: -4px;
           margin-left: 35px;
+          }
 
           .leyenda {
-
+            font-weight: bold;
           }
           .leyenda2 {
 
@@ -141,7 +142,6 @@ body {
           .leyenda3 {
 
           }
-        }
       }
     }
   }
@@ -233,6 +233,8 @@ body {
     }
   }
 
+
+// HOME
   #slider-home {
     height: auto;
     #producto {
@@ -241,6 +243,48 @@ body {
     #poster {
       height: auto;
 
+    }
+  }
+
+  .linksrapidos {
+    font-size: 9pt;
+    margin-left: 192px;
+    margin-top: 15px;
+    color: red;
+    font-weight: bold;
+    span {
+      color: black;
+      padding-left: 40px;
+    }
+  }
+
+  #best-sellers, #lo-nuevo {
+    padding-top: 20px;
+    text-align: center;
+
+    h3 {
+      font-size: 32pt;
+      font-weight: lighter;
+    }
+
+    #slider-wrap {
+      // border: 1px solid red;
+      height: auto;
+      overflow: hidden;
+
+      ul {
+
+        li {
+          display: inline-block;
+          width: 200px;
+          // border: 1px solid blue;
+          margin: 0 12px 0 12px;
+
+          p {
+            padding: -10px;
+          }
+        }
+      }
     }
   }
 
