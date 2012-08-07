@@ -7,7 +7,8 @@
 %head
   %meta{:charset => "UTF-8"}
   %link{ :rel => "shortcut icon", :href => "favicon.ico", :type => "image/x-icon"}/
-  %title=yield :title
+  %title
+    Sephora
   = javascript_include_tag :modernizr
   = stylesheet_link_tag :application
   = csrf_meta_tags
@@ -44,7 +45,6 @@
               %option MARCA 3
               %option MARCA 4
 
-    / GRITAMOS
     = yield
 
     #footer
