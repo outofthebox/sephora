@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120806183334) do
+ActiveRecord::Schema.define(:version => 20120809155950) do
 
   create_table "marcas", :force => true do |t|
     t.string   "marca"
@@ -40,9 +40,12 @@ ActiveRecord::Schema.define(:version => 20120806183334) do
     t.string   "foto_content_type"
     t.integer  "foto_file_size"
     t.datetime "foto_updated_at"
+    t.string   "sku"
+    t.text     "nombre_real"
   end
 
   add_index "productos", ["marca_id"], :name => "index_productos_on_marca_id"
+  add_index "productos", ["sku"], :name => "index_productos_on_sku", :unique => true
   add_index "productos", ["slug"], :name => "index_productos_on_slug", :unique => true
 
 end

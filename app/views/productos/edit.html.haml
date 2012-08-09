@@ -1,12 +1,23 @@
 -provide :title, 'Editar Producto'
-%h2 Editar Producto
+%h2 Editar producto
 =form_for @producto do |f|
   %p
     =form_error @producto, :nombre
     =f.labelbrtext "Nombre", :nombre, :class => "big full"
   %p
-    =form_error @producto, :precio
-    =f.labelbrtext "Precio", :precio
+    =form_error @producto, :nombre_real
+    =f.labelbrtext "Nombre real", :nombre_real, :class => "big full"
+  %p
+    .table.full
+      .tcell.t33
+        =f.check_box :publicado
+        =f.label :publicado, "Publicado"
+      .tcell.t33
+        =form_error @producto, :sku
+        =f.labelbrtext "SKU", :sku
+      .tcell.t33
+        =form_error @producto, :precio
+        =f.labelbrtext "Precio", :precio
   %p
     =form_error @producto, :descripcion
     =f.labelbrtextarea "Descripción", :descripcion, :class => "full"
@@ -19,7 +30,8 @@
   %p
     =f.select :marca_id, Marca.all.map{|m|[m.marca, m.id]}
   %p
-    =f.check_box :publicado
-    =f.label :publicado, "Publicado"
+    =form_error @producto, :foto
+    =f.label :foto, "Foto:"
+    =f.file_field :foto
   %p.rgt
-    =f.submit "Editar"
+    =f.submit! "Editar"
