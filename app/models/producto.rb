@@ -8,8 +8,8 @@ class Producto < ActiveRecord::Base
     :styles => { :normal => "262x262#", :mediano => "196x196#", :chico => "135x135#" }
   }.merge(PAPERCLIP_STORAGE_OPTIONS)
 
-  validates_attachment_presence :foto, message: 'Selecciona una foto'
-  validates_attachment_content_type :foto, :content_type => ['image/jpeg', 'image/png', 'image/gif']
+  # validates_attachment_presence :foto, message: 'Selecciona una foto'
+  # validates_attachment_content_type :foto, :content_type => ['image/jpeg', 'image/png', 'image/gif']
 
   before_save do
     if new_record?

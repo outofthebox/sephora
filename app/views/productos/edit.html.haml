@@ -27,8 +27,19 @@
   %p
     =form_error @producto, :usos
     =f.labelbrtextarea "Forma de uso", :usos, :class => "full"
-  %p
-    =f.select :marca_id, Marca.all.map{|m|[m.marca, m.id]}
+  .table.full.tpad
+    .tcell.t33
+      = f.label :marca_id, "Marca"
+      %br
+      =f.select :marca_id, Marca.all.map{|m|[m.marca, m.id]}
+    .tcell.t33
+      = f.label :categoria_id, "Categoría"
+      %br
+      =f.select :categoria_id, Categoria.all.map{|m|[m.nombre, m.id]}
+    .tcell.t33
+      = f.label :uso_id, "Uso"
+      %br
+      =f.select :uso_id, Uso.all.map{|m|[m.nombre, m.id]}
   %p
     =form_error @producto, :foto
     =f.label :foto, "Foto:"

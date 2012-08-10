@@ -8,14 +8,14 @@
   %meta{:charset => "UTF-8"}
   %link{ :rel => "shortcut icon", :href => "favicon.ico", :type => "image/x-icon"}/
   %title
-    Sephora
+    #{"#{yield(:titulo)} | " if yield(:titulo)} Sephora
   = javascript_include_tag :modernizr
   = stylesheet_link_tag :application
   = csrf_meta_tags
 %body
   #head-sup.table.full
   #wrap
-    #head
+    %header#encabezado
       #contenme
         #search
           = form_for :buscar, { :url => '/buscar' } do |f|
@@ -24,19 +24,41 @@
               = f.submit '', :class => 'submit'
         %a{ :href => "/" }
           #logo
-      #menu
+      %nav#menu
         %ul.nobullet.nolist
-          %li MAQUILLAJE
-          %li SKINCARE
-          %li FRAGANCIAS
-          %li BAÑO / CUERPO
-          %li CABELLO
-          %li ACCESORIOS
-          %li HOMBRES
-          %li OBSEQUIOS
-          %li SOLUCIONES
-          %li TU LISTA
-          %li TENDENCIAS
+          %li
+            %a{ :href => "/categoria/maquillaje"}
+              Maquillaje
+          %li
+            %a{ :href => "/categoria/skincare"}
+              Skincare
+          %li
+            %a{ :href => "/categoria/fragancias"}
+              Fragancias
+          %li
+            %a{ :href => "/categoria/cuerpo"}
+              Baño / Cuerpo
+          %li
+            %a{ :href => "/categoria/cabello"}
+              Cabello
+          %li
+            %a{ :href => "/categoria/accesorios"}
+              Accesorios
+          %li
+            %a{ :href => "/categoria/hombres"}
+              Hombres
+          %li
+            %a{ :href => "/categoria/obsequios"}
+              Obsequios
+          %li
+            %a{ :href => "/categoria/soluciones"}
+              Soluciones
+          %li
+            %a{ :href => "/tu-lista"}
+              Tu Lista
+          %li
+            %a{ :href => "/tendencias"}
+              Tendencias
           %li.select
             %select
               %option MARCA

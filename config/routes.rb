@@ -21,4 +21,6 @@ Sephora::Application.routes.draw do
 
   get   "suscripcion", :to => "paginas#suscripcion", :as => "suscripcion"
   post  "suscripcion", :to => "paginas#suscripcion_post"
+
+  get   "categoria/:categoria", :to => "categorias#ver", :as => "categoria"
 end

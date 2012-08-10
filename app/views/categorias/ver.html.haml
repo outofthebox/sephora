@@ -1,0 +1,9 @@
+- provide :titulo, @categoria.nombre
+%section#categoria
+  %h2
+    = @categoria.nombre
+  - if @categoria.productos and @categoria.productos.any?
+    %ul
+      - @categoria.productos.each do |producto|
+        %li
+          = producto.nombre
