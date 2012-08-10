@@ -30,6 +30,8 @@
   %p
     =f.select :marca_id, Marca.all.map{|m|[m.marca, m.id]}
   %p
+    =f.select :categoria_id, Categoria.all.map{|m|[m.marca, m.id]}
+  %p
     =form_error @producto, :foto
     =f.label :foto, "Foto:"
     =f.file_field :foto
