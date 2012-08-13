@@ -6,6 +6,7 @@ gem 'haml'
 gem 'jquery-rails'
 gem 'sendgrid'
 gem 'hominid'
+gem 'activerecord-import'
 gem 'paperclip', '~> 2.7'
 
 group :assets do
