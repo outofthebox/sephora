@@ -418,4 +418,73 @@ body {
       }
     }
   }
+
+  #marca {
+    border-top: 1px solid #C1C1C1;
+    .title {
+      font-size: 1em;
+      text-transform: lowercase;
+      padding: 10px;
+    }
+    .contizq {
+      border-top: 5px solid #231F20;
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+          font-size: 0.8em;
+          padding: 10px;
+        }
+      }
+    }
+    .contder {
+      border-left: 7px solid #D6D6D8;
+      padding-bottom: 20px;
+      h2 {
+      padding-left: 10px;
+        margin-bottom: 20px;
+      }
+      p {
+      padding-left: 10px;
+        font-size: 0.8em;
+      }
+      .mas {
+        color: gray;
+        span {
+          color: black;
+        }
+      }
+      h3 {
+        font-size: 0.8em;
+        letter-spacing: 1px;
+        padding: 9px;
+        padding-left: 20px;
+        font-weight: bold;
+        color: white;
+        background: black;
+      }
+      ul {
+        text-align: center;
+        li {
+          font-size: 12pt;
+          display: inline-block;
+          width: 30%;
+          margin: 10px;
+          h4 {
+            font-size: 12pt;
+            padding: 0; margin: 0;
+            color: #231F20;
+            margin-top:10px;
+          }
+          p {
+            line-height: 15px;
+            font-size: 9pt;
+            color: #231F20;
+            padding: 0; margin: 0;
+          }
+        }
+      }
+    }
+  }
 }

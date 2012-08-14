@@ -1,5 +1,41 @@
--provide :title, @marca.marca
-%h2
-  Marca: #{@marca.marca}
-%p
-  Descripción: #{@marca.descripcion}
+- provide :titulo, @marca.marca
+%section#marca
+  %h3.title
+    = @marca.marca
+  .table.full
+    .contizq.tcell.t20
+      %ul
+        %li.first
+          = @marca.marca
+    .contder.tcell.t80
+      .table.full
+        .tcell.t65
+          %h2
+            =image_tag "", :size => "235x77"
+          %p
+            =@marca.descripcion
+          %p.mas
+            ver más
+            %span
+              ▼
+        .tcell.t35
+          =image_tag "", :size => "288x287"
+      %h3 EXPLORA LA MARCA
+      %h4
+        BEST SELLERS
+        %ul.nobullet
+          %li
+            =image_tag "", :size => "145x165"
+            %h4 #{@marca.marca}
+            %p Descripcion
+            %p $Costo
+          %li
+            =image_tag "", :size => "145x165"
+            %h4 #{@marca.marca}
+            %p Descripcion
+            %p $Costo
+          %li
+            =image_tag "", :size => "145x165"
+            %h4 #{@marca.marca}
+            %p Descripcion
+            %p $Costo
