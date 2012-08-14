@@ -2,8 +2,64 @@
 %section#categoria
   %h2
     = @categoria.nombre
-  - if @categoria.productos and @categoria.productos.any?
-    %ul
-      - @categoria.productos.each do |producto|
+  .table.full
+    .contizq.tcell.t25
+      %ul
+        %li.first
+          = @categoria.nombre
+        - if @categoria.productos and @categoria.productos.any?
+          - @categoria.productos.each do |producto|
+            %li
+              = producto.nombre
+    .contder.tcell.t75
+      .contenedor
+        =image_tag "", :size => "768x250"
+      .catalogo
+        %ul.nobullet.nolist
+          %li
+            =image_tag "", :size => "125x165"
+            %h4 PRODUCTO 1
+            %p Descripcion
+            %p $Costo
+          %li
+            =image_tag "", :size => "125x165"
+            %h4 PRODUCTO 2
+            %p Descripcion
+            %p $Costo
+          %li
+            =image_tag "", :size => "125x165"
+            %h4 PRODUCTO 3
+            %p Descripcion
+            %p $Costo
+          %li
+            =image_tag "", :size => "125x165"
+            %h4 PRODUCTO 4
+            %p Descripcion
+            %p $Costo
+        .navegacion
+          %span ver
+          %select
+            %option 20 por página
+          %span acomodar por:
+          %select
+            %option más vendidos
+          .numeros
+            %span 1 2 ...7
+            %p 379 artículos
+  .table.full
+    .tcell.t20
+    .masproducto.tcell.80
+      %h3 MÁS FRAGANCIAS
+      %ul.nobullet
         %li
-          = producto.nombre
+          =image_tag "", :size => "225x210"
+          %h4 PRODUCTO NUMERO UNO
+          %p Lorem ipsum dolor sit amet, nulla dui pharetra dignissim tempus mauris. Varius proin elit tincidunt quam, in amet et magni leo.
+        %li
+          =image_tag "", :size => "225x210"
+          %h4 PRODUCTO NUMERO UNO
+          %p Lorem ipsum dolor sit amet, nulla dui pharetra dignissim tempus mauris. Varius proin elit tincidunt quam, in amet et magni leo.
+        %li
+          =image_tag "", :size => "225x210"
+          %h4 PRODUCTO NUMERO UNO
+          %p Lorem ipsum dolor sit amet, nulla dui pharetra dignissim tempus mauris. Varius proin elit tincidunt quam, in amet et magni leo.

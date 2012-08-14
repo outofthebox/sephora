@@ -294,4 +294,128 @@ body {
     }
   }
 
+  #categoria {
+    border-top: 1px solid #C1C1C1;
+    h2 {
+      font-size: 1em;
+      text-transform: lowercase;
+    }
+    .contizq {
+      border-top: 5px solid #231F20;
+      ul {
+        border-bottom: 5px solid #231F20;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+          font-size: 0.8em;
+        }
+        .first {
+          font-size: 1em;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+      }
+    }
+    .contder {
+      border-left: 7px solid #D6D6D8;
+      padding-bottom: 20px;
+      border-bottom: 5px solid black;      
+      .contenedor {
+        img {
+          border-bottom: 5px solid #231F20;
+        }
+        
+      }
+    }
+    .catalogo {
+      margin-top: 15px;
+      border-top: 30px solid #D6D6D8;
+      padding-bottom: 30px;
+      ul {
+        text-align: center;
+        border-bottom: 1px solid #D6D6D8;
+        width: 730px;
+        margin: 0 auto;
+      }
+      li {
+        display: inline-block;
+        width: 150px;
+        margin: 10px;
+        img {
+          margin-bottom: 10px;
+        }
+        h4, p {
+          margin:0;
+          padding:0;
+          line-height: 1em;
+        }
+        h4 {
+          font-size: 0.9em;
+          text-transform: uppercase;
+        }
+        p {
+          font-size: 0.8em;
+        }
+      }
+      .navegacion {
+        text-align: right;
+        font-size: 0.7em;
+        margin-top: 10px;
+        margin-right: 20px;
+        span {
+          font-weight: bold;
+        }
+        .numeros {
+          color: #918F90;
+          width: 75px;
+          height: 12px;
+          line-height: 10px;
+          display: inline-block;
+          span:after {
+            content: ' ►';
+            color: black;
+          }
+          p {
+          line-height: 10px;
+          }
+        }
+        select {
+          border: 2px solid #918F90;
+          color: #C7C7C7;
+          background: transparent;
+          width: auto;
+          height: 20px;
+          display: inline;
+        }
+      }
+    }
+    .masproducto {
+      ul {
+        text-align: center;
+        li {
+          font-size: 12pt;
+          display: inline-block;
+          width: 30%;
+          margin: 10px;
+          h4 {
+            font-size: 12pt;
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 30px;
+            letter-spacing: 5px;
+          }
+          p {
+            font-size: 9pt;
+            color: gray;
+            font-style: italic;
+          }
+          img {
+            padding-bottom: 20px;
+            border-bottom: 5px solid black;
+          }
+        }
+      }
+    }
+  }
 }
