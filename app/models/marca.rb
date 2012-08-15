@@ -1,7 +1,7 @@
 class Marca < ActiveRecord::Base
   validate :validar
   has_many :productos
-  attr_accessible :marca, :descripcion
+  attr_accessible :marca, :descripcion, :slug
     before_save do
     self.slug = self.marca.parameterize if new_record?
   end

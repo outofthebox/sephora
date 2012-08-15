@@ -7,7 +7,8 @@
     -@productos.each do |producto|
       %li
         -if producto.marca
-          =link_to producto.marca.marca, marca_ver_path(producto.marca.slug)
+          = link_to producto.marca.marca, marca_ver_path(producto.marca.slug)
+          »
         =link_to producto.nombre, producto_ver_path(producto.slug)
         -unless producto.publicado
           &times;
