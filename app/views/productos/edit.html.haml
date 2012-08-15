@@ -41,6 +41,8 @@
       %br
       =f.select :uso_id, Uso.all.map{|m|[m.nombre, m.id]}
   %p
+    - if @producto.foto_file_name
+      = image_tag @producto.foto.url(:chico)
     =form_error @producto, :foto
     =f.label :foto, "Foto:"
     =f.file_field :foto
