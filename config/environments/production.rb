@@ -68,6 +68,6 @@ Sephora::Application.configure do
      :storage => :s3,
      :s3_credentials => "#{Rails.root}/config/s3.yml",
      :bucket => "sephoramexico",
-     :path => "/productos/:class/:attachment/:id_partition/:style/:filename"
+     :path => "/:class/:attachment/:id_partition/:style/:filename"
   }
 end

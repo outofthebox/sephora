@@ -5,7 +5,8 @@ Sephora::Application.routes.draw do
     resources :marcas
   end
 
-  get   "importar(/:quoi)", :to => "productos#importar"
+  get   "importar(/:quoi)", :to => "utilidades#importar"
+  get   "importarimg", :to => "utilidades#importarimg"
   
   get   "producto", :to => "productos#index"
   get   "producto/:slug",  :to => "productos#show", :as => "producto_ver"
