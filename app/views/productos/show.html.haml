@@ -5,7 +5,7 @@
       =image_tag @producto.foto.url(:normal)
     .tcell.t65
       .marca
-        =image_tag "", :size => "260x30"
+        %div{:style=>"width: 260px; height: 30px; border: 1px solid red;"}
       .info
         %span
           =@producto.marca.marca
@@ -21,22 +21,22 @@
       .interesar
         %ul.nobullet
           %li
-            =image_tag "", :size => "145x165"
+            %div{:style=>"width: 145px; height: 165px; border: 1px solid red;"}
             %h4 Producto
             %p Descripcion
             %p $Costo
           %li
-            =image_tag "", :size => "145x165"
+            %div{:style=>"width: 145px; height: 165px; border: 1px solid red;"}
             %h4 Producto
             %p Descripcion
             %p $Costo
           %li
-            =image_tag "", :size => "145x165"
+            %div{:style=>"width: 145px; height: 165px; border: 1px solid red;"}
             %h4 Producto
             %p Descripcion
             %p $Costo
           %li
-            =image_tag "", :size => "145x165"
+            %div{:style=>"width: 145px; height: 165px; border: 1px solid red;"}
             %h4 Producto
             %p Descripcion
             %p $Costo

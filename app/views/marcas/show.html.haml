@@ -11,7 +11,7 @@
       .table.full
         .tcell.t65
           %h2
-            =image_tag "", :size => "235x77"
+            %div{:style=>"width: 235px; height: 77px; border: 1px solid red;"}
           %p
             =@marca.descripcion
           %p.mas
@@ -19,23 +19,23 @@
             %span
               ▼
         .tcell.t35
-          =image_tag "", :size => "288x287"
+          %div{:style=>"width: 288px; height: 287px; border: 1px solid red;"}
       %h3 EXPLORA LA MARCA
       %h4
         BEST SELLERS
         %ul.nobullet
           %li
-            =image_tag "", :size => "145x165"
+            %div{:style=>"width: 145px; height: 165px; border: 1px solid red; margin: 0 auto;"}
             %h4 #{@marca.marca}
             %p Descripcion
             %p $Costo
           %li
-            =image_tag "", :size => "145x165"
+            %div{:style=>"width: 145px; height: 165px; border: 1px solid red; margin: 0 auto;"}
             %h4 #{@marca.marca}
             %p Descripcion
             %p $Costo
           %li
-            =image_tag "", :size => "145x165"
+            %div{:style=>"width: 145px; height: 165px; border: 1px solid red; margin: 0 auto;"}
             %h4 #{@marca.marca}
             %p Descripcion
             %p $Costo
