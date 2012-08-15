@@ -8,6 +8,7 @@ gem 'sendgrid'
 gem 'hominid'
 gem 'activerecord-import'
 gem 'paperclip', '~> 2.7'
+gem 'kaminari'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

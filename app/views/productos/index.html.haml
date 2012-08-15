@@ -6,6 +6,7 @@
   %ul
     -@productos.each do |producto|
       %li
+        [#{producto.id}]
         -if producto.marca
           = link_to producto.marca.marca, marca_ver_path(producto.marca.slug)
           »
@@ -13,5 +14,6 @@
         -unless producto.publicado
           &times;
         %small
-          =button_to "borrar", producto, :method => :delete
+          -#button_to "borrar", producto, :method => :delete
           =link_to "editar", edit_producto_path(producto.id)
+  = paginate @productos

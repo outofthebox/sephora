@@ -1,6 +1,6 @@
 class ProductosController < ApplicationController
   def index
-    @productos = Producto.includes(:marca).where(:publicado => true)
+    @productos = Producto.includes(:marca).where(:publicado => true).page(params[:page]).per(50)
   end
 
   def new
