@@ -1,10 +1,42 @@
 -provide :title, @producto.nombre
-%h2
-  Producto: #{@producto.nombre}
-%ul
-  %li #{@producto.precio}
-  %li #{@producto.descripcion}
-  %li #{@producto.ingredientes}
-  %li #{@producto.usos}
-  %li
-    =image_tag @producto.foto.url(:normal)
+%section#producto
+  .table.full
+    .tcell.t35
+      =image_tag @producto.foto.url(:normal)
+    .tcell.t65
+      .marca
+        =image_tag "", :size => "260x30"
+      .info
+        %span
+          =@producto.marca.marca
+        %span.precio
+          =@producto.precio
+      =@producto.nombre
+      .descripcion
+        =@producto.descripcion
+        %p.mas
+          ver más
+          %span
+            ▼
+      .interesar
+        %ul.nobullet
+          %li
+            =image_tag "", :size => "145x165"
+            %h4 Producto
+            %p Descripcion
+            %p $Costo
+          %li
+            =image_tag "", :size => "145x165"
+            %h4 Producto
+            %p Descripcion
+            %p $Costo
+          %li
+            =image_tag "", :size => "145x165"
+            %h4 Producto
+            %p Descripcion
+            %p $Costo
+          %li
+            =image_tag "", :size => "145x165"
+            %h4 Producto
+            %p Descripcion
+            %p $Costo
