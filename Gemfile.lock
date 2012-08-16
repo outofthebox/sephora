@@ -91,6 +91,9 @@ GEM
     modernizr-rails (2.0.6)
     multi_json (1.3.6)
     multi_xml (0.4.2)
+    nested_set (1.7.0)
+      activerecord (>= 3.0.0)
+      railties (>= 3.0.0)
     nokogiri (1.5.0)
     paperclip (2.7.0)
       activerecord (>= 2.3.0)
@@ -168,6 +171,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   modernizr-rails
+  nested_set
   paperclip (~> 2.7)
   pg
   rails (= 3.2.0)

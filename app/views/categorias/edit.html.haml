@@ -1,0 +1,9 @@
+- provide :titulo, @categoria.nombre
+%section#categoria-editar
+  = form_for @categoria, :url => categoria_path(@categoria) do |f|
+    %p
+      = f.labelbrtext "Nombre", :nombre, :class => "big full"
+    %p
+      = f.select :parent_id, ([["Raíz", nil]] + nested_set_options(Categoria, @categoria) {|i, level| "#{'&nbsp;' * (level.to_i+1)}".html_safe + " #{i.nombre}" })
+    %p.rgt
+      = f.submit! "Guardar"

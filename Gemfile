@@ -10,6 +10,7 @@ gem 'activerecord-import'
 gem 'paperclip', '~> 2.7'
 gem 'kaminari'
 gem 'aws-sdk'
+gem 'nested_set'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

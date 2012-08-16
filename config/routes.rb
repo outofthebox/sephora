@@ -3,6 +3,7 @@ Sephora::Application.routes.draw do
   scope :path_names => {:new => "registrar", :edit => "editar"} do
     resources :productos
     resources :marcas
+    resources :categorias
   end
 
   get   "importar(/:quoi)", :to => "utilidades#importar"
@@ -22,5 +23,5 @@ Sephora::Application.routes.draw do
   get   "suscripcion", :to => "paginas#suscripcion", :as => "suscripcion"
   post  "suscripcion", :to => "paginas#suscripcion_post"
 
-  get   "categoria/:categoria", :to => "categorias#ver", :as => "categoria"
+  # get   "categoria/:categoria", :to => "categorias#ver", :as => "categoria"
 end
