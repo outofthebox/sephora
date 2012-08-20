@@ -4,6 +4,7 @@ Sephora::Application.routes.draw do
     resources :productos
     resources :marcas
     resources :categorias
+    resources :secciones
   end
 
   get   "importar(/:quoi)", :to => "utilidades#importar"

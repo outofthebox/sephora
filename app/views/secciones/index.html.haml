@@ -1,0 +1,8 @@
+%section#secciones
+  - if @secciones and @secciones.any?
+    %ul
+      - @secciones.each do |seccion|
+        %li
+          = link_to seccion.nombre, seccion
+          %small
+            = link_to "Editar", edit_seccion_path(seccion.id)
