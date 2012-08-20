@@ -22,7 +22,7 @@ class SeccionesController < ApplicationController
   end
 
   def edit
-    @seccion = Seccion.find params[:id]
+    @seccion = Seccion.includes(:productos).find params[:id]
   end
 
   def update
@@ -38,4 +38,44 @@ class SeccionesController < ApplicationController
 
   def destroy
   end
+
+  # Vínculos
+
+  def vincular
+    seccion = Seccion.find params[:id]
+    vinculo = seccion.producto_seccion.build params[:producto_seccion]
+    if vinculo.valid?
+      vinculo.save
+    end
+    redirect_to edit_seccion_path(seccion.id)
+  end
+
+  def desvincular
+    seccion = Seccion.find params[:id]
+    producto_seccion = seccion.producto_seccion.find params[:producto_seccion]
+
+    if check_minihash(producto_seccion, params[:hash])
+      producto_seccion.destroy
+    end
+
+    redirect_to edit_seccion_path(seccion.id)
+  end
+
+  def producto_editar
+    @seccion = Seccion.find params[:id]
+    @producto_seccion = @seccion.producto_seccion.find params[:v_id]
+  end
+
+  def producto_update
+    seccion = Seccion.find params[:id]
+    producto_seccion = seccion.producto_seccion.find(params[:v_id])
+    producto_seccion.update_attributes params[:producto_seccion]
+    if producto_seccion.valid?
+      producto_seccion.save
+      redirect_to seccion_editar_producto_path(seccion.id, producto_seccion.id)
+    else
+      render :producto_editar
+    end
+  end
+
 end

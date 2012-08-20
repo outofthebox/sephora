@@ -26,4 +26,19 @@ class Producto < ActiveRecord::Base
     errors.add :precio, "Escribe un precio" unless self.precio.to_i > 0
     errors.add :sku, "Proporciona el SKU " unless self.sku.parameterize.length > 2
   end
+
+  def self.busqueda q
+    productos = self
+    if sku = q.match(/sku:([\w]*)/)
+      productos = productos.where :sku => sku[1]
+    else
+      query = []
+      q.parameterize.split("-").each do |q|
+        query << "to_tsvector(slug) @@ to_tsquery('#{sprintf('%s', q)}')"
+      end
+      productos = productos.where query.join(' OR ')
+    end
+
+    productos
+  end
 end

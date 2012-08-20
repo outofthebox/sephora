@@ -1,6 +1,8 @@
 // = require reset
 // = require eses
 // = require_self
+// = require widgets
+
 @mixin inlineblock{
   display: -moz-inline-stack;
   display: inline-block;

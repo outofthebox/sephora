@@ -3,6 +3,13 @@ class ProductosController < ApplicationController
     @productos = Producto.includes(:marca).where(:publicado => true).page(params[:page]).per(50)
   end
 
+  def busqueda
+    @productos = Producto.includes(:marca).busqueda params[:q]
+    respond_to do |format|
+      format.js if request.xhr?
+    end
+  end
+
   def new
     @producto = Producto.new
   end

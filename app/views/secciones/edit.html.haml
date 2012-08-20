@@ -7,10 +7,45 @@
       = f.select :parent_id, ([["Raíz", nil]] + nested_set_options(Seccion, @seccion) {|i, level| "#{'&nbsp;' * (level.to_i+1)}".html_safe + " #{i.nombre}" })
     %p.rgt
       = f.submit! "Editar"
+
   - if @seccion.depth == 1
     %h3 Productos
-    - if @productos and @productos.any?
+    - if (seccion_productos = @seccion.producto_seccion) and seccion_productos.any?
       %ul
+        - seccion_productos.each do |seccion_producto|
+          - producto = seccion_producto.producto
+          %li
+            %h6.inline
+              #{producto.nombre}
+            %small
+              %ul.nolist.nobullet.seplist.inline
+                %li
+                  %a{ :href => seccion_desvincular_producto_path(@seccion.id, seccion_producto.id, mini_hash(seccion_producto)) }<
+                    Desvincular
+                %li
+                  %a{ :href => seccion_editar_producto_path(@seccion.id, seccion_producto.id) }<
+                    Editar
+            - unless seccion_producto.descripcion.empty?
+              .descripcion
+                = simple_format seccion_producto.descripcion
     - else
       .empty
         %h5 No hay productos
+
+    = form_for :busqueda, :url => productos_busqueda_path, :html => { :class => "widget-seccion-producto-vincular" } do |f|
+      %p
+        = f.text_field "q", :type => "search", :class => "big", :placeholder => "Buscar productos"
+        = f.submit "Buscar"
+      .resultados
+
+    = form_for (producto = @seccion.producto_seccion.build), :url => seccion_vincular_producto_path(@seccion.id), :html => { :class => "widget-seccion-producto-form" } do |f|
+      %h3
+        %small Vincular producto
+        »
+        %span.tmpl-producto-nombre
+      = f.hidden_field :producto_id
+      %p
+        = form_error producto, :descripcion
+        = f.labelbrtextarea "Descripción", :descripcion, :class => "full"
+      %p.rgt
+        = f.submit! "Agregar"
