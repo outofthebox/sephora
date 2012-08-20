@@ -1,10 +1,15 @@
 class CategoriasController < ApplicationController
   def index
-    @categorias = Categoria.all
+    @categorias = Categoria.order(:nombre)
   end
 
   def ver
     @categoria = Categoria.by_slug(params[:categoria]).first
+  end
+
+  def show
+    @categoria = Categoria.find params[:id]
+    render :ver
   end
 
   def edit
