@@ -120,7 +120,7 @@ input[type=text], input[type=password], input[type=email], input[type=search], i
   border: 1px solid #ccc;
   color: #666;
   border-radius: 2px;
-  padding: 0.25em 0.3em;
+  padding: 0.3em 0.3em 0.2em;
   background: #fff;
 }
 input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=search]:focus, input[type=tel]:focus, input[type=number], .inputtext:focus, textarea:focus, .textarea:focus{
@@ -137,7 +137,7 @@ textarea{
   min-height: 100px;
   resize: vertical;
 }
-:invalid{
+input:invalid, textarea:invalid{
   border: 1px solid #922 !important;
   color: #922 !important;
   background: #fff !important;
@@ -175,13 +175,7 @@ table.zebra > tbody > tr:hover, table.zebra > tr:hover{
 }
 
 /* --- Media queries --- */
-@media handheld,
-  only screen and (-webkit-min-device-pixel-ratio: 2),
-  only screen and (min-device-pixel-ratio: 2),
-  only screen and (orientation: landscape) and (max-device-width: 800px),
-  only screen and (max-device-width: 480px) and (resolution: 163dpi),
-  only screen and (max-device-width: 480px),
-  only screen and (max-width: 480px){
+@media only screen and (max-width: 35em){
   .table, .table > .tcell{
     display: block;
     width: 100%;
@@ -224,6 +218,16 @@ table.zebra > tbody > tr:hover, table.zebra > tr:hover{
   .table.for-mobile.top    > .tcell{ vertical-align: top; }
   .table.for-mobile.middle > .tcell{ vertical-align: middle; }
   .table.for-mobile.bottom > .tcell{ vertical-align: bottom; }
+
+  input[type=text], input[type=password], input[type=email], input[type=search], input[type=tel], input[type=number], .inputtext, textarea, .textarea{
+    width: 195px;
+    font-size: 1.3em;
+    padding: 0.45em 0.3em 0.3em;
+  }
+  input.boton{
+    font-size: 1.2em;
+    padding: 0.67em 0.7em;
+  }
 }
 
 /* --- Fixes --- */

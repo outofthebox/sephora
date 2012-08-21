@@ -8,6 +8,13 @@ Sephora::Application.routes.draw do
     resources :categorias
   end
 
+
+  get   'usuarios/lista', :to => 'usuarios#lista', :as => 'usuarios_lista'
+  put   'usuario/actualizar/:id', :to => 'usuarios#actualizar', :as => 'usuario_actualizar'
+  get   'usuario/usar_sesion/:id', :to => 'usuarios#usar_sesion', :as => 'usuario_usar_sesion'
+  get   'logout(/:hash)', :to => 'usuarios#logout', :as => 'logout'
+
+
   get   "importar(/:quoi)", :to => "utilidades#importar"
   get   "importarimg", :to => "utilidades#importarimg"
   

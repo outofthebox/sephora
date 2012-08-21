@@ -1,0 +1,37 @@
+%h3 Usuarios
+%table.full.zebra{ :width => "100%" }
+  %thead
+    %tr
+      %th.ctr{ :width => "2%" }
+        ID
+      %th.ctr{ :width => "8%" }
+        Rol
+      %th.ctr{ :width => "30%" }
+        Usuario
+      %th.ctr{ :width => "15%" }
+        Registro
+      %th.ctr{ :width => "30%", :colspan => 2 }
+        Cambiar
+  %tbody
+    - if @usuarios.any?
+      - @usuarios.each do |usuario|
+        %tr
+          %td.ctr
+            %small
+              = usuario.id
+          %td.ctr
+            %small
+              = usuario.rol.capitalize
+          %td
+            = usuario.email
+          %td.ctr
+            %small
+              = time_ago_in_words usuario.created_at
+          %td.ctr
+            = form_for :usuario, :url => usuario_actualizar_path(usuario.id), :method => :put do |f|
+              = f.select :rol, $usuario_roles.map{|a,b| [b, a] }, { :selected => usuario.rol }
+              = f.submit "»", :class => "nopad"
+          %td
+            %small
+              =link_to "Usar sesión", usuario_usar_sesion_path(usuario.id)
+

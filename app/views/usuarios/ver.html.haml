@@ -1,0 +1,28 @@
+- provide :title, "Ver usuario: #{@usuario.username}"
+- checkins = @usuario.checkins.activos.order("created_at DESC")
+%section#usuarios-ver
+  .table.full.tpad.for-mobile
+    .tcell.t15.ctr
+      = image_tag @usuario.meta[:imagen]
+    .tcell.t85
+      %h3
+        #{login_info @usuario}
+      %div
+        %a.inlineblock.ctr{ :href => '/' }
+          %big.block
+            #{number_with_delimiter checkins.try(:size) || 0}
+          %small.block
+            #{pluralize(checkins.try(:size) || 0, 'checkin').gsub(/\d+/, '')}
+  - if checkins and checkins.any?
+    %h4 Checkins
+    %ul.checkins.nobullet
+      - checkins.each do |checkin|
+        %li
+          %strong
+            #{checkin.sucursal.cine} #{checkin.sucursal.nombre}
+          para ver
+          %strong
+            #{checkin.pelicula.titulo}
+          %small.block
+            hace #{time_ago_in_words checkin.created_at}
+

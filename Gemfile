@@ -12,6 +12,7 @@ gem 'kaminari'
 gem 'aws-sdk'
 gem 'nested_set'
 gem 'devise'
+gem 'cancan'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

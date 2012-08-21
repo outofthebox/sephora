@@ -8,4 +8,13 @@ class Usuario < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
+
+  before_create do
+    self.rol = "usuario"
+    self.rol = "admin" unless Usuario.count > 0
+  end
+
+  def rol? rol
+    self.rol == rol.to_s
+  end
 end
