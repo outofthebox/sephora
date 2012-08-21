@@ -35,6 +35,8 @@ Sephora::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
   PAPERCLIP_STORAGE_OPTIONS = {
    :storage => :s3,
    :s3_credentials => "#{Rails.root}/config/s3.yml",

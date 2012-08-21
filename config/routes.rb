@@ -1,4 +1,6 @@
 Sephora::Application.routes.draw do
+  devise_for :usuarios
+
   root :to => "paginas#home"
   scope :path_names => {:new => "registrar", :edit => "editar"} do
     resources :productos
