@@ -14,7 +14,7 @@
       %ul
         - seccion_productos.each do |seccion_producto|
           - producto = seccion_producto.producto
-          %li
+          %li.vinculo-producto{ :'data-vinculo-id' => seccion_producto.id }
             %h6.inline
               #{producto.nombre}
             %small

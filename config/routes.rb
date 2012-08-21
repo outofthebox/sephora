@@ -6,6 +6,7 @@ Sephora::Application.routes.draw do
   get   "secciones/:id/vincular/:v_id/editar", :to => "secciones#producto_editar", :as => "seccion_editar_producto"
   put   "secciones/:id/vincular/:v_id/editar", :to => "secciones#producto_update"
   post  "secciones/:id/vincular", :to => "secciones#vincular", :as => "seccion_vincular_producto"
+  post  "secciones/actualizar_orden", :to => "secciones#actualizar_orden"
 
   get   "importar(/:quoi)", :to => "utilidades#importar"
   get   "importarimg", :to => "utilidades#importarimg"

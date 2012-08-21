@@ -78,4 +78,13 @@ class SeccionesController < ApplicationController
     end
   end
 
+  def actualizar_orden
+    vinculos = params[:vinculo_id]
+    orden = (0...vinculos.size)
+
+    ProductoSeccion.update( vinculos, orden.map{|o| { :orden => o }}).reject { |p| p.errors.empty? }
+
+    render :text => orden.to_a
+  end
+
 end

@@ -1,6 +1,6 @@
 %section#seccion-producto-editar
   = form_for @producto_seccion, :url => seccion_editar_producto_path(@seccion.id, @producto_seccion.id) do |f|
     %p
-      = f.labelbrtextarea "Descripción", :descripcion
-    %p
+      = f.labelbrtextarea "Descripción", :descripcion, :class => "full"
+    %p.rgt
       = f.submit "Actualizar"

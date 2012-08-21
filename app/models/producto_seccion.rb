@@ -1,4 +1,6 @@
 class ProductoSeccion < ActiveRecord::Base
+  default_scope order("orden ASC")
+
   belongs_to :producto
   belongs_to :seccion
 
