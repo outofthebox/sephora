@@ -27,7 +27,7 @@ if ($secciones_busqueda = $(".widget-seccion-producto-vincular")).size()
   $(".vinculo-producto").closest("ul").sortable
     update: (e) ->
       orden = []
-      $form = $("<form>").appendTo "body"
+      $form = $("<form>").hide().appendTo "body"
 
       $csrf_param = $("meta[name='csrf-param']")
       $csrf_token = $("meta[name='csrf-token']")
@@ -49,7 +49,7 @@ if ($secciones_busqueda = $(".widget-seccion-producto-vincular")).size()
         url: '/secciones/actualizar_orden'
         data: $form.serialize()
         complete: (response) ->
-          console.log response.responseText
+          $form.remove()
 
 
 

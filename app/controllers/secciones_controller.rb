@@ -1,6 +1,11 @@
 class SeccionesController < ApplicationController
   def index
-    @secciones = Seccion.order
+    @secciones = Seccion.arrange
+  end
+
+  def ver
+    @seccion = Seccion.by_slug(params[:seccion])
+    @contenido = Seccion.seccion_actual(@seccion)
   end
 
   def show

@@ -5,6 +5,10 @@
       = f.labelbrtext "Nombre", :nombre, :class => "full big"
     %p
       = f.select :parent_id, ([["Raíz", nil]] + nested_set_options(Seccion, @seccion) {|i, level| "#{'&nbsp;' * (level.to_i+1)}".html_safe + " #{i.nombre}" })
+    - if @seccion.depth == 1
+      %p
+        = f.check_box :visible
+        = f.label :visible, "Visible"
     %p.rgt
       = f.submit! "Editar"
 
