@@ -27,6 +27,21 @@ class Producto < ActiveRecord::Base
     errors.add :sku, "Proporciona el SKU " unless self.sku.parameterize.length > 2
   end
 
+  def self.busqueda q
+    productos = self
+    if sku = q.match(/sku:([\w]*)/)
+      productos = productos.where :sku => sku[1]
+    else
+      query = []
+      q.parameterize.split("-").each do |q|
+        query << "to_tsvector(slug) @@ to_tsquery('#{sprintf('%s', q)}')"
+      end
+      productos = productos.where query.join(' OR ')
+    end
+
+    productos
+  end
+  
   def self.publicados
     self.where :publicado => true
   end

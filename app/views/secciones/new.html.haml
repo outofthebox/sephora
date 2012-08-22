@@ -1,0 +1,9 @@
+%section#seccion-registrar
+  = form_for @seccion do |f|
+    %p
+      = form_error @seccion, :nombre
+      = f.labelbrtext "Nombre", :nombre, :class => "full big"
+    %p
+      = f.select :parent_id, ([["Raíz", nil]] + nested_set_options(Seccion, @seccion) {|i, level| "#{'&nbsp;' * (level.to_i+1)}".html_safe + " #{i.nombre}" })
+    %p.rgt
+      = f.submit! "Registrar"

@@ -1,0 +1,13 @@
+- if @productos and @productos.any?
+  %h5 Resultados
+  %ul
+    - @productos.each do |producto|
+      %li.producto-vincular{ :'data-producto-id' => producto.id, :'data-producto-nombre' => producto.nombre }
+        %small
+          (#{producto.marca.marca})
+        %code [#{producto.sku}]
+        #{producto.nombre} 
+- else
+  .empty
+    %h5 No se encontraron resultados
+    Not found

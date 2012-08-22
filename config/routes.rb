@@ -1,12 +1,15 @@
 Sephora::Application.routes.draw do
   devise_for :usuarios
 
-  root :to => 'paginas#home'
-  scope :path_names => {:new => 'registrar', :edit => 'editar'} do
-    resources :productos
-    resources :marcas
-    resources :categorias
-  end
+  root :to => "paginas#home"
+  
+  get   ":seccion", :to => "secciones#ver", :constraints => { :seccion => /hotnow|favorites/ }
+
+  get   "secciones/:id/desvincular/:producto_seccion/:hash", :to => "secciones#desvincular", :as => "seccion_desvincular_producto"
+  get   "secciones/:id/vincular/:v_id/editar", :to => "secciones#producto_editar", :as => "seccion_editar_producto"
+  put   "secciones/:id/vincular/:v_id/editar", :to => "secciones#producto_update"
+  post  "secciones/:id/vincular", :to => "secciones#vincular", :as => "seccion_vincular_producto"
+  post  "secciones/actualizar_orden", :to => "secciones#actualizar_orden"
 
   get   'usuarios/lista', :to => 'usuarios#lista', :as => 'usuarios_lista'
   put   'usuario/actualizar/:id', :to => 'usuarios#actualizar', :as => 'usuario_actualizar'
@@ -16,8 +19,9 @@ Sephora::Application.routes.draw do
   get   'importar(/:quoi)', :to => 'utilidades#importar'
   get   'importarimg', :to => 'utilidades#importarimg'
   
-  get   'producto', :to => 'productos#index'
-  get   'producto/:slug',  :to => 'productos#show', :as => 'producto_ver'
+  get   "producto", :to => "productos#index"
+  get   "producto/:slug",  :to => "productos#show", :as => "producto_ver"
+  get   "productos/busqueda", :to => "productos#busqueda", :as => "productos_busqueda"
   
   get   'marca', :to => 'marcas#index'
   get   'marca/:slug',  :to => 'marcas#show', :as => 'marca_ver'
@@ -32,4 +36,12 @@ Sephora::Application.routes.draw do
 
   get   'categoria(/:categoria)', :to => 'categorias#ver', :as => 'categoria_ver'
   get   'producto(/:producto)', :to => 'productos#ver', :as => 'producto_ver'
+
+  scope :path_names => {:new => "registrar", :edit => "editar"} do
+    resources :productos
+    resources :marcas
+    resources :categorias
+    resources :secciones
+  end
+
 end

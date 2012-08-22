@@ -1,0 +1,15 @@
+%section#secciones
+  = render_tree @secciones do |seccion, child|
+    %li
+      - if seccion.depth.nil? || (seccion.depth == 1 and seccion.visible)
+        %strong
+          = link_to seccion.nombre, seccion
+        %small
+          = link_to "Editar", edit_seccion_path(seccion.id)
+
+      - else
+        %span
+          = link_to seccion.nombre, seccion
+        %small
+          = link_to "Editar", edit_seccion_path(seccion.id)
+      = child

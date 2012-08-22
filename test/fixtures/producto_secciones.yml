@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  producto: 
+  seccion: 
+  orden: 1
+  descripcion: MyText
+
+two:
+  producto: 
+  seccion: 
+  orden: 1
+  descripcion: MyText

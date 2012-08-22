@@ -1,0 +1,8 @@
+%section#seccion-ver
+  %h3
+    #{@seccion.nombre}
+  - if @contenido.productos && @contenido.productos.any?
+    %ul
+      - @contenido.productos.each do |p|
+        %li
+          = p.nombre
