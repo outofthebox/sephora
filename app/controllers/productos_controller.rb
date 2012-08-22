@@ -30,7 +30,9 @@ class ProductosController < ApplicationController
   end
 
   def show
-    @producto = Producto.where(:slug => params[:slug], :publicado => true).first
+    @producto = Producto.publicados.by_slug(params[:slug])
+    @categoria = Categoria.find(@producto.categoria_id)
+    @productos_relacionados = @categoria.productos.where("id != ?", @producto.id).publicados
   end
 
   def index_admin

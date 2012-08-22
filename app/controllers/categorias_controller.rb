@@ -1,10 +1,15 @@
 class CategoriasController < ApplicationController
   def index
-    @categorias = Categoria.order(:nombre)
+    @categorias = Categoria.arrange
   end
 
   def ver
     @categoria = Categoria.by_slug(params[:categoria]).first
+    subcategorias = @categoria.descendants
+    @subcategorias = subcategorias.reject{|r| r.parent_id != @categoria.id }
+
+    # para encontrar productos en categorías descendientes
+    @productos = Producto.publicados.where :categoria_id => [@categoria.id] + @subcategorias.map{|s| s.id }
   end
 
   def show

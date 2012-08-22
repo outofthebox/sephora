@@ -26,4 +26,12 @@ class Producto < ActiveRecord::Base
     errors.add :precio, "Escribe un precio" unless self.precio.to_i > 0
     errors.add :sku, "Proporciona el SKU " unless self.sku.parameterize.length > 2
   end
+
+  def self.publicados
+    self.where :publicado => true
+  end
+
+  def self.by_slug slug
+    self.where(:slug => slug).first
+  end
 end

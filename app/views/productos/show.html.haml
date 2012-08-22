@@ -1,4 +1,4 @@
--provide :title, @producto.nombre
+- provide :title, @producto.nombre
 %section#producto
   .table.full
     .tcell.t35
@@ -19,24 +19,10 @@
           %span
             ▼
       .interesar
-        %ul.nobullet
-          %li
-            %div{:style=>"width: 145px; height: 165px; border: 1px solid red;"}
-            %h4 Producto
-            %p Descripcion
-            %p $Costo
-          %li
-            %div{:style=>"width: 145px; height: 165px; border: 1px solid red;"}
-            %h4 Producto
-            %p Descripcion
-            %p $Costo
-          %li
-            %div{:style=>"width: 145px; height: 165px; border: 1px solid red;"}
-            %h4 Producto
-            %p Descripcion
-            %p $Costo
-          %li
-            %div{:style=>"width: 145px; height: 165px; border: 1px solid red;"}
-            %h4 Producto
-            %p Descripcion
-            %p $Costo
+        - if @productos_relacionados and @productos_relacionados.any?
+          %ul.nobullet.nolist
+            - @productos_relacionados.each do |producto|
+              %li
+                = link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
+                %h4 #{link_to producto.nombre, producto_ver_path(producto.slug)}
+                %p #{number_to_currency producto.precio}

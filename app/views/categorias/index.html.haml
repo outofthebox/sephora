@@ -1,9 +1,8 @@
 - provide :titulo, "Categorías"
 %section#categorias
-  - if @categorias and @categorias.any?
-    %ul
-      - @categorias.each do |categoria|
-        %li
-          = link_to categoria.nombre, categoria_path(categoria.id)
-          %small
-            = link_to "Editar", edit_categoria_path(categoria.id)
+  = render_tree @categorias do |categoria, child|
+    %li
+      = link_to categoria.nombre, categoria_ver_path(categoria.slug)
+      %small
+        (#{link_to "Editar", edit_categoria_path(categoria.id)})
+    = child

@@ -4,38 +4,22 @@
     = @categoria.nombre
   .table.full
     .contizq.tcell.t25
-      %ul
-        %li.first
-          = @categoria.nombre
-        - if @categoria.productos and @categoria.productos.any?
-          - @categoria.productos.each do |producto|
+      - if @subcategorias && @subcategorias.any?
+        %ul
+          - @subcategorias.each do |subcategoria|
             %li
-              = producto.nombre
+              = link_to subcategoria.nombre, categoria_ver_path(subcategoria.slug)
     .contder.tcell.t75
       .contenedor
         %div{:style=>"width: 768px; height: 250px; border: 1px solid red;"}
       .catalogo
-        %ul.nobullet.nolist
-          %li
-            %div{:style=>"width: 125px; height: 165px; border: 1px solid red; margin: 0 auto;"}
-            %h4 PRODUCTO 1
-            %p Descripcion
-            %p $Costo
-          %li
-            %div{:style=>"width: 125px; height: 165px; border: 1px solid red; margin: 0 auto;"}
-            %h4 PRODUCTO 2
-            %p Descripcion
-            %p $Costo
-          %li
-            %div{:style=>"width: 125px; height: 165px; border: 1px solid red; margin: 0 auto;"}
-            %h4 PRODUCTO 3
-            %p Descripcion
-            %p $Costo
-          %li
-            %div{:style=>"width: 125px; height: 165px; border: 1px solid red; margin: 0 auto;"}
-            %h4 PRODUCTO 4
-            %p Descripcion
-            %p $Costo
+        - if @productos and @productos.any?
+          %ul.nobullet.nolist
+            - @productos.each do |producto|
+              %li
+                = link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
+                %h4 #{link_to producto.nombre, producto_ver_path(producto.slug)}
+                %p #{number_to_currency producto.precio}
         .navegacion
           %span ver
           %select
@@ -48,7 +32,7 @@
             %p 379 artículos
   .table.full
     .tcell.t20
-    .masproducto.tcell.80
+    .masproducto.tcell.t80
       %h3 MÁS FRAGANCIAS
       %ul.nobullet
         %li
