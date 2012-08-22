@@ -44,4 +44,6 @@ Sephora::Application.routes.draw do
     resources :secciones
   end
 
+  # última línea, hace match con el resto de las rutas y muestra 404
+  match  '*a', :to => 'paginas#error_404'
 end

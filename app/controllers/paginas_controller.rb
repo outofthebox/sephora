@@ -30,4 +30,8 @@ class PaginasController < ApplicationController
       render :suscripcion
     end
   end
+
+  def error_404
+    render :file => "error/404", :status => 404
+  end
 end
