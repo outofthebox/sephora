@@ -1,6 +1,7 @@
 %ul
-  %li
-    =link_to "nuevo producto", new_producto_path
+  -if can? :manage, @producto
+    %li
+      =link_to "nuevo producto", new_producto_path
 -if @productos and @productos.any?
   %h3 Nuestros Productos
   %ul

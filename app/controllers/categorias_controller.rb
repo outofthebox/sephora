@@ -19,10 +19,12 @@ class CategoriasController < ApplicationController
 
   def edit
     @categoria = Categoria.find params[:id]
+    authorize! :manage, @categoria
   end
 
   def update
     @categoria = Categoria.find params[:id]
+    authorize! :manage, @categoria
     @categoria.update_attributes params[:categoria]
     if @categoria.save
       redirect_to edit_categoria_path(@categoria)

@@ -10,14 +10,17 @@ class SeccionesController < ApplicationController
 
   def show
     @seccion = Seccion.find params[:id]
+    authorize! :manage, @seccion
   end
 
   def new
     @seccion = Seccion.new
+    authorize! :manage, @seccion
   end
 
   def create
     @seccion = Seccion.create params[:seccion]
+    authorize! :manage, @seccion
     if @seccion.valid?
       @seccion.save
       redirect_to new_seccion_path
@@ -28,10 +31,12 @@ class SeccionesController < ApplicationController
 
   def edit
     @seccion = Seccion.includes(:productos).find params[:id]
+    authorize! :manage, @seccion
   end
 
   def update
     @seccion = Seccion.find params[:id]
+    authorize! :manage, @seccion
     @seccion.update_attributes params[:seccion]
     if @seccion.valid?
       @seccion.save
@@ -48,6 +53,7 @@ class SeccionesController < ApplicationController
 
   def vincular
     seccion = Seccion.find params[:id]
+    authorize! :manage, seccion
     vinculo = seccion.producto_seccion.build params[:producto_seccion]
     if vinculo.valid?
       vinculo.save
@@ -57,6 +63,7 @@ class SeccionesController < ApplicationController
 
   def desvincular
     seccion = Seccion.find params[:id]
+    authorize! :manage, seccion
     producto_seccion = seccion.producto_seccion.find params[:producto_seccion]
 
     if check_minihash(producto_seccion, params[:hash])
@@ -68,11 +75,13 @@ class SeccionesController < ApplicationController
 
   def producto_editar
     @seccion = Seccion.find params[:id]
+    authorize! :manage, @seccion
     @producto_seccion = @seccion.producto_seccion.find params[:v_id]
   end
 
   def producto_update
     seccion = Seccion.find params[:id]
+    authorize! :manage, seccion
     producto_seccion = seccion.producto_seccion.find(params[:v_id])
     producto_seccion.update_attributes params[:producto_seccion]
     if producto_seccion.valid?
@@ -85,6 +94,7 @@ class SeccionesController < ApplicationController
 
   def actualizar_orden
     vinculos = params[:vinculo_id]
+    authorize! :manage, vinculos
     orden = (0...vinculos.size)
 
     ProductoSeccion.update( vinculos, orden.map{|o| { :orden => o }}).reject { |p| p.errors.empty? }

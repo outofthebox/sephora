@@ -3,6 +3,7 @@
   = render_tree @categorias do |categoria, child|
     %li
       = link_to categoria.nombre, categoria_ver_path(categoria.slug)
-      %small
-        (#{link_to "Editar", edit_categoria_path(categoria.id)})
+      -if can? :manage, categoria
+        %small
+          (#{link_to "Editar", edit_categoria_path(categoria.id)})
     = child

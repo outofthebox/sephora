@@ -1,4 +1,5 @@
 class UtilidadesController < ApplicationController
+  load_and_authorize_resource
   def importar
     raise 'error' unless Rails.env.development?
 
