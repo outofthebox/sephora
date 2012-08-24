@@ -250,8 +250,19 @@ body {
       height: auto;
     }
     #poster {
-      height: auto;
-
+      height: 400px;
+      .contenedor {
+          width: 760px;
+          overflow: hidden;
+          position: relative;
+        .slider {
+            width: 1520px;
+            font-size: 0;
+          .diapositiva {
+            display: inline;
+          }
+        }
+      }
     }
   }
 

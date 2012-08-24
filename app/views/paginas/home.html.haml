@@ -3,7 +3,12 @@
   #producto.tcell.t20
     %div{:style=>"width: 192px; height: 400px; border: 1px solid red;"}
   #poster.tcell.t80
-    %div{:style=>"width: 768px; height: 400px; border: 1px solid red;"}
+    .contenedor
+      .slider
+        .diapositiva.prox
+          =image_tag "home/1.jpg"
+        .diapositiva.ante
+          =image_tag "home/2.jpg"
 #separador
   %p.linksrapidos
     LINKS RÁPIDOS:

@@ -50,6 +50,7 @@ if ($secciones_busqueda = $(".widget-seccion-producto-vincular")).size()
         data: $form.serialize()
         complete: (response) ->
           $form.remove()
-
-
-
+$(".prox").live "click", ->
+  $(".slider").animate({"margin-left": "-100%"}, "slow")
+$(".ante").live "click", ->
+  $(".slider").animate({"margin-left": "0"}, "slow")
