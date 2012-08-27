@@ -510,6 +510,76 @@ body {
     .info {
       margin-top: 10px;
       font-size: 12pt;
+      font-weight: bold;
+      .marcab {
+        text-transform: uppercase;
+      }
+      .precio {
+        padding-left: 75px;
+      }
+    }
+    .producto {
+      font-size: 11pt;
+      color: gray;
+    }
+    .descripcion {
+      font-size: 0;
+      h3 {
+        border-top: 1px solid #838383;
+        border-left: 1px solid #838383;
+        border-right: 1px solid #838383;
+        width: 150px;
+        font-size: 12pt;
+        color: red;
+        padding: 10px 10px 0 7px;
+        display: inline-block;
+      }
+      .borde {
+        border-bottom: 1px solid #838383;
+        width: 450px;
+        font-size: 12pt;
+        display: inline-block;
+      }
+      p {
+        font-size: 12pt;
+        &.mas {
+          margin-top: 30px;
+          font-size: 10pt;
+          color: gray;
+          span  {
+            color: black;
+            font-size: 8pt;
+          }
+        }
+      }
+    }
+    .interesar {
+      border-top: 5px solid #231F20;
+      padding-top: 5px;
+      h3 {
+        font-size: 16pt;
+      }
+      ul {
+        text-align: center;
+        li {
+          font-size: 12pt;
+          display: inline-block;
+          width: 28%;
+          margin: 10px;
+          h4 {
+            font-size: 12pt;
+            padding: 0; margin: 0;
+            color: #231F20;
+            margin-top:10px;
+          }
+          p {
+            line-height: 15px;
+            font-size: 9pt;
+            color: #231F20;
+            padding: 0; margin: 0;
+          }
+        }
+      }
     }
   }
 }

@@ -7,22 +7,28 @@
       .marca
         %div{:style=>"width: 260px; height: 30px; border: 1px solid red;"}
       .info
-        %span
+        %span.marcab
           =@producto.marca.marca
         %span.precio
-          =@producto.precio
-      =@producto.nombre
+          $#{@producto.precio}
+      .producto
+        =@producto.nombre
       .descripcion
-        =@producto.descripcion
+        %h3 DESCRIPCIÓN
+        %span.borde
+        %p
+          =@producto.descripcion
         %p.mas
           ver más
           %span
             ▼
       .interesar
+        %h3 te puede interesar
         - if @productos_relacionados and @productos_relacionados.any?
           %ul.nobullet.nolist
             - @productos_relacionados.each do |producto|
               %li
                 = link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
+                %h4 #{producto.marca.marca}
                 %h4 #{link_to producto.nombre, producto_ver_path(producto.slug)}
                 %p #{number_to_currency producto.precio}
