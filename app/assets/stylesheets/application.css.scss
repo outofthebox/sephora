@@ -19,7 +19,10 @@ ul.seplist > li + li:before, ol.seplist > li + li:before{
 body {
   font-family: HelveticaNeue, Helvetica, Arial, "Lucida Grande", sans-serif;
 }
-
+a:link, a:active, a:visited, a:hover {
+  text-decoration: none;
+  color: black;
+}
 // BANDA NEGRA SUPERIOR
 #head-sup {
   background: #231F20;
