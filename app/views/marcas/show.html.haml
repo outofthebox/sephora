@@ -11,7 +11,8 @@
       .table.full
         .tcell.t65
           %h2
-            %div{:style=>"width: 235px; height: 77px; border: 1px solid red;"}
+            - unless @marca.logo_file_name.nil? 
+              = image_tag @marca.logo.url(:grande)
           %p
             =@marca.descripcion
           %p.mas
@@ -19,7 +20,8 @@
             %span
               ▼
         .tcell.t35
-          %div{:style=>"width: 288px; height: 287px; border: 1px solid red;"}
+          - unless @marca.promo_file_name.nil? 
+            = image_tag @marca.promo.url(:grande)
       - if @marca.marca_producto.size
         %h3 EXPLORA LA MARCA
         %h4
@@ -35,4 +37,3 @@
                   = marca_producto.producto.descripcion
                 %p
                   $#{marca_producto.producto.precio}
-    

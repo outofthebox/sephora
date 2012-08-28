@@ -3,11 +3,11 @@ class Marca < ActiveRecord::Base
   attr_accessor :logo, :promo
 
   has_attached_file :logo, {
-    :styles => { :grande => "300x300#", :normal => "200x200#", :mini => "100x100#" }
+    :styles => { :grande => "280x80#", :normal => "200x57#", :mini => "100x29#" }
   }.merge(PAPERCLIP_STORAGE_OPTIONS)
 
   has_attached_file :promo, {
-    :styles => { :grande => "300x300#", :normal => "200x200#", :mini => "100x100#" }
+    :styles => { :grande => "266x266#", :normal => "170x170#", :mini => "100x100#" }
   }.merge(PAPERCLIP_STORAGE_OPTIONS)
 
   has_many :productos
