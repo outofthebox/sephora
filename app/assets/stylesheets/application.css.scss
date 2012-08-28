@@ -385,14 +385,10 @@ a:link, a:active, a:visited, a:hover {
         }
         .numeros {
           color: #918F90;
-          width: 75px;
+          width: 100px;
           height: 12px;
           line-height: 10px;
           display: inline-block;
-          span:after {
-            content: ' ►';
-            color: black;
-          }
           p {
           line-height: 10px;
           }

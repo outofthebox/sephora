@@ -29,8 +29,11 @@
           %select
             %option más vendidos
           .numeros
-            %span 1 2 ...7
-            %p 379 artículos
+            %span
+              = paginate @productos, :window => 1, :left => 2, :right => 0
+            %p
+              =@productoscount
+              artículos
   - if !@categoria.depth and !@categoria.productos.size.zero?
     .table.full
       .tcell.t20

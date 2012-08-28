@@ -9,7 +9,8 @@ class CategoriasController < ApplicationController
     @subcategorias = subcategorias.reject{|r| r.parent_id != @categoria.id }
 
     # para encontrar productos en categorías descendientes
-    @productos = Producto.publicados.padres.where :categoria_id => [@categoria.id] + @subcategorias.map{|s| s.id }
+    @productos = Producto.publicados.padres.where(:categoria_id => [@categoria.id] + @subcategorias.map{|s| s.id }).page(params[:page]).per(8)
+    @productoscount = Producto.publicados.where(:categoria_id => [@categoria.id] + @subcategorias.map{|s| s.id }).count
   end
 
   def show

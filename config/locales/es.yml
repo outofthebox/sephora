@@ -203,3 +203,8 @@ es:
   activerecord:
     errors:
       <<: *errors
+  views:
+    pagination:
+      previous: "◄"
+      next: "►"
+      truncate: "..."

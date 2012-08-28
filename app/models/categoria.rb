@@ -8,10 +8,9 @@ class Categoria < ActiveRecord::Base
   }.merge(PAPERCLIP_STORAGE_OPTIONS)
 
   has_many :productos
-
   has_many :categoria_producto
   has_many :productos, :through => :categoria_producto
-  
+
   def self.by_slug slug
     self.where(:slug => slug)
   end
