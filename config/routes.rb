@@ -24,7 +24,7 @@ Sephora::Application.routes.draw do
   get   'producto/:slug',  :to => 'productos#show', :as => 'producto_ver'
   get   'productos/busqueda', :to => 'productos#busqueda', :as => 'productos_busqueda'
   
-  get   'marca', :to => 'marcas#index'
+  # get   'marca', :to => 'marcas#index'
   get   'marca/:slug',  :to => 'marcas#show', :as => 'marca_ver'
 
   get   'admin/productos', :to => 'productos#index_admin'

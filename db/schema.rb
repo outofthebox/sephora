@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120828173221) do
+ActiveRecord::Schema.define(:version => 20120828193843) do
 
   create_table "categoria_productos", :force => true do |t|
     t.integer  "producto_id"
@@ -45,9 +45,17 @@ ActiveRecord::Schema.define(:version => 20120828173221) do
     t.string   "marca"
     t.text     "descripcion"
     t.integer  "usuario_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
     t.string   "slug"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
+    t.string   "promo_file_name"
+    t.string   "promo_content_type"
+    t.integer  "promo_file_size"
+    t.datetime "promo_updated_at"
   end
 
   add_index "marcas", ["slug"], :name => "index_marcas_on_slug", :unique => true

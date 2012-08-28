@@ -42,7 +42,7 @@ class ProductosController < ApplicationController
   end
 
   def show
-    @producto = Producto.padres.publicados.by_slug(params[:slug])
+    @producto = Producto.includes(:marca).padres.publicados.by_slug(params[:slug])
     @categoria = Categoria.find(@producto.categoria_id)
     @productos_relacionados = @categoria.productos.padres.publicados.where("productos.id != ?", @producto.id).publicados
   end

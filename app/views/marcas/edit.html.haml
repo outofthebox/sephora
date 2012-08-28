@@ -1,5 +1,5 @@
--provide :title, 'Editar Producto'
-%h2 Editar Producto
+-provide :title, 'Editar Marca'
+%h2 Editar Marca
 =form_for @marca do |f|
   %p
     =form_error @marca, :marca
@@ -7,5 +7,19 @@
   %p
     =form_error @marca, :descripcion
     =f.labelbrtextarea "Descripción", :descripcion, :class => "full"
+  %p
+    = f.label :logo, "Logo"
+    %br
+    = f.file_field :logo
+  - unless @marca.logo_file_name.nil? 
+    %p
+      = image_tag @marca.logo.url(:mini)
+  %p
+    = f.label :promo, "Promo"
+    %br
+    = f.file_field :promo
+  - unless @marca.promo_file_name.nil? 
+    %p
+      = image_tag @marca.promo.url(:mini)
   %p.rgt
     =f.submit "Editar"
