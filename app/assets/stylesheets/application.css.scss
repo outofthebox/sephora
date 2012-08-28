@@ -17,7 +17,7 @@ ul.seplist > li + li:before, ol.seplist > li + li:before{
 }
 
 body {
-  font-family: HelveticaNeue, Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial;
 }
 a:link, a:active, a:visited, a:hover {
   text-decoration: none;
@@ -314,17 +314,27 @@ a:link, a:active, a:visited, a:hover {
   #categoria {
     border-top: 1px solid #C1C1C1;
     h2 {
-      font-size: 1em;
+      font-size: 11pt;
       text-transform: lowercase;
+      padding: 7px 0 7px 10px;
     }
     .contizq {
+      font-size: 11pt;
       border-top: 5px solid #231F20;
+      h3 {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 11pt;
+        padding: 5px 0 5px 10px;
+      }
       ul {
         border-bottom: 5px solid #231F20;
         list-style: none;
-        margin: 0;
         padding: 0;
+        padding-left: 10px;
+        margin: 0;
         li {
+          padding: 5px 0 5px 0;
           font-size: 0.8em;
         }
         .first {

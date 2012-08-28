@@ -4,6 +4,8 @@
     = @categoria.nombre
   .table.full
     .contizq.tcell.t25
+      %h3
+        =@categoria.nombre
       - if @subcategorias && @subcategorias.any?
         %ul
           - @subcategorias.each do |subcategoria|
