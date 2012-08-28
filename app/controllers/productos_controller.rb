@@ -1,11 +1,11 @@
 class ProductosController < ApplicationController
 
   def index
-    @productos = Producto.includes(:marca).where(:publicado => true).page(params[:page]).per(50)
+    @productos = Producto.includes(:marca).padres.publicados.page(params[:page]).per(50)
   end
 
   def busqueda
-    @productos = Producto.includes(:marca).busqueda params[:q]
+    @productos = Producto.includes(:marca).padres.publicados.busqueda params[:q]
     respond_to do |format|
       format.js if request.xhr?
     end
@@ -42,9 +42,9 @@ class ProductosController < ApplicationController
   end
 
   def show
-    @producto = Producto.publicados.by_slug(params[:slug])
+    @producto = Producto.padres.publicados.by_slug(params[:slug])
     @categoria = Categoria.find(@producto.categoria_id)
-    @productos_relacionados = @categoria.productos.where("id != ?", @producto.id).publicados
+    @productos_relacionados = @categoria.productos.padres.publicados.where("id != ?", @producto.id).publicados
   end
 
   def index_admin

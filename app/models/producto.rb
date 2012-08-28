@@ -1,7 +1,7 @@
 class Producto < ActiveRecord::Base
   validate :validar
   belongs_to :marca
-  attr_accessible :nombre, :nombre_real, :sku, :precio, :descripcion, :ingredientes, :usos, :publicado, :marca_id, :categoria_id, :uso_id, :foto
+  attr_accessible :nombre, :nombre_real, :sku, :parent_id, :precio, :descripcion, :ingredientes, :usos, :publicado, :marca_id, :categoria_id, :uso_id, :foto
   attr_accessor :foto
 
   has_attached_file :foto, {
@@ -42,6 +42,10 @@ class Producto < ActiveRecord::Base
     productos
   end
   
+  def self.padres
+    self.where :parent_id => nil
+  end
+
   def self.publicados
     self.where :publicado => true
   end

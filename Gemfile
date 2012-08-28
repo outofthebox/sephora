@@ -29,4 +29,5 @@ end
 group :development do
   gem 'guard'
   gem 'guard-livereload'
+  gem 'fastercsv'
 end

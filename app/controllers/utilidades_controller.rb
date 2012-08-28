@@ -1,5 +1,40 @@
 class UtilidadesController < ApplicationController
-  load_and_authorize_resource
+  def parsearparents
+    raise 'error' unless Rails.env.development?
+
+    csv = "/home/sputnik3/Desktop/skusmalditos_#.csv"
+
+    require 'csv'
+    skus = []
+
+    [1,2,3,4,5,6].each do |n|
+      data = CSV.parse(File.open(csv.sub("#", n.to_s)), :headers => true, :return_headers => true )
+      data.by_col!
+      data.each do |col|
+        skus << col.at(1).compact.reject{|r| !(r.to_i > 0) }
+      end
+    end
+
+    raise skus.inspect
+
+    s = []
+    skus.each do |sku|
+      while p = Producto.where(:sku => sku.shift).first do
+        # raise p.inspect
+        break unless p.nil?
+      end
+
+      unless p.nil?
+        s << Producto.where(:sku => sku).update_all(:parent_id => p.id)
+      end
+    end
+
+    raise s.inspect
+
+    raise s.inspect
+    raise Producto.where(:sku => s.uniq).size.inspect
+  end
+
   def importar
     raise 'error' unless Rails.env.development?
 
