@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120828162958) do
+ActiveRecord::Schema.define(:version => 20120828173221) do
 
   create_table "categoria_productos", :force => true do |t|
     t.integer  "producto_id"
@@ -30,11 +30,15 @@ ActiveRecord::Schema.define(:version => 20120828162958) do
     t.string   "slug"
     t.boolean  "visible"
     t.integer  "parent_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
     t.integer  "lft"
     t.integer  "rgt"
     t.integer  "depth"
+    t.string   "cover_file_name"
+    t.string   "cover_content_type"
+    t.integer  "cover_file_size"
+    t.datetime "cover_updated_at"
   end
 
   create_table "marcas", :force => true do |t|

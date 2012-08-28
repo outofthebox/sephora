@@ -11,7 +11,8 @@
               = link_to subcategoria.nombre, categoria_ver_path(subcategoria.slug)
     .contder.tcell.t75
       .contenedor
-        %div{:style=>"width: 768px; height: 250px; border: 1px solid red;"}
+        - unless @categoria.cover_file_name.nil?
+          = image_tag @categoria.cover.url(:normal)
       .catalogo
         - if @productos and @productos.any?
           %ul.nobullet.nolist
@@ -30,22 +31,16 @@
           .numeros
             %span 1 2 ...7
             %p 379 artículos
-  - unless @categoria.depth
+  - if !@categoria.depth and !@categoria.productos.size.zero?
     .table.full
       .tcell.t20
       .tcell.t80
         .masproducto
           %h3 Más #{@categoria.nombre}
           %ul.nobullet
-            %li
-              %div{:style=>"width: 225px; height: 210px; border: 1px solid red; margin: 0 auto;"}
-              %h4 PRODUCTO NUMERO UNO
-              %p Lorem ipsum dolor sit amet, nulla dui pharetra dignissim tempus mauris. Varius proin elit tincidunt quam, in amet et magni leo.
-            %li
-              %div{:style=>"width: 225px; height: 210px; border: 1px solid red; margin: 0 auto;"}
-              %h4 PRODUCTO NUMERO UNO
-              %p Lorem ipsum dolor sit amet, nulla dui pharetra dignissim tempus mauris. Varius proin elit tincidunt quam, in amet et magni leo.
-            %li
-              %div{:style=>"width: 225px; height: 210px; border: 1px solid red; margin: 0 auto;"}
-              %h4 PRODUCTO NUMERO UNO
-              %p Lorem ipsum dolor sit amet, nulla dui pharetra dignissim tempus mauris. Varius proin elit tincidunt quam, in amet et magni leo.
+            - @categoria.categoria_producto.each do |categoria_producto|
+              %li
+                = link_to image_tag(categoria_producto.producto.foto.url(:chico)), producto_ver_path(categoria_producto.producto.slug)
+                %h4
+                  #{categoria_producto.producto.nombre}
+                = simple_format categoria_producto.descripcion unless categoria_producto.descripcion.empty?

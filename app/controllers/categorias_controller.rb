@@ -4,7 +4,7 @@ class CategoriasController < ApplicationController
   end
 
   def ver
-    @categoria = Categoria.by_slug(params[:categoria]).first
+    @categoria = Categoria.includes(:productos).by_slug(params[:categoria]).first
     subcategorias = @categoria.descendants
     @subcategorias = subcategorias.reject{|r| r.parent_id != @categoria.id }
 
