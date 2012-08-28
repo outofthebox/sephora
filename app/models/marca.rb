@@ -1,6 +1,4 @@
 class Marca < ActiveRecord::Base
-  has_many :productos
-
   attr_accessible :marca, :descripcion, :slug, :logo, :promo
   attr_accessor :logo, :promo
 
@@ -12,8 +10,13 @@ class Marca < ActiveRecord::Base
     :styles => { :grande => "300x300#", :normal => "200x200#", :mini => "100x100#" }
   }.merge(PAPERCLIP_STORAGE_OPTIONS)
 
-  validate :validar
+  has_many :productos
 
+  has_many :marca_producto
+  has_many :featured, :through => :marca_producto, :class_name => "Producto", :source => :producto
+
+  validate :validar
+  
   before_save do
     self.slug = self.marca.parameterize if new_record?
   end

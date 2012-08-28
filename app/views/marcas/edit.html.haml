@@ -23,3 +23,45 @@
       = image_tag @marca.promo.url(:mini)
   %p.rgt
     =f.submit "Editar"
+
+
+%h3 Productos destacados
+- if (marca_productos = @marca.marca_producto) and marca_productos.any?
+  %ul.productos-vinculados{ :'data-cambiar-orden-url' => '/marcas/actualizar_orden' }
+    - marca_productos.each do |marca_producto|
+      - producto = marca_producto.producto
+      %li.vinculo-producto{ :'data-vinculo-id' => marca_producto.id }
+        %h6.inline
+          #{producto.nombre}
+        %small
+          %ul.nolist.nobullet.seplist.inline
+            %li
+              %a{ :href => marca_desvincular_producto_path(@marca.id, marca_producto.id, mini_hash(marca_producto)) }<
+                Desvincular
+            %li
+              %a{ :href => marca_editar_producto_path(@marca.id, marca_producto.id) }<
+                Editar
+        - unless marca_producto.descripcion.empty?
+          .descripcion
+            = simple_format marca_producto.descripcion
+- else
+  .empty
+    %h5 No hay productos
+
+= form_for :busqueda, :url => productos_busqueda_path, :html => { :class => "widget-seccion-producto-vincular" } do |f|
+  %p
+    = f.text_field "q", :type => "search", :class => "big", :placeholder => "Buscar productos"
+    = f.submit "Buscar"
+  .resultados
+
+= form_for (producto = @marca.marca_producto.build), :url => marca_vincular_producto_path(@marca.id), :html => { :class => "widget-seccion-producto-form" } do |f|
+  %h3
+    %small Vincular producto
+    »
+    %span.tmpl-producto-nombre
+  = f.hidden_field :producto_id
+  %p
+    = form_error producto, :descripcion
+    = f.labelbrtextarea "Descripción", :descripcion, :class => "full"
+  %p.rgt
+    = f.submit! "Agregar"

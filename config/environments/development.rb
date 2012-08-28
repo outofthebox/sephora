@@ -38,9 +38,9 @@ Sephora::Application.configure do
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
   PAPERCLIP_STORAGE_OPTIONS = {
-   # :storage => :s3,
-   # :s3_credentials => "#{Rails.root}/config/s3.yml",
-   # :bucket => "sephoramexico",
-   # :path => "/:class/:attachment/:id_partition/:style/:filename"
+   :storage => :s3,
+   :s3_credentials => "#{Rails.root}/config/s3.yml",
+   :bucket => "sephoramexico",
+   :path => "/:class/:attachment/:id_partition/:style/:filename"
   }
 end

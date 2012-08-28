@@ -1,0 +1,6 @@
+%section#marca-producto-editar
+  = form_for @marca_producto, :url => marca_editar_producto_path(@marca.id, @marca_producto.id) do |f|
+    %p
+      = f.labelbrtextarea "Descripción", :descripcion, :class => "full"
+    %p.rgt
+      = f.submit "Actualizar"

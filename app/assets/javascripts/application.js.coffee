@@ -21,7 +21,7 @@ if ($widget_vinculos = $(".widget-seccion-producto-vincular")).size()
 
     $widget_vinculos.after $new_form.show()
     $new_form.find("textarea").get(0).focus()
-    $new_form.find("#producto_seccion_producto_id, #categoria_producto_producto_id").val $this.data("producto-id")
+    $new_form.find("#producto_seccion_producto_id, #categoria_producto_producto_id, #marca_producto_producto_id").val $this.data("producto-id")
     $new_form.find(".tmpl-producto-nombre").text $this.data("producto-nombre")
 
   $(".vinculo-producto").closest("ul").sortable

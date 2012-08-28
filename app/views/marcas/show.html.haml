@@ -20,22 +20,19 @@
               ▼
         .tcell.t35
           %div{:style=>"width: 288px; height: 287px; border: 1px solid red;"}
-      %h3 EXPLORA LA MARCA
-      %h4
-        BEST SELLERS
-        %ul.nobullet
-          %li
-            %div{:style=>"width: 145px; height: 165px; border: 1px solid red; margin: 0 auto;"}
-            %h4 #{@marca.marca}
-            %p Descripcion
-            %p $Costo
-          %li
-            %div{:style=>"width: 145px; height: 165px; border: 1px solid red; margin: 0 auto;"}
-            %h4 #{@marca.marca}
-            %p Descripcion
-            %p $Costo
-          %li
-            %div{:style=>"width: 145px; height: 165px; border: 1px solid red; margin: 0 auto;"}
-            %h4 #{@marca.marca}
-            %p Descripcion
-            %p $Costo
+      - if @marca.marca_producto.size
+        %h3 EXPLORA LA MARCA
+        %h4
+          BEST SELLERS
+          %ul.nobullet
+            - @marca.marca_producto.each do |marca_producto|
+              %li
+                - unless marca_producto.producto.foto_file_size.nil?
+                  = image_tag marca_producto.producto.foto(:normal)
+                %h4
+                  = marca_producto.producto.nombre
+                %p
+                  = marca_producto.producto.descripcion
+                %p
+                  $#{marca_producto.producto.precio}
+    

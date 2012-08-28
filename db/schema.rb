@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120828193843) do
+ActiveRecord::Schema.define(:version => 20120828211138) do
 
   create_table "categoria_productos", :force => true do |t|
     t.integer  "producto_id"
@@ -40,6 +40,18 @@ ActiveRecord::Schema.define(:version => 20120828193843) do
     t.integer  "cover_file_size"
     t.datetime "cover_updated_at"
   end
+
+  create_table "marca_productos", :force => true do |t|
+    t.integer  "producto_id"
+    t.integer  "marca_id"
+    t.integer  "orden"
+    t.text     "descripcion"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "marca_productos", ["marca_id"], :name => "index_marca_productos_on_marca_id"
+  add_index "marca_productos", ["producto_id"], :name => "index_marca_productos_on_producto_id"
 
   create_table "marcas", :force => true do |t|
     t.string   "marca"

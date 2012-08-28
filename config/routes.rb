@@ -42,6 +42,14 @@ Sephora::Application.routes.draw do
   post  'categorias/actualizar_orden', :to => 'categorias#actualizar_orden'
   get   'categoria(/:categoria)', :to => 'categorias#ver', :as => 'categoria_ver'  
 
+  get   'marcas/:id/desvincular/:marca_producto/:hash', :to => 'marcas#desvincular', :as => 'marca_desvincular_producto'
+  get   'marcas/:id/vincular/:v_id/editar', :to => 'marcas#producto_editar', :as => 'marca_editar_producto'
+  put   'marcas/:id/vincular/:v_id/editar', :to => 'marcas#producto_update'
+  post  'marcas/:id/vincular', :to => 'marcas#vincular', :as => 'marca_vincular_producto'
+  post  'marcas/actualizar_orden', :to => 'marcas#actualizar_orden'
+
+  get   'categoria(/:categoria)', :to => 'categorias#ver', :as => 'categoria_ver'  
+
   get   'producto(/:producto)', :to => 'productos#ver', :as => 'producto_ver'
 
   scope :path_names => { :new => 'registrar', :edit => 'editar' } do
