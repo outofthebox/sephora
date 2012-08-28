@@ -1,0 +1,6 @@
+%section#categoria-producto-editar
+  = form_for @categoria_producto, :url => categoria_editar_producto_path(@categoria.id, @categoria_producto.id) do |f|
+    %p
+      = f.labelbrtextarea "Descripción", :descripcion, :class => "full"
+    %p.rgt
+      = f.submit "Actualizar"

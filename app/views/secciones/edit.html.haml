@@ -15,7 +15,7 @@
   - if @seccion.depth == 1
     %h3 Productos
     - if (seccion_productos = @seccion.producto_seccion) and seccion_productos.any?
-      %ul
+      %ul.productos-vinculados{ :'data-cambiar-orden-url' => '/secciones/actualizar_orden' }
         - seccion_productos.each do |seccion_producto|
           - producto = seccion_producto.producto
           %li.vinculo-producto{ :'data-vinculo-id' => seccion_producto.id }

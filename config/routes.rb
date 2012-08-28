@@ -35,7 +35,13 @@ Sephora::Application.routes.draw do
   get   'suscripcion', :to => 'paginas#suscripcion', :as => 'suscripcion'
   post  'suscripcion', :to => 'paginas#suscripcion_post'
 
-  get   'categoria(/:categoria)', :to => 'categorias#ver', :as => 'categoria_ver'
+  get   'categorias/:id/desvincular/:categoria_producto/:hash', :to => 'categorias#desvincular', :as => 'categoria_desvincular_producto'
+  get   'categorias/:id/vincular/:v_id/editar', :to => 'categorias#producto_editar', :as => 'categoria_editar_producto'
+  put   'categorias/:id/vincular/:v_id/editar', :to => 'categorias#producto_update'
+  post  'categorias/:id/vincular', :to => 'categorias#vincular', :as => 'categoria_vincular_producto'
+  post  'categorias/actualizar_orden', :to => 'categorias#actualizar_orden'
+  get   'categoria(/:categoria)', :to => 'categorias#ver', :as => 'categoria_ver'  
+
   get   'producto(/:producto)', :to => 'productos#ver', :as => 'producto_ver'
 
   scope :path_names => { :new => 'registrar', :edit => 'editar' } do

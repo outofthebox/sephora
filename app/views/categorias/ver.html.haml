@@ -30,20 +30,22 @@
           .numeros
             %span 1 2 ...7
             %p 379 artículos
-  .table.full
-    .tcell.t20
-    .masproducto.tcell.t80
-      %h3 MÁS FRAGANCIAS
-      %ul.nobullet
-        %li
-          %div{:style=>"width: 225px; height: 210px; border: 1px solid red; margin: 0 auto;"}
-          %h4 PRODUCTO NUMERO UNO
-          %p Lorem ipsum dolor sit amet, nulla dui pharetra dignissim tempus mauris. Varius proin elit tincidunt quam, in amet et magni leo.
-        %li
-          %div{:style=>"width: 225px; height: 210px; border: 1px solid red; margin: 0 auto;"}
-          %h4 PRODUCTO NUMERO UNO
-          %p Lorem ipsum dolor sit amet, nulla dui pharetra dignissim tempus mauris. Varius proin elit tincidunt quam, in amet et magni leo.
-        %li
-          %div{:style=>"width: 225px; height: 210px; border: 1px solid red; margin: 0 auto;"}
-          %h4 PRODUCTO NUMERO UNO
-          %p Lorem ipsum dolor sit amet, nulla dui pharetra dignissim tempus mauris. Varius proin elit tincidunt quam, in amet et magni leo.
+  - unless @categoria.depth
+    .table.full
+      .tcell.t20
+      .tcell.t80
+        .masproducto
+          %h3 Más #{@categoria.nombre}
+          %ul.nobullet
+            %li
+              %div{:style=>"width: 225px; height: 210px; border: 1px solid red; margin: 0 auto;"}
+              %h4 PRODUCTO NUMERO UNO
+              %p Lorem ipsum dolor sit amet, nulla dui pharetra dignissim tempus mauris. Varius proin elit tincidunt quam, in amet et magni leo.
+            %li
+              %div{:style=>"width: 225px; height: 210px; border: 1px solid red; margin: 0 auto;"}
+              %h4 PRODUCTO NUMERO UNO
+              %p Lorem ipsum dolor sit amet, nulla dui pharetra dignissim tempus mauris. Varius proin elit tincidunt quam, in amet et magni leo.
+            %li
+              %div{:style=>"width: 225px; height: 210px; border: 1px solid red; margin: 0 auto;"}
+              %h4 PRODUCTO NUMERO UNO
+              %p Lorem ipsum dolor sit amet, nulla dui pharetra dignissim tempus mauris. Varius proin elit tincidunt quam, in amet et magni leo.

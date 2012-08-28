@@ -2,8 +2,8 @@
 # = require jquery_ujs
 # = require jquery.ui.all
 
-if ($secciones_busqueda = $(".widget-seccion-producto-vincular")).size()
-  $secciones_busqueda.on "submit", (e) ->
+if ($widget_vinculos = $(".widget-seccion-producto-vincular")).size()
+  $widget_vinculos.on "submit", (e) ->
     e.preventDefault()
     $this = $(this)
     $search = $(this).find "#busqueda_q"
@@ -19,9 +19,9 @@ if ($secciones_busqueda = $(".widget-seccion-producto-vincular")).size()
     $new_form = $(".widget-seccion-producto-form:not(:visible)").clone()
     $(".widget-seccion-producto-form:visible").remove()
 
-    $secciones_busqueda.after $new_form.show()
+    $widget_vinculos.after $new_form.show()
     $new_form.find("textarea").get(0).focus()
-    $new_form.find("#producto_seccion_producto_id").val $this.data("producto-id")
+    $new_form.find("#producto_seccion_producto_id, #categoria_producto_producto_id").val $this.data("producto-id")
     $new_form.find(".tmpl-producto-nombre").text $this.data("producto-nombre")
 
   $(".vinculo-producto").closest("ul").sortable
@@ -46,7 +46,7 @@ if ($secciones_busqueda = $(".widget-seccion-producto-vincular")).size()
 
       $.ajax
         type: 'POST'
-        url: '/secciones/actualizar_orden'
+        url: $("ul.productos-vinculados").data 'cambiar-orden-url'
         data: $form.serialize()
         complete: (response) ->
           $form.remove()

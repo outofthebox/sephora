@@ -18,7 +18,7 @@ class CategoriasController < ApplicationController
   end
 
   def edit
-    @categoria = Categoria.find params[:id]
+    @categoria = Categoria.includes(:productos).find params[:id]
     authorize! :manage, @categoria
   end
 
@@ -32,4 +32,57 @@ class CategoriasController < ApplicationController
       render :edit
     end
   end
+
+  # Vínculos
+
+  def vincular
+    categoria = Categoria.find params[:id]
+    authorize! :manage, categoria
+    vinculo = categoria.categoria_producto.build params[:categoria_producto]
+    if vinculo.valid?
+      vinculo.save
+    end
+    redirect_to edit_categoria_path(categoria.id)
+  end
+
+  def desvincular
+    categoria = Categoria.find params[:id]
+    authorize! :manage, categoria
+    categoria_producto = categoria.categoria_producto.find params[:categoria_producto]
+
+    if check_minihash(categoria_producto, params[:hash])
+      categoria_producto.destroy
+    end
+
+    redirect_to edit_categoria_path(categoria.id)
+  end
+
+  def producto_editar
+    @categoria = Categoria.find params[:id]
+    authorize! :manage, @categoria
+    @categoria_producto = @categoria.categoria_producto.find params[:v_id]
+  end
+
+  def producto_update
+    categoria = Categoria.find params[:id]
+    authorize! :manage, categoria
+    categoria_producto = categoria.categoria_producto.find(params[:v_id])
+    categoria_producto.update_attributes params[:categoria_producto]
+    if categoria_producto.valid?
+      categoria_producto.save
+      redirect_to categoria_editar_producto_path(categoria.id, categoria_producto.id)
+    else
+      render :producto_editar
+    end
+  end
+
+  def actualizar_orden
+    vinculos = params[:vinculo_id]
+    orden = (0...vinculos.size)
+
+    CategoriaProducto.update( vinculos, orden.map{|o| { :orden => o }}).reject { |p| p.errors.empty? }
+
+    render :text => orden.to_a
+  end
+
 end

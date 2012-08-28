@@ -7,3 +7,45 @@
       = f.select :parent_id, ([["Raíz", nil]] + nested_set_options(Categoria, @categoria) {|i, level| "#{'&nbsp;' * (level.to_i+1)}".html_safe + " #{i.nombre}" })
     %p.rgt
       = f.submit! "Guardar"
+
+  - unless @categoria.depth
+    %h3 Productos destacados
+    - if (categoria_productos = @categoria.categoria_producto) and categoria_productos.any?
+      %ul.productos-vinculados{ :'data-cambiar-orden-url' => '/categorias/actualizar_orden' }
+        - categoria_productos.each do |categoria_producto|
+          - producto = categoria_producto.producto
+          %li.vinculo-producto{ :'data-vinculo-id' => categoria_producto.id }
+            %h6.inline
+              #{producto.nombre}
+            %small
+              %ul.nolist.nobullet.seplist.inline
+                %li
+                  %a{ :href => categoria_desvincular_producto_path(@categoria.id, categoria_producto.id, mini_hash(categoria_producto)) }<
+                    Desvincular
+                %li
+                  %a{ :href => categoria_editar_producto_path(@categoria.id, categoria_producto.id) }<
+                    Editar
+            - unless categoria_producto.descripcion.empty?
+              .descripcion
+                = simple_format categoria_producto.descripcion
+    - else
+      .empty
+        %h5 No hay productos
+
+    = form_for :busqueda, :url => productos_busqueda_path, :html => { :class => "widget-seccion-producto-vincular" } do |f|
+      %p
+        = f.text_field "q", :type => "search", :class => "big", :placeholder => "Buscar productos"
+        = f.submit "Buscar"
+      .resultados
+
+    = form_for (producto = @categoria.categoria_producto.build), :url => categoria_vincular_producto_path(@categoria.id), :html => { :class => "widget-seccion-producto-form" } do |f|
+      %h3
+        %small Vincular producto
+        »
+        %span.tmpl-producto-nombre
+      = f.hidden_field :producto_id
+      %p
+        = form_error producto, :descripcion
+        = f.labelbrtextarea "Descripción", :descripcion, :class => "full"
+      %p.rgt
+        = f.submit! "Agregar"
