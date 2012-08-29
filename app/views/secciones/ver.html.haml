@@ -1,8 +1,13 @@
-%section#seccion-ver
+%section#seccion-ver{ :class => "seccion-#{@seccion.try(:nombre).try(:parameterize)}"}
   %h3
     #{@seccion.nombre}
-  - if @contenido.productos && @contenido.productos.any?
+  - if (seccion_productos = @contenido.producto_seccion) and seccion_productos.any?
     %ul
-      - @contenido.productos.each do |p|
+      - seccion_productos.each do |seccion_producto|
+        - producto = seccion_producto.producto
         %li
-          = p.nombre
+          %h5
+            = producto.nombre
+          - unless seccion_producto.descripcion.empty?
+            %p
+              = seccion_producto.descripcion

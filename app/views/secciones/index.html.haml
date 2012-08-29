@@ -1,4 +1,7 @@
 %section#secciones
+  - if can? Seccion, :manage
+    %a{ :href => new_seccion_path }
+      Nueva sección
   = render_tree @secciones do |seccion, child|
     %li
       - if seccion.depth.nil? || (seccion.depth == 1 and seccion.visible)

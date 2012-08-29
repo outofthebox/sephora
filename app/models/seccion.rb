@@ -4,6 +4,10 @@ class Seccion < ActiveRecord::Base
   has_many :producto_seccion
   has_many :productos, :through => :producto_seccion
 
+  before_create do
+    self.slug = self.nombre.parameterize.gsub /[^(\w)]/, '' if self.parent_id.nil?
+  end
+
   def self.by_slug slug
     self.where(:slug => slug).first
   end
