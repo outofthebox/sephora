@@ -28,10 +28,10 @@ ul.seplist > li + li:before, ol.seplist > li + li:before{
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Avant";
+  font-family: "Avant", sans-serif;
 }
 a:link, a:active, a:visited, a:hover {
   text-decoration: none;

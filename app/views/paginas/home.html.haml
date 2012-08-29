@@ -21,36 +21,36 @@
     %span
       %a{ :href => "/favorites" }
         FAVORITES
-#best-sellers
-  %h3 BEST SELLERS
-  #slider-wrap
-    %ul.nobullet.nolist
-      %li
-        %div{:style=>"width: 145px; height: 165px; border: 1px solid red; margin: 0 auto;"}
-        %h4 1
-        %p PRODUCTO 1
-        %p Descripcion
-        %p $Costo
-      %li
-        %div{:style=>"width: 145px; height: 165px; border: 1px solid red; margin: 0 auto;"}
-        %h4 2
-        %p PRODUCTO 2
-        %p Descripcion
-        %p $Costo
-      %li
-        %div{:style=>"width: 145px; height: 165px; border: 1px solid red; margin: 0 auto;"}
-        %h4 3
-        %p PRODUCTO 3
-        %p Descripcion
-        %p $Costo
-      %li
-        %div{:style=>"width: 145px; height: 165px; border: 1px solid red; margin: 0 auto;"}
-        %h4 4
-        %p PRODUCTO 4
-        %p Descripcion
-        %p $Costo
-#lo-nuevo
-  %h3 LO NUEVO
+- if @bestsellers and (bestsellers_productos = @bestsellers.producto_seccion) and bestsellers_productos.any?
+  #best-sellers
+    %h3 BEST SELLERS
+    #slider-wrap
+      %ul.nobullet.nolist
+        - bestsellers_productos.each do |bestsellers_producto|
+          - producto = bestsellers_producto.producto
+          %li
+            %h4
+              = producto.nombre
+            - unless bestsellers_producto.descripcion.empty?
+              %p
+                = bestsellers_producto.descripcion
+            %p
+              = producto.precio
+- if @lonuevo and (lonuevo_productos = @lonuevo.producto_seccion) and lonuevo_productos.any?
+  #best-sellers
+    %h3 LO NUEVO
+    #slider-wrap
+      %ul.nobullet.nolist
+        - lonuevo_productos.each do |lonuevo_producto|
+          - producto = lonuevo_producto.producto
+          %li
+            %h4
+              = producto.nombre
+            - unless lonuevo_producto.descripcion.empty?
+              %p
+                = lonuevo_producto.descripcion
+            %p
+              = producto.precio
 #separador
   %h3 ESTA SEMANA
 #esta-semana

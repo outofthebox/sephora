@@ -1,4 +1,9 @@
 class PaginasController < ApplicationController
+  def home
+    @bestsellers = Seccion.seccion_actual(Seccion.by_slug(:bestsellers))
+    @lonuevo = Seccion.seccion_actual(Seccion.by_slug(:lonuevo))
+  end
+
   def contacto
     @contacto = Contacto.new
   end

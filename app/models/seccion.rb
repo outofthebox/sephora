@@ -13,6 +13,8 @@ class Seccion < ActiveRecord::Base
   end
 
   def self.seccion_actual seccion
-    Seccion.where(:parent_id => seccion.id, :visible => true).includes(:productos).first
+    unless seccion.nil?
+      Seccion.where(:parent_id => seccion.id, :visible => true).includes(:productos).first
+    end
   end
 end
