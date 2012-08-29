@@ -329,6 +329,36 @@ a:link, a:active, a:visited, a:hover {
     }
   }
 
+  #esta-semana {
+    text-align: center;
+    border-top: 5px solid #231F20;
+    h3 {
+      border-bottom: 3px solid #918F90;
+    }
+    ul {
+      li {
+        width: 30%;
+        display: inline-block;
+        img {
+          width: 250px;
+        }
+        h4 {
+          font-size: 1em;
+          letter-spacing: 3px;
+          font-weight: bold;
+        }
+        p {
+          padding-top: 15px;
+          font-size: 0.8em;
+          font-style: italic;
+          color: gray;
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
   #categoria {
     border-top: 1px solid #C1C1C1;
     h2 {
