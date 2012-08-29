@@ -1,13 +1,26 @@
 %section#seccion-ver{ :class => "seccion-#{@seccion.try(:nombre).try(:parameterize)}"}
-  %h3
+  %h2
     #{@seccion.nombre}
-  - if @contenido and (seccion_productos = @contenido.producto_seccion) and seccion_productos.any?
-    %ul
-      - seccion_productos.each do |seccion_producto|
-        - producto = seccion_producto.producto
-        %li
-          %h5
-            = producto.nombre
-          - unless seccion_producto.descripcion.empty?
-            %p
-              = seccion_producto.descripcion
+  .table.full
+    .contizq.tcell.t25
+      
+    .contder.tcell.t75
+      - if @contenido and (seccion_productos = @contenido.producto_seccion) and seccion_productos.any?
+        %ul.nolist
+          - seccion_productos.each_with_index do |seccion_producto, i|
+            - producto = seccion_producto.producto
+            %li
+              .table.full
+                .tcell.t15
+                  =image_tag "secciones/#{i+1}.png"
+                .info.tcell.t60
+                  %h4
+                    = producto.marca.marca
+                  %h5
+                    = producto.nombre
+                  - unless seccion_producto.descripcion.empty?
+                    %p
+                      = seccion_producto.descripcion
+                .tcell.t15
+                  =link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
+              =image_tag ('secciones/border.png')

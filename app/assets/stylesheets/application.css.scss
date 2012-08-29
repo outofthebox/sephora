@@ -30,9 +30,6 @@ ul.seplist > li + li:before, ol.seplist > li + li:before{
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Avant", sans-serif;
-}
 a:link, a:active, a:visited, a:hover {
   text-decoration: none;
   color: black;
@@ -302,6 +299,8 @@ a:link, a:active, a:visited, a:hover {
     h3 {
       font-size: 32pt;
       font-weight: lighter;
+      font-family: "Avant", Arial, sans-serif;
+      font-family: "Avant", Arial, sans-serif;
     }
 
     #slider-wrap {
@@ -331,13 +330,11 @@ a:link, a:active, a:visited, a:hover {
       font-size: 11pt;
       text-transform: lowercase;
       padding: 7px 0 7px 10px;
-      font-family: "Helvetica Neue", Helvetica, Arial;
     }
     .contizq {
       font-size: 11pt;
       border-top: 5px solid #231F20;
       h3 {
-      font-family: "Helvetica Neue", Helvetica, Arial;
         text-transform: uppercase;
         font-weight: bold;
         font-size: 11pt;
@@ -607,6 +604,70 @@ a:link, a:active, a:visited, a:hover {
             color: #231F20;
             padding: 0; margin: 0;
           }
+        }
+      }
+    }
+  }
+}
+section#seccion-ver {
+  h2 {
+    font-size: 1em;
+    text-transform: lowercase;
+  }
+  .contizq {
+    border-top: 5px solid #231F20;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        font-size: 0.8em;
+        padding: 10px;
+      }
+    }
+  }
+  .contder {
+    border-left: 7px solid #D6D6D8;
+    padding-bottom: 20px;
+    h2 {
+    padding-left: 10px;
+    margin-bottom: 20px;
+    }
+    p {
+    padding-left: 10px;
+      font-size: 0.8em;
+    }
+    h3 {
+      font-size: 0.8em;
+      letter-spacing: 1px;
+      padding: 9px;
+      padding-left: 20px;
+      font-weight: bold;
+      color: white;
+      background: black;
+    }
+    ul, li {
+      margin: 0;
+      padding: 0;
+    }
+    ul {
+
+      li {
+        display: block;
+        width: 100%;
+        .info {
+          padding-top: 10px;
+        }
+        h4, h5 {
+          text-transform: uppercase;
+          font-size: 1em;
+        }
+        h4, h5, p {
+          padding: 0;
+          margin: 0;
+        }
+        p {
+          color: #454545;
         }
       }
     }
