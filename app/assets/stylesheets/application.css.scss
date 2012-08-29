@@ -306,7 +306,6 @@ a:link, a:active, a:visited, a:hover {
       font-size: 32pt;
       font-weight: lighter;
       font-family: "Avant", Arial, sans-serif;
-      font-family: "Avant", Arial, sans-serif;
     }
 
     #slider-wrap {
@@ -674,6 +673,46 @@ section#seccion-ver {
         }
         p {
           color: #454545;
+        }
+      }
+    }
+  }
+}
+section#tiendas {
+  h2 {
+    font-size: 1em;
+    text-transform: lowercase;
+  }
+  .contizq {
+    border-top: 5px solid #231F20;
+  }
+  .contder {
+    border-left: 7px solid #D6D6D8;
+    padding-bottom: 20px;
+    h3 {
+    text-transform: uppercase;
+    padding-left: 10px;
+    font-size: 2.5em;
+    border-bottom: 5px solid #231F20;
+    font-family: "Avant", Arial, sans-serif;
+    letter-spacing: 0.1em;
+    }
+    ul, li, h4, p {
+      margin: 0;
+      padding: 0;
+    }
+    ul {
+
+      li {
+        img {
+          padding: 30px 0 30px 30px;
+        }
+        .info {
+          padding: 30px 0 30px 20px;
+          font-size: 0.9em;
+          h4 {
+            font-weight: bold;
+          }
         }
       }
     }
