@@ -18,6 +18,10 @@ class PaginasController < ApplicationController
       render :contacto
     end
   end
+  
+  def tiendas
+
+  end
 
   def suscripcion
     @suscripcion = Suscripcion.new
