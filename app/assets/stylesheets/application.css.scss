@@ -178,6 +178,7 @@ a:link, a:active, a:visited, a:hover {
   width: 93px;
   float: right;
   margin-top: 10px;
+  margin-right: 50px;
 }
 #internacional {
   background-position: -93px 0px;
@@ -196,12 +197,17 @@ a:link, a:active, a:visited, a:hover {
   border-bottom: 4px solid #2c2728;
   height: 55px;
   padding-top: 15px;
-
+  .pad {
+    padding-left: 50px;
+  }
+  .pad2 {
+    padding-top: 5px;
+    padding-left: 15px;
+  }
 
   #suscribete {
     width: 300px;
     float: left;
-
     #mail {
       background: url('footer/mail.png');
       width: 17px; height: 11px;
