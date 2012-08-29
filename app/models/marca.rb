@@ -1,5 +1,5 @@
 class Marca < ActiveRecord::Base
-  attr_accessible :marca, :descripcion, :slug, :logo, :promo
+  attr_accessible :marca, :descripcion, :slug, :logo, :promo, :behindthebrand
   attr_accessor :logo, :promo
 
   has_attached_file :logo, {

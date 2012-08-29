@@ -8,6 +8,9 @@
     =form_error @marca, :descripcion
     =f.labelbrtextarea "Descripción", :descripcion, :class => "full"
   %p
+    =form_error @marca, :behindthebrand
+    =f.labelbrtextarea "Detrás de la marca (opcional)", :behindthebrand, :class => "full"
+  %p
     = f.label :logo, "Logo"
     %br
     = f.file_field :logo
