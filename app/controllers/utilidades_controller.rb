@@ -7,7 +7,7 @@ class UtilidadesController < ApplicationController
     require 'csv'
     skus = []
 
-    [1,2,3,4,5,6].each do |n|
+    [1,2,3,4,5,6,7,8].each do |n|
       data = CSV.parse(File.open(csv.sub("#", n.to_s)), :headers => true, :return_headers => true )
       data.by_col!
       data.each do |col|
