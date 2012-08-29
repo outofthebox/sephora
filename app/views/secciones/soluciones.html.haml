@@ -1,7 +1,21 @@
-%section.seccion-soluciones#seccion-ver
-  %h2 Soluciones
-  - if @subsecciones and @subsecciones.any?
-    %ul
-      - @subsecciones.each do |subseccion|
-        %li
-          = link_to subseccion.nombre, soluciones_path(subseccion.id)
+%section#soluciones
+  %h2 SOLUCIONES
+  %ul.nolist
+    %li
+      =link_to image_tag('soluciones/1.jpg'), soluciones_path
+    %li
+      =link_to image_tag('soluciones/2.jpg'), soluciones_path
+    %li
+      =link_to image_tag('soluciones/3.jpg'), soluciones_path
+    %li
+      =link_to image_tag('soluciones/4.jpg'), soluciones_path
+    %li
+      =link_to image_tag('soluciones/5.jpg'), soluciones_path
+    %li
+      =link_to image_tag('soluciones/6.jpg'), soluciones_path
+    %li
+      =link_to image_tag('soluciones/7.jpg'), soluciones_path
+    %li
+      =link_to image_tag('soluciones/8.jpg'), soluciones_path
+    %li
+      =link_to image_tag('soluciones/9.jpg'), soluciones_path
