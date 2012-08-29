@@ -60,12 +60,13 @@
             %a{ :href => "/tendencias"}
               Tendencias
           %li.select
-            %select
-              %option MARCA
-              %option MARCA 1
-              %option MARCA 2
-              %option MARCA 3
-              %option MARCA 4
+            - if @marcas_all and @marcas_all.any?
+              %select#marcas
+                %option
+                  MARCAS
+                - @marcas_all.each do |marca|
+                  %option{ :value => "/marca/#{marca.slug}" }
+                    = marca.marca.upcase
 
     = yield
 

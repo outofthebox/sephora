@@ -3,6 +3,10 @@ class ApplicationController < ActionController::Base
 
   helper_method :mini_hash, :check_minihash
 
+  before_filter do
+    @marcas_all = Marca.order(:marca)
+  end
+
   def current_user
     current_usuario
   end

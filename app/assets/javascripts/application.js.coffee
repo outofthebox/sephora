@@ -2,6 +2,9 @@
 # = require jquery_ujs
 # = require jquery.ui.all
 
+$("select#marcas").on 'change', (e) ->
+  window.location = $(this).val()
+
 if ($widget_vinculos = $(".widget-seccion-producto-vincular")).size()
   $widget_vinculos.on "submit", (e) ->
     e.preventDefault()
