@@ -3,9 +3,19 @@ class SeccionesController < ApplicationController
     @secciones = Seccion.arrange
   end
 
+  # hot now, favorites, best sellers
   def ver
     @seccion = Seccion.by_slug(params[:seccion])
     @contenido = Seccion.seccion_actual(@seccion)
+  end
+
+  def soluciones
+    @seccion = Seccion.by_slug(:soluciones)
+    @subsecciones = Seccion.subsecciones(@seccion)
+
+    if params[:id] and (@solucion = Seccion.subsecciones(@seccion, params[:id]))
+      render :solucion_ver
+    end
   end
 
   def show

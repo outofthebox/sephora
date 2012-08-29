@@ -1,0 +1,18 @@
+%section#seccion-solucion-ver
+  %h2 Soluciones
+  - if @subsecciones and @subsecciones.any?
+    %ul
+      - @subsecciones.each do |subseccion|
+        %li
+          = link_to subseccion.nombre, soluciones_path(subseccion.id)
+  - if @solucion.producto_seccion and @solucion.producto_seccion.any?
+    %h3 Productos
+    %ul
+      - @solucion.producto_seccion.each do |producto_seccion|
+        - producto = producto_seccion.producto
+        %li
+          %h4
+            = link_to producto.nombre, producto_ver_path(producto.slug)
+          - unless producto_seccion.descripcion.empty?
+            %p
+              = producto_seccion.descripcion

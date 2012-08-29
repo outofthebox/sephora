@@ -17,4 +17,12 @@ class Seccion < ActiveRecord::Base
       Seccion.where(:parent_id => seccion.id, :visible => true).includes(:productos).first
     end
   end
+
+  def self.subsecciones seccion, id=nil
+    unless seccion.nil?
+      seccion1 = Seccion.where(:parent_id => seccion.id, :visible => true).includes(:productos)
+      seccion1 = seccion1.find(id) unless id.nil?
+      seccion1
+    end
+  end
 end
