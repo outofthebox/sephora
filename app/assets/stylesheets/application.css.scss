@@ -289,12 +289,21 @@ a:link, a:active, a:visited, a:hover {
       height: auto;
       .producto-imagen{
         text-align:center;
-        padding-top:80px;
+        img{
+          margin:0;
+          padding:0;
+        }
       }
       .producto-info{
-        padding-top:40px;
-        a{
-          font-size:16px;
+        h4{
+          color:gray;
+          font-weight: 100;
+        }
+        .producto-p{
+          border-top:5px solid #918F90;
+          p{
+            font-size:13px;
+          }
         }
       }
     }
