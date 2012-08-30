@@ -1,7 +1,7 @@
 class ProductosController < ApplicationController
 
   def index
-    @productos = Producto.includes(:marca).padres.publicados.page(params[:page]).per(50)
+    @productos = Producto.includes(:marca).padres.publicados.order("updated_at DESC").page(params[:page]).per(50)
   end
 
   def busqueda
