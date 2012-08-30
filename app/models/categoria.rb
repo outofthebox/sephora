@@ -4,7 +4,7 @@ class Categoria < ActiveRecord::Base
   attr_accessor :cover
 
   has_attached_file :cover, {
-    :styles => { :normal => "768x250#", :mini => "256x83#" }
+    :styles => { :normal => "768x250>", :mini => "256x83>" }
   }.merge(PAPERCLIP_STORAGE_OPTIONS)
 
   has_many :productos

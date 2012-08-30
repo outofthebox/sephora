@@ -4,11 +4,11 @@ class Marca < ActiveRecord::Base
   default_scope :order => "marca ASC"
 
   has_attached_file :logo, {
-    :styles => { :grande => "375x65#", :normal => "200x57#", :mini => "100x29#" }
+    :styles => { :grande => "375x65>", :normal => "200x57>", :mini => "100x29>" }
   }.merge(PAPERCLIP_STORAGE_OPTIONS)
 
   has_attached_file :promo, {
-    :styles => { :grande => "266x266#", :normal => "170x170#", :mini => "100x100#" }
+    :styles => { :grande => "266x266>", :normal => "170x170>", :mini => "100x100>" }
   }.merge(PAPERCLIP_STORAGE_OPTIONS)
 
   has_many :productos
