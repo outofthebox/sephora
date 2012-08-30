@@ -21,6 +21,7 @@
             - @productos.each do |producto|
               %li
                 = link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
+                %h4 #{producto.marca.marca}
                 %h4 #{link_to producto.nombre, producto_ver_path(producto.slug)}
                 %p #{number_to_currency producto.precio}
         .navegacion

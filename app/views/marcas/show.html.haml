@@ -32,6 +32,8 @@
                 - unless marca_producto.producto.foto_file_size.nil?
                   = image_tag marca_producto.producto.foto(:normal)
                 %h4
+                  = marca_producto.producto.marca.marca
+                %h4
                   = marca_producto.producto.nombre
                 %p
                   $#{marca_producto.producto.precio}
