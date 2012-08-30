@@ -13,7 +13,7 @@
     %p.rgt
       = f.submit! "Guardar"
 
-  - unless @categoria.depth
+  - if @categoria.depth.nil? or @categoria.depth.zero?
     %h3 Productos destacados
     - if (categoria_productos = @categoria.categoria_producto) and categoria_productos.any?
       %ul.productos-vinculados{ :'data-cambiar-orden-url' => '/categorias/actualizar_orden' }
