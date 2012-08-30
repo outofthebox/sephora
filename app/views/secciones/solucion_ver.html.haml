@@ -20,7 +20,7 @@
                   %p.marca
                     = link_to producto.marca.marca, marca_ver_path(producto.marca.slug)
                   %p
-                    = link_to producto.nombre, producto_ver_path(producto.slug)
+                    = link_to producto.nombre.capitalize, producto_ver_path(producto.slug)
                   %p
                     = number_to_currency producto.precio
                 .info.tcell.t75
