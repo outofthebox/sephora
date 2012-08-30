@@ -3,7 +3,14 @@
 // = require_self
 // = require widgets
 // = require jquery.ui.all
-
+@media screen and (max-width: 1180px) {
+  .flame-left {
+    display:none;
+  }
+  .flame-right {
+    display:none;
+  }
+}
 @font-face {
     font-family: 'Avant';
     src: url('/fuentes/ag-extralight-webfont-webfont.eot');
@@ -61,7 +68,7 @@ a:link, a:active, a:visited, a:hover {
     position:absolute;    
     right:-115px;
     bottom:0;
-  }
+  }  
 // HEADER SUPERIOR
   header#encabezado {
     height: 160px;
