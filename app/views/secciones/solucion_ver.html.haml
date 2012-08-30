@@ -27,7 +27,7 @@
                   %p.black
                     = link_to producto.marca.marca, marca_ver_path(producto.marca.slug)
                   %p.black
-                    = link_to producto.nombre, producto_ver_path(producto.slug)
+                    = link_to producto.nombre.capitalize, producto_ver_path(producto.slug)
                   - unless producto_seccion.descripcion.empty?
                     %p
                       = markdown producto_seccion.descripcion
