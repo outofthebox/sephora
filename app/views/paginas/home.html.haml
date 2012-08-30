@@ -29,13 +29,14 @@
         - bestsellers_productos.each do |bestsellers_producto|
           - producto = bestsellers_producto.producto
           %li
-            %h4
+            = image_tag(producto.foto.url(:chico))
+            %h5
               = producto.nombre
             - unless bestsellers_producto.descripcion.empty?
               %p
                 = bestsellers_producto.descripcion
             %p
-              = producto.precio
+              %small= number_to_currency producto.precio
 - if @lonuevo and (lonuevo_productos = @lonuevo.producto_seccion) and lonuevo_productos.any?
   #best-sellers
     %h3 LO NUEVO
@@ -44,13 +45,14 @@
         - lonuevo_productos.each do |lonuevo_producto|
           - producto = lonuevo_producto.producto
           %li
-            %h4
+            = image_tag(producto.foto.url(:chico))
+            %h5
               = producto.nombre
             - unless lonuevo_producto.descripcion.empty?
               %p
                 = lonuevo_producto.descripcion
             %p
-              = producto.precio
+              %small= number_to_currency producto.precio
 #esta-semana
   %h3 ESTA SEMANA
   %ul.nolist
