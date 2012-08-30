@@ -1,10 +1,18 @@
 - provide :title, "Búsqueda"
-%section#producto-buscar
-  - if @productos and @productos.any?
-    %ul
-      - @productos.each do |producto|
-        %li
-          %a{ :href => producto_ver_path(producto.slug) }
-            = producto.nombre
-          %a{ :href => producto_ver_path(producto.slug) }
-            = image_tag producto.foto.url(:chico)
+%section#categoria
+  %h2
+    Búsqueda
+  .table.full
+    .contizq.tcell.t25
+      %h3
+        Resultados
+    .contder.tcell.t75
+      .catalogo
+        - if @productos and @productos.any?
+          %ul.nobullet.nolist
+            - @productos.each do |producto|
+              %li
+                = link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
+                %h4 #{producto.marca.marca}
+                %h4 #{link_to producto.nombre, producto_ver_path(producto.slug)}
+                %p #{number_to_currency producto.precio}
