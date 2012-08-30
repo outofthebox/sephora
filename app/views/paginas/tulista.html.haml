@@ -6,7 +6,8 @@
 
   .table.full.hotnow
     .tcell.t66
-      = image_tag "tu-lista/hotnow.jpg", :width => "630"
+      .caja
+        = image_tag "tu-lista/hotnow.jpg", :width => "630"
     .tcell.t33
       .caja.hotnow
         .header.ctr
@@ -49,12 +50,12 @@
     = image_tag "tu-lista/foto.jpg", :class => :foto
     .header
       %strong MI TOP 10 / MY MAKE UP CORNER: CRIS ORDAZ
-    .table.full
-      .tcell.t50.middle
+    .table.full.top-content
+      .tcell.t45.middle.makeup
         = image_tag "tu-lista/quote.jpg"
         -#%blockquote
         -#  "Siempre lleva en la cartera un esmalte, de preferencia de secado <strong>rápido</strong>, y un removedor. Te ayudará a estar preparada para enfrentar cualquier problema de <strong>uñas</strong> en cualquier lugar."
-      .tcell.t50
+      .tcell.t55
         %ol
           %li OLE HENRIKSEN 3 little wonder
           %li DIOR Miss Dior Cherié
