@@ -412,7 +412,7 @@ a:link, a:active, a:visited, a:hover {
         margin: 0;
         li {
           padding: 5px 0 5px 0;
-          font-size: 0.8em;          
+          font-size: 0.8em;       
         }
         .first {
           font-size: 1em;
@@ -446,6 +446,8 @@ a:link, a:active, a:visited, a:hover {
         display: inline-block;
         width: 150px;
         margin: 10px;
+        vertical-align: top;
+        height: 200px;
         img {
           margin-bottom: 10px;
         }
@@ -572,6 +574,8 @@ a:link, a:active, a:visited, a:hover {
           display: inline-block;
           width: 30%;
           margin: 10px;
+          vertical-align: top;
+          height: 200px;
           img {
             width: 200px;
           }
@@ -656,6 +660,8 @@ a:link, a:active, a:visited, a:hover {
           display: inline-block;
           width: 28%;
           margin: 10px;
+          vertical-align: top;
+          height: 200px;
           h4 {
             font-size: 12pt;
             padding: 0; margin: 0;
