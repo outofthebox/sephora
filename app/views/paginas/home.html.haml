@@ -34,9 +34,9 @@
         - bestsellers_productos.each do |bestsellers_producto|
           - producto = bestsellers_producto.producto
           %li
-            = image_tag(producto.foto.url(:chico))
+            =link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
             %h5
-              = producto.nombre
+              =link_to producto.nombre, producto_ver_path(producto.slug)
             - unless bestsellers_producto.descripcion.empty?
               %p
                 = bestsellers_producto.descripcion
@@ -50,9 +50,9 @@
         - lonuevo_productos.each do |lonuevo_producto|
           - producto = lonuevo_producto.producto
           %li
-            = image_tag(producto.foto.url(:chico))
+            =link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
             %h5
-              = producto.nombre
+              =link_to producto.nombre, producto_ver_path(producto.slug)
             - unless lonuevo_producto.descripcion.empty?
               %p
                 = lonuevo_producto.descripcion
@@ -66,7 +66,7 @@
         %a{ :href => "/tu-lista" }
           =image_tag "home/top.jpg"
       %h4 MI TOP 10
-      %p Descrube los productos que ella ama de Sephora.
+      %p Descubre los productos que ella ama de Sephora.
     / %li
     /   .semana-banner
     /   %h4 Tendencias

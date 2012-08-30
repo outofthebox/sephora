@@ -1,0 +1,14 @@
+- provide :titulo, @categoria.nombre
+%section#categoria-nueva
+  = form_for @categoria, :url => new_categoria_path do |f|
+    %p
+      = f.labelbrtext "Nombre", :nombre, :class => "big full"
+    %p
+      = f.select :parent_id, ([["Raíz", nil]] + nested_set_options(Categoria, @categoria) {|i, level| "#{'&nbsp;' * (level.to_i+1)}".html_safe + " #{i.nombre}" })
+    - unless @categoria.cover_file_name.nil?
+      %p
+        = image_tag @categoria.cover.url(:mini)
+    %p
+      = f.file_field :cover
+    %p.rgt
+      = f.submit! "Guardar"

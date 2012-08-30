@@ -18,6 +18,20 @@ class CategoriasController < ApplicationController
     render :ver
   end
 
+  def new
+    @categoria = Categoria.new
+  end
+
+  def create
+    @categoria = Categoria.new params[:categoria]
+    if @categoria.valid?
+      @categoria.save
+      redirect_to edit_categoria_path(@categoria)
+    else
+      render :new
+    end
+  end
+
   def edit
     @categoria = Categoria.includes(:productos).find params[:id]
     authorize! :manage, @categoria

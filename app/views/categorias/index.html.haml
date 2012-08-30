@@ -1,5 +1,6 @@
 - provide :titulo, "Categorías"
 %section#categorias
+  = link_to "Nueva categoría", new_categoria_path
   = render_tree @categorias do |categoria, child|
     %li
       = link_to categoria.nombre, categoria_ver_path(categoria.slug)
