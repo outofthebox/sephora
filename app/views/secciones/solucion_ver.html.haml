@@ -31,5 +31,7 @@
                   - unless producto_seccion.descripcion.empty?
                     %p
                       = producto_seccion.descripcion
+                  %p
+                    = link_to "Detalles de producto >", producto_ver_path(producto.slug)
             .borde
               =image_tag "secciones/border.png"
