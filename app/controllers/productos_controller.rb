@@ -5,9 +5,10 @@ class ProductosController < ApplicationController
   end
 
   def busqueda
-    @productos = Producto.includes(:marca).busqueda params[:q]
+    @productos = Producto.includes(:marca).padres.publicados.busqueda params[:q] || params[:buscar][:q]
     respond_to do |format|
       format.js if request.xhr?
+      format.html
     end
   end
 

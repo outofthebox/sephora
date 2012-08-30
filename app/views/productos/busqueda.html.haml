@@ -1,0 +1,10 @@
+- provide :title, "Búsqueda"
+%section#producto-buscar
+  - if @productos and @productos.any?
+    %ul
+      - @productos.each do |producto|
+        %li
+          %a{ :href => producto_ver_path(producto.slug) }
+            = producto.nombre
+          %a{ :href => producto_ver_path(producto.slug) }
+            = image_tag producto.foto.url(:chico)

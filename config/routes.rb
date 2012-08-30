@@ -7,6 +7,8 @@ Sephora::Application.routes.draw do
   get   'soluciones(/:id)', :to => 'secciones#soluciones', :as => 'soluciones'
   get   'favorites(/:id)', :to => 'secciones#favorites', :as => 'favorites'
 
+  get   'busqueda', :to => 'productos#busqueda', :as => 'busqueda'
+
   get   'secciones/:id/desvincular/:producto_seccion/:hash', :to => 'secciones#desvincular', :as => 'seccion_desvincular_producto'
   get   'secciones/:id/vincular/:v_id/editar', :to => 'secciones#producto_editar', :as => 'seccion_editar_producto'
   put   'secciones/:id/vincular/:v_id/editar', :to => 'secciones#producto_update'

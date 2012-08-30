@@ -18,9 +18,9 @@
     %header#encabezado
       #contenme
         #search
-          = form_for :buscar, { :url => '/buscar' } do |f|
+          = form_for :buscar, { :url => busqueda_path, :method => :get } do |f|
             %p.nowrap
-              = f.text_field :buscar, :class => 'input'
+              = f.text_field :q, :class => 'input'
               = f.submit '', :class => 'submit'
         %a{ :href => "/" }
           #logo
