@@ -1,5 +1,5 @@
 %section#solucionesver
-  %h2 Soluciones
+  %h2.title Soluciones
   .table.full
     .contizq.tcell.t25
       - if @subsecciones and @subsecciones.any?
@@ -29,8 +29,8 @@
                   %p.black
                     = link_to producto.nombre.capitalize, producto_ver_path(producto.slug)
                   - unless producto_seccion.descripcion.empty?
-                    %p
-                      = markdown producto_seccion.descripcion
+                    .markdown
+                      =markdown producto_seccion.descripcion
                   %p
                     = link_to "Detalles de producto >", producto_ver_path(producto.slug)
             .borde
