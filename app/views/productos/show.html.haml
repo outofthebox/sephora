@@ -1,5 +1,7 @@
 - provide :title, @producto.nombre
 %section#producto
+  - if can? :edit, @producto
+    = link_to "Editar", edit_producto_path(@producto.id)
   .table.full
     .tcell.t35
       =image_tag @producto.foto.url(:normal)
