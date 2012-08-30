@@ -58,11 +58,12 @@ a:link, a:active, a:visited, a:hover {
 .flame-left{
   position:absolute;
   left:-115px;
+  top:250px;
 }
 .flame-right{
   position:absolute;    
   right:-115px;
-  bottom:0;
+  bottom:40px;
 }  
 
 #separador {
@@ -70,7 +71,6 @@ a:link, a:active, a:visited, a:hover {
   border-bottom: 1px solid #C1C1C1;
   height: 40px;
 }
-
 // HEADER SUPERIOR
   header#encabezado {
     height: 160px;
