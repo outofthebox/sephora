@@ -34,12 +34,16 @@
     %h3 BEST SELLERS
     #slider-wrap
       %ul.nobullet.nolist
-        - bestsellers_productos.each do |bestsellers_producto|
+        - bestsellers_productos.each_with_index do |bestsellers_producto, i|
           - producto = bestsellers_producto.producto
           %li
             =link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
+            %h5.number
+              = i+1
             %h5
-              =link_to producto.nombre, producto_ver_path(producto.slug)
+              = producto.marca.marca.upcase
+            %h5
+              =link_to producto.nombre.split(' ').map {|w| w.capitalize }.join(' '), producto_ver_path(producto.slug)
             - unless bestsellers_producto.descripcion.empty?
               %p
                 = bestsellers_producto.descripcion
@@ -55,7 +59,9 @@
           %li
             =link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
             %h5
-              =link_to producto.nombre, producto_ver_path(producto.slug)
+              = producto.marca.marca.upcase
+            %h5
+              =link_to producto.nombre.split(' ').map {|w| w.capitalize }.join(' '), producto_ver_path(producto.slug)
             - unless lonuevo_producto.descripcion.empty?
               %p
                 = lonuevo_producto.descripcion
