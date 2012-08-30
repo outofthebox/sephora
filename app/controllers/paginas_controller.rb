@@ -23,6 +23,10 @@ class PaginasController < ApplicationController
 
   end
 
+  def obsequios
+    
+  end
+
   def suscripcion
     @suscripcion = Suscripcion.new
   end

@@ -35,6 +35,7 @@ Sephora::Application.routes.draw do
 
   get   'tiendas', :to => 'paginas#tiendas', :as => 'tiendas'
   get   'eventos', :to => 'paginas#eventos', :as => 'eventos'
+  get   'obsequios', :to => 'paginas#obsequios', :as => 'obsequios'
 
   get   'suscripcion', :to => 'paginas#suscripcion', :as => 'suscripcion'
   post  'suscripcion', :to => 'paginas#suscripcion_post'
