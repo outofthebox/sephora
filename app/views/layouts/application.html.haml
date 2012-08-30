@@ -122,14 +122,18 @@
             %span#mail
             %p
               SUSCRÍBETE Y RECIBE LOS SEPHORA HIGHLIGHTS
-              #registrar
+            .footer-boton 
+              %a{:href => '/'} Registrar datos
           .tcell.t33
-            %p.pad2 NUESTRAS TIENDAS
-            =link_to image_tag('footer/descubre.jpg'), tiendas_path
+            %p.pad2
+              NUESTRAS TIENDAS
+            .footer-boton
+              %a{:href => '/tiendas'} Descúbrelas
           .tcell.t33
             %p.pad
               DESCARGA<br />EL CATÁLOGO ONLINE
-              #descargar
+            .footer-boton
+              %a{:href => '/'} Descarga aquí
       #sephora-en
         %p
           SEPHORA en:
