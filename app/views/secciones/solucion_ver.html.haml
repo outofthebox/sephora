@@ -30,7 +30,7 @@
                     = link_to producto.nombre, producto_ver_path(producto.slug)
                   - unless producto_seccion.descripcion.empty?
                     %p
-                      = producto_seccion.descripcion
+                      = markdown producto_seccion.descripcion
                   %p
                     = link_to "Detalles de producto >", producto_ver_path(producto.slug)
             .borde

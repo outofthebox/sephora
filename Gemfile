@@ -12,6 +12,7 @@ gem 'aws-sdk'
 gem 'nested_set'
 gem 'devise'
 gem 'cancan'
+gem 'redcarpet', '1.17.2'
 
 group :assets do
   gem 'jquery-rails'
