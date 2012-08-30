@@ -341,22 +341,21 @@ a:link, a:active, a:visited, a:hover {
     text-align: center;
     margin-bottom: 20px;
     h3 {
-      font-size: 32pt;
+      font-size: 2.7em;
       font-weight: lighter;
       font-family: "Avant", Arial, sans-serif;
     }
     h5 a{
       font-weight: lighter;
       font-family: "Avant", Arial, sans-serif;
-      font-size: 18px;
+      font-size: 1.2em;
       letter-spacing: 1px;
     }
     p{
-      margin-top:-5px!important;
       small{
         font-weight: bold;
         font-family: "Avant", Arial, sans-serif;
-        font-size: 12px;
+        font-size: 1em;
         letter-spacing: 1px;
       }
     }
@@ -376,15 +375,20 @@ a:link, a:active, a:visited, a:hover {
           h5.number {
             font-family: "Avant", Arial, sans-serif;
             font-size: 2em;
-            padding-bottom: 5px;
           }
           h5, p {
-            font-size: 0.9em;
+            font-size: 0.8em;
             margin: 0;
             padding: 0;
           }
-          p {
-            padding: -10px;
+          h5, p {
+            padding-top: 5px;
+          }
+          h5.marca {
+            font-family: "Avant", Arial, sans-serif;
+            font-size: 0.9em;
+            font-weight: bold;
+            letter-spacing: 1px;
           }
         }
       }

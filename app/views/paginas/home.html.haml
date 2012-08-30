@@ -40,7 +40,7 @@
             =link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
             %h5.number
               = i+1
-            %h5
+            %h5.marca
               = producto.marca.marca.upcase
             %h5
               =link_to producto.nombre.split(' ').map {|w| w.capitalize }.join(' '), producto_ver_path(producto.slug)
@@ -58,7 +58,7 @@
           - producto = lonuevo_producto.producto
           %li
             =link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
-            %h5
+            %h5.marca
               = producto.marca.marca.upcase
             %h5
               =link_to producto.nombre.split(' ').map {|w| w.capitalize }.join(' '), producto_ver_path(producto.slug)
