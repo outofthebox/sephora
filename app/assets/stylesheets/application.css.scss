@@ -259,7 +259,6 @@ a:link, a:active, a:visited, a:hover {
     text-decoration:none;
     background-color:#000000;
     padding:5px 10px;
-    font-family: "Avant";
   }
 }
 #sus-cata {
@@ -268,6 +267,9 @@ a:link, a:active, a:visited, a:hover {
   border-bottom: 4px solid #2c2728;
   height: 55px;
   padding-top: 15px;
+  p{
+    font-weight: bold;
+  }
   .pad {
     padding-left: 50px;
   }
