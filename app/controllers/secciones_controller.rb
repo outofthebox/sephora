@@ -18,6 +18,15 @@ class SeccionesController < ApplicationController
     end
   end
 
+  def favorites
+    @seccion = Seccion.by_slug(:favorites)
+    @subsecciones = Seccion.subsecciones(@seccion)
+
+    if params[:id] and (@solucion = Seccion.subsecciones(@seccion, params[:id]))
+      render :favorites_ver
+    end
+  end
+
   def show
     @seccion = Seccion.find params[:id]
     authorize! :manage, @seccion

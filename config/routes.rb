@@ -5,6 +5,7 @@ Sephora::Application.routes.draw do
   
   get   ':seccion', :to => 'secciones#ver', :constraints => { :seccion => /hotnow|favorites|bestsellers/ }
   get   'soluciones(/:id)', :to => 'secciones#soluciones', :as => 'soluciones'
+  get   'favorites(/:id)', :to => 'secciones#favorites', :as => 'favorites'
 
   get   'secciones/:id/desvincular/:producto_seccion/:hash', :to => 'secciones#desvincular', :as => 'seccion_desvincular_producto'
   get   'secciones/:id/vincular/:v_id/editar', :to => 'secciones#producto_editar', :as => 'seccion_editar_producto'

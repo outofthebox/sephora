@@ -1,0 +1,7 @@
+%section#favorites
+  %h2 Favorites
+  - if @subsecciones and @subsecciones.any?
+    %ul
+      - @subsecciones.each do |subseccion|
+        %li
+          = link_to subseccion.nombre, favorites_path(subseccion.id)
