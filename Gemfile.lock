@@ -71,6 +71,11 @@ GEM
       guard (>= 1.1.0)
       multi_json (~> 1.0)
     haml (3.1.6)
+    haml-rails (0.3.4)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      haml (~> 3.0)
+      railties (~> 3.0)
     hike (1.2.1)
     hominid (3.0.4)
     httparty (0.8.1)
@@ -185,6 +190,7 @@ DEPENDENCIES
   guard
   guard-livereload
   haml
+  haml-rails
   hominid
   jquery-rails
   jquery-ui-rails
