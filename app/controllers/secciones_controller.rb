@@ -21,8 +21,8 @@ class SeccionesController < ApplicationController
   def favorites
     @seccion = Seccion.by_slug(:favorites)
     @subsecciones = Seccion.subsecciones(@seccion)
-
-    if params[:id] and (@solucion = Seccion.subsecciones(@seccion, params[:id]))
+    @contenido = Seccion.seccion_actual(@seccion)
+    if params[:id] and (@favorite = Seccion.subsecciones(@seccion, params[:id]))
       render :favorites_ver
     end
   end
