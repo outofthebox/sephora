@@ -2,6 +2,7 @@
 // = require eses
 // = require_self
 // = require widgets
+// = require secciones
 // = require jquery.ui.all
 @media screen and (max-width: 1180px) {
   .flame-left {
@@ -53,22 +54,23 @@ a:link, a:active, a:visited, a:hover {
   margin: 0 auto;
   width: 960px;
 
-// SEPARADOR
-  #separador {
-    border-top: 1px solid #C1C1C1;
-    border-bottom: 1px solid #C1C1C1;
-    height: 40px;
-  }
 // fondo sephora
-  .flame-left{
-    position:absolute;
-    left:-115px;
-  }
-  .flame-right{
-    position:absolute;    
-    right:-115px;
-    bottom:0;
-  }  
+.flame-left{
+  position:absolute;
+  left:-115px;
+}
+.flame-right{
+  position:absolute;    
+  right:-115px;
+  bottom:0;
+}  
+
+#separador {
+  border-top: 1px solid #C1C1C1;
+  border-bottom: 1px solid #C1C1C1;
+  height: 40px;
+}
+
 // HEADER SUPERIOR
   header#encabezado {
     height: 160px;
@@ -240,44 +242,44 @@ a:link, a:active, a:visited, a:hover {
   p { width: 175px; float: left; }
 }
 
-  #sephora-en {
-    text-align: right;
-    width: 100%;
-    margin-top: 10px;
-    p {
-      margin-right: 5px;
-      display: inline-block;
-    }
-    #bg, #gp {
-      background: url('footer/social.png');
-      width: 26px; height: 26px;
-      display: inline-block;
-    }
-    #bg {
-      background-position: 0px -124px;
+#sephora-en {
+  text-align: right;
+  width: 100%;
+  margin-top: 10px;
+  p {
+    margin-right: 5px;
+    display: inline-block;
+  }
+  #bg, #gp {
+    background: url('footer/social.png');
+    width: 26px; height: 26px;
+    display: inline-block;
+  }
+  #bg {
+    background-position: 0px -124px;
 
-    }
-    #gp {
-      width: 26px; height: 26px;
-      background-position: 0px -150px;
-    }
+  }
+  #gp {
+    width: 26px; height: 26px;
+    background-position: 0px -150px;
+  }
+}
+
+
+#footin {
+  width: 100%;
+  border-top: 1px solid black;
+  height: 50px;
+  padding-top: 15px; 
+  #links {
+    float: left;
+    padding-top: 10px;
   }
 
-
-  #footin {
-    width: 100%;
-    border-top: 1px solid black;
-    height: 50px;
-    padding-top: 15px; 
-    #links {
-      float: left;
-      padding-top: 10px;
-    }
-
-    #internacional {
-      float: right;
-    }
+  #internacional {
+    float: right;
   }
+}
 
 
 // HOME
@@ -333,8 +335,8 @@ a:link, a:active, a:visited, a:hover {
       ul {
 
         li {
-          display: inline-block;
-          width: 200px;
+          @include inlineblock;
+          width: 15%;
           // border: 1px solid blue;
           margin: 0 12px 0 12px;
 

@@ -1,0 +1,68 @@
+- provide :titulo, 'Tu lista'
+%section#tu-lista
+  = image_tag "tu-lista/header.png"
+
+  %hr.sep
+
+  .table.full.hotnow
+    .tcell.t66
+      = image_tag "tu-lista/hotnow.png", :width => "630"
+    .tcell.t33
+      .caja.hotnow
+        .header.ctr
+          Las más buscadas
+          %br
+          %strong Cremas
+        %ol.nobullet
+          %li SMASHBOX Camera Ready BB Cream SPF 35
+          %li DR. JART+ Premium Beauty Balm SPF 45 PA
+          %li CLINIQUE Age Defense BB Cream SPF 30
+          %li BOSCIA B.B. Cream SPF 27 PA
+          %li DIOR Hydra Lite BB Creme SPF 30
+          %li STILA Stay All Day 10-In-1 HD Beauty Balm
+          %li TOO FACED Tinted Beauty Balm SPF 20
+
+  %hr.sep
+
+  .table.full
+    .tcell.t33
+      .caja
+        .header
+          Sephora Favorites
+          %strong Máscaras
+        = image_tag "tu-lista/promo_1.jpg"
+    .tcell.t33
+      .caja
+        .header
+          Sephora Favorites
+          %strong Moisturizers
+        = image_tag "tu-lista/promo_2.jpg"
+    .tcell.t33
+      .caja
+        .header
+          Sephora Favorites
+          %strong Primers
+        = image_tag "tu-lista/promo_3.jpg"
+
+  %hr.sep
+
+  .caja.top-10
+    = image_tag "tu-lista/foto.jpg", :class => :foto
+    .header
+      %strong Mi top 10 / Hildelisa Beltrán
+    .table.full
+      .tcell.t50.middle
+        = image_tag "tu-lista/quote.png"
+        -#%blockquote
+        -#  "Siempre lleva en la cartera un esmalte, de preferencia de secado <strong>rápido</strong>, y un removedor. Te ayudará a estar preparada para enfrentar cualquier problema de <strong>uñas</strong> en cualquier lugar."
+      .tcell.t50
+        %ol
+          %li SMASHBOX Camera Ready BB Cream SPF 35
+          %li DR. JART+ Premium Beauty Balm SPF 45 PA
+          %li CLINIQUE Age Defense BB Cream SPF 30
+          %li BOSCIA B.B. Cream SPF 27 PA
+          %li DIOR Hydra Lite BB Creme SPF 30
+          %li STILA Stay All Day 10-In-1 HD Beauty Balm
+          %li TOO FACED Tinted Beauty Balm SPF 20
+
+  %hr.sep
