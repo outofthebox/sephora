@@ -1,18 +1,35 @@
-%section#seccion-solucion-ver
+%section#solucionesver
   %h2 Soluciones
-  - if @subsecciones and @subsecciones.any?
-    %ul
-      - @subsecciones.each do |subseccion|
-        %li
-          = link_to subseccion.nombre, soluciones_path(subseccion.id)
-  - if @solucion.producto_seccion and @solucion.producto_seccion.any?
-    %h3 Productos
-    %ul
-      - @solucion.producto_seccion.each do |producto_seccion|
-        - producto = producto_seccion.producto
-        %li
-          %h4
-            = link_to producto.nombre, producto_ver_path(producto.slug)
-          - unless producto_seccion.descripcion.empty?
-            %p
-              = producto_seccion.descripcion
+  .table.full
+    .contizq.tcell.t25
+      - if @subsecciones and @subsecciones.any?
+        %ul
+          - @subsecciones.each do |subseccion|
+            %li
+              = link_to subseccion.nombre, soluciones_path(subseccion.id)
+    .contder.tcell.t75
+      =image_tag "soluciones/b#{params[:id]}.jpg"
+      - if @solucion.producto_seccion and @solucion.producto_seccion.any?
+        %ul.nolist
+          - @solucion.producto_seccion.each do |producto_seccion|
+            - producto = producto_seccion.producto
+            %li
+              .table.full
+                .prod.tcell.t25
+                  = link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
+                  %p.marca
+                    = link_to producto.marca.marca, marca_ver_path(producto.marca.slug)
+                  %p
+                    = link_to producto.nombre, producto_ver_path(producto.slug)
+                  %p
+                    = number_to_currency producto.precio
+                .info.tcell.t75
+                  %p.black
+                    = link_to producto.marca.marca, marca_ver_path(producto.marca.slug)
+                  %p.black
+                    = link_to producto.nombre, producto_ver_path(producto.slug)
+                  - unless producto_seccion.descripcion.empty?
+                    %p
+                      = producto_seccion.descripcion
+            .borde
+              =image_tag "secciones/border.png"
