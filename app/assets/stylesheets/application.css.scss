@@ -230,7 +230,7 @@ a:link, a:active, a:visited, a:hover {
     }
   }
 
-#registrar, #internacional, #descargar {
+#registrar, #descargar {
   background:url(footer/botones.png);
   height: 21px;
 }
@@ -242,9 +242,26 @@ a:link, a:active, a:visited, a:hover {
   margin-right: 50px;
 }
 #internacional {
-  background-position: -93px 0px;
+  background:#000000;
   height: 23px;
   width: 146px;
+  position:relative;
+  a{
+    color:#ffffff;
+    position:absolute;
+    height:20px;
+    font-size:13px;
+    top:2px;
+    padding-left:10px;
+    width:130px;
+  }
+  .icon{
+    background: image-url('flecha_internacional.png') no-repeat 0 0;
+    width: 20px;
+    height: 23px;
+    position: absolute;
+    right: 0;
+  }
 }
 #descargar {
   margin-top: 10px;
