@@ -51,14 +51,14 @@
             %a{ :href => "/categoria/obsequios"}
               Obsequios
           %li
-            %a{ :href => "/categoria/soluciones"}
+            %a{ :href => "/soluciones"}
               Soluciones
           %li
             %a{ :href => "/tu-lista"}
               Tu Lista
-          %li
-            %a{ :href => "/tendencias"}
-              Tendencias
+          -#%li
+          -#  %a{ :href => "/tendencias"}
+          -#    Tendencias
           %li.select
             - if @marcas_all and @marcas_all.any?
               %select#marcas

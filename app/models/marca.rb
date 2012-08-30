@@ -1,9 +1,10 @@
 class Marca < ActiveRecord::Base
   attr_accessible :marca, :descripcion, :slug, :logo, :promo, :behindthebrand
   attr_accessor :logo, :promo
+  default_scope :order => "marca ASC"
 
   has_attached_file :logo, {
-    :styles => { :grande => "280x80#", :normal => "200x57#", :mini => "100x29#" }
+    :styles => { :grande => "375x65#", :normal => "200x57#", :mini => "100x29#" }
   }.merge(PAPERCLIP_STORAGE_OPTIONS)
 
   has_attached_file :promo, {

@@ -5,7 +5,8 @@
       =image_tag @producto.foto.url(:normal)
     .tcell.t65
       .marca
-        %div{:style=>"width: 260px; height: 30px; border: 1px solid red;"}
+        - unless @producto.marca.logo_file_size.nil?
+          = image_tag @producto.marca.logo.url(:grande)
       .info
         %span.marcab
           =@producto.marca.marca
@@ -22,9 +23,14 @@
           ver más
           %span
             ▼
-      .interesar
-        %h3 te puede interesar
-        - if @productos_relacionados and @productos_relacionados.any?
+      - if @producto.presentaciones and @producto.presentaciones.any?
+        %ul.nolist.nobullet
+          - @producto.presentaciones.each do |presentacion|
+            %li
+              = image_tag presentacion.foto.url(:chico)
+      - if @productos_relacionados and @productos_relacionados.any?
+        .interesar
+          %h3 te puede interesar
           %ul.nobullet.nolist
             - @productos_relacionados.each do |producto|
               %li
