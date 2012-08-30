@@ -345,6 +345,21 @@ a:link, a:active, a:visited, a:hover {
       font-weight: lighter;
       font-family: "Avant", Arial, sans-serif;
     }
+    h5 a{
+      font-weight: lighter;
+      font-family: "Avant", Arial, sans-serif;
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+    p{
+      margin-top:-5px!important;
+      small{
+        font-weight: bold;
+        font-family: "Avant", Arial, sans-serif;
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
+    }
 
     #slider-wrap {
       // border: 1px solid red;
