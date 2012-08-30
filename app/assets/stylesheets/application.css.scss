@@ -42,6 +42,7 @@ a:link, a:active, a:visited, a:hover {
 
 // CONTENEDOR PRINCIPAL
 #wrap {
+  position:relative;
   margin: 0 auto;
   width: 960px;
 
@@ -51,7 +52,16 @@ a:link, a:active, a:visited, a:hover {
     border-bottom: 1px solid #C1C1C1;
     height: 40px;
   }
-
+// fondo sephora
+  .flame-left{
+    position:absolute;
+    left:-115px;
+  }
+  .flame-right{
+    position:absolute;    
+    right:-115px;
+    bottom:0;
+  }
 // HEADER SUPERIOR
   header#encabezado {
     height: 160px;
