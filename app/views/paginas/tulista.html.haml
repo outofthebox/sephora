@@ -7,7 +7,8 @@
   .table.full.hotnow
     .tcell.t66
       .caja
-        = image_tag "tu-lista/hotnow.jpg", :width => "630"
+        %a{:href => '/hotnow'}
+          = image_tag "tu-lista/hotnow.jpg", :width => "630"
     .tcell.t33
       .caja.hotnow
         .header.ctr
@@ -50,7 +51,7 @@
     = image_tag "tu-lista/foto.jpg", :class => :foto
     .header
       %strong MI TOP 10 / MY MAKE UP CORNER: CRIS ORDAZ
-    .table.full.top-content
+    .table.full.top-conte
       .tcell.t45.middle.makeup
         = image_tag "tu-lista/quote.jpg"
         -#%blockquote
