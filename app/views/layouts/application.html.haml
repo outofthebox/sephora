@@ -61,6 +61,9 @@
           -#    Tendencias
           %li.select
             - if @marcas_all and @marcas_all.any?
+              .trigger
+                Marcas 
+                %span.icon 
               %select#marcas
                 %option
                   MARCAS

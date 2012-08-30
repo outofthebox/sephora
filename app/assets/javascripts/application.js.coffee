@@ -4,6 +4,8 @@
 
 $("select#marcas").on 'change', (e) ->
   window.location = $(this).val()
+$('.select').hover ->
+  $('.trigger span').toggleClass('active')
 
 if ($widget_vinculos = $(".widget-seccion-producto-vincular")).size()
   $widget_vinculos.on "submit", (e) ->
