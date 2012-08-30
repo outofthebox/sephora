@@ -22,7 +22,7 @@ Sephora::Application.routes.draw do
   get   'importarimg', :to => 'utilidades#importarimg'
   get   'parsearparents', :to => 'utilidades#parsearparents'
   
-  get   'producto', :to => 'productos#index'
+  get   'producto', :to => 'productos#index', :as => 'producto_index'
   get   'producto/:slug',  :to => 'productos#show', :as => 'producto_ver'
   get   'productos/busqueda', :to => 'productos#busqueda', :as => 'productos_busqueda'
   
