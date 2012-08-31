@@ -1,7 +1,14 @@
 - provide :titulo, @categoria.nombre
 %section#categoria
-  %h2
-    = @categoria.nombre
+  %ul.breadcrumbs.nolist.seplist.nobullet
+    - if @categoria.ancestors and @categoria.ancestors.any?
+      - @categoria.ancestors.each do |a|
+        %li
+          %h2.inlineblock
+            = link_to a.nombre, categoria_ver_path(a.slug)
+    %li.highlighted
+      %h2.inlineblock
+        = link_to @categoria.nombre, categoria_ver_path(@categoria.slug)
   .table.full
     .contizq.tcell.t25
       %h3

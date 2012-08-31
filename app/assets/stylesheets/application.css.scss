@@ -42,6 +42,17 @@ a:link, a:active, a:visited, a:hover {
   text-decoration: none;
   color: black;
 }
+
+ul.breadcrumbs{
+  li + li:before{
+    content: ">";
+  }
+  li.highlighted{
+    a{
+      color: #f00;
+    }
+  }
+}
 // BANDA NEGRA SUPERIOR
 #head-sup {
   background: #231F20;
