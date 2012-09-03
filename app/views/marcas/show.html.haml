@@ -22,18 +22,16 @@
         .tcell.t35
           - unless @marca.promo_file_name.nil? 
             = image_tag @marca.promo.url(:grande)
+      %h3 EXPLORA LA MARCA
       - if @marca.marca_producto.size
-        %h3 EXPLORA LA MARCA
-        %h4
-          BEST SELLERS
-          %ul.nobullet
+        .catalogo
+          %h4.title
+            BEST SELLERS
+          %ul.nobullet.nolist
             - @marca.marca_producto.each do |marca_producto|
               %li
                 - unless marca_producto.producto.foto_file_size.nil?
-                  = image_tag marca_producto.producto.foto(:normal)
-                %h4
-                  = marca_producto.producto.marca.marca
-                %h4
-                  = marca_producto.producto.nombre
-                %p
-                  $#{marca_producto.producto.precio}
+                  = link_to image_tag(marca_producto.producto.foto(:normal)), producto_ver_path(marca_producto.producto.slug)
+                %h4 #{marca_producto.producto.marca.marca.upcase}
+                %h4 #{link_to marca_producto.producto.nombre.split(' ').map {|w| w.capitalize }.join(' '), producto_ver_path(marca_producto.producto.slug)}
+                %p $#{marca_producto.producto.precio}

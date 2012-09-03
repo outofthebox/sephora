@@ -105,6 +105,8 @@ ul.breadcrumbs{
             height: 20px;
             border: 1px solid black;
             border-radius: 0;
+            font-size: 0.8em;
+            padding: 2px;
           }
           .submit{
             border:1px solid #000000!important;
@@ -461,6 +463,7 @@ ul.breadcrumbs{
       overflow: hidden;
 
       ul {
+        padding-bottom: 5px;
         li:hover a, li:hover p {
           text-decoration: underline;
         }
@@ -683,14 +686,18 @@ ul.breadcrumbs{
       padding: 10px;
     }
     .contizq {
-      border-top: 5px solid #231F20;
+        padding-left: 10px;
+        padding-right: 10px;
       ul {
+        border-top: 3px solid #231F20;
+        border-bottom: 3px solid #231F20;
         list-style: none;
         margin: 0;
         padding: 0;
         li {
           font-size: 0.8em;
-          padding: 10px;
+          padding-top: 2px;
+          padding-bottom: 2px;
         }
       }
     }
@@ -720,29 +727,48 @@ ul.breadcrumbs{
         color: white;
         background: black;
       }
-      ul {
-        text-align: center;
+      .catalogo {
+        margin-top: 15px;
+        padding-bottom: 30px;
+        .title {
+          text-transform: uppercase;
+          font-weight: 100 !important;
+          font-family: 'Avant', Helvetica, Arial;
+          letter-spacing: 1px;
+          font-size: 3em;
+          text-align: center;
+        }
+        ul {
+          text-align: center;
+          border-bottom: 1px solid #D6D6D8;
+          width: 730px;
+          margin: 0 auto;
+          padding-bottom: 50px;
+        }
+        li:hover a {
+          text-decoration: underline;
+        }
         li {
-          font-size: 12pt;
           display: inline-block;
-          width: 30%;
-          margin: 10px;
           vertical-align: top;
+          width: 200px;
           height: 200px;
+          padding-bottom: 50px;
           img {
-            width: 200px;
+            margin-bottom: 10px;
+            width: 150px;
+          }
+          h4, p {
+            font-family: "Helvetica Neue", Helvetica, Arial;
+            margin:0;
+            padding:0;
+            line-height: 1em;
           }
           h4 {
-            font-size: 12pt;
-            padding: 0; margin: 0;
-            color: #231F20;
-            margin-top:10px;
+            font-size: 0.8em;
           }
           p {
-            line-height: 15px;
-            font-size: 9pt;
-            color: #231F20;
-            padding: 0; margin: 0;
+            font-size: 0.8em;
           }
         }
       }
