@@ -4,10 +4,10 @@
     - if @categoria.ancestors and @categoria.ancestors.any?
       - @categoria.ancestors.each do |a|
         %li
-          %h2.inlineblock
+          .inlineblock
             = link_to a.nombre, categoria_ver_path(a.slug)
     %li.highlighted
-      %h2.inlineblock
+      .inlineblock
         = link_to @categoria.nombre, categoria_ver_path(@categoria.slug)
   .table.full
     .contizq.tcell.t25
@@ -28,8 +28,8 @@
             - @productos.each do |producto|
               %li
                 = link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
-                %h4 #{producto.marca.marca}
-                %h4 #{link_to producto.nombre, producto_ver_path(producto.slug)}
+                %h4 #{producto.marca.marca.upcase}
+                %h4 #{link_to producto.nombre.split(' ').map {|w| w.capitalize }.join(' '), producto_ver_path(producto.slug)}
                 %p #{number_to_currency producto.precio}
         .navegacion
           %span ver

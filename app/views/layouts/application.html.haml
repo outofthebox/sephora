@@ -20,7 +20,7 @@
         #search
           = form_for :buscar, { :url => busqueda_path, :method => :get } do |f|
             %p.nowrap
-              = f.text_field :q, :class => 'input'
+              = f.text_field :q, :class => 'input', :placeholder  => "BUSCAR"
               = f.submit '', :class => 'submit'
         %a{ :href => "/" }
           #logo
