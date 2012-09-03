@@ -56,7 +56,7 @@ ul.breadcrumbs{
 // BANDA NEGRA SUPERIOR
 #head-sup {
   background: #231F20;
-  height: 34px;
+  height: 40px;
 }
 
 // CONTENEDOR PRINCIPAL
@@ -78,12 +78,13 @@ ul.breadcrumbs{
 }  
 
 #separador {
-  border-bottom: 2px solid #C1C1C1;
-  height: 35px;
+  border-top: 1px solid #C1C1C1;
+  border-bottom: 1px solid #C1C1C1;
+  height: 40px;
 }
 // HEADER SUPERIOR
   header#encabezado {
-    height: 140px;
+    height: 160px;
     margin: 0 auto;
     #contenme {
       height: auto;
@@ -349,7 +350,7 @@ ul.breadcrumbs{
 
 #footin {
   width: 100%;
-  border-top: 1px solid #B2B2B2;
+  border-top: 1px solid black;
   height: 50px;
   padding-top: 15px; 
   #links {
@@ -366,8 +367,6 @@ ul.breadcrumbs{
 // HOME
   #slider-home {
     height: auto;
-    border-top: 1px solid #B2B2B2;
-    border-bottom: 5px solid black;
     #producto {
       height: auto;
       .producto-imagen{
@@ -408,17 +407,14 @@ ul.breadcrumbs{
   }
 
   .linksrapidos {
-    font-size: 10pt;
-    margin-left: 200px;
+    font-size: 9pt;
+    margin-left: 192px;
     margin-top: 15px;
     color: red;
     font-weight: bold;
     span {
       color: black;
       padding-left: 40px;
-    }
-    span:hover {
-      text-decoration: underline;
     }
   }
 
@@ -427,11 +423,9 @@ ul.breadcrumbs{
     text-align: center;
     margin-bottom: 20px;
     h3 {
-      text-transform: uppercase;
-      font-weight: 100 !important;
-      font-family: 'Avant', Helvetica, Arial;
-      letter-spacing: 1px;
-      font-size: 2.5em;
+      font-size: 2.7em;
+      font-weight: lighter;
+      font-family: "Avant", Arial, sans-serif;
     }
     h5 a{
       font-weight: lighter;
@@ -454,15 +448,13 @@ ul.breadcrumbs{
       overflow: hidden;
 
       ul {
-        li:hover a, li:hover p {
-          text-decoration: underline;
-        }
+
         li {
           @include inlineblock;
           width: 15%;
           // border: 1px solid blue;
           margin: 0 12px 0 12px;
-          h6.number {
+          h5.number {
             font-family: "Avant", Arial, sans-serif;
             font-size: 2em;
           }
@@ -489,12 +481,9 @@ ul.breadcrumbs{
     text-align: center;
     border-top: 3px solid #231F20;
     h3 {
-      border-bottom: 1px solid #918F90;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      font-size: 1.3em;
-      letter-spacing: 7px;
-      margin-bottom: 15px;
+      border-bottom: 2px solid #918F90;
+      padding-top: 5px;
+      padding-bottom: 5px;
     }
     ul {
       height: 390px;

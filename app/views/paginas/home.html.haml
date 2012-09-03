@@ -1,6 +1,5 @@
 =image_tag 'home/flame.jpg', class: 'flame-left', size: '90x616'
 =image_tag 'home/flame.jpg', class: 'flame-right', size: '90x616'
-#separador
 #slider-home.full
   #producto.tcell.t25.middle
     .producto-imagen
@@ -38,7 +37,7 @@
           - producto = bestsellers_producto.producto
           %li
             =link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
-            %h5.number
+            %h6.number
               = i+1
             %h5.marca
               = producto.marca.marca.upcase
@@ -47,8 +46,8 @@
             - unless bestsellers_producto.descripcion.empty?
               %p
                 = bestsellers_producto.descripcion
-            %p
-              %small= number_to_currency producto.precio
+            / %p
+            /   %small= number_to_currency producto.precio
 - if @lonuevo and (lonuevo_productos = @lonuevo.producto_seccion) and lonuevo_productos.any?
   #best-sellers
     %h3 LO NUEVO
@@ -65,8 +64,8 @@
             - unless lonuevo_producto.descripcion.empty?
               %p
                 = lonuevo_producto.descripcion
-            %p
-              %small= number_to_currency producto.precio
+            / %p
+            /   %small= number_to_currency producto.precio
 #esta-semana
   %h3 ESTA SEMANA
   %ul.nolist
