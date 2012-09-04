@@ -668,6 +668,7 @@ ul.breadcrumbs{
           display: inline-block;
           width: 30%;
           margin: 10px;
+          vertical-align: top;
           h4 {
             font-size: 12pt;
             font-weight: bold;
@@ -790,6 +791,16 @@ ul.breadcrumbs{
     .marca {
       border-bottom: 5px solid #231F20;
       padding: 35px 0 35px 0;
+    }
+    .producto {
+      text-align: center;
+      .vistagrande {
+        color: gray;
+        font-size: 0.8em;
+      }
+      .vistagrande:hover {
+        text-decoration: underline;
+      }
     }
     .info {
       margin-top: 10px;
@@ -1101,4 +1112,21 @@ section#eventos{
 section#obsequios {
   text-align: center;
   border-top: 1px solid #C1C1C1;
+}
+.compartir {
+  width: 95%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  font-size: 1em;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  img, iframe {
+    margin: 0;
+    padding: 0;
+  }
+  p {
+    display: inline-block;
+    vertical-align: middle;
+    height: 30px;
+  }
 }
