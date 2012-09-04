@@ -886,9 +886,16 @@ section#seccion-ver {
     text-transform: lowercase;
     padding-left: 10px;
   }
+  .cover {
+    img {
+      margin: 0;
+      padding: 0;
+    }
+  }
   .contizq {
-    border-top: 5px solid #231F20;
     ul {
+      border-top: 5px solid #231F20;
+      width: 90%;
       list-style: none;
       margin: 0;
       padding: 0;

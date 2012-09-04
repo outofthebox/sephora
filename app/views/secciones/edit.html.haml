@@ -9,6 +9,11 @@
       %p
         = f.check_box :visible
         = f.label :visible, "Visible"
+    %p
+      = f.file_field :cover
+    %p
+      - if @seccion.cover_file_name
+        = image_tag @seccion.cover.url(:mini)
     %p.rgt
       = f.submit! "Editar"
 
