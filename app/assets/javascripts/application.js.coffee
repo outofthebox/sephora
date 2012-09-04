@@ -59,3 +59,7 @@ $(".prox").live "click", ->
   $(".slider").animate({"margin-left": "-100%"}, "slow")
 $(".ante").live "click", ->
   $(".slider").animate({"margin-left": "0"}, "slow")
+
+$("#prodclick img").live "click", ->
+  $("#prod").attr("src", $(this).data("normal"))
+  $("#prodlink").attr("href", $(this).data("full"))

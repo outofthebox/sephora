@@ -4,7 +4,7 @@
     = link_to "Editar", edit_producto_path(@producto.id)
   .table.full
     .product.tcell.t35
-      =link_to image_tag(@producto.foto.url(:normal)), @producto.foto.url(:original)
+      =link_to(image_tag(@producto.foto.url(:normal), :id => "prod"), @producto.foto.url(:original), :id => "prodlink")
       %p.vistagrande
         =link_to "vista grande", @producto.foto.url(:original)
       .compartir
@@ -29,7 +29,7 @@
       - if @producto.presentaciones and @producto.presentaciones.any?
         %ul.presentaciones.nolist.nobullet
           - @producto.presentaciones.each do |presentacion|
-            %li
+            %li{:id => "prodclick"}
               = image_tag presentacion.foto.url(:chico), :"data-normal" => presentacion.foto.url(:normal), :"data-full" => presentacion.foto.url(:original)
       .descripcion
         %h3 DESCRIPCIÓN
