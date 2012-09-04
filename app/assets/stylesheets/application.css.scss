@@ -792,7 +792,7 @@ ul.breadcrumbs{
       border-bottom: 5px solid #231F20;
       padding: 35px 0 35px 0;
     }
-    .producto {
+    .product {
       text-align: center;
       .vistagrande {
         color: gray;
@@ -816,9 +816,11 @@ ul.breadcrumbs{
     .producto {
       font-size: 11pt;
       color: gray;
+      text-align: left;
     }
     .descripcion {
       font-size: 0;
+      margin-top: 15px;
       h3 {
         border-top: 1px solid #838383;
         border-left: 1px solid #838383;

@@ -1,9 +1,9 @@
-- provide :titulo, @producto.nombre.split(' ').map {|w| w.capitalize }.join(' ')
+- provide :titulo, @producto.marca.marca + " - " + @producto.nombre.split(' ').map {|w| w.capitalize }.join(' ')
 %section#producto
   - if can? :edit, @producto
     = link_to "Editar", edit_producto_path(@producto.id)
   .table.full
-    .producto.tcell.t35
+    .product.tcell.t35
       =link_to image_tag(@producto.foto.url(:normal)), @producto.foto.url(:original)
       %p.vistagrande
         =link_to "vista grande", @producto.foto.url(:original)
