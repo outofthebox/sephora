@@ -1,3 +1,4 @@
+- provide :titulo, @seccion.nombre.capitalize
 %section#seccion-ver{ :class => "seccion-#{@seccion.try(:nombre).try(:parameterize)}"}
   %h2
     #{@seccion.nombre}

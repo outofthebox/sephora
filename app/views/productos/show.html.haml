@@ -1,4 +1,4 @@
-- provide :titulo, @producto.nombre
+- provide :titulo, @producto.nombre.split(' ').map {|w| w.capitalize }.join(' ')
 %section#producto
   - if can? :edit, @producto
     = link_to "Editar", edit_producto_path(@producto.id)
