@@ -387,6 +387,7 @@ ul.breadcrumbs{
         }
       }
       .producto-info{
+        font-size: 1em;
         h4{
           color:gray;
           font-weight: 100;
@@ -394,7 +395,7 @@ ul.breadcrumbs{
         .producto-p{
           border-top:5px solid #918F90;
           p{
-            font-size:13px;
+            font-size:1em;
           }
         }
       }
@@ -818,6 +819,22 @@ ul.breadcrumbs{
       color: gray;
       text-align: left;
     }
+    .presentaciones {
+      font-size: 0.2em;
+      width: 100%;
+      margin-top: 15px;
+      li:hover {
+        outline: 2px solid #b2b2b2;
+      }
+      li {
+        display: inline-block;
+        cursor: pointer;
+        img {
+          width: 70px;
+          border: 1px solid #b2b2b2;
+        }
+      }
+    }
     .descripcion {
       font-size: 0;
       margin-top: 15px;
@@ -838,7 +855,7 @@ ul.breadcrumbs{
         display: inline-block;
       }
       p {
-        font-size: 12pt;
+        font-size: 10pt;
         &.mas {
           margin-top: 30px;
           font-size: 10pt;

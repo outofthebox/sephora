@@ -26,20 +26,16 @@
           $#{@producto.precio}
       .producto
         =@producto.nombre
+      - if @producto.presentaciones and @producto.presentaciones.any?
+        %ul.presentaciones.nolist.nobullet
+          - @producto.presentaciones.each do |presentacion|
+            %li
+              = image_tag presentacion.foto.url(:chico), :"data-normal" => presentacion.foto.url(:normal), :"data-full" => presentacion.foto.url(:original)
       .descripcion
         %h3 DESCRIPCIÓN
         %span.borde
         %p
           =@producto.descripcion
-        %p.mas
-          ver más
-          %span
-            ▼
-      - if @producto.presentaciones and @producto.presentaciones.any?
-        %ul.nolist.nobullet
-          - @producto.presentaciones.each do |presentacion|
-            %li
-              = image_tag presentacion.foto.url(:chico)
       - if @productos_relacionados and @productos_relacionados.any?
         .interesar
           %h3 te puede interesar
