@@ -6,7 +6,7 @@
     .product.tcell.t35
       =link_to(image_tag(@producto.foto.url(:normal), :id => "prod"), @producto.foto.url(:grande), :id => "prodlink")
       %p.vistagrande
-        =link_to "vista grande", @producto.foto.url(:original)
+        =link_to "vista grande", @producto.foto.url(:grande)
       .compartir
         %p compartir
         %a.twitter-share-button{"data-count" => "none", "data-lang" => "es", "data-via" => "SephoraMX", :href => "https://twitter.com/share"} Twittear
@@ -49,5 +49,7 @@
                 %h4 #{link_to producto.nombre, producto_ver_path(producto.slug)}
                 %p #{number_to_currency producto.precio}
   #modalbox
+    #modalcontent
+      =image_tag @producto.foto.url(:grande)
     .cerrar
       X

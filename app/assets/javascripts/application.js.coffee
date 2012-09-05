@@ -71,9 +71,8 @@ $("#prodclick img").live "click", ->
 
 $("#prod").live "click", ->
   event.preventDefault()
-  $("#modalcontent").remove()
   href = $("#prodlink").attr('href')
+  $("#modalcontent img").attr('src', href)
   $("#modalbox").fadeIn()
-  $("#modalbox").append("<div id='modalcontent'><img src='"+href+"' /></div>")
 $(".cerrar").live "click", ->
   $("#modalbox").fadeOut()
