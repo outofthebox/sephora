@@ -63,3 +63,5 @@ $(".ante").live "click", ->
 $("#prodclick img").live "click", ->
   $("#prod").attr("src", $(this).data("normal"))
   $("#prodlink").attr("href", $(this).data("full"))
+  $("span.precio").text("$" + $(this).data("precio") + ".0")
+  $(".producto").text($(this).data("nombre"))

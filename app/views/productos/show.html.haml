@@ -30,7 +30,7 @@
         %ul.presentaciones.nolist.nobullet
           - @producto.presentaciones.each do |presentacion|
             %li{:id => "prodclick"}
-              = image_tag presentacion.foto.url(:chico), :"data-normal" => presentacion.foto.url(:normal), :"data-full" => presentacion.foto.url(:original)
+              = image_tag presentacion.foto.url(:chico), :"data-normal" => presentacion.foto.url(:normal), :"data-full" => presentacion.foto.url(:original), :"data-nombre" => presentacion.nombre, :"data-precio" => presentacion.precio
       .descripcion
         %h3 DESCRIPCIÓN
         %span.borde
