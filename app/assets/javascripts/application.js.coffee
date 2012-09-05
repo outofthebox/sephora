@@ -59,7 +59,8 @@ $(".prox").live "click", ->
   $(".slider").animate({"margin-left": "-100%"}, "slow")
 $(".ante").live "click", ->
   $(".slider").animate({"margin-left": "0"}, "slow")
-
+  
+$("#prodclick img").first().addClass("outline")
 $("#prodclick img").live "click", ->
   $("#prodclick img").removeClass("outline")
   $("#prod").attr("src", $(this).data("normal"))

@@ -28,6 +28,8 @@
         =@producto.nombre
       - if @producto.presentaciones and @producto.presentaciones.any?
         %ul.presentaciones.nolist.nobullet
+          %li{:id => "prodclick"}
+            = image_tag @producto.foto.url(:chico), :"data-normal" => @producto.foto.url(:normal), :"data-full" => @producto.foto.url(:original), :"data-nombre" => @producto.nombre, :"data-precio" => @producto.precio
           - @producto.presentaciones.each do |presentacion|
             %li{:id => "prodclick"}
               = image_tag presentacion.foto.url(:chico), :"data-normal" => presentacion.foto.url(:normal), :"data-full" => presentacion.foto.url(:original), :"data-nombre" => presentacion.nombre, :"data-precio" => presentacion.precio
