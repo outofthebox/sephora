@@ -63,8 +63,15 @@ $(".ante").live "click", ->
 $("#prodclick img").first().addClass("outline")
 $("#prodclick img").live "click", ->
   $("#prodclick img").removeClass("outline")
-  $("#prod").attr("src", $(this).data("normal"))
+  $("#prod, .pro img").attr("src", $(this).data("normal"))
   $("#prodlink").attr("href", $(this).data("full"))
+  $("span.precio").text("$" + $(this).data("precio") + ".0")
+  $(".producto").text($(this).data("nombre"))
+  $(this).addClass("outline")
+
+$("#proclick img").live "click", ->
+  $("#proclick img").removeClass("outline")
+  $(".pro img").attr("src", $(this).data("full"))
   $("span.precio").text("$" + $(this).data("precio") + ".0")
   $(".producto").text($(this).data("nombre"))
   $(this).addClass("outline")
@@ -72,7 +79,9 @@ $("#prodclick img").live "click", ->
 $("#prod").live "click", ->
   event.preventDefault()
   href = $("#prodlink").attr('href')
-  $("#modalcontent img").attr('src', href)
+  $("#modalcontent .pro img").attr('src', href)
   $("#modalbox").fadeIn()
+  $("#proclick img").removeClass("outline")
+  $("#proclick img[data-full='"+href+"']").addClass("outline")
 $(".cerrar").live "click", ->
   $("#modalbox").fadeOut()
