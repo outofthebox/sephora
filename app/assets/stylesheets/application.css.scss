@@ -22,7 +22,13 @@
     font-weight: normal;
     font-style: normal;
 }
-
+@mixin transition($duracion, $propiedad, $estilo) {
+  transition: $duracion $propiedad $estilo;
+  -o-transition: $duracion $propiedad $estilo;
+  -ms-transition: $duracion $propiedad $estilo;
+  -moz-transition: $duracion $propiedad $estilo;
+  -webkit-transition: $duracion $propiedad $estilo;
+}
 @mixin inlineblock{
   display: -moz-inline-stack;
   display: inline-block;
@@ -1213,7 +1219,13 @@ section#obsequios {
   }
   ul {
     li {
-      margin: 5px;
+      margin-right: 5px;
     }
   }
+}
+.imgloading {
+  opacity: 0.3;
+}
+.imgproducto {
+  @include transition(0.5s, opacity, ease);
 }

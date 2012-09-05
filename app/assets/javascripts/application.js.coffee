@@ -62,8 +62,10 @@ $(".ante").live "click", ->
   
 $("#prodclick img").first().addClass("outline")
 $("#prodclick img").live "click", ->
+  $to_replace = $("#prod, .pro img")
   $("#prodclick img").removeClass("outline")
-  $("#prod, .pro img").attr("src", $(this).data("normal"))
+  $to_replace.attr("src", $(this).data("normal")).addClass('imgloading').load ->
+    $(this).removeClass 'imgloading'
   $("#prodlink").attr("href", $(this).data("full"))
   $("span.precio").text("$" + $(this).data("precio") + ".0")
   $(".producto").text($(this).data("nombre"))
@@ -71,13 +73,14 @@ $("#prodclick img").live "click", ->
 
 $("#proclick img").live "click", ->
   $("#proclick img").removeClass("outline")
-  $(".pro img").attr("src", $(this).data("full"))
+  $(".pro img").attr("src", $(this).data("full")).addClass('imgloading').load ->
+    $(this).removeClass 'imgloading'
   $("span.precio").text("$" + $(this).data("precio") + ".0")
   $(".producto").text($(this).data("nombre"))
   $(this).addClass("outline")
 
-$("#prod").live "click", ->
-  event.preventDefault()
+$("#prod").live "click", (e) ->
+  e.preventDefault()
   href = $("#prodlink").attr('href')
   $("#modalcontent .pro img").attr('src', href)
   $("#modalbox").fadeIn()

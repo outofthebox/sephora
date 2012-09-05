@@ -4,7 +4,7 @@
     = link_to "Editar", edit_producto_path(@producto.id)
   .table.full
     .product.tcell.t35
-      =link_to(image_tag(@producto.foto.url(:normal), :id => "prod"), @producto.foto.url(:grande), :id => "prodlink")
+      =link_to(image_tag(@producto.foto.url(:normal), :id => "prod", :class => "imgproducto"), @producto.foto.url(:grande), :id => "prodlink")
       %p.vistagrande
         =link_to "vista grande", @producto.foto.url(:grande)
       .compartir
@@ -51,7 +51,7 @@
   #modalbox
     #modalcontent.table.full
       .pro.tcell.t50
-        =image_tag @producto.foto.url(:grande)
+        =image_tag @producto.foto.url(:grande), :class => "imgproducto"
       .tcell.t50
         .infor
           %span.marcab
@@ -63,9 +63,9 @@
           - if @producto.presentaciones and @producto.presentaciones.any?
             %ul.presentaciones.nolist.nobullet
               %li{:id => "proclick"}
-                = image_tag @producto.foto.url(:chico), :"data-normal" => @producto.foto.url(:normal), :"data-full" => @producto.foto.url(:grande), :"data-nombre" => @producto.nombre, :"data-precio" => @producto.precio
+                = image_tag @producto.foto.url(:chico), :"data-normal" => @producto.foto.url(:normal), :"data-full" => @producto.foto.url(:grande), :"data-nombre" => @producto.nombre.split(' ').map {|w| w.capitalize }.join(' '), :"data-precio" => @producto.precio
               - @producto.presentaciones.each do |presentacion|
                 %li{:id => "proclick"}
-                  = image_tag presentacion.foto.url(:chico), :"data-normal" => presentacion.foto.url(:normal), :"data-full" => presentacion.foto.url(:grande), :"data-nombre" => presentacion.nombre, :"data-precio" => presentacion.precio
+                  = image_tag presentacion.foto.url(:chico), :"data-normal" => presentacion.foto.url(:normal), :"data-full" => presentacion.foto.url(:grande), :"data-nombre" => presentacion.nombre.split(' ').map {|w| w.capitalize }.join(' '), :"data-precio" => presentacion.precio
     .cerrar
       X
