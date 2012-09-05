@@ -68,3 +68,12 @@ $("#prodclick img").live "click", ->
   $("span.precio").text("$" + $(this).data("precio") + ".0")
   $(".producto").text($(this).data("nombre"))
   $(this).addClass("outline")
+
+$("#prod").live "click", ->
+  event.preventDefault()
+  $("#modalcontent").remove()
+  href = $("#prodlink").attr('href')
+  $("#modalbox").fadeIn()
+  $("#modalbox").append("<div id='modalcontent'><img src='"+href+"' /></div>")
+$(".cerrar").live "click", ->
+  $("#modalbox").fadeOut()

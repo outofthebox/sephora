@@ -1159,3 +1159,35 @@ section#obsequios {
     height: 30px;
   }
 }
+
+#modalbox {
+  display: none;
+  background-color: #fff;
+  width: 900px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -450px;
+  margin-top: -250px;
+  border: 1px solid #d2d2d2;
+  text-align: center;
+  .cerrar {
+    border: 1px solid black;
+    color: black;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    font-size: 0.8em;
+    cursor: pointer;
+  }
+  p, img {
+    margin: 0;
+    padding: 0;
+  }
+  img {
+    height: 450px;
+    margin-top: 25px;
+  }
+}
