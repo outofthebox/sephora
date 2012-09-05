@@ -61,7 +61,9 @@ $(".ante").live "click", ->
   $(".slider").animate({"margin-left": "0"}, "slow")
 
 $("#prodclick img").live "click", ->
+  $("#prodclick img").removeClass("outline")
   $("#prod").attr("src", $(this).data("normal"))
   $("#prodlink").attr("href", $(this).data("full"))
   $("span.precio").text("$" + $(this).data("precio") + ".0")
   $(".producto").text($(this).data("nombre"))
+  $(this).addClass("outline")
