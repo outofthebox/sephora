@@ -789,9 +789,17 @@ ul.breadcrumbs{
   }
   section#producto {
     border-top: 1px solid #C1C1C1;
+    padding-bottom: 25px;
     .marca {
       border-bottom: 5px solid #231F20;
-      padding: 35px 0 35px 0;
+      img {
+        padding: 0;
+        margin: 0;
+      }
+    }
+    .derecha {
+      border-left: 1px solid #d2d2d2;
+      padding-left: 20px;
     }
     .product {
       text-align: center;
