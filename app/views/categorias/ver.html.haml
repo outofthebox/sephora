@@ -21,7 +21,10 @@
     .contder.tcell.t75
       .contenedor
         - unless @categoria.cover_file_name.nil?
-          = image_tag @categoria.cover.url(:normal)
+          - unless @categoria.urlslug.nil?
+            = link_to image_tag(@categoria.cover.url(:normal)), producto_ver_path(@categoria.urlslug)
+          - else
+            = image_tag(@categoria.cover.url(:normal))
       .catalogo
         - if @productos and @productos.any?
           %ul.nobullet.nolist

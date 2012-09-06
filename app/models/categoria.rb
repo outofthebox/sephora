@@ -1,6 +1,6 @@
 class Categoria < ActiveRecord::Base
   acts_as_nested_set
-  attr_accessible :nombre, :parent_id, :cover
+  attr_accessible :nombre, :parent_id, :cover, :urlslug
   attr_accessor :cover
 
   has_attached_file :cover, {
