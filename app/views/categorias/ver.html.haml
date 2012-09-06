@@ -18,6 +18,17 @@
           - @subcategorias.each do |subcategoria|
             %li
               = link_to subcategoria.nombre, categoria_ver_path(subcategoria.slug)
+      - else
+        %ul
+          - @categoria.root.descendants.each do |s|
+            %li
+              - if s == @categoria
+                %p.selected
+                  = s.nombre
+                  %span (#{@productoscount})
+              - else
+                = link_to s.nombre, categoria_ver_path(s.slug)
+                
     .contder.tcell.t75
       .contenedor
         - unless @categoria.cover_file_name.nil?

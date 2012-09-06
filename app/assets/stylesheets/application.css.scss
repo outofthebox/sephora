@@ -1231,3 +1231,8 @@ section#obsequios {
 .imgproducto {
   @include transition(0.5s, opacity, ease);
 }
+p.selected {
+  color: red;
+  margin: 0;
+  padding: 0;
+}
