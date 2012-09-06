@@ -1,6 +1,6 @@
 - provide :titulo, @categoria.nombre
 %section#categoria-nueva
-  = form_for @categoria, :url => new_categoria_path do |f|
+  = form_for @categoria, :url =>categorias_path do |f|
     %p
       = f.labelbrtext "Nombre", :nombre, :class => "big full"
     %p
