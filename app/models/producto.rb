@@ -8,7 +8,7 @@ class Producto < ActiveRecord::Base
   attr_accessor :foto
 
   has_attached_file :foto, {
-    :styles => { :grande => "450x450", :normal => "262x262>", :mediano => "196x196>", :chico => "135x135>" }
+    :styles => { :grande => "450x450>", :normal => "262x262>", :mediano => "196x196>", :chico => "135x135>" }
   }.merge(PAPERCLIP_STORAGE_OPTIONS)
 
   # validates_attachment_presence :foto, message: 'Selecciona una foto'
