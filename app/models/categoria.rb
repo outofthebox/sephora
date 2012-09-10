@@ -9,7 +9,7 @@ class Categoria < ActiveRecord::Base
 
   has_many :productos
   has_many :categoria_producto
-  has_many :productos, :through => :categoria_producto
+  has_many :productos_vinculados, :through => :categoria_producto
 
   def self.by_slug slug
     self.where(:slug => slug)
