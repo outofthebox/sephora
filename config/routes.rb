@@ -23,6 +23,7 @@ Sephora::Application.routes.draw do
   get   'importar(/:quoi)', :to => 'utilidades#importar'
   get   'importarimg', :to => 'utilidades#importarimg'
   get   'parsearparents', :to => 'utilidades#parsearparents'
+  get   'actprecios', :to => 'utilidades#actprecios'
   
   get   'producto', :to => 'productos#index', :as => 'producto_index'
   get   'producto/:slug',  :to => 'productos#show', :as => 'producto_ver'
@@ -61,6 +62,8 @@ Sephora::Application.routes.draw do
   get   'categoria(/:categoria)', :to => 'categorias#ver', :as => 'categoria_ver'  
 
   get   'producto(/:producto)', :to => 'productos#ver', :as => 'producto_ver'
+
+  get   'admin/actualizar_precios', :to => 'utilidades#actprecios', :as => 'admin_actprecios'
 
   scope :path_names => { :new => 'registrar', :edit => 'editar' } do
     resources :productos

@@ -1,0 +1,40 @@
+%table
+  %thead
+    %tr
+      %th
+        SKU
+      %th
+        Producto
+      %th
+        Precio actual
+      %th
+        Precio nuevo
+      %th
+        Diferencia
+      %th
+        Cambio %
+  %tbody
+  - @data.each do |d|
+    %tr
+      - if d.has_key?(:precio_actual)
+        %td
+          SKU
+        %td
+          rpodu
+        %td
+          pa
+        %td
+          pn
+        %td
+          = d[:precio_actual].to_i - d[:precio_nuevo].to_i
+      - else
+        %td
+          SKU
+        %td
+          rpodu
+        %td
+          pa
+        %td
+          pn
+        %td
+          \--

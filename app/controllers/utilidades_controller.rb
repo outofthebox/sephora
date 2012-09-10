@@ -122,4 +122,27 @@ class UtilidadesController < ApplicationController
     end
     render :text => "Gracias por participar :)", :layout => false
   end
+
+  def actprecios
+    require 'csv'
+    data = []
+    CSV.foreach("/home/oob4/Escritorio/precios.csv") do |row|
+      sku = row[0]
+      precio_nuevo = row[1]
+      data << {:sku => sku, :precio_nuevo => precio_nuevo}
+    end
+
+    productos = Producto.where(:sku => data.map{|d| d[:sku]})
+
+    data.map{|d|
+      if (producto = productos.reject{|p| p unless p.sku == d[:sku] }.first)
+        if producto
+          d[:precio_actual] = producto.precio
+          d[:producto] = producto.nombre
+        end
+      end
+      d
+    }
+    @data = data
+  end
 end
