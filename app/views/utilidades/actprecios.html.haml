@@ -1,4 +1,4 @@
-%table
+%table{:border => "1", :cellpadding => "3"}
   %thead
     %tr
       %th
@@ -18,23 +18,32 @@
     %tr
       - if d.has_key?(:precio_actual)
         %td
-          SKU
+          =d[:sku]
         %td
-          rpodu
+          =d[:producto]
         %td
-          pa
+          $#{d[:precio_actual]}
         %td
-          pn
+          $#{d[:precio_nuevo]}
         %td
-          = d[:precio_actual].to_i - d[:precio_nuevo].to_i
+          $#{d[:precio_nuevo].to_i - d[:precio_actual].to_i}
+        - porcentaje = number_to_percentage((d[:precio_nuevo].to_i - d[:precio_actual].to_i) / d[:precio_actual].to_f * 100)
+        - if porcentaje.to_f < 0
+          %td{:style=>"color:red"}
+            = porcentaje
+        - else
+          %td{:style=>"color:green"}
+            = porcentaje
       - else
         %td
-          SKU
+          \--
         %td
-          rpodu
+          \--
         %td
-          pa
+          \--
         %td
-          pn
+          \--
+        %td
+          \--
         %td
           \--
