@@ -7,6 +7,9 @@
       %ul
         %li.first
           = @marca.marca
+        - unless @marca.behindthebrand.empty?
+          %li.behindbutton
+            Detrás de la marca
     .contder.tcell.t80
       .table.full
         .tcell.t65
@@ -15,13 +18,17 @@
               = image_tag @marca.logo.url(:grande)
           %p
             =@marca.descripcion
-          %p.mas
-            ver más
-            %span
-              ▼
+          - unless @marca.behindthebrand.empty?
+            %p.behindbutton
+              Detrás de la marca ▼
         .tcell.t35
           - unless @marca.promo_file_name.nil? 
             = image_tag @marca.promo.url(:grande)
+      - unless @marca.behindthebrand.empty?
+        .table.full.behindthebrand
+          %h3 DETRÁS DE LA MARCA
+          %p
+            =@marca.behindthebrand
       %h3 EXPLORA LA MARCA
       - if @marca.marca_producto.size
         .catalogo

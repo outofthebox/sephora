@@ -88,3 +88,6 @@ $("#prod").live "click", (e) ->
   $("#proclick img[data-full='"+href+"']").addClass("outline")
 $(".cerrar").live "click", ->
   $("#modalbox").fadeOut()
+
+$(".behindbutton").live "click", (e) ->
+  $(".behindthebrand").slideToggle()

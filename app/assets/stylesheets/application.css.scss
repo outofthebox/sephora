@@ -706,12 +706,15 @@ ul.breadcrumbs{
       text-transform: lowercase;
       padding: 10px;
     }
+    .first {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
     .contizq {
         padding-left: 10px;
         padding-right: 10px;
       ul {
         border-top: 3px solid #231F20;
-        border-bottom: 3px solid #231F20;
         list-style: none;
         margin: 0;
         padding: 0;
@@ -719,6 +722,9 @@ ul.breadcrumbs{
           font-size: 0.8em;
           padding-top: 2px;
           padding-bottom: 2px;
+        }
+        .behindbutton {
+          cursor: pointer;
         }
       }
     }
@@ -791,6 +797,17 @@ ul.breadcrumbs{
           p {
             font-size: 0.8em;
           }
+        }
+      }
+      .behindbutton {
+        cursor: pointer;
+        text-align: right;
+      }
+      .behindthebrand {
+        display: none;
+        width: 750px;
+        p {
+          padding: 10px;
         }
       }
     }
