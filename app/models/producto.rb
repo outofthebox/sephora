@@ -1,4 +1,5 @@
 class Producto < ActiveRecord::Base
+    paginates_per 20
   validate :validar
 
   belongs_to :marca

@@ -57,4 +57,8 @@ class ApplicationController < ActionController::Base
   rescue_from Exception do |exception|
     render :file => "error/404", :status => 404
   end if Rails.env.production?
+
+  def perparams per, arr = [10,20,50]
+    (arr & [per.to_i]).first
+  end
 end
