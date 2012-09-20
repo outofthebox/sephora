@@ -47,8 +47,10 @@
                 %p #{number_to_currency producto.precio}
         .navegacion
           %span ver
-          %select
-            %option 20 por página
+          %select{ :id => "verpor", :ONCHANGE => "location = this.options[this.selectedIndex].value;"}
+            %option{:value => "?ver=20", :selected => "selected"} 20 por página
+            %option{:value => "?ver=30"} 30 por página
+            %option{:value => "?ver=50"} 50 por página
           %span acomodar por:
           %select
             %option más vendidos

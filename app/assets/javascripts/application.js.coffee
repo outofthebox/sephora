@@ -91,3 +91,13 @@ $(".cerrar").live "click", ->
 
 $(".behindbutton").live "click", (e) ->
   $(".behindthebrand").slideToggle()
+
+getUrlVars = ->
+  vars = {}
+  parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/g, (m, key, value) ->
+    vars[key] = value
+  )
+  vars
+
+ver = getUrlVars()["ver"]
+$("#verpor option[value='?ver=" + ver + "']").attr "selected", "selected"

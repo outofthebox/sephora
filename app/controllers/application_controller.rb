@@ -58,7 +58,7 @@ class ApplicationController < ActionController::Base
     render :file => "error/404", :status => 404
   end if Rails.env.production?
 
-  def perparams per, arr = [10,20,50]
+  def perparams per, arr = [20,30,50]
     (arr & [per.to_i]).first
   end
 end
