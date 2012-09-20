@@ -8,9 +8,6 @@
   .flame-left {
     display:none;
   }
-  .flame-right {
-    display:none;
-  }
 }
 @font-face {
     font-family: 'Avant';
@@ -79,15 +76,10 @@ ul.breadcrumbs{
 
 // fondo sephora
 .flame-left{
-  position:absolute;
-  left:-115px;
-  top:250px;
+  position:fixed;
+  margin-left: -107px;
+  margin-top: 113px;
 }
-.flame-right{
-  position:absolute;    
-  right:-115px;
-  bottom:40px;
-}  
 
 #separador {
   border-bottom: 2px solid #C1C1C1;
