@@ -52,8 +52,14 @@
             %option{:value => "?ver=30"} 30 por página
             %option{:value => "?ver=50"} 50 por página
           %span acomodar por:
-          %select
-            %option más vendidos
+          %select{ :id => "acomodar", :ONCHANGE => "location = this.options[this.selectedIndex].value"}
+            %option{:value => "?orden=1"} más vistos
+            %option{:value => "?orden=1"} marca
+            %option{:value => "?orden=1"} new
+            %option{:value => "?orden=1"} exclusive
+            %option{:value => "?precio=alto"} precio alto
+            %option{:value => "?precio=bajo"} precio bajo
+            %option{:value => "?orden=1"} best sellers
           .numeros
             %span
               = paginate @productos, :window => 1, :left => 2, :right => 0

@@ -100,4 +100,6 @@ getUrlVars = ->
   vars
 
 ver = getUrlVars()["ver"]
+precio = getUrlVars()["precio"]
 $("#verpor option[value='?ver=" + ver + "']").attr "selected", "selected"
+$("#acomodar option[value='?precio=" + precio + "']").attr "selected", "selected"

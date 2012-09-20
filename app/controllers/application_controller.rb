@@ -61,4 +61,11 @@ class ApplicationController < ActionController::Base
   def perparams per, arr = [20,30,50]
     (arr & [per.to_i]).first
   end
+  def preciorder arrange = ''
+    if arrange == 'alto'
+      'precio DESC'
+    elsif arrange == 'bajo'
+      'precio ASC'
+    end
+  end
 end
