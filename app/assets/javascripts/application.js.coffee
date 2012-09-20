@@ -110,16 +110,15 @@ precio = getUrlVars()["precio"]
 $("#verpor option[value='ver=" + ver + "']").attr "selected", "selected"
 $("#acomodar option[value='precio=" + precio + "']").attr "selected", "selected"
 
+$('#trigger').live "click", ->
+  $(this).closest('.navegaciones').find("ul.verpor").toggleClass("activo")
+$(".navegaciones ul.verpor").on "mouseleave", ->
+  $(this).closest('.navegaciones').find("ul.verpor").toggleClass "activo"
 
-$("#trigger").click ->
-  $("ul.verpor").toggleClass "activo"
-$(".navegacion ul.verpor").on "mouseleave", ->
-  $("ul.verpor").toggleClass "activo"
-
-$("#trigger2").click ->
-  $("ul.aco").toggleClass "activo"
-$(".navegacion ul.aco").on "mouseleave", ->
-  $("ul.aco").toggleClass "activo"
+$("#trigger2").live "click", ->
+  $(this).closest('.navegaciones').find("ul.aco").toggleClass("activo")
+$(".navegaciones ul.aco").on "mouseleave", ->
+  $(this).closest('.navegaciones').find("ul.aco").toggleClass "activo"
 
 $("#trigger").html($(".navegaciones ul.verpor li a[data-set="+ver+"]").data("set") + " por página <span>▼</span>") unless $(".navegaciones ul.verpor li a[data-set="+ver+"]").data("set").nil?
 $("#trigger2").html("precio " +$(".navegaciones ul.aco li a[data-set="+precio+"]").data("set") + "<span>▼</span>") unless $(".navegaciones ul.aco li a[data-set="+precio+"]").data("set").nil?
