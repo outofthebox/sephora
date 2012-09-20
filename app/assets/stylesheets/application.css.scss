@@ -597,36 +597,36 @@ ul.breadcrumbs{
       margin-top: 15px;
       border-top: 30px solid #D6D6D8;
       padding-bottom: 30px;
-      ul {
+      ul.catalogin {
         text-align: center;
         border-bottom: 1px solid #D6D6D8;
         width: 730px;
         margin: 0 auto;
         padding-bottom: 50px;
-      }
-      li:hover a {
-        text-decoration: underline;
-      }
-      li {
-        display: inline-block;
-        width: 150px;
-        margin: 10px;
-        vertical-align: top;
-        height: 200px;
-        img {
-          margin-bottom: 10px;
+        li:hover a {
+          text-decoration: underline;
         }
-        h4, p {
-          font-family: "Helvetica Neue", Helvetica, Arial;
-          margin:0;
-          padding:0;
-          line-height: 1em;
-        }
-        h4 {
-          font-size: 0.8em;
-        }
-        p {
-          font-size: 0.8em;
+        li {
+          display: inline-block;
+          width: 150px;
+          margin: 10px;
+          vertical-align: top;
+          height: 200px;
+          img {
+            margin-bottom: 10px;
+          }
+          h4, p {
+            font-family: "Helvetica Neue", Helvetica, Arial;
+            margin:0;
+            padding:0;
+            line-height: 1em;
+          }
+          h4 {
+            font-size: 0.8em;
+          }
+          p {
+            font-size: 0.8em;
+          }
         }
       }
       .navegacion {
@@ -1265,4 +1265,47 @@ p.selected {
   color: red;
   margin: 0;
   padding: 0;
+}
+.navegaciones {
+  width: 100px;
+  display: inline-block;
+  .activo{
+    display:none;
+  }
+  p, ul, li {
+    text-align: left;
+  }
+  p#trigger, p#trigger2 {
+    cursor: pointer;
+    border: 2px solid #918F90;
+    color: #C7C7C7;
+    background: transparent;
+    width: 90px;
+    height: 15px;
+    display: block;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    span {
+      color: black;
+      padding-left: 7px;
+    }
+  }
+  ul {
+    background: #f6f6f6;
+    width: 90px;
+    border: 2px solid gray;
+    border-top: none;
+    position: absolute;
+  }
+  li:hover {
+    background: gray;
+    cursor: pointer;
+  }
+  li {
+    color: red;
+    a {
+      display: block;
+    }
+  }
 }

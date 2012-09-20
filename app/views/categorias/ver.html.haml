@@ -38,7 +38,7 @@
             = image_tag(@categoria.cover.url(:normal))
       .catalogo
         - if @productos and @productos.any?
-          %ul.nobullet.nolist
+          %ul.nobullet.nolist.catalogin
             - @productos.each do |producto|
               %li
                 = link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
@@ -47,19 +47,27 @@
                 %p #{number_to_currency producto.precio}
         .navegacion
           %span ver
-          %select{ :id => "verpor", :ONCHANGE => "location = this.options[this.selectedIndex].value;"}
-            %option{:value => "?ver=20", :selected => "selected"} 20 por página
-            %option{:value => "?ver=30"} 30 por página
-            %option{:value => "?ver=50"} 50 por página
+          .navegaciones
+            %p{:id => "trigger"}
+              20 por página
+              %span ▼
+            %ul.nobullet.activo.verpor
+              %li
+                = link_to '20 por página', request.parameters.merge({:ver => 20}), :"data-set" => '20'
+              %li
+                = link_to '30 por página', request.parameters.merge({:ver => 30}), :"data-set" => '30'
+              %li
+                = link_to '50 por página', request.parameters.merge({:ver => 50}), :"data-set" => '50'
           %span acomodar por:
-          %select{ :id => "acomodar", :ONCHANGE => "location = this.options[this.selectedIndex].value"}
-            %option{:value => "?orden=1"} más vistos
-            %option{:value => "?orden=1"} marca
-            %option{:value => "?orden=1"} new
-            %option{:value => "?orden=1"} exclusive
-            %option{:value => "?precio=alto"} precio alto
-            %option{:value => "?precio=bajo"} precio bajo
-            %option{:value => "?orden=1"} best sellers
+          .navegaciones
+            %p{:id => "trigger2"}
+              acomodar por
+              %span ▼
+            %ul.nobullet.activo.aco
+              %li
+                = link_to 'precio alto', request.parameters.merge({:precio => "alto"}), :"data-set" => 'alto'
+              %li
+                = link_to 'precio bajo', request.parameters.merge({:precio => "bajo"}), :"data-set" => 'bajo'
           .numeros
             %span
               = paginate @productos, :window => 1, :left => 2, :right => 0

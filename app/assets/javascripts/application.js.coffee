@@ -99,7 +99,27 @@ getUrlVars = ->
   )
   vars
 
+$("#verpor").on "change", ->
+  # window.top.location.href = @options[@selectedIndex].value  unless @options[@selectedIndex].value is ""
+
+$("#acomodar").on "change", ->
+  window.top.location.href = @options[@selectedIndex].value  unless @options[@selectedIndex].value is ""
+
 ver = getUrlVars()["ver"]
 precio = getUrlVars()["precio"]
-$("#verpor option[value='?ver=" + ver + "']").attr "selected", "selected"
-$("#acomodar option[value='?precio=" + precio + "']").attr "selected", "selected"
+$("#verpor option[value='ver=" + ver + "']").attr "selected", "selected"
+$("#acomodar option[value='precio=" + precio + "']").attr "selected", "selected"
+
+
+$("#trigger").click ->
+  $("ul.verpor").toggleClass "activo"
+$(".navegacion ul.verpor").on "mouseleave", ->
+  $("ul.verpor").toggleClass "activo"
+
+$("#trigger2").click ->
+  $("ul.aco").toggleClass "activo"
+$(".navegacion ul.aco").on "mouseleave", ->
+  $("ul.aco").toggleClass "activo"
+
+$("#trigger").html($(".navegaciones ul.verpor li a[data-set="+ver+"]").data("set") + " por página <span>▼</span>") unless $(".navegaciones ul.verpor li a[data-set="+ver+"]").data("set").nil?
+$("#trigger2").html("precio " +$(".navegaciones ul.aco li a[data-set="+precio+"]").data("set") + "<span>▼</span>") unless $(".navegaciones ul.aco li a[data-set="+precio+"]").data("set").nil?
