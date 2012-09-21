@@ -11,14 +11,15 @@ class CategoriasController < ApplicationController
     # para encontrar productos en categorías descendientes
     catmap = [@categoria.id] + @subcategorias.map{|s| s.id }
     @marcas_para_categoria = Categoria.encontrar_marcas catmap
-    if params[:marca].nil?
+    if params[:marca].blank?
       @productos = Producto.publicados.padres.where(:categoria_id => catmap).order(preciorder(params[:precio])).page(params[:page]).per(perparams(params[:ver]))
+      @productoscount = Producto.publicados.padres.where(:categoria_id => catmap).order(preciorder(params[:precio])).count
     else
       # raise params[:marca].inspect
       @marca = Marca.find(@marcas_seleccionadas)
       @productos = Producto.publicados.padres.where(:marca_id => @marca.map{|m| m.id }, :categoria_id => catmap).order(preciorder(params[:precio])).page(params[:page]).per(perparams(params[:ver]))
+      @productoscount = Producto.publicados.padres.where(:marca_id => @marca.map{|m| m.id }, :categoria_id => catmap).count
     end
-    @productoscount = Producto.publicados.where(:categoria_id => catmap).count
   end
 
   def show
