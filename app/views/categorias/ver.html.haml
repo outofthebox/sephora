@@ -40,11 +40,11 @@
           <strong>Filtrar por marca</strong>
         - if @marcas_para_categoria and @marcas_para_categoria.any?
           - @marcas_para_categoria.each do |r|
-            %li
-              - if r["id"].to_i.in? @marcas_seleccionadas || []
-                %strong
-                  =link_to r["marca"], request.parameters.merge({ :page => nil, :marca => ((@marcas_seleccionadas || []) - [r["id"].to_i]).join(",") })
-              - else
+            - if r["id"].to_i.in? @marcas_seleccionadas || []
+              %li.checked
+                =link_to r["marca"], request.parameters.merge({ :page => nil, :marca => ((@marcas_seleccionadas || []) - [r["id"].to_i]).join(",") })
+            - else  
+              %li.unchecked
                 =link_to r["marca"], request.parameters.merge({ :page => nil, :marca => ((@marcas_seleccionadas || []) + [r["id"].to_i]).join(",") })
     .contder.tcell.t75
       .contenedor
