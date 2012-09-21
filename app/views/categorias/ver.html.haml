@@ -46,6 +46,8 @@
             - else  
               %li.unchecked
                 =link_to r["marca"], request.parameters.merge({ :page => nil, :marca => ((@marcas_seleccionadas || []) + [r["id"].to_i]).join(",") })
+        %li
+          =link_to "Borrar filtros", categoria_ver_path(@categoria.slug)
     .contder.tcell.t75
       .contenedor
         - unless @categoria.cover_file_name.nil?

@@ -20,6 +20,8 @@
             =link_to "$1500 a $2000", request.parameters.merge({:rango => "1500-2000"})
           %li{ :class => "#{params[:rango].in?(["2000"]) ? "checked" : "unchecked"}"}
             =link_to "$2000 a más", request.parameters.merge({:rango => 2000})
+          %li
+            =link_to "Borrar filtros", obsequios_path
     .contder.tcell.t75
       .catalogo
         .navegacion
