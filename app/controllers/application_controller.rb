@@ -61,9 +61,6 @@ class ApplicationController < ActionController::Base
   def perparams per, arr = [20,30,50]
     (arr & [per.to_i]).first
   end
-  def marcaparams per, arr = [75, 74, 77, 1, 78, 80, 82, 2, 84, 86, 3, 4, 5, 6, 7, 88, 8, 90, 89, 91, 92, 9, 10, 11, 12, 13, 14, 16, 15, 17, 18, 94, 95, 96, 97, 19, 20, 21, 22, 23, 24, 98, 25, 26, 27, 100, 28, 29, 69, 61, 30, 31, 32, 33, 63, 62, 64, 34, 65, 35, 66, 67, 36, 68, 37, 38, 40, 70, 71, 72, 41, 73, 42, 101, 99, 43, 44, 45, 46, 47, 48, 93, 49, 51, 52, 87, 53, 50, 85, 54, 83, 81, 55, 56, 57, 58, 59, 79, 76, 60]
-    (arr & [per.to_i]).first
-  end
   def preciorder arrange = ''
     if arrange == 'alto'
       'precio DESC'

@@ -8,18 +8,19 @@ class CategoriasController < ApplicationController
     subcategorias = @categoria.descendants
     @subcategorias = subcategorias.reject{|r| r.parent_id != @categoria.id }
     # para encontrar productos en categorías descendientes
-    @marca = Producto.publicados.padres.where(:categoria_id => [@categoria.id] + @subcategorias.map{|s| s.id })
-    if marcaparams(params[:marca]).nil?
-      @productos = Producto.publicados.padres.where(:categoria_id => [@categoria.id] + @subcategorias.map{|s| s.id }).order(preciorder(params[:precio])).page(params[:page]).per(perparams(params[:ver]))
+    catmap = [@categoria.id] + @subcategorias.map{|s| s.id }
+    @marcas_para_categoria = Categoria.encontrar_marcas catmap
+    if params[:marca].nil?
+      @productos = Producto.publicados.padres.where(:categoria_id => catmap).order(preciorder(params[:precio])).page(params[:page]).per(perparams(params[:ver]))
     else
       if params[:marca] =~ /^[-+]?[0-9]+$/
         @marca = Marca.includes(:productos).find(params[:marca])
-        @productos = @marca.productos.publicados.padres.where(:categoria_id => [@categoria.id] + @subcategorias.map{|s| s.id }).order(preciorder(params[:precio])).page(params[:page]).per(perparams(params[:ver]))
+        @productos = @marca.productos.publicados.padres.where(:categoria_id => catmap).order(preciorder(params[:precio])).page(params[:page]).per(perparams(params[:ver]))
       else
-        @productos = Producto.publicados.padres.where(:categoria_id => [@categoria.id] + @subcategorias.map{|s| s.id }).order(preciorder(params[:precio])).page(params[:page]).per(perparams(params[:ver]))
+        @productos = Producto.publicados.padres.where(:categoria_id => catmap).order(preciorder(params[:precio])).page(params[:page]).per(perparams(params[:ver]))
       end
     end
-    @productoscount = Producto.publicados.where(:categoria_id => [@categoria.id] + @subcategorias.map{|s| s.id }).count
+    @productoscount = Producto.publicados.where(:categoria_id => catmap).count
   end
 
   def show

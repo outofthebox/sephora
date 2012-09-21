@@ -14,4 +14,14 @@ class Categoria < ActiveRecord::Base
   def self.by_slug slug
     self.where(:slug => slug)
   end
+
+  def self.encontrar_marcas arr_categorias
+    require 'ostruct'
+    sql = <<-sql
+        SELECT * FROM marcas WHERE id IN
+          (SELECT DISTINCT(productos.marca_id) FROM productos WHERE publicado = true AND categoria_id IN (#{arr_categorias.join(",")}))
+      sql
+    query = ActiveRecord::Base.connection.execute(sql)
+    query.find_all.map{|q| q }
+  end
 end
