@@ -4,6 +4,7 @@ class CategoriasController < ApplicationController
   end
 
   def ver
+    @marcas_seleccionadas = params[:marca].split(",").map{|m| m.to_i } unless params[:marca].nil?
     @categoria = Categoria.includes(:productos).by_slug(params[:categoria]).first
     subcategorias = @categoria.descendants
     @subcategorias = subcategorias.reject{|r| r.parent_id != @categoria.id }
@@ -13,12 +14,9 @@ class CategoriasController < ApplicationController
     if params[:marca].nil?
       @productos = Producto.publicados.padres.where(:categoria_id => catmap).order(preciorder(params[:precio])).page(params[:page]).per(perparams(params[:ver]))
     else
-      if params[:marca] =~ /^[-+]?[0-9]+$/
-        @marca = Marca.includes(:productos).find(params[:marca])
-        @productos = @marca.productos.publicados.padres.where(:categoria_id => catmap).order(preciorder(params[:precio])).page(params[:page]).per(perparams(params[:ver]))
-      else
-        @productos = Producto.publicados.padres.where(:categoria_id => catmap).order(preciorder(params[:precio])).page(params[:page]).per(perparams(params[:ver]))
-      end
+      # raise params[:marca].inspect
+      @marca = Marca.find(@marcas_seleccionadas)
+      @productos = Producto.publicados.padres.where(:marca_id => @marca.map{|m| m.id }, :categoria_id => catmap).order(preciorder(params[:precio])).page(params[:page]).per(perparams(params[:ver]))
     end
     @productoscount = Producto.publicados.where(:categoria_id => catmap).count
   end

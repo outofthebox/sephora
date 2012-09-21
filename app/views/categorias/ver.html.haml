@@ -41,7 +41,11 @@
         - if @marcas_para_categoria and @marcas_para_categoria.any?
           - @marcas_para_categoria.each do |r|
             %li
-              =link_to r["marca"], request.parameters.merge({:marca => r["id"]})
+              - if r["id"].to_i.in? @marcas_seleccionadas || []
+                %strong
+                  =link_to r["marca"], request.parameters.merge({ :page => nil, :marca => ((@marcas_seleccionadas || []) - [r["id"].to_i]).join(",") })
+              - else
+                =link_to r["marca"], request.parameters.merge({ :page => nil, :marca => ((@marcas_seleccionadas || []) + [r["id"].to_i]).join(",") })
     .contder.tcell.t75
       .contenedor
         - unless @categoria.cover_file_name.nil?
