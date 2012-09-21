@@ -10,15 +10,15 @@
           %strong
             Filtrar por
         %li
-          %li
+          %li{ :class => "#{params[:rango].in?(["500"]) ? "checked" : "unchecked"}"}
             =link_to "$500 o menos", request.parameters.merge({:rango => 500})
-          %li
+          %li{ :class => "#{params[:rango].in?(["500-1000"]) ? "checked" : "unchecked"}"}
             =link_to "$500 a $1000", request.parameters.merge({:rango => "500-1000"})
-          %li
+          %li{ :class => "#{params[:rango].in?(["1000-1500"]) ? "checked" : "unchecked"}"}
             =link_to "$1000 a $1500", request.parameters.merge({:rango => "1000-1500"})
-          %li
+          %li{ :class => "#{params[:rango].in?(["1500-2000"]) ? "checked" : "unchecked"}"}
             =link_to "$1500 a $2000", request.parameters.merge({:rango => "1500-2000"})
-          %li
+          %li{ :class => "#{params[:rango].in?(["2000"]) ? "checked" : "unchecked"}"}
             =link_to "$2000 a más", request.parameters.merge({:rango => 2000})
     .contder.tcell.t75
       .catalogo
