@@ -57,4 +57,21 @@ class Producto < ActiveRecord::Base
   def self.by_slug slug
     self.where(:slug => slug).first
   end
+
+  def self.rangodeprecios cual
+    return self unless cual
+
+    rango = [
+      "500" => [0, 500],
+      "500-1000" => [500, 1000],
+      "1000-1500" => [1000, 1500],
+      "1500-2000" => [1500, 2000],
+      "2000" => [2000]
+    ].first
+
+    mirango = (rango.keys & [cual]).first
+    mirango = rango.keys.first if mirango.nil?
+
+    self.where("productos.precio > ? AND productos.precio <= ?", rango[mirango][0], rango[mirango][1])
+  end
 end

@@ -1,3 +1,90 @@
 - provide :titulo, "Obsequios"
-%section#obsequios
-  =image_tag "obsequios.jpg"
+%section#categoria
+  %ul.breadcrumbs.nolist.seplist.nobullet
+    %li obsequios
+  .table.full
+    .contizq.tcell.t25
+      %h3
+      %ul
+        %li
+          %strong
+            Filtrar por
+        %li
+          %li
+            =link_to "$500 o menos", request.parameters.merge({:rango => 500})
+          %li
+            =link_to "$500 a $1000", request.parameters.merge({:rango => "500-1000"})
+          %li
+            =link_to "$1000 a $1500", request.parameters.merge({:rango => "1000-1500"})
+          %li
+            =link_to "$1500 a $2000", request.parameters.merge({:rango => "1500-2000"})
+          %li
+            =link_to "$2000 a más", request.parameters.merge({:rango => 2000})
+    .contder.tcell.t75
+      .catalogo
+        .navegacion
+          %span ver
+          .navegaciones
+            %p{:id => "trigger"}
+              20 por página
+              %span ▼
+            %ul.nobullet.activo.verpor
+              %li
+                = link_to '20 por página', request.parameters.merge({:ver => 20}), :"data-set" => '20'
+              %li
+                = link_to '30 por página', request.parameters.merge({:ver => 30}), :"data-set" => '30'
+              %li
+                = link_to '50 por página', request.parameters.merge({:ver => 50}), :"data-set" => '50'
+          %span acomodar por:
+          .navegaciones
+            %p{:id => "trigger2"}
+              acomodar por
+              %span ▼
+            %ul.nobullet.activo.aco
+              %li
+                = link_to 'precio alto', request.parameters.merge({:precio => "alto"}), :"data-set" => 'alto'
+              %li
+                = link_to 'precio bajo', request.parameters.merge({:precio => "bajo"}), :"data-set" => 'bajo'
+          .numeros
+            %span
+              = paginate @productos, :window => 1, :left => 2, :right => 0
+            %p
+              =@productoscount
+              artículos
+        - if @productos and @productos.any?
+          %ul.nobullet.nolist.catalogin
+            - @productos.each do |producto|
+              %li
+                = link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
+                %h4 #{producto.marca.marca.upcase}
+                %h4 #{link_to producto.nombre.split(' ').map {|w| w.capitalize }.join(' '), producto_ver_path(producto.slug)}
+                %p #{number_to_currency(producto.precio, :precision => 0)}
+        .navegacion
+          %span ver
+          .navegaciones
+            %p{:id => "trigger"}
+              20 por página
+              %span ▼
+            %ul.nobullet.activo.verpor
+              %li
+                = link_to '20 por página', request.parameters.merge({:ver => 20}), :"data-set" => '20'
+              %li
+                = link_to '30 por página', request.parameters.merge({:ver => 30}), :"data-set" => '30'
+              %li
+                = link_to '50 por página', request.parameters.merge({:ver => 50}), :"data-set" => '50'
+          %span acomodar por:
+          .navegaciones
+            %p{:id => "trigger2"}
+              acomodar por
+              %span ▼
+            %ul.nobullet.activo.aco
+              %li
+                = link_to 'precio alto', request.parameters.merge({:precio => "alto"}), :"data-set" => 'alto'
+              %li
+                = link_to 'precio bajo', request.parameters.merge({:precio => "bajo"}), :"data-set" => 'bajo'
+          .numeros
+            %span
+              = paginate @productos, :window => 1, :left => 2, :right => 0
+            %p
+              =@productoscount
+              artículos
