@@ -28,7 +28,16 @@
                   %span (#{@productoscount})
               - else
                 = link_to s.nombre, categoria_ver_path(s.slug)
-                
+      %ul
+        %li
+          <strong>Filtrar por</strong>
+        %li
+          =link_to "Precio alto", request.parameters.merge({:precio => "alto"})
+        %li
+          =link_to "Precio bajo", request.parameters.merge({:precio => "bajo"})
+        - @marca.each do |r|
+          %li
+            =link_to r.marca.marca, request.parameters.merge({:marca => r.marca_id})
     .contder.tcell.t75
       .contenedor
         - unless @categoria.cover_file_name.nil?
