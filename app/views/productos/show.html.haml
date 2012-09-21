@@ -23,16 +23,16 @@
         %span.marcab
           =@producto.marca.marca
         %span.precio
-          $#{@producto.precio}
+          #{number_to_currency(@producto.precio, :precision => 0)}
       .producto
         =@producto.nombre
       - if @producto.presentaciones and @producto.presentaciones.any?
         %ul.presentaciones.nolist.nobullet
           %li{:id => "prodclick"}
-            = image_tag @producto.foto.url(:chico), :"data-normal" => @producto.foto.url(:normal), :"data-full" => @producto.foto.url(:grande), :"data-nombre" => @producto.nombre, :"data-precio" => @producto.precio
+            = image_tag @producto.foto.url(:chico), :"data-normal" => @producto.foto.url(:normal), :"data-full" => @producto.foto.url(:grande), :"data-nombre" => @producto.nombre, :"data-precio" => number_to_currency(@producto.precio, :precision => 0)
           - @producto.presentaciones.each do |presentacion|
             %li{:id => "prodclick"}
-              = image_tag presentacion.foto.url(:chico), :"data-normal" => presentacion.foto.url(:normal), :"data-full" => presentacion.foto.url(:grande), :"data-nombre" => presentacion.nombre, :"data-precio" => presentacion.precio
+              = image_tag presentacion.foto.url(:chico), :"data-normal" => presentacion.foto.url(:normal), :"data-full" => presentacion.foto.url(:grande), :"data-nombre" => presentacion.nombre, :"data-precio" => number_to_currency(presentacion.precio, :precision => 0)
       .descripcion
         %h3 DESCRIPCIÓN
         %span.borde
@@ -47,7 +47,7 @@
                 = link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
                 %h4 #{producto.marca.marca}
                 %h4 #{link_to producto.nombre, producto_ver_path(producto.slug)}
-                %p #{number_to_currency producto.precio}
+                %p #{number_to_currency producto.precio, :precision => 0}
   #modalbox
     #modalcontent.table.full
       .pro.tcell.t50
@@ -59,13 +59,13 @@
           %p.producto
             =@producto.nombre
           %span.precio
-            $#{@producto.precio}
+            #{number_to_currency(@producto.precio, :precision => 0)}
           - if @producto.presentaciones and @producto.presentaciones.any?
             %ul.presentaciones.nolist.nobullet
               %li{:id => "proclick"}
-                = image_tag @producto.foto.url(:chico), :"data-normal" => @producto.foto.url(:normal), :"data-full" => @producto.foto.url(:grande), :"data-nombre" => @producto.nombre.split(' ').map {|w| w.capitalize }.join(' '), :"data-precio" => @producto.precio
+                = image_tag @producto.foto.url(:chico), :"data-normal" => @producto.foto.url(:normal), :"data-full" => @producto.foto.url(:grande), :"data-nombre" => @producto.nombre.split(' ').map {|w| w.capitalize }.join(' '), :"data-precio" => number_to_currency(@producto.precio, :precision => 0)
               - @producto.presentaciones.each do |presentacion|
                 %li{:id => "proclick"}
-                  = image_tag presentacion.foto.url(:chico), :"data-normal" => presentacion.foto.url(:normal), :"data-full" => presentacion.foto.url(:grande), :"data-nombre" => presentacion.nombre.split(' ').map {|w| w.capitalize }.join(' '), :"data-precio" => presentacion.precio
+                  = image_tag presentacion.foto.url(:chico), :"data-normal" => presentacion.foto.url(:normal), :"data-full" => presentacion.foto.url(:grande), :"data-nombre" => presentacion.nombre.split(' ').map {|w| w.capitalize }.join(' '), :"data-precio" => number_to_currency(presentacion.precio, :precision => 0)
     .cerrar
       X

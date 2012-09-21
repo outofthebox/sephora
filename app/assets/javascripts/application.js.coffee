@@ -67,7 +67,7 @@ $("#prodclick img").live "click", ->
   $to_replace.attr("src", $(this).data("normal")).addClass('imgloading').load ->
     $(this).removeClass 'imgloading'
   $("#prodlink").attr("href", $(this).data("full"))
-  $("span.precio").text("$" + $(this).data("precio") + ".0")
+  $("span.precio").text($(this).data("precio"))
   $(".producto").text($(this).data("nombre"))
   $(this).addClass("outline")
 
@@ -75,7 +75,7 @@ $("#proclick img").live "click", ->
   $("#proclick img").removeClass("outline")
   $(".pro img").attr("src", $(this).data("full")).addClass('imgloading').load ->
     $(this).removeClass 'imgloading'
-  $("span.precio").text("$" + $(this).data("precio") + ".0")
+  $("span.precio").text($(this).data("precio"))
   $(".producto").text($(this).data("nombre"))
   $(this).addClass("outline")
 
