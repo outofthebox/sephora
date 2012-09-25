@@ -35,15 +35,17 @@
           %td{:style=>"color:green"}
             = porcentaje
       - else
-        %td
+        %td{:style=>"color:red"}
+          =d[:sku]
+        %td{:style=>"color:red"}
+          PRODUCTO NO ENCONTRADO
+        %td{:style=>"color:red"}
           \--
-        %td
+        %td{:style=>"color:red"}
+          $#{d[:precio_nuevo]}
+        %td{:style=>"color:red"}
           \--
-        %td
+        %td{:style=>"color:red"}
           \--
-        %td
-          \--
-        %td
-          \--
-        %td
-          \--
+.save
+  =link_to "Guardar precios", actprecios_guardar_path, :class => 'actboton'

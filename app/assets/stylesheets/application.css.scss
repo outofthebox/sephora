@@ -1307,3 +1307,13 @@ li.checked:before {
 li.unchecked:before {
   content: '\2610';
 }
+.save {
+  padding: 10px;
+  text-align: right;
+  a.actboton {
+    padding: 10px;
+    background: black;
+    color: white;
+    width: 50px;
+  }
+}

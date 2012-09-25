@@ -145,4 +145,7 @@ class UtilidadesController < ApplicationController
     }
     @data = data
   end
+  def actprecios_guardar
+
+  end
 end

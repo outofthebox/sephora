@@ -24,6 +24,7 @@ Sephora::Application.routes.draw do
   get   'importarimg', :to => 'utilidades#importarimg'
   get   'parsearparents', :to => 'utilidades#parsearparents'
   get   'actprecios', :to => 'utilidades#actprecios'
+  get   'actprecios_save', :to => 'utilidades#actprecios_guardar', :as => 'actprecios_guardar'
   
   get   'producto', :to => 'productos#index', :as => 'producto_index'
   get   'producto/:slug',  :to => 'productos#show', :as => 'producto_ver'
