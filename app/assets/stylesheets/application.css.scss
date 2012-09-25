@@ -66,6 +66,12 @@ ul.breadcrumbs{
 #head-sup {
   background: #231F20;
   height: 34px;
+  span, a {
+    color: white;
+    font-size: 0.8em;
+    padding-left: 15px;
+    line-height: 32px;
+  }
 }
 
 // CONTENEDOR PRINCIPAL

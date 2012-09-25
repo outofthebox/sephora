@@ -14,6 +14,15 @@
   = csrf_meta_tags
 %body
   #head-sup.table.full
+    .table.full
+      .tcell.t80
+      .tcell.t20
+        - if current_usuario
+          %span Bienvenido
+          =link_to "(cerrar sesión)", "/logout"
+        - else
+          =link_to "Iniciar sesión", "/usuarios/sign_in"
+          =link_to "Registrarse" ,"/usuarios/sign_up"
   #wrap
     %header#encabezado
       #contenme
