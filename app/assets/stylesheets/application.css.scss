@@ -447,17 +447,20 @@ ul.breadcrumbs{
     h3 {
       text-transform: uppercase;
       font-weight: 100 !important;
+      font-family: 'Avant', Helvetica, Arial;
       letter-spacing: 1px;
       font-size: 2.5em;
     }
     h5 a{
       font-weight: lighter;
+      font-family: "Avant", Arial, sans-serif;
       font-size: 1.2em;
       letter-spacing: 1px;
     }
     p{
       small{
         font-weight: bold;
+        font-family: "Avant", Arial, sans-serif;
         font-size: 1em;
         letter-spacing: 1px;
       }
@@ -481,6 +484,7 @@ ul.breadcrumbs{
             width: 120px;
           }
           h6.number {
+            font-family: "Avant", Arial, sans-serif;
             font-size: 2em;
           }
           h5, p {
@@ -492,6 +496,7 @@ ul.breadcrumbs{
             padding-top: 5px;
           }
           h5.marca {
+            font-family: "Avant", Arial, sans-serif;
             font-size: 0.9em;
             font-weight: bold;
             letter-spacing: 1px;
