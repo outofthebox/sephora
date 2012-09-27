@@ -58,7 +58,7 @@ class Producto < ActiveRecord::Base
     self.where(:slug => slug).first
   end
 
-  def self.rangodeprecios cual
+  def self.rangodeprecios cual=nil
     return self unless cual
 
     rango = [
