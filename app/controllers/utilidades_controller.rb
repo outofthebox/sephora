@@ -148,4 +148,27 @@ class UtilidadesController < ApplicationController
   def actprecios_guardar
 
   end
+
+  def update_upc
+    require 'csv'
+    data = []
+    CSV.foreach("/home/sputnik3/Desktop/upc-sku.csv") do |row|
+      sku = row.at(0)
+      upc = row.at(1)
+      data << { :sku => sku, :upc => upc}
+    end
+
+    productos = Producto.where(:sku => data.map{|d| d[:sku] })
+
+    productos = productos.map do |p|
+      p[:upc] = data.reject{|d| p.sku != d[:sku] }.first[:upc]
+      { :id => p.id, :upc => p[:upc] }
+    end
+
+    people = { 1 => { "first_name" => "David" }, 2 => { "first_name" => "Jeremy" } }
+
+    Producto.update(productos.map{|p| p[:id] }, productos.map{|p| {"upc" => p[:upc]}})
+
+    raise productos.size.inspect
+  end
 end
