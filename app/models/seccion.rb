@@ -3,7 +3,9 @@ class Seccion < ActiveRecord::Base
 
   has_many :producto_seccion
   has_many :productos, :through => :producto_seccion
-  has_attached_file :cover, :styles => { :normal => "754x240>", :mini => "251x80>" }.merge(PAPERCLIP_STORAGE_OPTIONS)
+  has_attached_file :cover, {
+    :styles => { :normal => "754x240>", :mini => "251x80>" }
+  }.merge(PAPERCLIP_STORAGE_OPTIONS)
   before_create do
     self.slug = self.nombre.parameterize.gsub /[^(\w)]/, '' if self.parent_id.nil?
   end
