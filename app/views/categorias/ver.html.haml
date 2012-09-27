@@ -32,9 +32,11 @@
         %li
           <strong>Filtrar por precio</strong>
         %li
-          =link_to "Precio alto", request.parameters.merge({:precio => "alto"})
+          =link_to "Precio alto", request.parameters.merge({:precio => "alto"}), :"data-set" => 'alto'
         %li
-          =link_to "Precio bajo", request.parameters.merge({:precio => "bajo"})
+          =link_to "Precio bajo", request.parameters.merge({:precio => "bajo"}), :"data-set" => 'bajo'
+        %li
+          =link_to "Marca", request.parameters.merge({:ordenar => "marca"}), :"data-set" => 'marca'
         %li
         %li
           <strong>Filtrar por marca</strong>
@@ -79,6 +81,8 @@
                 = link_to 'precio alto', request.parameters.merge({:precio => "alto"}), :"data-set" => 'alto'
               %li
                 = link_to 'precio bajo', request.parameters.merge({:precio => "bajo"}), :"data-set" => 'bajo'
+              %li
+                =link_to "marca", request.parameters.merge({:ordenar => "marca"}), :"data-set" => 'marca'
           .numeros
             %span
               = paginate @productos, :window => 1, :left => 2, :right => 0
@@ -116,6 +120,8 @@
                 = link_to 'precio alto', request.parameters.merge({:precio => "alto"}), :"data-set" => 'alto'
               %li
                 = link_to 'precio bajo', request.parameters.merge({:precio => "bajo"}), :"data-set" => 'bajo'
+              %li
+                =link_to "marca", request.parameters.merge({:ordenar => "marca"}), :"data-set" => 'marca'
           .numeros
             %span
               = paginate @productos, :window => 1, :left => 2, :right => 0
