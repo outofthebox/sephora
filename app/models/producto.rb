@@ -5,7 +5,7 @@ class Producto < ActiveRecord::Base
   belongs_to :marca
   has_many :presentaciones, :class_name => "Producto", :foreign_key => "parent_id"
 
-  attr_accessible :nombre, :nombre_real, :sku, :parent_id, :precio, :descripcion, :ingredientes, :usos, :publicado, :marca_id, :categoria_id, :uso_id, :foto
+  attr_accessible :nombre, :nombre_real, :sku, :upc, :parent_id, :precio, :descripcion, :ingredientes, :usos, :publicado, :marca_id, :categoria_id, :uso_id, :foto
   attr_accessor :foto
 
   has_attached_file :foto, {

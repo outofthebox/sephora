@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120906152952) do
+ActiveRecord::Schema.define(:version => 20120927161812) do
 
   create_table "categoria_productos", :force => true do |t|
     t.integer  "producto_id"
@@ -107,12 +107,14 @@ ActiveRecord::Schema.define(:version => 20120906152952) do
     t.integer  "categoria_id"
     t.integer  "uso_id"
     t.integer  "parent_id"
+    t.string   "upc"
   end
 
   add_index "productos", ["categoria_id"], :name => "index_productos_on_categoria_id"
   add_index "productos", ["marca_id"], :name => "index_productos_on_marca_id"
-  add_index "productos", ["sku"], :name => "index_productos_on_sku", :unique => true
+  add_index "productos", ["sku"], :name => "index_productos_on_sku"
   add_index "productos", ["slug"], :name => "index_productos_on_slug", :unique => true
+  add_index "productos", ["upc"], :name => "index_productos_on_upc", :unique => true
   add_index "productos", ["uso_id"], :name => "index_productos_on_uso_id"
 
   create_table "secciones", :force => true do |t|

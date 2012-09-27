@@ -9,13 +9,16 @@
     =f.labelbrtext "Nombre real", :nombre_real, :class => "big full"
   %p
     .table.full
-      .tcell.t33
+      .tcell.t25
         =f.check_box :publicado
         =f.label :publicado, "Publicado"
-      .tcell.t33
+      .tcell.t25
         =form_error @producto, :sku
         =f.labelbrtext "SKU", :sku
-      .tcell.t33
+      .tcell.t25
+        =form_error @producto, :upc
+        =f.labelbrtext "UPC", :upc
+      .tcell.t25
         =form_error @producto, :precio
         =f.labelbrtext "Precio", :precio
   %p
