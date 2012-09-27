@@ -7,4 +7,7 @@
       -if can? :manage, categoria
         %small
           (#{link_to "Editar", edit_categoria_path(categoria.id)})
+      %br
+      %small
+        Slug: #{categoria.slug}
     = child
