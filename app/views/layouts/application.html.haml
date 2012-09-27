@@ -13,16 +13,7 @@
   = stylesheet_link_tag :application
   = csrf_meta_tags
 %body
-  #head-sup.table.full
-    .infologin.table.full
-      .tcell.t80
-      .tcell.t20
-        - if current_usuario
-          %span Bienvenido
-          =link_to "(cerrar sesión)", "/logout"
-        - else
-          =link_to "Iniciar sesión", "/usuarios/sign_in"
-          =link_to "Registrarse" ,"/usuarios/sign_up"
+  #head-sup
   #wrap
     %header#encabezado
       #contenme
