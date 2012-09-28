@@ -59,6 +59,16 @@ $(".prox").live "click", ->
   $(".slider").animate({"margin-left": "-100%"}, "slow")
 $(".ante").live "click", ->
   $(".slider").animate({"margin-left": "0"}, "slow")
+
+$('#producto ul li').hide()
+(hotnowslider = ->
+  $('#producto ul li:first').fadeIn().delay(5000).fadeOut()
+  $('#producto ul li:nth-child(2)').delay(5000).fadeIn().delay(5000).fadeOut()
+  $('#producto ul li:nth-child(3)').delay(10000).fadeIn().delay(5000).fadeOut()
+  setTimeout (->
+    hotnowslider()
+  ), 15000
+)()
   
 $("#prodclick img").first().addClass("outline")
 $("#prodclick img").live "click", ->

@@ -394,6 +394,20 @@ ul.breadcrumbs{
           padding:0;
         }
       }
+    ul {
+      overflow: hidden;
+      height: 399px;
+      position: relative;
+      li {
+        position: absolute;
+        height: 399px;
+        width: 195px;
+        line-height: 50px;
+        text-align: center;
+        margin-top: 70px;
+        background: white;
+      }
+    }
       .producto-info{
         font-size: 1em;
         h4{

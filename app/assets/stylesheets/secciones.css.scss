@@ -10,18 +10,18 @@ section#tu-lista{
     font-size: 0.9em;
   }
   .caja{
-    border: 2px solid #666;
+    border: 1px solid #666;
     margin-right: 10px;
     .header{
       text-transform: uppercase;
       text-align: center;
-      border-bottom: 2px solid #666;
+      border-bottom: 1px solid #666;
       strong{
         display: block;
       }
     }
     &.hotnow{
-      min-height: 302px;
+      clear: both;
     }
     &.top-10{
       position: relative;

@@ -1,13 +1,19 @@
 =image_tag 'home/flame.jpg', class: 'flame-left', size: '90x616'
 #slider-home.full
   #producto.tcell.t25.middle
-    .producto-imagen
-      %a{:href => '/producto/triple-barrel-curler-black-1313360'}
-        =image_tag "home/amika.png"
-    .producto-info
-      %h4 3 en 1<br> Amika: Triple Barrel Pro Curler Set.
-      .producto-p
-        %p Set de tenazas en tres tamaños diferentes para crear rizos de cualquier tamaño y forma.
+    %ul.nobullet.nolist
+      - seccion_productos = @contenido.producto_seccion.limit(3)
+      - seccion_productos.each do |seccion_producto|
+        - producto = seccion_producto.producto
+        %li
+          .producto-imagen
+            =link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
+          .producto-info
+            %p
+              = producto.marca.marca
+            .producto-p
+              %p
+                =producto.nombre.split(' ').map {|w| w.capitalize }.join(' ')
   #poster.tcell.t75
     .contenedor
       .slider
