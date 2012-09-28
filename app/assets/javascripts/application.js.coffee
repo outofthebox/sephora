@@ -61,13 +61,13 @@ $(".ante").live "click", ->
   $(".slider").animate({"margin-left": "0"}, "slow")
 
 $('#producto ul li').hide()
+$('#producto ul li:first').show()
 (hotnowslider = ->
-  $('#producto ul li:first').fadeIn().delay(5000).fadeOut()
+  $('#producto ul li:first').delay(5000).fadeOut()
   $('#producto ul li:nth-child(2)').delay(5000).fadeIn().delay(5000).fadeOut()
-  $('#producto ul li:nth-child(3)').delay(10000).fadeIn().delay(5000).fadeOut()
-  setTimeout (->
+  $('#producto ul li:nth-child(3)').delay(10000).fadeIn().delay(5000).fadeOut '', ->
+    $('#producto ul li:first').fadeIn()
     hotnowslider()
-  ), 15000
 )()
   
 $("#prodclick img").first().addClass("outline")
