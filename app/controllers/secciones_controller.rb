@@ -120,5 +120,16 @@ class SeccionesController < ApplicationController
 
     render :text => orden.to_a
   end
+  def feedback
+    @feedback = Feedback.new
+  end
 
+  def feedback_save
+    @feedback = Feedback.new params[:feedback]
+    if @feedback.save
+      redirect_to root_path
+    else
+      render :nuevo
+    end
+  end
 end

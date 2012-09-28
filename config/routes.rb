@@ -15,6 +15,9 @@ Sephora::Application.routes.draw do
   post  'secciones/:id/vincular', :to => 'secciones#vincular', :as => 'seccion_vincular_producto'
   post  'secciones/actualizar_orden', :to => 'secciones#actualizar_orden'
 
+  get   'feedback', :to => 'secciones#feedback', :as => 'feedbacks'
+  post  'feedback', :to => 'secciones#feedback_save', :as => 'feedbacks'
+
   get   'usuarios/lista', :to => 'usuarios#lista', :as => 'usuarios_lista'
   put   'usuario/actualizar/:id', :to => 'usuarios#actualizar', :as => 'usuario_actualizar'
   get   'usuario/usar_sesion/:id', :to => 'usuarios#usar_sesion', :as => 'usuario_usar_sesion'

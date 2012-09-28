@@ -1,0 +1,9 @@
+%h2 Enviar Feedback
+= form_for @feedback do |f|
+  = f.labelbrtext 'Nombre', :nombre
+  <br />
+  = f.labelbrtext 'Email', :email
+  <br />
+  = f.labelbrtextarea 'Comentario', :comentario
+  <br />
+  = f.submit 'Enviar'
