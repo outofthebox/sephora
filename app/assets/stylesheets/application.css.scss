@@ -1102,7 +1102,6 @@ section#solucionesver {
   }
   .contizq {
     font-size: 11pt;
-    border-top: 5px solid #231F20;
     h3 {
       text-transform: uppercase;
       font-weight: bold;
@@ -1110,11 +1109,13 @@ section#solucionesver {
       padding: 5px 0 5px 10px;
     }
     ul {
+      border-top: 5px solid #231F20;
       border-bottom: 5px solid #231F20;
       list-style: none;
       padding: 0;
       padding-left: 10px;
       margin: 0;
+      width: 180px;
       li {
         padding: 5px 0 5px 0;
         font-size: 0.8em;
@@ -1124,7 +1125,6 @@ section#solucionesver {
   .contder {
     border-left: 7px solid #D6D6D8;
     padding-bottom: 20px;
-    border-bottom: 5px solid black;
     ul, li, img {
       margin: 0;
       padding: 0;
