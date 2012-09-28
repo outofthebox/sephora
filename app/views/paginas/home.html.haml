@@ -1,7 +1,7 @@
 =image_tag 'home/flame.jpg', class: 'flame-left', size: '90x616'
 #slider-home.full
   #producto.tcell.t25.middle
-    %ul.nobullet.nolist
+    %ul.nobullet.nolist.home
       - seccion_productos = @contenido.producto_seccion.limit(3)
       - seccion_productos.each do |seccion_producto|
         - producto = seccion_producto.producto
