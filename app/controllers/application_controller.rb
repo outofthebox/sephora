@@ -1,10 +1,24 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
+  #Para devise http://stackoverflow.com/questions/4982073/different-layout-for-sign-in-action-in-devise
+  layout :layout_by_resource
+
   helper_method :mini_hash, :check_minihash
 
   before_filter do
     @marcas_all = Marca.order(:marca)
+    unless current_usuario
+      redirect_to beta_path unless self.controller_name.in?(['sessions', 'paginas'])
+    end
+  end
+
+  def layout_by_resource
+    if devise_controller? && resource_name == :usuario && action_name == 'new'
+      'beta'
+    else
+      "application"
+    end
   end
 
   def current_user

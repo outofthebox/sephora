@@ -1,0 +1,23 @@
+!!! 5
+:plain
+  <!--[if lt IE 7]> <html lang="es" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+  <!--[if IE 7]>    <html lang="es" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+  <!--[if IE 8]>    <html lang="es" class="no-js lt-ie9"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
+%head
+  %meta{:charset => "UTF-8"}
+  %link{ :rel => "shortcut icon", :href => "favicon.ico", :type => "image/x-icon"}/
+  %title
+    Sephora Beta
+  = javascript_include_tag :modernizr
+  = stylesheet_link_tag :beta
+  = csrf_meta_tags
+%body
+  #beta
+    .logo
+    - if request.fullpath == '/usuarios/sign_in'
+      .combo
+        = yield
+    - else
+      = yield
+  = javascript_include_tag :beta

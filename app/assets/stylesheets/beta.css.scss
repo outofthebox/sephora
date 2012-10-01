@@ -1,0 +1,38 @@
+// = require reset
+// = require eses
+// = require_self
+#beta {
+  width: 960px;
+  height: 1000px;
+  background: image-url('beta/background.jpg');
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  .logo {
+    width: 217px;
+    height: 29px;
+    margin-left: 50px;
+    margin-top: 20px;
+    background: image-url('beta/sephora_logo.png');
+  }
+  .guideline {
+    width: 397px;
+    height: 511px;
+    margin-left: 170px;
+    margin-top: 95px;
+    background: image-url('beta/logo_celebramos.png');
+  }
+  a.registro {
+    width: 223px;
+    height: 52px;
+    display: block;
+    margin-left: 260px;
+    margin-top: 60px;
+    background: image-url('beta/btn_registro.png');
+  }
+  .combo {
+    text-align: center;
+    width: 300px;
+    margin-left: 200px;
+    margin-top: 300px;
+  }
+}
