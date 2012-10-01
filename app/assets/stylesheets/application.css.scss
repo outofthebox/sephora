@@ -51,10 +51,16 @@ ul.breadcrumbs{
   padding-top: 5px;
   li {
     font-size: 0.8em;
+    display: inline-block;
   }
   li + li:before{
-    content: ">";
-    font-size: 1em;
+    display: inline-block;
+    content: '';
+    width: 3px;
+    height: 7px;
+    background: image-url('bread.png') no-repeat;
+    padding-left: 0px;
+    margin-left: 5px;
   }
   li.highlighted{
     a{
