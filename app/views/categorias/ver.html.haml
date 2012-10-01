@@ -11,23 +11,27 @@
         = link_to @categoria.nombre, categoria_ver_path(@categoria.slug)
   .table.full
     .contizq.tcell.t25
-      %h3
-        =@categoria.nombre
       - if @subcategorias && @subcategorias.any?
+        %h3
+          =@categoria.nombre
         %ul
           - @subcategorias.each do |subcategoria|
             %li
               = link_to subcategoria.nombre, categoria_ver_path(subcategoria.slug)
       - else
         %ul
-          - @categoria.root.descendants.each do |s|
-            %li
-              - if s == @categoria
-                %p.selected
-                  = s.nombre
-                  %span (#{@productoscount})
-              - else
-                = link_to s.nombre, categoria_ver_path(s.slug)
+          %li
+            =@categoria.nombre
+            %span (#{@productoscount})
+        / %ul
+        /   - @categoria.root.descendants.each do |s|
+        /     %li
+        /       - if s == @categoria
+        /         %p.selected
+        /           = s.nombre
+        /           %span (#{@productoscount})
+        /       - else
+        /         = link_to s.nombre, categoria_ver_path(s.slug)
       %ul
         %li
           <strong>Filtrar por precio</strong>
