@@ -20,3 +20,9 @@
         = yield
     - else
       = yield
+  -if ENV['GOOGLE_ANALYTICS_KEY']
+    :javascript
+      window._gaq = [['_setAccount','#{ENV['GOOGLE_ANALYTICS_KEY']}'],['_trackPageview'],['_trackPageLoadTime']];
+      Modernizr.load({
+        load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+      });
