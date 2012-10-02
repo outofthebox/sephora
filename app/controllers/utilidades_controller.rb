@@ -126,7 +126,7 @@ class UtilidadesController < ApplicationController
   def actprecios
     require 'csv'
     data = []
-    CSV.foreach("/home/oob4/Escritorio/precios.csv") do |row|
+    CSV.foreach("http://abarcarodriguez.com/precios.csv") do |row|
       sku = row[0]
       precio_nuevo = row[1]
       data << {:sku => sku, :precio_nuevo => precio_nuevo}
@@ -146,7 +146,35 @@ class UtilidadesController < ApplicationController
     @data = data
   end
   def actprecios_guardar
+    require 'csv'
+    data = []
+    CSV.foreach("http://abarcarodriguez.com/precios.csv") do |row|
+      sku = row[0]
+      precio_nuevo = row[1]
+      data << {:sku => sku, :precio_nuevo => precio_nuevo}
+    end
 
+    productos = Producto.where(:sku => data.map{|d| d[:sku]})
+
+    data.map{|d|
+      if (producto = productos.reject{|p| p unless p.sku == d[:sku] }.first)
+        if producto
+          d[:precio_actual] = producto.precio
+          d[:producto] = producto.nombre
+          d[:id] = producto.id
+        end
+      end
+    }
+    @data = data
+    precios = []
+    ids = []
+    @data.each do |d|
+      if d.has_key?(:precio_actual)
+        precios << {:precio => d[:precio_nuevo]}
+        ids << d[:id]
+      end
+    end
+    Producto.update(ids, precios)
   end
 
   def update_upc
