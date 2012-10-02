@@ -4,7 +4,7 @@ Sephora::Application.routes.draw do
   root :to => 'paginas#home'
   get '/beta', :to => "paginas#beta", :as => 'beta'
   
-  get   ':seccion', :to => 'secciones#ver', :constraints => { :seccion => /hotnow|bestsellers|bbcreams/ }
+  get   ':seccion', :to => 'secciones#ver', :constraints => { :seccion => /hotnow|bestsellers|bbcreams|tintedmoisturizers/ }
   get   'soluciones(/:id)', :to => 'secciones#soluciones', :as => 'soluciones'
   get   'favorites(/:id)', :to => 'secciones#favorites', :as => 'favorites'
 
