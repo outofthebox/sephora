@@ -1,51 +1,59 @@
-%table{:border => "1", :cellpadding => "3"}
-  %thead
-    %tr
-      %th
-        SKU
-      %th
-        Producto
-      %th
-        Precio actual
-      %th
-        Precio nuevo
-      %th
-        Diferencia
-      %th
-        Cambio %
-  %tbody
-  - @data.each do |d|
-    %tr
-      - if d.has_key?(:precio_actual)
-        %td
-          =d[:sku]
-        %td
-          =d[:producto]
-        %td
-          $#{d[:precio_actual]}
-        %td
-          $#{d[:precio_nuevo]}
-        %td
-          $#{d[:precio_nuevo].to_i - d[:precio_actual].to_i}
-        - porcentaje = number_to_percentage((d[:precio_nuevo].to_i - d[:precio_actual].to_i) / d[:precio_actual].to_f * 100)
-        - if porcentaje.to_f < 0
-          %td{:style=>"color:red"}
-            = porcentaje
+- if @data
+  - if @actualizado
+    %h3 ¡Precios actualizados con éxito!
+  %table{:border => "1", :cellpadding => "3"}
+    %thead
+      %tr
+        %th
+          SKU
+        %th
+          Producto
+        %th
+          Precio actual
+        %th
+          Precio nuevo
+        %th
+          Diferencia
+        %th
+          Cambio %
+    %tbody
+    - @data.each do |d|
+      %tr
+        - if d.has_key?(:precio_actual)
+          %td
+            =d[:sku]
+          %td
+            =d[:producto]
+          %td
+            $#{d[:precio_actual]}
+          %td
+            $#{d[:precio_nuevo]}
+          %td
+            $#{d[:precio_nuevo].to_i - d[:precio_actual].to_i}
+          - porcentaje = number_to_percentage((d[:precio_nuevo].to_i - d[:precio_actual].to_i) / d[:precio_actual].to_f * 100)
+          - if porcentaje.to_f < 0
+            %td{:style=>"color:red"}
+              = porcentaje
+          - else
+            %td{:style=>"color:green"}
+              = porcentaje
         - else
-          %td{:style=>"color:green"}
-            = porcentaje
-      - else
-        %td{:style=>"color:red"}
-          =d[:sku]
-        %td{:style=>"color:red"}
-          PRODUCTO NO ENCONTRADO
-        %td{:style=>"color:red"}
-          \--
-        %td{:style=>"color:red"}
-          $#{d[:precio_nuevo]}
-        %td{:style=>"color:red"}
-          \--
-        %td{:style=>"color:red"}
-          \--
-.save
-  =link_to "Guardar precios", actprecios_guardar_path, :class => 'actboton'
+          %td{:style=>"color:red"}
+            =d[:sku]
+          %td{:style=>"color:red"}
+            PRODUCTO NO ENCONTRADO
+          %td{:style=>"color:red"}
+            \--
+          %td{:style=>"color:red"}
+            $#{d[:precio_nuevo]}
+          %td{:style=>"color:red"}
+            \--
+          %td{:style=>"color:red"}
+            \--
+  - unless @actualizado
+    .save
+      =link_to "Guardar precios", actprecios_guardar_path, :class => 'actboton'
+- else
+  =form_tag(actprecios_path, :enctype=>"multipart/form-data") do
+    = file_field_tag :file
+    = submit_tag

@@ -126,29 +126,34 @@ class UtilidadesController < ApplicationController
   def actprecios
     require 'csv'
     data = []
-    CSV.foreach("http://abarcarodriguez.com/precios.csv") do |row|
-      sku = row[0]
-      precio_nuevo = row[1]
-      data << {:sku => sku, :precio_nuevo => precio_nuevo}
-    end
-
-    productos = Producto.where(:sku => data.map{|d| d[:sku]})
-
-    data.map{|d|
-      if (producto = productos.reject{|p| p unless p.sku == d[:sku] }.first)
-        if producto
-          d[:precio_actual] = producto.precio
-          d[:producto] = producto.nombre
-        end
+    if params[:file]
+      Rails.cache.write('tmp_listadeprecio', params[:file].tempfile.read)
+      tmp = Rails.cache.read('tmp_listadeprecio')
+      CSV.parse(tmp, :headers => true) do |row|
+        sku = row[0]
+        precio_nuevo = row[1]
+        data << {:sku => sku, :precio_nuevo => precio_nuevo}
       end
-      d
-    }
-    @data = data
+
+      productos = Producto.where(:sku => data.map{|d| d[:sku]})
+
+      data.map{|d|
+        if (producto = productos.reject{|p| p unless p.sku == d[:sku] }.first)
+          if producto
+            d[:precio_actual] = producto.precio
+            d[:producto] = producto.nombre
+          end
+        end
+      }
+      @data = data
+    end
   end
+
   def actprecios_guardar
     require 'csv'
     data = []
-    CSV.foreach("http://abarcarodriguez.com/precios.csv") do |row|
+    tmp = Rails.cache.read('tmp_listadeprecio')
+    CSV.parse(tmp, :headers => true) do |row|
       sku = row[0]
       precio_nuevo = row[1]
       data << {:sku => sku, :precio_nuevo => precio_nuevo}
@@ -174,7 +179,12 @@ class UtilidadesController < ApplicationController
         ids << d[:id]
       end
     end
-    Producto.update(ids, precios)
+    if Producto.update(ids, precios)
+      @actualizado = true
+      render :actprecios
+    else
+      raise 'error'
+    end
   end
 
   def update_upc
