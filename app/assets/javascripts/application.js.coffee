@@ -89,7 +89,7 @@ $("#proclick img").live "click", ->
   $(".producto").text($(this).data("nombre"))
   $(this).addClass("outline")
 
-$("#prod").live "click", (e) ->
+$("#prod, #prodlink").live "click", (e) ->
   e.preventDefault()
   href = $("#prodlink").attr('href')
   $("#modalcontent .pro img").attr('src', href)
