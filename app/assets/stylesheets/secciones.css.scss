@@ -12,6 +12,7 @@ section#tu-lista{
   .caja{
     border: 1px solid #666;
     margin-right: 10px;
+    height: auto;
     .header{
       text-transform: uppercase;
       text-align: center;
@@ -43,9 +44,10 @@ section#tu-lista{
   .size {
     text-align: center;
     img {
-      width: 200px;
+      width: 228px;
     }
   }
+
 }
 #error404 {
   img {
