@@ -30,7 +30,7 @@
           %p
             =@marca.behindthebrand
       %h3 EXPLORA LA MARCA
-      - if @marca.marca_producto.size
+      - unless @marca.marca_producto.count == 0
         .catalogo
           %h4.title
             BEST SELLERS
