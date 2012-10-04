@@ -132,7 +132,7 @@
             %p
               =@productoscount
               artículos
-  - if !@categoria.depth and !@categoria.productos.size.zero?
+  - unless @categoria.categoria_producto.size == 0
     .table.full
       .tcell.t20
       .tcell.t80
