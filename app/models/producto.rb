@@ -38,14 +38,16 @@ class Producto < ActiveRecord::Base
     else
       query = []
       q.parameterize.split("-").each do |q|
-        query << "to_tsvector(slug) @@ to_tsquery('#{sprintf('%s', q)}')"
+        query << "to_tsvector(productos.slug) @@ to_tsquery('#{sprintf('%s', q)}')"
+        query << "to_tsvector(marcas.marca) @@ to_tsquery('#{sprintf('%s', q)}')"
       end
-      productos = productos.where query.join(' OR ')
+      productos = productos.select("productos.*, marcas.marca").joins(:marca).where query.join(' OR ')
     end
 
     productos
   end
-  
+  # return Producto.select("productos.*, marcas.marca").where('marcas.marca LIKE ? OR productos.nombre LIKE ?', "%#{search}%", "%#{search}%").joins(:marca)
+
   def self.padres
     self.where :parent_id => nil
   end

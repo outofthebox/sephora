@@ -107,5 +107,4 @@ class CategoriasController < ApplicationController
 
     render :text => orden.to_a
   end
-
 end
