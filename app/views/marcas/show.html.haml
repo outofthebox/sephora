@@ -17,7 +17,7 @@
             - unless @marca.logo_file_name.nil? 
               = image_tag @marca.logo.url(:grande)
           %p
-            =@marca.descripcion
+            =@marca.descripcion.gsub(/(\r|\n)+/, '<br />').html_safe
           - unless @marca.behindthebrand.empty?
             %p.behindbutton
               Detrás de la marca ▼
