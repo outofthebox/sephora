@@ -6,10 +6,14 @@
     .contizq.tcell.t25
       %h3
         Resultados
+      %ul
+        - if @productos and @productos.any?
+          - @productos.each do |producto|
+            %li #{link_to producto.nombre.split(' ').map {|w| w.capitalize }.join(' '), producto_ver_path(producto.slug)}
     .contder.tcell.t75
       .catalogo
         - if @productos and @productos.any?
-          %ul.nobullet.nolist
+          %ul.nobullet.nolist.catalogin
             - @productos.each do |producto|
               %li
                 = link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
