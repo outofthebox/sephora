@@ -19,7 +19,7 @@ class Categoria < ActiveRecord::Base
     require 'ostruct'
     sql = <<-sql
         SELECT * FROM marcas WHERE id IN
-          (SELECT DISTINCT(productos.marca_id) FROM productos WHERE publicado = true AND categoria_id IN (#{arr_categorias.join(",")}))
+          (SELECT DISTINCT(productos.marca_id) FROM productos WHERE publicado = true AND categoria_id IN (#{arr_categorias.join(",")})) ORDER BY marca ASC
       sql
     query = ActiveRecord::Base.connection.execute(sql)
     query.find_all.map{|q| q }
