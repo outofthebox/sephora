@@ -22,7 +22,7 @@
         #search
           = form_for :buscar, { :url => busqueda_path, :method => :get } do |f|
             %p.nowrap
-              = f.text_field :q, :class => 'input', :placeholder  => "BUSCAR"
+              = f.text_field :q, :class => 'input', :placeholder  => "BUSCAR", :value => "#{(params[:buscar][:q]) unless params[:buscar].nil?}"
               = f.submit '', :class => 'submit'
         %a{ :href => "/" }
           #logo
