@@ -62,19 +62,23 @@ class UtilidadesController < ApplicationController
         usos << row[10]
       end
 
-      usos = usos.sort.uniq.map do |u|
-        Uso.new :nombre => u, :visible => true
-      end
-      Uso.import usos
+      # usos = usos.sort.uniq.map do |u|
+      #   Uso.new :nombre => u, :visible => true
+      # end
+      # Uso.import usos
 
-      categorias = categorias.sort.uniq.map do |c|
-        Categoria.new :nombre => c, :slug => c.parameterize, :visible => true
-      end
-      Categoria.import categorias
+      # categorias = categorias.sort.uniq.map do |c|
+      #   Categoria.new :nombre => c, :slug => c.parameterize, :visible => true
+      # end
+      # Categoria.import categorias
 
+      marcas_existentes = Marca.all.map{|m| m.marca.parameterize }
       marcas = marcas.sort.uniq.map do |m|
-        Marca.new :marca => m, :slug => m.parameterize
-      end
+        unless m.parameterize.in? marcas_existentes
+          Marca.new :marca => m, :slug => m.parameterize 
+        end
+      end.compact
+
       Marca.import marcas
 
       raise 'hecho!'
@@ -84,8 +88,9 @@ class UtilidadesController < ApplicationController
       # usos = Uso.all.map{|u| { :id => u.id, :uso => u.nombre } }
       CSV.foreach(csv) do |row|
         sku = row[1]
-        categoria_id = categorias.map{|c| row[9].parameterize == c[:categoria].parameterize ? c[:id] : nil }.compact.first
-        marca_id = marcas.map{|m| row[4].parameterize == m[:marca].parameterize ? m[:id] : nil }.compact.first
+        upc = row[2]
+        categoria_id = categorias.map{|c| (row[9]||"").parameterize == c[:categoria].parameterize ? c[:id] : nil }.compact.first
+        marca_id = marcas.map{|m| row[4].parameterize.gsub('-', '') == m[:marca].parameterize.gsub('-', '') ? m[:id] : nil }.compact.first
         # uso_id = usos.map{|u|
         #   row[10].parameterize == u[:uso].parameterize ? u[:id] : nil
         # }.compact.first
@@ -95,10 +100,10 @@ class UtilidadesController < ApplicationController
         descripcion = row[12]
         usos = row[13]
         ingredientes = row[14]
-        datos << { :sku => sku, :nombre => nombre, :nombre_real => nombre_real, :precio => precio, :descripcion => descripcion, :usos => usos, :ingredientes => ingredientes, :marca_id => marca_id, :categoria_id => categoria_id } if sku.length > 3
+        datos << { :sku => sku, :upc => upc, :nombre => nombre, :nombre_real => nombre_real, :precio => precio, :descripcion => descripcion, :usos => usos, :ingredientes => ingredientes, :marca_id => marca_id, :categoria_id => categoria_id } if sku.length > 3
       end
 
-      # datos = datos.drop 1
+      datos = datos.drop 1
 
       datos.each do |dato|
         p = Producto.new dato
