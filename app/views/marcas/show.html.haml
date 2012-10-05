@@ -28,7 +28,7 @@
         .table.full.behindthebrand
           %h3 DETRÁS DE LA MARCA
           %p
-            =@marca.behindthebrand
+            =@marca.behindthebrand.gsub(/(\r|\n)+/, '<br />').html_safe
       %h3 EXPLORA LA MARCA
       - unless @marca.marca_producto.count == 0
         .catalogo
