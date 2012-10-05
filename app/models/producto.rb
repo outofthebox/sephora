@@ -31,6 +31,10 @@ class Producto < ActiveRecord::Base
     errors.add :sku, "Proporciona el SKU " unless self.sku.parameterize.length > 2
   end
 
+  def nombre
+    unless self.nombre_real.nil? then self.nombre_real else super end
+  end
+
   def self.busqueda q
     productos = self
     if sku = q.match(/sku:([\w]*)/)
