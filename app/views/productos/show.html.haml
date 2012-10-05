@@ -37,22 +37,22 @@
         #tabmenu
           %ul
             %li
-              %a{:href => "#tab1"} DESCRIPCION
-            - unless @producto.ingredientes.size == 3
+              %a{:href => "#tab1"} DESCRIPCIÓN
+            - unless @producto.ingredientes.size == 3 || @producto.ingredientes.empty?
               %li
                 %a{:href => "#tab2"} INGREDIENTES
-            - unless @producto.usos.size == 3
+            - unless @producto.usos.size == 3 || @producto.usos.empty?
               %li
                 %a{:href => "#tab3"} USOS
           .tabcontent
             #tab1.tabdesc
               %p
                 =@producto.descripcion.gsub(/(\r|\n)+/, '<br />').html_safe
-            - unless @producto.ingredientes.size == 3
+            - unless @producto.ingredientes.size == 3 || @producto.ingredientes.empty?
               #tab2.tabdesc
                 %p
                   =@producto.ingredientes.gsub(/(\r|\n)+/, '<br />').html_safe
-            - unless @producto.ingredientes.size == 3
+            - unless @producto.ingredientes.size == 3 || @producto.usos.empty?
               #tab3.tabdesc
                 %p
                   =@producto.usos.gsub(/(\r|\n)+/, '<br />').html_safe
