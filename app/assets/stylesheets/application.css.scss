@@ -839,6 +839,10 @@ ul.breadcrumbs{
   section#producto {
     border-top: 1px solid #C1C1C1;
     padding-bottom: 25px;
+    .small {
+      font-size: 0.7em;
+      text-align: right;
+    }
     .marca {
       border-bottom: 5px solid #231F20;
       img {

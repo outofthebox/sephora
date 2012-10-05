@@ -66,6 +66,8 @@
                 %h4 #{producto.marca.marca}
                 %h4 #{link_to producto.nombre, producto_ver_path(producto.slug)}
                 %p #{number_to_currency producto.precio, :precision => 0}
+  %p.small
+    *Precios pueden variar sin previo aviso, precios finales disponibles en tienda.
   #modalbox
     #modalcontent.table.full
       .pro.tcell.t50
