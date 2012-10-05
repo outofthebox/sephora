@@ -1,7 +1,6 @@
 # = require jquery
 # = require jquery_ujs
 # = require jquery.ui.all
-
 $(".tabdesc").hide()
 $(".tabdesc:first").show()
 $("#tabmenu ul li:first").addClass 'active'
@@ -18,6 +17,38 @@ $("select#marcas").on 'change', (e) ->
   window.location = $(this).val()
 $('.select').hover ->
   $('.trigger span').toggleClass('active')
+
+slidersize1 = (165+25)*$(".bestsellers li").length
+slidersize2 = (165+25)*$(".lonuevo li").length
+$(".bestsellers").css('width', slidersize1)
+$(".lonuevo").css('width', slidersize2)
+
+$("#slideright").live "dblclick", (e)->
+  e.preventDefault()
+
+$("#slideright").live "click", (e)->
+  leftgo = parseInt($(".bestsellers").css('left'), 10)
+  $(".bestsellers").css('left', leftgo - 945 + 'px' )
+  if parseInt($(".bestsellers").css('left'), 10) == (($(".bestsellers li").length/5)*945)*-1
+    $(".bestsellers").css('left', '0' )
+
+$("#slideleft").live "click", ->
+  leftgo = parseInt($(".bestsellers").css('left'), 10)
+  $(".bestsellers").css('left', leftgo + 945 + 'px' )
+  if leftgo == 0
+    $(".bestsellers").css('left', '0')
+
+$("#slideright2").live "click", ->
+  leftgo = parseInt($(".lonuevo").css('left'), 10)
+  $(".lonuevo").css('left', leftgo - 945 + 'px' )
+  if parseInt($(".lonuevo").css('left'), 10) == (($(".lonuevo li").length/5)*945)*-1
+    $(".lonuevo").css('left', '0' )
+
+$("#slideleft2").live "click", ->
+  leftgo = parseInt($(".lonuevo").css('left'), 10)
+  $(".lonuevo").css('left', leftgo + 945 + 'px' )
+  if leftgo == 0
+    $(".lonuevo").css('left', '0')
 
 if ($widget_vinculos = $(".widget-seccion-producto-vincular")).size()
   $widget_vinculos.on "submit", (e) ->

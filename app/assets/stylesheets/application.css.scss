@@ -70,7 +70,7 @@ ul.breadcrumbs{
 }
 // BANDA NEGRA SUPERIOR
 #head-sup {
-  background: #231F20;
+  background: #000;
   height: 34px;
   .infologin {
     width: 960px;
@@ -485,30 +485,58 @@ ul.breadcrumbs{
         letter-spacing: 1px;
       }
     }
-
+    #slideleft, #slideleft2, #slideright, #slideright2 {
+      z-index: 99;
+      cursor: pointer;
+    }
+    #slideleft, #slideleft2 {
+      width: 51px;
+      height: 85px;
+      background: image-url('home/left.png');
+      position: absolute;
+      margin-top: 20px;
+      left: -20px;
+    }
+    #slideright, #slideright2 {
+      width: 51px;
+      height: 85px;
+      background: image-url('home/right.png');
+      position: absolute;
+      margin-top: 20px;
+      right: -20px;
+    }
     #slider-wrap {
-      // border: 1px solid red;
       height: auto;
       overflow: hidden;
-
+      height: 260px;
+      width: 960px;
+      position: relative;
       ul {
+        position: absolute;
+        height: 260px;
+        margin: 0;
+        padding: 0;
         padding-bottom: 5px;
+        font-size: 0;
+        left: 0;
         li:hover a, li:hover p {
           text-decoration: underline;
         }
         li {
           @include inlineblock;
-          width: 15%;
+          width: 165px;
+          margin: 0;
+          padding: 0;
           margin: 0 12px 0 12px;
           img {
             width: 120px;
           }
           h6.number {
             font-family: "Avant", Arial, sans-serif;
-            font-size: 2em;
+            font-size: 24pt;
           }
           h5, p {
-            font-size: 0.8em;
+            font-size: 10pt;;
             margin: 0;
             padding: 0;
           }
@@ -517,7 +545,7 @@ ul.breadcrumbs{
           }
           h5.marca {
             font-family: "Avant", Arial, sans-serif;
-            font-size: 0.9em;
+            font-size: 11pt;
             font-weight: bold;
             letter-spacing: 1px;
           }
@@ -525,7 +553,6 @@ ul.breadcrumbs{
       }
     }
   }
-
   #esta-semana {
     text-align: center;
     border-top: 3px solid #231F20;
