@@ -2,6 +2,18 @@
 # = require jquery_ujs
 # = require jquery.ui.all
 
+$(".tabdesc").hide()
+$(".tabdesc:first").show()
+$("#tabmenu ul li:first").addClass 'active'
+$("#tabmenu li a").last().addClass 'last'
+$("#tabmenu ul li a").click (e) ->
+  e.preventDefault()
+  activeTab = $(this).attr("href")
+  $("#tabmenu ul li").removeClass "active"
+  $(this).closest('li').addClass "active"
+  $(".tabdesc").hide() 
+  $(activeTab).show()
+
 $("select#marcas").on 'change', (e) ->
   window.location = $(this).val()
 $('.select').hover ->
@@ -132,3 +144,4 @@ $(".navegaciones ul.aco").on "mouseleave", ->
 
 $("#trigger").html($(".navegaciones ul.verpor li a[data-set="+ver+"]").data("set") + " por página <span>▼</span>") unless $(".navegaciones ul.verpor li a[data-set="+ver+"]").data("set").nil?
 $("#trigger2").html("precio " +$(".navegaciones ul.aco li a[data-set="+precio+"]").data("set") + "<span>▼</span>") unless $(".navegaciones ul.aco li a[data-set="+precio+"]").data("set").nil?
+

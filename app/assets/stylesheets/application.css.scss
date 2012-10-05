@@ -895,36 +895,52 @@ ul.breadcrumbs{
       }
     }
     .descripcion {
-      font-size: 0;
-      margin-top: 15px;
-      h3 {
-        border-top: 1px solid #838383;
-        border-left: 1px solid #838383;
-        border-right: 1px solid #838383;
-        width: 150px;
-        font-size: 12pt;
-        color: red;
-        padding: 10px 10px 0 7px;
-        display: inline-block;
-      }
-      .borde {
-        border-bottom: 1px solid #838383;
-        width: 420px;
-        font-size: 12pt;
-        display: inline-block;
-      }
+      padding-top: 40px;
       p {
-        font-size: 10pt;
-        &.mas {
-          margin-top: 30px;
-          font-size: 10pt;
-          color: gray;
-          span  {
-            color: black;
-            font-size: 8pt;
-          }
-        }
+        font-size: 0.8em;
       }
+      #tabmenu{
+        position:relative;
+      }
+        #tabmenu ul{
+          margin:0;
+          padding: 0;
+          height: 35px;
+          z-index:100;
+          position: absolute;
+          margin-top: -35px;
+        }
+        #tabmenu li{
+          background: white;
+          float:left;
+          list-style:none;
+          border-top:1px solid #000;
+          border-left:1px solid #000;
+          border-bottom: 1px solid #000;
+          width: 150px;
+          text-align: center;
+        }
+        #tabmenu li a{
+          color:red;
+          cursor:pointer;
+          display:block;
+          height:35px;
+          line-height:35px;
+          text-decoration:none;
+          text-transform:uppercase;
+          outline: none;
+        }
+         #tabmenu li a.last {
+          border-right: 1px solid #000;
+        }
+        #tabmenu li.active{
+          border-bottom: none;
+          font-weight: bold;
+        }
+        .tabcontent{
+          border-top: 1px solid #000;
+          padding-top: 10px;
+        }
     }
     .interesar {
       border-top: 5px solid #231F20;

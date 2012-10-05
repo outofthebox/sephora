@@ -34,10 +34,28 @@
             %li{:id => "prodclick"}
               = image_tag presentacion.foto.url(:chico), :"data-normal" => presentacion.foto.url(:normal), :"data-full" => presentacion.foto.url(:grande), :"data-nombre" => presentacion.nombre, :"data-precio" => number_to_currency(presentacion.precio, :precision => 0)
       .descripcion
-        %h3 DESCRIPCIÓN
-        %span.borde
-        %p
-          =@producto.descripcion.gsub(/(\r|\n)+/, '<br />').html_safe
+        #tabmenu
+          %ul
+            %li
+              %a{:href => "#tab1"} DESCRIPCION
+            - unless @producto.ingredientes.size == 3
+              %li
+                %a{:href => "#tab2"} INGREDIENTES
+            - unless @producto.usos.size == 3
+              %li
+                %a{:href => "#tab3"} USOS
+          .tabcontent
+            #tab1.tabdesc
+              %p
+                =@producto.descripcion.gsub(/(\r|\n)+/, '<br />').html_safe
+            - unless @producto.ingredientes.size == 3
+              #tab2.tabdesc
+                %p
+                  =@producto.ingredientes.gsub(/(\r|\n)+/, '<br />').html_safe
+            - unless @producto.ingredientes.size == 3
+              #tab3.tabdesc
+                %p
+                  =@producto.usos.gsub(/(\r|\n)+/, '<br />').html_safe
       - if @productos_relacionados and @productos_relacionados.any?
         .interesar
           %h3 te puede interesar
