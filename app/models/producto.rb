@@ -21,7 +21,7 @@ class Producto < ActiveRecord::Base
       self.slug = self.nombre.parameterize
       existe = Producto.where :slug => self.slug
       if existe
-        self.slug = "#{self.nombre}-#{self.sku}".parameterize
+        self.slug = "#{self.nombre}-#{self.sku}-#{self.upc}".parameterize
       end
     end
   end

@@ -86,6 +86,7 @@ class UtilidadesController < ApplicationController
       marcas = Marca.all.map{|m| { :id => m.id, :marca => m.marca } }
       categorias = Categoria.all.map{|c| { :id => c.id, :categoria => c.nombre } }
       # usos = Uso.all.map{|u| { :id => u.id, :uso => u.nombre } }
+      upcs = Producto.all.map{|p| p.upc }.compact
       CSV.foreach(csv) do |row|
         sku = row[1]
         upc = row[2]
@@ -100,7 +101,9 @@ class UtilidadesController < ApplicationController
         descripcion = row[12]
         usos = row[13]
         ingredientes = row[14]
-        datos << { :sku => sku, :upc => upc, :nombre => nombre, :nombre_real => nombre_real, :precio => precio, :descripcion => descripcion, :usos => usos, :ingredientes => ingredientes, :marca_id => marca_id, :categoria_id => categoria_id } if sku.length > 3
+        unless upc.in?(upcs)
+          datos << { :sku => sku, :upc => upc, :nombre => nombre, :nombre_real => nombre_real, :precio => precio, :descripcion => descripcion, :usos => usos, :ingredientes => ingredientes, :marca_id => marca_id, :categoria_id => categoria_id } if sku.length > 3
+        end
       end
 
       datos = datos.drop 1
@@ -114,10 +117,27 @@ class UtilidadesController < ApplicationController
     end
   end
 
+  def imgmover
+    require 'csv'
+    csv = "/home/sputnik3/Desktop/sephora.csv"
+    skus = []
+    CSV.foreach(csv) do |row|
+      skus << row[1]
+    end
+
+    skus = skus.compact.uniq
+    Dir.glob('/home/sputnik3/Desktop/sephora_img/**/*.jpg').each do |path|
+      img_sku = File.basename(path, ".jpg")[/[a-z]?([0-9]+)/i].gsub(/([^0-9])/, '')
+      if img_sku.in? skus
+        FileUtils.cp path, "/home/sputnik3/Desktop/sephora_filtrados/#{img_sku}.jpg"
+      end
+    end
+  end
+
   def importarimg
     # the logos are in a folder with path logos_dir
     start = 0
-    Dir.glob('/home/oob4/Escritorio/sephora_filtrados/**/*.jpg').each do |logo_path|
+    Dir.glob('/home/sputnik3/Desktop/sephora_filtrados/*.jpg').each do |logo_path|
       if File.basename(logo_path)[0]!= '.' and !File.directory? logo_path
 
         sku = File.basename(logo_path, '.*') #filename without extension
@@ -126,8 +146,8 @@ class UtilidadesController < ApplicationController
 
         File.open(logo_path) do |f|
           producto.foto = f # just assign the logo attribute to a file
-          producto.save
-          FileUtils.mv(logo_path, "/home/oob4/Escritorio/sephora_filtrados_OK/#{sku}.jpg")
+          producto.save(:validate => false)
+          FileUtils.mv(logo_path, "/home/sputnik3/Desktop/sephora_filtrados_OK/#{sku}.jpg")
           return render :text => "Working... HALT BRO! <script>document.location.reload(true)</script>", :layout => false if (start+=1) > 10
         end #file gets closed automatically here
       end

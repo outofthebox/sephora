@@ -26,6 +26,7 @@ Sephora::Application.routes.draw do
 
   get   'importar(/:quoi)', :to => 'utilidades#importar'
   get   'importarimg', :to => 'utilidades#importarimg'
+  get   'imgmover', :to => 'utilidades#imgmover'
   get   'parsearparents', :to => 'utilidades#parsearparents'
   get   'actprecios', :to => 'utilidades#actprecios'
   post  'actprecios', :to => 'utilidades#actprecios'
