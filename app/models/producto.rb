@@ -9,7 +9,8 @@ class Producto < ActiveRecord::Base
   attr_accessor :foto
 
   has_attached_file :foto, {
-    :styles => { :grande => "450x450>", :normal => "262x262>", :mediano => "196x196>", :chico => "135x135>" }
+    :styles => { :grande => "450x450>", :normal => "262x262>", :mediano => "196x196>", :chico => "135x135>" },
+    :default_url => "//s3.amazonaws.com/sephoramexico/estatico/productos/default_:style_producto.png"
   }.merge(PAPERCLIP_STORAGE_OPTIONS)
 
   # validates_attachment_presence :foto, message: 'Selecciona una foto'

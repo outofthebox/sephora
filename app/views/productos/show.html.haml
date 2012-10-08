@@ -38,24 +38,24 @@
           %ul
             %li
               %a{:href => "#tab1"} DESCRIPCIÓN
-            - unless @producto.ingredientes.size == 3 || @producto.ingredientes.empty?
+            - unless @producto.ingredientes.nil? || @producto.ingredientes.size < 4
               %li
                 %a{:href => "#tab2"} INGREDIENTES
-            - unless @producto.usos.size == 3 || @producto.usos.empty?
+            - unless @producto.usos.nil?
               %li
                 %a{:href => "#tab3"} USOS
           .tabcontent
             #tab1.tabdesc
               %p
-                =@producto.descripcion.gsub(/(\r|\n)+/, '<br />').html_safe
-            - unless @producto.ingredientes.size == 3 || @producto.ingredientes.empty?
+                =@producto.descripcion
+            - unless @producto.ingredientes.nil? || @producto.ingredientes.size < 4
               #tab2.tabdesc
                 %p
-                  =@producto.ingredientes.gsub(/(\r|\n)+/, '<br />').html_safe
-            - unless @producto.ingredientes.size == 3 || @producto.usos.empty?
+                  =simple_format @producto.ingredientes
+            - unless @producto.usos.nil? || @producto.usos.size < 4
               #tab3.tabdesc
                 %p
-                  =@producto.usos.gsub(/(\r|\n)+/, '<br />').html_safe
+                  =simple_format @producto.usos
       - if @productos_relacionados and @productos_relacionados.any?
         .interesar
           %h3 te puede interesar
