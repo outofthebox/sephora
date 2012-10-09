@@ -29,8 +29,8 @@
           %h3 DETRÁS DE LA MARCA
           %p
             =@marca.behindthebrand.gsub(/(\r|\n)+/, '<br />').html_safe
-      %h3 EXPLORA LA MARCA
       - unless @marca.marca_producto.count == 0
+        %h3 EXPLORA LA MARCA
         .catalogo
           %h4.title
             BEST SELLERS
