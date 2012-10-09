@@ -38,7 +38,7 @@
     .tcell.t33
       = f.label :categoria_id, "Categoría"
       %br
-      =f.select :categoria_id, Categoria.all.map{|m|[m.nombre, m.id]}
+      = f.select :categoria_id, ([["Raíz", nil]] + nested_set_options(Categoria, @categoria) {|i, level| "#{'&nbsp;' * (level.to_i+1)}".html_safe + " #{i.nombre}" })
     .tcell.t33
       = f.label :uso_id, "Uso"
       %br
