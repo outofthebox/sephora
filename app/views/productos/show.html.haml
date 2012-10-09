@@ -41,7 +41,7 @@
             - unless @producto.ingredientes.nil? || @producto.ingredientes.size < 4
               %li
                 %a{:href => "#tab2"} INGREDIENTES
-            - unless @producto.usos.nil?
+            - unless @producto.usos.nil? || @producto.usos.size < 4
               %li
                 %a{:href => "#tab3"} USOS
           .tabcontent
