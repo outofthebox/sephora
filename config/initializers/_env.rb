@@ -9,4 +9,7 @@ unless Rails.env.production?
 
   ENV['S3_KEY'] = ''
   ENV['S3_SECRET'] = ''
+
+  # set to anything to enable errors
+  ENV['DEBUG'] = ''
 end
