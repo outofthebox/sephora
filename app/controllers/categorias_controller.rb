@@ -12,7 +12,7 @@ class CategoriasController < ApplicationController
     catmap = [@categoria.id] + @subcategorias.map{|s| s.id }
     @marcas_para_categoria = Categoria.encontrar_marcas(catmap)
     if params[:marca].blank?
-      @productos = Producto.joins(:marca).publicados.padres.where(:categoria_id => catmap).order(("marcas.marca ASC"  if params[:ordenar] == "marca")).order(preciorder(params[:precio])).page(params[:page]).per(perparams(params[:ver]))
+      @productos = Producto.joins(:marca).publicados.padres.where(:categoria_id => catmap).order(("marcas.marca ASC"  if params[:ordenar] == "marca")).order(preciorder(params[:precio])).order('foto_file_name ASC').page(params[:page]).per(perparams(params[:ver]))
       @productoscount = Producto.publicados.padres.where(:categoria_id => catmap).order(preciorder(params[:precio])).count
     else
       @marca = Marca.find(@marcas_seleccionadas)
