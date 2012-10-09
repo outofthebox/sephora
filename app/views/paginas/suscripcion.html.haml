@@ -1,7 +1,7 @@
 - if flash[:suscripcion_exito]
   %h2 Gracias por contactarnos, te enviaremos un e-mail pronto.
 - else
-  = form_for @suscripcion, :url => "/suscripcion#suscripcion" do |f|
+  = form_for @suscripcion, :url => suscripcion_post_path do |f|
     %p
       = form_error @suscripcion, :email
       = f.email_field :email, :placeholder => "E-Mail", :class => "texto"

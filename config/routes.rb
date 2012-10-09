@@ -52,7 +52,7 @@ Sephora::Application.routes.draw do
   get   'obsequios', :to => 'paginas#obsequios', :as => 'obsequios'
 
   get   'suscripcion', :to => 'paginas#suscripcion', :as => 'suscripcion'
-  post  'suscripcion', :to => 'paginas#suscripcion_post'
+  post  'suscripcion', :to => 'paginas#suscripcion_post', :as => 'suscripcion_post'
 
   get   'categorias/:id/desvincular/:categoria_producto/:hash', :to => 'categorias#desvincular', :as => 'categoria_desvincular_producto'
   get   'categorias/:id/vincular/:v_id/editar', :to => 'categorias#producto_editar', :as => 'categoria_editar_producto'
