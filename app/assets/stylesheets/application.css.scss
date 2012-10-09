@@ -113,22 +113,17 @@ ul.breadcrumbs{
       #search {
         position: absolute;
         margin: 0 10px 0;
+        width: 170px;
           input[type=text] {
-            margin:0;
-            padding: 0;
             height: 22px;
             border: 1px solid black;
             border-radius: 0;
-            font-size: 0.8em;
+            width: 175px;
           }
           .submit{
-            border:1px solid #000000!important;
             background: #000 image-url('buscar.png') no-repeat -3px 0;
             width: 26px;
             height: 22px;
-            margin: 0;
-            margin-left: -5px;
-            padding: 0;
             border-radius: 0;
             border: none;
           }
