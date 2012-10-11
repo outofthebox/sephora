@@ -33,7 +33,7 @@ class Producto < ActiveRecord::Base
   end
 
   def nombre
-    unless self.nombre_real.nil? then self.nombre_real else super end
+    unless self.nombre_real.nil? then self.nombre_real.html_safe else super end
   end
 
   def self.busqueda q
