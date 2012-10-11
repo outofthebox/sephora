@@ -112,13 +112,15 @@ $('#producto ul.home li:first').show()
     $('#producto ul.home li:first').fadeIn()
     hotnowslider()
 )()
-  
+last = ''
 $("#prodclick img").first().addClass("outline")
 $("#prodclick img").live "click", ->
   $to_replace = $("#prod, .pro img")
   $("#prodclick img").removeClass("outline")
-  $to_replace.attr("src", $(this).data("normal")).addClass('imgloading').load ->
-    $(this).removeClass 'imgloading'
+  unless last == $(this).data("normal")
+    $to_replace.attr("src", $(this).data("normal")).addClass('imgloading').load ->
+      $(this).removeClass 'imgloading'
+  last = $(this).data("normal")
   $("#prodlink").attr("href", $(this).data("full"))
   $("span.precio").text($(this).data("precio"))
   $(".producto").text($(this).data("nombre"))
@@ -126,8 +128,10 @@ $("#prodclick img").live "click", ->
 
 $("#proclick img").live "click", ->
   $("#proclick img").removeClass("outline")
-  $(".pro img").attr("src", $(this).data("full")).addClass('imgloading').load ->
-    $(this).removeClass 'imgloading'
+  unless last == $(this).data("normal")
+    $(".pro img").attr("src", $(this).data("full")).addClass('imgloading').load ->
+      $(this).removeClass 'imgloading'
+  last = $(this).data("normal")
   $("span.precio").text($(this).data("precio"))
   $(".producto").text($(this).data("nombre"))
   $(this).addClass("outline")
