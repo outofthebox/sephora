@@ -47,7 +47,7 @@
           .tabcontent
             #tab1.tabdesc
               %p
-                =@producto.descripcion
+                =simple_format @producto.descripcion
             - unless @producto.ingredientes.nil? || @producto.ingredientes.size < 4
               #tab2.tabdesc
                 %p
