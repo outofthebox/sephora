@@ -46,7 +46,7 @@ class Producto < ActiveRecord::Base
         query << "to_tsvector(productos.slug) @@ to_tsquery('#{sprintf('%s', q)}')"
         query << "to_tsvector(marcas.marca) @@ to_tsquery('#{sprintf('%s', q)}')"
       end
-      productos = productos.select("productos.*, marcas.marca").joins(:marca).where query.join(' OR ')
+      productos = productos.select("productos.*, marcas.marca").joins(:marca).order('nombre ASC').where query.join(' OR ')
     end
 
     productos
