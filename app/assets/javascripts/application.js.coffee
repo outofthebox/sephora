@@ -112,7 +112,7 @@ $('#producto ul.home li:first').show()
     $('#producto ul.home li:first').fadeIn()
     hotnowslider()
 )()
-last = ''
+last = $("#prodclick img").data("normal")
 $("#prodclick img").first().addClass("outline")
 $("#prodclick img").live "click", ->
   $to_replace = $("#prod, .pro img")
