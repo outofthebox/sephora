@@ -7,15 +7,22 @@ class UtilidadesController < ApplicationController
     require 'csv'
     skus = []
 
-    [1,2,3,4,5,6,7,8].each do |n|
-      data = CSV.parse(File.open(csv.sub("#", n.to_s)), :headers => true, :return_headers => true )
-      data.by_col!
-      data.each do |col|
-        skus << col.at(1).compact.reject{|r| !(r.to_i > 0) }
-      end
-    end
+    # Funcion para varios archivos CSV
+    # [1,2,3,4,5,6,7,8].each do |n|
+    #   data = CSV.parse(File.open(csv.sub("#", n.to_s)), :headers => true, :return_headers => true )
+    #   data.by_col!
+    #   data.each do |col|
+    #     skus << col.at(1).compact.reject{|r| !(r.to_i > 0) }
+    #   end
+    # end
 
-    raise skus.inspect
+    # Funcion para un solo CSV
+    data = CSV.parse(File.open('/home/oob4/Escritorio/skus.csv'), :headers => true, :return_headers => true )
+    data.by_col!
+    data.each do |col|
+      skus << col.at(1).compact.reject{|r| !(r.to_i > 0) }
+    end
+    # raise skus.inspect
 
     s = []
     skus.each do |sku|
