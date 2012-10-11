@@ -157,7 +157,7 @@ getUrlVars = ->
   vars
 
 $("#verpor").on "change", ->
-  # window.top.location.href = @options[@selectedIndex].value  unless @options[@selectedIndex].value is ""
+  window.top.location.href = @options[@selectedIndex].value  unless @options[@selectedIndex].value is ""
 
 $("#acomodar").on "change", ->
   window.top.location.href = @options[@selectedIndex].value  unless @options[@selectedIndex].value is ""
