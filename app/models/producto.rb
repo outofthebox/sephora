@@ -40,6 +40,8 @@ class Producto < ActiveRecord::Base
     productos = self
     if sku = q.match(/sku:([\w]*)/)
       productos = productos.where :sku => sku[1]
+    elsif upc = q.match(/upc:([\w]*)/)
+      productos = productos.where :upc => upc[1]
     else
       query = []
       q.parameterize.split("-").each do |q|
