@@ -119,17 +119,17 @@ class UtilidadesController < ApplicationController
 
   def imgmover
     require 'csv'
-    csv = "/home/sputnik3/Desktop/sephora.csv"
+    csv = "/home/oob4/Escritorio/lol.csv"
     skus = []
     CSV.foreach(csv) do |row|
-      skus << row[1]
+      skus << row[0]
     end
-
-    skus = skus.compact.uniq
-    Dir.glob('/home/sputnik3/Desktop/sephora_img/**/*.jpg').each do |path|
+    skus2 = Producto.where(:foto_file_name => nil).map{|r| r.sku}
+    skus = (skus + skus2).compact.uniq
+    Dir.glob('/media/SIN TITULO/SEPHORA/product images/**/*.jpg').each do |path|
       img_sku = File.basename(path, ".jpg")[/[a-z]?([0-9]+)/i].gsub(/([^0-9])/, '')
       if img_sku.in? skus
-        FileUtils.cp path, "/home/sputnik3/Desktop/sephora_filtrados/#{img_sku}.jpg"
+        FileUtils.cp path, "/home/oob4/Escritorio/sephora_filtrados/#{img_sku}.jpg"
       end
     end
   end
@@ -137,7 +137,7 @@ class UtilidadesController < ApplicationController
   def importarimg
     # the logos are in a folder with path logos_dir
     start = 0
-    Dir.glob('/home/sputnik3/Desktop/sephora_filtrados/*.jpg').each do |logo_path|
+    Dir.glob('/home/oob4/Escritorio/sephora_filtrados/*.jpg').each do |logo_path|
       if File.basename(logo_path)[0]!= '.' and !File.directory? logo_path
 
         sku = File.basename(logo_path, '.*') #filename without extension
@@ -147,7 +147,7 @@ class UtilidadesController < ApplicationController
         File.open(logo_path) do |f|
           producto.foto = f # just assign the logo attribute to a file
           producto.save(:validate => false)
-          FileUtils.mv(logo_path, "/home/sputnik3/Desktop/sephora_filtrados_OK/#{sku}.jpg")
+          FileUtils.mv(logo_path, "/home/oob4/Escritorio/sephora_filtrados_OK/#{sku}.jpg")
           return render :text => "Working... HALT BRO! <script>document.location.reload(true)</script>", :layout => false if (start+=1) > 10
         end #file gets closed automatically here
       end
