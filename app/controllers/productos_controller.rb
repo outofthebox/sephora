@@ -5,7 +5,9 @@ class ProductosController < ApplicationController
   end
 
   def busqueda
-    @productos = Producto.includes(:marca).padres.publicados.busqueda params[:q] || params[:buscar][:q]
+    @productos = Producto.includes(:marca).padres.publicados.order(("marcas.marca ASC"  if params[:ordenar] == "marca")).order(preciorder(params[:precio])).busqueda(params[:q] || params[:buscar][:q]).page(params[:page]).per(perparams(params[:ver]))
+    @productostotal = Producto.includes(:marca).padres.publicados.busqueda(params[:q] || params[:buscar][:q])
+    @productoscount = Producto.includes(:marca).padres.publicados.busqueda(params[:q] || params[:buscar][:q]).count
     respond_to do |format|
       format.js if request.xhr?
       format.html
