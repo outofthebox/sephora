@@ -222,10 +222,13 @@ class UtilidadesController < ApplicationController
   def update_upc
     require 'csv'
     data = []
+    existing_upcs = Producto.all.map{|p| p.upc }
+
     CSV.foreach("/home/sputnik3/Desktop/upc-sku.csv") do |row|
       sku = row.at(0)
       upc = row.at(1)
-      data << { :sku => sku, :upc => upc}
+      data << { :sku => sku, :upc => upc} unless upc.in?(existing_upcs)
+      existing_upcs << upc
     end
 
     productos = Producto.where(:sku => data.map{|d| d[:sku] })
@@ -234,8 +237,6 @@ class UtilidadesController < ApplicationController
       p[:upc] = data.reject{|d| p.sku != d[:sku] }.first[:upc]
       { :id => p.id, :upc => p[:upc] }
     end
-
-    people = { 1 => { "first_name" => "David" }, 2 => { "first_name" => "Jeremy" } }
 
     Producto.update(productos.map{|p| p[:id] }, productos.map{|p| {"upc" => p[:upc]}})
 
