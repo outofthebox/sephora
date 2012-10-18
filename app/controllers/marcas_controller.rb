@@ -1,6 +1,7 @@
 class MarcasController < ApplicationController
   def index
     @marcas = Marca.all
+    authorize! :manage, @marca
   end
 
   def new

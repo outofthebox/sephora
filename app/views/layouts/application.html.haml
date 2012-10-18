@@ -14,8 +14,6 @@
   = csrf_meta_tags
 %body
   #head-sup
-    #wrap.feedback
-      =link_to "Escribe tu Feedback", feedbacks_path
   #wrap
     %header#encabezado
       #contenme
@@ -29,7 +27,6 @@
                   = f.submit '', :class => 'submit'
         %a{ :href => "/" }
           #logo
-          =image_tag 'home/banderin.png', :class => 'banderin'
       %nav#menu
         %ul.nobullet.nolist
           %li

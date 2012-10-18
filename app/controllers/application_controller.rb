@@ -8,17 +8,10 @@ class ApplicationController < ActionController::Base
 
   before_filter do
     @marcas_all = Marca.order(:marca)
-    unless current_usuario
-      redirect_to beta_path unless self.controller_name.in?(['sessions', 'paginas'])
-    end
   end
 
   def layout_by_resource
-    if devise_controller? && resource_name == :usuario && action_name == 'new'
-      'beta'
-    else
-      "application"
-    end
+    "application"
   end
 
   def current_user

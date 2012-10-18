@@ -28,10 +28,12 @@ class CategoriasController < ApplicationController
 
   def new
     @categoria = Categoria.new
+    authorize! :manage, @categoria
   end
 
   def create
     @categoria = Categoria.new params[:categoria]
+    authorize! :manage, @categoria
     if @categoria.valid?
       @categoria.save
       redirect_to edit_categoria_path(@categoria)

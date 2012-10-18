@@ -2,7 +2,6 @@ Sephora::Application.routes.draw do
   devise_for :usuarios
 
   root :to => 'paginas#home'
-  get '/beta', :to => "paginas#beta", :as => 'beta'
   
   get   ':seccion', :to => 'secciones#ver', :constraints => { :seccion => /hotnow|bestsellers|bbcreams|tintedmoisturizers/ }
   get   'soluciones(/:id)', :to => 'secciones#soluciones', :as => 'soluciones'

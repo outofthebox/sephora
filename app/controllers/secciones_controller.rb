@@ -1,6 +1,7 @@
 class SeccionesController < ApplicationController
   def index
     @secciones = Seccion.arrange
+    authorize! :manage, @secciones
   end
 
   # hot now, favorites, best sellers

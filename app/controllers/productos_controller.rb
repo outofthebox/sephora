@@ -2,6 +2,7 @@ class ProductosController < ApplicationController
 
   def index
     @productos = Producto.includes(:marca).padres.publicados.order("updated_at DESC").page(params[:page]).per(50)
+    authorize! :manage, @productos
   end
 
   def busqueda

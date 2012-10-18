@@ -1,12 +1,4 @@
 class PaginasController < ApplicationController
-  before_filter :except => :beta do
-    redirect_to beta_path unless current_usuario
-  end
-
-  def beta
-    render :layout => 'beta'
-  end
-
   def home
     @bestsellers = Seccion.seccion_actual(Seccion.by_slug(:bestsellers))
     @lonuevo = Seccion.seccion_actual(Seccion.by_slug(:lonuevo))
