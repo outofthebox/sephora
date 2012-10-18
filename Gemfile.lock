@@ -176,6 +176,7 @@ GEM
     uuidtools (2.1.2)
     warden (1.1.1)
       rack (>= 1.0)
+    watu_table_builder (0.3.0)
 
 PLATFORMS
   ruby
@@ -194,6 +195,7 @@ DEPENDENCIES
   hominid
   jquery-rails
   jquery-ui-rails
+  json
   kaminari
   modernizr-rails
   nested_set
@@ -205,3 +207,4 @@ DEPENDENCIES
   sendgrid
   therubyracer
   uglifier (>= 1.0.3)
+  watu_table_builder

@@ -55,3 +55,259 @@ section#tu-lista{
     padding: 0;
   }
 }
+section#aniversario{
+  width:810px;
+  margin:0 auto;
+
+  .calendario-contenido{
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    width: 200px;
+    text-align: center;
+    table{
+      width: 100%;
+      font-size: 0.8em;
+    }
+    a{
+      // display: block !Important;
+      position: static !important;
+    }
+  }
+  
+  .tiendas-contenido{
+    position: absolute;
+    top: 110px;
+    left: -100px;
+    width: 290px;
+    ol{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .tiendas-lista{
+    position: relative;
+    z-index: 10;
+    text-align: right;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: -150px;
+    list-style: none;
+  }
+
+  header{
+    z-index: 0;
+    position:relative;
+    // border-bottom:5px solid #000000;
+    height:550px;
+    .pastel{
+      background: image-url('aniversario/pastel.png');
+      width:389px;
+      height:497px;
+      position:absolute;
+      z-index: 9999;
+    }
+    .calendario{
+      z-index: -1;
+      width:341px;
+      position:absolute;
+      right:0;
+      height:500px;
+      .intro{
+        position:absolute;
+        top:0;
+        right:0;
+        width:452px; 
+        height:92px;      
+        text-align:right;       
+        
+      }
+      .calendario-content{
+        position:absolute;
+        top:120px;
+        height:298px;
+        width:341px;
+        h1{
+          text-align:right;
+          padding-right:15px;
+          font-weight: bold;
+        }
+        p{
+          text-align:right;
+          border-bottom:2px solid #000000;
+          padding-bottom: 10px;
+        }
+      }
+    }
+    .angelopolis{
+      right:0;
+      top:400px;
+      position:absolute;
+      width:562px;
+      height:30px;
+      background-color:#000000;
+      color:#ffffff;
+      h3{
+        font-size:14px;
+        text-align:right;
+        padding-top:7px;
+        span{
+          padding-left:15px;
+          padding-right:15px;
+          font-size:20px;
+        }
+      }
+    }
+    ul{
+      position:absolute;
+      right:0;
+      top:430px;
+      text-align:right;
+      list-style:none;
+    }
+  }
+  .thrills{
+    position:relative;
+    border-bottom:2px solid #959595;
+    hr{
+      margin-bottom: -5px;
+      border-bottom:5px solid #000;
+    }
+    .modelo{
+      margin-top:-25px;
+    }
+    .beauty{
+      margin-left:-30px;
+    }
+    .regalos{
+      margin-top:-40px;
+      margin-left:55px;
+      z-index: 9999;
+    }
+    .gana{
+      width:460px;
+      position:absolute;
+      right:110px;
+      top:160px;
+      p{
+        line-height:15px;
+        text-align:right;
+        span.bold{
+          font-weight: bold;
+        }
+        span.red{
+          color:#dd2525;
+          font-weight: bold;
+        }
+      }
+      p.tall{
+        white-space: nowrap;
+        font-size:27px;
+      }
+      p.small{
+        line-height:10px;
+      }
+    }
+    .boton-participa{
+      position:absolute;
+      right:150px;
+      top:300px;
+    }
+    .promocion{
+      width:570px;
+      position:absolute;
+      right:0;
+      bottom:10px;
+      p{
+        text-align:right;
+        line-height:10px;
+        font-size:10px;
+      }
+    }
+  }
+  .regalos-content{
+    width:810px;
+    margin:0 auto;
+    margin-top:10px;
+    ul, li {
+      margin: 0;
+      padding: 0;
+    }
+    ul {
+      width: 100%;
+      li {
+        padding: 8px;
+        display: inline-block;
+        cursor: pointer;
+      }
+    }
+  }
+}
+section#fbapp{
+  width:810px;
+  margin:0 auto;
+  .estatico{
+  }
+}
+#modal {
+  display: none;
+  background-color: #fff;
+  width: 720px;
+  height: 540px;
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  margin-left: -360px;
+  border: 1px solid #d2d2d2;
+  z-index: 9999999;
+  outline: rgba(0,0,0,0.5) solid 5000px;
+  .cerrar {
+    border: 1px solid black;
+    color: black;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    font-size: 0.8em;
+    cursor: pointer;
+    text-align: center;
+    background: white;
+  }
+  .cerrar2 {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 40px;
+    height: 30px;
+    font-size: 0.8em;
+    cursor: pointer;
+    text-align: center;
+    background: transparent;
+  }
+  p, img {
+    margin: 0;
+    padding: 0;
+  }
+  .pro img {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+  }
+  .social {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    background: white;
+    padding: 10px;
+  }
+}
+#terminos {
+  width: 810px;
+  margin: 0 auto;
+  a {
+    color: red;
+  }
+}

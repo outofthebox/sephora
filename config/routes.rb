@@ -80,6 +80,23 @@ Sephora::Application.routes.draw do
     resources :secciones
   end
 
+  #ANIVERSARIO
+  get '365'    => 'paginas#aniversario', :as => :aniversario
+  get '365dias'    => 'paginas#aniversario', :as => :aniversario
+  get '365dias/tienda/:tienda'    => 'paginas#aniversario', :as => :aniversario_tienda
+  get '365dias/tienda/:tienda/fecha/:fecha'    => 'paginas#aniversario', :as => :aniversario_tienda_fecha
+
+  get '365dias/eventos'    => 'paginas#aniversario_eventos', :as => :aniversario_eventos
+
+  get '365dias/evento/nuevo'    => 'paginas#aniversario_evento_nuevo', :as => :aniversario_evento_nuevo
+  post '365dias/evento/nuevo'    => 'paginas#aniversario_evento_nuevo_post', :as => :aniversario_evento_nuevo
+
+  get '365dias/evento/:id/editar'    => 'paginas#aniversario_evento_editar', :as => :aniversario_evento_editar
+  put '365dias/evento/:id/editar'    => 'paginas#aniversario_evento_editar_post', :as => :aniversario_evento_editar
+
+  get '365dias/terminos-y-condiciones'  => 'paginas#aniversario_terminos', :as => 'aniversario_terminos'
+
+  get 'facebook' => 'paginas#fbapp' 
   # última línea, hace match con el resto de las rutas y muestra 404
   match  '*a', :to => 'paginas#error_404'
 end

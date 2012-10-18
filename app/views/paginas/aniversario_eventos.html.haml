@@ -1,0 +1,12 @@
+%h3 Eventos
+- if @eventos and @eventos.any?
+  %ul
+    - @eventos.each do |evento|
+      %li
+        %big
+          %strong
+            = evento.nombre
+        %br
+        %small
+          (<small><code>id: #{evento.id}</code></small> @ #{evento.fecha.strftime('%F')}, tienda #{evento.tienda} | <a href="/365dias/evento/#{evento.id}/editar">editar</a>)
+

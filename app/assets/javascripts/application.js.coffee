@@ -1,6 +1,31 @@
 # = require jquery
 # = require jquery_ujs
 # = require jquery.ui.all
+# ANIVERSARIO
+$("#eventolink, #premioslink").live "click", (e) ->
+  e.preventDefault()
+  if $(this).attr('id') == 'premioslink'
+    $(".social, .cerrar").hide()
+    $(".cerrar2").show()
+  else
+    $(".social, .cerrar").show()
+    $(".cerrar2").hide()
+  href = $(this).attr('href')
+  $("#modalcontent .pro img").attr('src', href)
+  $("#modal").fadeIn()
+$(".cerrar, .cerrar2").live "click", ->
+  $("#modal").fadeOut()
+
+
+$(".regalos-content ul li img").each ->
+  esto = $(this)
+  fuente = esto.attr("src")
+  fuentehover = esto.closest('a').data 'bghover'
+  esto.hover (->
+    $(this).attr "src", fuentehover
+  ), ->
+    $(this).attr "src", fuente
+
 $(".tabdesc").hide()
 $(".tabdesc:first").show()
 $("#tabmenu ul li:first").addClass 'active'
@@ -179,4 +204,3 @@ $(".navegaciones ul.aco").on "mouseleave", ->
 
 $("#trigger").html($(".navegaciones ul.verpor li a[data-set="+ver+"]").data("set") + " por página <span>▼</span>") unless $(".navegaciones ul.verpor li a[data-set="+ver+"]").data("set").nil?
 $("#trigger2").html("precio " +$(".navegaciones ul.aco li a[data-set="+precio+"]").data("set") + "<span>▼</span>") unless $(".navegaciones ul.aco li a[data-set="+precio+"]").data("set").nil?
-

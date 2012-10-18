@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120928214114) do
+ActiveRecord::Schema.define(:version => 20121018220737) do
 
   create_table "categoria_productos", :force => true do |t|
     t.integer  "producto_id"
@@ -40,6 +40,13 @@ ActiveRecord::Schema.define(:version => 20120928214114) do
     t.integer  "cover_file_size"
     t.datetime "cover_updated_at"
     t.text     "urlslug"
+  end
+
+  create_table "eventos", :force => true do |t|
+    t.integer  "tienda"
+    t.string   "nombre"
+    t.text     "descripcion"
+    t.datetime "fecha"
   end
 
   create_table "feedbacks", :force => true do |t|

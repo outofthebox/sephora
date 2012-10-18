@@ -51,4 +51,55 @@ class PaginasController < ApplicationController
   def error_404
     render :file => "error/404", :status => 404
   end
+
+  #ANIVERSARIO
+  
+  def aniversario
+    @eventos = Evento.filtro(params[:tienda])
+    @eventos_fecha = Evento.filtro(params[:tienda], params[:fecha]) unless params[:fecha].nil?
+    render :layout => 'aniversario'
+  end
+
+  def fbapp
+    render :layout => 'aniversario'
+  end
+  
+  def aniversario_eventos
+    @eventos = Evento.all
+  end
+
+  def aniversario_evento_nuevo
+    @evento = Evento.new
+    @evento.fecha = Date.today
+  end
+
+  def aniversario_evento_nuevo_post
+    @evento = Evento.create params[:evento]
+    if @evento.valid?
+      @evento.save
+      redirect_to aniversario_evento_nuevo_path
+    else
+      render :aniversario_evento_nuevo
+    end
+  end
+
+  def aniversario_evento_editar
+    @evento = Evento.find params[:id]
+    @evento.fecha = @evento.fecha.strftime('%F')
+  end
+
+  def aniversario_evento_editar_post
+    @evento = Evento.find params[:id]
+    @evento.update_attributes params[:evento]
+    if @evento.valid?
+      @evento.save
+      redirect_to aniversario_evento_nuevo_path
+    else
+      render :aniversario_evento_editar
+    end
+  end
+
+  def aniversario_terminos
+    render :layout => 'aniversario'
+  end
 end

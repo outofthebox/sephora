@@ -14,6 +14,8 @@ gem 'nested_set'
 gem 'devise'
 gem 'cancan'
 gem 'redcarpet', '1.17.2'
+gem 'json'
+gem 'watu_table_builder', :require => 'table_builder'
 
 group :assets do
   gem 'jquery-rails'

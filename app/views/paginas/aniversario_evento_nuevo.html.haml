@@ -1,0 +1,15 @@
+= form_for @evento, :url => aniversario_evento_nuevo_path do |f|
+  %p
+    = f.label :nombre, 'Nombre'
+    = f.text_field :nombre
+  %p
+    = f.label :tienda, 'Tienda (con número)'
+    = f.text_field :tienda
+  %p
+    = f.label :descripcion, 'Descripción'
+    = f.text_area :descripcion
+  %p
+    = f.label :fecha, 'Fecha'
+    = f.text_field :fecha
+  %p
+    = f.submit "Guardar"
