@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sephora México - Bobbi Brown</title>
+    <meta property="og:title" content="SEPHORA MÉXICO" />
+    <meta property="og:description" content="¡Acompáñame a conocer lo nuevo de Bobbi Brown en Sephora Antara!" />
+    <meta property="og:image" content="http://sephora.com.mx/public/mailings/bobbi/icon.jpg" />
+  </head>
+  <body>
+    <div style="overflow:hidden;width:600px;height:1010px;margin:0 auto;">
+      <img src="02_s.jpg" alt="" usemap="#imgmap2012413142818">
+    </div>
+    <map id="imgmap2012413142818" name="imgmap2012413142818">
+      <area shape="rect" title="Compartir en Facebook" coords="78,847,141,873" href="#share" id="share"
+        data-name="Sephora México - Bobbi Brown"
+        data-url="http://sephora.com.mx/public/mailings/bobbi/"
+        data-image="http://sephora.com.mx/public/mailings/bobbi/icon.jpg"
+        data-title="SEPHORA MÉXICO"
+        data-description="¡Acompáñame a conocer lo nuevo de Bobbi Brown en Sephora Antara!"
+        data-action="publish"
+      />
+      <area shape="rect" coords="145,847,209,872" href="https://twitter.com/share?url=http%3A%2F%2Fsephora.com.mx%2Fpublic%2Fmailings%2Fbobbi&amp;via=SephoraMX&amp;text=¡Acompáñame a conocer lo nuevo de Bobbi Brown en Sephora Antara!" target="_blank" />
+      <area shape="rect" coords="467,911,497,942" href="http://facebook.com/SephoraMX" target="_blank" />
+      <area shape="rect" coords="507,911,538,942" href="http://twitter.com/SephoraMX" target="_blank" />
+      <area shape="rect" coords="549,911,581,943" href="http://youtube.com/SephoraMex" target="_blank" />
+      <area shape="rect" coords="26,969,136,991" href="http://sephora.com.mx/" target="_blank" />
+    </map>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script>
+
+    $('area[data-action=publish]').click(function() {
+
+      var item = $(this);
+
+      FB.ui({
+        method: 'feed',
+        name: item.data('name'),
+        link: item.data('url'),
+        picture: item.data('image'),
+        caption: item.data('title'),
+        description: item.data('description')
+      }, $.noop);
+
+      return false;
+    });
+
+    $('body').append('<div id="fb-root"></div>');
+
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=192434127491407";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    </script>
+  </body>
+</html>

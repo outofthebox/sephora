@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sephora Highlights - Abril 2012</title>
+    <style>#share{background:url(share.jpg)no-repeat;text-indent:-9999px;display:block;width:92px;height:22px;}</style>
+    <meta property="og:title" content="SEPHORA HIGHLIGHTS" />
+    <meta property="og:description" content="Conoce lo más fresh de Sephora México exclusivamente para ti." />
+    <meta property="og:image" content="http://sephora.com.mx/sh/abr2k12/sephora_highlights.jpg" />
+  </head>
+  <body>
+    <div style="overflow:hidden;width:800px;height:1728px;margin:0 auto;">
+    <a href="#share" id="share"
+      data-name="Sephora Highlights - Abril 2012"
+      data-url="http://sephora.com.mx/sh/abr2k12/"
+      data-image="http://sephora.com.mx/sh/abr2k12/sephora_highlights.jpg"
+      data-title="SEPHORA HIGHLIGHTS"
+      data-description="Conoce lo más fresh de Sephora México exclusivamente para ti."
+      data-action="publish"
+    >Compartir</a>
+      <img src="seph_news.jpg" alt="" usemap="#imgmap2012410171454">
+    </div>
+    <map id="imgmap2012410171454" name="imgmap2012410171454">
+      <area shape="rect" alt="" title="" coords="2,192,798,805" href="nailstudio/" />
+      <area shape="rect" alt="" title="" coords="24,823,772,1150" href="notailde/" />
+      <area shape="rect" alt="" title="" coords="26,1167,391,1534" href="hotnow/" />
+      <area shape="rect" alt="" title="" coords="406,1166,773,1535" href="favorites/" />
+      <area shape="rect" alt="" title="" coords="214,1588,254,1628" href="http://twitter.com/SephoraMX" target="_blank" />
+      <area shape="rect" alt="" title="" coords="268,1586,311,1627" href="http://facebook.com/SephoraMX" target="_blank" />
+      <area shape="rect" alt="" title="" coords="323,1588,365,1628" href="http://youtube.com/SephoraMex" target="_blank" />
+      <area shape="rect" alt="" title="" coords="413,1588,795,1626" href="http://sephora.com.mx/" target="_blank" />
+    </map>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script>
+
+    $('a[data-action=publish]').click(function() {
+
+      var item = $(this);
+
+      FB.ui({
+        method: 'feed',
+        name: item.data('name'),
+        link: item.data('url'),
+        picture: item.data('image'),
+        caption: item.data('title'),
+        description: item.data('description')
+      }, $.noop);
+
+      return false;
+    });
+
+    $('body').append('<div id="fb-root"></div>');
+
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=192434127491407";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    </script>
+  </body>
+</html>
+
+
+

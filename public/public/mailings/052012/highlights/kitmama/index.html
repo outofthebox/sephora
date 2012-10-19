@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sephora Highlights - Kit Mamá</title>
+    <style>#share{background:url(../share.jpg)no-repeat;text-indent:-9999px;display:block;width:92px;height:22px;}</style>
+    <meta property="og:title" content="SEPHORA HIGHLIGHTS: Kit de mamás - Meses sin intereses" />
+    <meta property="og:description" content="Checa la promo fabulosa de Sephora para el día de las madres." />
+    <meta property="og:image" content="http://sephora.com.mx/public/mailings/052012/highlights/minis/6meses_kitmama.jpg" />
+  </head>
+  <body>
+    <div style="overflow:hidden;width:800px;height:2540px;margin:0 auto;">
+      <a href="#share" id="share"
+      data-name="Sephora Highlights - Mayo 2012"
+      data-url="http://sephora.com.mx/public/mailings/052012/highlights/kitmama/index.html"
+      data-image="http://sephora.com.mx/public/mailings/052012/highlights/minis/6meses_kitmama.jpg"
+      data-title="SEPHORA HIGHLIGHTS: Kit de mamás - Meses sin intereses"
+      data-description="Checa la promo fabulosa de Sephora para el día de las madres."
+      data-action="publish"
+    >Compartir</a><br>
+      <img src="kitmama.jpg" alt="" usemap="#imgmap2012410171454">
+    </div>
+    <map id="imgmap2012410171454" name="imgmap2012410171454"><area shape="rect" alt="" title="" coords="31,1303,125,1324" href="../" />
+      <area shape="rect" alt="" title="" coords="683,20,777,41" href="../" />
+      <area shape="rect" alt="" title="" coords="680,2454,775,2473" href="../" />
+    </map>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script>
+
+    $('a[data-action=publish]').click(function() {
+
+      var item = $(this);
+
+      FB.ui({
+        method: 'feed',
+        name: item.data('name'),
+        link: item.data('url'),
+        picture: item.data('image'),
+        caption: item.data('title'),
+        description: item.data('description')
+      }, $.noop);
+
+      return false;
+    });
+
+    $('body').append('<div id="fb-root"></div>');
+
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=192434127491407";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    </script>
+  </body>
+</html>
