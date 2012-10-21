@@ -1,7 +1,16 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  #Para devise http://stackoverflow.com/questions/4982073/different-layout-for-sign-in-action-in-devise
+  before_filter :redirect_main_domain if Rails.env.production?
+
+  def redirect_main_domain
+    dominio = 'sephora.com.mx'
+    if request.env['HTTP_HOST'] != dominio
+      redirect_to "http://#{dominio}#{request.fullpath}"
+    end
+  end
+
+  # Para devise http://stackoverflow.com/questions/4982073/different-layout-for-sign-in-action-in-devise
   layout :layout_by_resource
 
   helper_method :mini_hash, :check_minihash
