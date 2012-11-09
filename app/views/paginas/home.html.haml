@@ -18,9 +18,13 @@
   #poster.tcell.t75
     .contenedor
       .slider
-        .diapositiva.prox
+        .prox
+          %p 1/2
+        .ante
+          %p 2/2
+        %a.diapositiva{:href=>'http://www.facebook.com/SephoraMX/app_292555694189146', :target => 'blank'}
           =image_tag "home/1.jpg"
-        .diapositiva.ante
+        %a.diapositiva
           =image_tag "home/2.jpg"
 #separador
   %p.linksrapidos
