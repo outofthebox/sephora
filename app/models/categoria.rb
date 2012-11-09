@@ -1,7 +1,7 @@
 class Categoria < ActiveRecord::Base
   acts_as_nested_set
-  attr_accessible :nombre, :parent_id, :cover, :urlslug
-  attr_accessor :cover
+  attr_accessible :nombre, :parent_id, :cover, :urlslug, :remove_cover
+  attr_accessor :cover, :remove_cover
 
   has_attached_file :cover, {
     :styles => { :normal => "768x250>", :mini => "256x83>" }
@@ -10,6 +10,10 @@ class Categoria < ActiveRecord::Base
   has_many :productos
   has_many :categoria_producto
   has_many :productos_vinculados, :through => :categoria_producto
+
+  before_save do
+    self.cover = nil if self.remove_cover=="1"
+  end
 
   def self.by_slug slug
     self.where(:slug => slug)

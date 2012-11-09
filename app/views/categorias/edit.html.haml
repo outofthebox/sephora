@@ -8,6 +8,8 @@
     - unless @categoria.cover_file_name.nil?
       %p
         = image_tag @categoria.cover.url(:mini)
+        = f.check_box :remove_cover
+        = f.label "¿Quitar foto?"
     %p
       = f.file_field :cover
     %p

@@ -1,6 +1,6 @@
 class Marca < ActiveRecord::Base
-  attr_accessible :marca, :descripcion, :slug, :logo, :promo, :behindthebrand
-  attr_accessor :logo, :promo
+  attr_accessible :marca, :descripcion, :slug, :logo, :promo, :behindthebrand, :remove_promo, :remove_logo
+  attr_accessor :logo, :promo, :remove_promo, :remove_logo
   default_scope :order => "marca ASC"
 
   has_attached_file :logo, {
@@ -20,6 +20,8 @@ class Marca < ActiveRecord::Base
   
   before_save do
     self.slug = self.marca.parameterize if new_record?
+    self.promo = nil if self.remove_promo=="1"
+    self.logo = nil if self.remove_logo=="1"
   end
 
   def validar

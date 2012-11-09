@@ -17,6 +17,8 @@
   - unless @marca.logo_file_name.nil? 
     %p
       = image_tag @marca.logo.url(:mini)
+    = f.check_box :remove_logo
+    = f.label "¿Quitar foto?"
   %p
     = f.label :promo, "Promo"
     %br
@@ -24,6 +26,8 @@
   - unless @marca.promo_file_name.nil? 
     %p
       = image_tag @marca.promo.url(:mini)
+    = f.check_box :remove_promo
+    = f.label "¿Quitar foto?"
   %p.rgt
     =f.submit "Editar"
 
