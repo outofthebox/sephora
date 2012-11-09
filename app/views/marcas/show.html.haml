@@ -7,6 +7,14 @@
       %ul
         %li.first
           = @marca.marca
+        - unless @categorias.empty?
+          %li.second
+            Categorías
+            %ul
+              - @categorias.each do |t|
+                - slug = t.parameterize
+                %li
+                  = link_to t, categoria_ver_path(slug)
         - unless @marca.behindthebrand.empty?
           %li.behindbutton
             Detrás de la marca
