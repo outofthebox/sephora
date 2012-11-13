@@ -21,7 +21,11 @@ class Producto < ActiveRecord::Base
       self.slug = self.nombre.parameterize
       existe = Producto.where :slug => self.slug
       if existe
-        self.slug = "#{self.nombre}-#{self.sku}-#{self.upc}".parameterize
+        unless self.sku.nil?
+          self.slug = "#{self.nombre}-#{self.sku}-#{self.upc}".parameterize
+        else
+          self.slug = "#{self.nombre}-#{self.upc}".parameterize
+        end
       end
     end
   end
@@ -29,7 +33,7 @@ class Producto < ActiveRecord::Base
   def validar
     errors.add :nombre, "Escribe un nombre" unless self.nombre.parameterize.length >= 3
     errors.add :precio, "Escribe un precio" unless self.precio.to_i > 0
-    errors.add :sku, "Proporciona el SKU " unless self.sku.parameterize.length > 2
+    errors.add :upc, "Proporciona el UPC " unless self.upc.parameterize.length > 2
   end
 
   def nombre
