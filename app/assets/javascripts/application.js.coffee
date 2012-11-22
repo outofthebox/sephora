@@ -73,7 +73,7 @@ $("#slideleft2").live "click", ->
   leftgo = parseInt($(".lonuevo").css('left'), 10)
   $(".lonuevo").css('left', leftgo + 945 + 'px' )
   if leftgo == 0
-    $(".lonuevo").css('left', ((($(".lonuevo li").length/5)*945+945)*-1)/2 + 'px' )
+    $(".lonuevo").css('left', '0' )
 
 if ($widget_vinculos = $(".widget-seccion-producto-vincular")).size()
   $widget_vinculos.on "submit", (e) ->
