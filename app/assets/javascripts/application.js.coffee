@@ -61,7 +61,7 @@ $("#slideleft").live "click", ->
   leftgo = parseInt($(".bestsellers").css('left'), 10)
   $(".bestsellers").css('left', leftgo + 945 + 'px' )
   if leftgo == 0
-    $(".bestsellers").css('left', '0')
+    $(".bestsellers").css('left', ((($(".bestsellers li").length/5)*945)*-1)/2 + 'px' )
 
 $("#slideright2").live "click", ->
   leftgo = parseInt($(".lonuevo").css('left'), 10)
@@ -73,7 +73,7 @@ $("#slideleft2").live "click", ->
   leftgo = parseInt($(".lonuevo").css('left'), 10)
   $(".lonuevo").css('left', leftgo + 945 + 'px' )
   if leftgo == 0
-    $(".lonuevo").css('left', '0')
+    $(".lonuevo").css('left', ((($(".lonuevo li").length/5)*945+945)*-1)/2 + 'px' )
 
 if ($widget_vinculos = $(".widget-seccion-producto-vincular")).size()
   $widget_vinculos.on "submit", (e) ->
