@@ -17,7 +17,7 @@ class UtilidadesController < ApplicationController
     # end
 
     # Funcion para un solo CSV
-    data = CSV.parse(File.open('/home/oob4/Escritorio/skus.csv'), :headers => true, :return_headers => true )
+    data = CSV.parse(File.open('/home/kinduff/Escritorio/improd2.csv'), :headers => true, :return_headers => true )
     data.by_col!
     data.each do |col|
       skus << col.at(1).compact.reject{|r| !(r.to_i > 0) }
@@ -26,20 +26,20 @@ class UtilidadesController < ApplicationController
 
     s = []
     skus.each do |sku|
-      while p = Producto.where(:sku => sku.shift).first do
+      while p = Producto.where(:upc => sku.shift).first do
         # raise p.inspect
         break unless p.nil?
       end
 
       unless p.nil?
-        s << Producto.where(:sku => sku).update_all(:parent_id => p.id)
+        s << Producto.where(:upc => sku).update_all(:parent_id => p.id)
       end
     end
 
     raise s.inspect
 
     raise s.inspect
-    raise Producto.where(:sku => s.uniq).size.inspect
+    raise Producto.where(:upc => s.uniq).size.inspect
   end
 
   def importar
@@ -241,5 +241,46 @@ class UtilidadesController < ApplicationController
     Producto.update(productos.map{|p| p[:id] }, productos.map{|p| {"upc" => p[:upc]}})
 
     raise productos.size.inspect
+  end
+
+  def improd
+    require 'csv'
+    data = []
+    CSV.foreach("/home/kinduff/Escritorio/improd.csv") do |row|
+      upc = row.at(0)
+      marca = row.at(1)
+      marca = Marca.find_by_slug(marca.parameterize).id
+      nombre = row.at(2)
+      nombre_real = row.at(3)
+      categoria = row.at(4)
+      parent_id = Categoria.find_by_slug(categoria.parameterize).id
+      subcategoria = row.at(5)
+      if (Categoria.find_by_slug(subcategoria.parameterize))
+        categoria = Categoria.find_by_slug(subcategoria.parameterize).id
+      else
+        r = Categoria.new
+        r.nombre = subcategoria
+        r.slug = subcategoria.parameterize
+        r.visible = true
+        r.parent_id = parent_id
+        r.save
+        categoria = r.id
+      end
+      precio = row.at(6).to_d
+      descripcion = row.at(7)
+      data << {:upc => upc,
+        :marca_id => marca,
+        :nombre => nombre,
+        :nombre_real => nombre_real,
+        :categoria_id => categoria,
+        :descripcion => descripcion,
+        :precio => precio
+      }
+    end
+    if(Producto.create(data))
+      raise "En CSV: #{data.count}".inspect
+    else
+      raise "Oops! Something went wrong!".inspect
+    end
   end
 end
