@@ -137,17 +137,17 @@ class UtilidadesController < ApplicationController
   def importarimg
     # the logos are in a folder with path logos_dir
     start = 0
-    Dir.glob('/home/oob4/Escritorio/sephora_filtrados/*.jpg').each do |logo_path|
+    Dir.glob('/home/kinduff/Escritorio/sephora/*.jpg').each do |logo_path|
       if File.basename(logo_path)[0]!= '.' and !File.directory? logo_path
 
-        sku = File.basename(logo_path, '.*') #filename without extension
-        producto = Producto.where(:sku => sku.to_s).first
-        raise "could not find client for client_code #{sku}" if producto.nil?
+        upc = File.basename(logo_path, '.*') #filename without extension
+        producto = Producto.where(:upc => upc.to_s).first
+        raise "could not find client for client_code #{upc}" if producto.nil?
 
         File.open(logo_path) do |f|
           producto.foto = f # just assign the logo attribute to a file
           producto.save(:validate => false)
-          FileUtils.mv(logo_path, "/home/oob4/Escritorio/sephora_filtrados_OK/#{sku}.jpg")
+          FileUtils.mv(logo_path, "/home/kinduff/Escritorio/sephora_ok/#{upc}.jpg")
           return render :text => "Working... HALT BRO! <script>document.location.reload(true)</script>", :layout => false if (start+=1) > 10
         end #file gets closed automatically here
       end
