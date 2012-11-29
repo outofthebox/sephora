@@ -283,4 +283,15 @@ class UtilidadesController < ApplicationController
       raise "Oops! Something went wrong!".inspect
     end
   end
+  def cambiarnombres
+    require 'csv'
+    CSV.foreach("/home/kinduff/Escritorio/names.csv") do |row|
+      upc = row.at(0)
+      nombre_real = row.at(1)
+      r = Producto.where(:upc => upc).first
+      r.nombre_real = nombre_real
+      r.save
+    end
+    raise 'Actualizados correctamente'.inspect
+  end
 end

@@ -33,6 +33,7 @@ Sephora::Application.routes.draw do
   post  'actprecios_save', :to => 'utilidades#actprecios_guardar', :as => 'actprecios_guardar'
   get   'updateupc', :to => 'utilidades#update_upc'
   get   'improd', :to => 'utilidades#improd'
+  get   'cambiarnombres', :to => 'utilidades#cambiarnombres'
   
   get   'producto', :to => 'productos#index', :as => 'producto_index'
   get   'producto/:slug',  :to => 'productos#show', :as => 'producto_ver'
