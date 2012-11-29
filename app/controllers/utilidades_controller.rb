@@ -324,4 +324,22 @@ class UtilidadesController < ApplicationController
     end
     raise 'Actualizados correctamente'.inspect
   end
+  def actualizar
+    require 'csv'
+    datacount = 0
+    CSV.foreach("/home/kinduff/Escritorio/smash.csv") do |row|
+      if Producto.find_by_upc(row.at(2))
+        p = Producto.find_by_upc(row.at(2))
+        p.sku = row.at 1
+        p.nombre = row.at 5
+        p.nombre_real = row.at 6
+        p.precio = row.at 11
+        p.descripcion = row.at 12
+        p.usos = row.at 13
+        p.save
+        datacount = datacount + 1
+      end
+    end
+    raise "#{datacount} productos actualizados correctamente".inspect
+  end
 end

@@ -34,6 +34,7 @@ Sephora::Application.routes.draw do
   get   'updateupc', :to => 'utilidades#update_upc'
   get   'improd', :to => 'utilidades#improd'
   get   'cambiarnombres', :to => 'utilidades#cambiarnombres'
+  get   'actualizar', :to => 'utilidades#actualizar'
   
   get   'producto', :to => 'productos#index', :as => 'producto_index'
   get   'producto/:slug',  :to => 'productos#show', :as => 'producto_ver'
