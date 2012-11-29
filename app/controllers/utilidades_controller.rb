@@ -246,39 +246,69 @@ class UtilidadesController < ApplicationController
   def improd
     require 'csv'
     data = []
-    CSV.foreach("/home/kinduff/Escritorio/improd.csv") do |row|
-      upc = row.at(0)
-      marca = row.at(1)
-      marca = Marca.find_by_slug(marca.parameterize).id
-      nombre = row.at(2)
-      nombre_real = row.at(3)
-      categoria = row.at(4)
-      parent_id = Categoria.find_by_slug(categoria.parameterize).id
-      subcategoria = row.at(5)
-      if (Categoria.find_by_slug(subcategoria.parameterize))
-        categoria = Categoria.find_by_slug(subcategoria.parameterize).id
+    existen = []
+    CSV.foreach("/home/kinduff/Escritorio/db.csv") do |row|
+      unless Producto.find_by_upc(row.at(1))
+        sku = row.at(0)
+        upc = row.at(1)
+        marca = row.at(2)
+        if Marca.find_by_slug(marca.parameterize)
+          marca = Marca.find_by_slug(marca.parameterize).id
+        else
+          r = Marca.new
+          r.marca = marca
+          r.slug = marca.parameterize
+          r.save
+          marca = r.id
+        end
+        nombre = row.at(3)
+        nombre_real = row.at(4)
+        categoria = row.at(5)
+        parent_id = Categoria.find_by_slug(categoria.parameterize).id
+        subcategoria = row.at(6)
+        if (Categoria.find_by_nombre(subcategoria))
+          categoria = Categoria.find_by_nombre(subcategoria).id
+        else
+          r = Categoria.new
+          r.nombre = subcategoria
+          r.slug = subcategoria.parameterize
+          r.visible = true
+          r.parent_id = parent_id
+          r.save
+          categoria = r.id
+        end
+        grupo = row.at(7)
+        unless grupo.nil?
+          if (Categoria.find_by_nombre(grupo))
+            categoria = Categoria.find_by_nombre(grupo).id
+          else
+            r = Categoria.new
+            r.nombre = grupo
+            r.slug = grupo.parameterize
+            r.visible = true
+            r.parent_id = categoria
+            r.save
+            categoria = r.id
+          end
+        end
+        precio = row.at(8).to_d
+        descripcion = row.at(9)
+        data << {
+          :sku => sku,
+          :upc => upc,
+          :marca_id => marca,
+          :nombre => nombre,
+          :nombre_real => nombre_real,
+          :categoria_id => categoria,
+          :descripcion => descripcion,
+          :precio => precio
+        }
       else
-        r = Categoria.new
-        r.nombre = subcategoria
-        r.slug = subcategoria.parameterize
-        r.visible = true
-        r.parent_id = parent_id
-        r.save
-        categoria = r.id
+        puts "http://sephora.com.mx/producto/#{Producto.find_by_upc(row.at(1)).slug}"
       end
-      precio = row.at(6).to_d
-      descripcion = row.at(7)
-      data << {:upc => upc,
-        :marca_id => marca,
-        :nombre => nombre,
-        :nombre_real => nombre_real,
-        :categoria_id => categoria,
-        :descripcion => descripcion,
-        :precio => precio
-      }
     end
     if(Producto.create(data))
-      raise "En CSV: #{data.count}".inspect
+      raise 'Perfect'.inspect
     else
       raise "Oops! Something went wrong!".inspect
     end
