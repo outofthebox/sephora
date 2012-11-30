@@ -5,7 +5,7 @@
     %thead
       %tr
         %th
-          SKU
+          UPC
         %th
           Producto
         %th
@@ -21,7 +21,7 @@
       %tr
         - if d.has_key?(:precio_actual)
           %td
-            =d[:sku]
+            =d[:upc]
           %td
             =d[:producto]
           %td
@@ -39,7 +39,7 @@
               = porcentaje
         - else
           %td{:style=>"color:red"}
-            =d[:sku]
+            =d[:upc]
           %td{:style=>"color:red"}
             PRODUCTO NO ENCONTRADO
           %td{:style=>"color:red"}

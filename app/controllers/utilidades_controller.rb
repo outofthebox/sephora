@@ -162,15 +162,18 @@ class UtilidadesController < ApplicationController
       Rails.cache.write('tmp_listadeprecio', params[:file].tempfile.read)
       tmp = Rails.cache.read('tmp_listadeprecio')
       CSV.parse(tmp, :headers => true) do |row|
-        sku = row[0]
+        upc = row[0]
         precio_nuevo = row[1]
-        data << {:sku => sku, :precio_nuevo => precio_nuevo}
+        if precio_nuevo.is_a?(String)
+          precio_nuevo = precio_nuevo.gsub(/[^\d\.]/, '').to_f
+        end
+        data << {:upc => upc, :precio_nuevo => precio_nuevo}
       end
 
-      productos = Producto.where(:sku => data.map{|d| d[:sku]})
+      productos = Producto.where(:upc => data.map{|d| d[:upc]})
 
       data.map{|d|
-        if (producto = productos.reject{|p| p unless p.sku == d[:sku] }.first)
+        if (producto = productos.reject{|p| p unless p.upc == d[:upc] }.first)
           if producto
             d[:precio_actual] = producto.precio
             d[:producto] = producto.nombre
@@ -186,15 +189,18 @@ class UtilidadesController < ApplicationController
     data = []
     tmp = Rails.cache.read('tmp_listadeprecio')
     CSV.parse(tmp, :headers => true) do |row|
-      sku = row[0]
+      upc = row[0]
       precio_nuevo = row[1]
-      data << {:sku => sku, :precio_nuevo => precio_nuevo}
+      if precio_nuevo.is_a?(String)
+        precio_nuevo = precio_nuevo.gsub(/[^\d\.]/, '').to_f
+      end
+      data << {:upc => upc, :precio_nuevo => precio_nuevo}
     end
 
-    productos = Producto.where(:sku => data.map{|d| d[:sku]})
+    productos = Producto.where(:upc => data.map{|d| d[:upc]})
 
     data.map{|d|
-      if (producto = productos.reject{|p| p unless p.sku == d[:sku] }.first)
+      if (producto = productos.reject{|p| p unless p.upc == d[:upc] }.first)
         if producto
           d[:precio_actual] = producto.precio
           d[:producto] = producto.nombre
@@ -263,36 +269,37 @@ class UtilidadesController < ApplicationController
         end
         nombre = row.at(3)
         nombre_real = row.at(4)
-        categoria = row.at(5)
-        parent_id = Categoria.find_by_slug(categoria.parameterize).id
-        subcategoria = row.at(6)
-        if (Categoria.find_by_nombre(subcategoria))
-          categoria = Categoria.find_by_nombre(subcategoria).id
-        else
-          r = Categoria.new
-          r.nombre = subcategoria
-          r.slug = subcategoria.parameterize
-          r.visible = true
-          r.parent_id = parent_id
-          r.save
-          categoria = r.id
+        # categoria = row.at(5)
+        # parent_id = Categoria.find_by_slug(categoria.parameterize).id
+        # subcategoria = row.at(6)
+        # if (Categoria.find_by_nombre(subcategoria))
+        #   categoria = Categoria.find_by_nombre(subcategoria).id
+        # else
+        #   r = Categoria.new
+        #   r.nombre = subcategoria
+        #   r.slug = subcategoria.parameterize
+        #   r.visible = true
+        #   r.parent_id = parent_id
+        #   r.save
+        #   categoria = r.id
+        # end
+        categoria = Categoria.find(row.at(8)).id
+        unless row.at(10).nil?
+          categoria = Categoria.find(row.at(10)).id
+          # if (Categoria.find_by_nombre(grupo))
+          #   categoria = Categoria.find_by_nombre(grupo).id
+          # else
+          #   r = Categoria.new
+          #   r.nombre = grupo
+          #   r.slug = grupo.parameterize
+          #   r.visible = true
+          #   r.parent_id = categoria
+          #   r.save
+          #   categoria = r.id
+          # end
         end
-        grupo = row.at(7)
-        unless grupo.nil?
-          if (Categoria.find_by_nombre(grupo))
-            categoria = Categoria.find_by_nombre(grupo).id
-          else
-            r = Categoria.new
-            r.nombre = grupo
-            r.slug = grupo.parameterize
-            r.visible = true
-            r.parent_id = categoria
-            r.save
-            categoria = r.id
-          end
-        end
-        precio = row.at(8).to_d
-        descripcion = row.at(9)
+        precio = row.at(11).to_d
+        descripcion = row.at(12)
         data << {
           :sku => sku,
           :upc => upc,
@@ -307,6 +314,7 @@ class UtilidadesController < ApplicationController
         puts "http://sephora.com.mx/producto/#{Producto.find_by_upc(row.at(1)).slug}"
       end
     end
+    # raise data.inspect
     if(Producto.create(data))
       raise 'Perfect'.inspect
     else
@@ -327,7 +335,7 @@ class UtilidadesController < ApplicationController
   def actualizar
     require 'csv'
     datacount = 0
-    CSV.foreach("/home/kinduff/Escritorio/smash.csv") do |row|
+    CSV.foreach("/home/kinduff/Escritorio/faced.csv") do |row|
       if Producto.find_by_upc(row.at(2))
         p = Producto.find_by_upc(row.at(2))
         p.sku = row.at 1
@@ -336,10 +344,26 @@ class UtilidadesController < ApplicationController
         p.precio = row.at 11
         p.descripcion = row.at 12
         p.usos = row.at 13
+        p.ingredientes = 14
         p.save
         datacount = datacount + 1
       end
     end
     raise "#{datacount} productos actualizados correctamente".inspect
+  end
+  def desc
+    require 'csv'
+    datacount = 0
+    csvcount = 0
+    CSV.foreach("/home/kinduff/Escritorio/desc.csv") do |row|
+      if Producto.where(:upc => row.at(0)).first
+        p = Producto.where(:upc => row.at(0)).first
+        p.publicado = false
+        p.save
+        datacount = datacount + 1
+      end
+      csvcount = csvcount + 1
+    end
+    raise "#{datacount}/#{csvcount} productos ocultados correctamente".inspect
   end
 end
