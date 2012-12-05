@@ -6,6 +6,7 @@ Sephora::Application.routes.draw do
   get   ':seccion', :to => 'secciones#ver', :constraints => { :seccion => /hotnow|bestsellers|bbcreams|tintedmoisturizers/ }
   get   'soluciones(/:id)', :to => 'secciones#soluciones', :as => 'soluciones'
   get   'favorites(/:id)', :to => 'secciones#favorites', :as => 'favorites'
+  get   'holiday', :to => 'paginas#holiday', :as => 'holiday'
 
   get   'busqueda', :to => 'productos#busqueda', :as => 'busqueda'
 

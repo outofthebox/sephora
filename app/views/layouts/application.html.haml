@@ -28,6 +28,7 @@
         %a{ :href => "/" }
           #logo
       %nav#menu
+        =image_tag 'copito_menu.png', :class => 'copitomenu'
         %ul.nobullet.nolist
           %li
             %a{ :href => "/categoria/maquillaje"}
@@ -59,9 +60,9 @@
           %li
             %a{ :href => "/tu-lista"}
               Tu Lista
-          -#%li
-          -#  %a{ :href => "/tendencias"}
-          -#    Tendencias
+          %li.holiday
+            %a{ :href => "/holiday", :class => 'holiday'}
+              HOLIDAY
           %li.select
             - if @marcas_all and @marcas_all.any?
               .trigger

@@ -102,4 +102,7 @@ class PaginasController < ApplicationController
   def aniversario_terminos
     render :layout => 'aniversario'
   end
+  def holiday
+
+  end
 end

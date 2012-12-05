@@ -151,7 +151,8 @@ ul.breadcrumbs{
       font-size: 8pt;
       text-align: center;
       padding-top: 50px;
-      font-weight: bold; 
+      font-weight: bold;
+      margin-right: 50px;
       li {
         padding: 0 0.4em;
       }
@@ -159,6 +160,9 @@ ul.breadcrumbs{
         text-transform: uppercase;
         color: #000;
         text-decoration: none;
+        &.holiday {
+          color: white;
+        }
       }
     }
     .select{
@@ -1472,4 +1476,21 @@ li.unchecked:before {
   clear: both;
   margin-left: 847px;
   margin-top: -61px;
+}
+.copitomenu {
+  position: absolute;
+  left: 805px;
+  top: 78px;
+}
+li.holiday {
+  background-color: black;
+}
+#holiday {
+  text-align: center;
+  .head {
+    margin-top: 20px;
+  }
+  img {
+    margin-bottom: 20px;
+  }
 }
