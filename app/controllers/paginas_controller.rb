@@ -105,4 +105,7 @@ class PaginasController < ApplicationController
   def holiday
 
   end
+  def download 
+    send_file "pdf/#{params[:file_name]}", :type=>"text/pdf", :disposition => 'attachment'
+  end 
 end

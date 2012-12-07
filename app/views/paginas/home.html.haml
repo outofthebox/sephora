@@ -89,5 +89,4 @@
       %a{ :href => "/sephorabath", :target => '_blank' }
         =image_tag "home/cata2.jpg"
     .tcell.t50
-      %a{ :href => "/archivos/catalogo.pdf" }
-        =image_tag "home/cata1.jpg"
+      = link_to( image_tag('home/cata1.jpg'),:controller=>'paginas',:action=>'download', :file_name =>  'catalogo.pdf')
