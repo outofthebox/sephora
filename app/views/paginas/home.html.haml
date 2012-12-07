@@ -84,20 +84,10 @@
             /   %small= number_to_currency producto.precio
 #esta-semana
   %h3 ESTA SEMANA
-  %ul.nolist
-    %li
-      .semana-banner
-        %a{ :href => "/tu-lista" }
-          =image_tag "home/top.jpg"
-      %h4 MI TOP 10
-      %p Descubre los productos que ella ama de Sephora.
-    / %li
-    /   .semana-banner
-    /   %h4 Tendencias
-    /   %p Descrube los productos que ella ama de Sephora.
-    %li
-      .semana-banner
-        %a{ :href => "http://sephora.com.mx/365dias", :target => '_blank' }
-          =image_tag "home/eventos.jpg"
-      %h4 EVENTOS
-      %p ¡Celebra con nosotros nuestro primer aniversario en México!
+  .table.full
+    .tcell.t50
+      %a{ :href => "/sephorabath", :target => '_blank' }
+        =image_tag "home/cata2.jpg"
+    .tcell.t50
+      %a{ :href => "/archivos/catalogo.pdf" }
+        =image_tag "home/cata1.jpg"
