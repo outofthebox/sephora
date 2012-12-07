@@ -9,7 +9,7 @@ Sephora::Application.routes.draw do
   get   'holiday', :to => 'paginas#holiday', :as => 'holiday'
 
   get   'busqueda', :to => 'productos#busqueda', :as => 'busqueda'
-  get   'download', :to => 'paginas#download', :as => 'download'
+
   get   'secciones/:id/desvincular/:producto_seccion/:hash', :to => 'secciones#desvincular', :as => 'seccion_desvincular_producto'
   get   'secciones/:id/vincular/:v_id/editar', :to => 'secciones#producto_editar', :as => 'seccion_editar_producto'
   put   'secciones/:id/vincular/:v_id/editar', :to => 'secciones#producto_update'
