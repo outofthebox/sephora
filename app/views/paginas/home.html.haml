@@ -19,15 +19,19 @@
                 =producto.nombre.split(' ').map {|w| w.capitalize }.join(' ')
   #poster.tcell.t75
     .contenedor
+      .prox
+        %p 
+      .ante
+        %p
       .slider
-        .prox
-          %p 1/2
-        .ante
-          %p 2/2
         %a.diapositiva{:href=>'https://www.youtube.com/watch?feature=player_embedded&v=os3PklOXURw&list=PLXpR-02kmCLFBiKNfZyLt6_mBHoLocHP2'}
           =image_tag "home/1.jpg"
         %a.diapositiva{:href=>'/hotnow'}
           =image_tag "home/2.jpg"
+        %a.diapositiva{:href=>'http://sephora.com.mx/pdf/catalogo.pdf'}
+          =image_tag "home/3.jpg"
+        %a.diapositiva{:href=>'/sephorabath'}
+          =image_tag "home/4.jpg"
 #separador
   %p.linksrapidos
     LINKS RÁPIDOS:

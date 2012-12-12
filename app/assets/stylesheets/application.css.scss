@@ -458,37 +458,38 @@ ul.breadcrumbs{
           overflow: hidden;
           position: relative;
         .slider {
-            width: 1520px;
+            width: 3040px;
             font-size: 0;
             position: relative;
           .diapositiva {
             display: inline;
           }
-          .prox, .ante {
-            width: 48px;
-            height: 118px;
-            position: absolute;
-            p {
-              font-size: 12pt;
-              padding-top: 85px;
-              text-align: center;
-            }
-          }
-          .prox {
-            background: image-url('home/flechader.png');
-            margin-top: 140px;
-            margin-left: 712px;
-          }
-          .ante {
-
-            background: image-url('home/flechaizq.png');
-            margin-top: 140px;
-            margin-left: 1473px;
-          }
         }
       }
     }
   }
+.prox, .ante {
+  width: 48px;
+  height: 118px;
+  position: absolute;
+  p {
+    font-size: 12pt;
+    padding-top: 85px;
+    text-align: center;
+  }
+}
+.prox {
+  background: image-url('home/flechader.png');
+  margin-top: 125px;
+  margin-left: 712px;
+  z-index: 1000;
+}
+.ante {
+  background: image-url('home/flechaizq.png');
+  margin-top: 125px;
+  margin-left: 0;
+  z-index: 1000;
+}
 
   .linksrapidos {
     font-size: 10pt;
