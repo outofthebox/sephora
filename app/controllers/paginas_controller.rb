@@ -107,5 +107,11 @@ class PaginasController < ApplicationController
   end
   def download
     
-  end 
+  end
+  def wallpapers
+
+  end
+  def wallpapers_send
+    
+  end
 end

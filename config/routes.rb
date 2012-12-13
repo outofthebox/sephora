@@ -7,6 +7,9 @@ Sephora::Application.routes.draw do
   get   'soluciones(/:id)', :to => 'secciones#soluciones', :as => 'soluciones'
   get   'favorites(/:id)', :to => 'secciones#favorites', :as => 'favorites'
   get   'holiday', :to => 'paginas#holiday', :as => 'holiday'
+  
+  get   'holiday/wallpapers', :to => 'paginas#wallpapers', :as => 'wallpapers'
+  post   'holiday/wallpapers', :to => 'paginas#wallpapers_send', :as => 'wallpapers_send'
 
   get   'busqueda', :to => 'productos#busqueda', :as => 'busqueda'
 

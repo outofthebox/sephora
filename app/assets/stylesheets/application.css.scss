@@ -1495,3 +1495,25 @@ li.holiday {
     margin-bottom: 20px;
   }
 }
+
+#wallpapers {
+  .header {
+    text-align: center;
+  }
+  .instrucciones {
+    text-align: center;
+    color: black;
+    font-size: 0.8em;
+    margin: 15px 0 15px 0;
+    p {
+      margin: 0;
+      padding: 0;
+      &.linea {
+        display: block;
+        width: 40px;
+        border-top: 1px solid black;
+        margin: 10px auto 10px auto;
+      }
+    }
+  }
+}
