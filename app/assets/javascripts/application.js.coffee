@@ -1,6 +1,28 @@
 # = require jquery
 # = require jquery_ujs
 # = require jquery.ui.all
+#Wallpapers
+original = ''
+$("#galeria li").live "click", (e) ->
+  e.preventDefault()
+  $('#download .append').append($(this).clone())
+  $("#galeria").slideUp()
+  $("#download").slideDown()
+  original = $(".append img").attr('src')
+  $("#download .escritorio").attr('href',original)
+
+$("#download .ipad").live "click", (e) ->
+  e.preventDefault()
+  imagen = $(".append img").data 'imagen'
+  $(".append img").attr('src', imagen)
+  $("#download .escritorio").attr('href',imagen)
+
+$("#download .iphone").live "click", (e) ->
+  e.preventDefault()
+  imagen = $(".append img").data 'imagen'
+  $(".append img").attr('src', original)
+  $("#download .escritorio").attr('href',original)
+
 # ANIVERSARIO
 $("#eventolink, #premioslink").live "click", (e) ->
   e.preventDefault()
