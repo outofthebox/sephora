@@ -1518,6 +1518,15 @@ li.holiday {
       }
     }
   }
+  .regresar {
+    background: black;
+    color: white;
+    display: block;
+    width: 100px;
+    height: 25px;
+    line-height: 25px;
+    margin: 0 auto;
+  }
   #galeria {
     ul {
       margin: 0;
@@ -1612,8 +1621,7 @@ li.holiday {
         height: 40px;
         font-size: 1.2em;
         font-weight: bold;
-        margin-left: 125px;
-        margin-top: 20px;
+        margin-left: 100px;
       }
       p {
         font-size: 0.7em;

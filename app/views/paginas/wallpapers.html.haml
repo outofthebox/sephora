@@ -1,67 +1,80 @@
 #wallpapers
   .header
-    =image_tag 'wallpapers/header.jpg'
-  .instrucciones
-    %p.linea
-    %p Puedes descargar las imágenes de 3 formas:
-    %p 1•Directo en tu computadora: dando clic en la opción deseada y guardando en el escritorio.
-    %p 2•Decarga directa en smartphone o tableta: Selecciona el dispositivo que quieras y mantén presionada la imagen para descargarla.
-    %p 3• Ingresa tu mail para recibirla por correo.
-    %p.linea
-  #galeria
-    %ul
-      %li
-        %a{:href=>'#'}
-          =image_tag 'wallpapers/iphone/1.jpg', :width => '175px', :height => '262px'
-      %li
-        %a{:href=>'#'}
-          =image_tag 'wallpapers/iphone/2.jpg', :width => '175px', :height => '262px', :"data-imagen" => '/assets/wallpapers/ipad/ipad_2.jpg'
-      %li
-        %a{:href=>'#'}
-          =image_tag 'wallpapers/iphone/3.jpg', :width => '175px', :height => '262px', :"data-imagen" => '/assets/wallpapers/ipad/ipad_3.jpg'
-      %li
-        %a{:href=>'#'}
-          =image_tag 'wallpapers/iphone/4.jpg', :width => '175px', :height => '262px', :"data-imagen" => '/assets/wallpapers/ipad/ipad_4.jpg'
-      %li
-        %a{:href=>'#'}
-          =image_tag 'wallpapers/iphone/5.jpg', :width => '175px', :height => '262px', :"data-imagen" => '/assets/wallpapers/ipad/ipad_5.jpg'
-      %li
-        %a{:href=>'#'}
-          =image_tag 'wallpapers/iphone/6.jpg', :width => '175px', :height => '262px', :"data-imagen" => '/assets/wallpapers/ipad/ipad_6.jpg'
-      %li
-        %a{:href=>'#'}
-          =image_tag 'wallpapers/iphone/7.jpg', :width => '175px', :height => '262px', :"data-imagen" => '/assets/wallpapers/ipad/ipad_7.jpg'
-      %li
-        %a{:href=>'#'}
-          =image_tag 'wallpapers/iphone/8.jpg', :width => '175px', :height => '262px', :"data-imagen" => '/assets/wallpapers/ipad/ipad_8.jpg'
-      %li
-        %a{:href=>'#'}
-          =image_tag 'wallpapers/iphone/9.jpg', :width => '175px', :height => '262px', :"data-imagen" => '/assets/wallpapers/ipad/ipad_9.jpg'
-      %li
-        %a{:href=>'#'}
-          =image_tag 'wallpapers/iphone/10.jpg', :width => '175px', :height => '262px', :"data-imagen" => '/assets/wallpapers/ipad/ipad_10.jpg'
-      %li
-        %a{:href=>'#'}
-          =image_tag 'wallpapers/iphone/11.jpg', :width => '175px', :height => '262px', :"data-imagen" => '/assets/wallpapers/ipad/ipad_11.jpg'
-      %li
-        %a{:href=>'#'}
-          =image_tag 'wallpapers/iphone/12.jpg', :width => '175px', :height => '262px'
-  #download
-    .table.full
-      .tcell.t20
-        %ul.append
-      .tcell.t40.descar
-        %a.iphone{:href=>'#'}
-          iPhone
-        %br
-        %a.ipad{:href=>'#'}
-          iPad
-        %a.escritorio{:href=>'#', :target => 'blank'}
-          GUARDAR EN ESCRITORIO
-      .tcell.t40
-        .contenedor
-          %h3 ENVIAR POR CORREO
-          %input{:type=>'text'}
+    =image_tag 'wallpapers/header.jpg', :width => '849px', :height => '206px'
+  - if flash[:exito]
+    - flash[:exito] = false
+    .instrucciones
+      %p.linea
+      %p Email enviado correctamente. Revisa tu bandeja de entrada para descargar tu wallpaper.
+      %p.linea
+      %p
+        %a.regresar{:href=>wallpapers_path}
+          Regresar
+  - else
+    .instrucciones
+      %p.linea
+      %p Puedes descargar las imágenes de 3 formas:
+      %p 1•Directo en tu computadora: dando clic en la opción deseada y guardando en el escritorio.
+      %p 2•Decarga directa en smartphone o tableta: Selecciona el dispositivo que quieras y mantén presionada la imagen para descargarla.
+      %p 3• Ingresa tu mail para recibirla por correo.
+      %p.linea
+    #galeria
+      %ul
+        %li
+          %a{:href=>'#'}
+            =image_tag 'wallpapers/iphone/1.jpg', :width => '175px', :height => '262px'
+        %li
+          %a{:href=>'#'}
+            =image_tag 'wallpapers/iphone/2.jpg', :width => '175px', :height => '262px', :"data-imagen" => '/assets/wallpapers/ipad/ipad_2.jpg'
+        %li
+          %a{:href=>'#'}
+            =image_tag 'wallpapers/iphone/3.jpg', :width => '175px', :height => '262px', :"data-imagen" => '/assets/wallpapers/ipad/ipad_3.jpg'
+        %li
+          %a{:href=>'#'}
+            =image_tag 'wallpapers/iphone/4.jpg', :width => '175px', :height => '262px', :"data-imagen" => '/assets/wallpapers/ipad/ipad_4.jpg'
+        %li
+          %a{:href=>'#'}
+            =image_tag 'wallpapers/iphone/5.jpg', :width => '175px', :height => '262px', :"data-imagen" => '/assets/wallpapers/ipad/ipad_5.jpg'
+        %li
+          %a{:href=>'#'}
+            =image_tag 'wallpapers/iphone/6.jpg', :width => '175px', :height => '262px', :"data-imagen" => '/assets/wallpapers/ipad/ipad_6.jpg'
+        %li
+          %a{:href=>'#'}
+            =image_tag 'wallpapers/iphone/7.jpg', :width => '175px', :height => '262px', :"data-imagen" => '/assets/wallpapers/ipad/ipad_7.jpg'
+        %li
+          %a{:href=>'#'}
+            =image_tag 'wallpapers/iphone/8.jpg', :width => '175px', :height => '262px', :"data-imagen" => '/assets/wallpapers/ipad/ipad_8.jpg'
+        %li
+          %a{:href=>'#'}
+            =image_tag 'wallpapers/iphone/9.jpg', :width => '175px', :height => '262px', :"data-imagen" => '/assets/wallpapers/ipad/ipad_9.jpg'
+        %li
+          %a{:href=>'#'}
+            =image_tag 'wallpapers/iphone/10.jpg', :width => '175px', :height => '262px', :"data-imagen" => '/assets/wallpapers/ipad/ipad_10.jpg'
+        %li
+          %a{:href=>'#'}
+            =image_tag 'wallpapers/iphone/11.jpg', :width => '175px', :height => '262px', :"data-imagen" => '/assets/wallpapers/ipad/ipad_11.jpg'
+        %li
+          %a{:href=>'#'}
+            =image_tag 'wallpapers/iphone/12.jpg', :width => '175px', :height => '262px'
+    #download
+      .table.full
+        .tcell.t20
+          %ul.append
+        .tcell.t40.descar
+          %a.iphone{:href=>'#'}
+            iPhone
           %br
-          %input{:type=>'submit', :value=>'Enviar'}
-          %p Al enviar estás aceptándo términos y condiciones.
+          %a.ipad{:href=>'#'}
+            iPad
+          %a.escritorio{:href=>'#', :target => 'blank'}
+            GUARDAR EN ESCRITORIO
+        .tcell.t40
+          .contenedor
+            = form_for @wallpaper, :url => '/holiday/wallpapers#wallpapers' do |f|
+              %h3 ENVIAR POR CORREO
+              = form_error @wallpaper, :email
+              = f.email_field :email, :placeholder => "e-mail", :class => "texto"
+              = f.text_field :imagen, :id => 'imagen', :style => 'visibility: hidden;'
+              %br
+              = f.submit "Enviar"
+              %p Al enviar estás aceptándo términos y condiciones.

@@ -109,9 +109,19 @@ class PaginasController < ApplicationController
     
   end
   def wallpapers
-
+    @wallpaper = Wallpaper.new
   end
-  def wallpapers_send
-    
+  def wallpaperssend
+    @wallpaper = Wallpaper.new params[:wallpaper]
+    imagen = params[:wallpaper][:imagen]
+    mail = params[:wallpaper][:email]
+    if @wallpaper.valid?
+      WallpaperMailer.enviarmail(imagen, mail).deliver
+      flash[:exito] = true
+      render :wallpapers
+    else
+      flash[:error] = true
+      render :wallpapers
+    end
   end
 end

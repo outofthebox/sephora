@@ -10,18 +10,24 @@ $("#galeria li").live "click", (e) ->
   $("#download").slideDown()
   original = $(".append img").attr('src')
   $("#download .escritorio").attr('href',original)
+  input = original.replace(/^.*[\\\/]/, '')
+  $("#imagen").attr('value', input)
 
 $("#download .ipad").live "click", (e) ->
   e.preventDefault()
   imagen = $(".append img").data 'imagen'
   $(".append img").attr('src', imagen)
   $("#download .escritorio").attr('href',imagen)
+  input = imagen.replace(/^.*[\\\/]/, '')
+  $("#imagen").attr('value', input)
 
 $("#download .iphone").live "click", (e) ->
   e.preventDefault()
   imagen = $(".append img").data 'imagen'
   $(".append img").attr('src', original)
   $("#download .escritorio").attr('href',original)
+  input = original.replace(/^.*[\\\/]/, '')
+  $("#imagen").attr('value', input)
 
 # ANIVERSARIO
 $("#eventolink, #premioslink").live "click", (e) ->

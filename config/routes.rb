@@ -9,7 +9,7 @@ Sephora::Application.routes.draw do
   get   'holiday', :to => 'paginas#holiday', :as => 'holiday'
   
   get   'holiday/wallpapers', :to => 'paginas#wallpapers', :as => 'wallpapers'
-  post   'holiday/wallpapers', :to => 'paginas#wallpapers_send', :as => 'wallpapers_send'
+  post   'holiday/wallpapers', :to => 'paginas#wallpaperssend', :as => 'wallpaperssend'
 
   get   'busqueda', :to => 'productos#busqueda', :as => 'busqueda'
 
