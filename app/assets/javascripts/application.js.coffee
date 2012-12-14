@@ -21,7 +21,8 @@ $("#galeria li").live "click", (e) ->
   $("#galeria").slideUp()
   $("#download").slideDown()
   original = $(".append img").attr('src')
-  $("#download .escritorio").attr('href',original)
+  $("#download .escritorio").attr('href',original).addClass('imgloading').load ->
+      $(this).removeClass 'imgloading'
   input = original.replace(/^.*[\\\/]/, '')
   $("#imagen").attr('value', input)
 
@@ -29,7 +30,8 @@ $("#download .ipad").live "click", (e) ->
   e.preventDefault()
   imagen = $(".append img").data 'imagen'
   $(".append img").attr('src', imagen)
-  $("#download .escritorio").attr('href',imagen)
+  $("#download .escritorio").attr('href',imagen).addClass('imgloading').load ->
+      $(this).removeClass 'imgloading'
   input = imagen.replace(/^.*[\\\/]/, '')
   $("#imagen").attr('value', input)
 
@@ -37,7 +39,8 @@ $("#download .iphone").live "click", (e) ->
   e.preventDefault()
   imagen = $(".append img").data 'imagen'
   $(".append img").attr('src', original)
-  $("#download .escritorio").attr('href',original)
+  $("#download .escritorio").attr('href',original).addClass('imgloading').load ->
+      $(this).removeClass 'imgloading'
   input = original.replace(/^.*[\\\/]/, '')
   $("#imagen").attr('value', input)
 
