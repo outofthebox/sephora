@@ -22,8 +22,7 @@ $("#galeria li").live "click", (e) ->
   $("#download").slideDown()
   original = $(".append img").attr('src')
   $("#download .escritorio").attr('href',original)
-  input = original.replace(/^.*[\\\/]/, '')
-  $("#imagen").attr('value', input)
+  $("#imagen").attr('value', original)
 
 $("#download .ipad").live "click", (e) ->
   e.preventDefault()
