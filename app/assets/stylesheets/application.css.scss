@@ -1502,6 +1502,10 @@ li.holiday {
     margin-top: 25px;
     margin-bottom: 25px;
   }
+  .back {
+    position: absolute;
+    right: 0;
+  }
   .instrucciones {
     text-align: center;
     color: black;
@@ -1644,4 +1648,7 @@ li.holiday {
     font-size: 1.8em;
     top: -3px;
   }
+}
+.relative {
+  position: relative;
 }

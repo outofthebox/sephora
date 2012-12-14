@@ -14,9 +14,16 @@ $("#popholi a.close").live "click", (e) ->
   e.preventDefault()
   $("#popholi").fadeOut()
 #Wallpapers
+$("a.back").live "click", (e) ->
+  e.preventDefault()
+  $("#download").slideUp()
+  $("#galeria").slideDown()
 original = ''
 $("#galeria li").live "click", (e) ->
   e.preventDefault()
+  $(".ipad").hide()
+  unless $(this).find('img').data('imagen') == null
+    $(".ipad").show()
   $('#download .append').append($(this).clone())
   $("#galeria").slideUp()
   $("#download").slideDown()

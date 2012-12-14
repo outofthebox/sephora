@@ -22,7 +22,7 @@
       %ul
         %li
           %a{:href=>'#'}
-            =image_tag 'wallpapers/iphone/1.jpg', :width => '175px', :height => '262px'
+            =image_tag 'wallpapers/iphone/1.jpg', :width => '175px', :height => '262px', :"data-imagen" => 'null'
         %li
           %a{:href=>'#'}
             =image_tag 'wallpapers/iphone/2.jpg', :width => '175px', :height => '262px', :"data-imagen" => '/assets/wallpapers/ipad/ipad_2.jpg'
@@ -55,7 +55,7 @@
             =image_tag 'wallpapers/iphone/11.jpg', :width => '175px', :height => '262px', :"data-imagen" => '/assets/wallpapers/ipad/ipad_11.jpg'
         %li
           %a{:href=>'#'}
-            =image_tag 'wallpapers/iphone/12.jpg', :width => '175px', :height => '262px'
+            =image_tag 'wallpapers/iphone/12.jpg', :width => '175px', :height => '262px', :"data-imagen" => 'null'
     #download
       .table.full
         .tcell.t20
@@ -68,7 +68,9 @@
             iPad
           %a.escritorio{:href=>'#', :target => 'blank'}
             GUARDAR EN ESCRITORIO
-        .tcell.t40
+        .tcell.t40.relative
+          %a.back{:href=>'#'}
+            X
           .contenedor
             = form_for @wallpaper, :url => '/holiday/wallpapers#wallpapers' do |f|
               %h3 ENVIAR POR CORREO
