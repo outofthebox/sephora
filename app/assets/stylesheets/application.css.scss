@@ -1629,3 +1629,19 @@ li.holiday {
     }
   }
 }
+#popholi {
+  position: fixed;
+  z-index: 99999;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.7);
+  margin-left: 60px;
+  outline: 1000px solid rgba(0, 0, 0, 0.1);
+  display: none;
+  .close {
+    position: absolute;
+    right: 5px;
+    color: white;
+    font-size: 1.8em;
+    top: -3px;
+  }
+}

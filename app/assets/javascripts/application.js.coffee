@@ -1,6 +1,18 @@
 # = require jquery
 # = require jquery_ujs
 # = require jquery.ui.all
+# = require jquerycookie
+#Popup
+path = window.location.pathname
+if path == '/'
+  if $.cookie("popholi")
+  else
+    $("#popholi").fadeIn()
+    $.cookie "popholi", "true",
+    expires: 1
+$("#popholi a.close").live "click", (e) ->
+  e.preventDefault()
+  $("#popholi").fadeOut()
 #Wallpapers
 original = ''
 $("#galeria li").live "click", (e) ->
