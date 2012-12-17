@@ -20,10 +20,12 @@ $("a.back").live "click", (e) ->
   $("#galeria").slideDown()
 original = ''
 $("#galeria li").live "click", (e) ->
+  original = ''
   e.preventDefault()
   $(".ipad").hide()
   unless $(this).find('img').data('imagen') == null
     $(".ipad").show()
+  $('#download .append').empty()
   $('#download .append').append($(this).clone())
   $("#galeria").slideUp()
   $("#download").slideDown()
