@@ -11,6 +11,8 @@ Sephora::Application.routes.draw do
   get   'holiday/wallpapers', :to => 'paginas#wallpapers', :as => 'wallpapers'
   post   'holiday/wallpapers', :to => 'paginas#wallpaperssend', :as => 'wallpaperssend'
 
+  get   'beautybloggers', :to => 'paginas#bloggers', :as => 'bloggers'
+
   get   'busqueda', :to => 'productos#busqueda', :as => 'busqueda'
 
   get   'secciones/:id/desvincular/:producto_seccion/:hash', :to => 'secciones#desvincular', :as => 'seccion_desvincular_producto'

@@ -124,4 +124,6 @@ class PaginasController < ApplicationController
       render :wallpapers
     end
   end
+  def bloggers
+  end
 end
