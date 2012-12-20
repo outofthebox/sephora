@@ -38,7 +38,7 @@ class MarcasController < ApplicationController
     @marca = Marca.includes(:marca_producto, :featured).where(:slug => params[:slug]).first
     f = []
     Producto.where(:marca_id => @marca.id).each do |t|
-      f << Categoria.find(t.categoria_id).nombre unless t.categoria_id.nil?
+      f << Categoria.find(t.categoria_id).nombre rescue nil
     end
     @categorias = f.uniq.sort
   end
