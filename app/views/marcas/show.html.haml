@@ -14,7 +14,7 @@
               - @categorias.each do |t|
                 - slug = t.parameterize
                 %li
-                  = link_to t, categoria_ver_path(slug)
+                  = link_to t, categoria_ver_path(slug)+"?marca=#{@marca.id}"
         - unless @marca.behindthebrand.empty?
           %li.behindbutton
             Detrás de la marca
