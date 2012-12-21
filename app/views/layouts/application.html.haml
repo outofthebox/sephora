@@ -73,7 +73,7 @@
                   MARCAS
                 - @marcas_all.each do |marca|
                   %option{ :value => "/marca/#{marca.slug}" }
-                    = marca.marca.upcase
+                    = marca.marca
 
     = yield
 
