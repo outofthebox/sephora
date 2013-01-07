@@ -176,13 +176,13 @@ if ($widget_vinculos = $(".widget-seccion-producto-vincular")).size()
         complete: (response) ->
           $form.remove()
 $(".prox").live "click", ->
-  if $(".slider").css('margin-left') == '-2280px'
-    $(".slider").animate({"margin-left": "+=300%"}, "slow")
+  if $(".slider").css('margin-left') == '-760px'
+    $(".slider").animate({"margin-left": "+=100%"}, "slow")
   else
     $(".slider").animate({"margin-left": "-=100%"}, "slow")
 $(".ante").live "click", ->
   if $(".slider").css('margin-left') == '0px'
-    $(".slider").animate({"margin-left": "-=300%"}, "slow")
+    $(".slider").animate({"margin-left": "-=100%"}, "slow")
   else
     $(".slider").animate({"margin-left": "+=100%"}, "slow")
 
