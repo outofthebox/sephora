@@ -7,6 +7,8 @@
 %head
   %meta{:charset => "UTF-8"}
   %link{ :rel => "shortcut icon", :href => "/favicon.ico", :type => "image/x-icon"}/
+  - if current_page?('/')
+    %meta{:name => "description", :content => "Explora la biblioteca de productos de belleza más grande de latinoamérica. Cosméticos - Maquillaje - Skincare - Perfumes y más de exclusivas marcas."}
   %title
     #{"#{yield(:titulo)} | " if content_for?(:titulo)} Sephora
   = javascript_include_tag :modernizr
