@@ -1,4 +1,6 @@
 - provide :titulo, @producto.marca.marca + " - " + @producto.nombre.split(' ').map {|w| w.capitalize }.join(' ')
+-unless @producto.descripcion.nil?
+  - provide :descripcion, @producto.descripcion.html_safe
 %section#producto
   - if can? :edit, @producto
     = link_to "Editar", edit_producto_path(@producto.id)
