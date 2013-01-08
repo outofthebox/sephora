@@ -176,7 +176,7 @@ if ($widget_vinculos = $(".widget-seccion-producto-vincular")).size()
         complete: (response) ->
           $form.remove()
 $(".prox").live "click", ->
-  if $(".slider").css('margin-left') == '-760px'
+  if $(".slider").css('margin-left') == '-2020px'
     $(".slider").animate({"margin-left": "+=100%"}, "slow")
   else
     $(".slider").animate({"margin-left": "-=100%"}, "slow")
