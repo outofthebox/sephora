@@ -18,7 +18,7 @@ class ProductosController < ApplicationController
     @filtrame.each do |r|
       a << r.marca
     end
-    @marcas_para_categoria = a.compact.uniq
+    @marcas_para_categoria = a.compact.uniq.sort
     @productostotal = Producto.includes(:marca).padres.publicados.busqueda(params[:q] || params[:buscar][:q])
     @productoscount = Producto.includes(:marca).padres.publicados.busqueda(params[:q] || params[:buscar][:q]).count
     respond_to do |format|
