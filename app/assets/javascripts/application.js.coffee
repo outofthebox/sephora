@@ -2,6 +2,17 @@
 # = require jquery_ujs
 # = require jquery.ui.all
 # = require jquerycookie
+$(".prox").live "click", ->
+  if $(".slider").css('margin-left') == '-1520px'
+    $(".slider").animate({"margin-left": "+=200%"}, "slow")
+  else
+    $(".slider").animate({"margin-left": "-=100%"}, "slow")
+$(".ante").live "click", ->
+  if $(".slider").css('margin-left') == '0px'
+    $(".slider").animate({"margin-left": "-=200%"}, "slow")
+  else
+    $(".slider").animate({"margin-left": "+=100%"}, "slow")
+
 #Popup
 path = window.location.pathname
 if path == '/'
@@ -175,16 +186,6 @@ if ($widget_vinculos = $(".widget-seccion-producto-vincular")).size()
         data: $form.serialize()
         complete: (response) ->
           $form.remove()
-$(".prox").live "click", ->
-  if $(".slider").css('margin-left') == '-2020px'
-    $(".slider").animate({"margin-left": "+=100%"}, "slow")
-  else
-    $(".slider").animate({"margin-left": "-=100%"}, "slow")
-$(".ante").live "click", ->
-  if $(".slider").css('margin-left') == '0px'
-    $(".slider").animate({"margin-left": "-=100%"}, "slow")
-  else
-    $(".slider").animate({"margin-left": "+=100%"}, "slow")
 
 $('#producto ul.home li').hide()
 $('#producto ul.home li:first').show()
