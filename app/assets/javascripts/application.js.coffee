@@ -2,16 +2,25 @@
 # = require jquery_ujs
 # = require jquery.ui.all
 # = require jquerycookie
+count = 1
 $(".prox").live "click", ->
   if $(".slider").css('margin-left') == '-1520px'
     $(".slider").animate({"margin-left": "+=200%"}, "slow")
+    count = 1
+    $(".prox p").text(count + '/3')
   else
     $(".slider").animate({"margin-left": "-=100%"}, "slow")
+    count = count + 1
+    $(".prox p").text(count + '/3')
 $(".ante").live "click", ->
   if $(".slider").css('margin-left') == '0px'
     $(".slider").animate({"margin-left": "-=200%"}, "slow")
+    count = 3
+    $(".prox p").text(count + '/3')
   else
     $(".slider").animate({"margin-left": "+=100%"}, "slow")
+    count = count - 1
+    $(".prox p").text(count + '/3')
 
 #Popup
 path = window.location.pathname
