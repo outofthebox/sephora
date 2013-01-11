@@ -36,24 +36,52 @@
           %li
             %a{ :href => "/categoria/maquillaje"}
               Maquillaje
+            %ul.nobullet.submenu
+              - submenu('maquillaje').each do |subcategoria|
+                %li
+                  = link_to subcategoria.nombre, categoria_ver_path(subcategoria.slug)
           %li
             %a{ :href => "/categoria/skincare"}
               Skincare
+            %ul.nobullet.submenu
+              - submenu('skincare').each do |subcategoria|
+                %li
+                  = link_to subcategoria.nombre, categoria_ver_path(subcategoria.slug)
           %li
             %a{ :href => "/categoria/fragancias"}
               Fragancias
+            %ul.nobullet.submenu
+              - submenu('fragancias').each do |subcategoria|
+                %li
+                  = link_to subcategoria.nombre, categoria_ver_path(subcategoria.slug)
           %li
             %a{ :href => "/categoria/bano-y-cuerpo"}
               Baño / Cuerpo
+            %ul.nobullet.submenu
+              - submenu('bano-y-cuerpo').each do |subcategoria|
+                %li
+                  = link_to subcategoria.nombre, categoria_ver_path(subcategoria.slug)
           %li
             %a{ :href => "/categoria/cabello"}
               Cabello
+            %ul.nobullet.submenu
+              - submenu('cabello').each do |subcategoria|
+                %li
+                  = link_to subcategoria.nombre, categoria_ver_path(subcategoria.slug)
           %li
             %a{ :href => "/categoria/categoria-general"}
               Accesorios
+            %ul.nobullet.submenu
+              - submenu('categoria-general').each do |subcategoria|
+                %li
+                  = link_to subcategoria.nombre, categoria_ver_path(subcategoria.slug)
           %li
             %a{ :href => "/categoria/hombres"}
               Hombres
+            %ul.nobullet.submenu
+              - submenu('hombres').each do |subcategoria|
+                %li
+                  = link_to subcategoria.nombre, categoria_ver_path(subcategoria.slug)
           %li
             %a{ :href => "/obsequios"}
               Obsequios
@@ -63,7 +91,7 @@
           %li
             %a{ :href => "/tu-lista"}
               Tu Lista
-          %li.select
+          .select
             - if @marcas_all and @marcas_all.any?
               .trigger
                 Marcas 

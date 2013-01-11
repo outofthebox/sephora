@@ -152,9 +152,15 @@ ul.breadcrumbs{
       text-align: center;
       padding-top: 50px;
       font-weight: bold;
-      margin-right: 0;
+      margin-right: 150px;
       li {
-        padding: 0 0.4em;
+        padding: 0.6em 0.6em;
+        position: relative;
+        &:hover {
+          -webkit-box-shadow: 2px 2px 12px gray;
+          -moz-box-shadow:    2px 2px 12px gray;
+          box-shadow:         2px 2px 12px gray;
+        }
       }
       a{
         text-transform: uppercase;
@@ -164,15 +170,54 @@ ul.breadcrumbs{
           color: white;
         }
       }
+      .submenu {
+        text-align: left;
+        margin: 0;
+        padding: 0;
+        width: 300px;
+        position: absolute;
+        background:image-url('bgsub.png');
+        display: none;
+        -webkit-box-shadow: 3px 3px 6px gray;
+        -moz-box-shadow:    3px 3px 6px gray;
+        box-shadow:         3px 3px 6px gray;
+        overflow: hidden;
+        li {
+          margin: 0;
+          padding: 0;
+          font-weight: lighter;
+          width: 100%;
+          height: 22px;
+          display: block;
+          line-height: 22px;
+          padding-left: 5px;
+          &:hover {
+            box-shadow: none;
+            -mox-box-shadow: none;
+            -webkit-box-shadow: none;
+          & a {
+              width: 100%;
+              height: 22px;
+              line-height: 22px;
+              display: block;
+              &:hover {
+                color: white;
+                background: black;
+              }
+            }
+          }
+        }
+      }
     }
     .select{
       cursor: pointer;
       position:absolute;
       right:-4px;
       width: 80px;
+      float: right;
       overflow: hidden;
       height: 20px;
-      margin-top:-2px;
+      margin-top:-20px;
       .trigger{
         font-weight: bold;
         background: white;

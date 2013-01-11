@@ -2,6 +2,12 @@
 # = require jquery_ujs
 # = require jquery.ui.all
 # = require jquerycookie
+$("#menu ul li").live
+  mouseenter: ->
+    $(this).find('.submenu').show();
+  mouseleave: ->
+    $(this).find('.submenu').hide();
+
 count = 1
 $(".prox.jesus").live "click", ->
   $(this).removeClass('jesus')
