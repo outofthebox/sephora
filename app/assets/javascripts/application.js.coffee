@@ -3,22 +3,28 @@
 # = require jquery.ui.all
 # = require jquerycookie
 count = 1
-$(".prox").live "click", ->
+$(".prox.jesus").live "click", ->
+  $(this).removeClass('jesus')
   if $(".slider").css('margin-left') == '-1520px'
-    $(".slider").animate({"margin-left": "+=200%"}, "slow")
+    $(".slider").stop().animate {"margin-left": "+=200%"}, "slow", ->
+      $(".prox").addClass('jesus')
     count = 1
     $(".prox p").text(count + '/3')
   else
-    $(".slider").animate({"margin-left": "-=100%"}, "slow")
+    $(".slider").stop().animate {"margin-left": "-=100%"}, "slow", ->
+      $(".prox").addClass('jesus')
     count = count + 1
     $(".prox p").text(count + '/3')
-$(".ante").live "click", ->
+$(".ante.jesus").live "click", ->
+  $(this).removeClass('jesus')
   if $(".slider").css('margin-left') == '0px'
-    $(".slider").animate({"margin-left": "-=200%"}, "slow")
+    $(".slider").stop().animate {"margin-left": "-=200%"}, "slow", ->
+      $(".ante").addClass('jesus')
     count = 3
     $(".prox p").text(count + '/3')
   else
-    $(".slider").animate({"margin-left": "+=100%"}, "slow")
+    $(".slider").stop().animate {"margin-left": "+=100%"}, "slow", ->
+      $(".ante").addClass('jesus')
     count = count - 1
     $(".prox p").text(count + '/3')
 
