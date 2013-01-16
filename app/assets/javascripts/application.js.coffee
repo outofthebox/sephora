@@ -11,28 +11,28 @@ $("#menu ul li").live
 count = 1
 $(".prox.jesus").live "click", ->
   $(this).removeClass('jesus')
-  if $(".slider").css('margin-left') == '-1520px'
-    $(".slider").stop().animate {"margin-left": "+=200%"}, "slow", ->
+  if $(".slider").css('margin-left') == '-2280px'
+    $(".slider").stop().animate {"margin-left": "+=300%"}, "slow", ->
       $(".prox").addClass('jesus')
     count = 1
-    $(".prox p").text(count + '/3')
+    $(".prox p").text(count + '/4')
   else
     $(".slider").stop().animate {"margin-left": "-=100%"}, "slow", ->
       $(".prox").addClass('jesus')
     count = count + 1
-    $(".prox p").text(count + '/3')
+    $(".prox p").text(count + '/4')
 $(".ante.jesus").live "click", ->
   $(this).removeClass('jesus')
   if $(".slider").css('margin-left') == '0px'
-    $(".slider").stop().animate {"margin-left": "-=200%"}, "slow", ->
+    $(".slider").stop().animate {"margin-left": "-=300%"}, "slow", ->
       $(".ante").addClass('jesus')
-    count = 3
-    $(".prox p").text(count + '/3')
+    count = 4
+    $(".prox p").text(count + '/4')
   else
     $(".slider").stop().animate {"margin-left": "+=100%"}, "slow", ->
       $(".ante").addClass('jesus')
     count = count - 1
-    $(".prox p").text(count + '/3')
+    $(".prox p").text(count + '/4')
 
 #Popup
 path = window.location.pathname
