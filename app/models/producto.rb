@@ -42,9 +42,11 @@ class Producto < ActiveRecord::Base
 
   def self.busqueda q
     productos = self
-    if sku = q.match(/sku:([\w]*)/)
+    if q.match(/sku:([\w]*)/)
+      sku = q.match(/sku:([\w]*)/)
       productos = productos.where :sku => sku[1]
-    elsif upc = q.match(/upc:([\w]*)/)
+    elsif q.match(/upc:([\w]*)/)
+      upc = q.match(/upc:([\w]*)/)
       productos = productos.where :upc => upc[1]
     else
       query = []
@@ -52,7 +54,7 @@ class Producto < ActiveRecord::Base
         query << "to_tsvector(productos.slug) @@ to_tsquery('#{sprintf('%s', q)}')"
         query << "to_tsvector(marcas.marca) @@ to_tsquery('#{sprintf('%s', q)}')"
       end
-      productos = productos.select("productos.*, marcas.marca").joins(:marca).order('nombre ASC').where query.join(' OR ')
+      productos = productos.select("productos.nombre, marcas.marca").joins(:marca).where query.join(' OR ')
     end
 
     productos
