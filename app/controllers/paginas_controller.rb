@@ -27,8 +27,8 @@ class PaginasController < ApplicationController
 
   def obsequios
     cat = [64, 62, 63, 39]
-    @productos = Producto.padres.publicados.rangodeprecios(params[:rango]).where(:categoria_id => cat).order(preciorder(params[:precio])).page(params[:page]).per(perparams(params[:ver]))
-    @productoscount = Producto.padres.publicados.rangodeprecios(params[:rango]).where(:categoria_id => cat).count
+    @productos = Producto.padres.rangodeprecios(params[:rango]).where(:categoria_id => cat, :publicado => true).order(preciorder(params[:precio])).page(params[:page]).per(perparams(params[:ver]))
+    @productoscount = Producto.padres.rangodeprecios(params[:rango]).where(:categoria_id => cat, :publicado => true).count
   end
 
   def suscripcion
