@@ -58,7 +58,7 @@ class ProductosController < ApplicationController
   end
 
   def show
-    @producto = Producto.includes(:marca, :presentaciones).padres.publicados.where(:slug => params[:slug]).first
+    @producto = Producto.includes(:marca, :presentaciones).publicados.where(:slug => params[:slug]).first
     @categoria = Categoria.find(@producto.categoria_id)
     @productos_relacionados = @categoria.productos.padres.publicados.where("productos.id != ?", @producto.id).sample(3)
   end
