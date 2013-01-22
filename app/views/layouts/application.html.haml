@@ -6,18 +6,18 @@
   <!--[if gt IE 8]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
 %head
   %meta{:charset => "UTF-8"}
-  %meta{:content => "qCft4n7tHfODiCl-UWgEd_uquba_MLlevA9txPjkYkk", :name => "google-site-verification"}
-  %link{ :rel => "shortcut icon", :href => "/favicon.ico", :type => "image/x-icon"}/
   - if current_page?('/')
-    %meta{:name => "description", :content => "Explora la biblioteca de productos de belleza más grande de latinoamérica. Cosméticos - Maquillaje - Skincare - Perfumes y más de exclusivas marcas."}
-  - elsif content_for?(:descripcion)
-    %meta{:name => "description", :content => yield(:descripcion)}
+    %title Sephora México
+    %meta{:content => "Sephora México", :property => "og:title"}
+  -else
+    %title
+      #{"#{yield(:titulo)} | " if content_for?(:titulo)} Sephora
     %meta{:content => "#{yield(:titulo)} | Sephora México", :property => "og:title"}
-    %meta{:content => yield(:url), :property => "og:url"}
-    %meta{:content => "Sephora México", :property => "og:site_name"}
-    %meta{:content => yield(:imagen), :property => "og:image"}
-  %title
-    #{"#{yield(:titulo)} | " if content_for?(:titulo)} Sephora México
+  %link{ :rel => "shortcut icon", :href => "/favicon.ico", :type => "image/x-icon"}/
+  %meta{:name => "description", :content => yield(:descripcion)}
+  %meta{:content => yield(:url), :property => "og:url"}
+  %meta{:content => "Sephora México", :property => "og:site_name"}
+  %meta{:content => yield(:imagen), :property => "og:image"}
   = javascript_include_tag :modernizr
   = stylesheet_link_tag :application
   = csrf_meta_tags
