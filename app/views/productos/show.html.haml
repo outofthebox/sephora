@@ -1,5 +1,4 @@
 - provide :titulo, @producto.marca.marca + " - " + @producto.nombre.split(' ').map {|w| w.capitalize }.join(' ')
-- provide :title
 - provide :url, "http://sephora.com.mx/producto/#{@producto.slug}"
 - provide :imagen, @producto.foto.url(:normal)
 -unless @producto.descripcion.nil?

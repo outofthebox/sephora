@@ -11,12 +11,12 @@
     %meta{:name => "description", :content => "Explora la biblioteca de productos de belleza más grande de latinoamérica. Cosméticos - Maquillaje - Skincare - Perfumes y más de exclusivas marcas."}
   - elsif content_for?(:descripcion)
     %meta{:name => "description", :content => yield(:descripcion)}
-    %meta{:content => yield(:titulo), :property => "og:title"}
+    %meta{:content => "#{yield(:titulo)} | Sephora México", :property => "og:title"}
     %meta{:content => yield(:url), :property => "og:url"}
     %meta{:content => "Sephora México", :property => "og:site_name"}
     %meta{:content => yield(:imagen), :property => "og:image"}
   %title
-    #{"#{yield(:titulo)} | " if content_for?(:titulo)} Sephora
+    #{"#{yield(:titulo)} | " if content_for?(:titulo)} Sephora México
   = javascript_include_tag :modernizr
   = stylesheet_link_tag :application
   = csrf_meta_tags
