@@ -16,6 +16,7 @@ gem 'cancan'
 gem 'redcarpet', '1.17.2'
 gem 'json'
 gem 'watu_table_builder', :require => 'table_builder'
+gem 'sitemap_generator'
 
 group :assets do
   gem 'jquery-rails'
