@@ -1,4 +1,8 @@
 - provide :titulo, @marca.marca
+- provide :url, "http://sephora.com.mx/marca/#{@marca.slug}"
+- provide :imagen, @marca.logo.url(:normal)
+-unless @marca.descripcion.nil?
+  - provide :descripcion, @marca.descripcion.html_safe[0..160]
 %section#marca
   %h3.title
     = @marca.marca
