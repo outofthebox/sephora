@@ -3,7 +3,7 @@
 - provide :url, "http://sephora.com.mx/producto/#{@producto.slug}"
 - provide :imagen, @producto.foto.url(:normal)
 -unless @producto.descripcion.nil?
-  - provide :descripcion, @producto.descripcion.html_safe
+  - provide :descripcion, @producto.descripcion.html_safe[0..140]
 %section#producto
   - if can? :edit, @producto
     = link_to "Editar", edit_producto_path(@producto.id)
