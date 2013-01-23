@@ -1264,6 +1264,11 @@ section#soluciones {
     border-top: 1px solid gray;
     padding: 25px;
     border-bottom: 3px solid black;
+    span {
+      letter-spacing: 1px;
+      font-size: 0.3em;
+      font-style: italic;
+    }
   }
   ul, li {
     margin: 0;
