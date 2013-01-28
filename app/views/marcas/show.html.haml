@@ -16,7 +16,7 @@
             Categorías
             %ul
               - @categorias.each do |t|
-                - slug = t.parameterize
+                - slug = Categoria.find_by_nombre(t).slug
                 %li
                   = link_to t, categoria_ver_path(slug)+"?marca=#{@marca.id}"
         - unless @marca.behindthebrand.empty?
