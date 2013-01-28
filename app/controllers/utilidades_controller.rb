@@ -118,18 +118,19 @@ class UtilidadesController < ApplicationController
   end
 
   def imgmover
-    require 'csv'
-    csv = "/home/oob4/Escritorio/lol.csv"
-    skus = []
-    CSV.foreach(csv) do |row|
-      skus << row[0]
-    end
-    skus2 = Producto.where(:foto_file_name => nil).map{|r| r.sku}
-    skus = (skus + skus2).compact.uniq
-    Dir.glob('/media/SIN TITULO/SEPHORA/product images/**/*.jpg').each do |path|
-      img_sku = File.basename(path, ".jpg")[/[a-z]?([0-9]+)/i].gsub(/([^0-9])/, '')
-      if img_sku.in? skus
-        FileUtils.cp path, "/home/oob4/Escritorio/sephora_filtrados/#{img_sku}.jpg"
+    # require 'csv'
+    # csv = "/home/oob4/Escritorio/lol.csv"
+    # skus = []
+    # CSV.foreach(csv) do |row|
+    #   skus << row[0]
+    # end
+    upcs = Producto.all.map{|r| r.upc}
+    # upcs = (upcs + upcs2).compact.uniq
+    Dir.glob('/home/kinduff/Escritorio/sephora/**/*.jpg').each do |path|
+      # img_upc = File.basename(path, ".jpg")[/[a-z]?([0-9]+)/i].gsub(/([^0-9])/, '')
+      img_upc = File.basename(path, ".jpg").gsub(/[^\d]/, '')
+      if img_upc.in? upcs
+        FileUtils.cp path, "/home/kinduff/Escritorio/sephora_filtrados/#{img_upc}.jpg"
       end
     end
   end
@@ -137,7 +138,7 @@ class UtilidadesController < ApplicationController
   def importarimg
     # the logos are in a folder with path logos_dir
     start = 0
-    Dir.glob('/home/kinduff/Escritorio/sephora/*.jpg').each do |logo_path|
+    Dir.glob('/home/kinduff/Escritorio/sephora_filtrados/*.jpg').each do |logo_path|
       if File.basename(logo_path)[0]!= '.' and !File.directory? logo_path
 
         upc = File.basename(logo_path, '.*') #filename without extension
@@ -254,65 +255,67 @@ class UtilidadesController < ApplicationController
     data = []
     existen = []
     CSV.foreach("/home/kinduff/Escritorio/db.csv") do |row|
-      unless Producto.find_by_upc(row.at(1))
-        sku = row.at(0)
-        upc = row.at(1)
-        marca = row.at(2)
-        if Marca.find_by_slug(marca.parameterize)
-          marca = Marca.find_by_slug(marca.parameterize).id
-        else
-          r = Marca.new
-          r.marca = marca
-          r.slug = marca.parameterize
-          r.save
-          marca = r.id
-        end
-        nombre = row.at(3)
-        nombre_real = row.at(4)
-        # categoria = row.at(5)
-        # parent_id = Categoria.find_by_slug(categoria.parameterize).id
-        # subcategoria = row.at(6)
-        # if (Categoria.find_by_nombre(subcategoria))
-        #   categoria = Categoria.find_by_nombre(subcategoria).id
-        # else
-        #   r = Categoria.new
-        #   r.nombre = subcategoria
-        #   r.slug = subcategoria.parameterize
-        #   r.visible = true
-        #   r.parent_id = parent_id
-        #   r.save
-        #   categoria = r.id
-        # end
-        categoria = Categoria.find(row.at(8)).id
-        unless row.at(10).nil?
-          categoria = Categoria.find(row.at(10)).id
-          # if (Categoria.find_by_nombre(grupo))
-          #   categoria = Categoria.find_by_nombre(grupo).id
-          # else
-          #   r = Categoria.new
-          #   r.nombre = grupo
-          #   r.slug = grupo.parameterize
-          #   r.visible = true
-          #   r.parent_id = categoria
-          #   r.save
-          #   categoria = r.id
-          # end
-        end
-        precio = row.at(11).to_d
-        descripcion = row.at(12)
-        data << {
-          :sku => sku,
-          :upc => upc,
-          :marca_id => marca,
-          :nombre => nombre,
-          :nombre_real => nombre_real,
-          :categoria_id => categoria,
-          :descripcion => descripcion,
-          :precio => precio
-        }
-      else
-        puts "http://sephora.com.mx/producto/#{Producto.find_by_upc(row.at(1)).slug}"
-      end
+    # unless Producto.find_by_upc(row.at(1))
+      sku = row.at(0)
+      upc = row.at(1).gsub(/\s+/, "")
+      marca = 183
+      # if Marca.find_by_slug(marca.parameterize)
+      #   marca = Marca.find_by_slug(marca.parameterize).id
+      # else
+      #   r = Marca.new
+      #   r.marca = marca
+      #   r.slug = marca.parameterize
+      #   r.save
+      #   marca = r.id
+      # end
+      nombre = row.at(2)
+      nombre_real = row.at(3)
+      # categoria = row.at(5)
+      # parent_id = Categoria.find_by_slug(categoria.parameterize).id
+      # subcategoria = row.at(6)
+      # if (Categoria.find_by_nombre(subcategoria))
+      #   categoria = Categoria.find_by_nombre(subcategoria).id
+      # else
+      #   r = Categoria.new
+      #   r.nombre = subcategoria
+      #   r.slug = subcategoria.parameterize
+      #   r.visible = true
+      #   r.parent_id = parent_id
+      #   r.save
+      #   categoria = r.id
+      # end
+      categoria = row.at(5)
+      # unless row.at(10).nil?
+      #   categoria = Categoria.find(row.at(10)).id
+      #   # if (Categoria.find_by_nombre(grupo))
+      #   #   categoria = Categoria.find_by_nombre(grupo).id
+      #   # else
+      #   #   r = Categoria.new
+      #   #   r.nombre = grupo
+      #   #   r.slug = grupo.parameterize
+      #   #   r.visible = true
+      #   #   r.parent_id = categoria
+      #   #   r.save
+      #   #   categoria = r.id
+      #   # end
+      # end
+      precio = row.at(6).to_d
+      descripcion = row.at(7)
+      detalles = row.at(8)
+      data << {
+        :sku => sku,
+        :upc => upc,
+        :marca_id => marca,
+        :nombre => nombre,
+        :nombre_real => nombre_real,
+        :categoria_id => categoria,
+        :descripcion => descripcion,
+        :precio => precio,
+        :usos => detalles
+      }
+      # else
+      #   puts "http://sephora.com.mx/producto/#{Producto.find_by_upc(row.at(1)).slug}"
+      # end
     end
     # raise data.inspect
     if(Producto.create(data))
