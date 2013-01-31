@@ -9,6 +9,8 @@
       %p
         = image_tag @categoria.cover.url(:mini)
     %p
+      = f.labelbrtext 'Descripcion', :descripcion, :class => "big full"
+    %p
       = f.file_field :cover
     %p
       = f.labelbrtext "URL cover slug", :urlslug, :class => "big full"
