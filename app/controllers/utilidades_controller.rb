@@ -338,30 +338,52 @@ class UtilidadesController < ApplicationController
   def actualizar
     require 'csv'
     datacount = 0
-    CSV.foreach("/home/kinduff/Escritorio/faced.csv") do |row|
-      if Producto.find_by_upc(row.at(2))
-        p = Producto.find_by_upc(row.at(2))
-        p.sku = row.at 1
-        p.nombre = row.at 5
-        p.nombre_real = row.at 6
-        p.precio = row.at 11
-        p.descripcion = row.at 12
-        p.usos = row.at 13
-        p.ingredientes = 14
+    newcount = 0
+    total = 0
+    CSV.foreach("/home/kinduff/Escritorio/db.csv") do |row|
+      if Producto.find_by_upc(row.at(0))
+        p = Producto.find_by_upc(row.at(0))
+        p.marca_id = Marca.find_by_slug(row.at(1).parameterize)
+        p.nombre = row.at 2
+        p.nombre_real = row.at 3
+        if row.at(5)
+          p.categoria_id = row.at 5
+        else
+          p.categoria_id = row.at 4
+        end
+        p.precio = row.at 6
         p.save
         datacount = datacount + 1
+      else 
+        p = Producto.new
+        p.upc = row.at 0
+        p.marca_id = Marca.find_by_slug(row.at(1).parameterize)
+        p.nombre = row.at 2
+        p.nombre_real = row.at 3
+        if row.at(5)
+          p.categoria_id = row.at 5
+        else
+          p.categoria_id = row.at 4
+        end
+        p.precio = row.at 6
+        p.save
+        newcount = newcount + 1
       end
+      total = total + 1
     end
-    raise "#{datacount} productos actualizados correctamente".inspect
+    raise "#{datacount} productos actualizados correctamente, #{newcount} agregados correctamente. #{datacount+newcount} en db en total. #{total} en csv en total.".inspect
   end
   def desc
     require 'csv'
     datacount = 0
     csvcount = 0
-    CSV.foreach("/home/kinduff/Escritorio/desc.csv") do |row|
-      if Producto.where(:upc => row.at(0)).first
-        p = Producto.where(:upc => row.at(0)).first
-        p.publicado = false
+    CSV.foreach("/home/kinduff/Escritorio/db.csv") do |row|
+      if Producto.where(:upc => row.at(1)).first
+        p = Producto.where(:upc => row.at(1)).first
+        p.sku = row.at(0)
+        p.descripcion = row.at(2)
+        p.ingredientes = row.at(3)
+        p.usos = row.at(4)
         p.save
         datacount = datacount + 1
       end
