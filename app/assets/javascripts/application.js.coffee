@@ -9,11 +9,13 @@ $("#menu ul li").live
     $(this).find('.submenu').hide();
 
 count = 1
-counter = '/2'
+slides = 3
+width = 760
+counter = '/' + slides
 $(".prox.jesus").live "click", ->
   $(this).removeClass('jesus')
-  if $(".slider").css('margin-left') == '-760px'
-    $(".slider").stop().animate {"margin-left": "+=100%"}, "slow", ->
+  if $(".slider").css('margin-left') == '-'+width*(slides-1)+'px'
+    $(".slider").stop().animate {"margin-left": "+="+(slides-1)+"00%"}, "slow", ->
       $(".prox").addClass('jesus')
     count = 1
     $(".prox p").text(count + counter)
@@ -25,9 +27,9 @@ $(".prox.jesus").live "click", ->
 $(".ante.jesus").live "click", ->
   $(this).removeClass('jesus')
   if $(".slider").css('margin-left') == '0px'
-    $(".slider").stop().animate {"margin-left": "-=100%"}, "slow", ->
+    $(".slider").stop().animate {"margin-left": "-="+(slides-1)+"00%"}, "slow", ->
       $(".ante").addClass('jesus')
-    count = 2
+    count = slides
     $(".prox p").text(count + counter)
   else
     $(".slider").stop().animate {"margin-left": "+=100%"}, "slow", ->

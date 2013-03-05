@@ -4,6 +4,9 @@
 // = require widgets
 // = require secciones
 // = require jquery.ui.all
+$withslider: 760px;
+$slides: 3;
+
 img { margin: 0; padding: 0; }
 @media screen and (max-width: 1180px) {
   .flame-left, .copo, .copo2 {
@@ -500,11 +503,11 @@ ul.breadcrumbs{
     #poster {
       height: auto;
       .contenedor {
-          width: 760px;
+          width: $withslider;
           overflow: hidden;
           position: relative;
         .slider {
-            width: 1520px;
+            width: $withslider*$slides;
             font-size: 0;
             position: relative;
           .diapositiva {
