@@ -1,4 +1,5 @@
 class UtilidadesController < ApplicationController
+  http_basic_authenticate_with :name => ENV['U'], :password => ENV['P']
   def parsearparents
     raise 'error' unless Rails.env.development?
 
@@ -390,5 +391,26 @@ class UtilidadesController < ApplicationController
       csvcount = csvcount + 1
     end
     raise "#{datacount}/#{csvcount} productos ocultados correctamente".inspect
+  end
+  def cambiar_marcas
+    require 'csv'
+    gencount = 0
+    count = 0
+    error = 0
+    CSV.foreach("/home/kinduff/Escritorio/marcas.csv") do |row|
+      producto = Producto.where(:upc => row.at(0))
+      marca = Marca.where(:marca => row.at(1))
+      if producto.count == 1 && marca.count == 1
+        r = producto.first
+        r.marca_id = marca.first.id
+        if r.save
+          count += 1
+        else
+          error += 1
+        end
+      end
+      gencount += 1
+    end
+    raise "#{gencount} productos en total. #{count} productos alterados. #{error} productos con error."
   end
 end
