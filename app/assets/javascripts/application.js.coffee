@@ -12,6 +12,7 @@ count = 1
 slides = 3
 width = 760
 counter = '/' + slides
+$(".prox p").text('1' + counter)
 $(".prox.jesus").live "click", ->
   $(this).removeClass('jesus')
   if $(".slider").css('margin-left') == '-'+width*(slides-1)+'px'
