@@ -8,7 +8,7 @@
     = link_to "Editar", edit_producto_path(@producto.id)
   .table.full
     .product.tcell.t35
-      =link_to(image_tag(@producto.foto.url(:normal), :id => "prod", :class => "imgproducto"), @producto.foto.url(:grande), :id => "prodlink")
+      =link_to(image_tag(@producto.foto.url(:normal), :id => "prod", :class => "imgproducto", :itemprop => 'image'), @producto.foto.url(:grande), :id => "prodlink")
       %p.vistagrande
         =link_to "vista grande", @producto.foto.url(:grande), :id => "prodlink"
       .compartir
@@ -26,10 +26,16 @@
       .info
         %span.marcab
           =@producto.marca.marca
-        %span.precio
+        %span.precio{:itemprop => "price"}
           #{number_to_currency(@producto.precio, :precision => 0)}
+        - if @producto.sku
+          %span.sku
+            SKU:
+            %span{:itemprop => "sku"}
+              =@producto.sku
       .producto
-        =@producto.nombre
+        %p{:itemprop => "name"}
+          =@producto.nombre
       - if @producto.presentaciones and @producto.presentaciones.any?
         %ul.presentaciones.nolist.nobullet
           %li{:id => "prodclick"}
@@ -50,15 +56,15 @@
                 %a{:href => "#tab3"} USOS
           .tabcontent
             #tab1.tabdesc
-              %p
+              %div{:itemprop => "description"}
                 =simple_format @producto.descripcion
             - unless @producto.ingredientes.nil? || @producto.ingredientes.size < 4
               #tab2.tabdesc
-                %p
+                %div{:itemprop => "description"}
                   =simple_format @producto.ingredientes
             - unless @producto.usos.nil? || @producto.usos.size < 4
               #tab3.tabdesc
-                %p
+                %div{:itemprop => "description"}
                   =simple_format @producto.usos
       - if @productos_relacionados and @productos_relacionados.any?
         .interesar
