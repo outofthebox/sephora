@@ -131,7 +131,7 @@ class UtilidadesController < ApplicationController
       # img_upc = File.basename(path, ".jpg")[/[a-z]?([0-9]+)/i].gsub(/([^0-9])/, '')
       img_upc = File.basename(path, ".jpg").gsub(/[^\d]/, '')
       if img_upc.in? upcs
-        FileUtils.cp path, "/home/kinduff/Escritorio/sephora_filtrados/#{img_upc}.jpg"
+        FileUtils.mv path, "/home/kinduff/Escritorio/sephora_filtrados/#{img_upc}.jpg"
       end
     end
   end
