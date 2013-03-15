@@ -9,7 +9,7 @@ $("#menu ul li").live
     $(this).find('.submenu').hide();
 
 count = 1
-slides = 3
+slides = 4
 width = 760
 counter = '/' + slides
 $(".prox p").text('1' + counter)
