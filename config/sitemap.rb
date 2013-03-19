@@ -23,7 +23,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/ring-my-bella-1357268', :changefreq => 'monthly', :priority => 0.8
   add '/producto/holiday-2011-gloss-set-ticket-to-glossytown-1357318', :changefreq => 'monthly', :priority => 0.8
   add '/producto/es-crm-top-brass-seph-1343979', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/100-lipliner-thistle-1164714', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/c-herrera-edp-ns-100-m-11114-8411061061602', :changefreq => 'monthly', :priority => 0.8
   add '/producto/es-crm-pot-o-gold-seph-1343987', :changefreq => 'monthly', :priority => 0.8
   add '/producto/age-fitness-homme-50ml-805812', :changefreq => 'monthly', :priority => 0.8
   add '/producto/extreme-party-mascara-black-1291343', :changefreq => 'monthly', :priority => 0.8
@@ -63,8 +63,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/corrector-light-bisque-1317668', :changefreq => 'monthly', :priority => 0.8
   add '/producto/corrector-light-to-medium-bisque-1317676', :changefreq => 'monthly', :priority => 0.8
   add '/producto/corrector-bisque-1317684', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/100-lipliner-twig-1195924', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ck-shock-men-edt-200-ml-n-a-3607342401501', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lip-gloss-greek-holiday-nars-1640-1056969', :changefreq => 'monthly', :priority => 0.8
   add '/producto/corrector-medium-to-dark-bisque-1317692', :changefreq => 'monthly', :priority => 0.8
   add '/producto/corrector-dark-bisque-1317700', :changefreq => 'monthly', :priority => 0.8
   add '/producto/corrector-deep-bisque-1317718', :changefreq => 'monthly', :priority => 0.8
@@ -80,7 +79,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/long-wear-gel-eyeliner-chocolate-shimmer-ink-1287440', :changefreq => 'monthly', :priority => 0.8
   add '/producto/long-wear-gel-eyeliner-black-pearl-1287465', :changefreq => 'monthly', :priority => 0.8
   add '/producto/long-wear-gel-eyeliner-sepia-643239', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/fat-girl-treatment-kit-1328079', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/herrera-men-e-toil-ns-100-m-11072-8411061081600', :changefreq => 'monthly', :priority => 0.8
   add '/producto/shimmer-blush-coral-1291228', :changefreq => 'monthly', :priority => 0.8
   add '/producto/everything-mascara-black-1288232', :changefreq => 'monthly', :priority => 0.8
   add '/producto/crystal-lip-gloss-1287929', :changefreq => 'monthly', :priority => 0.8
@@ -112,7 +111,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/creamy-concealer-kit-warm-natural-1317874', :changefreq => 'monthly', :priority => 0.8
   add '/producto/creamy-concealer-kit-honey-1317882', :changefreq => 'monthly', :priority => 0.8
   add '/producto/creamy-concealer-kit-golden-1317890', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/foot-patrol-2-5-oz-1242452', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/mousse-tendre-nettoyante-125ml-1268929-3348900956032', :changefreq => 'monthly', :priority => 0.8
   add '/producto/cream-shadow-brush-1289719', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hydrating-face-cream-1287952', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rich-lip-color-spf-12-cosmic-raspberry-1352806', :changefreq => 'monthly', :priority => 0.8
@@ -131,7 +130,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/lip-pencil-slopes-1290758', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-pencil-cocoa-1290766', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-pencil-sangria-1290790', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/glamour-gloves-465369', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/poison-edt-100ml-82701-3348900011687', :changefreq => 'monthly', :priority => 0.8
   add '/producto/high-shimmer-lip-gloss-plum-gold-1352467', :changefreq => 'monthly', :priority => 0.8
   add '/producto/metallic-eye-shadow-champagne-quartz-1290808', :changefreq => 'monthly', :priority => 0.8
   add '/producto/metallic-eye-shadow-velvet-plum-metallic-1290816', :changefreq => 'monthly', :priority => 0.8
@@ -145,7 +144,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/creamy-lip-color-rose-1290592', :changefreq => 'monthly', :priority => 0.8
   add '/producto/creamy-lip-color-crystal-pink-1290667', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eye-shadow-heather-1291012', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/rouge-dior-vernis-537-int12-1397868-3348901092302', :changefreq => 'monthly', :priority => 0.8
   add '/producto/shimmer-wash-eye-shadow-eggplant-1291087', :changefreq => 'monthly', :priority => 0.8
   add '/producto/shimmer-wash-eye-shadow-lilac-1291095', :changefreq => 'monthly', :priority => 0.8
   add '/producto/shimmer-wash-eye-shadow-rose-gold-1291103', :changefreq => 'monthly', :priority => 0.8
@@ -172,8 +170,8 @@ SitemapGenerator::Sitemap.create do
   add '/producto/balancing-facial-tonic-5-fl-oz-1229640', :changefreq => 'monthly', :priority => 0.8
   add '/producto/restorative-day-moisture-cream-spf-15-1-fl-oz-1251065', :changefreq => 'monthly', :priority => 0.8
   add '/producto/restorative-night-moisture-cream-1-fl-oz-1251073', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/styliner-noir-black-858654', :changefreq => 'monthly', :priority => 0.8
   add '/producto/recharging-night-moisture-1-4-fl-oz-1161207', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/eyeliner-pencil-kaliste-nars-8014-832568', :changefreq => 'monthly', :priority => 0.8
   add '/producto/restorative-eye-treatment-0-5-fl-oz-1350685', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clarifying-detox-mask-2-8-oz-744888', :changefreq => 'monthly', :priority => 0.8
   add '/producto/smoothing-facial-polish-2-8-oz-1164144', :changefreq => 'monthly', :priority => 0.8
@@ -181,15 +179,16 @@ SitemapGenerator::Sitemap.create do
   add '/producto/clear-complexion-treatment-with-botanical-blast-1-fl-oz-1164094', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clear-complexion-moisturizer-with-botanical-blast-1-4-fl-oz-1269422', :changefreq => 'monthly', :priority => 0.8
   add '/producto/oil-free-nightly-hydration-1-4-fl-oz-1311802', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/purifying-cleansing-gel-5-fl-oz-1227883', :changefreq => 'monthly', :priority => 0.8
   add '/producto/vital-daily-moisture-spf-15-1-4-fl-oz-1161181', :changefreq => 'monthly', :priority => 0.8
   add '/producto/oil-free-daily-hydration-spf-15-1-4-fl-oz-1161157', :changefreq => 'monthly', :priority => 0.8
   add '/producto/soothing-cleansing-cream-5-fl-oz-1227875', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clear-complexion-mask-with-botanical-blast-2-8-oz-1269430', :changefreq => 'monthly', :priority => 0.8
   add '/producto/makeup-breakup-cool-cleansing-oil-5-fl-oz-1227891', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pore-purifying-black-strips-6-strips-1336619', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/brush-on-cream-liner-deep-brown-949313', :changefreq => 'monthly', :priority => 0.8
   add '/producto/antioxidant-recovery-treatment-c-1-fl-oz-744862', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clear-complexion-cleanser-with-botanical-blast-5-fl-oz-1227909', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/purifying-cleansing-gel-5-fl-oz-1227883', :changefreq => 'monthly', :priority => 0.8
   add '/producto/luminizing-black-mask-2-8-oz-1269455', :changefreq => 'monthly', :priority => 0.8
   add '/producto/enlivening-amino-ag-eye-treatment-0-5-fl-oz-1164151', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clear-complexion-tonic-with-botanical-blast-5-fl-oz-1227917', :changefreq => 'monthly', :priority => 0.8
@@ -206,30 +205,32 @@ SitemapGenerator::Sitemap.create do
   add '/producto/chloe-edp-75-ml-1239813', :changefreq => 'monthly', :priority => 0.8
   add '/producto/chloe-love-edp-75-ml-1334788', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clarisonic-brush-head-normal-912204', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/superbalanced-makeup-alabaster-126441', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clarisonic-brush-head-sensitive-912196', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clarisonic-brush-head-delicate-978759', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/rw-laser-foc-smth-mu-sha-30ml-1362656', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/rouge-dior-vernis-579-int12-1397843-3348901092289', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clarisonic-brush-head-deep-pore-cleansing-1340694', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clarisonic-brush-head-body-1239060', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clarisonic-mia-sonic-skin-cleansing-white-system-kit-1200997', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clarisonic-mia-sonic-skin-cleansing-pink-system-kit-1201904', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clarisonic-mia-sonic-skin-cleansing-yellow-system-kit-1335363', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clarisonic-mia-sonic-skin-cleansing-lavender-system-kit-1311976', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/superbalanced-makeup-nude-beige-479758', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/polvo-libre-02-diorskin-nude-fdt-1142249-3348900860483', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clarisonic-mia-sonic-skin-cleansing-blue-system-kit-1335389', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rw-laser-foc-smth-mu-sha-30ml-1362599', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rw-laser-foc-smth-mu-sha-30ml-1362623', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rw-laser-foc-smth-mu-sha-30ml-1362631', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/rw-laser-foc-smth-mu-sha-30ml-1362656', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rw-laser-foc-smth-mu-sha-30ml-1362664', :changefreq => 'monthly', :priority => 0.8
   add '/producto/even-better-makeup-spf-15-neutral-1160381', :changefreq => 'monthly', :priority => 0.8
   add '/producto/even-better-makeup-spf-15-honey-7-1151158', :changefreq => 'monthly', :priority => 0.8
   add '/producto/even-better-makeup-spf-15-vanilla-1332246', :changefreq => 'monthly', :priority => 0.8
   add '/producto/even-better-makeup-spf-15-beige-9-1151166', :changefreq => 'monthly', :priority => 0.8
   add '/producto/even-better-makeup-spf-15-sand-1160449', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pc-es-lavish-mink-n-a-027131759430', :changefreq => 'monthly', :priority => 0.8
   add '/producto/even-better-makeup-spf-15-golden-neutral-1160431', :changefreq => 'monthly', :priority => 0.8
   add '/producto/even-better-makeup-spf-15-nutty-1332188', :changefreq => 'monthly', :priority => 0.8
   add '/producto/even-better-makeup-spf-15-cashew-1332238', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/rouge-dior-vernis-659-int12-1397850-3348901092296', :changefreq => 'monthly', :priority => 0.8
   add '/producto/superbalanced-makeup-ivory-52936', :changefreq => 'monthly', :priority => 0.8
   add '/producto/superbalanced-makeup-cream-chamois-52944', :changefreq => 'monthly', :priority => 0.8
   add '/producto/superbalanced-makeup-vanilla-52951', :changefreq => 'monthly', :priority => 0.8
@@ -237,12 +238,10 @@ SitemapGenerator::Sitemap.create do
   add '/producto/superbalanced-makeup-neutral-52977', :changefreq => 'monthly', :priority => 0.8
   add '/producto/superbalanced-makeup-porcelain-beige-52985', :changefreq => 'monthly', :priority => 0.8
   add '/producto/superbalanced-makeup-sand-52993', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/superbalanced-makeup-alabaster-126441', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/superbalanced-makeup-nude-beige-479758', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/long-last-glosswear-spf-15-tenderheart-1072370', :changefreq => 'monthly', :priority => 0.8
   add '/producto/perfectly-real-makeup-shade-02-742197', :changefreq => 'monthly', :priority => 0.8
   add '/producto/perfectly-real-makeup-shade-08-742213', :changefreq => 'monthly', :priority => 0.8
   add '/producto/perfectly-real-makeup-shade-10-742221', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lip-liner-pencil-tonga-nars-9025-1162197', :changefreq => 'monthly', :priority => 0.8
   add '/producto/perfectly-real-makeup-shade-12-742239', :changefreq => 'monthly', :priority => 0.8
   add '/producto/perfectly-real-makeup-shade-14-742247', :changefreq => 'monthly', :priority => 0.8
   add '/producto/perfectly-real-makeup-shade-18-742254', :changefreq => 'monthly', :priority => 0.8
@@ -254,9 +253,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/bottom-lash-mascara-shade-02-1305366', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brush-on-cream-liner-black-honey-949297', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brush-on-cream-liner-true-black-949305', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/brush-on-cream-liner-deep-brown-949313', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lid-smoothie-bit-of-honey-1353507', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/long-last-glosswear-spf-15-mystic-1072396', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lid-smoothie-cashew-later-1353515', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lid-smoothie-cute-cumber-1353523', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lid-smoothie-impromptu-blu-1353531', :changefreq => 'monthly', :priority => 0.8
@@ -267,6 +264,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/all-about-eyes-concealer-medium-petal-899161', :changefreq => 'monthly', :priority => 0.8
   add '/producto/line-smoothing-concealer-light-472597', :changefreq => 'monthly', :priority => 0.8
   add '/producto/line-smoothing-concealer-moderately-fair-472605', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pc-es-midgnight-star-n-a-027131760191', :changefreq => 'monthly', :priority => 0.8
   add '/producto/line-smoothing-concealer-medium-472621', :changefreq => 'monthly', :priority => 0.8
   add '/producto/airbrush-concealer-illuminates-perfects-fair-685891', :changefreq => 'monthly', :priority => 0.8
   add '/producto/airbrush-concealer-illuminates-perfects-medium-685958', :changefreq => 'monthly', :priority => 0.8
@@ -280,8 +278,8 @@ SitemapGenerator::Sitemap.create do
   add '/producto/colour-surge-butter-shine-lipstick-berry-blush-886184', :changefreq => 'monthly', :priority => 0.8
   add '/producto/colour-surge-butter-shine-lipstick-perfect-plum-886218', :changefreq => 'monthly', :priority => 0.8
   add '/producto/colour-surge-butter-shine-lipstick-pink-goddess-886234', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lip-gloss-female-trouble-nars-1643-1099902', :changefreq => 'monthly', :priority => 0.8
   add '/producto/colour-surge-butter-shine-lipstick-cranberry-cream-886242', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/long-last-glosswear-spf-15-brandy-twist-1072404', :changefreq => 'monthly', :priority => 0.8
   add '/producto/colour-surge-butter-shine-lipstick-pink-a-boo-930974', :changefreq => 'monthly', :priority => 0.8
   add '/producto/colour-surge-butter-shine-lipstick-baby-baby-930982', :changefreq => 'monthly', :priority => 0.8
   add '/producto/colour-surge-butter-shine-lipstick-adore-u-931014', :changefreq => 'monthly', :priority => 0.8
@@ -310,8 +308,10 @@ SitemapGenerator::Sitemap.create do
   add '/producto/long-last-glosswear-spf-15-fireberry-1072347', :changefreq => 'monthly', :priority => 0.8
   add '/producto/long-last-glosswear-spf-15-cabana-crush-1072354', :changefreq => 'monthly', :priority => 0.8
   add '/producto/long-last-glosswear-spf-15-whisper-1072362', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/long-last-glosswear-spf-15-tenderheart-1072370', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/trat-rostro-bio-high-rech-energy-shot-n-a-3605540608746', :changefreq => 'monthly', :priority => 0.8
   add '/producto/long-last-glosswear-spf-15-stellar-plum-1072388', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/long-last-glosswear-spf-15-mystic-1072396', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/long-last-glosswear-spf-15-brandy-twist-1072404', :changefreq => 'monthly', :priority => 0.8
   add '/producto/long-last-glosswear-spf-15-bamboo-pink-1072412', :changefreq => 'monthly', :priority => 0.8
   add '/producto/redness-solutions-mu-cal-30ml-1271014', :changefreq => 'monthly', :priority => 0.8
   add '/producto/fresh-bloom-all-over-colour-peony-990952', :changefreq => 'monthly', :priority => 0.8
@@ -336,10 +336,10 @@ SitemapGenerator::Sitemap.create do
   add '/producto/colour-surge-eye-shadow-duo-blackberry-frost-887950', :changefreq => 'monthly', :priority => 0.8
   add '/producto/colour-surge-eye-shadow-duo-double-date-837518', :changefreq => 'monthly', :priority => 0.8
   add '/producto/colour-surge-eye-shadow-duo-like-mink-837526', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/long-last-soft-shine-lipstick-violet-berry-991208', :changefreq => 'monthly', :priority => 0.8
   add '/producto/colour-surge-eye-shadow-duo-rose-wine-837542', :changefreq => 'monthly', :priority => 0.8
   add '/producto/colour-surge-eye-shadow-trio-totally-neutral-1032192', :changefreq => 'monthly', :priority => 0.8
   add '/producto/colour-surge-eye-shadow-trio-come-heather-1032234', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/cobra-n-a-604214383609', :changefreq => 'monthly', :priority => 0.8
   add '/producto/colour-surge-eye-shadow-trio-coral-reefs-1078583', :changefreq => 'monthly', :priority => 0.8
   add '/producto/colour-surge-eye-shadow-matte-single-french-vanilla-1100833', :changefreq => 'monthly', :priority => 0.8
   add '/producto/quickliner-for-lips-lipblush-71571', :changefreq => 'monthly', :priority => 0.8
@@ -350,10 +350,10 @@ SitemapGenerator::Sitemap.create do
   add '/producto/quickliner-for-lips-crushed-berry-321349', :changefreq => 'monthly', :priority => 0.8
   add '/producto/quickliner-for-lips-bamboo-504605', :changefreq => 'monthly', :priority => 0.8
   add '/producto/quickliner-for-lips-rich-red-666859', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/eyeliner-pencil-kaliste-nars-8014-832568', :changefreq => 'monthly', :priority => 0.8
   add '/producto/moisture-surge-tinted-moisturizer-spf-15-shade-02-shade-02-1322528', :changefreq => 'monthly', :priority => 0.8
   add '/producto/moisture-surge-tinted-moisturizer-spf-15-shade-03-shade-03-1322536', :changefreq => 'monthly', :priority => 0.8
   add '/producto/moisture-surge-tinted-moisturizer-spf-15-shade-04-shade-04-1322544', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/rouge-auto-11-ral-142-fleur-de-feu-1335793', :changefreq => 'monthly', :priority => 0.8
   add '/producto/moisture-surge-tinted-moisturizer-spf-15-shade-05-shade-05-1322551', :changefreq => 'monthly', :priority => 0.8
   add '/producto/true-bronze-pressed-powder-bronzer-sunkissed-847517', :changefreq => 'monthly', :priority => 0.8
   add '/producto/long-last-soft-shine-lipstick-creamy-nude-69351', :changefreq => 'monthly', :priority => 0.8
@@ -365,12 +365,11 @@ SitemapGenerator::Sitemap.create do
   add '/producto/long-last-soft-shine-lipstick-bamboo-pink-411611', :changefreq => 'monthly', :priority => 0.8
   add '/producto/long-last-soft-shine-lipstick-sugared-maple-991125', :changefreq => 'monthly', :priority => 0.8
   add '/producto/long-last-soft-shine-lipstick-merlot-991182', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/long-last-soft-shine-lipstick-violet-berry-991208', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lip-gloss-ophelia-nars-1647-1222439', :changefreq => 'monthly', :priority => 0.8
   add '/producto/acne-solutions-liquid-makeup-fresh-ivory-1237221', :changefreq => 'monthly', :priority => 0.8
   add '/producto/acne-solutions-liquid-makeup-neutral-1237239', :changefreq => 'monthly', :priority => 0.8
   add '/producto/acne-solutions-liquid-makeup-fresh-vanilla-1237247', :changefreq => 'monthly', :priority => 0.8
   add '/producto/acne-solutions-liquid-makeup-fresh-beige-1237254', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ck-shock-woman-edt-200-ml-n-a-3607342401822', :changefreq => 'monthly', :priority => 0.8
   add '/producto/acne-solutions-liquid-makeup-fresh-sand-1237312', :changefreq => 'monthly', :priority => 0.8
   add '/producto/acne-solutions-liquid-makeup-golden-1237346', :changefreq => 'monthly', :priority => 0.8
   add '/producto/acne-solutions-liquid-makeup-fresh-honey-1315027', :changefreq => 'monthly', :priority => 0.8
@@ -382,6 +381,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/lash-power-mascara-dark-chocolate-1060748', :changefreq => 'monthly', :priority => 0.8
   add '/producto/high-lengths-mascara-black-1230663', :changefreq => 'monthly', :priority => 0.8
   add '/producto/high-lengths-mascara-brown-1230671', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lip-gloss-easy-lover-nars-1648-1222447', :changefreq => 'monthly', :priority => 0.8
   add '/producto/high-impact-mascara-black-711267', :changefreq => 'monthly', :priority => 0.8
   add '/producto/high-impact-mascara-black-brown-711275', :changefreq => 'monthly', :priority => 0.8
   add '/producto/high-impact-curling-mascara-black-1147271', :changefreq => 'monthly', :priority => 0.8
@@ -395,6 +395,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/superpowder-double-face-makeup-matte-beige-51938', :changefreq => 'monthly', :priority => 0.8
   add '/producto/superpowder-double-face-makeup-matte-honey-51946', :changefreq => 'monthly', :priority => 0.8
   add '/producto/superpowder-double-face-makeup-matte-neutral-51979', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/g-spot-1365048', :changefreq => 'monthly', :priority => 0.8
   add '/producto/superpowder-double-face-makeup-matte-medium-479782', :changefreq => 'monthly', :priority => 0.8
   add '/producto/superbalanced-powder-makeup-spf-15-natural-2-1189745', :changefreq => 'monthly', :priority => 0.8
   add '/producto/superbalanced-powder-makeup-spf-15-natural-3-1189752', :changefreq => 'monthly', :priority => 0.8
@@ -406,6 +407,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/chubby-stick-moisturizing-balm-whole-lotta-honey-1307867', :changefreq => 'monthly', :priority => 0.8
   add '/producto/chubby-stick-moisturizing-balm-fuller-fig-1307875', :changefreq => 'monthly', :priority => 0.8
   add '/producto/chubby-stick-moisturizing-balm-mega-melon-1307883', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/quickliner-for-eyes-moss-557421', :changefreq => 'monthly', :priority => 0.8
   add '/producto/chubby-stick-moisturizing-balm-chunky-cherry-1307891', :changefreq => 'monthly', :priority => 0.8
   add '/producto/chubby-stick-moisturizing-balm-woppin-watermelon-1307909', :changefreq => 'monthly', :priority => 0.8
   add '/producto/chubby-stick-moisturizing-balm-super-strawberry-1307917', :changefreq => 'monthly', :priority => 0.8
@@ -419,7 +421,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/quickliner-for-eyes-really-black-711176', :changefreq => 'monthly', :priority => 0.8
   add '/producto/quickliner-for-eyes-blue-grey-711184', :changefreq => 'monthly', :priority => 0.8
   add '/producto/quickliner-for-eyes-dark-chocolate-557371', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/quickliner-for-eyes-moss-557421', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lip-liner-pencil-borneo-nars-9006-222026', :changefreq => 'monthly', :priority => 0.8
   add '/producto/quickliner-for-eyes-navy-557439', :changefreq => 'monthly', :priority => 0.8
   add '/producto/quickliner-for-eyes-grape-557447', :changefreq => 'monthly', :priority => 0.8
   add '/producto/colour-surge-eye-shadow-soft-shimmer-beige-shimmer-799668', :changefreq => 'monthly', :priority => 0.8
@@ -435,19 +437,19 @@ SitemapGenerator::Sitemap.create do
   add '/producto/coach-poppy-flower-100ml-1353788', :changefreq => 'monthly', :priority => 0.8
   add '/producto/coach-poppy-flower-50ml-1353796', :changefreq => 'monthly', :priority => 0.8
   add '/producto/coach-poppy-flower-30ml-1353804', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/rubor-dior-blush-passion-fruit-1021153', :changefreq => 'monthly', :priority => 0.8
   add '/producto/togentleman-edtvapo-100ml-1292275', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rosetheone-edpvapo-75ml-1215011', :changefreq => 'monthly', :priority => 0.8
   add '/producto/theone-formen-edtvapo-100ml-1127570', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lightblue-ph-edtvapo-125ml-1019991', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lightblue-edtvapo-100ml-563338', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/barniz-de-unas-dior-vernis-999-1356401', :changefreq => 'monthly', :priority => 0.8
   add '/producto/dg-ph-edtvapo-125ml-13383', :changefreq => 'monthly', :priority => 0.8
   add '/producto/theone-edpvapo-75ml-981530', :changefreq => 'monthly', :priority => 0.8
   add '/producto/creme-de-rose-1223338', :changefreq => 'monthly', :priority => 0.8
   add '/producto/dior-addict-lip-glowlipstick-1162650', :changefreq => 'monthly', :priority => 0.8
   add '/producto/diorskin-nude-liquid-foundation-dark-beige-050-1142207', :changefreq => 'monthly', :priority => 0.8
   add '/producto/diorskin-nude-liquid-foundation-dark-sand-051-1142215', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/rubor-dior-blush-passion-fruit-1021153', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/polvo-libre-03-diorskin-nude-fdt-1142264-3348900860490', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rubor-dior-blush-cinnamon-brown-1021179', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rubor-dior-blush-glowing-color-powder-1021211', :changefreq => 'monthly', :priority => 0.8
   add '/producto/diorblush-889-fall-int11-1372994', :changefreq => 'monthly', :priority => 0.8
@@ -466,7 +468,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/barniz-de-unas-dior-vernis-853-1356393', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-dior-vernis-887-int11-1374776', :changefreq => 'monthly', :priority => 0.8
   add '/producto/barniz-de-unas-dior-vernis-906-1290550', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/make-up-bag-leather-1390160-400013901606', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/barniz-de-unas-dior-vernis-999-1356401', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rubor-dior-blush-bois-rose-1021229', :changefreq => 'monthly', :priority => 0.8
   add '/producto/corrector-diorskin-sculpt-concealer-003-865923', :changefreq => 'monthly', :priority => 0.8
   add '/producto/dior-addict-2-edt-100ml-857896', :changefreq => 'monthly', :priority => 0.8
@@ -486,25 +488,24 @@ SitemapGenerator::Sitemap.create do
   add '/producto/labial-new-dior-addict-680-1315472', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-new-dior-addict-682-1315480', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-new-dior-addict-745-1315506', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/giftset-ck-2pc-shock-woman-edt-200-ml-n-a-3607342334496', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-new-dior-addict-750-1315514', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-new-dior-addict-762-1315522', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-new-dior-addict-864-1315571', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-new-dior-addict-865-1315589', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-new-dior-addict-881-1315597', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-new-dior-addict-963-1315605', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/delineador-p-labios-dior-contour-433-94193-3348900176492', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-new-dior-addict-991-1315639', :changefreq => 'monthly', :priority => 0.8
   add '/producto/jadore-leau-125ml-1165448', :changefreq => 'monthly', :priority => 0.8
   add '/producto/mu-lash-wardrobing-offer-int-2h11-1373059', :changefreq => 'monthly', :priority => 0.8
   add '/producto/coul-fap-3-couleurs-051-int11-1358381', :changefreq => 'monthly', :priority => 0.8
   add '/producto/coul-fap-3-couleurs-091-fall-int11-1358399', :changefreq => 'monthly', :priority => 0.8
   add '/producto/coul-fap-3-couleurs-291-fall-int11-1358407', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/polvo-libre-04-diorskin-nude-fdt-1142272-3348900860513', :changefreq => 'monthly', :priority => 0.8
   add '/producto/coul-fap-3-couleurs-481-int11-1358415', :changefreq => 'monthly', :priority => 0.8
   add '/producto/coul-fap-3-couleurs-571-int11-1358423', :changefreq => 'monthly', :priority => 0.8
   add '/producto/coul-fap-3-couleurs-781-int11-1358431', :changefreq => 'monthly', :priority => 0.8
   add '/producto/mascara-diorshow-waterp-black-838763', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/dsk-forever-fdt-cpt-030-int11-1373117', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lip-gloss-dolce-vita-nars-1639n-1056951', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lo10-mascara-diorshow-maximizer001-1255462', :changefreq => 'monthly', :priority => 0.8
   add '/producto/crayon-eyeliner-waterp-trinidad-black-838821', :changefreq => 'monthly', :priority => 0.8
   add '/producto/delineador-ojos-dior-crayon-eyeliner-wpf-838847', :changefreq => 'monthly', :priority => 0.8
@@ -517,20 +518,18 @@ SitemapGenerator::Sitemap.create do
   add '/producto/brillo-labios-dior-addict-ultra-gloss686-1241512', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brillo-labios-dior-addict-ultra-gloss856-1241538', :changefreq => 'monthly', :priority => 0.8
   add '/producto/dsk-forever-fdt-cpt-020-int11-1373075', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/dior-addict-shine-edt-100ml-1061233-3348900821880', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/dsk-forever-fdt-cpt-030-int11-1373117', :changefreq => 'monthly', :priority => 0.8
   add '/producto/dsk-forever-fdt-cpt-040-int11-1373133', :changefreq => 'monthly', :priority => 0.8
   add '/producto/dsk-forever-fdt-fl-020-30ml-int11-1373174', :changefreq => 'monthly', :priority => 0.8
   add '/producto/dsk-forever-fdt-fl-030-30ml-int11-1373216', :changefreq => 'monthly', :priority => 0.8
   add '/producto/dsk-forever-fdt-fl-040-30ml-int11-1373257', :changefreq => 'monthly', :priority => 0.8
   add '/producto/base-maquillaje-diorskin-compact-gel-020-1290477', :changefreq => 'monthly', :priority => 0.8
   add '/producto/base-maquillaje-diorskin-compact-gel-030-1290485', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/styliner-noir-black-858654', :changefreq => 'monthly', :priority => 0.8
   add '/producto/jadore-body-lotion-1078864', :changefreq => 'monthly', :priority => 0.8
   add '/producto/jadore-edp-100ml-420588', :changefreq => 'monthly', :priority => 0.8
   add '/producto/skin-flash-candlelight-732057', :changefreq => 'monthly', :priority => 0.8
   add '/producto/skin-flash-sunbeam-732065', :changefreq => 'monthly', :priority => 0.8
   add '/producto/dior-homme-edt-100ml-947317', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lip-gloss-greek-holiday-nars-1640-1056969', :changefreq => 'monthly', :priority => 0.8
   add '/producto/mascara-diorshow-extase-090-1223874', :changefreq => 'monthly', :priority => 0.8
   add '/producto/dior-liner-91629', :changefreq => 'monthly', :priority => 0.8
   add '/producto/dior-liner-91645', :changefreq => 'monthly', :priority => 0.8
@@ -538,11 +537,11 @@ SitemapGenerator::Sitemap.create do
   add '/producto/dshow-liner-waterproof-098-fall-int11-1358456', :changefreq => 'monthly', :priority => 0.8
   add '/producto/dshow-liner-waterproof-178-fall-int11-1358464', :changefreq => 'monthly', :priority => 0.8
   add '/producto/dshow-liner-waterproof-468-int11-1358472', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pink-shimmer-n-a-027131699040', :changefreq => 'monthly', :priority => 0.8
   add '/producto/dshow-liner-waterproof-788-int11-1358498', :changefreq => 'monthly', :priority => 0.8
   add '/producto/dshow-liner-waterproof-888-int11-1358480', :changefreq => 'monthly', :priority => 0.8
   add '/producto/browstyler-1178219', :changefreq => 'monthly', :priority => 0.8
   add '/producto/mascara-pestanas-diorshow-iconic-extr090-1162635', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/doux-gommage-express-75ml-1281278-3348900953246', :changefreq => 'monthly', :priority => 0.8
   add '/producto/dior-skin-sculpt-beige-clair-865857', :changefreq => 'monthly', :priority => 0.8
   add '/producto/dior-skin-sculpt-beige-moyen-865873', :changefreq => 'monthly', :priority => 0.8
   add '/producto/dior-skin-sculpt-miel-865881', :changefreq => 'monthly', :priority => 0.8
@@ -554,12 +553,13 @@ SitemapGenerator::Sitemap.create do
   add '/producto/b-de-maquillaje-diorskin-nude-fluido-020-1142124', :changefreq => 'monthly', :priority => 0.8
   add '/producto/b-de-maquillaje-diorskin-nude-fluido-030-1142165', :changefreq => 'monthly', :priority => 0.8
   add '/producto/b-de-maquillaje-diorskin-nude-fluido-1142173', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/rouge-auto-11-lips-160-bal-de-mai-1335819', :changefreq => 'monthly', :priority => 0.8
   add '/producto/b-de-maquillaje-diorskin-nude-fluido-040-1142199', :changefreq => 'monthly', :priority => 0.8
   add '/producto/base-maquillaje-diorskin-crystal-nude001-1290451', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lp-11-maquillaje-dior-002-1331578', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lp-11-maquillaje-dior-003-1331586', :changefreq => 'monthly', :priority => 0.8
   add '/producto/addict-lip-polish-radiance-expert-1165471', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/rouge-dior-644-1272608', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/rouge-dior-vernis-257-int12-1397876-3348901093712', :changefreq => 'monthly', :priority => 0.8
   add '/producto/addict-lip-polish-fresh-expert-1165497', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brillo-labios-dior-addict-lip-polish-003-1165513', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brillo-dior-addict-lip-maximizer-001-1015031', :changefreq => 'monthly', :priority => 0.8
@@ -574,10 +574,8 @@ SitemapGenerator::Sitemap.create do
   add '/producto/labial-rouge-dior-434-1272624', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-rouge-dior-526-1272707', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-rouge-dior-638-1272616', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/rouge-dior-644-1272608', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-rouge-dior-766-1272541', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-rouge-dior-999-1272590', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/rouge-auto-11-lips-164-chamade-1335850', :changefreq => 'monthly', :priority => 0.8
   add '/producto/dior-homme-sport-edt-100ml-1111715', :changefreq => 'monthly', :priority => 0.8
   add '/producto/mascara-dior-show-noir-651323', :changefreq => 'monthly', :priority => 0.8
   add '/producto/maquillaje-diorskin-airflash-200-70ml-978817', :changefreq => 'monthly', :priority => 0.8
@@ -585,32 +583,33 @@ SitemapGenerator::Sitemap.create do
   add '/producto/maquillaje-diorskin-airflash-400-70ml-978841', :changefreq => 'monthly', :priority => 0.8
   add '/producto/miss-dior-cherie-edt-100ml-1229665', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sombras-dior-5couleurs-754-1331552', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lip-liner-pencil-morocco-nars-9007-222034', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lp-11-sombras-dior-034-1302967', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/duo-express-demaquillant-yeux-125ml-1265495-3348900953239', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sombras-dior-5-colores-hc-970-1223296', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sombras-dior-5-colores-designer-008-1165240', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sombras-dior-5-colores-designer-208-1165273', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sombras-dior-5-colores-designer-508-1165356', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/terre-de-hermes-edt-915447', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sombras-dior-5-colores-designer-708-1165372', :changefreq => 'monthly', :priority => 0.8
   add '/producto/palette-5-couleurs-designer-808-1266196', :changefreq => 'monthly', :priority => 0.8
   add '/producto/be-delicious-edt-30-ml-824219', :changefreq => 'monthly', :priority => 0.8
   add '/producto/be-delicious-edp-50-ml-795294', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/darkhorse-n-a-604214385801', :changefreq => 'monthly', :priority => 0.8
   add '/producto/be-delicious-edp-100-ml-795302', :changefreq => 'monthly', :priority => 0.8
   add '/producto/be-delicious-body-lotion-150ml-795351', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brandt-collagen-eye-serum-1330828', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brandt-lineless-cream-1161470', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brandt-lineless-eye-cream-1161488', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brdt-time-arrest-nck-crm-1177682', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pleasure-bloom-30ml-30ml-n-a-027131814856', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brandt-pnm-vacuum-cleaner-1161645', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brandt-lineless-cleanse-1161454', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/edp-100ml-emporio-armani-diamonds-1037167', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brandt-blmsh-intensolutio-1161561', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brandt-prs-no-mre-ant-age-1236314', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brdt-flaws-nm-r3p-cream-1177716', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brdt-flaws-nm-r3p-eye-crm-1177724', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brandt-pnm-pore-effect-1161652', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brandt-lineless-moisture-1161496', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/terre-de-hermes-1231869', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brandt-blmsh-no-more-hydr-1161553', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brdt-time-arrest-lsr-tght-1177690', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brandt-pnm-refiner-1161629', :changefreq => 'monthly', :priority => 0.8
@@ -620,9 +619,9 @@ SitemapGenerator::Sitemap.create do
   add '/producto/brdt-time-arrest-creme-1177641', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brandt-lines-no-more-1145416', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brdt-time-arrest-eye-serm-1177674', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/rouge-dior-vernis-537-int12-1397868-3348901092302', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brandt-pore-no-more-w-tnt-1330810', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pr-prevage-adv-anti-aging-serum-50ml-1237064', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/eternity-aqua-edt-200-ml-n-a-3607342378353', :changefreq => 'monthly', :priority => 0.8
   add '/producto/black-tea-face-crm-30g-1100734', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sug-lychee-100ml-spray-974501', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sugar-lychee-edp-rollerball-1228428', :changefreq => 'monthly', :priority => 0.8
@@ -648,23 +647,26 @@ SitemapGenerator::Sitemap.create do
   add '/producto/sug-lych-300ml-gel-974568', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sug-lem-300ml-lotion-974527', :changefreq => 'monthly', :priority => 0.8
   add '/producto/black-tea-face-mask-100mlg-1100742', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/edt75ml-giorgio-armani-diamonds-he-1118462', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lip-liner-pencil-rosebud-nars-9008-222042', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rose-100ml-face-mask-562090', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sugar-125g-face-polish-562082', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/gc-flora-eau-fraiche-edtvapo-75ml-1318542', :changefreq => 'monthly', :priority => 0.8
   add '/producto/supernova-7g-mascara-864447', :changefreq => 'monthly', :priority => 0.8
   add '/producto/soy-face-serum-1266048', :changefreq => 'monthly', :priority => 0.8
   add '/producto/soy-face-cleanser-487694', :changefreq => 'monthly', :priority => 0.8
   add '/producto/soy-fac-clean-to-go-1059880', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/edt-75-ml-armani-code-homme-827055', :changefreq => 'monthly', :priority => 0.8
   add '/producto/black-tea-face-serum-1310192', :changefreq => 'monthly', :priority => 0.8
   add '/producto/black-tea-eye-cream-1191824', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/rouge-auto11-lips-101-voilette-de-mad-1335710', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sugar-honey-1332329', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sugar-4-3g-lip-treatment-683847', :changefreq => 'monthly', :priority => 0.8
   add '/producto/umbr-cly-fc-treat-720946', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sugar-passion-1361005', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/edt-125-ml-armani-code-homme-1007541', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/trace-lip-liner-secret-1034198', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sugar-plum-1260157', :changefreq => 'monthly', :priority => 0.8
   add '/producto/ghd-classic-1-styler-1236637', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/rouge-auto-11-lips-121-rouge-denfer-1335744', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/edp-100ml-emporio-armani-diamonds-1037167', :changefreq => 'monthly', :priority => 0.8
   add '/producto/edp-100ml-giorgio-armani-acqua-di-gioia-1284256', :changefreq => 'monthly', :priority => 0.8
   add '/producto/edt-100-ml-armani-aqua-di-gio-homme-397299', :changefreq => 'monthly', :priority => 0.8
   add '/producto/edt-200-ml-armani-acqua-di-gio-homme-1046168', :changefreq => 'monthly', :priority => 0.8
@@ -672,23 +674,22 @@ SitemapGenerator::Sitemap.create do
   add '/producto/edp-100-ml-armani-emporio-elle-397240', :changefreq => 'monthly', :priority => 0.8
   add '/producto/edt-100-ml-armani-mania-homme-623462', :changefreq => 'monthly', :priority => 0.8
   add '/producto/edp-75ml-armani-code-donna-912360', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/edt75ml-giorgio-armani-diamonds-he-1118462', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/edt-75-ml-armani-code-homme-827055', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/edt-125-ml-armani-code-homme-1007541', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/rouge-dior-vernis-579-int12-1397843-3348901092289', :changefreq => 'monthly', :priority => 0.8
   add '/producto/edt-75ml-giorgio-armani-code-sport-1355593', :changefreq => 'monthly', :priority => 0.8
   add '/producto/edt-75ml-giorgio-armani-code-sport-1366749', :changefreq => 'monthly', :priority => 0.8
   add '/producto/edt-100-ml-armani-homme-150474', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/eau-micellaire-demaquillante-express-200ml-1281252-3348900953222', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/gc-flora-eau-fraiche-edtvapo-75ml-1318542', :changefreq => 'monthly', :priority => 0.8
   add '/producto/gucci-guilty-intense-edp-75ml-1368943', :changefreq => 'monthly', :priority => 0.8
   add '/producto/gucci-guilty-ph-intense-edt-90ml-1370758', :changefreq => 'monthly', :priority => 0.8
   add '/producto/flora-by-gucci-edpvapo-75ml-1236900', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/terracotta-06-light-br-pdr-01-blon-905497', :changefreq => 'monthly', :priority => 0.8
   add '/producto/flora-by-gucci-edt-vapo-75ml-1174929', :changefreq => 'monthly', :priority => 0.8
   add '/producto/gc-guilty-ph-edt-vapo-90ml-1334994', :changefreq => 'monthly', :priority => 0.8
   add '/producto/guilty-edtvapo-75ml-1292572', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/rouge-auto-11-lips-123-habit-rouge-1335751', :changefreq => 'monthly', :priority => 0.8
   add '/producto/met-08-sum-base-perfectrice-pearls-1100130', :changefreq => 'monthly', :priority => 0.8
   add '/producto/terra-09-kabuki-brush-1153659', :changefreq => 'monthly', :priority => 0.8
   add '/producto/terra-11-skin-fdt-blonde-01-1326297', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/rouge-dior-vernis-659-int12-1397850-3348901092296', :changefreq => 'monthly', :priority => 0.8
   add '/producto/terra-11-skin-fdt-brunette-02-1326305', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-g-09-lips-3-galia-1177161', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-g-09-lips-8-gisele-1177187', :changefreq => 'monthly', :priority => 0.8
@@ -698,19 +699,28 @@ SitemapGenerator::Sitemap.create do
   add '/producto/rouge-g-09-lips-43-ginger-1177336', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-g-09-lips-41-gipsy-1177344', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-g-09-lips-20-gina-1177369', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/all-day-oil-control-lotion-973651', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-g-09-lips-21-gala-1177385', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-g-09-lips-22-greta-1177393', :changefreq => 'monthly', :priority => 0.8
   add '/producto/my-insolence-edt-100-ml-1029412', :changefreq => 'monthly', :priority => 0.8
   add '/producto/r-auto-11-ral-165-champs-elysees-1335868', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/rouge-auto-11-lips-124-samsara-1335769', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/rouge-auto-11-lips-125-vega-1338607', :changefreq => 'monthly', :priority => 0.8
   add '/producto/terracotta-07-sun-spr-01-light-981605', :changefreq => 'monthly', :priority => 0.8
   add '/producto/terracotta-07-sun-spr-02-medium-981621', :changefreq => 'monthly', :priority => 0.8
   add '/producto/par-09-lotus-noir-new-precious-ligth-02-1197938', :changefreq => 'monthly', :priority => 0.8
   add '/producto/par-09-lotus-noir-new-precious-ligth-03-1197946', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lip-liner-pencil-amazon-nars-9010-222067', :changefreq => 'monthly', :priority => 0.8
   add '/producto/insolence-edt-vapo100-ml-947846', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-auto-11-lips-100-apres-londee-1338599', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/rouge-auto11-lips-101-voilette-de-mad-1335710', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/rouge-auto-11-lips-121-rouge-denfer-1335744', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/rouge-auto-11-lips-123-habit-rouge-1335751', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/rouge-auto-11-lips-124-samsara-1335769', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/rouge-auto-11-lips-125-vega-1338607', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/rouge-auto-11-ral-142-fleur-de-feu-1335793', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/rouge-auto-11-lips-160-bal-de-mai-1335819', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/rouge-auto-11-lips-164-chamade-1335850', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-auto-11-lips-167-guet-apens-1335876', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lip-liner-pencil-fantasia-nars-9012-222083', :changefreq => 'monthly', :priority => 0.8
   add '/producto/kk-07-spr-gloss-821-fraise-a-c-981373', :changefreq => 'monthly', :priority => 0.8
   add '/producto/kk-07-print-gloss-864-ros-suns-981431', :changefreq => 'monthly', :priority => 0.8
   add '/producto/kk-07-spr-gloss-865-ros-tentat-981449', :changefreq => 'monthly', :priority => 0.8
@@ -719,7 +729,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/kk-08-sum-gloss-868-opal-pearl-1075555', :changefreq => 'monthly', :priority => 0.8
   add '/producto/kk-10-fall-gloss-848-brown-sugar-1075522', :changefreq => 'monthly', :priority => 0.8
   add '/producto/kk-10-fall-gloss-847-peche-charnel-981399', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/terra-11-pdr-bronz-07-new-1326289', :changefreq => 'monthly', :priority => 0.8
   add '/producto/terracotta-khol-noiir-no-1-861690', :changefreq => 'monthly', :priority => 0.8
   add '/producto/terracotta-06-khol-03-brun-dore-923649', :changefreq => 'monthly', :priority => 0.8
   add '/producto/mku-le2-masc-vol-noir-1230143', :changefreq => 'monthly', :priority => 0.8
@@ -730,8 +739,9 @@ SitemapGenerator::Sitemap.create do
   add '/producto/terra-11-pdr-bronz-02-1326230', :changefreq => 'monthly', :priority => 0.8
   add '/producto/terra-11-pdr-bronz-03-1326248', :changefreq => 'monthly', :priority => 0.8
   add '/producto/terra-11-pdr-bronz-04-new-1326255', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lip-gloss-female-trouble-nars-1643-1099902', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/terra-11-pdr-bronz-07-new-1326289', :changefreq => 'monthly', :priority => 0.8
   add '/producto/met-11-spr-comp-pdr-bei-shade-02-1304971', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/terracotta-06-light-br-pdr-02-brune-905521', :changefreq => 'monthly', :priority => 0.8
   add '/producto/met-11-spr-comp-pdr-dor-shade-03-1304989', :changefreq => 'monthly', :priority => 0.8
   add '/producto/met-10-sum-pearl-pdr-1-1256049', :changefreq => 'monthly', :priority => 0.8
   add '/producto/met-10-sum-pearl-pdr-2-1256072', :changefreq => 'monthly', :priority => 0.8
@@ -741,8 +751,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/mku-07-fall-liplift-1022318', :changefreq => 'monthly', :priority => 0.8
   add '/producto/mu-09-spr-eyelids-base-1147412', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lor-07-pure-radience-1043827', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/terracotta-06-light-br-pdr-01-blon-905497', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/terracotta-06-light-br-pdr-02-brune-905521', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lip-liner-pencil-salsa-nars-9014-222109', :changefreq => 'monthly', :priority => 0.8
   add '/producto/harajuku-lovers-tokyo-gwen-edt-30-ml-1282060', :changefreq => 'monthly', :priority => 0.8
   add '/producto/harajuku-lovers-tokyo-angel-edt-30-ml-1282078', :changefreq => 'monthly', :priority => 0.8
   add '/producto/harajuku-lovers-tokyo-love-edt-30-ml-1282045', :changefreq => 'monthly', :priority => 0.8
@@ -750,33 +759,31 @@ SitemapGenerator::Sitemap.create do
   add '/producto/harajuku-super-g-edt-30-ml-1361815', :changefreq => 'monthly', :priority => 0.8
   add '/producto/kelly-caleche-edt-1035971', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eau-dorange-verte-edc-87312', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lip-gloss-ophelia-nars-1647-1222439', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eau-des-merveilles-eau-perf-755546', :changefreq => 'monthly', :priority => 0.8
   add '/producto/un-jardin-apres-la-mousson-1094689', :changefreq => 'monthly', :priority => 0.8
   add '/producto/un-jardin-en-mediterranee-910026', :changefreq => 'monthly', :priority => 0.8
   add '/producto/un-jardin-sur-le-toit-1334960', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/terre-de-hermes-edt-915447', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/terre-de-hermes-1231869', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lip-liner-pencil-marnie-9017-627026', :changefreq => 'monthly', :priority => 0.8
   add '/producto/oxygen-foundation-mineral-powder-no-1-1033695', :changefreq => 'monthly', :priority => 0.8
   add '/producto/oxygen-foundation-mineral-powder-no-2-1033737', :changefreq => 'monthly', :priority => 0.8
   add '/producto/oxygen-foundation-mineral-powder-no-3-1033745', :changefreq => 'monthly', :priority => 0.8
   add '/producto/oxygen-foundation-mineral-powder-no-4-1033752', :changefreq => 'monthly', :priority => 0.8
   add '/producto/solar-tan-self-tanning-primer-1106574', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/labial-lancome-absolue-nu-202-1342575', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aura-sheer-cheek-stain-flush-1303908', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aura-sheer-cheek-stain-petal-1303916', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aura-sheer-cheek-stain-rouge-1309905', :changefreq => 'monthly', :priority => 0.8
   add '/producto/prodigy-hydrating-lip-gloss-surreal-1222660', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/giftset-ck-3pc-beauty-edp-100-ml-n-a-3607342277199', :changefreq => 'monthly', :priority => 0.8
   add '/producto/prodigy-hydrating-lip-gloss-eden-1222686', :changefreq => 'monthly', :priority => 0.8
   add '/producto/prodigy-hydrating-lip-gloss-legend-1222694', :changefreq => 'monthly', :priority => 0.8
   add '/producto/prodigy-hydrating-lip-gloss-opium-1222702', :changefreq => 'monthly', :priority => 0.8
   add '/producto/prodigy-hydrating-lip-gloss-heroine-1323328', :changefreq => 'monthly', :priority => 0.8
   add '/producto/prodigy-hydrating-lip-gloss-ingenue-1323336', :changefreq => 'monthly', :priority => 0.8
   add '/producto/superficial-lash-volumizing-lengthening-mascara-carbon-1074426', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lip-gloss-easy-lover-nars-1648-1222447', :changefreq => 'monthly', :priority => 0.8
   add '/producto/extreme-sheen-high-shine-lip-gloss-imagine-1281500', :changefreq => 'monthly', :priority => 0.8
   add '/producto/extreme-sheen-high-shine-lip-gloss-reflect-1281518', :changefreq => 'monthly', :priority => 0.8
   add '/producto/extreme-sheen-high-shine-lip-gloss-ignite-1281526', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/trace-lip-liner-reveal-1034206', :changefreq => 'monthly', :priority => 0.8
   add '/producto/extreme-sheen-high-shine-lip-gloss-primal-1281534', :changefreq => 'monthly', :priority => 0.8
   add '/producto/extreme-sheen-high-shine-lip-gloss-truth-1281542', :changefreq => 'monthly', :priority => 0.8
   add '/producto/extreme-sheen-high-shine-lip-gloss-verse-1281559', :changefreq => 'monthly', :priority => 0.8
@@ -784,32 +791,28 @@ SitemapGenerator::Sitemap.create do
   add '/producto/extreme-sheen-high-shine-lip-gloss-nectar-1281575', :changefreq => 'monthly', :priority => 0.8
   add '/producto/extreme-sheen-high-shine-lip-gloss-origami-1281583', :changefreq => 'monthly', :priority => 0.8
   add '/producto/extreme-sheen-high-shine-lip-gloss-siren-1281591', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/labial-lancome-absolue-nu-203-1342583', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/evidence-n-a-604214387409', :changefreq => 'monthly', :priority => 0.8
   add '/producto/extreme-sheen-high-shine-lip-gloss-fortune-1281609', :changefreq => 'monthly', :priority => 0.8
   add '/producto/extreme-sheen-high-shine-lip-gloss-child-1281617', :changefreq => 'monthly', :priority => 0.8
   add '/producto/foundation-brush-no-2-1033976', :changefreq => 'monthly', :priority => 0.8
   add '/producto/trace-lip-liner-voice-1034065', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/trace-lip-liner-secret-1034198', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/trace-lip-liner-reveal-1034206', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/boss-orange-edtvapo-75ml-1359058', :changefreq => 'monthly', :priority => 0.8
   add '/producto/trace-lip-liner-bare-1034214', :changefreq => 'monthly', :priority => 0.8
   add '/producto/finishing-brush-no-7-1034016', :changefreq => 'monthly', :priority => 0.8
   add '/producto/visionaire-eye-shadow-duo-dune-1178755', :changefreq => 'monthly', :priority => 0.8
   add '/producto/visionaire-eye-shadow-duo-exhibition-1178797', :changefreq => 'monthly', :priority => 0.8
   add '/producto/visionaire-eye-shadow-duo-gypsy-1178805', :changefreq => 'monthly', :priority => 0.8
   add '/producto/visionaire-eye-shadow-duo-lagoon-1178813', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/fishnet-n-a-604214386600', :changefreq => 'monthly', :priority => 0.8
   add '/producto/visionaire-eye-shadow-duo-prism-1178854', :changefreq => 'monthly', :priority => 0.8
   add '/producto/visionaire-eye-shadow-duo-suede-1178862', :changefreq => 'monthly', :priority => 0.8
   add '/producto/veil-mineral-primer-1074442', :changefreq => 'monthly', :priority => 0.8
   add '/producto/veil-mineral-primer-to-go-1319193', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lip-liner-pencil-papua-nars-9023-777177', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aura-sheer-lip-stain-flush-1303932', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aura-sheer-lip-stain-petal-1303940', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aura-sheer-lip-stain-scarlet-1303957', :changefreq => 'monthly', :priority => 0.8
   add '/producto/script-precision-liquid-liner-jett-1323344', :changefreq => 'monthly', :priority => 0.8
   add '/producto/film-noir-lash-lacquer-kohl-1341114', :changefreq => 'monthly', :priority => 0.8
   add '/producto/retractable-foundation-brush-1140581', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/gloss-addict-ultra-452-dior-1391531-3348901082976', :changefreq => 'monthly', :priority => 0.8
   add '/producto/femme-rouge-velvet-creme-lipstick-ballet-1265685', :changefreq => 'monthly', :priority => 0.8
   add '/producto/femme-rouge-velvet-creme-lipstick-edition-1265693', :changefreq => 'monthly', :priority => 0.8
   add '/producto/femme-rouge-velvet-creme-lipstick-embrace-1265701', :changefreq => 'monthly', :priority => 0.8
@@ -818,44 +821,39 @@ SitemapGenerator::Sitemap.create do
   add '/producto/femme-rouge-velvet-creme-lipstick-fresco-1265735', :changefreq => 'monthly', :priority => 0.8
   add '/producto/femme-rouge-velvet-creme-lipstick-grace-1265743', :changefreq => 'monthly', :priority => 0.8
   add '/producto/femme-rouge-velvet-creme-lipstick-icon-1265750', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/labial-lancome-absolue-nu-204-1342591', :changefreq => 'monthly', :priority => 0.8
   add '/producto/femme-rouge-velvet-creme-lipstick-muse-1265768', :changefreq => 'monthly', :priority => 0.8
   add '/producto/femme-rouge-velvet-creme-lipstick-nocturnal-1265776', :changefreq => 'monthly', :priority => 0.8
   add '/producto/femme-rouge-velvet-creme-lipstick-raven-1265784', :changefreq => 'monthly', :priority => 0.8
   add '/producto/femme-rouge-velvet-creme-lipstick-whisper-1265792', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hidden-corrective-concealer-pearl-1265826', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/dw-pwdr-3w1-tawny-n-a-027131837664', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hidden-corrective-concealer-sand-1265834', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hidden-corrective-concealer-warm-1265842', :changefreq => 'monthly', :priority => 0.8
   add '/producto/illume-creme-to-powder-bronzer-duo-bronze-light-1074459', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/illusion-tinted-moisturizer-beige-1140532', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/flash-n-a-604214388703', :changefreq => 'monthly', :priority => 0.8
   add '/producto/illume-creme-to-powder-bronzer-duo-sunset-1249218', :changefreq => 'monthly', :priority => 0.8
   add '/producto/calligraphy-liquid-eye-liner-ebony-1057173', :changefreq => 'monthly', :priority => 0.8
   add '/producto/calligraphy-liquid-eye-liner-cognac-1057181', :changefreq => 'monthly', :priority => 0.8
   add '/producto/calligraphy-liquid-eye-liner-indigo-1057199', :changefreq => 'monthly', :priority => 0.8
   add '/producto/illusion-tinted-moisturizer-shell-1222728', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pure-clean-daily-facial-cleanser-973628', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/dw-pwdr-4n1-wheat-n-a-027131837671', :changefreq => 'monthly', :priority => 0.8
   add '/producto/illusion-tinted-moisturizer-ivory-1140474', :changefreq => 'monthly', :priority => 0.8
   add '/producto/illusion-tinted-moisturizer-light-beige-1140508', :changefreq => 'monthly', :priority => 0.8
   add '/producto/illusion-tinted-moisturizer-sand-1140524', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lip-gloss-angelika-nars-1056-1263615', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/illusion-tinted-moisturizer-beige-1140532', :changefreq => 'monthly', :priority => 0.8
   add '/producto/illusion-tinted-moisturizer-warm-beige-1140565', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hugo-green-edtvapo-150ml-76810', :changefreq => 'monthly', :priority => 0.8
   add '/producto/justdifferent-edtvapo-150ml-1361526', :changefreq => 'monthly', :priority => 0.8
   add '/producto/boss-orange-man-edt-100ml-1358993', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/boss-orange-edtvapo-75ml-1359058', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/dw-pwdr-4w1-shell-beige-n-a-027131837589', :changefreq => 'monthly', :priority => 0.8
   add '/producto/intense-therapy-lip-balm-spf-25-mint-shea-butter-564344', :changefreq => 'monthly', :priority => 0.8
   add '/producto/intense-therapy-lip-balm-spf-25-lemon-chamomile-1099829', :changefreq => 'monthly', :priority => 0.8
   add '/producto/industrial-strength-hand-healer-564369', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/l-12-12blanc-edtvapo-100ml-1359157', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/l-12-12bleu-edtvapo-100ml-1359181', :changefreq => 'monthly', :priority => 0.8
   add '/producto/protein-booster-eye-rescue-1176171', :changefreq => 'monthly', :priority => 0.8
   add '/producto/supreme-cream-triple-cushion-shave-lather-1007822', :changefreq => 'monthly', :priority => 0.8
   add '/producto/beard-lube-conditioning-shave-564278', :changefreq => 'monthly', :priority => 0.8
   add '/producto/double-duty-face-moisturizer-spf-20-662429', :changefreq => 'monthly', :priority => 0.8
   add '/producto/face-buff-energizing-scrub-564260', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/pure-clean-daily-facial-cleanser-973628', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/all-day-oil-control-lotion-973651', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/l-12-12vert-edtvapo-100ml-1359124', :changefreq => 'monthly', :priority => 0.8
   add '/producto/cool-moisture-body-lotion-826867', :changefreq => 'monthly', :priority => 0.8
   add '/producto/all-over-wash-for-face-hair-body-564351', :changefreq => 'monthly', :priority => 0.8
   add '/producto/post-shave-cooling-gel-564286', :changefreq => 'monthly', :priority => 0.8
@@ -864,39 +862,41 @@ SitemapGenerator::Sitemap.create do
   add '/producto/core-collection-1026137', :changefreq => 'monthly', :priority => 0.8
   add '/producto/line-smoother-face-moisturizer-564294', :changefreq => 'monthly', :priority => 0.8
   add '/producto/the-jet-set-traveler-1208040', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/labial-lancome-absolue-nu-205-1342609', :changefreq => 'monthly', :priority => 0.8
   add '/producto/jennifer-aniston-edp-85-ml-1328988', :changefreq => 'monthly', :priority => 0.8
   add '/producto/argan-illuminizer-1oz-1308196', :changefreq => 'monthly', :priority => 0.8
   add '/producto/magic-marker-argan-liquid-eyeliner-016oz-1308386', :changefreq => 'monthly', :priority => 0.8
   add '/producto/argan-stick-rosey-55oz-1299213', :changefreq => 'monthly', :priority => 0.8
   add '/producto/argan-matchmaker-foundation-shade-fair-light-1oz-1345990', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/g-spot-1365048', :changefreq => 'monthly', :priority => 0.8
   add '/producto/argan-matchmaker-foundation-shade-light-medium-1oz-1308121', :changefreq => 'monthly', :priority => 0.8
   add '/producto/argan-matchmaker-foundation-medium-dark-1oz-1308139', :changefreq => 'monthly', :priority => 0.8
   add '/producto/argan-oil-1-7oz-1121797', :changefreq => 'monthly', :priority => 0.8
   add '/producto/argan-oil-to-go-1219153', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/essential-edtvapo-125ml-909226', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bronzing-argan-oil-1-7oz-1154186', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/delineador-p-labios-dior-contour-433-94193-3348900176492', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bear-naked-wipes-30-wipes-1124155', :changefreq => 'monthly', :priority => 0.8
   add '/producto/argan-oil-hair-serum-2oz-1226760', :changefreq => 'monthly', :priority => 0.8
   add '/producto/argan-oil-hair-serum-to-go-1317098', :changefreq => 'monthly', :priority => 0.8
   add '/producto/argan-daily-moisturizer-with-spf-40-to-go-1312230', :changefreq => 'monthly', :priority => 0.8
   add '/producto/argan-lip-treatment-25oz-1267145', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/essential-edtvapo-125ml-909226', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/labial-lancome-absolue-nu-202-1342575', :changefreq => 'monthly', :priority => 0.8
   add '/producto/argan-concealer-sand-32oz-1308154', :changefreq => 'monthly', :priority => 0.8
   add '/producto/argan-concealer-suede-32oz-1308162', :changefreq => 'monthly', :priority => 0.8
   add '/producto/argan-concealer-chestnut-32oz-1308170', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/labial-lancome-absolue-nu-101-1342534', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/labial-lancome-absolue-nu-102-1342542', :changefreq => 'monthly', :priority => 0.8
   add '/producto/natural-volume-lip-gloss-daring-14oz-1124114', :changefreq => 'monthly', :priority => 0.8
   add '/producto/natural-volume-lip-gloss-brilliance-14oz-1124106', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/labial-lancome-absolue-nu-203-1342583', :changefreq => 'monthly', :priority => 0.8
   add '/producto/natural-volume-lip-gloss-optimism-14oz-1124130', :changefreq => 'monthly', :priority => 0.8
   add '/producto/argan-cleansing-oil-6oz-1324631', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/labial-lancome-absolue-nu-101-1342534', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/dior-addict-shine-edt-100ml-1061233-3348900821880', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/labial-lancome-absolue-nu-102-1342542', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-lancome-absolue-nu-103-1342559', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/labial-lancome-absolue-nu-201-1342567', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/foxy-n-a-604214382008', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/doux-gommage-express-75ml-1281278-3348900953246', :changefreq => 'monthly', :priority => 0.8
   add '/producto/argan-beautiful-eyes-shade-beautiful-smoke-390z-1346402', :changefreq => 'monthly', :priority => 0.8
   add '/producto/argan-beautiful-eyes-shade-beautiful-nudes-39oz-1346386', :changefreq => 'monthly', :priority => 0.8
   add '/producto/argan-beautiful-eyes-shade-beautiful-purples-39oz-1346394', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/labial-lancome-absolue-nu-201-1342567', :changefreq => 'monthly', :priority => 0.8
   add '/producto/gogo-instant-natural-volume-argan-mascara-34oz-1267129', :changefreq => 'monthly', :priority => 0.8
   add '/producto/viva-la-juicy-edp-spray-100ml-1108091', :changefreq => 'monthly', :priority => 0.8
   add '/producto/viva-la-juicy-rollerball-1131929', :changefreq => 'monthly', :priority => 0.8
@@ -904,7 +904,12 @@ SitemapGenerator::Sitemap.create do
   add '/producto/perfume-justin-bieber-someday-30-ml-1351097', :changefreq => 'monthly', :priority => 0.8
   add '/producto/essentialsport-edtvapo-125ml-1263938', :changefreq => 'monthly', :priority => 0.8
   add '/producto/joyofpink-edtvapo-90ml-1359223', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lip-liner-pencil-borneo-nars-9006-222026', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/l-12-12blanc-edtvapo-100ml-1359157', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/l-12-12bleu-edtvapo-100ml-1359181', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/l-12-12vert-edtvapo-100ml-1359124', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lip-gloss-angelika-nars-1056-1263615', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/labial-lancome-absolue-nu-204-1342591', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/labial-lancome-absolue-nu-205-1342609', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-lancome-absolue-nu-301-1342617', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-lancome-absolue-nu-302-1342625', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-lancome-absolue-nu-303-1342633', :changefreq => 'monthly', :priority => 0.8
@@ -914,10 +919,9 @@ SitemapGenerator::Sitemap.create do
   add '/producto/l-edp-80-ml-973339', :changefreq => 'monthly', :priority => 0.8
   add '/producto/star-powder-974-taupe-2-8-g-1325513', :changefreq => 'monthly', :priority => 0.8
   add '/producto/star-powder-975-pink-bronze-2-8-g-1325521', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/smoky-lash-5-blue-7-ml-1354034', :changefreq => 'monthly', :priority => 0.8
   add '/producto/star-powder-902-pearl-gold-2-8-g-468868', :changefreq => 'monthly', :priority => 0.8
   add '/producto/star-powder-942-white-mauve-2-8-g-763789', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/kk-11-spr-gloss-849-frizzy-mango-1335603-3346470404533', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/freelove-n-a-604214385504', :changefreq => 'monthly', :priority => 0.8
   add '/producto/star-powder-944-white-turquoise-2-8-g-763797', :changefreq => 'monthly', :priority => 0.8
   add '/producto/star-powder-940-white-orange-2-8-g-763821', :changefreq => 'monthly', :priority => 0.8
   add '/producto/star-powder-930-bronze-brown-2-8-g-913996', :changefreq => 'monthly', :priority => 0.8
@@ -926,7 +930,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/star-powder-916-pink-gold-2-8-g-468942', :changefreq => 'monthly', :priority => 0.8
   add '/producto/star-powder-951-iridescent-frusci-2-8-g-825448', :changefreq => 'monthly', :priority => 0.8
   add '/producto/star-powder-920-yellow-gold-2-8-g-920405', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lift-concealer-5-brown-15-ml-698233', :changefreq => 'monthly', :priority => 0.8
   add '/producto/star-powder-910-celadon-2-8-g-468926', :changefreq => 'monthly', :priority => 0.8
   add '/producto/star-powder-956-turquoise-gold-2-8-g-920421', :changefreq => 'monthly', :priority => 0.8
   add '/producto/star-powder-954-purple-2-8-g-990028', :changefreq => 'monthly', :priority => 0.8
@@ -936,7 +939,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/lift-concealer-2-dark-beige-15-ml-531269', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lift-concealer-3-neutral-beige-15-ml-698217', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lift-concealer-4-golden-beige-15-ml-698225', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/eternity-men-edt-200-ml-n-a-3607341471727', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lift-concealer-5-brown-15-ml-698233', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eyebrow-pencil-1-blond-1-29-g-825588', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eyebrow-pencil-2-taupe-1-29-g-854893', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eyebrow-pencil-3-brown-1-29-g-825596', :changefreq => 'monthly', :priority => 0.8
@@ -945,10 +948,9 @@ SitemapGenerator::Sitemap.create do
   add '/producto/aqua-smoky-lash-7-ml-1164656', :changefreq => 'monthly', :priority => 0.8
   add '/producto/smoky-lash-3-brown-7-ml-1353994', :changefreq => 'monthly', :priority => 0.8
   add '/producto/smoky-lash-4-green-7-ml-1354026', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/smoky-lash-5-blue-7-ml-1354034', :changefreq => 'monthly', :priority => 0.8
   add '/producto/smoky-lash-6-plum-7-ml-1354042', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/l-instant-de-guerlain-pour-homme-edt-vapo-125-ml-819870-3346470200012', :changefreq => 'monthly', :priority => 0.8
   add '/producto/double-pencil-sharpener-630509', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/clear-brushes-set-n-a-3378872020233', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hd-invisible-cover-foundation-115-ivory-30-ml-1096908', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hd-invisible-cover-foundation-117-marble-30-ml-1096916', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hd-invisible-cover-foundation-118-flesh-30-ml-1096924', :changefreq => 'monthly', :priority => 0.8
@@ -958,6 +960,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/hd-invisible-cover-foundation-127-dark-sand-30-ml-1096965', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hd-invisible-cover-foundation-128-almond-30-ml-1096973', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hd-invisible-cover-foundation-130-warm-ivory-30-ml-1096981', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/individual-eyelashes-n-a-3378872031017', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hd-invisible-cover-foundation-135-vanilla-30-ml-1096999', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hd-invisible-cover-foundation-140-soft-beige-30-ml-1097005', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hd-invisible-cover-foundation-145-neutral-30-ml-1097013', :changefreq => 'monthly', :priority => 0.8
@@ -969,8 +972,8 @@ SitemapGenerator::Sitemap.create do
   add '/producto/mat-velvet-20-ivory-30-ml-988642', :changefreq => 'monthly', :priority => 0.8
   add '/producto/mat-velvet-25-warm-ivory-30-ml-988659', :changefreq => 'monthly', :priority => 0.8
   add '/producto/mat-velvet-30-porcelain-30-ml-988667', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/instant-wrinkle-filler-n-a-3378872062868', :changefreq => 'monthly', :priority => 0.8
   add '/producto/mat-velvet-35-vanilla-30-ml-988675', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lip-liner-pencil-morocco-nars-9007-222034', :changefreq => 'monthly', :priority => 0.8
   add '/producto/mat-velvet-40-natural-beige-30-ml-988683', :changefreq => 'monthly', :priority => 0.8
   add '/producto/mat-velvet-45-soft-beige-30-ml-988691', :changefreq => 'monthly', :priority => 0.8
   add '/producto/mat-velvet-55-neutral-beige-30-ml-988717', :changefreq => 'monthly', :priority => 0.8
@@ -979,7 +982,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/mat-velvet-75-coffee-30-ml-988758', :changefreq => 'monthly', :priority => 0.8
   add '/producto/mat-velvet-80-cognac-30-ml-988766', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hd-invisible-cover-concealer-305-porcelain-1-5-ml-1182179', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/full-cover-8-beige-15-ml-909036', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hd-invisible-cover-concealer-310-pink-porcelain-1-5-ml-1182187', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hd-invisible-cover-concealer-315-ivory-1-5-ml-1182195', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hd-invisible-cover-concealer-320-pink-beige-1-5-ml-1182203', :changefreq => 'monthly', :priority => 0.8
@@ -989,7 +991,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/hd-invisible-cover-concealer-340-sand-1-5-ml-1183524', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hd-invisible-cover-concealer-345-dark-beige-1-5-ml-1183540', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hd-invisible-cover-concealer-350-apricot-beige-1-5-ml-1183557', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/gravity-n-a-604214388802', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hd-invisible-cover-concealer-355-honey-1-5-ml-1183565', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hd-invisible-cover-concealer-360-amber-1-5-ml-1183573', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hd-invisible-cover-concealer-365-coffee-1-5-ml-1183581', :changefreq => 'monthly', :priority => 0.8
@@ -1000,15 +1001,17 @@ SitemapGenerator::Sitemap.create do
   add '/producto/full-cover-5-vanilla-15-ml-909010', :changefreq => 'monthly', :priority => 0.8
   add '/producto/full-cover-6-ivory-15-ml-988824', :changefreq => 'monthly', :priority => 0.8
   add '/producto/full-cover-7-sand-15-ml-909028', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/le2-w-proof-masc-15-noir-1178235-3346470408814', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/edp-90-ml-elle-ysl-fragancia-femenina-1070051-3365440332546', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/full-cover-8-beige-15-ml-909036', :changefreq => 'monthly', :priority => 0.8
   add '/producto/full-cover-10-golden-beige-15-ml-909044', :changefreq => 'monthly', :priority => 0.8
   add '/producto/full-cover-12-dark-beige-15-ml-1247204', :changefreq => 'monthly', :priority => 0.8
   add '/producto/full-cover-14-fawn-15-ml-1247212', :changefreq => 'monthly', :priority => 0.8
   add '/producto/full-cover-18-chocolate-15-ml-1247220', :changefreq => 'monthly', :priority => 0.8
   add '/producto/full-cover-20-ebony-15-ml-1247238', :changefreq => 'monthly', :priority => 0.8
   add '/producto/ellipse-sponge-803445', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/aqua-lip-10c-matte-raspberry-1-2-g-1005503', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/large-facial-brush-n-a-7213526', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-cream-1-anthracite-1246958', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lip-liner-pencil-rosebud-nars-9008-222042', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-cream-2-steel-1246966', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-cream-4-snow-1246990', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-cream-11-gold-1247089', :changefreq => 'monthly', :priority => 0.8
@@ -1016,8 +1019,8 @@ SitemapGenerator::Sitemap.create do
   add '/producto/aqua-cream-13-warm-beige-1247105', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-cream-15-taupe-1247121', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-cream-16-pink-beige-1247139', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/duo-express-demaquillant-yeux-125ml-1265495-3348900953239', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-cream-17-plum-1247147', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/mku-12-spr-the-one-mask-refill-01-noir-g-guerlain-1395516-3346470411623', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-cream-18-purple-1247154', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-cream-20-intense-blue-1247170', :changefreq => 'monthly', :priority => 0.8
   add '/producto/strass-12-black-1267905', :changefreq => 'monthly', :priority => 0.8
@@ -1027,6 +1030,8 @@ SitemapGenerator::Sitemap.create do
   add '/producto/strass-21-crystal-small-1267996', :changefreq => 'monthly', :priority => 0.8
   add '/producto/strass-22-multi-colored-1268002', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-eyes-0l-mat-black-1-2-g-988899', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/aqua-lip-11c-matte-dark-raspberry-1-2-g-1005511', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/large-metal-traincase-n-a-0000009034464', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-eyes-1l-star-black-1-2-g-621300', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-eyes-2l-pearly-brown-1-2-g-621318', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-eyes-3l-iridescent-navy-blue-1-2-g-621326', :changefreq => 'monthly', :priority => 0.8
@@ -1037,9 +1042,9 @@ SitemapGenerator::Sitemap.create do
   add '/producto/aqua-eyes-8l-silver-1-2-g-988907', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-eyes-9l-gold-1-2-g-988915', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-eyes-10l-bronze-1-2-g-988923', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/eau-micellaire-demaquillante-express-200ml-1281252-3348900953222', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-eyes-11l-purple-1-2-g-1038355', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-eyes-12l-blue-w-green-highlights-1-2-g-1038363', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/mku-12-spring-the-one-mask-01-noir-g-guerlain-1395508-3346470411616', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-eyes-13l-fuchsia-pink-1-2-g-988931', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-eyes-14l-white-1-2-g-997403', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-eyes-15l-majorelle-blue-1-2-g-1038389', :changefreq => 'monthly', :priority => 0.8
@@ -1048,6 +1053,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/aqua-eyes-18l-burgandy-1-2-g-997411', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-eyes-19l-light-brown-1-2-g-1063783', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-eyes-20lforest-green-1-2-g-1164516', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/gloss-addict-ultra-452-dior-1391531-3348901082976', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-eyes-21l-dark-grey-1-2-g-1164532', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-eyes-22l-grey-1-2-g-1164540', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-eyes-23l-champagne-1-2-g-1164557', :changefreq => 'monthly', :priority => 0.8
@@ -1061,10 +1067,8 @@ SitemapGenerator::Sitemap.create do
   add '/producto/aqua-lip-7c-pink-brown-1-2-g-1005479', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-lip-8c-red-1-2-g-1005487', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-lip-9c-burgundy-1-2-g-1005495', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/aqua-lip-10c-matte-raspberry-1-2-g-1005503', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/aqua-lip-11c-matte-dark-raspberry-1-2-g-1005511', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lip-liner-pencil-tonga-nars-9025-1162197', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-lip-12c-matte-dark-plum-1-2-g-1005529', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lip-liner-pencil-amazon-nars-9010-222067', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-lip-13c-purple-1-2-g-1164573', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-lip-14c-light-rosewood-1-2-g-1164599', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-lip-15c-pink-1-2-g-1164607', :changefreq => 'monthly', :priority => 0.8
@@ -1076,8 +1080,8 @@ SitemapGenerator::Sitemap.create do
   add '/producto/aqua-liner-3-iridescent-emerald-green-1-7-ml-1325323', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-liner-4-diamond-lagoon-green-1-7-ml-1325331', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-liner-5-diamond-turquoise-blue-1-7-ml-1325349', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/diamond-powder-14-baby-mauve-2-g-1038454', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-liner-6-iridescent-navy-blue-1-7-ml-1325364', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lip-liner-pencil-fantasia-nars-9012-222083', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-liner-7-diamond-black-purple-1-7-ml-1325372', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-liner-8-iridescent-electric-purple-1-7-ml-1325380', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-liner-9-iridescent-fuchsia-1-7-ml-1325398', :changefreq => 'monthly', :priority => 0.8
@@ -1088,7 +1092,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/aqua-liner-14-diamond-multicolor-black-1-7-ml-1325448', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-liner-15-iridescent-anthracite-1-7-ml-1325455', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-liner-16-diamond-white-1-7-ml-1325471', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lip-liner-pencil-salsa-nars-9014-222109', :changefreq => 'monthly', :priority => 0.8
   add '/producto/flash-color-palette-70-g-1087972', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brow-seal-6-ml-1325505', :changefreq => 'monthly', :priority => 0.8
   add '/producto/diamond-powder-1-white-2-g-854695', :changefreq => 'monthly', :priority => 0.8
@@ -1099,9 +1102,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/diamond-powder-15-smoky-2-g-1038462', :changefreq => 'monthly', :priority => 0.8
   add '/producto/diamond-powder-3-white-mauve-2-g-810143', :changefreq => 'monthly', :priority => 0.8
   add '/producto/diamond-powder-7-white-w-turqoise-2-g-904144', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/diamond-powder-14-baby-mauve-2-g-1038454', :changefreq => 'monthly', :priority => 0.8
   add '/producto/faux-lash-116-jane-908970', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/gunmetal-n-a-604214383401', :changefreq => 'monthly', :priority => 0.8
   add '/producto/diamond-powder-16-gold-2-g-1266188', :changefreq => 'monthly', :priority => 0.8
   add '/producto/uplight-12-dewy-golden-beige-16-5-ml-1313204', :changefreq => 'monthly', :priority => 0.8
   add '/producto/uplight-32-sparkling-golden-pink-16-5-ml-1313253', :changefreq => 'monthly', :priority => 0.8
@@ -1118,6 +1119,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/lab-shine-d8-baby-pink-2-7-g-1304518', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lab-shine-d10-fresh-pink-2-7-g-1304526', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lab-shine-d12-quartz-rose-2-7-g-1304534', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/tratamiento-ojos-biotherm-high-rech-eye-shot-n-a-3605540781906', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lab-shine-d14-indian-pink-2-7-g-1304542', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lab-shine-d16-beige-2-7-g-1304559', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lab-shine-d18-copper-2-7-g-1304567', :changefreq => 'monthly', :priority => 0.8
@@ -1132,6 +1134,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/lab-shine-s12-praline-2-7-g-1304658', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lab-shine-s14-blackcurrant-2-7-g-1304666', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lab-shine-s16-raspberry-2-7-g-1304674', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/nail-polish-turquoise-n-a-716170103105', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lab-shine-s18-rosewood-2-7-g-1304682', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lab-shine-s20-violet-2-7-g-1304690', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lab-shine-s22-candy-pink-2-7-g-1304708', :changefreq => 'monthly', :priority => 0.8
@@ -1139,6 +1142,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/lab-shine-s26-electric-rose-2-7-g-1304724', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lab-shine-m0-onyx-2-7-g-1304732', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lab-shine-m2-grey-pearl-2-7-g-1304740', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/nail-polish-twilight-n-a-716170101217', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lab-shine-m4-tobacco-2-7-g-1304757', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lab-shine-m6-hazel-brown-2-7-g-1304765', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lab-shine-m8-brown-2-7-g-1304773', :changefreq => 'monthly', :priority => 0.8
@@ -1161,7 +1165,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/faux-lash-113-betsy-908954', :changefreq => 'monthly', :priority => 0.8
   add '/producto/faux-lash-26-bayly-1040047', :changefreq => 'monthly', :priority => 0.8
   add '/producto/faux-lash-121-gina-1037522', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/makeup-station-blockbuster-450-value-1356336-3378872058915', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/edt-125-ml-polo-sport-men-ralph-lauren-150946-3360372055402', :changefreq => 'monthly', :priority => 0.8
   add '/producto/faux-lash-152-gwen-1037662', :changefreq => 'monthly', :priority => 0.8
   add '/producto/faux-lash-133-eva-1037753', :changefreq => 'monthly', :priority => 0.8
   add '/producto/faux-lash-115-erin-908962', :changefreq => 'monthly', :priority => 0.8
@@ -1306,7 +1310,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/face-body-liquid-make-up-1-soft-beige-50-ml-530717', :changefreq => 'monthly', :priority => 0.8
   add '/producto/face-body-liquid-make-up-3-natural-beige-50-ml-468991', :changefreq => 'monthly', :priority => 0.8
   add '/producto/face-body-liquid-make-up-34-honey-beige-50-ml-989061', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/mini-bag-spring-12-50-value-1368406-3378872062905', :changefreq => 'monthly', :priority => 0.8
   add '/producto/face-body-liquid-make-up-6-medium-beige-50-ml-469098', :changefreq => 'monthly', :priority => 0.8
   add '/producto/face-body-liquid-make-up-18-camel-50-ml-469114', :changefreq => 'monthly', :priority => 0.8
   add '/producto/face-body-liquid-make-up-12-caramel-50-ml-469106', :changefreq => 'monthly', :priority => 0.8
@@ -1315,6 +1318,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/face-body-liquid-make-up-48-ebony-50-ml-1005552', :changefreq => 'monthly', :priority => 0.8
   add '/producto/smoky-lash-7-ml-1097229', :changefreq => 'monthly', :priority => 0.8
   add '/producto/glitter-2-silver-4-g-1009109', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/edt118ml-ralph-lauren-polo-modern-1131424-3605975016499', :changefreq => 'monthly', :priority => 0.8
   add '/producto/glitter-3-multi-colored-white-4-g-920611', :changefreq => 'monthly', :priority => 0.8
   add '/producto/glitter-4-white-violet-4-g-1009117', :changefreq => 'monthly', :priority => 0.8
   add '/producto/glitter-8-pink-4-g-1009141', :changefreq => 'monthly', :priority => 0.8
@@ -1336,7 +1340,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/sheer-glow-foundation-siberia-nars-6040-1202167', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sheer-glow-foundation-deauville-nars-6041-1202183', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sheer-glow-foundation-mont-blanc-nars-6042-1202191', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lip-liner-pencil-marnie-9017-627026', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/make-up-bag-leather-1390160-400013901606', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sheer-glow-foundation-fiji-nars-6044-1202225', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sheer-glow-foundation-santa-fe-nars-6045-1202233', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sheer-glow-foundation-barcelona-nars-6046-1202241', :changefreq => 'monthly', :priority => 0.8
@@ -1349,7 +1353,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/sheer-glow-foundation-ceylan-nars-6057-1208628', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sheer-glow-foundation-macao-nars-6058-1314178', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sheer-matte-foundation-siberia-nars-6060-1208677', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/moisturizing-bronzing-body-lotion-1390053-3378872055440', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/makeup-station-blockbuster-450-value-1356336-3378872058915', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sheer-matte-foundation-deauville-nars-6061-1202043', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sheer-matte-foundation-mont-blanc-nars-6062-1202050', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sheer-matte-foundation-punjab-nars-6063-1202076', :changefreq => 'monthly', :priority => 0.8
@@ -1362,7 +1366,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/sheer-matte-foundation-trinidad-nars-6094-1208727', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sheer-matte-foundation-gobi-nars-6096-1202068', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sheer-matte-foundation-ceylan-nars-6097-1208685', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/maquillaje-ysl-matt-touch-foundation-07-1121169-3365440352070', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/mini-bag-spring-12-50-value-1368406-3378872062905', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sheer-matte-foundation-macao-nars-6098-1314186', :changefreq => 'monthly', :priority => 0.8
   add '/producto/powder-foundation-siberia-nars-6201-1256635', :changefreq => 'monthly', :priority => 0.8
   add '/producto/powder-foundation-stromboli-nars-6205-1256718', :changefreq => 'monthly', :priority => 0.8
@@ -1378,7 +1382,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/lip-lacquer-baby-doll-nars-1901-222638', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-lacquer-chelsea-girls-nars-1903-222653', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-lacquer-eros-nars-1914-670315', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/maquillaje-ysl-matt-touche-30ml-1121193-3365440333659', :changefreq => 'monthly', :priority => 0.8
   add '/producto/single-eyeshadow-biarritz-nars-2023n-221051', :changefreq => 'monthly', :priority => 0.8
   add '/producto/single-eyeshadow-night-clubbing-nars-2029n-221119', :changefreq => 'monthly', :priority => 0.8
   add '/producto/single-eyeshadow-night-flight-nars-2031n-363234', :changefreq => 'monthly', :priority => 0.8
@@ -1409,7 +1412,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/velvet-matte-lip-pencil-dragon-girl-nars-2457-792515', :changefreq => 'monthly', :priority => 0.8
   add '/producto/velvet-matte-lip-pencil-bahama-nars-2459-792531', :changefreq => 'monthly', :priority => 0.8
   add '/producto/velvet-matte-lip-pencil-walkyrie-nars-2463-953117', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/moonshadow-baked-palette-70-value-1325885-3378872057048', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/moisturizing-bronzing-body-lotion-1390053-3378872055440', :changefreq => 'monthly', :priority => 0.8
   add '/producto/velvet-matte-lip-pencil-belle-de-jour-nars-2465-1057017', :changefreq => 'monthly', :priority => 0.8
   add '/producto/velvet-matte-lip-pencil-roman-holiday-nars-2466-1072818', :changefreq => 'monthly', :priority => 0.8
   add '/producto/velvet-matte-lip-pencil-dolce-vita-nars-2467-1072826', :changefreq => 'monthly', :priority => 0.8
@@ -1434,7 +1437,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/duo-eyeshadow-portobello-nars-3063-1072768', :changefreq => 'monthly', :priority => 0.8
   add '/producto/duo-eyeshadow-alhambra-nars-3065-1056944', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eyeliner-pencil-kyoto-nars-8006-636746', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/p-l-bronzer-medium-2-1356245-3378872048374', :changefreq => 'monthly', :priority => 0.8
   add '/producto/duo-eyeshadow-isolde-nars-3067-1099647', :changefreq => 'monthly', :priority => 0.8
   add '/producto/duo-eyeshadow-cordura-nars-3070-1099621', :changefreq => 'monthly', :priority => 0.8
   add '/producto/duo-eyeshadow-egea-nars-3071-1139930', :changefreq => 'monthly', :priority => 0.8
@@ -1456,7 +1458,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/concealer-cacao-1344506', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eyeliner-pencil-mambo-nars-8002-221952', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eyeliner-pencil-black-moon-nars-8003-221960', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lip-liner-pencil-papua-nars-9023-777177', :changefreq => 'monthly', :priority => 0.8
   add '/producto/larger-than-life-long-wear-eyeliner-via-veneto-nars-8051-1344209', :changefreq => 'monthly', :priority => 0.8
   add '/producto/larger-than-life-long-wear-eyeliner-santa-monica-blvd-nars-8052-1344217', :changefreq => 'monthly', :priority => 0.8
   add '/producto/larger-than-life-long-wear-eyeliner-via-appia-nars-8053-1344225', :changefreq => 'monthly', :priority => 0.8
@@ -1465,7 +1466,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/larger-than-life-long-wear-eyeliner-rue-bonaparte-nars-8056-1344258', :changefreq => 'monthly', :priority => 0.8
   add '/producto/larger-than-life-long-wear-eyeliner-rue-saint-honore-nars-8057-1344266', :changefreq => 'monthly', :priority => 0.8
   add '/producto/larger-than-life-long-wear-eyeliner-madison-avenue-nars-8058-1344274', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/p-l-brush-daily-clnsr-1356351-3378872034223', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pot-rouge-pale-pink-n-a-716170097022', :changefreq => 'monthly', :priority => 0.8
   add '/producto/blush-duo-hungry-heart-nars-5123-1139922', :changefreq => 'monthly', :priority => 0.8
   add '/producto/blush-orgasm-nars-4013n-248930', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-gloss-triple-x-nars-1603n-222190', :changefreq => 'monthly', :priority => 0.8
@@ -1487,6 +1488,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/multiple-maui-nars-1512n-583138', :changefreq => 'monthly', :priority => 0.8
   add '/producto/multiple-riviera-nars-1516n-832626', :changefreq => 'monthly', :priority => 0.8
   add '/producto/multiple-orgasm-nars-1517-1017920', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/moonshadow-baked-palette-70-value-1325885-3378872057048', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lipstick-honolulu-honey-nars-1001-220335', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lipstick-red-lizard-nars-1005-220376', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lipstick-shanghai-express-nars-1006-220384', :changefreq => 'monthly', :priority => 0.8
@@ -1503,6 +1505,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/lipstick-roman-holiday-nars-1029-220616', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lipstick-hot-voodoo-nars-1032-220640', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lipstick-belle-de-jour-nars-1035-220665', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/p-l-bronzer-medium-2-1356245-3378872048374', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lipstick-barbarella-nars-1036-220673', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lipstick-schiap-nars-1041-220723', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lipstick-mitzi-nars-1046-452425', :changefreq => 'monthly', :priority => 0.8
@@ -1518,7 +1521,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/lipstick-manhunt-nars-1078-1056977', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lipstick-beautiful-liar-nars-1081-1099670', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lipstick-senorita-nars-1082-1099712', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/giftset-ck-2pc-shock-men-edt-200-ml-n-a-3607342338852', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/p-l-brush-daily-clnsr-1356351-3378872034223', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lipstick-shrinagar-nars-1084-1139963', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lipstick-falbala-nars-1086-1162189', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lipstick-fast-ride-nars-1087-1180017', :changefreq => 'monthly', :priority => 0.8
@@ -1533,7 +1536,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/pure-matte-lipstick-vesuvio-nars-3506-1269653', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pure-matte-lipstick-madere-nars-3508-1304161', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pure-matte-lipstick-carthage-nars-3509-1323468', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/passport-tokyo-edt-100-ml-n-a-608940546062', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lash-amplifier-11-n-a-3378872056768', :changefreq => 'monthly', :priority => 0.8
   add '/producto/powder-foundation-mont-blanc-nars-6141-1256643', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pressed-powder-flesh-nars-5002n-221549', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pressed-powder-desert-nars-5003n-221556', :changefreq => 'monthly', :priority => 0.8
@@ -1545,7 +1548,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/illuminator-laguna-illuminator-nars-2337-1307586', :changefreq => 'monthly', :priority => 0.8
   add '/producto/illuminator-super-orgasm-illuminator-nars-2339-1307560', :changefreq => 'monthly', :priority => 0.8
   add '/producto/illuminator-orgasm-illuminator-nars-2342-1307552', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/campo-de-fiori-1365006', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lip-gloss-dolce-vita-nars-1639n-1056951', :changefreq => 'monthly', :priority => 0.8
   add '/producto/soft-touch-shadow-pencil-goddess-nars-8201-1203116', :changefreq => 'monthly', :priority => 0.8
   add '/producto/soft-touch-shadow-pencil-skorpios-nars-8202-1203124', :changefreq => 'monthly', :priority => 0.8
   add '/producto/soft-touch-shadow-pencil-aigle-noir-nars-8203-1203132', :changefreq => 'monthly', :priority => 0.8
@@ -1559,7 +1562,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/blush-taos-nars-4022-777029', :changefreq => 'monthly', :priority => 0.8
   add '/producto/blush-angelika-nars-4023-792358', :changefreq => 'monthly', :priority => 0.8
   add '/producto/blush-nico-nars-4024-812271', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/tease-edp-100-ml-n-a-608940542309', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/light-up-tweezer-n-a-3378872062752', :changefreq => 'monthly', :priority => 0.8
   add '/producto/blush-oasis-nars-4028n-939074', :changefreq => 'monthly', :priority => 0.8
   add '/producto/blush-luster-nars-4029n-1030337', :changefreq => 'monthly', :priority => 0.8
   add '/producto/blush-super-orgasm-nars-4030-1118744', :changefreq => 'monthly', :priority => 0.8
@@ -1570,6 +1573,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/miss-liberty-1365030', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pro-prime-skin-smoothing-face-prep-nars-2212-1236835', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-gloss-chihuahua-nars-1620-777128', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/campo-de-fiori-1365006', :changefreq => 'monthly', :priority => 0.8
   add '/producto/st-marks-place-1365022', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rricci-edp-80ml-spray-1221597', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nina-edt-80-ml-vapo-0065022587-1047125', :changefreq => 'monthly', :priority => 0.8
@@ -1580,8 +1584,8 @@ SitemapGenerator::Sitemap.create do
   add '/producto/clear-gentle-essential-daily-shampoo-8-5oz-1199975', :changefreq => 'monthly', :priority => 0.8
   add '/producto/botanical-boost-moisture-infusing-refreshing-spray-8-5oz-1200088', :changefreq => 'monthly', :priority => 0.8
   add '/producto/styling-mist-setting-holding-spray-8-5oz-1200138', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/edt-118-ml-polo-ralph-lauren-150722', :changefreq => 'monthly', :priority => 0.8
   add '/producto/double-detangler-n-a-1200161', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/sc-jumbo-e-l-wtp-5-beige-1311067-3378872057314', :changefreq => 'monthly', :priority => 0.8
   add '/producto/curl-quencher-moisturizing-gel-8-5oz-1200039', :changefreq => 'monthly', :priority => 0.8
   add '/producto/playcurl-volumizing-conditioner-8-5oz-1200054', :changefreq => 'monthly', :priority => 0.8
   add '/producto/playcurl-volumizing-shampoo-8-5oz-1200047', :changefreq => 'monthly', :priority => 0.8
@@ -1590,8 +1594,8 @@ SitemapGenerator::Sitemap.create do
   add '/producto/climate-control-heat-humidity-gel-2-5oz-1280056', :changefreq => 'monthly', :priority => 0.8
   add '/producto/climate-control-heat-humidity-gel-8-5oz-1200104', :changefreq => 'monthly', :priority => 0.8
   add '/producto/climate-control-heat-humidity-gel-16oz-1285527', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lip-plumper-1159987', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sun-shield-sun-sport-leave-in-spray-8-5oz-1200096', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/edt-118-ml-polo-ralph-lauren-150722', :changefreq => 'monthly', :priority => 0.8
   add '/producto/curl-quencher-moisturizing-conditioner-8-5oz-1200021', :changefreq => 'monthly', :priority => 0.8
   add '/producto/moisture-lock-leave-in-conditioner-8-5oz-1200070', :changefreq => 'monthly', :priority => 0.8
   add '/producto/curl-essentials-kit-4pc-n-a-1201128', :changefreq => 'monthly', :priority => 0.8
@@ -1602,8 +1606,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/advanced-face-firming-activator-1159250', :changefreq => 'monthly', :priority => 0.8
   add '/producto/high-potency-evening-repair-1159821', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hypo-allergenic-firming-eye-repair-1366814', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lip-plumper-1159987', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/edt-125-ml-polo-black-ralph-lauren-873125', :changefreq => 'monthly', :priority => 0.8
   add '/producto/high-potency-amine-face-treatment-new-1184514', :changefreq => 'monthly', :priority => 0.8
   add '/producto/cold-plasma-body-237-ml-1247410', :changefreq => 'monthly', :priority => 0.8
   add '/producto/vitamin-c-eye-1199611', :changefreq => 'monthly', :priority => 0.8
@@ -1614,7 +1616,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/face-finishing-moisturizer-1159771', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hypo-allergenic-gentle-cleanser-1366772', :changefreq => 'monthly', :priority => 0.8
   add '/producto/high-potency-evening-facial-emollient-new-1184555', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/fusion-soft-lights-1208156', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/edt-125-ml-polo-black-ralph-lauren-873125', :changefreq => 'monthly', :priority => 0.8
   add '/producto/no-foundation-foundation-spf-30-1177013', :changefreq => 'monthly', :priority => 0.8
   add '/producto/high-potency-eye-lift-1145861', :changefreq => 'monthly', :priority => 0.8
   add '/producto/citrus-facial-wash-1159235', :changefreq => 'monthly', :priority => 0.8
@@ -1625,7 +1627,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/advanced-eye-area-therapy-1159441', :changefreq => 'monthly', :priority => 0.8
   add '/producto/intensive-pore-minimizer-1247378', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hypo-allergenic-nourishing-moisturizer-1366806', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/sc-jumbo-e-l-wtp-7-brown-1311075-3378872057338', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sc-jumbo-e-l-wtp-5-beige-1311067-3378872057314', :changefreq => 'monthly', :priority => 0.8
   add '/producto/prescription-for-youthful-skin-kit-1175603', :changefreq => 'monthly', :priority => 0.8
   add '/producto/laser-free-resurfacer-1305937', :changefreq => 'monthly', :priority => 0.8
   add '/producto/max-sheer-all-day-moisture-defense-lotion-373894', :changefreq => 'monthly', :priority => 0.8
@@ -1635,6 +1637,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/mega-rich-eye-876763', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lashes-to-die-for-the-liner-1356112', :changefreq => 'monthly', :priority => 0.8
   add '/producto/max-complexion-correction-pads-784603', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/fusion-soft-lights-1208156', :changefreq => 'monthly', :priority => 0.8
   add '/producto/un-wrinkle-peel-pads-1047687', :changefreq => 'monthly', :priority => 0.8
   add '/producto/blemish-buffing-beads-scrub-1009406', :changefreq => 'monthly', :priority => 0.8
   add '/producto/instant-firmx-temporary-face-tightener-1284413', :changefreq => 'monthly', :priority => 0.8
@@ -1657,7 +1660,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/ptr-lashes-to-die-for-platinum-1271204', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lashes-to-die-for-the-mascara-1216951', :changefreq => 'monthly', :priority => 0.8
   add '/producto/radiance-oxygenating-masque-1114784', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/sc-jumbo-e-l-wtp-8-gold-1311083-3378872057345', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sc-jumbo-e-l-wtp-7-brown-1311075-3378872057338', :changefreq => 'monthly', :priority => 0.8
   add '/producto/firmx-growth-factor-extreme-neuropeptide-serum-1234103', :changefreq => 'monthly', :priority => 0.8
   add '/producto/anti-aging-buffing-beads-1009380', :changefreq => 'monthly', :priority => 0.8
   add '/producto/phil-margarita-shower-gel-757187', :changefreq => 'monthly', :priority => 0.8
@@ -1702,7 +1705,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/hope-in-a-jar-2-oz-351841', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hope-in-a-jar-5-oz-1027192', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hope-in-a-jar-4-oz-1051887', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/sc-jumbo-e-l-wtp-9-khaki-1311091-3378872057352', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sc-jumbo-e-l-wtp-8-gold-1311083-3378872057345', :changefreq => 'monthly', :priority => 0.8
   add '/producto/phil-fld-of-flwrs-s-g-16o-1241496', :changefreq => 'monthly', :priority => 0.8
   add '/producto/purity-made-simple-3oz-705988', :changefreq => 'monthly', :priority => 0.8
   add '/producto/miracle-worker-a-m-pads-60-ct-1324557', :changefreq => 'monthly', :priority => 0.8
@@ -1724,7 +1727,8 @@ SitemapGenerator::Sitemap.create do
   add '/producto/edt-125ml-ralph-lauren-big-pony-1-azul-1263748', :changefreq => 'monthly', :priority => 0.8
   add '/producto/edt-125ml-ralph-lauren-big-pony-3-verde-1263847', :changefreq => 'monthly', :priority => 0.8
   add '/producto/edt-125ml-ralph-lauren-big-pony-4-naranj-1263896', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/maquillaje-ysl-touche-eclat-5-1283746-3365440638334', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sc-jumbo-e-l-wtp-9-khaki-1311091-3378872057352', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/light-veil-fndtn-deep-50-n-a-3378872047506', :changefreq => 'monthly', :priority => 0.8
   add '/producto/edt-100-ml-ralph-ralph-lauren-463398', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-matte-blotting-film-878348', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sc-nano-sharpener-new-1255850', :changefreq => 'monthly', :priority => 0.8
@@ -1743,7 +1747,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/jeweled-compact-mirror-pink-1356492', :changefreq => 'monthly', :priority => 0.8
   add '/producto/jeweled-compact-mirror-purple-1356500', :changefreq => 'monthly', :priority => 0.8
   add '/producto/jeweled-compact-mirror-clear-1356518', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/mascara-1-ysl-new-mascara-1211176-3365440375949', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/edp-90ml-yves-saint-laurent-belledopium-1323039-3365440569584', :changefreq => 'monthly', :priority => 0.8
   add '/producto/jewel-tweezer-pink-1347855', :changefreq => 'monthly', :priority => 0.8
   add '/producto/jewel-tweezer-silver-1347848', :changefreq => 'monthly', :priority => 0.8
   add '/producto/jewel-tweezer-purple-1347830', :changefreq => 'monthly', :priority => 0.8
@@ -1756,7 +1760,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/sc-clr-med-csm-case-smoke-1253400', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sc-clr-lg-csm-case-black-1253426', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sc-clr-lg-csm-case-smoke-1253434', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/mascara-pestanas-01-ysl-vefc-shocking-1370501-3365440123267', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/edt-100-ml-ysl-l-homme-987925-3365440316560', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-blk-13-eye-rnd-creas-1014737', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-blk-14-eye-smudge-1014281', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-blk-16-flt-eye-brsh-1014687', :changefreq => 'monthly', :priority => 0.8
@@ -1793,7 +1797,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/p-l-glass-nail-file-pink-1104124', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sc-holiday-travel-clutch-blk-30-value-1353283', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sc-holiday-travel-clutch-raspberry-30-value-1353291', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/giftset-ck-2pc-shock-woman-edt-200-ml-n-a-3607342334496', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/edt-125-ml-paris-ysl-8169-3365440002197', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-dlux-clr-brsh-set-145-value-1353309', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-cuticle-nippr-1-4-jaw-206342', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-dual-pencil-sharpener-1122035', :changefreq => 'monthly', :priority => 0.8
@@ -1802,7 +1806,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/glitter-spray-silver-1339894', :changefreq => 'monthly', :priority => 0.8
   add '/producto/glitter-spray-gold-1339902', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-blk-liq-e-l-1296151', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/blush-rush-flush-1100809', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-blk-met-glit-e-l-1296177', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-brwn-liq-e-l-1296185', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-ll-liq-e-l-03-gry-blk-1296243', :changefreq => 'monthly', :priority => 0.8
@@ -1843,20 +1846,20 @@ SitemapGenerator::Sitemap.create do
   add '/producto/sc-ult-shn-n15-cute-pk-sh-1254911', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sc-ult-shn-n12-hip-pnk-sh-1254986', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sc-ult-shn-n03-she-spk-rf-1255025', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/mascara-pestanas-ysl-noir-radical-1241108-3365440564947', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/polvo-compacto-04-ysl-compacte-radiance-1121342-3365440662148', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/light-veil-fndtn-light-20-n-a-3378872047452', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/edt-vapo-100ml-ysl-la-nuit-homme-1200716-3365440375079', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lp-10-gloss-ysl-golden-gloss-n-19-1229558-3365440568266', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/loud-for-him-edt-75ml-n-a-022548223109', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-nano-e-l-1-mdnght-blk-1070804', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-nano-e-l-2-glttr-blck-1070812', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-nano-e-l-5-chocolate-1070846', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-nano-e-l-16-azur-blue-1070952', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-nano-e-l-20-wild-sprt-1070994', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-nano-e-l-10-khaki-grn-1070895', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/polvo-compacto-05-ysl-compacte-radiance-1121359-3365440662186', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/maquillaje-ysl-matt-touch-found-09-1121185-3365440352094', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-nano-e-l-14-nuage-1070937', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-rg-crm-l-s-r02-crtsn-1198860', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-rg-crm-l-s-r03-psn-rd-1198878', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/puff-blush4-5gr-1121383-3365440246515', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/maquillaje-ysl-matt-touch-foundation-07-1121169-3365440352070', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-rg-crm-l-s-r04-the-rd-1198886', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-rg-crm-l-s-r05-ht-tng-1198894', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-rg-crm-l-s-r06-it-grl-1198902', :changefreq => 'monthly', :priority => 0.8
@@ -1872,7 +1875,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/p-l-rg-crm-l-s-r21-ingenu-1199025', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-rg-crm-l-s-r23-crush-1199058', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-sculting-brow-pencil-631630', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/rubor-ysl-blush-radiance-01-1353473-3365440649811', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/maquillaje-ysl-matt-touche-30ml-1121193-3365440333659', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-sculting-brow-pencil-631622', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sc-le-wtp-mascara-01-blk-1226968', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-masc-trpact-blk-1228048', :changefreq => 'monthly', :priority => 0.8
@@ -1880,19 +1883,19 @@ SitemapGenerator::Sitemap.create do
   add '/producto/p-l-masc-trpact-ultblk-1356203', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-masc-trpact-blue-1228055', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-lash-plumper-black-1009679', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/rubor-ysl-blush-radiance-05-1353481-3365440649972', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/makeup-vanity-n-a-3378872063803', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/rubor-ysl-blush-radiance-06-1353499-3365440650015', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/giftset-ck-3pc-beauty-edp-100-ml-n-a-3607342277199', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/sombra-quinteto-7-ysl-ombres-lumi-1195114-3365440375826', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/maquillaje-ysl-touche-eclat-5-1283746-3365440638334', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/os12-tg-summer-100ml-n-a-022548238752', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/mascara-1-ysl-new-mascara-1211176-3365440375949', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/mascara-pestanas-01-ysl-vefc-shocking-1370501-3365440123267', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/mascara-pestanas-ysl-noir-radical-1241108-3365440564947', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pro-lesson-palette-brown-eyes-65-value-1332030', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pro-lesson-palette-blue-eyes-65-value-1332048', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pro-lesson-palette-green-eyes-65-value-1332055', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pro-lesson-palette-smoky-eyes-65-value-1332063', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/sombras-n1-ysl-s-du-regard-velvet-black-1247766-3365440563827', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/polvo-compacto-04-ysl-compacte-radiance-1121342-3365440662148', :changefreq => 'monthly', :priority => 0.8
   add '/producto/colorful-blush-04-coral-crush-1318021', :changefreq => 'monthly', :priority => 0.8
   add '/producto/color-wand-1316215', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/sombras-n2-ysl-s-du-regard-leather-brown-1247774-3365440563865', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/polvo-compacto-05-ysl-compacte-radiance-1121359-3365440662186', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-nano-lip-linr-2-cute-1065424', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-nano-lip-linr-3-queen-1065713', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-nano-lip-linr-4-candi-1065721', :changefreq => 'monthly', :priority => 0.8
@@ -1921,7 +1924,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/sc-clr-plt-wlking-moon-07-1238484', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sc-clr-plt-miami-vibes-11-1238419', :changefreq => 'monthly', :priority => 0.8
   add '/producto/super-nourishing-lip-balm-spf-15-1303783', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/sombras-n3-ysl-s-du-regard-smokey-purple-1247782-3365440563940', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/puff-blush4-5gr-1121383-3365440246515', :changefreq => 'monthly', :priority => 0.8
   add '/producto/age-defy-spf15-moisture-cream-1259894', :changefreq => 'monthly', :priority => 0.8
   add '/producto/age-defy-eye-cream-1258383', :changefreq => 'monthly', :priority => 0.8
   add '/producto/super-supreme-body-butter-1258425', :changefreq => 'monthly', :priority => 0.8
@@ -1929,7 +1932,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/eye-makeup-removing-pads-1258300', :changefreq => 'monthly', :priority => 0.8
   add '/producto/smart-dual-action-exfoliator-1258417', :changefreq => 'monthly', :priority => 0.8
   add '/producto/double-duty-exfoliator-mask-1258409', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/sombras-n9-ysl-s-du-regard-turquoise-1254200-3365440564145', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/rubor-ysl-blush-radiance-01-1353473-3365440649811', :changefreq => 'monthly', :priority => 0.8
   add '/producto/supreme-cleansing-foam-1258326', :changefreq => 'monthly', :priority => 0.8
   add '/producto/instant-depuffing-roll-on-gel-1258375', :changefreq => 'monthly', :priority => 0.8
   add '/producto/instant-moisturizer-1259621', :changefreq => 'monthly', :priority => 0.8
@@ -1937,8 +1940,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/instant-moisture-mask-1303775', :changefreq => 'monthly', :priority => 0.8
   add '/producto/soft-touch-cotton-pads-1258474', :changefreq => 'monthly', :priority => 0.8
   add '/producto/halo-highlighting-wand-gold-1349646', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/sombras-ojos-01-ysl-pure-metal-1333772-3365440571235', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/mini-bag-palette-n-a-3378872059448', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/rubor-ysl-blush-radiance-05-1353481-3365440649972', :changefreq => 'monthly', :priority => 0.8
   add '/producto/express-waterproof-cleansing-wipes-1258334', :changefreq => 'monthly', :priority => 0.8
   add '/producto/instant-eye-makeup-remover-2oz-1258276', :changefreq => 'monthly', :priority => 0.8
   add '/producto/super-loaded-ade-defy-serum-1259886', :changefreq => 'monthly', :priority => 0.8
@@ -1948,7 +1950,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/brow-tech-taupe-soft-brown-1241033', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brow-tech-brunette-1241041', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brow-tech-to-go-brunette-1240944', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/sombras-ojos-02-ysl-pure-metal-1333806-3365440571273', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/rubor-ysl-blush-radiance-06-1353499-3365440650015', :changefreq => 'monthly', :priority => 0.8
   add '/producto/halo-highlighting-wand-pearl-1349638', :changefreq => 'monthly', :priority => 0.8
   add '/producto/limitless-lip-stain-color-seal-balm-petal-1315910', :changefreq => 'monthly', :priority => 0.8
   add '/producto/limitless-lip-stain-color-seal-balm-sangria-1315928', :changefreq => 'monthly', :priority => 0.8
@@ -1956,9 +1958,9 @@ SitemapGenerator::Sitemap.create do
   add '/producto/limitless-lip-stain-color-seal-balm-nude-1315944', :changefreq => 'monthly', :priority => 0.8
   add '/producto/limitless-lip-stain-color-seal-balm-cinnamon-1315951', :changefreq => 'monthly', :priority => 0.8
   add '/producto/limitless-lip-stain-color-seal-balm-berry-1315969', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/blush-rush-heartbreak-1105683', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/blush-rush-flush-1100809', :changefreq => 'monthly', :priority => 0.8
   add '/producto/high-definition-concealer-dark-1208214', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/sombras-ojos-03-ysl-pure-metal-1333814-3365440571310', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/rich-lip-color-spf-12-guava-n-a-716170085760', :changefreq => 'monthly', :priority => 0.8
   add '/producto/high-definition-healthy-fx-foundation-spf-15-fair-1012889', :changefreq => 'monthly', :priority => 0.8
   add '/producto/high-definition-foundation-fair-0-1060060', :changefreq => 'monthly', :priority => 0.8
   add '/producto/high-definition-healthy-fx-foundation-spf-15-fair-1012897', :changefreq => 'monthly', :priority => 0.8
@@ -2014,7 +2016,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/bionic-mascara-1057942', :changefreq => 'monthly', :priority => 0.8
   add '/producto/layer-lash-primer-730945', :changefreq => 'monthly', :priority => 0.8
   add '/producto/camera-ready-full-coverage-concealer-1-0-942003', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/sombras-ojos-04-ysl-pure-metal-1333822-3365440623972', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sombra-quinteto-7-ysl-ombres-lumi-1195114-3365440375826', :changefreq => 'monthly', :priority => 0.8
   add '/producto/camera-ready-full-coverage-concealer-2-0-942011', :changefreq => 'monthly', :priority => 0.8
   add '/producto/camera-ready-full-coverage-concealer-3-0-942029', :changefreq => 'monthly', :priority => 0.8
   add '/producto/camera-ready-full-coverage-concealer-4-0-942037', :changefreq => 'monthly', :priority => 0.8
@@ -2028,7 +2030,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/limitless-eye-liner-black-violet-1240910', :changefreq => 'monthly', :priority => 0.8
   add '/producto/limitless-eye-liner-indigo-ink-1240928', :changefreq => 'monthly', :priority => 0.8
   add '/producto/limitless-eye-liner-peacock-1240936', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/nail-clipper-small-n-a-3378872051572', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/os12-th-summer-100ml-n-a-022548238738', :changefreq => 'monthly', :priority => 0.8
   add '/producto/limitless-eye-liner-smoke-1315852', :changefreq => 'monthly', :priority => 0.8
   add '/producto/photo-finish-lipstick-with-sila-silk-technology-su-951210', :changefreq => 'monthly', :priority => 0.8
   add '/producto/photo-finish-lipstick-with-sila-silk-technology-ex-951244', :changefreq => 'monthly', :priority => 0.8
@@ -2041,7 +2043,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/hyperlash-mascara-1239755', :changefreq => 'monthly', :priority => 0.8
   add '/producto/full-exposure-mascara-jet-black-1315902', :changefreq => 'monthly', :priority => 0.8
   add '/producto/cream-eye-liner-palette-proof-926659', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/sombras-ojos-05-ysl-pure-metal-1333830-3365440624016', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sombras-n1-ysl-s-du-regard-velvet-black-1247766-3365440563827', :changefreq => 'monthly', :priority => 0.8
   add '/producto/cream-eye-liner-palette-1239441', :changefreq => 'monthly', :priority => 0.8
   add '/producto/emulsion-lip-exfoliant-75-oz-687517', :changefreq => 'monthly', :priority => 0.8
   add '/producto/photo-finish-lid-primer-beige-1157791', :changefreq => 'monthly', :priority => 0.8
@@ -2065,17 +2067,19 @@ SitemapGenerator::Sitemap.create do
   add '/producto/lip-enhancing-gloss-radiant-1074491', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-enhancing-gloss-tease-1220581', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eye-shadow-trio-filter-1349737', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/rich-lip-color-spf-12-old-hollywood-n-a-716170085777', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-enhancing-gloss-pulse-1220615', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-gloss-fame-984799', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-enhancing-gloss-pout-984898', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eye-shadow-trio-aperture-1349778', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/rich-lip-color-spf-12-soft-coral-n-a-716170085821', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-enhancing-gloss-starlit-984914', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-enhancing-gloss-sultry-1139815', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-treatment-spf-15-687491', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eye-shadow-trio-shutterspeed-1349695', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eye-shadow-trio-headshot-1349703', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eye-shadow-trio-megapixel-1349711', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/212-men-edt-100ml-asg-100ml-tb-fd12-n-a-8411061739310', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/rich-lip-color-spf-12-sweet-nectar-n-a-716170085814', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eye-shadow-trio-develop-1349794', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eye-shadow-trio-dark-room-1349802', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eye-shadow-trio-light-speed-1349828', :changefreq => 'monthly', :priority => 0.8
@@ -2088,15 +2092,16 @@ SitemapGenerator::Sitemap.create do
   add '/producto/blush-rush-bare-1100692', :changefreq => 'monthly', :priority => 0.8
   add '/producto/blush-rush-chiffon-1100718', :changefreq => 'monthly', :priority => 0.8
   add '/producto/blush-rush-paradise-1100726', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/blush-rush-heartbreak-1105683', :changefreq => 'monthly', :priority => 0.8
   add '/producto/blush-rush-gingersnap-1100817', :changefreq => 'monthly', :priority => 0.8
   add '/producto/blush-rush-1208198', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/brow-pen-light-1103647', :changefreq => 'monthly', :priority => 0.8
   add '/producto/romantic-eye-1307818', :changefreq => 'monthly', :priority => 0.8
   add '/producto/perfect-eyes-eyeliner-perfect-purple-1345941', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/sombras-ojos-06-ysl-pure-metal-1333848-3365440624054', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sombras-n2-ysl-s-du-regard-leather-brown-1247774-3365440563865', :changefreq => 'monthly', :priority => 0.8
   add '/producto/retractable-kabuki-brush-1023258', :changefreq => 'monthly', :priority => 0.8
   add '/producto/size-queen-mascara-1324722', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/brow-powder-duo-ash-blonde-929760', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sombras-n3-ysl-s-du-regard-smokey-purple-1247782-3365440563940', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/shimmer-wash-eye-shadow-black-plum-n-a-716170058764', :changefreq => 'monthly', :priority => 0.8
   add '/producto/retractable-bronze-buki-brush-1324714', :changefreq => 'monthly', :priority => 0.8
   add '/producto/chocolate-soleil-bronzer-1139013', :changefreq => 'monthly', :priority => 0.8
   add '/producto/perfect-eyes-eyeliner-perfect-black-1345800', :changefreq => 'monthly', :priority => 0.8
@@ -2116,7 +2121,8 @@ SitemapGenerator::Sitemap.create do
   add '/producto/primed-poreless-1147883', :changefreq => 'monthly', :priority => 0.8
   add '/producto/shadow-insurance-glitter-glue-1307701', :changefreq => 'monthly', :priority => 0.8
   add '/producto/shadow-insurance-candlelight-1307719', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/tinted-brow-gel-caramel-998856', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sombras-n9-ysl-s-du-regard-turquoise-1254200-3365440564145', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/tg-cologne-spray-100-ml-n-a-022548040126', :changefreq => 'monthly', :priority => 0.8
   add '/producto/shadow-insurance-lemon-drop-1345420', :changefreq => 'monthly', :priority => 0.8
   add '/producto/even-better-clinical-30ml-1246644', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-injection-774091', :changefreq => 'monthly', :priority => 0.8
@@ -2136,7 +2142,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/pore-correcting-serum-1318658', :changefreq => 'monthly', :priority => 0.8
   add '/producto/heavy-metal-glitter-eyeliner-baked-893412', :changefreq => 'monthly', :priority => 0.8
   add '/producto/heavy-metal-glitter-eyeliner-distortion-998492', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/nail-files-x2-n-a-3378872028130', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/tg-eau-de-prep-100ml-n-a-022548252383', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-waterproof-liquid-eyeliner-perversion-1348697', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-waterproof-liquid-eyeliner-demolition-1348705', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-waterproof-liquid-eyeliner-retrograde-1348762', :changefreq => 'monthly', :priority => 0.8
@@ -2149,13 +2155,14 @@ SitemapGenerator::Sitemap.create do
   add '/producto/24-7-waterproof-liquid-eyeliner-el-dorado-1348788', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-waterproof-liquid-eyeliner-sabbath-1348721', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-glide-on-shadow-pencil-delinquent-1306158', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/212-vip-edp-80ml-bl-100ml-tb-md12-n-a-8411061739563', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/shimmer-wash-eye-shadow-chocolate-n-a-716170059181', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sombras-ojos-01-ysl-pure-metal-1333772-3365440571235', :changefreq => 'monthly', :priority => 0.8
   add '/producto/meltdown-makeup-remover-1325661', :changefreq => 'monthly', :priority => 0.8
   add '/producto/big-fatty-mascara-black-893305', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-good-karma-brush-1306224', :changefreq => 'monthly', :priority => 0.8
   add '/producto/naked-palette-1324532', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-glide-on-shadow-pencil-morphine-1306216', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/giftset-ck-3pc-euphoria-woman-edp-100-ml-n-a-3607342286412', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sombras-ojos-02-ysl-pure-metal-1333806-3365440571273', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-glide-on-shadow-pencil-barracuda-1306125', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-glide-on-shadow-pencil-wasteland-1306166', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-glide-on-shadow-pencil-mercury-1306182', :changefreq => 'monthly', :priority => 0.8
@@ -2171,7 +2178,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/24-7-glide-on-eye-pencils-crash-1219500', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-glide-on-eye-pencils-lust-893255', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-glide-on-eye-pencils-deviant-893297', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/tinted-brow-gel-granite-998872', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sombras-ojos-03-ysl-pure-metal-1333814-3365440571310', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-glide-on-eye-pencils-mildew-1219534', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-glide-on-eye-pencils-binge-1219526', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-glide-on-eye-pencils-underground-1139393', :changefreq => 'monthly', :priority => 0.8
@@ -2180,21 +2187,18 @@ SitemapGenerator::Sitemap.create do
   add '/producto/24-7-glide-on-eye-pencils-gun-metal-982090', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-glide-on-eye-pencils-yeyo-1051333', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-glide-on-eye-pencils-oil-slick-1219518', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/versace-versus-edt-100-ml-1250539', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-glide-on-eye-pencils-zero-893263', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-glide-on-eye-pencils-electric-893271', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-glide-on-eye-pencil-woodstock-1393685', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-glide-on-eye-pencil-perversion-1393693', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-glide-on-eye-pencil-demolition-1393701', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/primer-potion-pro-1361757', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/pencil-set-naked-1361708', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/pencil-set-electric-1361716', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/shadow-pencil-set-1361690', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ver-versense-edt-100-ml-1158393', :changefreq => 'monthly', :priority => 0.8
   add '/producto/surreal-skin-mineral-makeup-illusion-1243450', :changefreq => 'monthly', :priority => 0.8
   add '/producto/surreal-skin-mineral-makeup-nirvana-1243492', :changefreq => 'monthly', :priority => 0.8
   add '/producto/surreal-skin-mineral-makeup-dream-1243468', :changefreq => 'monthly', :priority => 0.8
   add '/producto/surreal-skin-mineral-makeup-supernova-1243526', :changefreq => 'monthly', :priority => 0.8
   add '/producto/surreal-skin-mineral-makeup-trance-1243500', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/versace-versus-edt-100-ml-1250539', :changefreq => 'monthly', :priority => 0.8
   add '/producto/surreal-skin-mineral-makeup-hallucination-1243476', :changefreq => 'monthly', :priority => 0.8
   add '/producto/surreal-skin-mineral-makeup-vision-1243484', :changefreq => 'monthly', :priority => 0.8
   add '/producto/surreal-skin-mineral-makeup-mirage-1243518', :changefreq => 'monthly', :priority => 0.8
@@ -2205,15 +2209,12 @@ SitemapGenerator::Sitemap.create do
   add '/producto/eau-fraiche-fm-edt-vapo-100-ml-972646', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bright-crystal-ff-edt-vapo-90-ml-1063619', :changefreq => 'monthly', :priority => 0.8
   add '/producto/ver-pour-homme-edt-100-ml-1112481', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ver-versense-edt-100-ml-1158393', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/sombras-ysl-ombres-5-lumieres-n-9-1229574-3365440557307', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sombras-quinteto-02-ysl-ombres-lumieres-1120476', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sombras-quinteto-03-ysl-ombres-lumieres-1120484', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sombras-quinteto-04-ysl-ombres-lumieres-1120492', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sombras-quinteto-05-ysl-ombres-lumieres-1120500', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sombras-quinteto-06-ysl-ombres-lumieres-1120518', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sombra-quinteto-8-ysl-ombres-lumi-1195122', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/nail-kit-n-a-3378872051732', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sombras-ysl-ombres-5-lumieres-1353465', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-01-ysl-volupte-sheer-candy-coco-1333707', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-03-ysl-volupte-sheer-candy-uva-1333723', :changefreq => 'monthly', :priority => 0.8
@@ -2244,7 +2245,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/gloss-labios-03-ysl-gloss-pur-1145325', :changefreq => 'monthly', :priority => 0.8
   add '/producto/gloss-labios-04-ysl-gloss-pur-1145333', :changefreq => 'monthly', :priority => 0.8
   add '/producto/gloss-labios-05-ysl-gloss-pur-1145341', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/suero-ojos-2-5ml-ysl-tpo-sec-eyewake-rol-1241264-3365440577190', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sombras-ojos-04-ysl-pure-metal-1333822-3365440623972', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-30-ysl-golden-gloss-1283886', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-31-ysl-golden-gloss-1283894', :changefreq => 'monthly', :priority => 0.8
   add '/producto/crayon-dessin-des-sourci-153-ysl-1119783', :changefreq => 'monthly', :priority => 0.8
@@ -2254,7 +2255,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/labial-03-ysl-rouge-volupte-1148436', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-08-ysl-rouge-volupte-1120328', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-09-ysl-rouge-volupte-1120336', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/sheer-beauty-edt-100-ml-n-a-3607342306134', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sombras-ojos-05-ysl-pure-metal-1333830-3365440624016', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-11-ysl-rouge-volupte-1120245', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-14-ysl-rouge-volupte-1148469', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-15-ysl-rouge-volupte-1148477', :changefreq => 'monthly', :priority => 0.8
@@ -2276,20 +2277,20 @@ SitemapGenerator::Sitemap.create do
   add '/producto/hair-to-die-for-1447101', :changefreq => 'monthly', :priority => 0.8
   add '/producto/even-better-eye-dark-circle-corrector-10-ml-1438787', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rw-laser-focus-30ml-1271782', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/build-your-own-palette-140302', :changefreq => 'monthly', :priority => 0.8
   add '/producto/perfectrescue-intense-keratin-repair-serum-1332600', :changefreq => 'monthly', :priority => 0.8
   add '/producto/glow-by-dr-brandt-ruby-crystal-retinol-hydracreme-1390624', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sumptuous-two-tone-mascara-s0001268', :changefreq => 'monthly', :priority => 0.8
   add '/producto/palette-rose-collection-s0006505', :changefreq => 'monthly', :priority => 0.8
   add '/producto/ultimate-lift-eye-gel-pm-966200', :changefreq => 'monthly', :priority => 0.8
   add '/producto/poetic-waxing-starter-series-1428762', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/brow-fix-975334', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/magic-ink-liquid-eyeliner-1281161', :changefreq => 'monthly', :priority => 0.8
   add '/producto/stay-all-day-foundation-concealer-1439991', :changefreq => 'monthly', :priority => 0.8
   add '/producto/la-petite-robe-noire-1427533', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bamboo-smooth-kendi-oil-pure-treatment-1312784', :changefreq => 'monthly', :priority => 0.8
   add '/producto/b-b-cream-spf-27-pa-1339035', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bb-cream-1362540', :changefreq => 'monthly', :priority => 0.8
   add '/producto/tinted-beauty-balm-1392554', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sombras-ojos-06-ysl-pure-metal-1333848-3365440624054', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hypnose-star-mascara-1445139', :changefreq => 'monthly', :priority => 0.8
   add '/producto/dot-1433481', :changefreq => 'monthly', :priority => 0.8
   add '/producto/camu-camu-power-c-x-30-vitamin-c-brightening-moisturizer-1460906', :changefreq => 'monthly', :priority => 0.8
@@ -2303,23 +2304,25 @@ SitemapGenerator::Sitemap.create do
   add '/producto/brow-pen-deep-1171511', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brow-wiz-brunette-1056092', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bamboo-uv-color-care-masque-1360262', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/illumin8-eye-shadow-duo-at-chateau-1346253', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sombras-ysl-ombres-5-lumieres-n-9-1229574-3365440557307', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bamboo-uv-conditioner-1360171', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bamboo-uv-shampoo-1360072', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bamboo-volume-conditioner-1333616', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bamboo-volume-shampoo-1333665', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bamboo-volume-thickening-hair-plump-1333673', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bamboo-volume-uplifting-root-blast-1333640', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bareminerals-original-spf-15-foundation-dark-747857', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bamboo-volume-weightless-whipped-mousse-1333624', :changefreq => 'monthly', :priority => 0.8
   add '/producto/one-night-highlights-red-1393214', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bamboo-color-care-veil-fluide-1360213', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bamboo-smooth-anti-frizz-conditioner-1312776', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bamboo-luminous-shine-brilliance-creme-1333541', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bamboo-luminous-shine-conditioner-1333483', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bamboo-luminous-shine-mist-1333517', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/illumin8-eye-shadow-duo-my-bedford-1346279', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/shimmer-wash-eye-shadow-snow-n-a-716170059082', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bamboo-luminous-shine-shampoo-1333533', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bamboo-smooth-anti-breakage-spray-1360304', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/brow-duality-shell-lace-1118827', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/brow-enhancing-serum-advanced-1394709', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bamboo-smooth-anti-frizz-conditioner-1312776', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bamboo-smooth-anti-humidity-hairspray-1333574', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bamboo-smooth-frizz-correcting-blowout-lotion-1333608', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bamboo-smooth-intensive-conditioning-masque-1333590', :changefreq => 'monthly', :priority => 0.8
@@ -2328,10 +2331,21 @@ SitemapGenerator::Sitemap.create do
   add '/producto/leopard-mini-ceramic-styler-1383314', :changefreq => 'monthly', :priority => 0.8
   add '/producto/beauty-express-blonde-1306984', :changefreq => 'monthly', :priority => 0.8
   add '/producto/beauty-express-brunette-1306992', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/illumin8-eye-shadow-duo-on-set-1346246', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/flawless-definition-mascara-waterproof-black-1250125', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brow-duality-sand-camille-1118819', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/brow-duality-shell-lace-1118827', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/brow-enhancing-serum-advanced-1394709', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/brow-fix-975334', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/brow-pen-light-1103647', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/illumin8-eye-shadow-duo-power-lunch-1346261', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/flawless-definition-mini-mascara-duo-1388438', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/flawless-volumizing-mascara-black-1276260', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/brow-powder-duo-ash-blonde-929760', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brow-powder-duo-ebony-1162601', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brow-powder-duo-golden-blonde-929786', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brow-powder-duo-medium-ash-929778', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/flawless-volumizing-mascara-espresso-1329150', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brow-powder-duo-strawburn-929802', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brow-wiz-ash-blonde-1056084', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brow-wiz-caramel-1394717', :changefreq => 'monthly', :priority => 0.8
@@ -2340,30 +2354,34 @@ SitemapGenerator::Sitemap.create do
   add '/producto/brush-mini-duo-angles-spooley-7-765776', :changefreq => 'monthly', :priority => 0.8
   add '/producto/cooling-eye-brightener-1243401', :changefreq => 'monthly', :priority => 0.8
   add '/producto/f-g-matte-highlighter-camille-765461', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/suero-ojos-2-5ml-ysl-tpo-sec-eyewake-rol-1241264-3365440577190', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hydrafull-gloss-flamingo-1325844', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hydrafull-gloss-moi-1325828', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hydrafull-gloss-sangria-1325869', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hydrafull-gloss-sugar-pink-1325836', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/illumin8-eye-shadow-duo-at-chateau-1346253', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/tweezer-765172', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/100-lipliner-natural-1164722', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/100-lipliner-shell-1164763', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/illumin8-eye-shadow-duo-my-bedford-1346279', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/illumin8-eye-shadow-duo-on-set-1346246', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/illumin8-eye-shadow-duo-power-lunch-1346261', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/full-coverage-kabuki-brush-747998', :changefreq => 'monthly', :priority => 0.8
   add '/producto/perfect-brow-pencil-ash-blonde-764936', :changefreq => 'monthly', :priority => 0.8
   add '/producto/perfect-brow-pencil-blonde-764969', :changefreq => 'monthly', :priority => 0.8
   add '/producto/perfect-brow-pencil-brunette-764944', :changefreq => 'monthly', :priority => 0.8
   add '/producto/perfect-brow-pencil-medium-ash-764977', :changefreq => 'monthly', :priority => 0.8
   add '/producto/perfect-brow-pencil-strawburn-765008', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bareminerals-blush-1326990', :changefreq => 'monthly', :priority => 0.8
   add '/producto/perfect-brow-pencil-ultimate-brown-765032', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sharpener-765255', :changefreq => 'monthly', :priority => 0.8
   add '/producto/stencils-765800', :changefreq => 'monthly', :priority => 0.8
   add '/producto/tinted-brow-gel-blonde-829713', :changefreq => 'monthly', :priority => 0.8
   add '/producto/tinted-brow-gel-brunette-829721', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/tinted-brow-gel-caramel-998856', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/tinted-brow-gel-granite-998872', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/tweezer-765172', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/100-lipliner-natural-1164722', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/100-lipliner-shell-1164763', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/100-lipliner-thistle-1164714', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/100-lipliner-twig-1195924', :changefreq => 'monthly', :priority => 0.8
   add '/producto/100-natural-lipcolor-black-currant-1329127', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-100-natural-lipcolor-1250299', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-100-natural-lipcolor-1327014', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bareminerals-blush-1195700', :changefreq => 'monthly', :priority => 0.8
   add '/producto/100-natural-lipcolor-rose-crepe-1094945', :changefreq => 'monthly', :priority => 0.8
   add '/producto/100-natural-lip-gloss-1250315', :changefreq => 'monthly', :priority => 0.8
   add '/producto/100-natural-lip-gloss-1328400', :changefreq => 'monthly', :priority => 0.8
@@ -2372,18 +2390,14 @@ SitemapGenerator::Sitemap.create do
   add '/producto/bareminerals-all-over-face-color-1164805', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-all-over-face-color-1164789', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-all-over-face-color-1164771', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ultra-shines-lip-shine-1258664', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-blush-1166115', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-blush-1326982', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-blush-1195718', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-blush-1166107', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-blush-749143', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bareminerals-blush-1326990', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bareminerals-blush-1195700', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bareminerals-original-spf-15-foundation-dark-747857', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/shimmer-wash-eye-shadow-stone-n-a-716170059136', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-original-spf-15-foundation-fair-747832', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-original-spf-15-foundation-fairly-light-747436', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/magic-ink-liquid-eyeliner-1281161', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-original-spf-15-foundation-fairly-medium-1229004', :changefreq => 'monthly', :priority => 0.8
   add '/producto/blemish-therapy-1318823', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-skincare-bareminerals-purely-nourishing-moisturizer-combo-skin-1318898', :changefreq => 'monthly', :priority => 0.8
@@ -2413,9 +2427,9 @@ SitemapGenerator::Sitemap.create do
   add '/producto/eyecolor-moss-996553', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-eyecolor-748830', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-eyecolor-820100', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/chloe-love-roll-on-1368794-3607345751863', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-eyecolor-903526', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-eyecolor-748749', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/tratamiento-rostro-40ml-ysl-pinceau-ecla-1121375-3365440354623', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eyecolor-sex-kitten-748772', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-eyecolor-903542', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-eyecolor-749085', :changefreq => 'monthly', :priority => 0.8
@@ -2427,13 +2441,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/flawless-application-face-brush-748012', :changefreq => 'monthly', :priority => 0.8
   add '/producto/flawless-definition-mascara-black-1196088', :changefreq => 'monthly', :priority => 0.8
   add '/producto/flawless-definition-mascara-curl-lengthen-black-1349307', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/flawless-definition-mascara-waterproof-black-1250125', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/flawless-definition-mini-mascara-duo-1388438', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/flawless-volumizing-mascara-black-1276260', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/flawless-volumizing-mascara-espresso-1329150', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/full-coverage-kabuki-brush-747998', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/voile-de-blush-03-os-print12-1394196-3365440145269', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ysl-lh-libre-edt-vapo-100ml-1369768-3365440591516', :changefreq => 'monthly', :priority => 0.8
   add '/producto/full-flawless-face-brush-1072933', :changefreq => 'monthly', :priority => 0.8
   add '/producto/full-tapered-shadow-brush-1053453', :changefreq => 'monthly', :priority => 0.8
   add '/producto/get-started-kit-dark-1119072', :changefreq => 'monthly', :priority => 0.8
@@ -2449,8 +2456,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/high-shine-eyecolors-gold-medal-1327360', :changefreq => 'monthly', :priority => 0.8
   add '/producto/high-shine-eyecolors-ice-1327386', :changefreq => 'monthly', :priority => 0.8
   add '/producto/high-shine-eyecolors-meteorite-1327352', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ysl-ombres-5-lumieres-13-os-print12-1394204-3365440162853', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/zegna-z-edt-100ml-n-a-022548262733', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/tratamiento-rostro-40ml-ysl-pinceau-ecla-1121375-3365440354623', :changefreq => 'monthly', :priority => 0.8
   add '/producto/high-shine-eyecolors-moonshine-1299924', :changefreq => 'monthly', :priority => 0.8
   add '/producto/high-shine-eyecolors-vapor-1327394', :changefreq => 'monthly', :priority => 0.8
   add '/producto/mineral-veil-1165810', :changefreq => 'monthly', :priority => 0.8
@@ -2464,7 +2470,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/on-the-spot-swabs-885673', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pretty-amazing-lip-color-ambition-1336403', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pretty-amazing-lip-color-confidence-1351881', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ysl-palette-candy-os-print12-1394212-3365440147782', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pretty-amazing-lip-color-fearless-1336361', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pretty-amazing-lip-color-savvy-1351907', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pretty-amazing-lip-color-strength-1336387', :changefreq => 'monthly', :priority => 0.8
@@ -2486,7 +2491,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/bareminerals-ready-153-eyeshadow-2-0-1363597', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-ready-153-eyeshadow-2-0-1363589', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-ready-153-eyeshadow-2-0-1363555', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ysl-rpc-val-glossy-stain-01-1395144-3365440117037', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/voile-de-blush-03-os-print12-1394196-3365440145269', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-ready-153-eyeshadow-2-0-1363548', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-ready-153-eyeshadow-2-0-1363456', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-ready-153-eyeshadow-2-0-1363613', :changefreq => 'monthly', :priority => 0.8
@@ -2549,7 +2554,8 @@ SitemapGenerator::Sitemap.create do
   add '/producto/creaseless-cream-shadow-liner-990556', :changefreq => 'monthly', :priority => 0.8
   add '/producto/creaseless-cream-shadow-liner-990531', :changefreq => 'monthly', :priority => 0.8
   add '/producto/erase-paste-1073691', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/scruffing-lotion-50773-020714104733', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ysl-lh-libre-edt-vapo-100ml-1369768-3365440591516', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ysl-ombres-5-lumieres-13-os-print12-1394204-3365440162853', :changefreq => 'monthly', :priority => 0.8
   add '/producto/creaseless-cream-shadow-liner-990515', :changefreq => 'monthly', :priority => 0.8
   add '/producto/creaseless-cream-shadow-liner-gabbi-sippin-and-dippin-1139708', :changefreq => 'monthly', :priority => 0.8
   add '/producto/creaseless-cream-shadow-liner-990523', :changefreq => 'monthly', :priority => 0.8
@@ -2603,7 +2609,9 @@ SitemapGenerator::Sitemap.create do
   add '/producto/ultra-shines-lip-shine-1302595', :changefreq => 'monthly', :priority => 0.8
   add '/producto/ultra-shines-lip-shine-1258656', :changefreq => 'monthly', :priority => 0.8
   add '/producto/ultra-shines-lip-shine-1258672', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ssfm-scruffing-lot-4-5-200-ml-50856-020714104740', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ysl-palette-candy-os-print12-1394212-3365440147782', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ysl-rpc-val-glossy-stain-01-1395144-3365440117037', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ultra-shines-lip-shine-1258664', :changefreq => 'monthly', :priority => 0.8
   add '/producto/ultra-shines-lip-shine-1258599', :changefreq => 'monthly', :priority => 0.8
   add '/producto/smokin-eyes-1153451', :changefreq => 'monthly', :priority => 0.8
   add '/producto/some-kind-a-gorgeous-1073873', :changefreq => 'monthly', :priority => 0.8
@@ -2615,6 +2623,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/total-moisture-facial-cream-1318336', :changefreq => 'monthly', :priority => 0.8
   add '/producto/triple-performing-facial-emulsion-spf-15-pa-1318328', :changefreq => 'monthly', :priority => 0.8
   add '/producto/velvet-eyeshadow-1162734', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ysl-rpc-val-glossy-stain-02-1395169-3365440117105', :changefreq => 'monthly', :priority => 0.8
   add '/producto/velvet-eyeshadow-1162759', :changefreq => 'monthly', :priority => 0.8
   add '/producto/velvet-eyeshadow-1162833', :changefreq => 'monthly', :priority => 0.8
   add '/producto/velvet-eyeshadow-1162882', :changefreq => 'monthly', :priority => 0.8
@@ -2636,13 +2645,15 @@ SitemapGenerator::Sitemap.create do
   add '/producto/limpia-bio-high-rech-energy-clean-1209824', :changefreq => 'monthly', :priority => 0.8
   add '/producto/locion-reafirmante-200ml-bio-aquapower-1244292', :changefreq => 'monthly', :priority => 0.8
   add '/producto/locion-ref-200ml-bio-hr-energy-spl-1209832', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ysl-rpc-val-glossy-stain-04-1395185-3365440117242', :changefreq => 'monthly', :priority => 0.8
   add '/producto/love-handler-8-5-oz-1025808', :changefreq => 'monthly', :priority => 0.8
   add '/producto/naked-body-butter-6-7-oz-1242429', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/fat-girl-slim-6-oz-1041573', :changefreq => 'monthly', :priority => 0.8
   add '/producto/poetic-waxing-strips-for-the-body-18-double-sided-1337740', :changefreq => 'monthly', :priority => 0.8
   add '/producto/poetic-waxing-strips-for-the-face-10-double-sided-1337898', :changefreq => 'monthly', :priority => 0.8
   add '/producto/peeling-groovy-facial-serum-30-ml-1-oz-1129394', :changefreq => 'monthly', :priority => 0.8
   add '/producto/the-youth-as-we-know-it-eye-cream-15ml-5-oz-1292721', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/high-shimmer-lip-gloss-1352459-716170086262', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ysl-rpc-val-glossy-stain-05-1395193-3365440117310', :changefreq => 'monthly', :priority => 0.8
   add '/producto/the-youth-as-we-know-it-moisture-cream-50ml-1-7-oz-1292713', :changefreq => 'monthly', :priority => 0.8
   add '/producto/the-youth-as-we-know-it-night-cream-50ml-1-7-oz-1391614', :changefreq => 'monthly', :priority => 0.8
   add '/producto/starter-series-triple-oxygen-1379056', :changefreq => 'monthly', :priority => 0.8
@@ -2650,13 +2661,19 @@ SitemapGenerator::Sitemap.create do
   add '/producto/blood-orange-white-pepper-body-scrub-12-oz-1124874', :changefreq => 'monthly', :priority => 0.8
   add '/producto/blood-orange-white-pepper-soapy-suds-body-wash-bubbling-bath-1200971', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clog-dissolving-cleansing-milk-6-7oz-1129287', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/high-shimmer-lip-gloss-1352434-716170086248', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ysl-rpc-val-glossy-stain-06-1395201-3365440117389', :changefreq => 'monthly', :priority => 0.8
   add '/producto/fabulous-everyday-eye-cream-0-5oz-1284165', :changefreq => 'monthly', :priority => 0.8
   add '/producto/fabulous-foaming-face-wash-2-0-oz-1236983', :changefreq => 'monthly', :priority => 0.8
   add '/producto/fabulous-foaming-face-wash-6-6-oz-1129220', :changefreq => 'monthly', :priority => 0.8
   add '/producto/fat-girl-scrub-8-oz-1169721', :changefreq => 'monthly', :priority => 0.8
   add '/producto/fat-girl-sleep-6-oz-1083914', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/fat-girl-slim-6-oz-1041573', :changefreq => 'monthly', :priority => 0.8
   add '/producto/fat-girl-slimulator-670455', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ysl-rpc-val-glossy-stain-02-1395169-3365440117105', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/fat-girl-treatment-kit-1328079', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/foot-patrol-2-5-oz-1242452', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/high-shimmer-lip-gloss-1352491-716170086309', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/glamour-gloves-465369', :changefreq => 'monthly', :priority => 0.8
   add '/producto/high-intensity-hand-cream-1oz-800029', :changefreq => 'monthly', :priority => 0.8
   add '/producto/high-intensity-hand-cream-2-5-oz-381145', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hot-salt-scrub-14-1-oz-1026798', :changefreq => 'monthly', :priority => 0.8
@@ -2664,6 +2681,8 @@ SitemapGenerator::Sitemap.create do
   add '/producto/lemon-sage-sinkside-six-pack-913319', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lemon-sage-body-butter-maximum-moisture-cream-1320886', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lemon-sage-body-butter-maximum-moisture-cream-1242395', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ysl-rpc-val-glossy-stain-08-1395227-3365440117525', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ysl-rpc-val-glossy-stain-09-1395524-3365440117594', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lemon-sage-body-scrub-12oz-jar-1000165', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lemon-sage-soapy-suds-16-oz-1200260', :changefreq => 'monthly', :priority => 0.8
   add '/producto/poetic-waxing-at-home-hair-removal-kit-1251057', :changefreq => 'monthly', :priority => 0.8
@@ -2671,9 +2690,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/pore-perfecting-facial-polish-4-2-oz-1129261-651043022131', :changefreq => 'monthly', :priority => 0.8
   add '/producto/softening-socks-465377-651043012200', :changefreq => 'monthly', :priority => 0.8
   add '/producto/thats-incredi-peel-spa-strength-glycolic-resurfacing-pads-1425370-651043023220', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/high-shimmer-lip-gloss-1352434-716170086248', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/maq-compacto-020-diorskin-nude-1204676-3348900913219', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ysl-rpc-val-glossy-stain-04-1395185-3365440117242', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/high-shimmer-lip-gloss-1352509-716170086316', :changefreq => 'monthly', :priority => 0.8
   add '/producto/the-youth-as-we-know-it-153-anti-aging-serum-1292747-651043022575', :changefreq => 'monthly', :priority => 0.8
   add '/producto/triple-oxygen-c-energizing-cream-1-7-oz-1230564-651043022476', :changefreq => 'monthly', :priority => 0.8
   add '/producto/triple-oxygen-instant-energizing-cleansing-foam-1371996-651043023138', :changefreq => 'monthly', :priority => 0.8
@@ -2682,10 +2699,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/triple-oxygen-instant-energizing-mask-951731-651043021523', :changefreq => 'monthly', :priority => 0.8
   add '/producto/concealer-brush-1291301-716170067803', :changefreq => 'monthly', :priority => 0.8
   add '/producto/crystal-lip-gloss-electr-1352483-716170086293', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/high-shimmer-lip-gloss-1352459-716170086262', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/maq-compacto-032-diorskin-nude-1204684-3348900923775', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/high-shimmer-lip-gloss-1352491-716170086309', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/high-shimmer-lip-gloss-1352509-716170086316', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/212-men-eau-toil-ns100-m-348938-8411061341605', :changefreq => 'monthly', :priority => 0.8
   add '/producto/long-wear-eye-liner-blac-1386895-716170097343', :changefreq => 'monthly', :priority => 0.8
   add '/producto/long-wear-eye-liner-char-1386945-716170097398', :changefreq => 'monthly', :priority => 0.8
   add '/producto/long-wear-eye-liner-hunt-1386937-716170097381', :changefreq => 'monthly', :priority => 0.8
@@ -2697,16 +2711,15 @@ SitemapGenerator::Sitemap.create do
   add '/producto/lip-gloss-1352681-716170091617', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-gloss-1365790-716170091396', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-gloss-1352624-716170091334', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/scruffing-lotion-50765-020714104726', :changefreq => 'monthly', :priority => 0.8
   add '/producto/detoxifying-black-cleanser-1393057-808144270019', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/212-sexy-eau-parf-ns-100ml-795385-8411061545904', :changefreq => 'monthly', :priority => 0.8
   add '/producto/no-pores-no-shine-t-zone-treatment-1365725-808144211012', :changefreq => 'monthly', :priority => 0.8
   add '/producto/revitalizing-black-hydration-gel-1379221-808144251018', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/b-b-cream-spf-27-pa-1339035-808144210015', :changefreq => 'monthly', :priority => 0.8
   add '/producto/boscias-best-1393032-808144810000', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brazilian-peel-4-pack-vpn-aha1004-1255892-898086002045', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bby-brit-sheer-edt-spray-100ml-1111657-3386460004749', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ysl-rpc-val-glossy-stain-05-1395193-3365440117310', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqva-pour-homme-marine-1083740-783320913525', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/212m-sexy-edt-ns-100-ml-1110352-8411061602522', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqva-pour-homme-817072-783320911521', :changefreq => 'monthly', :priority => 0.8
   add '/producto/man-1293901-783320971525', :changefreq => 'monthly', :priority => 0.8
   add '/producto/mon-jasmin-noir-1334747-783320402517', :changefreq => 'monthly', :priority => 0.8
@@ -2719,23 +2732,17 @@ SitemapGenerator::Sitemap.create do
   add '/producto/eternity-77834-088300101405', :changefreq => 'monthly', :priority => 0.8
   add '/producto/euphoria-forbidden-edp-100-ml-1368976-3607342309753', :changefreq => 'monthly', :priority => 0.8
   add '/producto/euphoria-men-948075-088300178278', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/maq-compacto-033-diorskin-nude-1204692-3348900923782', :changefreq => 'monthly', :priority => 0.8
   add '/producto/euphoria-876177-088300162505', :changefreq => 'monthly', :priority => 0.8
   add '/producto/212-e-toil-ns-50-50-m-11015-8411061251607', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/212-men-eau-toil-ns100-m-348938-8411061341605', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/212-sexy-eau-parf-ns-100ml-795385-8411061545904', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/212m-sexy-edt-ns-100-ml-1110352-8411061602522', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/c-herrera-edp-ns-100-m-11114-8411061061602', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/herrera-men-e-toil-ns-100-m-11072-8411061081600', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/chloe-love-roll-on-1368794-3607345751863', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/th-cologne-spray-100-ml-n-a-022548024324', :changefreq => 'monthly', :priority => 0.8
   add '/producto/chloe-rollerball-6ml-1284025-3607345479682', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clarisonic-mia-sonic-skin-cleansing-blue-system-kit-1335389-183757003675', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clarisonic-mia-sonic-skin-cleansing-lavender-system-kit-1311976-183757004443', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clarisonic-mia-sonic-skin-cleansing-pink-system-kit-1201904-183757003637', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clarisonic-mia-sonic-skin-cleansing-white-system-kit-1200997-183757003415', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/maq-compacto-040-diorskin-nude-1204700-3348900913332', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clarisonic-mia-sonic-skin-cleansing-yellow-system-kit-1335363-183757004436', :changefreq => 'monthly', :priority => 0.8
   add '/producto/redness-solutions-makeup-spf-15-with-probiotic-technology-1271030-020714419134', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/clarifying-lotion-2-1295708-020714462765', :changefreq => 'monthly', :priority => 0.8
   add '/producto/redness-solutions-makeup-spf-15-with-probiotic-technology-1271048-020714419141', :changefreq => 'monthly', :priority => 0.8
   add '/producto/redness-solutions-makeup-spf-15-with-probiotic-technology-1271055-020714419158', :changefreq => 'monthly', :priority => 0.8
   add '/producto/redness-solutions-makeup-spf-15-with-probiotic-technology-1271063-020714419165', :changefreq => 'monthly', :priority => 0.8
@@ -2743,10 +2750,10 @@ SitemapGenerator::Sitemap.create do
   add '/producto/rinse-off-eye-makeup-solvent-48041-020714000318', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rinse-off-foaming-cleanser-47860-020714015459', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clarifying-lotion-1-1295658-020714462710', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/maq-compacto-gel-040-diorskin-nude-1290493-3348900946521', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clarifying-lotion-1-1295690-020714462758', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clarifying-lotion-2-1295666-020714462727', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/clarifying-lotion-2-1295708-020714462765', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/all-about-lips-48579-020714060701', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ysl-rpc-val-glossy-stain-10-1395235-3365440117662', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clarifying-lotion-3-1295674-020714462734', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clarifying-lotion-3-1295716-020714462772', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clarifying-lotion-4-1295682-020714462741', :changefreq => 'monthly', :priority => 0.8
@@ -2754,11 +2761,11 @@ SitemapGenerator::Sitemap.create do
   add '/producto/mild-clarifying-lotion-1295732-020714462796', :changefreq => 'monthly', :priority => 0.8
   add '/producto/dramatically-different-moisturizing-gel-789735-020714222864', :changefreq => 'monthly', :priority => 0.8
   add '/producto/dramatically-different-moisturizing-gel-789727-020714222857', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/mascara-diorshow-azul-694-dior-1391630-3348901073974', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/mascara-diorshow-cafe-264-dior-1391648-3348901073967', :changefreq => 'monthly', :priority => 0.8
   add '/producto/dramatically-different-moisturizing-lotion-699413-020714194956', :changefreq => 'monthly', :priority => 0.8
   add '/producto/dramatically-different-moisturizing-lotion-699405-020714195083', :changefreq => 'monthly', :priority => 0.8
   add '/producto/liquid-facial-soap-899070-020714227661', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ysl-rpc-val-glossy-stain-11-1395243-3365440117730', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ysl-rpc-val-glossy-stain-14-1395268-3365440117945', :changefreq => 'monthly', :priority => 0.8
   add '/producto/liquid-facial-soap-899120-020714227685', :changefreq => 'monthly', :priority => 0.8
   add '/producto/liquid-facial-soap-899336-020714240158', :changefreq => 'monthly', :priority => 0.8
   add '/producto/7-day-scrub-cream-rinse-off-formula-47936-020714045159', :changefreq => 'monthly', :priority => 0.8
@@ -2766,11 +2773,9 @@ SitemapGenerator::Sitemap.create do
   add '/producto/acne-solutions-cleansing-foam-1027507-020714291822', :changefreq => 'monthly', :priority => 0.8
   add '/producto/acne-solutions-clearing-moisturizer-oil-free-1027465-020714291839', :changefreq => 'monthly', :priority => 0.8
   add '/producto/acne-solutions-post-blemish-formula-1027515-020714293840', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/mascara-diorshow-iconic-698-1165455-3348900877757', :changefreq => 'monthly', :priority => 0.8
   add '/producto/acne-solutions-spot-healing-gel-1027531-020714292072', :changefreq => 'monthly', :priority => 0.8
   add '/producto/all-about-eyes-serum-de-puffing-eye-massage-1234897-020714426774', :changefreq => 'monthly', :priority => 0.8
   add '/producto/all-about-eyes-153-rich-971473-020714287047', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/all-about-lips-48579-020714060701', :changefreq => 'monthly', :priority => 0.8
   add '/producto/almost-lipstick-coral-honey-1394030-020714540319', :changefreq => 'monthly', :priority => 0.8
   add '/producto/almost-lipstick-mauve-honey-1393982-020714535032', :changefreq => 'monthly', :priority => 0.8
   add '/producto/almost-lipstick-nude-honey-1393974-020714535025', :changefreq => 'monthly', :priority => 0.8
@@ -2779,11 +2784,10 @@ SitemapGenerator::Sitemap.create do
   add '/producto/almost-lipstick-rose-honey-1394006-020714535056', :changefreq => 'monthly', :priority => 0.8
   add '/producto/almost-lipstick-ruby-honey-1394022-020714540302', :changefreq => 'monthly', :priority => 0.8
   add '/producto/anti-gravity-firming-eye-lift-cream-502443-020714096052', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/mascara-diorshow-negra-90-dior-1391598-3348901001915', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ysl-rpc-val-glossy-stain-06-1395201-3365440117389', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bb-cream-01-40ml-1362540-020714553203', :changefreq => 'monthly', :priority => 0.8
   add '/producto/blended-face-powder-and-brush-1061191-020714322397', :changefreq => 'monthly', :priority => 0.8
   add '/producto/colour-surge-butter-shine-lipstick-886168-020714246150', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ysl-rpc-val-glossy-stain-15-1395276-3365440118010', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ysl-rpc-val-glossy-stain-16-1395284-3365440118089', :changefreq => 'monthly', :priority => 0.8
   add '/producto/even-better-clinical-dark-spot-corrector-1312941-020714477974', :changefreq => 'monthly', :priority => 0.8
   add '/producto/even-better-eye-dark-circle-corrector-10-ml-1438787-020714540227', :changefreq => 'monthly', :priority => 0.8
   add '/producto/even-better-makeup-golden-1160456-020714324698', :changefreq => 'monthly', :priority => 0.8
@@ -2792,13 +2796,14 @@ SitemapGenerator::Sitemap.create do
   add '/producto/clinique-happy-for-men-346502-020714080310', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clinique-happy-heart-655027-020714170486', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clinique-happy-heart-655019-020714170479', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/mousse-purete-nettoyante-125ml-1268952-3348900956063', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clinique-happy-50492-020714052959', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clinique-happy-50518-020714156893', :changefreq => 'monthly', :priority => 0.8
   add '/producto/instant-pefector-shade-1-15ml-1318666-020714430412', :changefreq => 'monthly', :priority => 0.8
   add '/producto/instant-perfector-shade-2-15ml-1318674-020714430429', :changefreq => 'monthly', :priority => 0.8
   add '/producto/redness-solutions-instant-relief-mineral-powder-1151851-020714396565', :changefreq => 'monthly', :priority => 0.8
   add '/producto/long-last-lipstick-twilight-nude-1060946-020714315726', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ysl-rpc-val-glossy-stain-17-1395292-3365440118157', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ysl-rpc-val-glossy-stain-18-1395300-3365440118225', :changefreq => 'monthly', :priority => 0.8
   add '/producto/moisture-surge-extended-thirst-relief-1084805-020714305994', :changefreq => 'monthly', :priority => 0.8
   add '/producto/moisture-surge-intense-for-very-dry-to-dry-combination-skin-1390079-020714492205', :changefreq => 'monthly', :priority => 0.8
   add '/producto/moisture-surge-spray-762518-020714195786', :changefreq => 'monthly', :priority => 0.8
@@ -2806,10 +2811,11 @@ SitemapGenerator::Sitemap.create do
   add '/producto/quickliner-intense-for-eyes-black-1394519-020714456481', :changefreq => 'monthly', :priority => 0.8
   add '/producto/quickliner-intense-for-eyes-charcoal-1394527-020714529161', :changefreq => 'monthly', :priority => 0.8
   add '/producto/quickliner-intense-for-eyes-chocolate-1269786-020714456504', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ysl-rpc-val-glossy-stain-08-1395227-3365440117525', :changefreq => 'monthly', :priority => 0.8
   add '/producto/quickliner-intense-for-eyes-ivy-1394535-020714529185', :changefreq => 'monthly', :priority => 0.8
   add '/producto/quickliner-intense-for-eyes-midnight-1394543-020714529192', :changefreq => 'monthly', :priority => 0.8
   add '/producto/quickliner-intense-for-eyes-plum-1270990-020714456498', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/maximum-hydrator-882480-020714236298', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ysl-volupte-sheer-candy-07-p12-1394220-3365440130739', :changefreq => 'monthly', :priority => 0.8
   add '/producto/redness-solutions-targeted-corrector-1288653-020714449193', :changefreq => 'monthly', :priority => 0.8
   add '/producto/redness-solutions-daily-relief-cream-1066729-020714297923', :changefreq => 'monthly', :priority => 0.8
   add '/producto/redness-solutions-kit-1069079-020714322625', :changefreq => 'monthly', :priority => 0.8
@@ -2817,11 +2823,9 @@ SitemapGenerator::Sitemap.create do
   add '/producto/repairwear-intensive-lip-treatment-883306-020714233907', :changefreq => 'monthly', :priority => 0.8
   add '/producto/repairwear-laser-focus-wrinkle-uv-damage-corrector-1359439-020714492809', :changefreq => 'monthly', :priority => 0.8
   add '/producto/age-defense-for-eyes-1202464-020714382742', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/mousse-tendre-nettoyante-125ml-1268929-3348900956032', :changefreq => 'monthly', :priority => 0.8
   add '/producto/age-defense-hydrator-spf-15-1118223-020714339685', :changefreq => 'monthly', :priority => 0.8
   add '/producto/anti-fatigue-cooling-eye-gel-1359470-020714506827', :changefreq => 'monthly', :priority => 0.8
   add '/producto/m-gel-lotion-882498-020714236304', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/maximum-hydrator-882480-020714236298', :changefreq => 'monthly', :priority => 0.8
   add '/producto/face-scrub-50997-020714125608', :changefreq => 'monthly', :priority => 0.8
   add '/producto/face-soap-with-dish-50575-020714001322', :changefreq => 'monthly', :priority => 0.8
   add '/producto/face-soap-with-dish-50534-020714001711', :changefreq => 'monthly', :priority => 0.8
@@ -2829,8 +2833,12 @@ SitemapGenerator::Sitemap.create do
   add '/producto/m-lotion-50971-020714142100', :changefreq => 'monthly', :priority => 0.8
   add '/producto/post-shave-healer-51052-020714004569', :changefreq => 'monthly', :priority => 0.8
   add '/producto/scruffing-lotion-50609-020714104719', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/scruffing-lotion-50765-020714104726', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/scruffing-lotion-50773-020714104733', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ssfm-scruffing-lot-4-5-200-ml-50856-020714104740', :changefreq => 'monthly', :priority => 0.8
   add '/producto/m-shave-aloe-gel-51201-020714008741', :changefreq => 'monthly', :priority => 0.8
   add '/producto/stay-matte-sheer-pressed-powder-1008721-020714266912', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/maq-compacto-gel-040-diorskin-nude-1290493-3348900946521', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sun-spf-30-body-cream-1151703-020714352943', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sun-body-cream-spf-50-1151729-020714352967', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sun-spf-30-face-cream-1162064-020714352776', :changefreq => 'monthly', :priority => 0.8
@@ -2839,8 +2847,10 @@ SitemapGenerator::Sitemap.create do
   add '/producto/super-city-block-oil-free-daily-face-protector-spf-40-911396-020714247362', :changefreq => 'monthly', :priority => 0.8
   add '/producto/super-rescue-antioxidant-night-moisturizer-999581-020714289102', :changefreq => 'monthly', :priority => 0.8
   add '/producto/super-rescue-antioxidant-night-moisturizer-999599-020714289140', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/poison-edt-100ml-82701-3348900011687', :changefreq => 'monthly', :priority => 0.8
   add '/producto/superdefense-spf-25-age-defense-moisturizer-combination-oily-to-oily-1123421-020714336691', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/mascara-diorshow-azul-694-dior-1391630-3348901073974', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/mascara-diorshow-cafe-264-dior-1391648-3348901073967', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/restorative-night-treatment-1-fl-oz-n-a-808144206018', :changefreq => 'monthly', :priority => 0.8
   add '/producto/superdefense-spf-25-age-defense-moisturizer-dry-combination-1123447-020714336714', :changefreq => 'monthly', :priority => 0.8
   add '/producto/take-the-day-off-cleansing-milk-955427-020714261597', :changefreq => 'monthly', :priority => 0.8
   add '/producto/take-the-day-off-makeup-remover-for-lids-lashes-lips-48074-020714146559', :changefreq => 'monthly', :priority => 0.8
@@ -2849,11 +2859,10 @@ SitemapGenerator::Sitemap.create do
   add '/producto/wash-away-gel-cleanser-47845-020714015442', :changefreq => 'monthly', :priority => 0.8
   add '/producto/youth-surge-night-age-decelerating-moisture-for-combination-oily-to-oily-1203637-020714406325', :changefreq => 'monthly', :priority => 0.8
   add '/producto/youth-surge-night-age-decelerating-moisture-for-dry-combination-1203629-020714377427', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/polvo-libre-02-diorskin-nude-fdt-1142249-3348900860483', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/polvo-libre-03-diorskin-nude-fdt-1142264-3348900860490', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/polvo-libre-04-diorskin-nude-fdt-1142272-3348900860513', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/rouge-dior-vernis-257-int12-1397876-3348901093712', :changefreq => 'monthly', :priority => 0.8
   add '/producto/youth-surge-spf-15-age-decelerating-moisturizer-for-combination-oily-skin-1151679-020714352509', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/mascara-diorshow-iconic-698-1165455-3348900877757', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/mascara-diorshow-negra-90-dior-1391598-3348901001915', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/mousse-purete-nettoyante-125ml-1268952-3348900956063', :changefreq => 'monthly', :priority => 0.8
   add '/producto/youth-surge-spf-15-age-decelerating-moisturizer-for-dry-combination-skin-1151661-020714352080', :changefreq => 'monthly', :priority => 0.8
   add '/producto/coach-poppy-edp-100-ml-1282268-022548230367', :changefreq => 'monthly', :priority => 0.8
   add '/producto/coach-poppy-edp-30-ml-1282243-022548230374', :changefreq => 'monthly', :priority => 0.8
@@ -2865,6 +2874,11 @@ SitemapGenerator::Sitemap.create do
   add '/producto/lait-tendre-demaquillant-200ml-1268895-3348900956025', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lotion-purete-tonifiante-200ml-1268945-3348900956070', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lotion-tendre-tonifiante-200ml-1268911-3348900956049', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/maq-compacto-020-diorskin-nude-1204676-3348900913219', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/maq-compacto-032-diorskin-nude-1204684-3348900923775', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/maq-compacto-033-diorskin-nude-1204692-3348900923782', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/maq-compacto-040-diorskin-nude-1204700-3348900913332', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/britney-spears-fantasy-edp-spray-100-ml-n-a-719346065405', :changefreq => 'monthly', :priority => 0.8
   add '/producto/add-extreme-316-int12-1397652-3348901076579', :changefreq => 'monthly', :priority => 0.8
   add '/producto/add-extreme-339-int12-1397793-3348901076562', :changefreq => 'monthly', :priority => 0.8
   add '/producto/add-extreme-356-int12-1397785-3348901076586', :changefreq => 'monthly', :priority => 0.8
@@ -2900,8 +2914,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/dior-vernis-nail-lacquer-1356369-3348900974203', :changefreq => 'monthly', :priority => 0.8
   add '/producto/dior-vernis-nail-lacquer-1374750-3348900974333', :changefreq => 'monthly', :priority => 0.8
   add '/producto/be-delicious-fresh-blossom-1152339-022548181089', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ysl-rpc-val-glossy-stain-09-1395524-3365440117594', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ysl-rpc-val-glossy-stain-10-1395235-3365440117662', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/yu-be-moisturizing-skin-cream-1-25oz-33g-tube-1104090-850353000222', :changefreq => 'monthly', :priority => 0.8
   add '/producto/be-delicious-fresh-blossom-1152347-022548173701', :changefreq => 'monthly', :priority => 0.8
   add '/producto/be-delicious-fresh-blossom-1152354-022548172971', :changefreq => 'monthly', :priority => 0.8
   add '/producto/golden-delicious-1353887-022548228586', :changefreq => 'monthly', :priority => 0.8
@@ -2915,18 +2928,17 @@ SitemapGenerator::Sitemap.create do
   add '/producto/puredkny-verbena-basil-edp-100ml-1354018-022548231234', :changefreq => 'monthly', :priority => 0.8
   add '/producto/puredkny-verbena-basiledp-30ml-1353929-022548231265', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bd-gd-rlrbl-duo-1353895-022548242131', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/terracotta-mineral-flawless-bronzing-powder-1153600-3346470403055', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lipstick-creme-nylon-n-1387422-607710005396', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brandt-glow-overnight-resurfacing-serum-1390616-663963006153', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pores-no-more-174-poresolution-153-clarifying-lotion-1366046-663963002322', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pore-thing-153-with-evermat-153-t-zone-pore-tightener-1365113-663963002315', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/nrandt-glow-rub-crystal-retinol-hydracreme-1390624-663963006160', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pr-prevage-body-tta-moisturizer-200ml-1125467-085805084653', :changefreq => 'monthly', :priority => 0.8
   add '/producto/prevage-day-anti-aging-moist-spf-30-50ml-1201011-085805089795', :changefreq => 'monthly', :priority => 0.8
   add '/producto/prevage-eye-adv-anti-aging-serum-15ml-1300086-085805111519', :changefreq => 'monthly', :priority => 0.8
   add '/producto/especially-escada-1366871-737052430546', :changefreq => 'monthly', :priority => 0.8
   add '/producto/auto-eyepencil-duo-jet-black-463471-027131192640', :changefreq => 'monthly', :priority => 0.8
   add '/producto/umbrian-clay-mattifying-serum-1418557-809280113376', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ysl-rpc-val-glossy-stain-11-1395243-3365440117730', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/th-eau-de-prep-100ml-n-a-022548252352', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sugar-advanced-therapy-lip-treatment-1378215-809280113260', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sugar-plum-glam-and-glow-1361021-809280112652', :changefreq => 'monthly', :priority => 0.8
   add '/producto/black-tea-entry-kit-1378207-809280114052', :changefreq => 'monthly', :priority => 0.8
@@ -2940,18 +2952,22 @@ SitemapGenerator::Sitemap.create do
   add '/producto/edp-75-ml-armani-mania-femme-778688-3360372089896', :changefreq => 'monthly', :priority => 0.8
   add '/producto/edt-100-ml-armani-acqua-di-gio-166587-3360372054559', :changefreq => 'monthly', :priority => 0.8
   add '/producto/gcbygc-edpvapo-75ml-1131234-737052132662', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ysl-rpc-val-glossy-stain-14-1395268-3365440117945', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/terracotta-mineral-flawless-bronzing-powder-1153600-3346470403055', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/kk-11-spr-gloss-849-frizzy-mango-1335603-3346470404533', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/l-instant-de-guerlain-pour-homme-edt-vapo-125-ml-819870-3346470200012', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/le2-w-proof-masc-15-noir-1178235-3346470408814', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/mku-12-spr-the-one-mask-refill-01-noir-g-guerlain-1395516-3346470411623', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/mku-12-spring-the-one-mask-01-noir-g-guerlain-1395508-3346470411616', :changefreq => 'monthly', :priority => 0.8
   add '/producto/apple-balm-1264746-400012647468', :changefreq => 'monthly', :priority => 0.8
   add '/producto/apple-balm-citrus-1364694-400013646941', :changefreq => 'monthly', :priority => 0.8
   add '/producto/apple-balm-gumdrop-1364710-400013647108', :changefreq => 'monthly', :priority => 0.8
   add '/producto/apple-balm-violet-1364702-400013647023', :changefreq => 'monthly', :priority => 0.8
   add '/producto/big-pink-bow-50ml-1383363-400013833631', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lipstick-creme-pink-pe-1387141-607710005334', :changefreq => 'monthly', :priority => 0.8
   add '/producto/big-pink-bow-rollergirl-1383371-400013833716', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hello-kitty-brush-set-1267186-039937424948', :changefreq => 'monthly', :priority => 0.8
   add '/producto/charmmy-eyeshadow-stick-1264530-400012645303', :changefreq => 'monthly', :priority => 0.8
   add '/producto/charmmy-eyeshadow-stick-1264563-400012645631', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ysl-rpc-val-glossy-stain-15-1395276-3365440118010', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ysl-rpc-val-glossy-stain-16-1395284-3365440118089', :changefreq => 'monthly', :priority => 0.8
   add '/producto/charmmy-eyeshadow-stick-1264605-400012646058', :changefreq => 'monthly', :priority => 0.8
   add '/producto/charmmy-eyeshadow-stick-1264548-400012645488', :changefreq => 'monthly', :priority => 0.8
   add '/producto/charmmy-eyeshadow-stick-1264498-400012644986', :changefreq => 'monthly', :priority => 0.8
@@ -2959,8 +2975,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/charmmy-eyeshadow-stick-1264621-400012646218', :changefreq => 'monthly', :priority => 0.8
   add '/producto/charmmy-eyeshadow-stick-1264571-400012645716', :changefreq => 'monthly', :priority => 0.8
   add '/producto/charmmy-eyeshadow-stick-1264506-400012645068', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ysl-rpc-val-glossy-stain-17-1395292-3365440118157', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ysl-rpc-val-glossy-stain-18-1395300-3365440118225', :changefreq => 'monthly', :priority => 0.8
   add '/producto/charmmy-kohl-eyeliner-kit-1264282-400012642821', :changefreq => 'monthly', :priority => 0.8
   add '/producto/compact-mirror-1267244-039937424979', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hello-kitty-fragrance-1283597-400012835971', :changefreq => 'monthly', :priority => 0.8
@@ -2970,26 +2984,25 @@ SitemapGenerator::Sitemap.create do
   add '/producto/say-hello-palette-super-fun-1258516-400012585166', :changefreq => 'monthly', :priority => 0.8
   add '/producto/say-hello-palette-happy-fun-1258524-400012585241', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hk-bling-rollergirl-1332097-400013320971', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ysl-volupte-sheer-candy-07-p12-1394220-3365440130739', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/yu-be-moisturizing-skin-cream-1-25oz-33g-tube-1104090-850353000222', :changefreq => 'monthly', :priority => 0.8
   add '/producto/liquid-nail-art-1337534-400013375346', :changefreq => 'monthly', :priority => 0.8
   add '/producto/liquid-nail-art-1337575-400013375759', :changefreq => 'monthly', :priority => 0.8
   add '/producto/liquid-nail-art-1337526-400013375261', :changefreq => 'monthly', :priority => 0.8
   add '/producto/liquid-nail-art-1337518-400013375186', :changefreq => 'monthly', :priority => 0.8
   add '/producto/shimmering-powder-and-eyeshadow-palette-1337500-400013375001', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sweet-gloss-1267574-400012675744', :changefreq => 'monthly', :priority => 0.8
   add '/producto/kabuki-brush-with-kitty-head-topper-1383355-400013833556', :changefreq => 'monthly', :priority => 0.8
   add '/producto/kitty-amour-bag-1369909-039937975617', :changefreq => 'monthly', :priority => 0.8
   add '/producto/kitty-amour-brush-set-1366145-039937980932', :changefreq => 'monthly', :priority => 0.8
   add '/producto/kitty-amour-compact-mirror-1366103-039937980925', :changefreq => 'monthly', :priority => 0.8
   add '/producto/kitty-amour-palette-balloon-palette-1365972-400013659729', :changefreq => 'monthly', :priority => 0.8
   add '/producto/large-tin-palette-1337377-400013373779', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lipstick-creme-nylon-n-1387422-607710005396', :changefreq => 'monthly', :priority => 0.8
   add '/producto/liquid-nail-art-banana-cream-1267434-400012674341', :changefreq => 'monthly', :priority => 0.8
   add '/producto/liquid-nail-art-blueberry-1267442-400012674426', :changefreq => 'monthly', :priority => 0.8
   add '/producto/liquid-nail-art-bubble-gum-1267475-400012674754', :changefreq => 'monthly', :priority => 0.8
   add '/producto/liquid-nail-art-frosted-cupcake-1266782-400012667824', :changefreq => 'monthly', :priority => 0.8
   add '/producto/liquid-nail-art-ice-cube-1267483-400012674839', :changefreq => 'monthly', :priority => 0.8
   add '/producto/liquid-nail-art-minty-1267426-400012674266', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/crema-p-labios-mmmuacks-frambuesa-15ml-n-a-8410225523468', :changefreq => 'monthly', :priority => 0.8
   add '/producto/liquid-nail-art-pink-sprinkles-1267459-400012674594', :changefreq => 'monthly', :priority => 0.8
   add '/producto/liquid-nail-art-purple-sprinkles-1267467-400012674679', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-clippers-1366095-039937316700', :changefreq => 'monthly', :priority => 0.8
@@ -2997,7 +3010,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/nail-art-stickers-1261254-400012612541', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-art-stickers-1261262-400012612626', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-stickers-metallic-1381607-400013816078', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/fabulous-face-lotion-with-spf-15-1-7oz-n-a-651043022759', :changefreq => 'monthly', :priority => 0.8
   add '/producto/noir-makeup-bag-collection-1337617-039937809783', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pen-pal-eyeliner-chocolate-milk-1264175-400012641756', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pen-pal-eyeliner-good-night-dreams-1264167-400012641671', :changefreq => 'monthly', :priority => 0.8
@@ -3005,10 +3017,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/pen-pal-eyeliner-purple-balloon-1264183-400012641831', :changefreq => 'monthly', :priority => 0.8
   add '/producto/seasonal-core-palette-1366004-400013660046', :changefreq => 'monthly', :priority => 0.8
   add '/producto/shower-cap-1267327-039937415120', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/sweet-gloss-1267574-400012675744', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sweet-gloss-1267517-400012675171', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/the-youth-as-we-know-it-starter-set-n-a-651043069457', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/blush-almond-n-a-716170059617', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sweet-gloss-1267533-400012675331', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sweet-gloss-1267525-400012675256', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sweet-gloss-1267590-400012675904', :changefreq => 'monthly', :priority => 0.8
@@ -3021,14 +3030,12 @@ SitemapGenerator::Sitemap.create do
   add '/producto/film-noir-full-spectrum-mascara-onyx-1265800-877231000631', :changefreq => 'monthly', :priority => 0.8
   add '/producto/immaculate-liquid-powder-foundation-mattifying-oil-free-1341056-877231001331', :changefreq => 'monthly', :priority => 0.8
   add '/producto/immaculate-liquid-powder-foundation-mattifying-oil-free-1341015-877231001294', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lipstick-creme-pink-pe-1387141-607710005334', :changefreq => 'monthly', :priority => 0.8
   add '/producto/immaculate-liquid-powder-foundation-mattifying-oil-free-1341031-877231001317', :changefreq => 'monthly', :priority => 0.8
   add '/producto/immaculate-liquid-powder-foundation-mattifying-oil-free-1341023-877231001300', :changefreq => 'monthly', :priority => 0.8
   add '/producto/immaculate-liquid-powder-foundation-mattifying-oil-free-1340991-877231001270', :changefreq => 'monthly', :priority => 0.8
   add '/producto/immaculate-liquid-powder-foundation-mattifying-oil-free-1341049-877231001324', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/crema-p-labios-mmmuacks-cereza-15-ml-n-a-8410225523451', :changefreq => 'monthly', :priority => 0.8
   add '/producto/immaculate-liquid-powder-foundation-mattifying-oil-free-1341007-877231001287', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/blush-cranberry-n-a-716170062174', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bronzer-blush-duo-n-a-716170100685', :changefreq => 'monthly', :priority => 0.8
   add '/producto/immaculate-liquid-powder-foundation-mattifying-oil-free-1341064-877231001348', :changefreq => 'monthly', :priority => 0.8
   add '/producto/superficial-waterproof-bronzer-1162106-899930000958', :changefreq => 'monthly', :priority => 0.8
   add '/producto/boss-femme-edpvapo-75ml-996439-737052041353', :changefreq => 'monthly', :priority => 0.8
@@ -3036,35 +3043,34 @@ SitemapGenerator::Sitemap.create do
   add '/producto/intense-therapy-lip-balm-spf-25-1347475-682223030134', :changefreq => 'monthly', :priority => 0.8
   add '/producto/argan-balm-4-6oz-1392331-879634002601', :changefreq => 'monthly', :priority => 0.8
   add '/producto/argan-daily-moisturizer-spf-40-1242304-879634001444', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/crema-p-labios-mmuacks-tutti-frutti-15-ml-n-a-8410225523475', :changefreq => 'monthly', :priority => 0.8
   add '/producto/argan-matchmaker-powder-foundation-spf-20-light-medium-21oz-1392364-879634002571', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/creamy-color-pink-honeyed-tea-n-a-716170103082', :changefreq => 'monthly', :priority => 0.8
   add '/producto/argan-matchmaker-powder-foundation-spf-20-medium-dark-21oz-1392372-879634002588', :changefreq => 'monthly', :priority => 0.8
   add '/producto/argan-matchmaker-powder-foundation-spf-20-fair-light-21oz-1392356-879634002564', :changefreq => 'monthly', :priority => 0.8
   add '/producto/magic-marker-lip-cheek-stain-1242197-879634001208', :changefreq => 'monthly', :priority => 0.8
   add '/producto/magic-marker-lip-cheek-stain-1242205-879634001253', :changefreq => 'monthly', :priority => 0.8
   add '/producto/magic-marker-lip-cheek-stain-1242247-879634001239', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lipstick-creme-posy-pi-1387125-607710005372', :changefreq => 'monthly', :priority => 0.8
   add '/producto/magic-marker-lip-cheek-stain-1242213-879634001215', :changefreq => 'monthly', :priority => 0.8
   add '/producto/magic-marker-lip-cheek-stain-1242221-879634001246', :changefreq => 'monthly', :priority => 0.8
   add '/producto/magic-marker-lip-cheek-stain-1242254-879634001222', :changefreq => 'monthly', :priority => 0.8
   add '/producto/natural-volume-lip-gloss-1242296-879634001307', :changefreq => 'monthly', :priority => 0.8
   add '/producto/natural-volume-lip-gloss-1242270-879634001338', :changefreq => 'monthly', :priority => 0.8
   add '/producto/natural-volume-lip-gloss-1242288-879634001321', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lipstick-creme-posy-pi-1387125-607710005372', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/estuche-love-edt-80ml-vap-deo-150-n-a-8410225527091', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/estuches-beso-edt-100ml-vap-deo-150-n-a-8410225527114', :changefreq => 'monthly', :priority => 0.8
   add '/producto/jc-cc-rlrbl-1213776-719346564618', :changefreq => 'monthly', :priority => 0.8
   add '/producto/juicy-couture-rollerball-exclusive-1067107-098691047176', :changefreq => 'monthly', :priority => 0.8
   add '/producto/locion-cabello-justin-bieber-someday-1351147-852539003102', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brazilian-hair-smoothing-system-deluxe-edition-reform-1391879-736211146267', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/liquid-lipstick-berline-orange-red-1366368-400013663689', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brazilian-hair-smoothing-system-essentials-edition-1332535-736211144768', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/creamy-color-pink-truffle-n-a-716170103051', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/creamy-lip-color-nectar-n-a-716170053837', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/desert-twighlight-eye-palette-n-a-716170099774', :changefreq => 'monthly', :priority => 0.8
   add '/producto/perfect-cleanse-shampoo-1332568-736211144966', :changefreq => 'monthly', :priority => 0.8
   add '/producto/perfectrenew-daily-keratin-replenishing-spray-1332618-736211145161', :changefreq => 'monthly', :priority => 0.8
   add '/producto/perfectrescue-intense-keratin-repair-serum-1332600-736211145468', :changefreq => 'monthly', :priority => 0.8
   add '/producto/perfectshine-keratin-oil-1332584-736211145369', :changefreq => 'monthly', :priority => 0.8
   add '/producto/perfectsilk-keratin-enchanced-conditioner-1332576-736211145062', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/autograph-eyeliner-1085620-400010856206', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/arp-a-gotas-color-edt-vap-100ml-n-a-8410225508427', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/estuches-gotas-edt-100ml-vap-bl-100ml-n-a-8410225527138', :changefreq => 'monthly', :priority => 0.8
   add '/producto/perfectsmooth-blowout-booster-styling-cream-1332592-736211145260', :changefreq => 'monthly', :priority => 0.8
   add '/producto/perfect-treatment-smoothing-duo-1332550-736211144867', :changefreq => 'monthly', :priority => 0.8
   add '/producto/painted-love-lipstick-1266469-400012664694', :changefreq => 'monthly', :priority => 0.8
@@ -3072,21 +3078,21 @@ SitemapGenerator::Sitemap.create do
   add '/producto/painted-love-lipstick-1266501-400012665011', :changefreq => 'monthly', :priority => 0.8
   add '/producto/painted-love-lipstick-1266485-400012664854', :changefreq => 'monthly', :priority => 0.8
   add '/producto/autograph-eyeliner-1085679-400010856794', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/illuminating-powder-foundation-242826-094800002654', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/autograph-eyeliner-1085620-400010856206', :changefreq => 'monthly', :priority => 0.8
   add '/producto/saint-1197623-400011976231', :changefreq => 'monthly', :priority => 0.8
   add '/producto/kvd-fragrance-30ml-purser-edp-spray-sinner-1197631-400011976316', :changefreq => 'monthly', :priority => 0.8
   add '/producto/saint-1197649-400011976491', :changefreq => 'monthly', :priority => 0.8
   add '/producto/autograph-pencil-1242643-400012426438', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/eye-shadow-charcoal-n-a-716170058610', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/eye-shadow-cocoa-n-a-716170058627', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lipstick-creme-pout-f-1387133-607710005358', :changefreq => 'monthly', :priority => 0.8
   add '/producto/autograph-pencil-1242825-400012428258', :changefreq => 'monthly', :priority => 0.8
   add '/producto/foiled-love-lipstick-1333186-400013331861', :changefreq => 'monthly', :priority => 0.8
   add '/producto/foiled-love-lipstick-1333178-400013331786', :changefreq => 'monthly', :priority => 0.8
   add '/producto/foiled-love-lipstick-1333194-400013331946', :changefreq => 'monthly', :priority => 0.8
   add '/producto/foiled-love-lipstick-1333202-400013332028', :changefreq => 'monthly', :priority => 0.8
   add '/producto/foiled-love-lipstick-1333137-400013331373', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/flormania-mujer-edt-100ml-vap-n-a-8410225526964', :changefreq => 'monthly', :priority => 0.8
   add '/producto/painted-love-lipstick-1266519-400012665196', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/eye-shadow-rich-brown-n-a-716170058603', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/eye-shadow-steel-n-a-716170058719', :changefreq => 'monthly', :priority => 0.8
   add '/producto/painted-love-lipstick-1266451-400012664519', :changefreq => 'monthly', :priority => 0.8
   add '/producto/painted-love-lipstick-1266477-400012664779', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sinner-1197656-400011976569', :changefreq => 'monthly', :priority => 0.8
@@ -3101,16 +3107,17 @@ SitemapGenerator::Sitemap.create do
   add '/producto/tattoo-concealer-1203975-400012039751', :changefreq => 'monthly', :priority => 0.8
   add '/producto/tattoo-concealer-brush-1146513-400011465131', :changefreq => 'monthly', :priority => 0.8
   add '/producto/tattoo-concealer-1203983-400012039836', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/tattoo-concealer-1203991-400012039911', :changefreq => 'monthly', :priority => 0.8
   add '/producto/liquid-lipstick-bow-arrow-nude-1366376-400013663764', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bop-gloss-dandelion-n-a-602004043610', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bop-gloss-bellabamba-n-a-602004043566', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/tattoo-concealer-1203991-400012039911', :changefreq => 'monthly', :priority => 0.8
   add '/producto/tattoo-concealer-1203942-400012039423', :changefreq => 'monthly', :priority => 0.8
   add '/producto/tattoo-concealer-1203959-400012039591', :changefreq => 'monthly', :priority => 0.8
   add '/producto/tattoo-eraser-1206192-400012061929', :changefreq => 'monthly', :priority => 0.8
   add '/producto/tattoo-liner-1177567-400011775674', :changefreq => 'monthly', :priority => 0.8
   add '/producto/true-romance-eyeshadow-palette-saint-1325083-400013250834', :changefreq => 'monthly', :priority => 0.8
   add '/producto/liquid-lipstick-backstage-bambi-hot-pink-1366384-400013663849', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/liquid-lipstick-berline-orange-red-1366368-400013663689', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/age-less-face-cream-1242049-022548196250', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bop-gloss-coralista-n-a-602004043542', :changefreq => 'monthly', :priority => 0.8
   add '/producto/liquid-lipstick-jeffree-coral-1366343-400013663436', :changefreq => 'monthly', :priority => 0.8
   add '/producto/liquid-lipstick-lolita-dusty-rose-1366392-400013663924', :changefreq => 'monthly', :priority => 0.8
   add '/producto/liquid-lipstick-outlaw-red-1366400-400013664006', :changefreq => 'monthly', :priority => 0.8
@@ -3129,8 +3136,8 @@ SitemapGenerator::Sitemap.create do
   add '/producto/rollerball-set-1337674-400013376749', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sin-full-lash-mascara-1332832-400013328328', :changefreq => 'monthly', :priority => 0.8
   add '/producto/tattoo-chronicles-candelabra-edition-1337666-400013376664', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/age-less-face-cream-1242049-022548196250', :changefreq => 'monthly', :priority => 0.8
   add '/producto/ls-max-com-shave-gel-200-ml-912535-022548127001', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lipstick-creme-pout-f-1387133-607710005358', :changefreq => 'monthly', :priority => 0.8
   add '/producto/tattoo-concealer-1133388-400011333881', :changefreq => 'monthly', :priority => 0.8
   add '/producto/tattoo-concealer-1133396-400011333966', :changefreq => 'monthly', :priority => 0.8
   add '/producto/tattoo-concealer-1133404-400011334048', :changefreq => 'monthly', :priority => 0.8
@@ -3148,8 +3155,9 @@ SitemapGenerator::Sitemap.create do
   add '/producto/age-rescue-eye-therapy-912584-022548120279', :changefreq => 'monthly', :priority => 0.8
   add '/producto/age-rescue-face-lotion-912675-022548120231', :changefreq => 'monthly', :priority => 0.8
   add '/producto/invigorating-face-scrub-912816-022548121047', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/gel-eyeliner-twilight-night-n-a-716170099668', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/illuminating-bronzing-powder-bali-brown-n-a-716170071169', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bop-gloss-dallas-n-a-602004043580', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bop-gloss-hoola-n-a-602004010414', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bop-gloss-sugarbomb-n-a-602004043603', :changefreq => 'monthly', :priority => 0.8
   add '/producto/max-ls-overnight-renewal-serum-1293620-022548219096', :changefreq => 'monthly', :priority => 0.8
   add '/producto/multi-action-face-wash-912782-022548120255', :changefreq => 'monthly', :priority => 0.8
   add '/producto/l1212-blue-edt100ml-y-sg50ml-y-gwp-1383470-737052532356', :changefreq => 'monthly', :priority => 0.8
@@ -3167,6 +3175,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/mascara-pestanas-lancome-hypnosedrama-wp-1254606-3605532202945', :changefreq => 'monthly', :priority => 0.8
   add '/producto/suero-lancome-absolue-night-ultimate-bx-1145770-3605531018295', :changefreq => 'monthly', :priority => 0.8
   add '/producto/suero-ojos-lancome-rml-rare-serum-yeux-1197847-3605531530285', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/rouge-artist-natural-n34-candy-pink-3-5-g-1397041-3548752051743', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hd-complexion-starter-kit-1363357-3548752056250', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-artist-natural-n1-iridescent-nude-3-5-g-1396712-3548752051415', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-artist-natural-n10-iridescent-copper-pink-3-5-g-1396803-3548752051507', :changefreq => 'monthly', :priority => 0.8
@@ -3175,8 +3184,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/rouge-artist-natural-n27-iridescent-blue-pink-3-5-g-1396977-3548752051675', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-artist-natural-n28-purple-3-5-g-1396985-3548752051682', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-artist-natural-n31-soft-fushia-3-5-g-1397017-3548752051712', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/rouge-artist-natural-n34-candy-pink-3-5-g-1397041-3548752051743', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/body-illuminator-laguna-limited-edition-1323682-607845023388', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/cha-cha-tint-cheeck-and-lip-palette-n-a-602004045409', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-artist-natural-n35-iridescent-orange-pink-3-5-g-1397058-3548752051750', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-artist-natural-n37-iridescent-icy-coral-3-5-g-1397074-3548752051774', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-artist-natural-n4-pink-beige-3-5-g-1396746-3548752051446', :changefreq => 'monthly', :priority => 0.8
@@ -3200,15 +3208,14 @@ SitemapGenerator::Sitemap.create do
   add '/producto/special-effects-3d-glitter-nail-polish-1354703-840090024575', :changefreq => 'monthly', :priority => 0.8
   add '/producto/special-effects-3d-glitter-nail-polish-1354695-840090024667', :changefreq => 'monthly', :priority => 0.8
   add '/producto/special-effects-3d-glitter-nail-polish-1354679-840090024568', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lip-pencil-sandwash-tulle-n-a-716170054018', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/long-wear-cream-shadow-shore-n-a-716170080055', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lipstick-creme-primros-1387232-607710005341', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-polish-1354141-840090007363', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-polish-1354265-840090007387', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-polish-1354299-840090023042', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-polish-1354315-840090007462', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-polish-1354331-840090011407', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-polish-1354356-840090011391', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/long-wear-gel-eyeliner-forest-n-a-716170072623', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/complexion-palette-deep-n-a-602004045799', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-polish-1354414-840090001798', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-polish-1354430-840090020386', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-polish-1354448-840090011292', :changefreq => 'monthly', :priority => 0.8
@@ -3216,9 +3223,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/nails-magntc-pol-housepar-1365337-840090029426', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nails-magntc-pol-trflr-sq-1365311-840090029402', :changefreq => 'monthly', :priority => 0.8
   add '/producto/notting-hill-crystal-polish-1365279-840090029471', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/larger-than-life-lip-gloss-1344373-607845013266', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/long-wear-gel-eyeliner-ivy-shimmer-n-a-716170042947', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/sv12-set-pleasures-n-a-27131915614', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/body-illuminator-laguna-limited-edition-1323682-607845023388', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-polish-1354471-840090000210', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-polish-1354489-840090023097', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-polish-1354497-840090022595', :changefreq => 'monthly', :priority => 0.8
@@ -3234,8 +3239,8 @@ SitemapGenerator::Sitemap.create do
   add '/producto/blush-1396340-607845040347', :changefreq => 'monthly', :priority => 0.8
   add '/producto/blush-696062-607845040194', :changefreq => 'monthly', :priority => 0.8
   add '/producto/blush-452490-607845040149', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/metallic-long-wear-cream-shadow-brown-metal-n-a-716170075549', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/metallic-long-wear-cream-shadow-moon-stone-n-a-716170079974', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/complexion-palette-light-n-a-602004045751', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/complexion-palette-medium-n-a-602004045775', :changefreq => 'monthly', :priority => 0.8
   add '/producto/gentle-oil-free-eye-makeup-remover-1388859-607845022503', :changefreq => 'monthly', :priority => 0.8
   add '/producto/larger-than-life-long-wear-eyeliner-1344282-607845080596', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-gloss-orgasm-nars-1626n-809673-607845016267', :changefreq => 'monthly', :priority => 0.8
@@ -3246,6 +3251,8 @@ SitemapGenerator::Sitemap.create do
   add '/producto/larger-than-life-lip-gloss-1344407-607845013297', :changefreq => 'monthly', :priority => 0.8
   add '/producto/larger-than-life-lip-gloss-1344357-607845013242', :changefreq => 'monthly', :priority => 0.8
   add '/producto/larger-than-life-lip-gloss-1344399-607845013280', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/fair-complexion-palette-n-a-602004045812', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/larger-than-life-lip-gloss-1344373-607845013266', :changefreq => 'monthly', :priority => 0.8
   add '/producto/larger-than-life-lip-gloss-1344324-607845013211', :changefreq => 'monthly', :priority => 0.8
   add '/producto/larger-than-life-lip-gloss-1344332-607845013228', :changefreq => 'monthly', :priority => 0.8
   add '/producto/larger-than-life-lip-gloss-1344365-607845013259', :changefreq => 'monthly', :priority => 0.8
@@ -3257,6 +3264,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/nars-e-s-crm-savage-860148-607845028147', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nars-e-s-crm-zardoz-882316-607845028185', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nars-e-s-single-mousson-1203173-607845028123', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pure-matte-lipstick-1390541-607845035138', :changefreq => 'monthly', :priority => 0.8
   add '/producto/powder-foundation-barcelona-nars-6145-1256692-607845061458', :changefreq => 'monthly', :priority => 0.8
   add '/producto/powder-foundation-deauville-nars-6142-1256650-607845061427', :changefreq => 'monthly', :priority => 0.8
   add '/producto/powder-foundation-fiji-nars-6143-1256668-607845061434', :changefreq => 'monthly', :priority => 0.8
@@ -3265,9 +3273,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/powder-foundation-santa-fe-nars-6144-1256676-607845061441', :changefreq => 'monthly', :priority => 0.8
   add '/producto/powder-foundation-syracuse-nars-6206-1256726-607845062066', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pure-matte-lipstick-1344167-607845035114', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/pure-matte-lipstick-1390541-607845035138', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/metallic-long-wear-cream-shadow-pink-oyster-n-a-716170080017', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bare-skin-09-n-a-027131871439', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sheer-matte-foundation-1208818-607845060703', :changefreq => 'monthly', :priority => 0.8
   add '/producto/single-eye-shadow-1396324-607845020769', :changefreq => 'monthly', :priority => 0.8
   add '/producto/single-eye-shadow-670224-607845020448', :changefreq => 'monthly', :priority => 0.8
@@ -3288,6 +3293,8 @@ SitemapGenerator::Sitemap.create do
   add '/producto/nail-polish-1236710-607845017677', :changefreq => 'monthly', :priority => 0.8
   add '/producto/african-red-tea-face-mist-949917-687795004019', :changefreq => 'monthly', :priority => 0.8
   add '/producto/african-red-tea-foaming-cleanser-1087576-687795404000', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/fantasy-box-value-set-b11-n-a-7501908353067', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/fantasy-roller-ball-edp-10ml-n-a-7501908356709', :changefreq => 'monthly', :priority => 0.8
   add '/producto/blue-black-berry-enzyme-mask-958686-687795800017', :changefreq => 'monthly', :priority => 0.8
   add '/producto/enlighten-me-pigment-lightening-serum-966689-687795784010', :changefreq => 'monthly', :priority => 0.8
   add '/producto/express-the-truth-966309-687795735012', :changefreq => 'monthly', :priority => 0.8
@@ -3318,30 +3325,33 @@ SitemapGenerator::Sitemap.create do
   add '/producto/nail-colour-1226380-619828064134', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1226398-619828064141', :changefreq => 'monthly', :priority => 0.8
   add '/producto/opi-havana-nts-mini-1253277-619828069115', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/moist-rich-found-golden-n-a-716170023656', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/radiance-edp-15ml-n-a-7501908356716', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1111400-619828037268', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-treatment-hydrator-1111046-619828035066', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1325265-619828083982', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1274240-619828071767', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1145937-619828057631', :changefreq => 'monthly', :priority => 0.8
   add '/producto/opi-just-a-little-dngrous-1264068-619828071132', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lipstick-creme-primros-1387232-607710005341', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lipstick-creme-vivid-v-1387190-607710005464', :changefreq => 'monthly', :priority => 0.8
   add '/producto/blasted-nail-colour-1335462-619828076939', :changefreq => 'monthly', :priority => 0.8
   add '/producto/break-a-leg-warmer-charcoil-grey-1305531-619828107473', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1355973-619828085078', :changefreq => 'monthly', :priority => 0.8
   add '/producto/blasted-nail-colour-1335470-619828076946', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1356005-619828085115', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/arp-a-gotas-color-vapito-20ml-n-a-8410225521693', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/arp-a-gotas-color-edt-vap-100ml-n-a-8410225508427', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1111384-619828037244', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1243583-619828069023', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1111269-619828037138', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1325232-619828083951', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1111533-619828037398', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/100-natural-lipgloss-iced-coffee-n-a-098132157761', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/arp-a-gotas-color-vapito-20ml-n-a-8410225521693', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1264076-619828071149', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1292499-619828072320', :changefreq => 'monthly', :priority => 0.8
   add '/producto/opi-frankly-i-dont-give-a-1335249-619828091239', :changefreq => 'monthly', :priority => 0.8
   add '/producto/opi-gardn-good-evil-kit-1335306-619828091314', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bby-body-edp-85ml-bl-35ml-min-4-5ml-n-a-3386460044653', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bby-brit-sheer-w-edp-75ml-bs-bl50ml-n-a-7501908354750', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bby-brit-w-edp-100ml-brit-bl-50ml-n-a-7501908354736', :changefreq => 'monthly', :priority => 0.8
   add '/producto/matte-top-coat-1348168-619828084750', :changefreq => 'monthly', :priority => 0.8
   add '/producto/opi-mini-kit-modrn-safari-1325315-619828083999', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1325281-619828083968', :changefreq => 'monthly', :priority => 0.8
@@ -3349,12 +3359,14 @@ SitemapGenerator::Sitemap.create do
   add '/producto/nail-colour-1170224-619828058171', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1339761-619828081384', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1170208-619828058164', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bby-brit-w-edp-75ml-brit-bl-50ml-n-a-7501908355443', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1305523-619828107466', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1341502-619828081513', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/nail-polish-turquoise-n-a-716170103105', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/nail-polish-twilight-n-a-716170101217', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bby-sport-m-edt-75ml-sptm-as-50ml-n-a-7501908354811', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bby-sport-w-edt-75ml-sptw-bl-50ml-n-a-7501908354774', :changefreq => 'monthly', :priority => 0.8
   add '/producto/opi-ttips-birds-1383736-619828085917', :changefreq => 'monthly', :priority => 0.8
   add '/producto/opi-ttips-black-gold-glitter-1383744-619828085924', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bby-the-beat-m-edt75ml-beatm-as-50ml-n-a-7501908354804', :changefreq => 'monthly', :priority => 0.8
   add '/producto/opi-ttips-cheetah-sprkl-1388529-619828088482', :changefreq => 'monthly', :priority => 0.8
   add '/producto/opi-ttips-cherries-1383777-619828085955', :changefreq => 'monthly', :priority => 0.8
   add '/producto/opi-ttips-feathers-1383785-619828085962', :changefreq => 'monthly', :priority => 0.8
@@ -3390,6 +3402,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/nail-colour-quick-dry-spray-1312818-619828075383', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1111483-619828037343', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1145952-619828057655', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/phyto-7-daily-hydrating-botanical-cream-98715-618059162015', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1111814-619828037534', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1111202-619828037077', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1111350-619828037213', :changefreq => 'monthly', :priority => 0.8
@@ -3398,7 +3411,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/nail-colour-1111574-619828037435', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-remover-1111012-619828035158', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-remover-1111004-619828035189', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/pot-rouge-pale-pink-n-a-716170097022', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1111210-619828037084', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1177559-619828058997', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1111293-619828037169', :changefreq => 'monthly', :priority => 0.8
@@ -3407,7 +3419,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/nail-colour-1145978-619828057679', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-treatment-top-coat-1111145-619828035042', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1170232-619828058195', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/pronto-dry-heat-protect-spray-1363944-814325010268', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/phyto-9-daily-ultra-nourishing-botanical-cream-ultra-dry-hair-98731-618059162039', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1226406-619828064158', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-colour-1243625-619828069061', :changefreq => 'monthly', :priority => 0.8
   add '/producto/blasted-nail-colour-1335488-619828076953', :changefreq => 'monthly', :priority => 0.8
@@ -3420,6 +3432,9 @@ SitemapGenerator::Sitemap.create do
   add '/producto/lacca-hairspray-travel-size-1126341-185856000159', :changefreq => 'monthly', :priority => 0.8
   add '/producto/light-golden-blonde-1129881-185856000432', :changefreq => 'monthly', :priority => 0.8
   add '/producto/neutral-brown-1129865-185856000463', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pronto-dry-heat-protect-spray-1363944-814325010268', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/phytoargent-shampoo-1126317-618059103445', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bu-brit-summer-for-men-100ml-n-a-3386460045315', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pronto-dry-shampoo-powder-914101-185856000371', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pronto-invisible-dry-shampoo-spray-1249929-185856000838', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pronto-invisible-dry-shampoo-spray-travel-size-1284405-814325010084', :changefreq => 'monthly', :priority => 0.8
@@ -3427,6 +3442,8 @@ SitemapGenerator::Sitemap.create do
   add '/producto/climate-control-174-defrizzing-conditioner-1377589-814591010849', :changefreq => 'monthly', :priority => 0.8
   add '/producto/climate-control-174-defrizzing-shampoo-1377571-814591010795', :changefreq => 'monthly', :priority => 0.8
   add '/producto/playcurl-volumizing-foam-1200062-892532001743', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bu-brit-summer-for-women-100ml-n-a-3386460044943', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/mm-12-edt-65-ml-omnia-crystalline-edt-25ml-satin-n-a-783320803260', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lady-million-1283399-3349668508587', :changefreq => 'monthly', :priority => 0.8
   add '/producto/perricone-acyl-glutathione-eye-15-ml-1392315-651473570202', :changefreq => 'monthly', :priority => 0.8
   add '/producto/holiday-kit-1383595-651473071129', :changefreq => 'monthly', :priority => 0.8
@@ -3434,19 +3451,12 @@ SitemapGenerator::Sitemap.create do
   add '/producto/no-sun-tanner-1338235-651473512806', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hair-to-die-for-1447101-670367525012', :changefreq => 'monthly', :priority => 0.8
   add '/producto/instant-firmx-eye-1324193-670367357033', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/edt-125-ml-polo-sport-men-ralph-lauren-150946-3360372055402', :changefreq => 'monthly', :priority => 0.8
   add '/producto/laser-free-153-resurfacing-eye-serum-1394048-670367010013', :changefreq => 'monthly', :priority => 0.8
   add '/producto/laser-free-retexturizer-444471-670367405048', :changefreq => 'monthly', :priority => 0.8
   add '/producto/anti-shine-mattifying-gel-571257-670367511015', :changefreq => 'monthly', :priority => 0.8
   add '/producto/max-sheer-all-day-moisture-defense-cream-38067-670367309025', :changefreq => 'monthly', :priority => 0.8
   add '/producto/huile-d-ales-pre-shampoo-intense-hydrating-oil-treatment-98723-618059152023', :changefreq => 'monthly', :priority => 0.8
   add '/producto/phyth-233-ol-intense-anti-dandruff-treatment-shampoo-1314251-618059163678', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/phyto-7-daily-hydrating-botanical-cream-98715-618059162015', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/phyto-9-daily-ultra-nourishing-botanical-cream-ultra-dry-hair-98731-618059162039', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/phytoargent-shampoo-1126317-618059103445', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/edt118ml-ralph-lauren-polo-modern-1131424-3605975016499', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/rich-lip-color-spf-12-guava-n-a-716170085760', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bare-skin-11-n-a-027131871453', :changefreq => 'monthly', :priority => 0.8
   add '/producto/phytocyane-843557-618059163104', :changefreq => 'monthly', :priority => 0.8
   add '/producto/phytokeratine-serum-30-ml-1366228-618059105401', :changefreq => 'monthly', :priority => 0.8
   add '/producto/phytokeratine-shampoo-200-ml-1366178-618059013409', :changefreq => 'monthly', :priority => 0.8
@@ -3482,9 +3492,9 @@ SitemapGenerator::Sitemap.create do
   add '/producto/p-l-ll-liq-e-l-11-glt-green-1296276-3378872052388', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-ll-liq-e-l-13-fnc-blue-1296292-3378872052401', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-mini-eye-set-b-542209-0400005422096', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/rich-lip-color-spf-12-old-hollywood-n-a-716170085777', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/mm-12-edt-75-ml-mon-jasmin-bolsa-n-a-783320803253', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sc-mirror-shine-top-coat-1368323-3378872062912', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bare-skin-12-n-a-027131871460', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ysl-teint-touche-eclat-13-n-a-3365440157866', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pro-lesson-palette-natural-65-value-1365683-3378872063001', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sc-2in1-cuticle-remv-pen-1368331-3378872062967', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sc-brshon-noursh-cutc-oil-1391606-3378872064558', :changefreq => 'monthly', :priority => 0.8
@@ -3511,7 +3521,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/sephora-collection-long-lasting-eyeliner-high-precision-brush-01-black-1370766-3378872055945', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sephora-rouge-shine-n-01-honeymoon-1381854-3378872063827', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sephora-rouge-shine-n-02-golden-girl-1381862-3378872063834', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/rich-lip-color-spf-12-soft-coral-n-a-716170085821', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/mon-jasmin-noir-l-eau-exquise-75-ml-n-a-783320402524', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sephora-rouge-shine-n-03-tenderness-1381870-3378872063841', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sephora-rouge-shine-n-04-so-cute-1381888-3378872063858', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sephora-rouge-shine-n-05-shining-moment-1381896-3378872063865', :changefreq => 'monthly', :priority => 0.8
@@ -3519,6 +3529,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/sephora-rouge-shine-n-07-matchmaker-1381912-3378872063889', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sephora-rouge-shine-n-08-show-off-1381920-3378872063896', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sephora-rouge-shine-n-09-private-jet-1381938-3378872063902', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/illuminating-powder-foundation-242800-094800002630', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sephora-rouge-shine-n-10-miss-you-1381946-3378872063919', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sephora-rouge-shine-n-11-love-letter-1381953-3378872063926', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sephora-rouge-shine-n-12-guest-list-1381961-3378872063933', :changefreq => 'monthly', :priority => 0.8
@@ -3527,7 +3538,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/sephora-rouge-shine-n-15-pop-star-1381995-3378872063964', :changefreq => 'monthly', :priority => 0.8
   add '/producto/volume-booster-gloss-serum-01-honey-lips-1363035-3378872056669', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lipstick-creme-honey-1387349-607710005402', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/rich-lip-color-spf-12-sweet-nectar-n-a-716170085814', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/omnia-coral-edt-65-ml-n-a-783320442506', :changefreq => 'monthly', :priority => 0.8
   add '/producto/volume-booster-gloss-serum-03-extra-kiss-1363043-3378872056683', :changefreq => 'monthly', :priority => 0.8
   add '/producto/volume-booster-gloss-serum-04-enchantress-1363050-3378872056690', :changefreq => 'monthly', :priority => 0.8
   add '/producto/volume-booster-gloss-serum-05-under-a-spell-1363068-3378872056706', :changefreq => 'monthly', :priority => 0.8
@@ -3537,7 +3548,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/sephora-rouge-shine-n-16-sweetheart-1382001-3378872063971', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sephora-rouge-shine-n-18-just-dating-1382019-3378872063995', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lipstick-creme-legenda-1387257-607710005310', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/shimmer-wash-eye-shadow-black-plum-n-a-716170058764', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/omnia-crystalline-edt-65-ml-n-a-783320922565', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sephora-rouge-shine-n-19-v-i-p-1382027-3378872064008', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sephora-rouge-shine-n-20-fairy-tale-1382035-3378872064015', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sephora-rouge-shine-n-21-a-lister-1382043-3378872064022', :changefreq => 'monthly', :priority => 0.8
@@ -3553,6 +3564,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/sephora-rouge-shine-n-31-flashy-1382142-3378872064121', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sephora-rouge-shine-n-32-serial-dater-1382159-3378872064138', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sephora-rouge-shine-n-33-get-rich-1382167-3378872064145', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/illuminating-powder-foundation-242818-094800002647', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sephora-rouge-shine-n-34-royal-wedding-1382175-3378872064152', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sephora-rouge-shine-n-35-by-your-side-1382183-3378872064169', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sephora-rouge-shine-n-36-diva-1382191-3378872064176', :changefreq => 'monthly', :priority => 0.8
@@ -3582,7 +3594,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/artificial-light-luminizing-lotion-glow-1100676-607710537071', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bronzer-deep-1068360-607710530133', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bronzer-medium-1068345-607710530126', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bare-skin-13-n-a-027131931614', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ysl-teint-touche-eclat-14-n-a-3365440157934', :changefreq => 'monthly', :priority => 0.8
   add '/producto/camera-ready-5-in-1-b-da30ml-1387034-607710005563', :changefreq => 'monthly', :priority => 0.8
   add '/producto/camera-ready-5-in-1-b-fa30ml-1387000-607710005532', :changefreq => 'monthly', :priority => 0.8
   add '/producto/camera-ready-5-in-1-b-li30ml-1387018-607710005549', :changefreq => 'monthly', :priority => 0.8
@@ -3592,8 +3604,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/lipstick-creme-chestnu-1387224-607710005471', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lipstick-creme-cognac-1387216-607710005433', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lipstick-creme-fig-fn-1387273-607710005457', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/shimmer-wash-eye-shadow-chocolate-n-a-716170059181', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lipstick-creme-vivid-v-1387190-607710005464', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/giftset-ck-3pc-euphoria-woman-edp-100-ml-n-a-3607342286412', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lipstick-matte-matte-ele3g-1387240-607710005518', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lipstick-matte-matte-fuc3g-1387182-607710005501', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lipstick-matte-matte-inf3g-1387265-607710005495', :changefreq => 'monthly', :priority => 0.8
@@ -3604,8 +3615,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/soft-effects-powder-eye-liner-brown-1315886-607710507548', :changefreq => 'monthly', :priority => 0.8
   add '/producto/soft-effects-powder-eye-liner-gunmetal-1315878-607710507531', :changefreq => 'monthly', :priority => 0.8
   add '/producto/applicator-mitt-1298314-5060022305410', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/shimmer-wash-eye-shadow-snow-n-a-716170059082', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/shimmer-wash-eye-shadow-stone-n-a-716170059136', :changefreq => 'monthly', :priority => 0.8
   add '/producto/gradual-tan-everyday-body-moisturiser-light-medium-6-7-oz-1256932-5060022304239', :changefreq => 'monthly', :priority => 0.8
   add '/producto/gradual-tan-everyday-body-moisturiser-medium-dark-6-7-oz-1256924-5060022304246', :changefreq => 'monthly', :priority => 0.8
   add '/producto/self-tan-bronzing-lotion-4-oz-1256858-5060022304352', :changefreq => 'monthly', :priority => 0.8
@@ -3616,19 +3625,13 @@ SitemapGenerator::Sitemap.create do
   add '/producto/tan-remover-1298322-5060022305311', :changefreq => 'monthly', :priority => 0.8
   add '/producto/illuminating-liquid-foundation-609552-094800007451', :changefreq => 'monthly', :priority => 0.8
   add '/producto/illuminating-powder-foundation-242859-094800002685', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/restorative-night-treatment-1-fl-oz-n-a-808144206018', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/britney-spears-fantasy-edp-spray-100-ml-n-a-719346065405', :changefreq => 'monthly', :priority => 0.8
   add '/producto/illuminating-powder-foundation-242776-094800002616', :changefreq => 'monthly', :priority => 0.8
   add '/producto/illuminating-powder-foundation-242784-094800002623', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/illuminating-powder-foundation-242800-094800002630', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/illuminating-powder-foundation-242818-094800002647', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/illuminating-powder-foundation-242826-094800002654', :changefreq => 'monthly', :priority => 0.8
   add '/producto/illuminating-powder-foundation-242834-094800002661', :changefreq => 'monthly', :priority => 0.8
   add '/producto/all-over-shimmer-duo-1312313-094800333802', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eye-shadow-trio-911560-094800307544', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eye-shadow-trio-911552-094800307537', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eye-shadow-trio-1019892-094800320635', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/eye-shadow-1330679-094800337541', :changefreq => 'monthly', :priority => 0.8
   add '/producto/convertible-color-302190-094800003033', :changefreq => 'monthly', :priority => 0.8
   add '/producto/convertible-color-gladiola-408104-094800003514', :changefreq => 'monthly', :priority => 0.8
   add '/producto/convertible-color-653840-094800272989', :changefreq => 'monthly', :priority => 0.8
@@ -3636,25 +3639,27 @@ SitemapGenerator::Sitemap.create do
   add '/producto/convertible-color-353508-094800003316', :changefreq => 'monthly', :priority => 0.8
   add '/producto/convertible-color-rose-353516-094800003330', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-cheek-stain-1284769-094800333086', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/eye-shadow-1330505-094800337374', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-cheek-stain-1056936-094800325159', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-cheek-stain-1312347-094800333093', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-cheek-stain-1168731-094800327399', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-cheek-stain-1143999-094800327054', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/amor-amor-cacharel-edt-100-ml-n-a-3360373063680', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-cheek-stain-1247501-094800330443', :changefreq => 'monthly', :priority => 0.8
   add '/producto/crush-lip-cheek-stain-yumberry-1221092-094800328976', :changefreq => 'monthly', :priority => 0.8
   add '/producto/custom-color-blush-1346782-094800338388', :changefreq => 'monthly', :priority => 0.8
   add '/producto/custom-color-blush-1277508-094800332935', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eye-shadow-1330380-094800337251', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eye-shadow-1330398-094800337268', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/eye-shadow-1330679-094800337541', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/eye-shadow-1330505-094800337374', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eye-shadow-1330364-094800337237', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eye-shadow-1330372-094800337244', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eye-shadow-1330281-094800337183', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/anais-anais-cacharel-edt-100-ml-n-a-3360374533205', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eye-shadow-1330315-094800337206', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eye-shadow-1330513-094800337381', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eye-shadow-1330463-094800337336', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/fantasy-box-value-set-b11-n-a-7501908353067', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/fantasy-roller-ball-edp-10ml-n-a-7501908356709', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/cofre-amor-100-ml-stval-2012-n-a-7509552167733', :changefreq => 'monthly', :priority => 0.8
   add '/producto/forever-your-curl-curl-memory-mascara-1330141-094800335905', :changefreq => 'monthly', :priority => 0.8
   add '/producto/holiday-dream-in-full-color-palette-1363316-094800339132', :changefreq => 'monthly', :priority => 0.8
   add '/producto/holiday-lip-glaze-set-1363324-094800339071', :changefreq => 'monthly', :priority => 0.8
@@ -3664,7 +3669,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/illuminating-liquid-foundation-609446-094800005945', :changefreq => 'monthly', :priority => 0.8
   add '/producto/illuminating-liquid-foundation-609453-094800005952', :changefreq => 'monthly', :priority => 0.8
   add '/producto/illuminating-liquid-foundation-609461-094800005969', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/radiance-edp-15ml-n-a-7501908356716', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/cofre-amor-fbk100-ml-stval-2012-n-a-7509552167719', :changefreq => 'monthly', :priority => 0.8
   add '/producto/illuminating-liquid-foundation-609479-094800005976', :changefreq => 'monthly', :priority => 0.8
   add '/producto/illuminating-powder-foundation-242842-094800002678', :changefreq => 'monthly', :priority => 0.8
   add '/producto/illuminating-powder-foundation-502575-094800003095', :changefreq => 'monthly', :priority => 0.8
@@ -3682,8 +3687,8 @@ SitemapGenerator::Sitemap.create do
   add '/producto/lip-glaze-794040-094800287433', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-glaze-793943-094800287310', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-glaze-794065-094800287525', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bby-body-edp-85ml-bl-35ml-min-4-5ml-n-a-3386460044653', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bby-brit-sheer-w-edp-75ml-bs-bl50ml-n-a-7501908354750', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/edp-100ml-cacharel-forbidden-kiss-n-a-3605521487742', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/edt-80ml-cacharel-scarlett-n-a-3605520917844', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-glaze-1206549-094800331273', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-glaze-praline-794107-094800287587', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-glaze-793927-094800287297', :changefreq => 'monthly', :priority => 0.8
@@ -3694,13 +3699,11 @@ SitemapGenerator::Sitemap.create do
   add '/producto/long-wear-lip-color-1220714-094800329010', :changefreq => 'monthly', :priority => 0.8
   add '/producto/long-wear-lip-color-1026756-094800321045', :changefreq => 'monthly', :priority => 0.8
   add '/producto/long-wear-lip-color-1026731-094800321038', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bby-brit-w-edp-100ml-brit-bl-50ml-n-a-7501908354736', :changefreq => 'monthly', :priority => 0.8
   add '/producto/long-wear-lip-color-1220938-094800329058', :changefreq => 'monthly', :priority => 0.8
   add '/producto/long-wear-lip-color-1220698-094800328983', :changefreq => 'monthly', :priority => 0.8
   add '/producto/long-wear-lip-color-1220706-094800328990', :changefreq => 'monthly', :priority => 0.8
   add '/producto/long-wear-lip-color-1220912-094800329041', :changefreq => 'monthly', :priority => 0.8
   add '/producto/long-wear-lip-color-1026640-094800320994', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bby-brit-w-edp-75ml-brit-bl-50ml-n-a-7501908355443', :changefreq => 'monthly', :priority => 0.8
   add '/producto/major-major-lash-mascara-1056928-094800325128', :changefreq => 'monthly', :priority => 0.8
   add '/producto/smudge-pots-756627-094800276734', :changefreq => 'monthly', :priority => 0.8
   add '/producto/one-step-bronze-1330075-094800339194', :changefreq => 'monthly', :priority => 0.8
@@ -3721,7 +3724,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/smudge-crayon-waterproof-eye-primer-shadow-liner-1389196-094800339897', :changefreq => 'monthly', :priority => 0.8
   add '/producto/smudge-crayon-waterproof-eye-primer-shadow-liner-1389220-094800339934', :changefreq => 'monthly', :priority => 0.8
   add '/producto/smudge-pots-756593-094800276703', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bby-sport-m-edt-75ml-sptm-as-50ml-n-a-7501908354811', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ck-be-unisex-edt-200-ml-n-a-088300104437', :changefreq => 'monthly', :priority => 0.8
   add '/producto/smudge-pots-756635-094800276741', :changefreq => 'monthly', :priority => 0.8
   add '/producto/smudge-pots-1177047-094800328075', :changefreq => 'monthly', :priority => 0.8
   add '/producto/smudge-stick-waterproof-eye-liner-1247758-094800332539', :changefreq => 'monthly', :priority => 0.8
@@ -3731,7 +3734,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/smudge-stick-waterproof-eye-liner-1247683-094800331839', :changefreq => 'monthly', :priority => 0.8
   add '/producto/smudge-stick-waterproof-eye-liner-1346766-094800339156', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sparkle-waterproof-liquid-eye-liner-1378314-094800336247', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/afterglow-glide-on-cheek-tint-1306240-604214542105', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/arp-beso-edt-vap-100-ml-vap-n-a-8410225513667', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sparkle-waterproof-liquid-eye-liner-1330174-094800335868', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sparkle-waterproof-liquid-eye-liner-1330182-094800335875', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sparkle-waterproof-liquid-eye-liner-1330166-094800335851', :changefreq => 'monthly', :priority => 0.8
@@ -3742,21 +3745,22 @@ SitemapGenerator::Sitemap.create do
   add '/producto/stay-all-day-waterproof-brow-color-1346691-094800333840', :changefreq => 'monthly', :priority => 0.8
   add '/producto/stay-all-day-waterproof-liquid-eye-liner-1346725-094800337817', :changefreq => 'monthly', :priority => 0.8
   add '/producto/stay-all-day-waterproof-liquid-eye-liner-1221084-094800330214', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bby-sport-w-edt-75ml-sptw-bl-50ml-n-a-7501908354774', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ck-free-blue-edt-100-ml-n-a-3607342411098', :changefreq => 'monthly', :priority => 0.8
   add '/producto/stay-all-day-waterproof-liquid-eye-liner-1312719-094800335813', :changefreq => 'monthly', :priority => 0.8
   add '/producto/stay-all-day-waterproof-liquid-eye-liner-1312701-094800335820', :changefreq => 'monthly', :priority => 0.8
   add '/producto/stay-all-day-waterproof-liquid-eye-liner-1346733-094800337831', :changefreq => 'monthly', :priority => 0.8
   add '/producto/stila-sun-bronzing-powder-1260983-094800333574', :changefreq => 'monthly', :priority => 0.8
   add '/producto/stila-sun-bronzing-powder-1260991-094800333581', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bby-the-beat-m-edt75ml-beatm-as-50ml-n-a-7501908354804', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bu-brit-summer-for-men-100ml-n-a-3386460045315', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bu-brit-summer-for-women-100ml-n-a-3386460044943', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/mm-12-edt-65-ml-omnia-crystalline-edt-25ml-satin-n-a-783320803260', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/mm-12-edt-75-ml-mon-jasmin-bolsa-n-a-783320803253', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bg-body-spf-30-n-a-027131632269', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/afterglow-glide-on-cheek-tint-1306265-604214542204', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/mon-jasmin-noir-l-eau-exquise-75-ml-n-a-783320402524', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/omnia-coral-edt-65-ml-n-a-783320442506', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ck-one-unisex-edt-200-ml-n-a-088300107438', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sheer-beauty-edt-100-ml-n-a-3607342306134', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ck-shock-men-body-spray-200-ml-n-a-3607342328631', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ck-shock-men-edt-200-ml-n-a-3607342401501', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ck-shock-woman-edt-200-ml-n-a-3607342401822', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/eternity-aqua-edt-200-ml-n-a-3607342378353', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/eternity-men-edt-200-ml-n-a-3607341471727', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/arp-beso-vapito-20ml-n-a-8410225521136', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/arp-bl-cereza-15-ml-n-a-8410225503606', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/arp-bl-f-pasion-15ml-n-a-8410225503873', :changefreq => 'monthly', :priority => 0.8
   add '/producto/amazing-face-oil-free-close-up-coverage-foundation-1307792-651986700639', :changefreq => 'monthly', :priority => 0.8
   add '/producto/amazing-face-oil-free-close-up-coverage-foundation-1307776-651986700615', :changefreq => 'monthly', :priority => 0.8
   add '/producto/amazing-face-oil-free-close-up-coverage-foundation-1307750-651986700592', :changefreq => 'monthly', :priority => 0.8
@@ -3777,8 +3781,8 @@ SitemapGenerator::Sitemap.create do
   add '/producto/glamour-gloss-1242577-651986501069', :changefreq => 'monthly', :priority => 0.8
   add '/producto/glamour-gloss-1242601-651986501090', :changefreq => 'monthly', :priority => 0.8
   add '/producto/powder-pouf-brush-1267095-651986903047', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/afterglow-glide-on-cheek-tint-1306273-604214542006', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bg-face-spf-30-n-a-027131632245', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/24-7-concealer-pencil-nsa-1393743-604214844001', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/arp-bl-frambuesa-15ml-n-a-8410225503866', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-insurance-lip-primer-1242510-651986510436', :changefreq => 'monthly', :priority => 0.8
   add '/producto/perfect-lips-1242544-651986100460', :changefreq => 'monthly', :priority => 0.8
   add '/producto/primed-poreless-powder-1266824-651986700448', :changefreq => 'monthly', :priority => 0.8
@@ -3786,8 +3790,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/tf-kit-glamour-to-go-2012-12-44gr-1392562-651986903689', :changefreq => 'monthly', :priority => 0.8
   add '/producto/natural-face-natural-radiance-face-palette-1392513-651986700769', :changefreq => 'monthly', :priority => 0.8
   add '/producto/matte-eye-shadow-collection-1345966-651986903566', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/afterglow-glide-on-cheek-tint-1306232-604214542303', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/omnia-crystalline-edt-65-ml-n-a-783320922565', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/eyeshadow-primer-potion-tube-sin-1325554-604214738904', :changefreq => 'monthly', :priority => 0.8
   add '/producto/tf-maquillaje-tinted-beauty-balm-cream-glow-45ml-1392539-651986700806', :changefreq => 'monthly', :priority => 0.8
   add '/producto/tf-maquillaje-tinted-beauty-balm-nude-glow-45ml-1392547-651986700813', :changefreq => 'monthly', :priority => 0.8
   add '/producto/tf-maquillaje-tinted-beauty-balm-vanilla-glow-45ml-1392521-651986700790', :changefreq => 'monthly', :priority => 0.8
@@ -3796,9 +3799,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/24-7-concealer-pencil-cia-1393719-604214843707', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-concealer-pencil-dea-1393727-604214843806', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-concealer-pencil-fbi-1393735-604214843905', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/24-7-concealer-pencil-nsa-1393743-604214844001', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-glide-on-lip-pencil-1306323-604214618008', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bg-selftan-lotion-face-n-a-027131632139', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-glide-on-lip-pencil-1306315-604214617803', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-glide-on-lip-pencil-1105147-604214446502', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-glide-on-lip-pencil-1105113-604214446304', :changefreq => 'monthly', :priority => 0.8
@@ -3806,72 +3807,67 @@ SitemapGenerator::Sitemap.create do
   add '/producto/24-7-glide-on-lip-pencil-1187574-604214448506', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-glide-on-lip-pencil-1187582-604214448605', :changefreq => 'monthly', :priority => 0.8
   add '/producto/24-7-glide-on-lip-pencil-1105154-604214446601', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/amor-amor-cacharel-edt-100-ml-n-a-3360373063680', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/afterglow-glide-on-cheek-tint-1306273-604214542006', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/afterglow-glide-on-cheek-tint-1306232-604214542303', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/afterglow-glide-on-cheek-tint-1306240-604214542105', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/afterglow-glide-on-cheek-tint-1306265-604214542204', :changefreq => 'monthly', :priority => 0.8
   add '/producto/baked-bronzer-1325745-604214683709', :changefreq => 'monthly', :priority => 0.8
   add '/producto/cannonball-ultra-waterproof-mascara-1325653-604214603479', :changefreq => 'monthly', :priority => 0.8
   add '/producto/complexion-primer-potion-brightening-1187707-604214733602', :changefreq => 'monthly', :priority => 0.8
   add '/producto/complexion-primer-potion-pore-perfecting-1187699-604214733701', :changefreq => 'monthly', :priority => 0.8
   add '/producto/de-slick-in-a-tube-mattifying-gel-1238716-604214683303', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/anais-anais-cacharel-edt-100-ml-n-a-3360374533205', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/cofre-amor-100-ml-stval-2012-n-a-7509552167733', :changefreq => 'monthly', :priority => 0.8
   add '/producto/de-slick-mattifying-powder-1077437-604214682603', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eyeshadow-primer-potion-tube-eden-1325570-604214739000', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eyeshadow-primer-potion-tube-greed-1325562-604214739109', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eyeshadow-primer-potion-tube-original-1325547-604214738805', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/eyeshadow-primer-potion-tube-sin-1325554-604214738904', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eyelash-primer-potion-1187673-604214733305', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lip-love-honey-infused-lip-therapy-1325620-604214271302', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/cofre-amor-fbk100-ml-stval-2012-n-a-7509552167719', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-junkie-lipgloss-1266865-604214627604', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-junkie-lipgloss-1266907-604214628205', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-junkie-lipgloss-1266832-604214627307', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-junkie-lipgloss-1266857-604214627505', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lip-love-honey-infused-lip-therapy-1325638-604214271005', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/edp-100ml-cacharel-forbidden-kiss-n-a-3605521487742', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/edt-80ml-cacharel-scarlett-n-a-3605520917844', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/arp-bl-kiwi-15ml-n-a-8410225503897', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-junkie-lipgloss-1266931-604214627901', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-junkie-lipgloss-1266840-604214627406', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-junkie-lipgloss-1266873-604214627703', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lip-primer-potion-1187681-604214733206', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lip-love-honey-infused-lip-therapy-1325620-604214271302', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/arp-bl-tutti-fruti-15m-n-a-8410225503859', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-junkie-lipgloss-1266899-604214628106', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-junkie-lipgloss-1266881-604214627802', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lip-love-honey-infused-lip-therapy-1326719-604214270909', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-love-honey-infused-lip-therapy-1325646-604214271203', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-love-honey-infused-lip-therapy-1325612-604214271104', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/delineador-ojos-01-wp-ysl-crayon-negro-1333905-3365440650299', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/base-maquillaje-ysl-perfect-touch-7-1120898-3365440306660', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lip-love-honey-infused-lip-therapy-1325638-604214271005', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lip-primer-potion-1187681-604214733206', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lush-lash-system-1306307-604214603448', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/mariposa-palette-1361666-604214843202', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/mini-stardust-eyeshadow-primer-potion-duo-1394139-604214917705', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/base-maquillaje-ysl-perfect-touch-8-1120906-3365440306684', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/base-maquillaje-ysl-perfect-touch-9-1120914-3365440306707', :changefreq => 'monthly', :priority => 0.8
   add '/producto/razor-sharp-ultra-definition-finishing-powder-1225804-604214683105', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/delineador-ojos-01-ysl-automatique-1370543-3365440124387', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/delineador-ojos-02-wp-ysl-crayon-cafe-1333913-3365440650336', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ck-be-unisex-edt-200-ml-n-a-088300104437', :changefreq => 'monthly', :priority => 0.8
   add '/producto/skyscraper-multi-benefit-mascara-1162445-604214603004', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/delineador-ojos-03-wp-ysl-crayon-azul-1333921-3365440650374', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/delineador-ojos-04-lapiz-1120609-3365440071858', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/delineador-ojos-05-wp-ysl-crayon-purpura-1333939-3365440650459', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/delineador-ojos-06-wp-ysl-crayon-turques-1333947-3365440650497', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/corrector-02-beige-peau-1119346-3365440096219', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/d-eyeliner-noir-1120658-3365440028098', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/arp-love-edt-80ml-vap-n-a-8410225524588', :changefreq => 'monthly', :priority => 0.8
   add '/producto/supercurl-curling-mascara-1306299-604214603455', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/delineador-labios-ysl-dessin-levres-18-1119700-3365440334243', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/delineador-ojos-01-lapiz-1120617-3365440071797', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/delineador-ojos-01-wp-ysl-crayon-negro-1333905-3365440650299', :changefreq => 'monthly', :priority => 0.8
   add '/producto/super-saturated-high-gloss-lip-color-1393800-604214454200', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/edp-90-ml-elle-ysl-fragancia-femenina-1070051-3365440332546', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/edp-90ml-yves-saint-laurent-belledopium-1323039-3365440569584', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ck-free-blue-edt-100-ml-n-a-3607342411098', :changefreq => 'monthly', :priority => 0.8
   add '/producto/super-saturated-high-gloss-lip-color-1393792-604214453807', :changefreq => 'monthly', :priority => 0.8
   add '/producto/super-saturated-high-gloss-lip-color-1348838-604214453708', :changefreq => 'monthly', :priority => 0.8
   add '/producto/super-saturated-high-gloss-lip-color-1348812-604214453906', :changefreq => 'monthly', :priority => 0.8
   add '/producto/super-saturated-high-gloss-lip-color-1348853-604214454002', :changefreq => 'monthly', :priority => 0.8
   add '/producto/super-saturated-high-gloss-lip-color-1348846-604214454101', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/delineador-ojos-01-ysl-automatique-1370543-3365440124387', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/delineador-ojos-02-wp-ysl-crayon-cafe-1333913-3365440650336', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/delineador-ojos-03-wp-ysl-crayon-azul-1333921-3365440650374', :changefreq => 'monthly', :priority => 0.8
   add '/producto/super-saturated-high-gloss-lip-color-1348820-604214454309', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/edt-100-ml-ysl-l-homme-987925-3365440316560', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/edt-125-ml-paris-ysl-8169-3365440002197', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/edt-vapo-100ml-ysl-la-nuit-homme-1200716-3365440375079', :changefreq => 'monthly', :priority => 0.8
   add '/producto/surreal-skin-cream-to-powder-foundation-1191899-604214654303', :changefreq => 'monthly', :priority => 0.8
   add '/producto/surreal-skin-cream-to-powder-foundation-1191923-604214654600', :changefreq => 'monthly', :priority => 0.8
   add '/producto/surreal-skin-cream-to-powder-foundation-1191873-604214654105', :changefreq => 'monthly', :priority => 0.8
   add '/producto/surreal-skin-cream-to-powder-foundation-1191949-604214654808', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/delineador-ojos-04-lapiz-1120609-3365440071858', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/delineador-ojos-05-wp-ysl-crayon-purpura-1333939-3365440650459', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/delineador-ojos-06-wp-ysl-crayon-turques-1333947-3365440650497', :changefreq => 'monthly', :priority => 0.8
   add '/producto/surreal-skin-cream-to-powder-foundation-1191881-604214654204', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lp-10-gloss-ysl-golden-gloss-n-19-1229558-3365440568266', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/maquillaje-ysl-matt-touch-found-09-1121185-3365440352094', :changefreq => 'monthly', :priority => 0.8
   add '/producto/surreal-skin-cream-to-powder-foundation-1191907-604214654402', :changefreq => 'monthly', :priority => 0.8
   add '/producto/surreal-skin-cream-to-powder-foundation-1191915-604214654501', :changefreq => 'monthly', :priority => 0.8
   add '/producto/surreal-skin-cream-to-powder-foundation-1191931-604214654709', :changefreq => 'monthly', :priority => 0.8
@@ -3885,50 +3881,31 @@ SitemapGenerator::Sitemap.create do
   add '/producto/ysl-volupte-sheer-candy-10-p12-1394253-3365440130944', :changefreq => 'monthly', :priority => 0.8
   add '/producto/base-maquillaje-ysl-perfect-touch-10-1120831-3365440306721', :changefreq => 'monthly', :priority => 0.8
   add '/producto/base-maquillaje-ysl-perfect-touch-6-1120880-3365440306646', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/base-maquillaje-ysl-perfect-touch-7-1120898-3365440306660', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/base-maquillaje-ysl-perfect-touch-8-1120906-3365440306684', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/base-maquillaje-ysl-perfect-touch-9-1120914-3365440306707', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/corrector-02-beige-peau-1119346-3365440096219', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/d-eyeliner-noir-1120658-3365440028098', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/delineador-labios-ysl-dessin-levres-18-1119700-3365440334243', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/delineador-ojos-01-lapiz-1120617-3365440071797', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/arp-beso-edt-vap-100-ml-vap-n-a-8410225513667', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/arp-beso-vapito-20ml-n-a-8410225521136', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/arp-bl-cereza-15-ml-n-a-8410225503606', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/arp-bl-f-pasion-15ml-n-a-8410225503873', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/arp-bl-frambuesa-15ml-n-a-8410225503866', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/arp-bl-kiwi-15ml-n-a-8410225503897', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/arp-bl-tutti-fruti-15m-n-a-8410225503859', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/arp-love-edt-80ml-vap-n-a-8410225524588', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/crema-p-labios-mmmuacks-frambuesa-15ml-n-a-8410225523468', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/crema-p-labios-mmmuacks-cereza-15-ml-n-a-8410225523451', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/crema-p-labios-mmuacks-tutti-frutti-15-ml-n-a-8410225523475', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/estuche-love-edt-80ml-vap-deo-150-n-a-8410225527091', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/estuches-beso-edt-100ml-vap-deo-150-n-a-8410225527114', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/estuches-gotas-edt-100ml-vap-bl-100ml-n-a-8410225527138', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/flormania-mujer-edt-100ml-vap-n-a-8410225526964', :changefreq => 'monthly', :priority => 0.8
   add '/producto/one-night-highlights-blonde-n-a-873509016854', :changefreq => 'monthly', :priority => 0.8
   add '/producto/one-night-highlights-caramel-n-a-873509016878', :changefreq => 'monthly', :priority => 0.8
   add '/producto/btg-hot-pink-mini-styler-n-a-817574011208', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bareminerals-matte-spf-15-foundation-with-rareminerals-activesoil-complex-dark-n-a-098132145355', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ck-one-unisex-edt-200-ml-n-a-088300107438', :changefreq => 'monthly', :priority => 0.8
   add '/producto/ceramic-styler-deep-purple-n-a-705105313436', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nrg-hair-dryer-giraffe-n-a-705105509464', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nrg-hair-dryer-zebra-n-a-705105408552', :changefreq => 'monthly', :priority => 0.8
   add '/producto/obliphica-oil-treatment-30cc-n-a-7362119503692', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/high-brow-glow-n-a-602004043139', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clear-brow-gel-n-a-689304055314', :changefreq => 'monthly', :priority => 0.8
   add '/producto/f-g-brow-kit-5-item-ash-blonde-n-a-689304045131', :changefreq => 'monthly', :priority => 0.8
   add '/producto/f-g-brow-kit-5-item-brunette-n-a-689304045148', :changefreq => 'monthly', :priority => 0.8
   add '/producto/f-g-brow-kit-5-item-golden-blonde-n-a-689304045155', :changefreq => 'monthly', :priority => 0.8
   add '/producto/f-g-brow-kit-5-item-medium-ash-n-a-689304045162', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/holiday-2011-badgal-eyebright-set-n-a-602004042255', :changefreq => 'monthly', :priority => 0.8
   add '/producto/f-g-brow-kit-5-item-strawburn-n-a-689304045179', :changefreq => 'monthly', :priority => 0.8
   add '/producto/f-g-lash-genius-waterproof-top-coat-n-a-689304140027', :changefreq => 'monthly', :priority => 0.8
   add '/producto/100-natural-lipgloss-cupcake-n-a-098132157792', :changefreq => 'monthly', :priority => 0.8
   add '/producto/100-natural-lipgloss-pomegranate-n-a-098132157754', :changefreq => 'monthly', :priority => 0.8
   add '/producto/100-natural-lipgloss-rose-n-a-098132157495', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/100-natural-lipgloss-iced-coffee-n-a-098132157761', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bareminerals-matte-spf-15-foundation-with-rareminerals-activesoil-complex-dark-n-a-098132145355', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-matte-spf-15-foundation-with-rareminerals-activesoil-complex-deepest-deep-n-a-098132145485', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-matte-spf-15-foundation-with-rareminerals-activesoil-complex-fair-n-a-098132145447', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-matte-spf-15-foundation-with-rareminerals-activesoil-complex-fairly-light-n-a-098132145430', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/holiday-2011-badgal-water-proof-set-n-a-602004041302', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-matte-spf-15-foundation-with-rareminerals-activesoil-complex-fairly-medium-n-a-098132143337', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-matte-spf-15-foundation-with-rareminerals-activesoil-complex-golden-dark-n-a-098132145508', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-matte-spf-15-foundation-with-rareminerals-activesoil-complex-golden-deep-n-a-098132145478', :changefreq => 'monthly', :priority => 0.8
@@ -3936,11 +3913,10 @@ SitemapGenerator::Sitemap.create do
   add '/producto/bareminerals-matte-spf-15-foundation-with-rareminerals-activesoil-complex-golden-medium-n-a-098132145393', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-matte-spf-15-foundation-with-rareminerals-activesoil-complex-golden-tan-n-a-098132143344', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-matte-spf-15-foundation-with-rareminerals-activesoil-complex-light-n-a-098132145423', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/no-zit-sherlock-oil-control-moisturizer-1-7-oz-n-a-651043023107', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/no-zit-sherlock-serum-1-0-oz-n-a-651043023121', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-matte-spf-15-foundation-with-rareminerals-activesoil-complex-medium-n-a-098132145416', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-matte-spf-15-foundation-with-rareminerals-activesoil-complex-medium-beige-n-a-098132145409', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-matte-spf-15-foundation-with-rareminerals-activesoil-complex-medium-dark-n-a-098132145348', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lee-lee-mothers-day-n-a-602004046499', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-matte-spf-15-foundation-with-rareminerals-activesoil-complex-medium-deep-n-a-098132145492', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-matte-spf-15-foundation-with-rareminerals-activesoil-complex-medium-tan-n-a-098132145386', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-matte-spf-15-foundation-with-rareminerals-activesoil-complex-tan-n-a-098132145379', :changefreq => 'monthly', :priority => 0.8
@@ -3951,6 +3927,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/bareminerals-original-spf-15-foundation-golden-fair-n-a-098132143276', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-original-spf-15-foundation-golden-medium-n-a-098132129171', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-original-spf-15-foundation-golden-tan-n-a-098132143290', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/mini-water-proof-set-n-a-602004044969', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-original-spf-15-foundation-light-n-a-098132129140', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-original-spf-15-foundation-medium-n-a-098132129157', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-original-spf-15-foundation-medium-beige-n-a-098132129164', :changefreq => 'monthly', :priority => 0.8
@@ -3958,11 +3935,10 @@ SitemapGenerator::Sitemap.create do
   add '/producto/bareminerals-original-spf-15-foundation-medium-tan-n-a-098132129188', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-original-spf-15-foundation-tan-n-a-098132129195', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-original-spf-15-foundation-warm-dark-n-a-098132143306', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/no-zit-sherlock-spot-treatment-0-5-oz-n-a-651043022735', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/fabulous-starter-set-includes-fabulous-face-wash-eye-cream-and-spf-15-face-lotion-n-a-651043069471', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bareminerals-original-spf-15-foundation-warm-tan-n-a-098132129201', :changefreq => 'monthly', :priority => 0.8
   add '/producto/mineral-veil-spf-25-mineral-veil-spf-25-n-a-098132202027', :changefreq => 'monthly', :priority => 0.8
   add '/producto/multi-tasker-dark-bisque-spf-20-n-a-098132174706', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/t-pur-non-nettoyant-125ml-n-a-3605540791776', :changefreq => 'monthly', :priority => 0.8
   add '/producto/multi-tasker-deep-bisque-spf-20-n-a-098132174713', :changefreq => 'monthly', :priority => 0.8
   add '/producto/multi-tasker-bisque-spf-20-n-a-098132174676', :changefreq => 'monthly', :priority => 0.8
   add '/producto/multi-tasker-honey-bisque-spf-20-n-a-098132100798', :changefreq => 'monthly', :priority => 0.8
@@ -3983,17 +3959,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/benetint-cheek-and-lip-palette-n-a-602004045348', :changefreq => 'monthly', :priority => 0.8
   add '/producto/blush-brush-n-a-602004039453', :changefreq => 'monthly', :priority => 0.8
   add '/producto/boost-it-eye-gel-n-a-602004038166', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bop-gloss-dandelion-n-a-602004043610', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bop-gloss-bellabamba-n-a-602004043566', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bop-gloss-coralista-n-a-602004043542', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bop-gloss-dallas-n-a-602004043580', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bop-gloss-hoola-n-a-602004010414', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bop-gloss-sugarbomb-n-a-602004043603', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/cha-cha-tint-cheeck-and-lip-palette-n-a-602004045409', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/complexion-palette-deep-n-a-602004045799', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/complexion-palette-light-n-a-602004045751', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/complexion-palette-medium-n-a-602004045775', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/fair-complexion-palette-n-a-602004045812', :changefreq => 'monthly', :priority => 0.8
   add '/producto/full-finish-lipstick-i-tink-i-love-you-n-a-602004034373', :changefreq => 'monthly', :priority => 0.8
   add '/producto/full-finish-lipstick-mod-squad-n-a-602004034311', :changefreq => 'monthly', :priority => 0.8
   add '/producto/full-finish-lipstick-oh-currant-n-a-602004034434', :changefreq => 'monthly', :priority => 0.8
@@ -4004,15 +3969,8 @@ SitemapGenerator::Sitemap.create do
   add '/producto/hello-flawless-golden-amber-n-a-602004035615', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hello-flawless-nutmeg-n-a-602004034762', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hf-liquid-f-light-3-cheers-to-me-n-a-602004042835', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/high-brow-glow-n-a-602004043139', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/holiday-2011-badgal-eyebright-set-n-a-602004042255', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/holiday-2011-badgal-water-proof-set-n-a-602004041302', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lee-lee-mothers-day-n-a-602004046499', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/mini-water-proof-set-n-a-602004044969', :changefreq => 'monthly', :priority => 0.8
   add '/producto/moisture-prep-toning-lotion-n-a-602004038142', :changefreq => 'monthly', :priority => 0.8
   add '/producto/peek-a-bright-eyes-n-a-602004046055', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/blood-orange-white-pepper-body-butter-1-7-oz-n-a-651043015607', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/blood-orange-white-pepper-soapy-suds-2-0-oz-n-a-651043015188', :changefreq => 'monthly', :priority => 0.8
   add '/producto/perk-up-complexion-corrector-n-a-602004045195', :changefreq => 'monthly', :priority => 0.8
   add '/producto/posietint-cheek-and-lip-palette-n-a-602004045362', :changefreq => 'monthly', :priority => 0.8
   add '/producto/posietint-pocketpal-n-a-602004045317', :changefreq => 'monthly', :priority => 0.8
@@ -4025,8 +3983,8 @@ SitemapGenerator::Sitemap.create do
   add '/producto/velvet-eyeshadow-i-cannes-i-will-n-a-602004431509', :changefreq => 'monthly', :priority => 0.8
   add '/producto/velvet-eyeshadow-ticled-mink-n-a-602004040428', :changefreq => 'monthly', :priority => 0.8
   add '/producto/velvet-eyeshadow-raining-men-n-a-602004040466', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/t-pur-sos-corrective-50ml-n-a-3605540792193', :changefreq => 'monthly', :priority => 0.8
   add '/producto/velvet-eyeshadow-snow-job-n-a-602004040442', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ck-shock-men-body-spray-200-ml-n-a-3607342328631', :changefreq => 'monthly', :priority => 0.8
   add '/producto/beyonce-heat-edp-100ml-n-a-3607344343892', :changefreq => 'monthly', :priority => 0.8
   add '/producto/beyonce-heat-rush-edp-100ml-n-a-3607340302565', :changefreq => 'monthly', :priority => 0.8
   add '/producto/beyonce-heat-xmas-11-set-n-a-3607340397219', :changefreq => 'monthly', :priority => 0.8
@@ -4041,12 +3999,40 @@ SitemapGenerator::Sitemap.create do
   add '/producto/parche-corp-biotherm-abdosculpt-patch-6-n-a-3605540183076', :changefreq => 'monthly', :priority => 0.8
   add '/producto/t-pur-gel-50ml-n-a-3605540792612', :changefreq => 'monthly', :priority => 0.8
   add '/producto/t-pur-non-lotion-200ml-n-a-3605540791424', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/t-pur-non-nettoyant-125ml-n-a-3605540791776', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/t-pur-sos-corrective-50ml-n-a-3605540792193', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/trat-rostro-bio-high-rech-energy-shot-n-a-3605540608746', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/tratamiento-ojos-biotherm-high-rech-eye-shot-n-a-3605540781906', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lemon-sage-soapy-suds-2-0-oz-n-a-651043015171', :changefreq => 'monthly', :priority => 0.8
   add '/producto/no-zit-sherlock-cleanser-cleanser-and-toner-4-2-oz-n-a-651043023114', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/no-zit-sherlock-oil-control-moisturizer-1-7-oz-n-a-651043023107', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/no-zit-sherlock-serum-1-0-oz-n-a-651043023121', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/no-zit-sherlock-spot-treatment-0-5-oz-n-a-651043022735', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/fabulous-starter-set-includes-fabulous-face-wash-eye-cream-and-spf-15-face-lotion-n-a-651043069471', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/blood-orange-white-pepper-body-butter-1-7-oz-n-a-651043015607', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/blood-orange-white-pepper-soapy-suds-2-0-oz-n-a-651043015188', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/giftset-ck-2pc-shock-men-edt-200-ml-n-a-3607342338852', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/fabulous-face-lotion-with-spf-15-1-7oz-n-a-651043022759', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/the-youth-as-we-know-it-starter-set-n-a-651043069457', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/blush-almond-n-a-716170059617', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/blush-cranberry-n-a-716170062174', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bronzer-blush-duo-n-a-716170100685', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/creamy-color-pink-honeyed-tea-n-a-716170103082', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/creamy-color-pink-truffle-n-a-716170103051', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/creamy-lip-color-nectar-n-a-716170053837', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/desert-twighlight-eye-palette-n-a-716170099774', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/eye-shadow-charcoal-n-a-716170058610', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/eye-shadow-cocoa-n-a-716170058627', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/eye-shadow-rich-brown-n-a-716170058603', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/eye-shadow-steel-n-a-716170058719', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/gel-eyeliner-twilight-night-n-a-716170099668', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/illuminating-bronzing-powder-bali-brown-n-a-716170071169', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lip-pencil-sandwash-tulle-n-a-716170054018', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/long-wear-cream-shadow-shore-n-a-716170080055', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/long-wear-gel-eyeliner-forest-n-a-716170072623', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/long-wear-gel-eyeliner-ivy-shimmer-n-a-716170042947', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/metallic-long-wear-cream-shadow-brown-metal-n-a-716170075549', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/metallic-long-wear-cream-shadow-moon-stone-n-a-716170079974', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/metallic-long-wear-cream-shadow-pink-oyster-n-a-716170080017', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/moist-rich-found-golden-n-a-716170023656', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/212-men-edt-100ml-asg-100ml-tb-fd12-n-a-8411061739310', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/212-vip-edp-80ml-bl-100ml-tb-md12-n-a-8411061739563', :changefreq => 'monthly', :priority => 0.8
   add '/producto/212-vip-men-edt-ns-100ml-11-n-a-8411061723760', :changefreq => 'monthly', :priority => 0.8
   add '/producto/212-vip-men-edt-ns-100ml-sg-100-tb-fd12-n-a-8411061739655', :changefreq => 'monthly', :priority => 0.8
   add '/producto/212vip-edp-ns-80-ml-10-n-a-8411061711767', :changefreq => 'monthly', :priority => 0.8
@@ -4057,7 +4043,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/cht-men-sport-edt-100ml-n-a-8411061746196', :changefreq => 'monthly', :priority => 0.8
   add '/producto/chloe-leau-edt-spray-100-ml-n-a-3607345504155', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clarisonic-plus-sonic-skin-cleansing-for-face-body-white-system-kit-n-a-183757003408', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/sonic-skin-cleansing-system-mia-zebra-n-a-183757004283', :changefreq => 'monthly', :priority => 0.8
   add '/producto/3p-facial-soap-exmild-n-a-020714050344', :changefreq => 'monthly', :priority => 0.8
   add '/producto/3p-facial-soap-mild-n-a-020714006501', :changefreq => 'monthly', :priority => 0.8
   add '/producto/3p-facial-soap-xtr-strength-n-a-020714006525', :changefreq => 'monthly', :priority => 0.8
@@ -4067,7 +4052,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/almost-powder-makeup-medium-n-a-020714369514', :changefreq => 'monthly', :priority => 0.8
   add '/producto/almost-powder-makeup-neutral-n-a-020714369507', :changefreq => 'monthly', :priority => 0.8
   add '/producto/almost-powder-makeup-neutral-fair-n-a-020714369484', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bb-cream-03-40ml-n-a-020714587635', :changefreq => 'monthly', :priority => 0.8
   add '/producto/chub-st-mois-lip-tint-bulky-blossom-n-a-020714568863', :changefreq => 'monthly', :priority => 0.8
   add '/producto/chub-st-mois-lip-tint-full-size-fuchsia-n-a-020714575731', :changefreq => 'monthly', :priority => 0.8
   add '/producto/chub-st-mois-lip-tint-hefty-hazelnut-n-a-020714568818', :changefreq => 'monthly', :priority => 0.8
@@ -4093,6 +4077,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/high-impact-extreme-volume-mascara-black-n-a-020714561475', :changefreq => 'monthly', :priority => 0.8
   add '/producto/high-impact-extreme-volume-mascara-extreme-black-n-a-020714561468', :changefreq => 'monthly', :priority => 0.8
   add '/producto/high-impact-waterproof-mascara-black-n-a-020714494940', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pc-es-chocolate-bliss-n-a-027131759423', :changefreq => 'monthly', :priority => 0.8
   add '/producto/long-last-soft-shine-lipstick-sugar-bean-n-a-020714061593', :changefreq => 'monthly', :priority => 0.8
   add '/producto/os12-happy-in-bloom-50ml-n-a-020714528805', :changefreq => 'monthly', :priority => 0.8
   add '/producto/os12-jumbo-liq-soap-iii-iv-n-a-020714322021', :changefreq => 'monthly', :priority => 0.8
@@ -4139,6 +4124,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/mascara-dior-extase-871-n-a-3348901013000', :changefreq => 'monthly', :priority => 0.8
   add '/producto/mu-xmas-lip-palette-int11-n-a-3348901007931', :changefreq => 'monthly', :priority => 0.8
   add '/producto/mu-xmas-multi-use-palette-int11-n-a-3348901007924', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pc-es-emerald-star-n-a-027131760207', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nav11-edp-100ml-min-5ml-crema-cpo-100ml-dior-jadore-n-a-3348901015011', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nav11-edt-100ml-sgel-75ml-deo50ml-dior-fahrenheit-n-a-3348901014960', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-dior-411-n-a-3348900981652', :changefreq => 'monthly', :priority => 0.8
@@ -4191,6 +4177,8 @@ SitemapGenerator::Sitemap.create do
   add '/producto/dkny-men-edt-spray-100-ml-n-a-763511101238', :changefreq => 'monthly', :priority => 0.8
   add '/producto/golden-delicious-spring-set-n-a-022548277751', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pnm-cleanser-repacked-in-a-tube-n-a-663963002339', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pc-es-french-vanilla-n-a-027131759799', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pc-es-ivory-slipper-n-a-027131759706', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bb-cream-n-a-66396308249', :changefreq => 'monthly', :priority => 0.8
   add '/producto/8-hour-hand-cream-n-a-085805126261', :changefreq => 'monthly', :priority => 0.8
   add '/producto/8-hour-skin-protectant-cream-30ml-n-a-085805126247', :changefreq => 'monthly', :priority => 0.8
@@ -4204,6 +4192,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/prevage-triple-defense-shield-spf-50-50ml-n-a-085805130992', :changefreq => 'monthly', :priority => 0.8
   add '/producto/zegna-forte-edt-100ml-n-a-022548262948', :changefreq => 'monthly', :priority => 0.8
   add '/producto/zegna-intenso-edt-100ml-n-a-022548262870', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/zegna-z-edt-100ml-n-a-022548262733', :changefreq => 'monthly', :priority => 0.8
   add '/producto/es-island-kiss-edt-vapo-100ml-n-a-737052507545', :changefreq => 'monthly', :priority => 0.8
   add '/producto/es-rock-in-rio-edt-vapo-100ml-n-a-737052508061', :changefreq => 'monthly', :priority => 0.8
   add '/producto/es-sexy-graffiti-edt-vapo-100ml-n-a-737052507811', :changefreq => 'monthly', :priority => 0.8
@@ -4215,12 +4204,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/pc-5-eyeshadow-palette-truffles-n-a-027131772750', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pc-5-eyeshadow-palette-bronzes-n-a-027131864103', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pc-5-eyeshadow-palette-the-purples-n-a-027131864141', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/pc-es-chocolate-bliss-n-a-027131759423', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/pc-es-emerald-star-n-a-027131760207', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/pc-es-french-vanilla-n-a-027131759799', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/pc-es-ivory-slipper-n-a-027131759706', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/pc-es-lavish-mink-n-a-027131759430', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/pc-es-midgnight-star-n-a-027131760191', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pc-es-palette-terracota-sands-n-a-027131933168', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pc-es-sizzling-copper-n-a-027131760115', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pc-es-sugar-cube-n-a-027131759881', :changefreq => 'monthly', :priority => 0.8
@@ -4244,6 +4227,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/sumptuous-mascara-black-n-a-027131595281', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sumptuous-two-tone-eye-oppening-mascara-n-a-027131911357', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sumptuous-wtpf-black-n-a-027131631866', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sv12-set-pleasures-n-a-27131915614', :changefreq => 'monthly', :priority => 0.8
   add '/producto/take-it-away-e-l-mu-rem-100-ml-n-a-027131350330', :changefreq => 'monthly', :priority => 0.8
   add '/producto/take-it-away-mu-remover-n-a-027131176756', :changefreq => 'monthly', :priority => 0.8
   add '/producto/take-it-away-towelettes-n-a-027131362289', :changefreq => 'monthly', :priority => 0.8
@@ -4297,8 +4281,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/daywear-15ml-n-a-027131947271', :changefreq => 'monthly', :priority => 0.8
   add '/producto/perfectly-celan-lotion-n-a-027131294610', :changefreq => 'monthly', :priority => 0.8
   add '/producto/perfectly-clean-foam-cleanser-n-a-027131292777', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/pink-shimmer-n-a-027131699040', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/pleasure-bloom-30ml-30ml-n-a-027131814856', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pleasures-crystal-100ml-tbd-n-a-027131786351', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pleasures-edp-spray-100ml-n-a-027131043317', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pleasures-edp-spray-30ml-n-a-027131043287', :changefreq => 'monthly', :priority => 0.8
@@ -4327,6 +4309,13 @@ SitemapGenerator::Sitemap.create do
   add '/producto/autobrow-pencilduo-soft-black-n-a-027131192879', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bare-skin-06-n-a-027131871408', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bare-skin-08-n-a-027131871422', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bare-skin-09-n-a-027131871439', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bare-skin-11-n-a-027131871453', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bare-skin-12-n-a-027131871460', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bare-skin-13-n-a-027131931614', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bg-body-spf-30-n-a-027131632269', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bg-face-spf-30-n-a-027131632245', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bg-selftan-lotion-face-n-a-027131632139', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bg-tinted-selftan-gel-body-n-a-027131632054', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bronze-goddess-duo-amber-n-a-027131505198', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bronze-goddess-soft-shimer-n-a-027131489238', :changefreq => 'monthly', :priority => 0.8
@@ -4373,9 +4362,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/dw-maximum-cover-creamy-30ml-n-a-027131821946', :changefreq => 'monthly', :priority => 0.8
   add '/producto/dw-maximum-cover-deep-30ml-n-a-027131821960', :changefreq => 'monthly', :priority => 0.8
   add '/producto/dw-maximum-cover-medium-30ml-n-a-027131821953', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/dw-pwdr-3w1-tawny-n-a-027131837664', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/dw-pwdr-4n1-wheat-n-a-027131837671', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/dw-pwdr-4w1-shell-beige-n-a-027131837589', :changefreq => 'monthly', :priority => 0.8
   add '/producto/dw-zero-smudge-curlin-bl-n-a-027131798507', :changefreq => 'monthly', :priority => 0.8
   add '/producto/el-sensuous-edp-100ml-n-a-027131595069', :changefreq => 'monthly', :priority => 0.8
   add '/producto/el-sensuous-edp-30ml-n-a-027131595038', :changefreq => 'monthly', :priority => 0.8
@@ -4408,6 +4394,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/ferrari-scuderia-edt-125-ml-n-a-8002135088917', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brown-sugar-edp-3-4oz-n-a-809280109874', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hesperides-rollerball-n-a-809280114595', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ysl-teint-touche-eclat-15-n-a-3365440158009', :changefreq => 'monthly', :priority => 0.8
   add '/producto/soy-face-cream-spf-n-a-809280113277', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sugar-coral-tinted-lip-treatment-n-a-809280114106', :changefreq => 'monthly', :priority => 0.8
   add '/producto/ghd-gold-professional-2-n-a-893192002484', :changefreq => 'monthly', :priority => 0.8
@@ -4499,6 +4486,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/bo-man-100ml-y-deo-stick-75ml-y-sg-50ml-n-a-737052531595', :changefreq => 'monthly', :priority => 0.8
   add '/producto/boss-bottled-200ml-ed-limitada-n-a-737052488257', :changefreq => 'monthly', :priority => 0.8
   add '/producto/boss-bottled-edtvapo-200ml-n-a-737052189765', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ysl-teint-touche-eclat-16-n-a-3365440158078', :changefreq => 'monthly', :priority => 0.8
   add '/producto/boss-bottled-sport-edt-100ml-n-a-737052529974', :changefreq => 'monthly', :priority => 0.8
   add '/producto/boss-bottlednight-edtvapo-100ml-n-a-737052352060', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bottled-edt-100ml-y-sg-150ml-n-a-737052531793', :changefreq => 'monthly', :priority => 0.8
@@ -4523,6 +4511,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/argan-brightening-bronzer-sun-spot-corrector-n-a-879634002618', :changefreq => 'monthly', :priority => 0.8
   add '/producto/argan-oil-moisturizing-stick-55oz-n-a-879634001505', :changefreq => 'monthly', :priority => 0.8
   add '/producto/juicy-couture-edp-spray-100ml-n-a-7501908347721', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/blush-subtil-peach-fever-20-n-a-3147753630201', :changefreq => 'monthly', :priority => 0.8
   add '/producto/juicy-couture-roller-ball-edp-7-4ml-n-a-7501908356730', :changefreq => 'monthly', :priority => 0.8
   add '/producto/viva-la-juicy-roller-ball-edp-7-4ml-n-a-7501908356723', :changefreq => 'monthly', :priority => 0.8
   add '/producto/perfume-justin-bieber-someday-100-ml-n-a-852539003027', :changefreq => 'monthly', :priority => 0.8
@@ -4546,12 +4535,12 @@ SitemapGenerator::Sitemap.create do
   add '/producto/lan-renegie-volumetry-anti-age-12-n-a-7509552162660', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lan-vernis-in-love-105m-n-a-3605532558493', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lan-vernis-in-love-112b-n-a-3605532576763', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/blush-subtil-peche-intense-06-n-a-3147753630065', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/blush-subtil-rose-boise-03-n-a-3147753630034', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/brillo-juicytube-14-sorbet-de-framboise-n-a-3147752770144', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/brillo-juicytube-15-sorbet-de-cerise-n-a-3147752770151', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lan-vernis-in-love-147m-n-a-3605532667744', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lan-vernis-in-love-311m-n-a-3605532558844', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/brillo-labios-lancome-juicy-tube-93-n-a-3605530317498', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/brillo-labios-lancome-juicy-tube-94-n-a-3605530317559', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/brillo-labios-lancome-juicy-tube-95-n-a-3605530317610', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/organizer-bag-n-a-3378872063797', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lan-vernis-in-love-375b-n-a-3605532558707', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lan-vernis-in-love-407n-n-a-3605532667324', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lan-vernis-in-love-441n-n-a-3605532667393', :changefreq => 'monthly', :priority => 0.8
@@ -4565,11 +4554,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/base-maquillaje-lancome-base-miracle-n-a-3605532222127', :changefreq => 'monthly', :priority => 0.8
   add '/producto/blush-subtil-brun-roche-08-n-a-3147753630089', :changefreq => 'monthly', :priority => 0.8
   add '/producto/blush-subtil-mocha-havana-25-n-a-3147753630256', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/blush-subtil-peach-fever-20-n-a-3147753630201', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/blush-subtil-peche-intense-06-n-a-3147753630065', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/blush-subtil-rose-boise-03-n-a-3147753630034', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/brillo-juicytube-14-sorbet-de-framboise-n-a-3147752770144', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/brillo-juicytube-15-sorbet-de-cerise-n-a-3147752770151', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brillo-labios-color-fever-gloss-021-n-a-3147754017643', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brillo-labios-color-fever-gloss-102-n-a-3147754017674', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brillo-labios-color-fever-gloss-208-n-a-3605530249065', :changefreq => 'monthly', :priority => 0.8
@@ -4578,6 +4562,9 @@ SitemapGenerator::Sitemap.create do
   add '/producto/brillo-labios-lancome-color-f-gloss-206-n-a-3605530249058', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brillo-labios-lancome-color-f-gloss-304-n-a-3605530249089', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brillo-labios-lancome-fever113-n-a-3605532184869', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/brillo-labios-lancome-juicy-tube-93-n-a-3605530317498', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/brillo-labios-lancome-juicy-tube-94-n-a-3605530317559', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/brillo-labios-lancome-juicy-tube-95-n-a-3605530317610', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brillo-labios-lancome-laque-fever-306-n-a-3605530595063', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brillo-labios-lancome-laque-fever-312-n-a-3605530594943', :changefreq => 'monthly', :priority => 0.8
   add '/producto/brillo-labios-lancome-laque-fever-320-n-a-3605530595186', :changefreq => 'monthly', :priority => 0.8
@@ -4765,8 +4752,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/renergie-50-ml-n-a-3147758016857', :changefreq => 'monthly', :priority => 0.8
   add '/producto/renergie-nuit-50-ml-n-a-3147758174793', :changefreq => 'monthly', :priority => 0.8
   add '/producto/renergie-yent-15-ml-n-a-3147758014198', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/sombras-lancome-ombre-absolue-quadre-g20-n-a-3605531687484', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/suero-genifique-50-ml-lancome-n-a-3605531820034', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-in-love-146b-n-a-3605532637433', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-in-love-156b-n-a-3605532637570', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-in-love-159b-n-a-3605532637501', :changefreq => 'monthly', :priority => 0.8
@@ -4775,7 +4760,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/rouge-in-love-185n-n-a-3605532637785', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-in-love-200b-n-a-3605532638065', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-in-love-230m-n-a-3605532638133', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/suero-lancome-blanc-expert-30-ml-n-a-3605532318912', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ysl-teint-touche-eclat-17-n-a-3365440158146', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-in-love-240m-n-a-3605532638270', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-in-love-277n-n-a-3605532638485', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-in-love-287n-n-a-3605532638348', :changefreq => 'monthly', :priority => 0.8
@@ -4783,8 +4768,10 @@ SitemapGenerator::Sitemap.create do
   add '/producto/rouge-in-love-300m-n-a-3605532638836', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-in-love-322m-n-a-3605532638690', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-in-love-351b-n-a-3605532638553', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sombras-lancome-ombre-absolue-quadre-g20-n-a-3605531687484', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/suero-genifique-50-ml-lancome-n-a-3605531820034', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/suero-lancome-blanc-expert-30-ml-n-a-3605532318912', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-in-love-353m-n-a-3605532638904', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/suero-lancome-genifique-n-a-3605531665383', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-in-love-377n-n-a-3605532638973', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-in-love-379n-n-a-3605532639048', :changefreq => 'monthly', :priority => 0.8
   add '/producto/rouge-in-love-381b-n-a-3605532638621', :changefreq => 'monthly', :priority => 0.8
@@ -4803,6 +4790,8 @@ SitemapGenerator::Sitemap.create do
   add '/producto/sombras-lancome-ombre-absolue-mono-a90-n-a-3605532403328', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sombras-lancome-ombre-absolue-mono-b90-n-a-3605532403380', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sombras-lancome-ombre-absolue-mono-c90-n-a-3605532403441', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/madonna-edp-75ml-n-a-3607342489356', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/suero-lancome-genifique-n-a-3605531665383', :changefreq => 'monthly', :priority => 0.8
   add '/producto/suero-lancome-primordiale-cell-suero-n-a-3605530287692', :changefreq => 'monthly', :priority => 0.8
   add '/producto/suero-lancome-rml-rare-lifter-n-a-3605531022735', :changefreq => 'monthly', :priority => 0.8
   add '/producto/suero-lancome-visionnaire-30-ml-n-a-3605531821895', :changefreq => 'monthly', :priority => 0.8
@@ -4821,6 +4810,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/teint-miracle-cpt-02-n-a-3605532562346', :changefreq => 'monthly', :priority => 0.8
   add '/producto/teint-miracle-cpt-03-n-a-3605532562414', :changefreq => 'monthly', :priority => 0.8
   add '/producto/teint-miracle-cpt-04-n-a-3605532562483', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/mb-legend-femme-edp-75ml-n-a-3386460040204', :changefreq => 'monthly', :priority => 0.8
   add '/producto/teint-miracle-cpt-45-n-a-3605532562551', :changefreq => 'monthly', :priority => 0.8
   add '/producto/tenit-miracle-cpt-05-n-a-3605532562629', :changefreq => 'monthly', :priority => 0.8
   add '/producto/tonico-clarte-tonique-douceur-400-ml-n-a-3147758030235', :changefreq => 'monthly', :priority => 0.8
@@ -4853,7 +4843,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/lolita-lempicka-femenin-edt-80-ml-n-a-3595200113515', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lolita-lempicka-masculin-edt-100-ml-n-a-3595200521013', :changefreq => 'monthly', :priority => 0.8
   add '/producto/si-lolita-edp-80-ml-n-a-3595200571032', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/madonna-edp-75ml-n-a-3607342489356', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-cream-26-violet-n-a-3548752056571', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-shadow-0e-matte-black-4g-n-a-3548752056878', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-shadow-22e-pearly-copper-4g-n-a-3548752056939', :changefreq => 'monthly', :priority => 0.8
@@ -4863,9 +4852,9 @@ SitemapGenerator::Sitemap.create do
   add '/producto/aqua-shadow-30e-pearly-pink-beige-4g-n-a-3548752056977', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-shadow-32e-pearly-white-4g-n-a-3548752056984', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-shadow-6e-matte-navy-blue-4g-n-a-3548752056908', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/nautica-aqua-rush-edt-100ml-n-a-3607346197233', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/nautica-blue-edt-spray-100ml-n-a-3412242508027', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-shadow-8e-matte-green-4g-n-a-3548752056915', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/cheap-and-chic-by-moschino-edt-100-ml-n-a-8011003061327', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/funny-edt-natural-spray-100-ml-n-a-8011003991617', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-shadow-20e-pearly-taupe-4g-n-a-3548752056922', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-cream-23-acid-green-n-a-3548752056588', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aqua-cream-24-yellow-n-a-3548752056595', :changefreq => 'monthly', :priority => 0.8
@@ -4884,10 +4873,11 @@ SitemapGenerator::Sitemap.create do
   add '/producto/michael-kors-men-edt-75ml-n-a-022548098905', :changefreq => 'monthly', :priority => 0.8
   add '/producto/individuel-edtvapo-75ml-n-a-3386460028394', :changefreq => 'monthly', :priority => 0.8
   add '/producto/mb-legend-femme-edp-30ml-n-a-3386460040228', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/mb-legend-femme-edp-75ml-n-a-3386460040204', :changefreq => 'monthly', :priority => 0.8
   add '/producto/mb-legend-men-edt-100-ml-n-a-3386460032681', :changefreq => 'monthly', :priority => 0.8
   add '/producto/montblanc-femenino-edt-spray-75-ml-n-a-3386460028356', :changefreq => 'monthly', :priority => 0.8
   add '/producto/starwalker-edtvapo-75ml-n-a-3386460028462', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/cheap-and-chic-by-moschino-edt-100-ml-n-a-8011003061327', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/funny-edt-natural-spray-100-ml-n-a-8011003991617', :changefreq => 'monthly', :priority => 0.8
   add '/producto/moschino-forever-edt-100-ml-n-a-8011003802418', :changefreq => 'monthly', :priority => 0.8
   add '/producto/toujours-glamour-edt-100ml-n-a-8011003100033', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-fish-magnt-pol-picdl-n-a-840090035199', :changefreq => 'monthly', :priority => 0.8
@@ -4896,6 +4886,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/duo-eyeshadow-marie-galante-nars-3089-n-a-607845030898', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lipstick-vendages-nars-1098-n-a-607845010982', :changefreq => 'monthly', :priority => 0.8
   add '/producto/ltl-lipgloss-born-this-way-1330-n-a-607845013303', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/nautica-discovery-spring-set-2012-n-a-7501737413109', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nail-polish-trouville-nars-1784-n-a-607845017844', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pressed-powder-eden-nars-5005n-n-a-607845050056', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pro-prime-multi-protect-primer-spf30-pa-nars-2214-n-a-607845022145', :changefreq => 'monthly', :priority => 0.8
@@ -4914,9 +4905,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/soft-touch-shadow-pencil-calabria-nars-8208-n-a-607845082088', :changefreq => 'monthly', :priority => 0.8
   add '/producto/velvet-gloss-lip-pencil-buenos-aires-nars-9108-n-a-607845091080', :changefreq => 'monthly', :priority => 0.8
   add '/producto/velvet-matte-lip-pencil-never-say-never-nars-2472-n-a-607845024729', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/nautica-aqua-rush-edt-100ml-n-a-3607346197233', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/nautica-blue-edt-spray-100ml-n-a-3412242508027', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/nautica-discovery-spring-set-2012-n-a-7501737413109', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nautica-voyage-edt-spray-100ml-n-a-031655531908', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nautica-voyage-spring-set-2012-n-a-7501737413093', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nautica-voyage-xmas-11-set-n-a-3607340462245', :changefreq => 'monthly', :priority => 0.8
@@ -4942,12 +4930,17 @@ SitemapGenerator::Sitemap.create do
   add '/producto/1m-set-father-day-edt100-sg100-n-a-3349668515189', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bxs-set-father-day-edt100-sg100-n-a-3349668515172', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lady-m-set-mother-day-edp80-bracelet-n-a-3349668515110', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/field-of-flowers-wildflowers-shower-gel-480ml-n-a-604079078207', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/hands-of-hope-1oz-30ml-n-a-604079080989', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/hands-of-hope-4-oz-118ml-n-a-604079081665', :changefreq => 'monthly', :priority => 0.8
   add '/producto/one-million-200-ml-vapo-n-a-3349668509669', :changefreq => 'monthly', :priority => 0.8
   add '/producto/giftset-ph-3pc-paris-hilton-woman-sexy-ii-edp-100-ml-n-a-608940548035', :changefreq => 'monthly', :priority => 0.8
   add '/producto/giftset-ph-3pc-passport-travel-collection-edt-30-ml-n-a-608940546147', :changefreq => 'monthly', :priority => 0.8
   add '/producto/paris-hilton-woman-edp-100-ml-n-a-608940517482', :changefreq => 'monthly', :priority => 0.8
   add '/producto/passport-paris-edt-100-ml-n-a-608940546048', :changefreq => 'monthly', :priority => 0.8
   add '/producto/passport-south-beach-edt-100-ml-n-a-608940546086', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/passport-tokyo-edt-100-ml-n-a-608940546062', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/tease-edp-100-ml-n-a-608940542309', :changefreq => 'monthly', :priority => 0.8
   add '/producto/giftset-pe-3pc-love-edp-100-ml-n-a-844061005679', :changefreq => 'monthly', :priority => 0.8
   add '/producto/giftset-pe-3pc-night-edt-100-ml-n-a-844061005143', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pe-18-men-edt-100-ml-n-a-844061001176', :changefreq => 'monthly', :priority => 0.8
@@ -4972,9 +4965,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/miracle-worker-full-size-kit-pads-mositurizer-and-includes-eye-cream-n-a-604079076500', :changefreq => 'monthly', :priority => 0.8
   add '/producto/congrats1-pc-set-field-of-flowers-gel-16oz-in-carton-n-a-604079060066', :changefreq => 'monthly', :priority => 0.8
   add '/producto/field-of-flowers-waterlily-shower-gel-480ml-n-a-604079082549', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/field-of-flowers-wildflowers-shower-gel-480ml-n-a-604079078207', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/hands-of-hope-1oz-30ml-n-a-604079080989', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/hands-of-hope-4-oz-118ml-n-a-604079081665', :changefreq => 'monthly', :priority => 0.8
   add '/producto/kiss-me-tonight-intense-lip-therapy-8-8ml-n-a-604079081801', :changefreq => 'monthly', :priority => 0.8
   add '/producto/microdelivery-triple-acid-brightening-peel-12-pads-n-a-604079086981', :changefreq => 'monthly', :priority => 0.8
   add '/producto/miracle-worker-moisturizer-beauty-size-to-go-15ml-5-oz-n-a-604079081702', :changefreq => 'monthly', :priority => 0.8
@@ -5029,27 +5019,25 @@ SitemapGenerator::Sitemap.create do
   add '/producto/rc-roberto-cavalli-edp-75ml-n-a-3607345730738', :changefreq => 'monthly', :priority => 0.8
   add '/producto/attimo-edp-kit-50ml-gel-de-bano-50ml-body-lotion-50ml-n-a-8034097952029', :changefreq => 'monthly', :priority => 0.8
   add '/producto/f-by-ferragamo-ph-black-edt-100ml-n-a-8032529118050', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/angled-tweezers-n-a-3378872053453', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/basic-eyelashes-n-a-3378872031000', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/beauty-vanity-n-a-3378872063773', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/claw-tweezers-stainless-n-a-3378872027959', :changefreq => 'monthly', :priority => 0.8
   add '/producto/f-by-ferragamo-pour-homme-edt-spray-100ml-n-a-8032529115653', :changefreq => 'monthly', :priority => 0.8
   add '/producto/f-by-homme-free-time-edt-100-ml-n-a-8034097950025', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/color-lip-last-n-09-life-in-pink-n-a-3378872065197', :changefreq => 'monthly', :priority => 0.8
   add '/producto/attimo-100-ml-edp-spray-n-a-8032529119798', :changefreq => 'monthly', :priority => 0.8
   add '/producto/attimo-edp-hombre-n-a-8034097951077', :changefreq => 'monthly', :priority => 0.8
   add '/producto/incanto-bloom-miniatures-kit-n-a-8032529119279', :changefreq => 'monthly', :priority => 0.8
   add '/producto/incanto-blooming-coffret-edt-50ml-gel-de-bano-50ml-body-lotion-50ml-n-a-8034097950636', :changefreq => 'monthly', :priority => 0.8
   add '/producto/signorina-edp-100-ml-n-a-8032529118852', :changefreq => 'monthly', :priority => 0.8
   add '/producto/2in1-extractor-n-a-3378872034728', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/angled-tweezers-n-a-3378872053453', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/basic-eyelashes-n-a-3378872031000', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/beauty-vanity-n-a-3378872063773', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/claw-tweezers-stainless-n-a-3378872027959', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/clear-brushes-set-n-a-3378872020233', :changefreq => 'monthly', :priority => 0.8
   add '/producto/color-lip-last-n-03-vintage-pink-n-a-3378872065135', :changefreq => 'monthly', :priority => 0.8
   add '/producto/color-lip-last-n-04-brown-is-back-n-a-3378872065142', :changefreq => 'monthly', :priority => 0.8
   add '/producto/color-lip-last-n-05-rose-bouquet-n-a-3378872065159', :changefreq => 'monthly', :priority => 0.8
   add '/producto/color-lip-last-n-06-blooming-rose-n-a-3378872065166', :changefreq => 'monthly', :priority => 0.8
   add '/producto/color-lip-last-n-07-natural-pink-n-a-3378872065173', :changefreq => 'monthly', :priority => 0.8
   add '/producto/color-lip-last-n-08-pink-spiration-n-a-3378872065180', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/light-veil-fndtn-tan-35-n-a-3378872047490', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/color-lip-last-n-09-life-in-pink-n-a-3378872065197', :changefreq => 'monthly', :priority => 0.8
   add '/producto/color-lip-last-n-10-psychedelic-pink-n-a-3378872065203', :changefreq => 'monthly', :priority => 0.8
   add '/producto/color-lip-last-n-11-forever-fuchsia-n-a-3378872065210', :changefreq => 'monthly', :priority => 0.8
   add '/producto/color-lip-last-n-12-royal-raspberry-n-a-3378872065227', :changefreq => 'monthly', :priority => 0.8
@@ -5082,16 +5070,17 @@ SitemapGenerator::Sitemap.create do
   add '/producto/hydrat-bright-fdt-30-n-a-3378872063421', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hydrat-bright-fdt-33-n-a-3378872063438', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hydrat-bright-fdt-35-n-a-3378872063445', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/individual-eyelashes-n-a-3378872031017', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/instant-wrinkle-filler-n-a-3378872062868', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/large-facial-brush-n-a-7213526', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/large-metal-traincase-n-a-0000009034464', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lash-amplifier-11-n-a-3378872056768', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/light-up-tweezer-n-a-3378872062752', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/light-veil-fndtn-deep-50-n-a-3378872047506', :changefreq => 'monthly', :priority => 0.8
   add '/producto/light-veil-fndtn-light-21-n-a-3378872047469', :changefreq => 'monthly', :priority => 0.8
   add '/producto/light-veil-fndtn-medium-25-n-a-3378872047476', :changefreq => 'monthly', :priority => 0.8
   add '/producto/light-veil-fndtn-medium-30-n-a-3378872047483', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/light-veil-fndtn-tan-35-n-a-3378872047490', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/light-veil-fndtn-light-20-n-a-3378872047452', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/makeup-vanity-n-a-3378872063803', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/mini-bag-palette-n-a-3378872059448', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/nail-clipper-small-n-a-3378872051572', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/nail-files-x2-n-a-3378872028130', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/nail-kit-n-a-3378872051732', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/organizer-bag-n-a-3378872063797', :changefreq => 'monthly', :priority => 0.8
   add '/producto/post-holiday-medium-bag-52-shades-120-value-n-a-3378872058854', :changefreq => 'monthly', :priority => 0.8
   add '/producto/outrageous-volume-mascara-ultra-black-n-a-3378872059882', :changefreq => 'monthly', :priority => 0.8
   add '/producto/p-l-ll-liq-e-l-turq-n-a-3378872060062', :changefreq => 'monthly', :priority => 0.8
@@ -5116,13 +5105,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/estuches-skr-floral-edt-ns-80ml-deluxe-n-a-8411061749128', :changefreq => 'monthly', :priority => 0.8
   add '/producto/dreaming-edp-100ml-n-a-022548145821', :changefreq => 'monthly', :priority => 0.8
   add '/producto/loud-for-her-edt-75ml-n-a-022548223031', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/loud-for-him-edt-75ml-n-a-022548223109', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/os12-tg-summer-100ml-n-a-022548238752', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/os12-th-summer-100ml-n-a-022548238738', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/tg-cologne-spray-100-ml-n-a-022548040126', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/tg-eau-de-prep-100ml-n-a-022548252383', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/th-cologne-spray-100-ml-n-a-022548024324', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/th-eau-de-prep-100ml-n-a-022548252352', :changefreq => 'monthly', :priority => 0.8
   add '/producto/th-hilfiger-men-edt-spray-100-ml-n-a-022548178515', :changefreq => 'monthly', :priority => 0.8
   add '/producto/tommy-girl-holiday-set-n-a-022548260609', :changefreq => 'monthly', :priority => 0.8
   add '/producto/tommy-hilfiger-holiday-set-n-a-022548260616', :changefreq => 'monthly', :priority => 0.8
@@ -5134,7 +5116,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/tf-polvo-chocolate-soleil-10gr-polvo-compacto-bronceador-n-a-651986700882', :changefreq => 'monthly', :priority => 0.8
   add '/producto/tf-primed-poleless-pure-28gr-primer-para-rostro-n-a-651986700875', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lima-pies-almas-gemelas-n-a-038097003765', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/chopper-n-a-604214383203', :changefreq => 'monthly', :priority => 0.8
   add '/producto/mini-kit-de-manicure-n-a-038097000887', :changefreq => 'monthly', :priority => 0.8
   add '/producto/mini-limas-puntos-amarillo-verde-n-a-038097004144', :changefreq => 'monthly', :priority => 0.8
   add '/producto/mini-limas-puntos-roja-amarillo-n-a-038097004137', :changefreq => 'monthly', :priority => 0.8
@@ -5193,12 +5174,19 @@ SitemapGenerator::Sitemap.create do
   add '/producto/blackout-n-a-604214381704', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bordello-n-a-604214386501', :changefreq => 'monthly', :priority => 0.8
   add '/producto/buck-n-a-604214382206', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/build-your-own-palette-6-pan-n-a-604214455900', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bust-n-a-604214384309', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/chopper-n-a-604214383203', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/cobra-n-a-604214383609', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/darkhorse-n-a-604214385801', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/evidence-n-a-604214387409', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/fishnet-n-a-604214386600', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/flash-n-a-604214388703', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/foxy-n-a-604214382008', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/freelove-n-a-604214385504', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/gravity-n-a-604214388802', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/gunmetal-n-a-604214383401', :changefreq => 'monthly', :priority => 0.8
   add '/producto/half-baked-n-a-604214384606', :changefreq => 'monthly', :priority => 0.8
   add '/producto/hijack-n-a-604214387904', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/jet-set-24-7-set-oil-slick-rockstar-n-a-604214915442', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/jet-set-24-7-set-stash-bourbon-n-a-604214915459', :changefreq => 'monthly', :priority => 0.8
   add '/producto/kush-n-a-604214387201', :changefreq => 'monthly', :priority => 0.8
   add '/producto/last-call-n-a-604214388406', :changefreq => 'monthly', :priority => 0.8
   add '/producto/loaded-n-a-604214387102', :changefreq => 'monthly', :priority => 0.8
@@ -5233,6 +5221,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/virgin-n-a-604214384200', :changefreq => 'monthly', :priority => 0.8
   add '/producto/woodstock-n-a-604214386808', :changefreq => 'monthly', :priority => 0.8
   add '/producto/ydk-n-a-604214385108', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/labial-08-ysl-rouge-pur-couture-belle-ro-n-a-3365440595958', :changefreq => 'monthly', :priority => 0.8
   add '/producto/valentina-edp-ns-80ml-n-a-8411061725931', :changefreq => 'monthly', :priority => 0.8
   add '/producto/naughty-alice-edp-75-ml-n-a-3414200513029', :changefreq => 'monthly', :priority => 0.8
   add '/producto/ysl-pure-metal-eye-08-light-sand-whitesand-medium-sand-sparkling-black-sand-n-a-3365440182721', :changefreq => 'monthly', :priority => 0.8
@@ -5260,7 +5249,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/labial-04-ysl-rouge-pur-couture-rouge-v-n-a-3365440595712', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-05-ysl-rouge-volupte-n-a-3365440353268', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-07-ysl-rouge-pur-couture-le-fuchs-n-a-3365440595910', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/labial-08-ysl-rouge-pur-couture-belle-ro-n-a-3365440595958', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-09-ysl-rouge-pur-couture-rose-sti-n-a-3365440596030', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-10-ysl-rouge-pur-couture-beige-tr-n-a-3365440596078', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-12-ysl-rouge-pur-couture-blanc-ma-n-a-3365440596191', :changefreq => 'monthly', :priority => 0.8
@@ -5330,23 +5318,15 @@ SitemapGenerator::Sitemap.create do
   add '/producto/ysl-teint-touche-eclat-10-n-a-3365440157651', :changefreq => 'monthly', :priority => 0.8
   add '/producto/ysl-teint-touche-eclat-11-n-a-3365440157729', :changefreq => 'monthly', :priority => 0.8
   add '/producto/ysl-teint-touche-eclat-12-n-a-3365440157798', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ysl-teint-touche-eclat-13-n-a-3365440157866', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ysl-teint-touche-eclat-14-n-a-3365440157934', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ysl-teint-touche-eclat-15-n-a-3365440158009', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ysl-teint-touche-eclat-16-n-a-3365440158078', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/ysl-teint-touche-eclat-17-n-a-3365440158146', :changefreq => 'monthly', :priority => 0.8
   add '/producto/ysl-teint-touche-eclat-18-n-a-3365440158214', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aura-edp-75-ml-refillable-3439609000314', :changefreq => 'monthly', :priority => 0.8
   add '/producto/aura-crystal-lipstick-3439609101714', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/nourising-body-butter-chocolate-3378872060888', :changefreq => 'monthly', :priority => 0.8
   add '/producto/tweezer-harajuku-lovers-38097005189', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/vice-palette-604214627000', :changefreq => 'monthly', :priority => 0.8
   add '/producto/marchesa-rollerball-parfum-d-extase-0-34-oz-818015010026', :changefreq => 'monthly', :priority => 0.8
   add '/producto/signorina-rollon-edp-7-ml-8034097953880', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bath-and-shower-gel-lemon-verbena-3378872060840', :changefreq => 'monthly', :priority => 0.8
   add '/producto/she-s-so-jetset-1457571-602004046079', :changefreq => 'monthly', :priority => 0.8
   add '/producto/high-flyin-glosses-1457530-602004048899', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/nourising-body-butter-monoi-3378872060901', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/nourising-body-butter-orange-blossom-3378872060925', :changefreq => 'monthly', :priority => 0.8
   add '/producto/attimo-l-eau-florale-edt-90-ml-8034097951008', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bath-and-shower-gel-cotton-flower-3378872060710', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bath-and-shower-gel-vanilla-3378872060734', :changefreq => 'monthly', :priority => 0.8
@@ -5357,10 +5337,12 @@ SitemapGenerator::Sitemap.create do
   add '/producto/bath-and-shower-gel-blueberry-3378872060819', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bath-and-shower-gel-lagoon-3378872060826', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bath-and-shower-gel-green-tea-3378872060833', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bath-and-shower-gel-lemon-verbena-3378872060840', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/creamy-body-wash-chocolate-3378872061441', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nourishing-body-butter-cotton-flower-3378872060857', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nourising-body-butter-vanilla-3378872060871', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/creamy-body-wash-green-tea-3378872061533', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/nourising-body-butter-chocolate-3378872060888', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/nourising-body-butter-monoi-3378872060901', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/nourising-body-butter-orange-blossom-3378872060925', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nourising-body-butter-peony-3378872060949', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nourising-body-butter-blueberry-3378872060956', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nourising-body-butter-lagoon-3378872060963', :changefreq => 'monthly', :priority => 0.8
@@ -5378,13 +5360,12 @@ SitemapGenerator::Sitemap.create do
   add '/producto/bath-pearls-stars-blueberry-3378872061403', :changefreq => 'monthly', :priority => 0.8
   add '/producto/creamy-body-wash-cotton-flower-3378872061410', :changefreq => 'monthly', :priority => 0.8
   add '/producto/creamy-body-wash-vanilla-3378872061434', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/creamy-body-wash-chocolate-3378872061441', :changefreq => 'monthly', :priority => 0.8
   add '/producto/creamy-body-wash-monoi-3378872061465', :changefreq => 'monthly', :priority => 0.8
   add '/producto/creamy-body-wash-orange-blossom-3378872061489', :changefreq => 'monthly', :priority => 0.8
   add '/producto/creamy-body-wash-peony-3378872061502', :changefreq => 'monthly', :priority => 0.8
   add '/producto/creamy-body-wash-blueberry-3378872061519', :changefreq => 'monthly', :priority => 0.8
   add '/producto/creamy-body-wash-lagoon-3378872061526', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/sephora-tint-and-primer-minis-602004048820', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/creamy-body-wash-green-tea-3378872061533', :changefreq => 'monthly', :priority => 0.8
   add '/producto/creamy-body-wash-lemon-verbena-3378872061540', :changefreq => 'monthly', :priority => 0.8
   add '/producto/fizzing-cube-cotton-flower-3378872061557', :changefreq => 'monthly', :priority => 0.8
   add '/producto/fizzing-cube-vanilla-3378872061571', :changefreq => 'monthly', :priority => 0.8
@@ -5401,7 +5382,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/body-scrub-chocolate-3378872061731', :changefreq => 'monthly', :priority => 0.8
   add '/producto/body-scrub-monoi-3378872061755', :changefreq => 'monthly', :priority => 0.8
   add '/producto/body-scrub-orange-blossom-3378872061779', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/body-lotion-lagoon-190-ml-3378872066286', :changefreq => 'monthly', :priority => 0.8
   add '/producto/body-scrub-peony-3378872061793', :changefreq => 'monthly', :priority => 0.8
   add '/producto/body-scrub-lagoon-3378872061816', :changefreq => 'monthly', :priority => 0.8
   add '/producto/body-scrub-green-tea-3378872061823', :changefreq => 'monthly', :priority => 0.8
@@ -5410,6 +5390,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/bath-flower-green-3378872065494', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bath-flower-blue-3378872065517', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bath-flower-blackj-3378872065524', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/body-lotion-vanilla-190-ml-3378872066194', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bath-flower-with-3378872065548', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bath-flower-yellow-3378872065562', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bath-flower-red-3378872065586', :changefreq => 'monthly', :priority => 0.8
@@ -5427,13 +5408,12 @@ SitemapGenerator::Sitemap.create do
   add '/producto/body-lotion-lemon-verbena-190-ml-3378872065791', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bath-flower-pink-3378872065807', :changefreq => 'monthly', :priority => 0.8
   add '/producto/body-lotion-cotton-flower-190-ml-3378872066170', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/body-lotion-vanilla-190-ml-3378872066194', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/labial-rouge-dior-nude-319-3348901108898', :changefreq => 'monthly', :priority => 0.8
   add '/producto/body-lotion-chocolate-190-ml-3378872066200', :changefreq => 'monthly', :priority => 0.8
   add '/producto/body-lotion-orange-blossom-190-ml-3378872066248', :changefreq => 'monthly', :priority => 0.8
   add '/producto/body-lotion-peony-190-ml-3378872066262', :changefreq => 'monthly', :priority => 0.8
   add '/producto/body-lotion-blueberry-190-ml-3378872066279', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/cr-mini-fragrance-set-602004046970', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bob-uk-602004047137', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/body-lotion-lagoon-190-ml-3378872066286', :changefreq => 'monthly', :priority => 0.8
   add '/producto/body-lotion-green-tea-190-ml-3378872066293', :changefreq => 'monthly', :priority => 0.8
   add '/producto/body-lotion-lemon-verbena-190-ml-3378872066309', :changefreq => 'monthly', :priority => 0.8
   add '/producto/eau-de-toilette-7-ml-cotton-flower-3378872061984', :changefreq => 'monthly', :priority => 0.8
@@ -5457,6 +5437,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/round-the-clock-eyeliner-11pm-charcoal-98132238347', :changefreq => 'monthly', :priority => 0.8
   add '/producto/round-the-clock-eyeliner-8pm-black-coffee-98132238361', :changefreq => 'monthly', :priority => 0.8
   add '/producto/round-the-clock-eyeliner-9pm-choc-suede-98132238385', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/labial-rouge-dior-nude-553-3348901108904', :changefreq => 'monthly', :priority => 0.8
   add '/producto/round-the-clock-eyeliner-noon-deep-navy-98132245901', :changefreq => 'monthly', :priority => 0.8
   add '/producto/round-the-clock-eyeliner-5pm-deep-plum-98132245925', :changefreq => 'monthly', :priority => 0.8
   add '/producto/moxie-lipgloss-dare-devil-98132248698', :changefreq => 'monthly', :priority => 0.8
@@ -5473,6 +5454,9 @@ SitemapGenerator::Sitemap.create do
   add '/producto/bebe-gold-spray-15ml-85715135193', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sephora-big-10-602004046048', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bob-macys-602004046802', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/cr-mini-fragrance-set-602004046970', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bob-uk-602004047137', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sephora-tint-and-primer-minis-602004048820', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bio-homme-high-recharge-starter-kit-7509552330663', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bio-homme-aquapower-starter-kit-7509552330670', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bb-cream-spf-35-light-716170087061', :changefreq => 'monthly', :priority => 0.8
@@ -5542,6 +5526,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/pore-correcting-serum-50ml-20714579296', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pore-refining-solutio-vanilla-20714591083', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pore-refining-solutio-beige-20714591090', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/labial-rouge-dior-nude-779-3348901108911', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pore-refining-solutio-sand-20714591137', :changefreq => 'monthly', :priority => 0.8
   add '/producto/fresh-bloom-peony-blend-20714609047', :changefreq => 'monthly', :priority => 0.8
   add '/producto/fresh-bloom-almond-bloss-20714609054', :changefreq => 'monthly', :priority => 0.8
@@ -5578,9 +5563,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/labial-rouge-dior-nude-418-3348901108867', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-rouge-dior-nude-683-3348901108874', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-rouge-dior-nude-618-3348901108881', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/labial-rouge-dior-nude-319-3348901108898', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/labial-rouge-dior-nude-553-3348901108904', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/labial-rouge-dior-nude-779-3348901108911', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-rouge-dior-nude-663-3348901108928', :changefreq => 'monthly', :priority => 0.8
   add '/producto/labial-rouge-dior-nude-459-3348901108935', :changefreq => 'monthly', :priority => 0.8
   add '/producto/esmalte-buzz-rouge-dior-vernis-981-3348901110273', :changefreq => 'monthly', :priority => 0.8
@@ -5665,7 +5647,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/nail-stickers-400014166509', :changefreq => 'monthly', :priority => 0.8
   add '/producto/say-hello-palette-animal-print-1-400014236073', :changefreq => 'monthly', :priority => 0.8
   add '/producto/say-hello-palette-animal-print-2-400014236158', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lan-ombre-hyp-sparkles-304-3605532677446', :changefreq => 'monthly', :priority => 0.8
   add '/producto/apple-balm-stocking-stuffer-mistletoe-red-400014236318', :changefreq => 'monthly', :priority => 0.8
   add '/producto/apple-balm-stocking-stuffer-tinsel-gold-400014236493', :changefreq => 'monthly', :priority => 0.8
   add '/producto/big-head-tin-animal-print-deco-12-shadows-and-a-compact-mirror-400014293649', :changefreq => 'monthly', :priority => 0.8
@@ -5712,6 +5693,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/concealer-relaunch-light-18-ref-mufe-5-400013987679', :changefreq => 'monthly', :priority => 0.8
   add '/producto/foundation-dark-62-golden-400013987839', :changefreq => 'monthly', :priority => 0.8
   add '/producto/foundation-dark-66-caramel-400013988096', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lan-ombre-hyp-mat-300-3605532681085', :changefreq => 'monthly', :priority => 0.8
   add '/producto/foundation-light-42-alabaster-400013988171', :changefreq => 'monthly', :priority => 0.8
   add '/producto/foundation-dark-64-honey-400013988256', :changefreq => 'monthly', :priority => 0.8
   add '/producto/foundation-medium-56-neutral-400013988331', :changefreq => 'monthly', :priority => 0.8
@@ -5738,6 +5720,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/lan-ombre-hyp-sparkles-100-3605532676951', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lan-ombre-hyp-sparkles-103-3605532677026', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lan-ombre-hyp-sparkles-110-3605532677095', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lan-ombre-hyp-sparkles-304-3605532677446', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lan-ombre-hyp-sparkles-303-3605532677514', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lan-ombre-hyp-sparkles-310-3605532677583', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lan-ombre-hyp-pearly-205-3605532678771', :changefreq => 'monthly', :priority => 0.8
@@ -5751,7 +5734,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/lan-ombre-hyp-mat-104-3605532680736', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lan-ombre-hyp-mat-203-3605532680873', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lan-ombre-hyp-mat-204-3605532680941', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lan-ombre-hyp-mat-300-3605532681085', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lan-ombre-hyp-mat-305-3605532681153', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lan-plumer-liner-300-3605532693682', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lan-le-crayon-sourcils-020-3605532694030', :changefreq => 'monthly', :priority => 0.8
@@ -5832,6 +5814,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/burlington-arcade-nail-jewelery-840090034758', :changefreq => 'monthly', :priority => 0.8
   add '/producto/piccadilly-arcade-nail-jewelery-840090034765', :changefreq => 'monthly', :priority => 0.8
   add '/producto/princes-arcade-nail-jewelery-840090034772', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/opi-have-you-met-rose-ma-619828032812', :changefreq => 'monthly', :priority => 0.8
   add '/producto/royal-arcade-nail-jewelery-840090034789', :changefreq => 'monthly', :priority => 0.8
   add '/producto/spitafields-green-fishnet-magnet-840090035212', :changefreq => 'monthly', :priority => 0.8
   add '/producto/stratford-bronze-mirror-metallic-840090035229', :changefreq => 'monthly', :priority => 0.8
@@ -5856,11 +5839,9 @@ SitemapGenerator::Sitemap.create do
   add '/producto/multiple-undress-me-607845015239', :changefreq => 'monthly', :priority => 0.8
   add '/producto/duo-eyeshadow-vent-glace-607845030881', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pure-matte-lipstick-amsterdam-607845035152', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/walk-on-the-wild-gift-set-607845037736', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/opi-your-a-nut-meg-619828032775', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/kiss-gift-set-607845037859', :changefreq => 'monthly', :priority => 0.8
   add '/producto/blush-outlaw-607845040187', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bronzing-powder-laguna-nars-5101-607845051015', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/opi-i-think-i-cayenne-619828032805', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bronzing-powder-casino-nars-5102-607845051022', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bronzing-powder-irresistiblement-nars-5103-607845051039', :changefreq => 'monthly', :priority => 0.8
   add '/producto/highlighting-blush-satellite-of-love-607845051343', :changefreq => 'monthly', :priority => 0.8
@@ -5875,19 +5856,12 @@ SitemapGenerator::Sitemap.create do
   add '/producto/soft-touch-shadow-pencil-heat-607845082132', :changefreq => 'monthly', :priority => 0.8
   add '/producto/velvet-gloss-lip-pencil-more-607845091097', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lipstick-autumn-leaves-607845093008', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/foreplay-palette-exclusive-fa12-sephora-607845099680', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/trio-eyeshadow-high-society-limited-edition-607845099697', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/debbie-harry-eye-cheek-palette-607845099727', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/aw-12-flower-palette-1-607845099758', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/aw-12-flower-palette-2-607845099802', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/aw-12-flower-palette-3-607845099819', :changefreq => 'monthly', :priority => 0.8
   add '/producto/nina-elixir-xmas-set-edp80-bc200-2012-3137370309819', :changefreq => 'monthly', :priority => 0.8
   add '/producto/celebrate-the-truth-holiday-kit-687795685010', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sheer-transformation-1-7-oz-50-g-687795765019', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/opi-your-a-nut-meg-619828032775', :changefreq => 'monthly', :priority => 0.8
   add '/producto/opi-thyme-for-a-mani-619828032782', :changefreq => 'monthly', :priority => 0.8
   add '/producto/opi-s-age-is-just-a-numbe-619828032799', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/opi-i-think-i-cayenne-619828032805', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/opi-have-you-met-rose-ma-619828032812', :changefreq => 'monthly', :priority => 0.8
   add '/producto/opi-living-in-cin-namon-619828032829', :changefreq => 'monthly', :priority => 0.8
   add '/producto/opi-just-a-pinch-of-glit-619828032836', :changefreq => 'monthly', :priority => 0.8
   add '/producto/opi-spice-market-4pc-619828032843', :changefreq => 'monthly', :priority => 0.8
@@ -5932,7 +5906,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/lady-m-set-xmas-day-edp80-bl100-3349668515356', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lady-m-edt-80ml-3349668517565', :changefreq => 'monthly', :priority => 0.8
   add '/producto/giftset-pe-4pc-18-sensual-edp-100-ml-844061005280', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/laser-free-resurfacer-670367012703', :changefreq => 'monthly', :priority => 0.8
   add '/producto/clini-matte-all-day-oil-control-spf-20-670367519011', :changefreq => 'monthly', :priority => 0.8
   add '/producto/the-micro-delivery-peel-kit-604079020107', :changefreq => 'monthly', :priority => 0.8
   add '/producto/help-me-604079020244', :changefreq => 'monthly', :priority => 0.8
@@ -5993,7 +5966,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/pro-bronzer-48-3378872067191', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pro-angled-blush-49-3378872067207', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pro-precision-blush-73-3378872067221', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/bewitching-eye-kit-h12-3378872070016', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pro-airbrush-concealer-57-3378872067245', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pro-precision-concealer-45-3378872067252', :changefreq => 'monthly', :priority => 0.8
   add '/producto/pro-kabuki-43-3378872067269', :changefreq => 'monthly', :priority => 0.8
@@ -6028,12 +6000,15 @@ SitemapGenerator::Sitemap.create do
   add '/producto/glitter-spray-gold-h12-3378872069102', :changefreq => 'monthly', :priority => 0.8
   add '/producto/glitter-spray-silver-h12-3378872069119', :changefreq => 'monthly', :priority => 0.8
   add '/producto/cute-gloss-for-btg-h12-3378872069126', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bewitching-eye-kit-h12-3378872070016', :changefreq => 'monthly', :priority => 0.8
   add '/producto/jumbo-color-wand-for-btg-nude-h12-3378872071235', :changefreq => 'monthly', :priority => 0.8
   add '/producto/fs-lx-total-regenerating-cream-729238102262', :changefreq => 'monthly', :priority => 0.8
   add '/producto/fs-lx-eye-and-lip-contour-regenerating-cream-729238102682', :changefreq => 'monthly', :priority => 0.8
   add '/producto/fs-lx-ultimate-regenerating-serum-729238102743', :changefreq => 'monthly', :priority => 0.8
   add '/producto/swl-anti-dark-circles-eye-cream-729238103665', :changefreq => 'monthly', :priority => 0.8
   add '/producto/swl-brightening-cleansing-foam-w-125ml-729238103900', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/new-stay-all-day-liquid-lipstick-fiore-94800341760', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/new-stay-all-day-liquid-lipstick-fiery-94800341777', :changefreq => 'monthly', :priority => 0.8
   add '/producto/swl-brightening-balancing-softener-enriched-w-150ml-729238103924', :changefreq => 'monthly', :priority => 0.8
   add '/producto/swl-brightening-moisturizing-emulsion-w-75ml-729238103962', :changefreq => 'monthly', :priority => 0.8
   add '/producto/swl-brightening-moisturizing-cream-w-50ml-729238103979', :changefreq => 'monthly', :priority => 0.8
@@ -6043,6 +6018,7 @@ SitemapGenerator::Sitemap.create do
   add '/producto/sun-ultimate-cleansing-oil-729238125582', :changefreq => 'monthly', :priority => 0.8
   add '/producto/spn-refreshing-cleansing-sheets-oil-free-alcohol-free-623827-729238167032', :changefreq => 'monthly', :priority => 0.8
   add '/producto/spn-oil-control-blotting-paper-622613-729238167124', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/new-stay-all-day-liquid-lipstick-tesoro-94800341784', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sbn-pure-retinol-instant-treatment-eye-mask-729238191020', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sbn-pure-retinol-intensive-revitalizing-face-mask-729238191075', :changefreq => 'monthly', :priority => 0.8
   add '/producto/smk-eyelash-curler-729238500969', :changefreq => 'monthly', :priority => 0.8
@@ -6051,11 +6027,16 @@ SitemapGenerator::Sitemap.create do
   add '/producto/fs-lx-extra-rich-cleansing-foam-1259506-730852102231', :changefreq => 'monthly', :priority => 0.8
   add '/producto/fs-lx-concentrated-balancing-softener-1259514-730852102248', :changefreq => 'monthly', :priority => 0.8
   add '/producto/fs-lx-daytime-protective-cream-spf15-1259571-730852102255', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sun-ultimate-sun-prot-lotion-spf50-730852105133', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lip-glaze-trio-tiki-94800341883', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sbn-extra-creamy-cleansing-foam-125ml-730852103016', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sbn-wr24-balancing-softener-enriched-150ml-730852103030', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sbn-wr24-day-emulsion-spf-15-75ml-1316298-730852103061', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sbn-wr24-day-cream-spf-15-50ml-730852103078', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sbn-wr24-night-emulsion-75ml-730852103085', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sun-extra-smooth-sun-protection-lotion-n-spf-38-730852126053', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/new-stay-all-day-liquid-lipstick-dolce-94800341791', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/new-stay-all-day-liquid-lipstick-amore-94800341807', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sbn-wr24-night-cream-50ml-730852103092', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sbn-wr24-intensive-eye-contour-cream-730852103153', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bop-advance-super-revitalizing-cream-50ml-730852103207', :changefreq => 'monthly', :priority => 0.8
@@ -6065,7 +6046,8 @@ SitemapGenerator::Sitemap.create do
   add '/producto/swl-brightening-protective-emulsion-w-spf15-pa-75ml-730852103931', :changefreq => 'monthly', :priority => 0.8
   add '/producto/swl-brightening-protective-cream-w-spf-15-pa-50ml-730852103948', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sun-urban-environment-oil-free-uv-prot-spf42-730852105126', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/sun-ultimate-sun-prot-lotion-spf50-730852105133', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/all-over-shimmer-liquid-luminizer-kitten-shimmer-sephora-exclusive-shade-94800341548', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/stay-all-day-liquid-lipstick-fiery-94800341616', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sun-urban-environment-uv-prot-crm-spf40-730852105140', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sun-ultimate-sun-prot-crm-n-spf50-730852105157', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bop-white-adv-super-revitalizing-whitening-formula-730852112964', :changefreq => 'monthly', :priority => 0.8
@@ -6075,7 +6057,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/sun-protection-compact-foundation-refill-sp-60-730852125650', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sun-protection-compact-foundation-refill-sp-70-730852125667', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sun-protection-compact-foundation-case-730852125704', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/sun-extra-smooth-sun-protection-lotion-n-spf-38-730852126053', :changefreq => 'monthly', :priority => 0.8
   add '/producto/spn-deep-cleansing-foam-730852167056', :changefreq => 'monthly', :priority => 0.8
   add '/producto/spn-balancing-softener-alcohol-free-730852167063', :changefreq => 'monthly', :priority => 0.8
   add '/producto/spn-matifying-moisturizer-oil-free-730852167087', :changefreq => 'monthly', :priority => 0.8
@@ -6088,6 +6069,9 @@ SitemapGenerator::Sitemap.create do
   add '/producto/sts-day-moisturizer-protection-enriched-spf15-730852530690', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sts-night-moisture-recharge-730852530713', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sts-night-moisture-recharge-enriched-730852530720', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/new-stay-all-day-liquid-lipstick-beso-94800341623', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/new-stay-all-day-liquid-lipstick-petina-94800341630', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/new-stay-all-day-liquid-lipstick-carina-94800341753', :changefreq => 'monthly', :priority => 0.8
   add '/producto/sts-eye-moisture-recharge-730852530737', :changefreq => 'monthly', :priority => 0.8
   add '/producto/swl-intensive-spot-targeting-serum-15ml-730852905399', :changefreq => 'monthly', :priority => 0.8
   add '/producto/bop-advanced-super-restoring-cream-768614103707', :changefreq => 'monthly', :priority => 0.8
@@ -6113,17 +6097,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/stay-all-day-hd-beauty-balm-10-in-1-94800341050', :changefreq => 'monthly', :priority => 0.8
   add '/producto/all-over-shimmer-liquid-luminizer-bronze-shimmer-94800341524', :changefreq => 'monthly', :priority => 0.8
   add '/producto/all-over-shimmer-liquid-luminizer-rose-gold-shimmer-94800341531', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/all-over-shimmer-liquid-luminizer-kitten-shimmer-sephora-exclusive-shade-94800341548', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/stay-all-day-liquid-lipstick-fiery-94800341616', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/new-stay-all-day-liquid-lipstick-beso-94800341623', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/new-stay-all-day-liquid-lipstick-petina-94800341630', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/new-stay-all-day-liquid-lipstick-carina-94800341753', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/new-stay-all-day-liquid-lipstick-fiore-94800341760', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/new-stay-all-day-liquid-lipstick-fiery-94800341777', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/new-stay-all-day-liquid-lipstick-tesoro-94800341784', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/new-stay-all-day-liquid-lipstick-dolce-94800341791', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/new-stay-all-day-liquid-lipstick-amore-94800341807', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/lip-glaze-trio-tiki-94800341883', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-glaze-trio-harvest-94800342101', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-glaze-trio-foliage-94800342118', :changefreq => 'monthly', :priority => 0.8
   add '/producto/new-stay-all-day-foundation-and-concealer-light-3-94800342187', :changefreq => 'monthly', :priority => 0.8
@@ -6155,7 +6128,6 @@ SitemapGenerator::Sitemap.create do
   add '/producto/mini-pinza-chevron-verde-38097911749', :changefreq => 'monthly', :priority => 0.8
   add '/producto/smoked-eyeshadow-palette-604214397804', :changefreq => 'monthly', :priority => 0.8
   add '/producto/good-karma-optical-blurring-brush-604214457300', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/smoked-24-7-glide-on-pencil-set-604214458307', :changefreq => 'monthly', :priority => 0.8
   add '/producto/super-saturated-lip-color-naked-604214458505', :changefreq => 'monthly', :priority => 0.8
   add '/producto/build-your-own-palette-breathless-604214459304', :changefreq => 'monthly', :priority => 0.8
   add '/producto/naked-weightless-ultra-definition-liquid-makeup-1-0-604214658004', :changefreq => 'monthly', :priority => 0.8
@@ -6167,13 +6139,13 @@ SitemapGenerator::Sitemap.create do
   add '/producto/naked-weightless-ultra-definition-liquid-makeup-5-0-604214658608', :changefreq => 'monthly', :priority => 0.8
   add '/producto/naked-weightless-ultra-definition-liquid-makeup-5-5-604214658707', :changefreq => 'monthly', :priority => 0.8
   add '/producto/naked-weightless-ultra-definition-liquid-makeup-6-0-604214658806', :changefreq => 'monthly', :priority => 0.8
-  add '/producto/naked-weightless-ultra-definition-liquid-makeup-6-5-604214658905', :changefreq => 'monthly', :priority => 0.8
   add '/producto/naked-weightless-ultra-definition-liquid-makeup-7-0-604214659001', :changefreq => 'monthly', :priority => 0.8
   add '/producto/naked-weightless-ultra-definition-liquid-makeup-7-5-604214659100', :changefreq => 'monthly', :priority => 0.8
   add '/producto/naked-weightless-ultra-definition-liquid-makeup-8-0-604214659209', :changefreq => 'monthly', :priority => 0.8
   add '/producto/naked-weightless-ultra-definition-liquid-makeup-9-0-604214659308', :changefreq => 'monthly', :priority => 0.8
   add '/producto/naked-weightless-ultra-definition-liquid-makeup-10-0-604214659407', :changefreq => 'monthly', :priority => 0.8
   add '/producto/naked-weightless-ultra-definition-liquid-makeup-11-0-604214659506', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sip-powder-mu-spf1-84-27131978541', :changefreq => 'monthly', :priority => 0.8
   add '/producto/naked-weightless-ultra-definition-liquid-makeup-12-0-604214659605', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-junkie-lip-gloss-naked2-604214845701', :changefreq => 'monthly', :priority => 0.8
   add '/producto/lip-junkie-lip-gloss-strip-604214845800', :changefreq => 'monthly', :priority => 0.8
@@ -6193,6 +6165,268 @@ SitemapGenerator::Sitemap.create do
   add '/producto/fame-3607342539914', :changefreq => 'monthly', :priority => 0.8
   add '/producto/love-sweet-love-set-651986903986', :changefreq => 'monthly', :priority => 0.8
   add '/producto/the-care-package-604079084949', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/clarifying-cleanser-80231-767332802312', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/clarifying-toner-80315-767332803159', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/exfoliating-blemish-treatment-gel-80232-767332802329', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/blemish-spot-treatment-80233-767332802336', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/blemish-treatment-concealer-medium-80242-767332802428', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/clarifying-mask-80314-767332803142', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/clarifying-body-spray-80260-767332802602', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/skin-perfecting-lotion-80234-767332802343', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/oil-control-mattifier-spf-16-80261-767332802619', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/aha-bha-exfoliating-cleanser-80267-767332802671', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/refreshing-cleanser-80294-767332802947', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/hydro-dynamic-ultimate-moisture-80359-767332803593', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/hydro-dynamic-ultimate-eye-moisture-80408-767332804088', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/perfecting-day-cream-spf-31-80268-767332802688', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sip-powder-mu-spf1-93-27131978633', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sip-powder-mu-spf1-a0-27131978701', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/perfecting-night-cream-80269-767332802695', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/complete-reform-treatment-80407-767332804071', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/white-brilliance-gentle-cleanser-80340-767332803401', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/white-brilliance-wrinkle-and-pore-refining-treatment-80341-767332803418', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/white-brilliance-illuminating-day-moisture-spf-30-pa-80342-767332803425', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/white-brilliance-radiant-toning-lotion-80510-767332805108', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/white-brilliance-illuminating-night-moisture-80392-767332803920', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/eye-lift-perfector-80381-767332803814', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/skin-perfecting-primer-dewy-finish-80382-767332803821', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/skin-perfecting-primer-matte-finish-80383-767332803838', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/essential-c-cleanser-80270-767332802701', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/essential-c-toner-80317-767332803173', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/active-radiance-serum-80254-767332802541', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/essential-c-day-moisture-spf30-pa-80256-767332802565', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/essential-c-night-moisture-80239-767332802398', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/essential-c-eye-cream-spf15-pa-80272-767332802725', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/renewing-cleansing-cream-80280-767332802800', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/hydrating-toner-80285-767332802855', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/age-diffusing-serum-80281-767332802817', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/renewing-eye-cream-80284-767332802848', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sheer-lustre-day-moisture-spf16-80283-767332802831', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/age-balancing-night-cream-80282-767332802824', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/energizing-pomegranate-cleanser-80295-767332802954', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/t-zone-pore-refining-gel-80226-767332802268', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/energizing-pomegranate-moisturizer-spf-16-80297-767332802978', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/energizing-pomegranate-lip-protector-spf-16-80296-767332802961', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pomegranate-exfoliating-mask-6-treatment-80352-767332803524', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/oil-free-sunblock-spf-31-80303-767332803036', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/waterproof-sunblock-spf31-80304-767332803043', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/repairwear-laser-focus-eye-cream-20714518738', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/genifique-eye-light-pearl-3605532795577', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pure-color-nail-lacquer-narcissit-27131986874', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pure-color-nail-lacquer-dilettante-27131986881', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pure-color-nail-lacquer-absinthe-27131986898', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/florabotanica-edp-100-ml-3607345993775', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/obliphica-oil-treatment-30cc-817574011604', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/obliphica-oil-treatment-853898003345', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/fat-girl-slim-6-oz-651043014129', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/fat-girl-treatment-kit-651043069402', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pot-rouge-powder-pink-716170096971', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/por-rouge-rose-716170097015', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/smokey-eye-liner-brush-716170102764', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/burberry-london-women-edp-gift-set-3386460042642', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/base-cl-pore-refining-solution-honey-20714539696', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/the-one-edp-75ml-uc-bl-100ml-sg-100ml-737052629179', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/light-blue-edt-100ml-uc-bc-100ml-sg-100ml-737052629353', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/the-one-for-men-sport-edt-100ml-uc-deo-stick-75ml-uc-sg-50ml-737052631530', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/light-blue-male-edt-125ml-uc-deo-stick-75ml-uc-otg-spray-8ml-737052631639', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/dg-pour-homme-edt-125ml-uc-asb-100ml-uc-sg-50ml-737052631691', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/golden-del-eau-so-intense-100ml-22548279342', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/golden-del-eau-so-intense-30ml-22548279366', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/blemishes-no-more-pads-663963005279', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/blemishes-no-more-hydrator-663963005293', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bb-cream-663963008249', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/red-door-aura-edt-100ml-85805144906', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pc-lipstick-fig-27131760566', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pc-sensuous-rouge-lip-pink-neutral-nu-2-5-g-27131824879', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pc-eyeshadow-cyber-pink-27131913085', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pc-eyeshadow-cyber-green-27131913115', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pc-eyeshadow-cyber-teal-27131913122', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/advanced-timezone-spf-15-50-ml-27131937128', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/advanced-timezone-gel-50-ml-27131937166', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/advanced-timezone-eye-15-ml-27131937203', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pc-eyeshadow-cyber-gold-27131942375', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pure-color-nail-lacquer-coral-cult-27131986904', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pure-color-nail-lacquer-lilac-leather-27131986911', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sugar-berry-tinted-lip-treatment-809280116087', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sugar-lip-advanced-therapy-809280116667', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sugar-4-3g-lip-treatment-809280116674', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sugar-rose-lip-treatment-809280116681', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sugar-plum-809280116698', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sugar-honey-809280116704', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sugar-passion-809280116711', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sugar-coral-tinted-lip-treatment-809280116728', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/guilty-edt-75ml-uc-bl-50ml-sg-50ml-737052630229', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/premier-edp-75ml-uc-bl-100ml-portable-frag-7-4ml-737052630359', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/gbyg-pour-homme-edt-90ml-uc-travel-spray-30ml-sg-50ml-737052630762', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/boss-bottled-edt-100ml-uc-asb-75ml-uc-sg-50ml-737052628257', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bump-fix-razor-bump-ingrown-hair-treatment-682223020227', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/jimmy-choo-edt100ml-bl100ml-sg100ml-3386460041447', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ls-maximum-comfort-shave-227-g-22548218808', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ls-root-power-regenerati250ml-22548235935', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/de-puff-booster-30ml-22548266298', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/touch-of-pink-edt-90ml-uc-bl-150ml-uc-737052624402', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/l1212-white-edt-100ml-uc-sg-150ml-uc-737052624532', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/single-eyeshadow-outremer-607845020752', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/velvet-matte-lip-pencil-red-square-607845024552', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/duo-eye-shadow-hula-hula-607845030720', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/roll-on-acne-clearing-solution-687795731007', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pronto-dry-shampoo-powder-travel-size-185856000685', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pronto-invisible-dry-shampoo-spray-185856000845', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ultra-lite-oil-free-moisturizer-670367013052', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/mega-rich-hair-and-body-kit-670367080108', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/selena-gomez-for-women-100ml-set-818155010061', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/clear-bath-tub-2111100004251', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/self-tanning-kit-3378872071525', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pink-lash-curler-3378872071709', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/long-lasting-kohl-eye-pencil-06-deep-brown-3378872072164', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/long-lasting-kohl-eye-pencil-08-pure-white-3378872072171', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/long-lasting-kohl-eye-pencil-02-dark-grey-3378872072188', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/long-lasting-kohl-eye-pencil-07-infinite-beige-3378872072195', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/long-lasting-kohl-eye-pencil-01-intense-black-3378872072201', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/long-lasting-kohl-eye-pencil-03-mysterious-blue-3378872072218', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/long-lasting-kohl-eye-pencil-04-smoky-green-3378872072225', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/long-lasting-kohl-eye-pencil-05-mystic-purple-3378872072232', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/mothers-day-palette-3378872072829', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/swl-power-brightening-mask-729238104471', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bop-advanced-super-restoring-cream-75ml-730852104099', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/bop-super-corrective-eye-cream-730852104662', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sun-protection-eye-cream-spf-34-15ml-730852104785', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sun-urban-environment-tinted-uv-protection-1-spf43-730852105317', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sun-urban-environment-tinted-uv-protection-2-spf43-730852105324', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sun-urban-environment-tinted-uv-protection-3-spf43-730852105331', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/perfect-hydrating-bb-cream-spf-35-medium-730852109032', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/perfect-hydrating-bb-cream-spf-35-deep-730852109049', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/swl-2013-starter-kit-730852907775', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sbn-2013-starter-kit-730852907782', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/spn-2013-starter-kit-730852907799', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sts-2013-starter-kit-730852907805', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/complexion-kit-fair-607710007420', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/complexion-kit-light-607710007437', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/complexion-kit-medium-607710007444', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/complexion-kit-dark-607710007451', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/photo-finish-even-skin-ptbd-607710016606', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/retail-waterproof-sha-ch2-67g-607710016804', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/retail-waterproof-sha-lu2-67g-607710016828', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/repack-eye-shadow-6-well-com-014-56-g-607710016880', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/repack-eye-shadow-6-well-com-014-56-g-607710016897', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/repack-eye-shadow-6-well-com-014-56-g-607710016903', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/hydrating-under-eye-p-01-10ml-607710017498', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/fall-12-eye-shadow-6-well-softb4-59-g-607710017641', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/fall-12-eye-shadow-6-well-smoke4-59-g-607710017665', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/fall-12-waterproof-sh-ch2-67g-607710017702', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/fall-12-waterproof-sh-me2-67g-607710017719', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/fall-12-whipped-cheek-be15-607710017733', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/studio-skin-hydrating-1-30ml-607710019690', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/studio-skin-hydrating-1-30ml-607710019706', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/studio-skin-hydrating-2-30ml-607710019713', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/studio-skin-hydrating-2-30ml-607710019720', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/studio-skin-hydrating-2-30ml-607710019737', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/studio-skin-hydrating-2-30ml-607710019744', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/studio-skin-hydrating-3-30ml-607710019751', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/studio-skin-hydrating-3-30ml-607710019768', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/studio-skin-hydrating-3-30ml-607710019775', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/studio-skin-hydrating-3-30ml-607710019782', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/studio-skin-hydrating-4-30ml-607710019799', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/studio-skin-hydrating-4-30ml-607710019805', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/retail-waterproof-sha-sh2-67g-607710021488', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/limitless-long-wear-l-fo-4ml-607710022812', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/limitless-long-wear-l-li-4ml-607710022829', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/limitless-long-wear-l-en-4ml-607710022836', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/limitless-long-wear-l-24-4ml-607710022843', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/limitless-long-wear-l-et-4ml-607710022850', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/limitless-long-wear-l-fo-4ml-607710022867', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/limitless-long-wear-l-no-4ml-607710022874', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/limitless-long-wear-l-en-4ml-607710022881', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/limitless-long-wear-l-in-4ml-607710022898', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/limitless-long-wear-l-bo-4ml-607710022904', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/angel-estrella-vertical-edp-100ml-3439600217094', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/estrella-recargable-edp-50-ml-3439600244090', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/agua-de-tocador-100ml-3439600288094', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/womanity-recargable-edp-80ml-3439601000411', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/freedom-100ml-22548277416', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/freedom-30ml-22548277430', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/flatbuki-brush-651886902156', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/la-creme-lip-cream-nude-beach-651986100514', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/la-creme-lip-cream-in-the-buff-651986100521', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/la-creme-lip-cream-naked-dolly-651986100538', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/la-creme-lip-cream-naughty-nude-651986100545', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/la-creme-lip-cream-spice-spice-baby-651986100552', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/la-creme-lip-cream-honey-bear-651986100569', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/la-creme-lip-cream-cinnamon-kiss-651986100576', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/la-creme-lip-cream-sweet-maple-651986100583', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/la-creme-lip-cream-marshmallow-bunny-651986100590', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/la-creme-lip-cream-juicy-melons-651986100606', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/la-creme-lip-cream-razzle-dazzle-rose-651986100613', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/la-creme-lip-cream-fuchsia-shock-651986100620', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/la-creme-lip-cream-coral-fire-651986100637', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/la-creme-lip-cream-i-want-candy-651986100644', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/la-creme-lip-cream-stiletto-red-651986100651', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/la-creme-lip-cream-divine-wine-651986100668', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/brownies-browne-y-651986160013', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/brownies-blonde-y-651986160020', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/brow-envy-kit-651986160044', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/perfect-eyes-perfect-navy-651986170173', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/perfect-eyes-perfect-moss-651986170180', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/perfect-eyes-perfect-espresso-651986170197', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/glamour-gloss-tickle-me-651986501052', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/glamour-gloss-flirt-651986501083', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/glamour-gloss-first-time-651986501113', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/glamour-gloss-strip-tease-651986501151', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/glamour-gloss-this-is-pretty-651986501304', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/glamour-gloss-chihuahua-bites-651986501311', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/beach-bunny-bronzer-651986700295', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/peach-leopard-bronzer-651986700547', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/lash-injection-mascara-651986800209', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/teddy-bear-hair-professional-5-piece-brush-set-651986901289', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/sweet-indulgence-651986903955', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/shadow-bon-bons-651986903962', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/glamour-to-go-spun-sugar-edition-651986903979', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/the-return-of-sexy-kit-651986904013', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/harajuku-lovers-baby-38097005196', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/harajuku-lovers-angel-38097005202', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/harajuku-lovers-love-38097005219', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/harajuku-loverss-music-38097005226', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/mini-pinza-harajuku-lovers-38097005257', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/espejo-compacto-harajuku-lovers-38097005684', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pinza-coleccion-charmed-slant-elefante-38097006308', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pinza-coleccion-charmed-slant-pavorreal-38097006315', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/pinza-coleccion-charmed-slant-tigre-38097006322', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/set-de-manicure-spring-13-3348901093293', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/star-product-1-spring-13-3348901134392', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/star-product-2-spring-13-3348901134408', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/5-colour-eyeshadow-854-3348901134583', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/rubor-diorblush-659-3348901132749', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/rubor-diorblush-729-3348901132732', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/trianon-grey-306-3348901134590', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/rosy-bow-355-3348901132855', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/dior-addict-lipstick-437-3348901136563', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/dior-addict-lipstick-467-3348901136587', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/dior-addict-lip-glow-01-3348901128865', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/twin-set-cherie-bow-grey-sigh-3348901140843', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/twin-set-cherie-bow-fishnet-black-3348901140850', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/twin-set-cherie-bow-ballerina-pink-3348901140874', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/advanced-night-repair-eye-serum-15ml-027131953241', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/naked-beauty-balm-604214659704', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/playcurl-volume-boostiing-styling-gel-spray-814591011280', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/glow-by-dr-brandt-revitalizing-retinol-eye-cream-663963006214', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/radiant-creamy-concealer-607845012313', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/fine-one-one-602004046338', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/ultra-primer-mini-duo-602004046031', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/world-famous-neutrals-step-it-up-kit-602004050403', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/world-famous-neutrals-go-to-kit-602004048387', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/world-famous-neutrals-must-have-kit-602004048417', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/mediterranean-bay-leaf-exfoliating-hair-scalp-treatment-814591011150', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/omega-3-replenishing-hair-treatment-814591011167', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/biotin-lightweight-reparative-hair-serum-814591011174', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/mongongo-oil-multi-use-hair-treatment-814591011136', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/the-glinda-palette-1475557-604214642706', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/the-theodora-palette-1475565-604214642805', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/gradual-tan-plus-anti-ageing-multi-action-face-5060022307193', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/fatgirlsixpack-651043016161', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/gradual-tan-plus-firming-4-in-1-tan-tone-firm-moisturise-5060056485713', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/stay-all-day-10-in-1-hd-beauty-balm-broad-spectrum-spf-30-094800343474', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/stay-all-day-10-in-1-hd-illuminating-beauty-balm-094800343573', :changefreq => 'monthly', :priority => 0.8
+  add '/producto/stay-all-day-10-in-1-hd-bronzing-beauty-balm-94800343535', :changefreq => 'monthly', :priority => 0.8
   add '/', :changefreq => 'daily', :priority => 0.9
 end
 SitemapGenerator::Sitemap.ping_search_engines 
