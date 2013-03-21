@@ -4,8 +4,20 @@ class PaginasController < ApplicationController
     @lonuevo = Seccion.seccion_actual(Seccion.by_slug(:lonuevo))
     @seccion = Seccion.includes(:productos).by_slug('hotnow')
     @contenido = Seccion.seccion_actual(@seccion)
+    @registro = Registro.new
   end
-
+  def registro
+    @registro = Registro.new params[:registro]
+    if @registro.save
+      h = Hominid::API.new(ENV['MAILCHIMP_API'], {:secure => true, :timeout => 60})
+      unless h.list_subscribe(ENV['MAILCHIMP_LIST_ID'], params[:registro][:email], {'FNAME' => params[:registro][:nombre] || '', 'LNAME' => params[:registro][:apellido] || '', 'CP' => params[:registro][:cp] || ''}, 'html', true, true, true, true).nil?
+        flash[:registro] = true
+      end
+      redirect_to root_path
+    else
+      redirect_to root_path
+    end
+  end
   def contacto
     @contacto = Contacto.new
   end

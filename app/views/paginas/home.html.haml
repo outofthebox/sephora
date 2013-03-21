@@ -97,3 +97,15 @@
     .tcell.t50
       %a{ :href => "http://sephora.com.mx/vacaciones", :target => '_blank' }
         =image_tag "home/1down.jpg"
+#mod
+  %a.close{:href=>"#"}
+    X
+  = form_for @registro, :url => registro_path do |f|
+    = f.text_field :nombre
+    = f.text_field :email, :type => 'email'
+    = f.text_field :cp
+    = f.submit '', :id => 'submit'
+- if flash[:registro]
+  #modsuc
+    %a.close{:href=>"#"}
+      X

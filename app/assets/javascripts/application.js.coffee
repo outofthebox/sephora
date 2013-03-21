@@ -41,14 +41,13 @@ $(".ante.jesus").live "click", ->
 #Popup
 path = window.location.pathname
 if path == '/'
-  if $.cookie("popholi")
-  else
-    $("#popholi").fadeIn()
-    $.cookie "popholi", "true",
-    expires: 1
-$("#popholi a.close").live "click", (e) ->
+  unless $.cookie("mod")
+    $("#mod").fadeIn()
+    $.cookie "mod", "true",
+$("a.close").live "click", (e) ->
   e.preventDefault()
-  $("#popholi").fadeOut()
+  $("#mod, #modsuc").fadeOut()
+
 #Wallpapers
 $("a.back").live "click", (e) ->
   e.preventDefault()

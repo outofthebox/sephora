@@ -1704,3 +1704,58 @@ li.unchecked:before {
     padding: 10px;
   }
 }
+#mod {
+  width: 500px;
+  height: 500px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -250px;
+  margin-left: -250px;
+  background-image: image-url('home/pop_registro.jpg');
+  outline: 20px solid rgba(0,0,0,0.8);
+  z-index: 9999;
+  display: none;
+  form {
+    text-align: center;
+    padding-top: 275px;
+    input {
+      width: 380px;
+      display: inline-block;
+      margin-bottom: 30px;
+      text-align: center;
+      background: none;
+      border: none;
+      &:invalid {
+        border: none;
+      }
+    }
+    #submit {
+      display: block;
+      margin: 0 auto;
+      width: 110px;
+      margin-bottom: 0;
+      border: none;
+      background: none;
+    }
+  }
+}
+#modsuc {
+  width: 500px;
+  height: 500px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -250px;
+  margin-left: -250px;
+  background-image: image-url('home/pop_registro_gracias.jpg');
+  outline: 20px solid rgba(0,0,0,0.8);
+  z-index: 9999;
+}
+a.close {
+  position: absolute;
+  top: -20px;
+  right: -15px;
+  color: white;
+  font-size: 1.2em;
+}
