@@ -18,7 +18,7 @@ class UtilidadesController < ApplicationController
     # end
 
     # Funcion para un solo CSV
-    data = CSV.parse(File.open('/home/kinduff/Escritorio/improd2.csv'), :headers => true, :return_headers => true )
+    data = CSV.parse(File.open('/home/kinduff/Escritorio/parents.csv'), :headers => true, :return_headers => true )
     data.by_col!
     data.each do |col|
       skus << col.at(1).compact.reject{|r| !(r.to_i > 0) }
@@ -255,72 +255,41 @@ class UtilidadesController < ApplicationController
     require 'csv'
     data = []
     existen = []
+    count = 0
+    count2 = 0
     CSV.foreach("/home/kinduff/Escritorio/db.csv") do |row|
-    # unless Producto.find_by_upc(row.at(1))
-      sku = row.at(0)
-      upc = row.at(1).gsub(/\s+/, "")
-      marca = 183
-      # if Marca.find_by_slug(marca.parameterize)
-      #   marca = Marca.find_by_slug(marca.parameterize).id
-      # else
-      #   r = Marca.new
-      #   r.marca = marca
-      #   r.slug = marca.parameterize
-      #   r.save
-      #   marca = r.id
-      # end
-      nombre = row.at(2)
-      nombre_real = row.at(3)
-      # categoria = row.at(5)
-      # parent_id = Categoria.find_by_slug(categoria.parameterize).id
-      # subcategoria = row.at(6)
-      # if (Categoria.find_by_nombre(subcategoria))
-      #   categoria = Categoria.find_by_nombre(subcategoria).id
-      # else
-      #   r = Categoria.new
-      #   r.nombre = subcategoria
-      #   r.slug = subcategoria.parameterize
-      #   r.visible = true
-      #   r.parent_id = parent_id
-      #   r.save
-      #   categoria = r.id
-      # end
-      categoria = row.at(5)
-      # unless row.at(10).nil?
-      #   categoria = Categoria.find(row.at(10)).id
-      #   # if (Categoria.find_by_nombre(grupo))
-      #   #   categoria = Categoria.find_by_nombre(grupo).id
-      #   # else
-      #   #   r = Categoria.new
-      #   #   r.nombre = grupo
-      #   #   r.slug = grupo.parameterize
-      #   #   r.visible = true
-      #   #   r.parent_id = categoria
-      #   #   r.save
-      #   #   categoria = r.id
-      #   # end
-      # end
-      precio = row.at(6).to_d
-      descripcion = row.at(7)
-      detalles = row.at(8)
-      data << {
-        :sku => sku,
-        :upc => upc,
-        :marca_id => marca,
-        :nombre => nombre,
-        :nombre_real => nombre_real,
-        :categoria_id => categoria,
-        :descripcion => descripcion,
-        :precio => precio,
-        :usos => detalles
-      }
-      # else
-      #   puts "http://sephora.com.mx/producto/#{Producto.find_by_upc(row.at(1)).slug}"
-      # end
+      unless Producto.where(:upc => row.at(0)).count == 1
+        upc = row.at 0
+        marca_id = row.at 1
+        nombre = row.at 2
+        nombre_real = row.at 3
+        if row.at(5)
+          categoria_id = row.at 5
+        else
+          categoria_id = row.at 4
+        end
+        precio = row.at 6
+        descripcion = row.at 7
+        usos = row.at 8
+        ingredientes = row.at 9
+        data << {
+          :upc => upc,
+          :marca_id => marca_id,
+          :nombre => nombre,
+          :nombre_real => nombre_real,
+          :categoria_id => categoria_id,
+          :precio => precio,
+          :descripcion => descripcion,
+          :usos => usos,
+          :ingredientes => ingredientes
+        }
+        count += 1
+      else
+        count2 += 1
+      end
     end
-    # raise data.inspect
     if(Producto.create(data))
-      raise 'Perfect'.inspect
+      raise "Perfect: #{count}/#{count2}".inspect
     else
       raise "Oops! Something went wrong!".inspect
     end
