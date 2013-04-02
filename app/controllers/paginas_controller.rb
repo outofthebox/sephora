@@ -138,4 +138,7 @@ class PaginasController < ApplicationController
   end
   def bloggers
   end
+  def sephoragifts
+    render :layout => 'clean'
+  end
 end

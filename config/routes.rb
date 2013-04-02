@@ -111,7 +111,8 @@ Sephora::Application.routes.draw do
 
   get '365dias/terminos-y-condiciones'  => 'paginas#aniversario_terminos', :as => 'aniversario_terminos'
 
-  get 'facebook' => 'paginas#fbapp' 
+  get 'sephoragifts' => 'paginas#sephoragifts'
+
   # última línea, hace match con el resto de las rutas y muestra 404
   match  '*a', :to => 'paginas#error_404'
 end
