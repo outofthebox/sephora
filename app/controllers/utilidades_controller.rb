@@ -368,10 +368,14 @@ class UtilidadesController < ApplicationController
     error = 0
     CSV.foreach("/home/kinduff/Escritorio/marcas.csv") do |row|
       producto = Producto.where(:upc => row.at(0))
-      marca = Marca.where(:marca => row.at(1))
-      if producto.count == 1 && marca.count == 1
+      unless row.at(2).nil? || row.at(2).empty?
+        marca = row.at(2)
+      else
+        marca = row.at(1)
+      end
+      if producto.count == 1
         r = producto.first
-        r.marca_id = marca.first.id
+        r.categoria_id = marca
         if r.save
           count += 1
         else
