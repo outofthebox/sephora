@@ -11,6 +11,8 @@
     =form_error @marca, :behindthebrand
     =f.labelbrtextarea "Detrás de la marca (opcional)", :behindthebrand, :class => "full"
   %p
+    = f.labelbrtext "URL Video", :video, :placeholder => 'http://'
+  %p
     = f.label :logo, "Logo"
     %br
     = f.file_field :logo
