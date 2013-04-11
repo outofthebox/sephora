@@ -54,6 +54,7 @@ if path == '/'
   unless $.cookie("mod")
     $("#mod").fadeIn()
     $.cookie "mod", "true",
+      expires: 365
 $("a.close").live "click", (e) ->
   e.preventDefault()
   $("#mod, #modsuc").fadeOut()
