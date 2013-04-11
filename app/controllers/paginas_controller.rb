@@ -141,4 +141,6 @@ class PaginasController < ApplicationController
   def sephoragifts
     render :layout => 'clean'
   end
+  def colorvision
+  end
 end

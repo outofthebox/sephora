@@ -1772,3 +1772,16 @@ a.close {
     float: right;
   }
 }
+.colorvision {
+  .barrita {
+    width: 100%;
+    height: 5px;
+    background-color: black;
+  }
+  .contenedor {
+    text-align: center;
+    img {
+      border: none !important;
+    }
+  }
+}
