@@ -35,4 +35,7 @@ group :development do
   gem 'guard'
   gem 'guard-livereload'
   gem 'fastercsv'
+  gem "nifty-generators"
 end
+
+gem "mocha", :group => :test

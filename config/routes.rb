@@ -1,4 +1,6 @@
 Sephora::Application.routes.draw do
+  resources :tiendas
+
   devise_for :usuarios
 
   root :to => 'paginas#home'
@@ -62,7 +64,7 @@ Sephora::Application.routes.draw do
 
   get   'tu-lista', :to => 'paginas#tulista'
 
-  get   'tiendas', :to => 'paginas#tiendas', :as => 'tiendas'
+  # get   'tiendas', :to => 'paginas#tiendas', :as => 'tiendas'
   get   'eventos', :to => 'paginas#eventos', :as => 'eventos'
   get   'obsequios', :to => 'paginas#obsequios', :as => 'obsequios'
 

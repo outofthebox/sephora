@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130401232238) do
+ActiveRecord::Schema.define(:version => 20130414223707) do
 
   create_table "categoria_productos", :force => true do |t|
     t.integer  "producto_id"
@@ -157,6 +157,23 @@ ActiveRecord::Schema.define(:version => 20130401232238) do
     t.string   "cover_content_type"
     t.integer  "cover_file_size"
     t.datetime "cover_updated_at"
+  end
+
+  create_table "tiendas", :force => true do |t|
+    t.string   "nombre"
+    t.string   "slug"
+    t.string   "horario"
+    t.string   "contacto"
+    t.string   "direccion"
+    t.string   "mapa"
+    t.float    "latitud"
+    t.float    "longitud"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.string   "foto_file_name"
+    t.string   "foto_content_type"
+    t.integer  "foto_file_size"
+    t.datetime "foto_updated_at"
   end
 
   create_table "usos", :force => true do |t|

@@ -1,0 +1,31 @@
+- provide :titulo, "Nuestras tiendas"
+- provide :descripcion, 'Conoce todas las ubicaciones de las tiendas de Sephora en México.'
+%section#tiendas
+  %h2
+    nuestras tiendas
+  .table.full
+    .contizq.tcell.t25
+      
+    .contder.tcell.t75
+      %h3 NUESTRAS TIENDAS
+      %ul.nolist
+        - @tiendas.each do |tienda|
+          %li
+            .table.full
+              .tcell.t25
+                =link_to image_tag(tienda.foto(:normal)), tienda_path(tienda.slug)
+                %p.mapa
+                  = link_to "Ver mapa", tienda_path(tienda.slug)
+              .info.tcell.t75
+                %h4
+                  = tienda.nombre
+                %p
+                  = tienda.direccion.gsub(/\n/, '<br/>').html_safe
+                %p
+                  = tienda.contacto
+                %p
+                  %br
+                  = link_to 'Más información', tienda_path(tienda.slug)
+
+- if can? :new, @tienda
+  %p= link_to "Nueva Tienda", new_tienda_path

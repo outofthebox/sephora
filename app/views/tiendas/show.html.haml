@@ -1,0 +1,26 @@
+%section#tiendas.show
+  %h2
+    Nuestras tiendas
+  .table.full
+    .contizq.tcell.t25
+      
+    .contder.tcell.t75
+      %h1
+        = @tienda.nombre
+      %p.barra
+      .table.full.informacion
+        .tcell.t40
+          :plain
+            <iframe width="300" height="220" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=loc:#{@tienda.latitud},#{@tienda.longitud}&amp;ie=UTF8&amp;t=m&amp;z=14&amp;ll=#{@tienda.latitud},#{@tienda.longitud}&amp;output=embed&amp;iwloc=0"></iframe>
+        .tcell.t60.info
+          %p
+            = @tienda.direccion.gsub(/\n/, '<br/>').html_safe
+          %h2 Horario
+          %p
+            = @tienda.horario.gsub(/\n/, '<br/>').html_safe
+          %h2 Contacto
+          %p
+            = @tienda.contacto.gsub(/\n/, '<br/>').html_safe
+          - if can? :edit, @tienda
+            %p
+              = link_to "Editar", edit_tienda_path(@tienda)

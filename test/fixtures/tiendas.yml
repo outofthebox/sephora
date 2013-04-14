@@ -1,0 +1,13 @@
+one:
+  nombre: MyString
+  direccion: MyString
+  horario: MyString
+  latitud: 1.5
+  longitud: 1.5
+
+two:
+  nombre: MyString
+  direccion: MyString
+  horario: MyString
+  latitud: 1.5
+  longitud: 1.5
