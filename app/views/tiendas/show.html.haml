@@ -15,12 +15,14 @@
         .tcell.t60.info
           %p
             = @tienda.direccion.gsub(/\n/, '<br/>').html_safe
-          %h2 Horario
-          %p
-            = @tienda.horario.gsub(/\n/, '<br/>').html_safe
-          %h2 Contacto
-          %p
-            = @tienda.contacto.gsub(/\n/, '<br/>').html_safe
+          - unless @tienda.horario.empty?
+            %h2 Horario
+            %p
+              = @tienda.horario.gsub(/\n/, '<br/>').html_safe
+          - unless @tienda.contacto.empty?
+            %h2 Contacto
+            %p
+              = @tienda.contacto.gsub(/\n/, '<br/>').html_safe
           - if can? :edit, @tienda
             %br
             %p
