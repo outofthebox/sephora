@@ -1,4 +1,6 @@
 Sephora::Application.routes.draw do
+  resources :eventotiendas
+
   resources :tiendas
 
   devise_for :usuarios

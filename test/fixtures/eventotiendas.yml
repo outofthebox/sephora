@@ -1,0 +1,11 @@
+one:
+  nombre: MyString
+  horario: MyText
+  descripcion: MyText
+  informacion: MyText
+
+two:
+  nombre: MyString
+  horario: MyText
+  descripcion: MyText
+  informacion: MyText

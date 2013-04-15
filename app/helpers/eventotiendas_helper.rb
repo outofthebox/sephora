@@ -1,0 +1,2 @@
+module EventotiendasHelper
+end

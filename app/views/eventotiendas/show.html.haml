@@ -1,0 +1,19 @@
+%p
+  %strong Nombre:
+  = @eventotienda.nombre
+%p
+  %strong Horario:
+  = @eventotienda.horario
+%p
+  %strong Descripcion:
+  = @eventotienda.descripcion
+%p
+  %strong Informacion:
+  = @eventotienda.informacion
+
+%p
+  = link_to "Edit", edit_eventotienda_path(@eventotienda)
+  |
+  = link_to "Destroy", @eventotienda, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", eventotiendas_path

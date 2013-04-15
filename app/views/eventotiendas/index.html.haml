@@ -1,0 +1,19 @@
+%table
+  %tr
+    %th Tienda
+    %th Nombre
+    %th Horario
+    %th Descripcion
+    %th Informacion
+  - for eventotienda in @eventotiendas
+    %tr
+      %td= Tienda.find(eventotienda.tienda_id).nombre
+      %td= eventotienda.nombre
+      %td= eventotienda.horario
+      %td= eventotienda.descripcion
+      %td= eventotienda.informacion
+      %td= link_to 'Show', eventotienda
+      %td= link_to 'Edit', edit_eventotienda_path(eventotienda)
+      %td= link_to 'Destroy', eventotienda, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Eventotienda", new_eventotienda_path

@@ -22,5 +22,23 @@
           %p
             = @tienda.contacto.gsub(/\n/, '<br/>').html_safe
           - if can? :edit, @tienda
+            %br
             %p
               = link_to "Editar", edit_tienda_path(@tienda)
+            %p
+              = link_to "Agregar evento", new_eventotienda_path
+      - if @tienda.eventotiendas.count > 0
+        #eventos
+          %h2 Eventos
+          %table
+            %tr
+              %th Evento
+              %th Fecha y horario
+              %th Descripcion
+              %th Reserva tu lugar
+            - for eventotienda in @tienda.eventotiendas
+              %tr
+                %td{:width=>"20%"}= eventotienda.nombre
+                %td{:width=>"15%"}= eventotienda.horario.gsub(/\n/, '<br/>').html_safe
+                %td{:width=>"35%"}= eventotienda.descripcion.gsub(/\n/, '<br/>').html_safe
+                %td{:width=>"30%"}= eventotienda.informacion.gsub(/\n/, '<br/>').html_safe

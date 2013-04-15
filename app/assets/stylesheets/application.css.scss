@@ -1263,28 +1263,56 @@ section#tiendas {
     text-transform: uppercase !important;
     h1 {
       font-family: "Avant";
-      font-size: 2.3em;
+      font-size: 2.4em;
       font-weight: lighter;
       padding: 0 20px 0 20px;
       margin: 0;
     }
-  }
-  .barra {
-    display: block;
-    width: 100%;
-    height: 5px;
-    background: #000;
-    margin: 10px 0 10px 0 !important;
-  }
-  .informacion {
-    padding: 15px;
-    font-size: 0.8em;
-    .info {
-      padding-left: 15px;
+    .barra {
+      display: block;
+      width: 100%;
+      height: 5px;
+      background: #000;
+      margin: 10px 0 10px 0 !important;
+    }
+    .informacion {
+      padding: 15px;
+      font-size: 0.8em;
+      .info {
+        padding-left: 15px;
+        h2 {
+          text-transform: uppercase !important;
+          text-decoration: underline;
+          font-weight: bold;
+        }
+      }
+    }
+    #eventos {
+      margin: 15px;
+      text-align: center;
+      padding-top: 25px;
+      border-top: 3px solid black;
+      text-transform: none;
       h2 {
         text-transform: uppercase !important;
-        text-decoration: underline;
-        font-weight: bold;
+        font-family: "Avant";
+        font-size: 2.5em;
+      }
+      table {
+        font-size: 0.8em;
+        th {
+          background: #B5B5B5;
+          border-left: 3px solid #FFF;
+          font-weight: normal;
+          padding: 5px;
+        }
+        td {
+          background: #E1E1E1;
+          border-left: 3px solid #FFF;
+          border-bottom: 3px solid #FFF;
+          padding: 5px;
+          vertical-align: middle;
+        }
       }
     }
   }
