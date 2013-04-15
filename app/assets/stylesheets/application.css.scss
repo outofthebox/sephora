@@ -75,7 +75,7 @@ ul.breadcrumbs{
 // BANDA NEGRA SUPERIOR
 #head-sup {
   background: #000;
-  height: 34px;
+  height: auto;
   .infologin {
     width: 960px;
     margin: 0 auto;
@@ -265,62 +265,6 @@ ul.breadcrumbs{
   #footer {
     border-top: 3px solid #2c2728;
     font-size: 8pt;
-    #social {
-      width: 815px;
-      height: auto;
-      margin: 0 auto;
-      padding-top: 10px;
-      ul {
-        width: auto;
-        height: 50px;
-        padding: 0;
-      }
-      .noborder { border: none; }
-      li {
-          display: -moz-inline-stack;
-          display: inline-block;
-          vertical-align: top;
-          zoom: 1;
-          *display: inline;
-        width: 178px; padding-left: 20px; border-left: 1px solid black;
-        #fb, #tw, #pn, #yt, #bg, #gp {
-          background: url('footer/social.png');
-          width: 31px; height: 31px;
-          float: left;
-          margin-top: 11px;
-        }
-        #fb {
-          background-position: 0px 0px;
-        }
-        #tw {
-          background-position: 0px -62px;
-        }
-        #pn {
-          background-position: 0px -31px;
-        }
-        #yt {
-          background-position: 0px -93px;
-        }
-        .social {
-        }
-        p {
-          padding: 0;
-          margin: 0;
-          margin-top: -4px;
-          margin-left: 35px;
-          }
-
-          .leyenda {
-            font-weight: bold;
-          }
-          .leyenda2 {
-
-          }
-          .leyenda3 {
-
-          }
-      }
-    }
   }
 
 #registrar, #descargar {
@@ -1840,5 +1784,70 @@ a.close {
     img {
       border: none !important;
     }
+  }
+}
+
+
+#social {
+  width: 815px;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  font-size: 8pt;
+  p, a {
+    color: #FFF !important;
+  }
+  ul {
+    width: auto;
+    height: 50px;
+    padding: 0;
+  }
+  .noborder { border: none; }
+  li {
+      display: -moz-inline-stack;
+      display: inline-block;
+      vertical-align: top;
+      zoom: 1;
+      *display: inline;
+      width: 178px;
+      padding-left: 20px;
+      border-left: 1px solid #FFF;
+    #fb, #tw, #pn, #yt, #bg, #gp {
+      background: url('footer/social.png');
+      width: 31px; height: 31px;
+      float: left;
+      margin-top: 11px;
+    }
+    #fb {
+      background-position: 0px 0px;
+    }
+    #tw {
+      background-position: 0px -62px;
+    }
+    #pn {
+      background-position: 0px -31px;
+    }
+    #yt {
+      background-position: 0px -93px;
+    }
+    .social {
+    }
+    p {
+      padding: 0;
+      margin: 0;
+      line-height: 12px;
+      margin-left: 35px;
+      }
+
+      .leyenda {
+        font-weight: bold;
+      }
+      .leyenda2 {
+
+      }
+      .leyenda3 {
+
+      }
   }
 }
