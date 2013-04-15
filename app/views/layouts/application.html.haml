@@ -46,62 +46,141 @@
       %nav#menu
         %ul.nobullet.nolist
           %li
-            %a{ :href => "/categoria/maquillaje"}
+            %a{:href => "/categoria/maquillaje"}
               Maquillaje
             %ul.nobullet.submenu
-              - submenu('maquillaje').each do |subcategoria|
-                %li
-                  = link_to subcategoria.nombre, categoria_ver_path(subcategoria.slug)
+              %li
+                %a{:href => "/categoria/rostro"} Rostro
+              %li
+                %a{:href => "/categoria/brochas-y-aplicadores"} Brochas y Aplicadores
+              %li
+                %a{:href => "/categoria/paletas-y-sets"} Paletas y Sets
+              %li
+                %a{:href => "/categoria/ojos"} Ojos
+              %li
+                %a{:href => "/categoria/labios"} Labios
+              %li
+                %a{:href => "/categoria/unas"} Uñas
+              %li
+                %a{:href => "/categoria/cuerpo"} Cuerpo
           %li
-            %a{ :href => "/categoria/skincare"}
+            %a{:href => "/categoria/skincare"}
               Skincare
             %ul.nobullet.submenu
-              - submenu('skincare').each do |subcategoria|
-                %li
-                  = link_to subcategoria.nombre, categoria_ver_path(subcategoria.slug)
+              %li
+                %a{:href => "/categoria/lip-balm-y-tratamientos"} Bálsamo Labial y Tratamientos
+              %li
+                %a{:href => "/categoria/bronceadores-y-autobronceadores"} Bronceadores y Autobronceadores
+              %li
+                %a{:href => "/categoria/suplementos"} Suplemento
+              %li
+                %a{:href => "/categoria/mascarillas-y-exfoliantes"} Mascarillas y Exfoliantes
+              %li
+                %a{:href => "/categoria/sets-de-inicio-y-regimenes"} Sets de Inicio y Regímenes
+              %li
+                %a{:href => "/categoria/limpiadores"} Limpiadores
+              %li
+                %a{:href => "/categoria/hidratantes"} Hidratantes
+              %li
+                %a{:href => "/categoria/tonicos-y-rociadores"} Tónicos y Rociadores
+              %li
+                %a{:href => "/categoria/tratamientos-para-el-rostro"} Tratamientos para el Rostro
+              %li
+                %a{:href => "/categoria/protector-solar"} Protector Solar
+              %li
+                %a{:href => "/categoria/cremas-para-ojos"} Cremas para Ojos
+              %li
+                %a{:href => "/categoria/removedor-de-vellos"} Removedor de Vellos
+              %li
+                %a{:href => "/categoria/bbcream"} BB Cream
           %li
-            %a{ :href => "/categoria/fragancias"}
+            %a{:href => "/categoria/fragancias"}
               Fragancias
             %ul.nobullet.submenu
-              - submenu('fragancias').each do |subcategoria|
-                %li
-                  = link_to subcategoria.nombre, categoria_ver_path(subcategoria.slug)
+              %li
+                %a{:href => "/categoria/obsequios-y-sets"} Obsequios y Sets
+              %li
+                %a{:href => "/categoria/hombre"} Hombre
+              %li
+                %a{:href => "/categoria/mujer"} Mujer
+              %li
+                %a{:href => "/categoria/rollerball"} Rollerball
           %li
-            %a{ :href => "/categoria/bano-y-cuerpo"}
+            %a{:href => "/categoria/bano-y-cuerpo"}
               Baño / Cuerpo
             %ul.nobullet.submenu
-              - submenu('bano-y-cuerpo').each do |subcategoria|
-                %li
-                  = link_to subcategoria.nombre, categoria_ver_path(subcategoria.slug)
+              %li
+                %a{:href => "/categoria/scrubs-y-exfolianes"} Exfoliantes
+              %li
+                %a{:href => "/categoria/obsequios-y-sets-6"} Obsequios y Sets
+              %li
+                %a{:href => "/categoria/manos-y-pies"} Manos y Pies
+              %li
+                %a{:href => "/categoria/celulitis-y-estrias"} Celulitis y Estrías
+              %li
+                %a{:href => "/categoria/hidratantes-bano-cuerpo"} Hidratantes
+              %li
+                %a{:href => "/categoria/limpiadores-bano-y-cuerpo"} Limpiadores Baño y Cuerpo
           %li
-            %a{ :href => "/categoria/cabello"}
+            %a{:href => "/categoria/cabello"}
               Cabello
             %ul.nobullet.submenu
-              - submenu('cabello').each do |subcategoria|
-                %li
-                  = link_to subcategoria.nombre, categoria_ver_path(subcategoria.slug)
+              %li
+                %a{:href => "/categoria/shampoo"} Shampoo
+              %li
+                %a{:href => "/categoria/acondicionador"} Acondicionador
+              %li
+                %a{:href => "/categoria/tratamientos-para-el-cabello"} Tratamientos para el Cabello
+              %li
+                %a{:href => "/categoria/productos-para-styling"} Productos para Styling
+              %li
+                %a{:href => "/categoria/herramientas"} Herramientas
+              %li
+                %a{:href => "/categoria/accesorios"} Accesorios
+              %li
+                %a{:href => "/categoria/cepillos-y-peines"} Cepillos y Peines
           %li
-            %a{ :href => "/categoria/categoria-general"}
+            %a{:href => "/categoria/categoria-general"}
               Accesorios
             %ul.nobullet.submenu
-              - submenu('categoria-general').each do |subcategoria|
-                %li
-                  = link_to subcategoria.nombre, categoria_ver_path(subcategoria.slug)
+              %li
+                %a{:href => "/categoria/bolsos-y-estuches"} Bolsos y Estuches
+              %li
+                %a{:href => "/categoria/brochas-y-aplicadores-maquillaje"} Brochas y Aplicadores
+              %li
+                %a{:href => "/categoria/herramientas-de-spa"} Herramientas de Spa
+              %li
+                %a{:href => "/categoria/manicure-y-pedicure"} Manicure y Pedicure
+              %li
+                %a{:href => "/categoria/pinzas-y-accesorios-de-cejas"} Pinzas y Accesorios de cejas
+              %li
+                %a{:href => "/categoria/rizadores-de-pestanas"} Rizadores de Pestañas
+              %li
+                %a{:href => "/categoria/sacapuntas"} Sacapuntas
+              %li
+                %a{:href => "/categoria/espejos"} Espejos
           %li
-            %a{ :href => "/categoria/hombres"}
+            %a{:href => "/categoria/hombres"}
               Hombres
             %ul.nobullet.submenu
-              - submenu('hombres').each do |subcategoria|
-                %li
-                  = link_to subcategoria.nombre, categoria_ver_path(subcategoria.slug)
+              %li
+                %a{:href => "/categoria/obsequios-y-sets-5"} Obsequios y Sets
+              %li
+                %a{:href => "/categoria/afeitado"} Afeitado
+              %li
+                %a{:href => "/categoria/humectantes-y-tratamientos"} Humectantes y Tratamientos
+              %li
+                %a{:href => "/categoria/cremas-de-ojos"} Cremas de Ojos
+              %li
+                %a{:href => "/categoria/cuerpo-y-ducha"} Cuerpo y Ducha
           %li
-            %a{ :href => "/obsequios"}
+            %a{:href => "/obsequios"}
               Obsequios
           %li
-            %a{ :href => "/soluciones"}
+            %a{:href => "/soluciones"}
               Soluciones
           %li
-            %a{ :href => "/tu-lista"}
+            %a{:href => "/tu-lista"}
               Tu Lista
           .select
             - if @marcas_all and @marcas_all.any?
