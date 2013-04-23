@@ -932,6 +932,10 @@ ul.breadcrumbs{
       font-size: 0.7em;
       text-align: right;
     }
+    .small2 {
+      font-size: 0.6em;
+      text-align: center;
+    }
     .marca {
       border-bottom: 5px solid #231F20;
       img {
@@ -1401,7 +1405,7 @@ section#obsequios {
   p {
     display: inline-block;
     vertical-align: middle;
-    height: 30px;
+    font-size: 0.9em;
   }
 }
 

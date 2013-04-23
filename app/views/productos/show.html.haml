@@ -19,6 +19,11 @@
         %a.pin-it-button{"count-layout" => "none", :target => "_blank", :href => "http://pinterest.com/pin/create/button/?url=http://#{request.host+request.fullpath}&media=#{@producto.foto.url(:grande)}&description=#{@producto.marca.marca}%0A#{@producto.nombre}%0A#{@producto.descripcion}"}
           %img{:border => "0", :src => "//assets.pinterest.com/images/PinExt.png", :title => "Pin It"}
         %iframe{:allowTransparency => "true", :frameborder => "0", :scrolling => "no", :src => "//www.facebook.com/plugins/like.php?href=http://#{request.host+request.fullpath}send=false&layout=button_count&show_faces=false&action=like&colorscheme=light&font&height=21&appId=262507837197981", :style => "border:none; overflow:hidden; width:130px; height:21px;"}
+        %p.small2
+          *Precios pueden variar sin previo aviso, precios finales disponibles en tienda.
+          %br
+          **La venta on-line no está actualmente disponible en México; visita nuestras tiendas para buscar tus productos favoritos.
+
     .derecha.tcell.t65
       .marca
         - unless @producto.marca.logo_file_size.nil?
