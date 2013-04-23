@@ -53,24 +53,24 @@
           %ul
             %li
               %a{:href => "#tab1"} DESCRIPCIÓN
-            - unless @producto.ingredientes.nil? || @producto.ingredientes.size < 4
+            - unless @producto.ingredientes.nil? || @producto.ingredientes.size < 5
               %li
                 %a{:href => "#tab2"} INGREDIENTES
-            - unless @producto.usos.nil? || @producto.usos.size < 4
+            - unless @producto.usos.nil? || @producto.usos.size < 5
               %li
                 %a{:href => "#tab3"} USOS
           .tabcontent
             #tab1.tabdesc
               %div{:itemprop => "description"}
-                =simple_format @producto.descripcion
-            - unless @producto.ingredientes.nil? || @producto.ingredientes.size < 4
+                =@producto.descripcion.html_safe
+            - unless @producto.ingredientes.nil? || @producto.ingredientes.size < 5
               #tab2.tabdesc
                 %div{:itemprop => "description"}
-                  =simple_format @producto.ingredientes
-            - unless @producto.usos.nil? || @producto.usos.size < 4
+                  =@producto.ingredientes.html_safe
+            - unless @producto.usos.nil? || @producto.usos.size < 5
               #tab3.tabdesc
                 %div{:itemprop => "description"}
-                  =simple_format @producto.usos
+                  =@producto.usos.html_safe
       - if @productos_relacionados and @productos_relacionados.any?
         .interesar
           %h3 te puede interesar

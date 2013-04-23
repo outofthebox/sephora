@@ -2,6 +2,10 @@
 # = require jquery_ujs
 # = require jquery.ui.all
 # = require jquerycookie
+# = require redactor
+
+$("#producto_descripcion, #producto_ingredientes, #producto_usos").redactor();
+
 
 $(document).on "click", "a#share", (e) ->
   loc = undefined

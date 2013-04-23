@@ -4,6 +4,7 @@
 // = require widgets
 // = require secciones
 // = require jquery.ui.all
+// = require redactor
 $withslider: 760px;
 $slides: 2;
 
@@ -1016,7 +1017,7 @@ ul.breadcrumbs{
           text-align: center;
         }
         #tabmenu li a{
-          color:red;
+          color: black;
           cursor:pointer;
           display:block;
           height:35px;
