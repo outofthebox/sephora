@@ -49,12 +49,12 @@ class ProductosController < ApplicationController
 
   def update
     @producto = Producto.find params[:id]
-    authorize! :manage, @producto
     if @producto.update_attributes params[:producto]
       redirect_to producto_ver_path(@producto.slug)
     else
       render :edit
     end
+    authorize! :manage, @producto
   end
 
   def show

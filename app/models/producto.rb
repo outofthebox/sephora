@@ -31,7 +31,6 @@ class Producto < ActiveRecord::Base
   end
 
   def validar
-    errors.add :nombre, "Escribe un nombre" unless self.nombre.parameterize.length >= 3
     errors.add :precio, "Escribe un precio" unless self.precio.to_i > 0
     errors.add :upc, "Proporciona el UPC " unless self.upc.parameterize.length > 2
   end
