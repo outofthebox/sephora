@@ -986,8 +986,11 @@ ul.breadcrumbs{
       li {
         display: inline-block;
         cursor: pointer;
+        margin-bottom: 2px;
         img {
           border: 1px solid #b2b2b2;
+          width: 100px;
+          height: auto;
         }
       }
     }
