@@ -996,9 +996,6 @@ ul.breadcrumbs{
     }
     .descripcion {
       padding-top: 40px;
-      p {
-        font-size: 0.8em;
-      }
       #tabmenu{
         position:relative;
       }
@@ -1039,6 +1036,7 @@ ul.breadcrumbs{
         .tabcontent{
           border-top: 1px solid #000;
           padding-top: 10px;
+          font-size: 0.8em;
         }
     }
     .interesar {
