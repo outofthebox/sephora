@@ -60,10 +60,10 @@
               %li
                 %a{:href => "#tab3"} USOS
           .tabcontent
-            #tab1.tabdesc
             - unless @producto.descripcion.nil? || @producto.descripcion.size < 5
-              %div{:itemprop => "description"}
-                =@producto.descripcion.html_safe
+              #tab1.tabdesc
+                %div{:itemprop => "description"}
+                  =@producto.descripcion.html_safe
             - unless @producto.ingredientes.nil? || @producto.ingredientes.size < 5
               #tab2.tabdesc
                 %div{:itemprop => "description"}
