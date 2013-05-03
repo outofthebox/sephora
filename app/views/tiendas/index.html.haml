@@ -7,7 +7,7 @@
     .contizq.tcell.t25
       
     .contder.tcell.t75
-      %h3 NUESTRAS TIENDAS
+      %h3 NUESTRAS TIENDAS Y EVENTOS
       %ul.nolist
         - @tiendas.each do |tienda|
           %li
@@ -25,7 +25,8 @@
                   = tienda.contacto
                 %p
                   %br
-                  = link_to 'Más información', tienda_path(tienda.slug)
+                  %b
+                    = link_to '¡Descubre los eventos del mes!', tienda_path(tienda.slug)
 
 - if can? :new, @tienda
   %p= link_to "Nueva Tienda", new_tienda_path
