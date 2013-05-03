@@ -387,4 +387,12 @@ class UtilidadesController < ApplicationController
     end
     raise "#{gencount} productos en total. #{count} productos alterados. #{error} productos con error."
   end
+  def editupc
+    producto = Producto.where(:upc => params[:upc])
+    if producto.count == 1
+      redirect_to edit_producto_path(producto.first.id)
+    else
+      raise 'Not found'.inspect 
+    end
+  end
 end
