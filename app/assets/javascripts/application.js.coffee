@@ -4,7 +4,7 @@
 # = require jquerycookie
 # = require redactor
 
-$("#producto_descripcion, #producto_ingredientes, #producto_usos").redactor();
+$("#producto_descripcion, #producto_ingredientes, #producto_usos, #producto_seccion_descripcion").redactor();
 
 
 $(document).on "click", "a#share", (e) ->

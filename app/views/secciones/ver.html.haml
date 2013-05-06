@@ -25,7 +25,7 @@
                     = producto.nombre.split(' ').map {|w| w.capitalize }.join(' ')
                   - unless seccion_producto.descripcion.empty?
                     %p
-                      = markdown seccion_producto.descripcion
+                      = seccion_producto.descripcion.html_safe
                 .tcell.t15
                   =link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
               =image_tag ('secciones/border.png')

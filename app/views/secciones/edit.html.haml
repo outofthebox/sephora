@@ -36,7 +36,7 @@
                     Editar
             - unless seccion_producto.descripcion.empty?
               .descripcion
-                = simple_format seccion_producto.descripcion
+                = seccion_producto.descripcion.html_safe
     - else
       .empty
         %h5 No hay productos
