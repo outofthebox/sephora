@@ -7,7 +7,6 @@
     %th Informacion
   - for eventotienda in @eventotiendas
     %tr
-      %td= Tienda.find(eventotienda.tienda_id).nombre
       %td= eventotienda.nombre
       %td= eventotienda.horario
       %td= eventotienda.descripcion
