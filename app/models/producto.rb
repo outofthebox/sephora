@@ -3,6 +3,7 @@ class Producto < ActiveRecord::Base
   validate :validar
 
   belongs_to :marca
+  belongs_to :categoria
   has_many :presentaciones, :class_name => "Producto", :foreign_key => "parent_id"
 
   attr_accessible :nombre, :nombre_real, :sku, :upc, :parent_id, :precio, :descripcion, :ingredientes, :usos, :publicado, :marca_id, :categoria_id, :uso_id, :foto

@@ -285,9 +285,12 @@ $("#verpor").on "change", ->
 $("#acomodar").on "change", ->
   window.top.location.href = @options[@selectedIndex].value  unless @options[@selectedIndex].value is ""
 
-ver = getUrlVars()["ver"]
-precio = getUrlVars()["precio"]
-$("#verpor option[value='ver=" + ver + "']").attr "selected", "selected"
+_0x53bd = ["\x76\x61\x6C","\x23\x62\x75\x73\x63\x61\x72\x5F\x71","\x62\x6F\x74\x69\x74\x61\x73\x66\x74\x77\x6C\x6F\x76\x65","\x74\x65\x20\x61\x6D\x6F\x20\x62\x6F\x74\x69\x74\x61\x73\x20\x3A\x29"]
+alert _0x53bd[3]  if $(_0x53bd[1])[_0x53bd[0]]() is _0x53bd[2]
+
+ver = getUrlVars()["ver"] || ''
+precio = getUrlVars()["precio"] || ''
+$(".verpor option[value='ver=" + ver + "']").attr("selected", "selected")
 $("#acomodar option[value='precio=" + precio + "']").attr "selected", "selected"
 
 $('#trigger').live "click", ->
@@ -300,5 +303,5 @@ $("#trigger2").live "click", ->
 $(".navegaciones ul.aco").on "mouseleave", ->
   $(this).closest('.navegaciones').find("ul.aco").toggleClass "activo"
 
-$("#trigger").html($(".navegaciones ul.verpor li a[data-set="+ver+"]").data("set") + " por página <span>▼</span>") unless $(".navegaciones ul.verpor li a[data-set="+ver+"]").data("set").nil?
-$("#trigger2").html("precio " +$(".navegaciones ul.aco li a[data-set="+precio+"]").data("set") + "<span>▼</span>") unless $(".navegaciones ul.aco li a[data-set="+precio+"]").data("set").nil?
+$(".filterby").html($(".navegaciones ul.verpor li a[data-set="+ver+"]").data("set") + " por página <sp<an>▼</span>") unless $(".navegaciones ul.verpor li a[data-set="+ver+"]").data("set").nil?
+$(".filterby2").html("precio " +$(".navegaciones ul.aco li a[data-set="+precio+"]").data("set") + "<span>▼</span>") unless $(".navegaciones ul.aco li a[data-set="+precio+"]").data("set").nil?

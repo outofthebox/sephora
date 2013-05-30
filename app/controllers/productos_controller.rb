@@ -6,25 +6,32 @@ class ProductosController < ApplicationController
   end
 
   def busqueda
-    @filtrame = Producto.includes(:marca).padres.publicados.order(("marcas.marca ASC"  if params[:ordenar] == "marca")).order(preciorder(params[:precio])).busqueda(params[:q] || params[:buscar][:q])
+    params[:buscar][:q] = params[:buscar][:q].gsub(/\//, " ")
     @marcas_seleccionadas = params[:marca].split(",").map{|m| m.to_i } unless params[:marca].nil?
-    if params[:marca].blank?
-      @productos = Producto.includes(:marca).padres.publicados.order(("marcas.marca ASC"  if params[:ordenar] == "marca")).order(preciorder(params[:precio])).busqueda(params[:q] || params[:buscar][:q]).page(params[:page]).per(perparams(params[:ver]))
+    base = Producto.search(params[:buscar][:q], :with => {:publicado => true, :parent_id => 0})
+    if @marcas_seleccionadas.nil? || @marcas_seleccionadas.empty? 
+      @productos_filtrados = base
     else
-      @marca = Marca.find(@marcas_seleccionadas)
-      @productos = Producto.includes(:marca).padres.publicados.where(:marca_id => @marca.map{|m| m.id }).order(("marcas.marca ASC"  if params[:ordenar] == "marca")).order(preciorder(params[:precio])).busqueda(params[:q] || params[:buscar][:q]).page(params[:page]).per(perparams(params[:ver]))
+      @productos_filtrados = Producto.search(params[:buscar][:q], :with => {:publicado => true, :parent_id => 0, :marca_id => @marcas_seleccionadas})
     end
+    if params[:ordenar] == "marca"
+      @productos_filtrados = Producto.search(params[:buscar][:q], :with => {:publicado => true, :parent_id => 0}, :order => 'marca ASC')
+    end
+    if params[:precio]
+      arrange = params[:precio]
+      if arrange == 'alto'
+        @productos_filtrados = Producto.search(params[:buscar][:q], :with => {:publicado => true, :parent_id => 0}, :order => 'precio DESC')
+      elsif arrange == 'bajo'
+        @productos_filtrados = Producto.search(params[:buscar][:q], :with => {:publicado => true, :parent_id => 0}, :order => 'precio ASC')
+      end
+    end
+    @productos = @productos_filtrados.page(params[:page]).per(perparams(params[:ver]))
+    @count = @productos_filtrados.count
     a = []
-    @filtrame.each do |r|
+    base.each do |r|
       a << r.marca
     end
     @marcas_para_categoria = a.compact.uniq.sort
-    @productostotal = Producto.includes(:marca).padres.publicados.busqueda(params[:q] || params[:buscar][:q])
-    @productoscount = Producto.includes(:marca).padres.publicados.busqueda(params[:q] || params[:buscar][:q]).count
-    respond_to do |format|
-      format.js if request.xhr?
-      format.html
-    end
   end
 
   def new

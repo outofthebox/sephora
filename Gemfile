@@ -18,9 +18,12 @@ gem 'json'
 gem 'watu_table_builder', :require => 'table_builder'
 gem 'sitemap_generator'
 gem 'unicorn'
+gem 'thinking-sphinx', '~> 3.0.0'
+gem 'mysql2',          '0.3.12b4'
+gem 'flying-sphinx'
 
 group :assets do
-  gem 'jquery-rails'
+  gem "jquery-rails", "~>1.0.19"
   gem 'jquery-ui-rails'
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'

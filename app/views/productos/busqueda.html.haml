@@ -33,7 +33,7 @@
         .navegacion
           %span ver
           .navegaciones
-            %p{:id => "trigger"}
+            %p{:id => "trigger", :class => 'filterby'}
               20 por página
               %span ▼
             %ul.nobullet.activo.verpor
@@ -45,7 +45,7 @@
                 = link_to '50 por página', request.parameters.merge({:ver => 50}), :"data-set" => '50'
           %span acomodar por:
           .navegaciones
-            %p{:id => "trigger2"}
+            %p{:id => "trigger2", :class => 'filterby2'}
               acomodar por
               %span ▼
             %ul.nobullet.activo.aco
@@ -59,7 +59,7 @@
             %span
               = paginate @productos, :window => 1, :left => 2, :right => 0
             %p
-              =@productoscount
+              =@count
               artículos
         - if @productos and @productos.any?
           %ul.nobullet.nolist.catalogin
@@ -72,7 +72,7 @@
         .navegacion
           %span ver
           .navegaciones
-            %p{:id => "trigger"}
+            %p{:id => "trigger", :class => 'filterby'}
               20 por página
               %span ▼
             %ul.nobullet.activo.verpor
@@ -84,7 +84,7 @@
                 = link_to '50 por página', request.parameters.merge({:ver => 50}), :"data-set" => '50'
           %span acomodar por:
           .navegaciones
-            %p{:id => "trigger2"}
+            %p{:id => "trigger2", :class => 'filterby2'}
               acomodar por
               %span ▼
             %ul.nobullet.activo.aco
@@ -98,5 +98,5 @@
             %span
               = paginate @productos, :window => 1, :left => 2, :right => 0
             %p
-              =@productoscount
+              =@count
               artículos

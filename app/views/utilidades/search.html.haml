@@ -1,0 +1,7 @@
+= form_tag buscare_path, :method => :get do
+  %p
+    = text_field_tag :search, params[:search]
+    = submit_tag "Search", :name => nil
+%h2 Resultados
+-@productos.each do |producto|
+  %p=link_to producto.nombre, producto_ver_path(producto.slug)
