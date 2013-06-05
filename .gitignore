@@ -17,3 +17,5 @@
 /public/system
 /backups/
 .DS_Store
+/db/sphinx/development/producto_core.spl
+/log/*
