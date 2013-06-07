@@ -194,7 +194,7 @@ if ($widget_vinculos = $(".widget-seccion-producto-vincular")).size()
     $new_form = $(".widget-seccion-producto-form:not(:visible)").clone()
     $(".widget-seccion-producto-form:visible").remove()
 
-    $widget_vinculos.after $new_form.show()
+    $widget_vinculos.after $new_form.css('display', 'block')
     $new_form.find("textarea").get(0).focus()
     $new_form.find("#producto_seccion_producto_id, #categoria_producto_producto_id, #marca_producto_producto_id").val $this.data("producto-id")
     $new_form.find(".tmpl-producto-nombre").text $this.data("producto-nombre")

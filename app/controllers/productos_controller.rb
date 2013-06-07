@@ -34,6 +34,28 @@ class ProductosController < ApplicationController
     @marcas_para_categoria = a.compact.uniq.sort
   end
 
+  def busqueda_old
+    @filtrame = Producto.includes(:marca).padres.publicados.order(("marcas.marca ASC"  if params[:ordenar] == "marca")).order(preciorder(params[:precio])).busqueda(params[:q] || params[:buscar][:q])
+    @marcas_seleccionadas = params[:marca].split(",").map{|m| m.to_i } unless params[:marca].nil?
+    if params[:marca].blank?
+      @productos = Producto.includes(:marca).padres.publicados.order(("marcas.marca ASC"  if params[:ordenar] == "marca")).order(preciorder(params[:precio])).busqueda(params[:q] || params[:buscar][:q]).page(params[:page]).per(perparams(params[:ver]))
+    else
+      @marca = Marca.find(@marcas_seleccionadas)
+      @productos = Producto.includes(:marca).padres.publicados.where(:marca_id => @marca.map{|m| m.id }).order(("marcas.marca ASC"  if params[:ordenar] == "marca")).order(preciorder(params[:precio])).busqueda(params[:q] || params[:buscar][:q]).page(params[:page]).per(perparams(params[:ver]))
+    end
+    a = []
+    @filtrame.each do |r|
+      a << r.marca
+    end
+    @marcas_para_categoria = a.compact.uniq.sort
+    @productostotal = Producto.includes(:marca).padres.publicados.busqueda(params[:q] || params[:buscar][:q])
+    @productoscount = Producto.includes(:marca).padres.publicados.busqueda(params[:q] || params[:buscar][:q]).count
+    respond_to do |format|
+      format.js if request.xhr?
+      format.html
+    end
+  end
+
   def new
     @producto = Producto.new
     authorize! :manage, @producto
