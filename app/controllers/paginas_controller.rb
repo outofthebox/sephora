@@ -20,7 +20,12 @@ class PaginasController < ApplicationController
   end
 
   def registro_qr
+    @registro_qr = Registro.new
     render :layout => 'mobile'
+  end
+
+  def registro_qr_reg
+    raise params.inspect
   end
 
   def contacto

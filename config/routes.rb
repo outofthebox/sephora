@@ -10,6 +10,7 @@ Sephora::Application.routes.draw do
   post 'registro', :to => 'paginas#registro', :as => 'registro'
 
   get 'registro/qr', :to => 'paginas#registro_qr', :as => 'registro_qr'
+  post 'registro/qr/reg', :to => 'paginas#registro_qr_reg', :as => 'registro_qr_reg'
 
   get 'buscare', :to => 'utilidades#search', :as => 'buscare'
 

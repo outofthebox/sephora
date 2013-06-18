@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130415002939) do
+ActiveRecord::Schema.define(:version => 20130618193545) do
 
   create_table "categoria_productos", :force => true do |t|
     t.integer  "producto_id"
@@ -148,8 +148,10 @@ ActiveRecord::Schema.define(:version => 20130415002939) do
     t.string   "nombre"
     t.string   "email"
     t.string   "cp"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.string   "tienda"
+    t.boolean  "qr",         :default => false
   end
 
   create_table "secciones", :force => true do |t|
