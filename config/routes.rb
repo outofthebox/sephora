@@ -9,6 +9,8 @@ Sephora::Application.routes.draw do
   
   post 'registro', :to => 'paginas#registro', :as => 'registro'
 
+  get 'registro/qr', :to => 'paginas#registro_qr', :as => 'registro_qr'
+
   get 'buscare', :to => 'utilidades#search', :as => 'buscare'
 
   get   ':seccion', :to => 'secciones#ver', :constraints => { :seccion => /potencializahighlights|fraganciasparael|skincareparael|narsblushes|obsessionsbeautybloggers|hotnow|bestsellers|bbcreams|tintedmoisturizers|sephorabath|probrushes|beautyobsessions|vacaciones|ouidad|esteelaudernails|bronzers|clasicosdeskincare|mascaras2013/ }

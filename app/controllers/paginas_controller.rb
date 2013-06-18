@@ -18,6 +18,11 @@ class PaginasController < ApplicationController
       redirect_to root_path
     end
   end
+
+  def registro_qr
+    render :layout => 'mobile'
+  end
+
   def contacto
     @contacto = Contacto.new
   end
