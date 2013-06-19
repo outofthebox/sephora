@@ -2,13 +2,20 @@
 - provide :descripcion, ""
 - provide :url, "http://sephora.com.mx/registro/qr"
 - provide :imagen, ''
-.right
-  =image_tag 'mobile/lineas.png'
-.left
-  =image_tag 'mobile/llamita.png'
-= form_for @registro_qr, :url => registro_qr_reg_path do |f|
-  = f.labelbrtext 'MAIL:', :email
-  = f.select :tienda, options_for_select([["Sephora Antara"],["Sephora Interlomas"],["Sephora Angelópolis (Puebla)"],["Sephora Satélite"],["Sephora Santa Fe"],["Sephora Andares (Guadalajara)"]])
-  = f.submit 'Enviar'
-// .success
-
+.header
+- unless flash[:reg]
+  %h1 ¡REGÍSTRATE!
+  = form_for @registro_qr, :url => registro_qr_reg_path do |f|
+    = f.label :email, 'MAIL:'
+    = f.text_field :email, :class => 'txtfield'
+    = f.label :tienda, 'TIENDA:'
+    = f.select :tienda, options_for_select([["Sephora Antara"],["Sephora Interlomas"],["Sephora Angelópolis (Puebla)"],["Sephora Satélite"],["Sephora Santa Fe"],["Sephora Andares (Guadalajara)"]])
+    .check
+      = check_box("suscripcion", "sus", {:class => 'checkbox'})
+      %a{:href => politicas_path, :class => 'checkbox_label', :target => 'blank'}
+        Acepto términos y condiciones
+    = f.submit 'Enviar', :class => 'enviar', :id => 'send', :disabled => 'true'
+- else
+  %h1.exito ¡Genial, desde ahora<br />recibirás antes que<br />nadie lo último<br />de <span>Sephora</span>!
+  %p
+  .success

@@ -25,7 +25,17 @@ class PaginasController < ApplicationController
   end
 
   def registro_qr_reg
-    raise params.inspect
+    @registro_qr = Registro.new params[:registro]
+    @registro_qr.qr = true
+    if @registro_qr.save
+      h = Hominid::API.new(ENV['MAILCHIMP_API'], {:secure => true, :timeout => 60})
+      unless h.list_subscribe(ENV['MAILCHIMP_LIST_ID'], params[:registro][:email], {'FNAME' => params[:registro][:nombre] || '', 'LNAME' => params[:registro][:apellido] || '', 'CP' => params[:registro][:cp] || '', 'MMERGE11' => params[:registro][:tienda] || '', 'MMERGE12' => 'QR'}, 'html', true, true, true, true).nil?
+        flash[:reg] = true
+      end
+      redirect_to registro_qr_path
+    else
+      redirect_to registro_qr_path
+    end
   end
 
   def contacto
