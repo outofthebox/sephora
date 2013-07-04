@@ -107,6 +107,8 @@ Sephora::Application.routes.draw do
     resources :secciones
   end
 
+  get '/consultorpersonalbelleza', :to => 'paginas#consultores', :as => 'consultores'
+
   #ANIVERSARIO
   get '365'    => 'paginas#aniversario', :as => :aniversario
   get '365dias'    => 'paginas#aniversario', :as => :aniversario

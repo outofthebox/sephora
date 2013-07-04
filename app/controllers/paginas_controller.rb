@@ -163,4 +163,6 @@ class PaginasController < ApplicationController
   end
   def colorvision
   end
+  def consultor
+  end
 end

@@ -1859,3 +1859,76 @@ a.close {
       }
   }
 }
+.consultores {
+  h4 {
+    text-transform: uppercase;
+    font-family: 'Avant';
+    font-size: 2.5em;
+    margin-top: 35px;
+  }
+  h5 {
+    font-size: 1em;
+    margin-top: 30px;
+    b {
+      display: block;
+      margin-top: 5px;
+    }
+  }
+  .boton {
+    width: 150px;
+    height: 32px;
+    font-family: 'Avant';
+    color: #FFF;
+    font-size: 0.9em !important;
+    font-weight: bold;
+    background: #000;
+    display: inline-block;
+    line-height: 32px;
+    margin-right: 10px;
+    padding-left: 0 !important;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  hr {
+    background: #000;
+    height: 2px;
+    border: 0;
+    width: 90%;
+    margin: 20px auto;
+  }
+  .citas {
+    p {
+      font-size: 0.9em !important;
+      margin: 15px 0 15px 0;
+      span {
+        color: #dc0000;
+      }
+      span.notice {
+        color: #000;
+        display: block;
+        font-size: 0.8em !important;
+        margin: 0 !important;
+      }
+    }
+  }
+  .list {
+    margin-top: 35px;
+    p {
+      margin: 15px 0 15px 25px;
+      font-size: 0.8em !important;
+    }
+  }
+}
+.contizq {
+  ul {
+    width: 90%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      font-size: 0.8em;
+      padding: 10px;
+    }
+  }
+}
