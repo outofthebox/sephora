@@ -12,6 +12,7 @@
         %li
           .producto-imagen
             =image_tag 'home/hotnow.jpg'
+            %br
             =link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
           .producto-info
             %p
