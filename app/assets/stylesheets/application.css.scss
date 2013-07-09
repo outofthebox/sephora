@@ -1860,6 +1860,10 @@ a.close {
   }
 }
 .consultores {
+  h2 {
+    font-size: 0.8em !important;
+    padding: 5px 0 5px 0 !important;
+  }
   h4 {
     text-transform: uppercase;
     font-family: 'Avant';
@@ -1922,13 +1926,14 @@ a.close {
 }
 .contizq {
   ul {
-    width: 90%;
+    width: 95% !important;
     list-style: none;
     margin: 0;
     padding: 0;
+    border-top: 5px solid black;
     li {
       font-size: 0.8em;
-      padding: 10px;
+      padding: 5px 5px 5px 0 !important;
     }
   }
 }
