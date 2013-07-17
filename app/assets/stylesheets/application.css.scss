@@ -129,7 +129,7 @@ ul.breadcrumbs{
       position: relative;
       #search {
         position: absolute;
-        margin: 0 10px 0;
+        margin: 0 0 0;
         width: 170px;
           input[type=text] {
             height: 22px;
@@ -155,10 +155,9 @@ ul.breadcrumbs{
     }
     nav#menu {
       font-size: 8pt;
-      text-align: center;
+      text-align: left;
       padding-top: 50px;
       font-weight: bold;
-      margin-right: 150px;
       li {
         padding: 0.6em 0.6em;
         position: relative;
@@ -166,6 +165,9 @@ ul.breadcrumbs{
           -webkit-box-shadow: 2px 2px 12px gray;
           -moz-box-shadow:    2px 2px 12px gray;
           box-shadow:         2px 2px 12px gray;
+        }
+        &:first-child {
+          padding-left: 0;
         }
       }
       a{
@@ -410,7 +412,6 @@ ul.breadcrumbs{
   #slider-home {
     height: auto;
     border-top: 1px solid #B2B2B2;
-    border-bottom: 5px solid black;
     #producto {
       height: auto;
       .producto-imagen{
@@ -441,7 +442,7 @@ ul.breadcrumbs{
           font-weight: 100;
         }
         .producto-p{
-          border-top:5px solid #918F90;
+          border-top:2px solid #918F90;
           p{
             font-size:1em;
           }
@@ -450,6 +451,7 @@ ul.breadcrumbs{
     }
     #poster {
       height: auto;
+      border-bottom: 5px solid black;
       .contenedor {
           width: $withslider;
           overflow: hidden;
