@@ -17,15 +17,15 @@
             %li
               .table.full
                 .tcell.t15
-                  =image_tag "secciones/#{i+1}.png"
+                  =image_tag "secciones/#{i+1}.png", :class => 'numero'
                 .info.tcell.t60
                   %h4
                     = producto.marca.marca
                   %h5
-                    = producto.nombre.split(' ').map {|w| w.capitalize }.join(' ')
+                    = producto.nombre_real.empty? ? producto.nombre : producto.nombre_real
                   - unless seccion_producto.descripcion.empty?
                     %p
                       = seccion_producto.descripcion.html_safe
                 .tcell.t15
                   =link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
-              =image_tag ('secciones/border.png')
+              =image_tag 'secciones/border.png', :class => 'sep'
