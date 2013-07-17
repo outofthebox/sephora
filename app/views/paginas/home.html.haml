@@ -46,10 +46,8 @@
 - if @bestsellers and (bestsellers_productos = @bestsellers.producto_seccion) and bestsellers_productos.any?
   #best-sellers
     %h3 BEST SELLERS
-    %a#slideleft
-    %a#slideright
     #slider-wrap
-      %ul.nobullet.nolist.bestsellers
+      %ul.nobullet.nolist.bestsellers#bestsellers.jcarousel-skin-tango
         - bestsellers_productos.each_with_index do |bestsellers_producto, i|
           - producto = bestsellers_producto.producto
           %li
@@ -68,10 +66,8 @@
 - if @lonuevo and (lonuevo_productos = @lonuevo.producto_seccion) and lonuevo_productos.any?
   #best-sellers
     %h3 LO NUEVO
-    %a#slideleft2
-    %a#slideright2
     #slider-wrap
-      %ul.nobullet.nolist.lonuevo
+      %ul.nobullet.nolist#lonuevo.jcarousel-skin-tango
         - lonuevo_productos.each do |lonuevo_producto|
           - producto = lonuevo_producto.producto
           %li

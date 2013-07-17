@@ -5,6 +5,7 @@
 // = require secciones
 // = require jquery.ui.all
 // = require redactor
+// = require tango
 $withslider: 760px;
 $slides: 2;
 
@@ -527,29 +528,24 @@ ul.breadcrumbs{
         letter-spacing: 1px;
       }
     }
-    #slideleft, #slideleft2, #slideright, #slideright2 {
+    #slideleft, #slideright {
       z-index: 99;
       cursor: pointer;
     }
-    #slideleft, #slideleft2 {
+    #slideleft {
       width: 51px;
       height: 85px;
       background: image-url('home/left.png');
-      position: absolute;
-      margin-top: 20px;
-      left: -20px;
+      margin-left: -40px;
     }
-    #slideright, #slideright2 {
+    #slideright {
       width: 51px;
       height: 85px;
       background: image-url('home/right.png');
-      position: absolute;
-      margin-top: 20px;
-      right: -20px;
+      margin-right: -40px;
     }
     #slider-wrap {
       height: auto;
-      overflow: hidden;
       height: 260px;
       width: 960px;
       position: relative;
