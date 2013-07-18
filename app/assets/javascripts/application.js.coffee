@@ -21,8 +21,13 @@ $("#opensearch").on "click", (e) ->
   e.preventDefault()
   $(this).hide()
   $("#realsubmit").show()
-  $("#searchbox").show().animate width: "160px", left: "-162px"
-  $("#closesubmit").show().animate left: "-175px"
+  $("#searchbox").show().animate
+    width: "160px",
+    left: "-162px"
+  , 150
+  $("#closesubmit").show().animate
+    left: "-175px"
+  , 150
 
 $("#closesubmit").on "click", (e) ->
   e.preventDefault()
@@ -31,11 +36,11 @@ $("#closesubmit").on "click", (e) ->
   $("#searchbox").animate
     width: "1px",
     left: "0"
-  , ->
+  , 150, ->
     $("#searchbox").hide()
   $("#closesubmit").animate
     left: "0"
-  , ->
+  , 150, ->
     $("#closesubmit").hide()
 
 $("#vermascat").on "click", (e) ->

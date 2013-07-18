@@ -33,14 +33,14 @@
           =@producto.marca.marca
         %span.precio{:itemprop => "price"}
           #{number_to_currency(@producto.precio, :precision => 0)}
-        - if @producto.sku
-          %span.sku
-            SKU:
-            %span{:itemprop => "sku"}
-              =@producto.sku
       .producto
         %p{:itemprop => "name"}
           =@producto.nombre
+        - if @producto.sku && @producto.sku.length > 3 && !@producto.sku.empty?
+          %p.sku
+            SKU:
+            %span{:itemprop => "sku"}
+              =@producto.sku
       - if @producto.presentaciones and @producto.presentaciones.any?
         %ul.presentaciones.nolist.nobullet
           %li{:id => "prodclick"}
