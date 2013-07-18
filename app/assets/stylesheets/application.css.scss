@@ -70,7 +70,7 @@ ul.breadcrumbs{
   }
   li.highlighted{
     a{
-      color: #f00;
+      color: #c00;
     }
   }
 }
@@ -651,7 +651,7 @@ ul.breadcrumbs{
     font-size: 10pt;
     margin-left: 200px;
     margin-top: 15px;
-    color: red;
+    color: #c00;
     font-weight: bold;
     span {
       color: black;
@@ -805,6 +805,15 @@ ul.breadcrumbs{
       font-size: 11pt;
       text-transform: lowercase;
       padding: 7px 0 0 10px;
+    }
+    #vermascat:hover {
+      color: #555;
+    }
+    .mascat {
+      display: none;
+    }
+    .current {
+      color: #c00;
     }
     .contizq {
       font-size: 11pt;
@@ -1636,7 +1645,7 @@ section#obsequios {
   @include transition(0.5s, opacity, ease);
 }
 p.selected {
-  color: red;
+  color: #c00;
   margin: 0;
   padding: 0;
 }
@@ -1677,7 +1686,7 @@ p.selected {
     cursor: pointer;
   }
   li {
-    color: red;
+    color: #c00;
     a {
       display: block;
     }

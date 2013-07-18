@@ -38,6 +38,11 @@ $("#closesubmit").on "click", (e) ->
   , ->
     $("#closesubmit").hide()
 
+$("#vermascat").on "click", (e) ->
+  e.preventDefault()
+  $(".mascat").show()
+  $(this).parent("li").hide()
+
 jQuery(document).ready ->
   jQuery("#lonuevo, #bestsellers").jcarousel
     visible: 5

@@ -237,3 +237,6 @@ figure figcaption{
   margin-left: 0;
   padding-left: 0;
 }
+.no-border.bottom {
+  border-bottom: none !important; 
+}

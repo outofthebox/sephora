@@ -13,26 +13,25 @@
   .table.full
     .contizq.tcell.t25
       - if @subcategorias && @subcategorias.any?
-        %h3
-          =@categoria.nombre
-        %ul
+        %ul.no-border.bottom
+          %li.current
+            =@categoria.nombre
+            %span (#{@productoscount})
           - @subcategorias.each do |subcategoria|
             %li
               = link_to subcategoria.nombre, categoria_ver_path(subcategoria.slug)
       - else
-        %ul
-          %li
+        %ul.no-border.bottom
+          %li.current
             =@categoria.nombre
             %span (#{@productoscount})
-        / %ul
-        /   - @categoria.root.descendants.each do |s|
-        /     %li
-        /       - if s == @categoria
-        /         %p.selected
-        /           = s.nombre
-        /           %span (#{@productoscount})
-        /       - else
-        /         = link_to s.nombre, categoria_ver_path(s.slug)
+          %li
+            %a#vermascat{:href => '#'}
+              Ver más +
+          .mascat
+            - @categoria.parent.children.each do |categoria|
+              - unless categoria.nombre == @categoria.nombre
+                %li=link_to categoria.nombre, categoria_ver_path(categoria.slug)
       %ul
         %li
           <strong>Filtrar por precio</strong>
