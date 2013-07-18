@@ -56,7 +56,7 @@
             %h5.marca
               = producto.marca.marca.upcase
             %h5
-              =link_to producto.nombre.split(' ').map {|w| w.capitalize }.join(' '), producto_ver_path(producto.slug)
+              =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), producto_ver_path(producto.slug)
             - unless bestsellers_producto.descripcion.empty?
               %p
                 = bestsellers_producto.descripcion
@@ -74,7 +74,7 @@
             %h5.marca
               = producto.marca.marca.upcase
             %h5
-              =link_to producto.nombre.split(' ').map {|w| w.capitalize }.join(' '), producto_ver_path(producto.slug)
+              =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), producto_ver_path(producto.slug)
             - unless lonuevo_producto.descripcion.empty?
               %p
                 = lonuevo_producto.descripcion
