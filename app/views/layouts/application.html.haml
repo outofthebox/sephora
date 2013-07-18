@@ -30,55 +30,8 @@
   %meta{:content => "qCft4n7tHfODiCl-UWgEd_uquba_MLlevA9txPjkYkk", :name => "google-site-verification"}
 %body
   #head-sup
-    #social
-      %ul.nolist
-        %li.noborder
-          %a#fb{:href => "http://www.facebook.com/SephoraMX", :target => "_blank"}
-          %a{:href => "http://www.facebook.com/SephoraMX", :target => "_blank"}
-            %p.social Facebook
-            %p.leyenda PROMOCIONES
-            %p.leyenda2 EXCLUSIVAS
-            %p.leyenda3
-              para nuestros fans
-              %span
-                %a.flecha{:href => "http://www.facebook.com/SephoraMX", :target => "_blank"}
-                  ►
-        %li
-          %a#pn{:href => "http://pinterest.com/sephoramx/", :target => "_blank"}
-          %a{:href => "http://pinterest.com/sephoramx/", :target => "_blank"}
-            %p.social Pinterest
-            %p.leyenda INSPÍRATE
-            %p.leyenda2 con NUESTROS
-            %p.leyenda3
-              boards
-              %span
-                %a.flecha{:href => "http://pinterest.com/sephoramx/", :target => "_blank"}
-                  ►
-        %li
-          %a#tw{:href => "https://twitter.com/SephoraMX", :target => "_blank"}
-          %a{:href => "https://twitter.com/SephoraMX", :target => "_blank"}
-            %p.social Twitter
-            %p.leyenda SIGUE
-            %p.leyenda2 NUESTRAS BEAUTY
-            %p.leyenda3
-              news al intante
-              %span
-                %a.flecha{:href => "https://twitter.com/SephoraMX", :target => "_blank"}
-                  ►
-        %li
-          %a#yt{:href => "http://www.youtube.com/SephoraMex", :target => "_blank"}
-          %a{:href => "http://www.youtube.com/SephoraMex", :target => "_blank"}
-            %p.social YouTube
-            %p.leyenda
-              MIRA
-              %span NUESTRAS
-            %p.leyenda2 últimas tendencias
-            %p.leyenda3
-              en nuestro canal
-              %span
-                %a.flecha{:href => "http://www.youtube.com/SephoraMex", :target => "_blank"}
-                  ►
-
+    .contenedor
+      %a.logo{:href=>root_path}
   #wrap
     %header#encabezado
       #contenme
@@ -93,7 +46,7 @@
         %a{ :href => "/" }
           #logo
       %nav#menu
-        %ul.nobullet.nolist
+        %ul.nobullet.nolist.allmenu
           %li
             %a{:href => "/categoria/maquillaje"}
               Maquillaje
@@ -231,6 +184,19 @@
           %li
             %a{:href => "/tu-lista"}
               Tu Lista
+          %li.tiendas
+            %a{:href => "/tiendas"}
+              Tiendas
+          %li.search
+            = form_for :buscar, { :url => busqueda_path, :method => :get } do |f|
+              = f.submit '', :class => 'submit', :id => 'realsubmit'
+              %a.submit#opensearch{:href=>"#"}
+              %a#closesubmit{:href=>"#"} X
+              = f.text_field :q, :class => 'input', :placeholder  => "BUSCAR", :value => "#{(params[:buscar][:q]) unless params[:buscar].nil?}", :id => "searchbox"
+          %li.sociales
+            %a.yt{:href=>'http://www.youtube.com/SephoraMex', target: 'blank', title:"Sephora en Youtube"}
+            %a.fb{:href=>'https://www.facebook.com/SephoraMX', target: 'blank', title:"Sephora en Facebook"}
+            %a.tw{:href=>'http://twitter.com/SephoraMX', target: 'blank', title:"Sephora en Twitter"}
           .select
             - if @marcas_all and @marcas_all.any?
               .trigger

@@ -77,15 +77,166 @@ ul.breadcrumbs{
 // BANDA NEGRA SUPERIOR
 #head-sup {
   background: #000;
-  height: auto;
-  .infologin {
+  height: 34px;
+  width: 100%;
+  position: fixed;
+  z-index: 99999999;
+  color: #FFF;
+  .select{
+    display: none;
+  }
+  .contenedor {
     width: 960px;
     margin: 0 auto;
-    span, a {
-      color: white;
-      font-size: 0.8em;
-      padding-left: 15px;
-      line-height: 32px;
+    position: relative;
+    .logo {
+      width: 5px;
+      height: 25px;
+      background-image: image-url('flame.png');
+      display: block;
+      position: absolute;
+      top: 5px;
+      left: 0;
+      text-decoration: none;
+    }
+  }
+  ul {
+    font-size: 7pt;
+    text-align: left;
+    font-weight: lighter;
+    padding-left: 20px;
+    height: 34px;
+    li {
+      padding: 0 0 0 0.8em;
+      position: relative;
+      height: 34px;
+      line-height: 34px;
+      display: inline-block;
+      &:hover {
+
+      }
+      &:first-child {
+        padding-left: 0;
+      }
+      &.sociales {
+        padding-top: 5px;
+        float: right;
+        a {
+          display: inline-block;
+          margin-right: 10px;
+          background-repeat: no-repeat;
+          &.tw {
+            width: 14px;
+            height: 15px;
+            background-image: image-url('tw_icon.png');
+          }
+          &.fb {
+            width: 7px;
+            height: 16px;
+            background-image: image-url('fb_icon.png');
+          }
+          &.yt {
+            width: 16px;
+            height: 17px;
+            background-image: image-url('yt_icon.png');
+          }
+        }
+      }
+      &.search {
+        float: right;
+        padding: 5px 0 0 0;
+        #closesubmit {
+          position: absolute;
+          color: #FFF;
+          display: block;
+          height: 10px;
+          width: 10px;
+          top: 0;
+          left: 0;
+          z-index: 999999;
+          display: none;
+        }
+        input[type=text] {
+          height: 22px;
+          border: 1px solid black;
+          border-radius: 0;
+          width: 1px;
+          display: none;
+          position: absolute;
+          &:before {
+            content: "X";
+            color: #FFF;
+          }
+        }
+        .submit{
+          background: #000 image-url('buscar.png') no-repeat -3px 0;
+          width: 26px;
+          height: 22px;
+          border-radius: 0;
+          border: none;
+          vertical-align: top;
+          float: right;
+          display: none;
+          &#opensearch {
+            display: block;
+          }
+        }
+      }
+    }
+    a{
+      text-transform: uppercase;
+      color: #FFF;
+      text-decoration: none;
+      display: block;
+      width: 100%;
+      height: 100%;
+      &.holiday {
+        color: white;
+      }
+    }
+    .submenu {
+      text-align: left;
+      margin: 0;
+      padding: 0;
+      width: 300px;
+      position: absolute;
+      background-image: image-url('bg_submenu_black.png');
+      display: none;
+      -webkit-box-shadow: 3px 3px 6px gray;
+      -moz-box-shadow:    3px 3px 6px gray;
+      box-shadow:         3px 3px 6px gray;
+      overflow: hidden;
+      z-index: 9999;
+      height: auto;
+      li {
+        margin: 0;
+        padding: 0;
+        font-weight: lighter;
+        width: 100%;
+        height: 22px;
+        display: block;
+        line-height: 22px;
+        a {
+          padding-left: 5px;
+          color: #FFF;
+        }
+        &:hover {
+          box-shadow: none;
+          -mox-box-shadow: none;
+          -webkit-box-shadow: none;
+        & a {
+            width: 100%;
+            height: 22px;
+            line-height: 22px;
+            display: block;
+            color: #FFF;
+            &:hover {
+              color: white;
+              background: black;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -95,6 +246,7 @@ ul.breadcrumbs{
   position:relative;
   margin: 0 auto;
   width: 960px;
+  padding-top: 40px;
 
 // fondo sephora
 .flame-left{
@@ -158,6 +310,9 @@ ul.breadcrumbs{
       text-align: left;
       padding-top: 50px;
       font-weight: bold;
+      .tiendas, .sociales, .search {
+        display: none;
+      }
       li {
         padding: 0.6em 0.6em;
         position: relative;
@@ -199,7 +354,9 @@ ul.breadcrumbs{
           height: 22px;
           display: block;
           line-height: 22px;
-          padding-left: 5px;
+          a {
+            padding-left: 5px;
+          }
           &:hover {
             box-shadow: none;
             -mox-box-shadow: none;
