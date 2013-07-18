@@ -37,7 +37,7 @@
           = f.submit '', :class => 'submit', :id => 'realsubmit'
           %a.submit#opensearch{:href=>"#"}
           %a#closesubmit{:href=>"#"} X
-          = f.text_field :q, :class => 'input', :placeholder  => "Buscar", :value => "#{(params[:buscar][:q]) unless params[:buscar].nil?}", :id => "searchbox"
+          = f.text_field :q, :class => 'input', :placeholder  => "Buscar", :value => "", :id => "searchbox"
       .sociales
         %a.yt{:href=>'http://www.youtube.com/SephoraMex', target: 'blank', title:"Sephora en Youtube"}
         %a.fb{:href=>'https://www.facebook.com/SephoraMX', target: 'blank', title:"Sephora en Facebook"}

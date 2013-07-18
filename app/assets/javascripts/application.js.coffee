@@ -19,7 +19,7 @@ $("#opensearch").on "click", (e) ->
   $("#realsubmit").show()
   $("#searchbox").show().animate
     width: "160px",
-    left: "-162px"
+    left: "-160px"
   , 150
   $("#closesubmit").show().animate
     left: "-175px"
@@ -33,11 +33,11 @@ $("#closesubmit").on "click", (e) ->
     width: "0",
     left: "0"
   , 150, ->
-    $("#searchbox").hide()
+    $(this).hide().val('')
   $("#closesubmit").animate
     left: "0"
   , 150, ->
-    $("#closesubmit").hide()
+    $(this).hide()
 
 $("#vermascat").on "click", (e) ->
   e.preventDefault()
