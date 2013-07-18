@@ -49,6 +49,7 @@ jQuery(document).ready ->
     visible: 5
     buttonNextHTML: '<p id="slideright"></p>'
     buttonPrevHTML: '<p id="slideleft"></p>'
+    scroll: 5
 
 $(document).on "click", "a#share", (e) ->
   loc = undefined
