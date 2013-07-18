@@ -32,6 +32,16 @@
   #head-sup
     .contenedor
       %a.logo{:href=>root_path}
+      .search
+        = form_for :buscar, { :url => busqueda_path, :method => :get } do |f|
+          = f.submit '', :class => 'submit', :id => 'realsubmit'
+          %a.submit#opensearch{:href=>"#"}
+          %a#closesubmit{:href=>"#"} X
+          = f.text_field :q, :class => 'input', :placeholder  => "Buscar", :value => "#{(params[:buscar][:q]) unless params[:buscar].nil?}", :id => "searchbox"
+      .sociales
+        %a.yt{:href=>'http://www.youtube.com/SephoraMex', target: 'blank', title:"Sephora en Youtube"}
+        %a.fb{:href=>'https://www.facebook.com/SephoraMX', target: 'blank', title:"Sephora en Facebook"}
+        %a.tw{:href=>'http://twitter.com/SephoraMX', target: 'blank', title:"Sephora en Twitter"}
   #wrap
     %header#encabezado
       #contenme
@@ -187,16 +197,6 @@
           %li.tiendas
             %a{:href => "/tiendas"}
               Tiendas
-          %li.search
-            = form_for :buscar, { :url => busqueda_path, :method => :get } do |f|
-              = f.submit '', :class => 'submit', :id => 'realsubmit'
-              %a.submit#opensearch{:href=>"#"}
-              %a#closesubmit{:href=>"#"} X
-              = f.text_field :q, :class => 'input', :placeholder  => "BUSCAR", :value => "#{(params[:buscar][:q]) unless params[:buscar].nil?}", :id => "searchbox"
-          %li.sociales
-            %a.yt{:href=>'http://www.youtube.com/SephoraMex', target: 'blank', title:"Sephora en Youtube"}
-            %a.fb{:href=>'https://www.facebook.com/SephoraMX', target: 'blank', title:"Sephora en Facebook"}
-            %a.tw{:href=>'http://twitter.com/SephoraMX', target: 'blank', title:"Sephora en Twitter"}
           .select
             - if @marcas_all and @marcas_all.any?
               .trigger

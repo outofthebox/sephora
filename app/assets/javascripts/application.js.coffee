@@ -12,10 +12,6 @@ $(window).scroll ->
     $("#menu ul.allmenu").appendTo('#head-sup .contenedor').hide().fadeIn('fast')
   else
     $("#head-sup ul.allmenu").appendTo "#menu"
-    $("#opensearch").show()
-    $("#realsubmit").hide()
-    $("#searchbox").hide().css width: "1px", left: "0"
-    $("#closesubmit").hide().css left: "0"
 
 $("#opensearch").on "click", (e) ->
   e.preventDefault()
@@ -34,7 +30,7 @@ $("#closesubmit").on "click", (e) ->
   $("#opensearch").show()
   $("#realsubmit").hide()
   $("#searchbox").animate
-    width: "1px",
+    width: "0",
     left: "0"
   , 150, ->
     $("#searchbox").hide()

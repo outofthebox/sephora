@@ -100,6 +100,84 @@ ul.breadcrumbs{
       text-decoration: none;
     }
   }
+  .sociales {
+    padding: 0 0 0 0.8em;
+    position: relative;
+    height: 34px;
+    line-height: 34px;
+    display: inline-block;
+    padding-top: 3px;
+    float: right;
+    a {
+      display: inline-block;
+      margin-right: 10px;
+      background-repeat: no-repeat;
+      &.tw {
+        width: 14px;
+        height: 15px;
+        background-image: image-url('tw_icon.png');
+      }
+      &.fb {
+        width: 7px;
+        height: 16px;
+        background-image: image-url('fb_icon.png');
+      }
+      &.yt {
+        width: 16px;
+        height: 17px;
+        background-image: image-url('yt_icon.png');
+      }
+    }
+  }
+  .search {
+    padding: 0 0 0 0.8em;
+    position: relative;
+    height: 34px;
+    line-height: 34px;
+    display: inline-block;
+    float: right;
+    padding: 7px 0 0 0;
+    #closesubmit {
+      font-size: 0.6em;
+      position: absolute;
+      color: #FFF;
+      display: block;
+      height: 10px;
+      width: 10px;
+      top: 2px;
+      left: 0;
+      z-index: 999999;
+      display: none;
+    }
+    input[type=text] {
+      height: 22px;
+      border: 1px solid black;
+      border-radius: 0;
+      width: 1px;
+      display: none;
+      position: absolute;
+      z-index: 9999999;
+      text-transform: inherit;
+      font-size: 0.8em;
+      &:before {
+        content: "X";
+        color: #FFF;
+      }
+    }
+    .submit{
+      background: #000 image-url('buscar.png') no-repeat -3px 0;
+      width: 26px;
+      height: 22px;
+      border-radius: 0;
+      border: none;
+      vertical-align: top;
+      float: right;
+      display: none;
+      &#opensearch {
+        display: block;
+      }
+    }
+  }
   ul {
     font-size: 7pt;
     text-align: left;
@@ -117,70 +195,6 @@ ul.breadcrumbs{
       }
       &:first-child {
         padding-left: 0;
-      }
-      &.sociales {
-        padding-top: 5px;
-        float: right;
-        a {
-          display: inline-block;
-          margin-right: 10px;
-          background-repeat: no-repeat;
-          &.tw {
-            width: 14px;
-            height: 15px;
-            background-image: image-url('tw_icon.png');
-          }
-          &.fb {
-            width: 7px;
-            height: 16px;
-            background-image: image-url('fb_icon.png');
-          }
-          &.yt {
-            width: 16px;
-            height: 17px;
-            background-image: image-url('yt_icon.png');
-          }
-        }
-      }
-      &.search {
-        float: right;
-        padding: 5px 0 0 0;
-        #closesubmit {
-          position: absolute;
-          color: #FFF;
-          display: block;
-          height: 10px;
-          width: 10px;
-          top: 0;
-          left: 0;
-          z-index: 999999;
-          display: none;
-        }
-        input[type=text] {
-          height: 22px;
-          border: 1px solid black;
-          border-radius: 0;
-          width: 1px;
-          display: none;
-          position: absolute;
-          &:before {
-            content: "X";
-            color: #FFF;
-          }
-        }
-        .submit{
-          background: #000 image-url('buscar.png') no-repeat -3px 0;
-          width: 26px;
-          height: 22px;
-          border-radius: 0;
-          border: none;
-          vertical-align: top;
-          float: right;
-          display: none;
-          &#opensearch {
-            display: block;
-          }
-        }
       }
     }
     a{
