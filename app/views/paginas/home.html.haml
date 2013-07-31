@@ -5,7 +5,7 @@
 #slider-home.full
   #producto.tcell.t25.middle
     %ul.nobullet.nolist.home
-      - seccion_productos = @contenido.producto_seccion.limit(3)
+      - seccion_productos = @contenido.producto_seccion.limit(6)
       - seccion_productos.each do |seccion_producto|
         - producto = seccion_producto.producto
         %li
