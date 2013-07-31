@@ -27,7 +27,7 @@
             %span (#{@productoscount})
           %li
             %a#vermascat{:href => '#'}
-              Ver más +
+              Más categorías +
           .mascat
             - @categoria.parent.children.each do |categoria|
               - unless categoria.nombre == @categoria.nombre
