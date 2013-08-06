@@ -14,7 +14,7 @@ Sephora::Application.routes.draw do
 
   get 'buscare', :to => 'utilidades#search', :as => 'buscare'
 
-  get   ':seccion', :to => 'secciones#ver', :constraints => { :seccion => /potencializahighlights|fraganciasparael|skincareparael|narsblushes|obsessionsbeautybloggers|hotnow|bestsellers|bbcreams|tintedmoisturizers|sephorabath|probrushes|beautyobsessions|vacaciones|ouidad|esteelaudernails|bronzers|clasicosdeskincare|mascaras2013/ }
+  get   ':seccion', :to => 'secciones#ver', :constraints => { :seccion => /potencializahighlights|fraganciasparael|skincareparael|narsblushes|obsessionsbeautybloggers|hotnow|bestsellers|bbcreams|tintedmoisturizers|sephorabath|probrushes|beautyobsessions|vacaciones|ouidad|esteelaudernails|bronzers|clasicosdeskincare|mascaras2013|aceitesskincareagosto2013/ }
   get   'soluciones(/:id)', :to => 'secciones#soluciones', :as => 'soluciones'
   get   'favorites(/:id)', :to => 'secciones#favorites', :as => 'favorites'
   get   'holiday', :to => 'paginas#holiday', :as => 'holiday'
