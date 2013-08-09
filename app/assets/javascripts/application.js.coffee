@@ -244,6 +244,9 @@ $('#producto ul.home li:first').show()
   $('#producto ul.home li:first').delay(5000).fadeOut()
   $('#producto ul.home li:nth-child(2)').delay(5000).fadeIn().delay(5000).fadeOut()
   $('#producto ul.home li:nth-child(3)').delay(10000).fadeIn().delay(5000).fadeOut '', ->
+  $('#producto ul.home li:nth-child(4)').delay(15000).fadeIn().delay(5000).fadeOut '', ->
+  $('#producto ul.home li:nth-child(5)').delay(20000).fadeIn().delay(5000).fadeOut '', ->
+  $('#producto ul.home li:nth-child(6)').delay(25000).fadeIn().delay(5000).fadeOut '', ->
     $('#producto ul.home li:first').fadeIn()
     hotnowslider()
 )()
