@@ -66,12 +66,23 @@ $("ul.allmenu li").live
   mouseleave: ->
     $(this).find('.submenu').hide();
 
+rotate = ->
+  $(".prox.jesus").click()
+
+intervalID = setInterval(->
+  rotate()
+, 5000)
+
 count = 1
 slides = 2
 width = 760
 counter = '/' + slides
 $(".prox p").text('1' + counter)
 $(".prox.jesus").live "click", ->
+  clearInterval intervalID
+  intervalID = setInterval(->
+    rotate()
+  , 5000)
   $(this).removeClass('jesus')
   if $(".slider").css('margin-left') == '-'+width*(slides-1)+'px'
     $(".slider").stop().animate {"margin-left": "+="+(slides-1)+"00%"}, "slow", ->
@@ -84,6 +95,10 @@ $(".prox.jesus").live "click", ->
     count = count + 1
     $(".prox p").text(count + counter)
 $(".ante.jesus").live "click", ->
+  clearInterval intervalID
+  intervalID = setInterval(->
+    rotate()
+  , 5000)
   $(this).removeClass('jesus')
   if $(".slider").css('margin-left') == '0px'
     $(".slider").stop().animate {"margin-left": "-="+(slides-1)+"00%"}, "slow", ->
