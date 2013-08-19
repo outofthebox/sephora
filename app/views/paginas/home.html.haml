@@ -18,7 +18,7 @@
               = producto.marca.marca
             .producto-p
               %p
-                =producto.nombre.split(' ').map {|w| w.capitalize }.join(' ')
+                =producto.nombre_real.empty? ? producto.nombre : producto.nombre_real
   #poster.tcell.t75
     .contenedor
       .prox.jesus
