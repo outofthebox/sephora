@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130618193545) do
+ActiveRecord::Schema.define(:version => 20130827205336) do
 
   create_table "categoria_productos", :force => true do |t|
     t.integer  "producto_id"
@@ -135,6 +135,8 @@ ActiveRecord::Schema.define(:version => 20130618193545) do
     t.integer  "uso_id"
     t.integer  "parent_id"
     t.string   "upc"
+    t.string   "image_code"
+    t.string   "personalidad"
   end
 
   add_index "productos", ["categoria_id"], :name => "index_productos_on_categoria_id"

@@ -125,11 +125,11 @@ class UtilidadesController < ApplicationController
     # CSV.foreach(csv) do |row|
     #   skus << row[0]
     # end
-    upcs = Producto.all.map{|r| r.upc}
+    upcs = Producto.all.map{|r| r.image_code}
     # upcs = (upcs + upcs2).compact.uniq
     Dir.glob('/home/kinduff/Escritorio/sephora/**/*.jpg').each do |path|
       # img_upc = File.basename(path, ".jpg")[/[a-z]?([0-9]+)/i].gsub(/([^0-9])/, '')
-      img_upc = File.basename(path, ".jpg").gsub(/[^\d]/, '')
+      img_upc = File.basename(path, ".jpg")
       if img_upc.in? upcs
         FileUtils.mv path, "/home/kinduff/Escritorio/sephora_filtrados/#{img_upc}.jpg"
       end
@@ -143,7 +143,7 @@ class UtilidadesController < ApplicationController
       if File.basename(logo_path)[0]!= '.' and !File.directory? logo_path
 
         upc = File.basename(logo_path, '.*') #filename without extension
-        producto = Producto.where(:upc => upc.to_s).first
+        producto = Producto.where(:image_code => upc.to_s).first
         raise "could not find client for client_code #{upc}" if producto.nil?
 
         File.open(logo_path) do |f|
