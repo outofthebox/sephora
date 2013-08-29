@@ -15,7 +15,7 @@ namespace :import do
     puts hr
     puts "Looping CSV..."
     puts hr
-    CSV.foreach(csv) do |row|
+    CSV.foreach(csv, {:col_sep => "\t"}) do |row|
       upc = row.at(0)
       image_code = row.at(1)
       nombre = row.at(2)
@@ -26,7 +26,8 @@ namespace :import do
         :nombre => nombre,
         :precio => precio,
         :categoria_id => 78,
-        :marca_id => 52
+        :marca_id => 52,
+        :publicado => false
       }
       puts "#{upc} - OK"
     end
