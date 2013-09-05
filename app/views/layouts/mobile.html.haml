@@ -18,15 +18,29 @@
   = stylesheet_link_tag :mobile
   = csrf_meta_tags
 %body 
+  .container
+    .sixteen.columns
+      .head
+        %ul
+          %li.logo
+            =image_tag "mobile/home/sephora_logo_mobile.png"
+          %li.corazon
+            =image_tag"mobile/home/favoritos_icon.png"
+          %li
+            %a{:href => "#"} ENTRAR
+          %li
+            %a{:href => "#"} MIS FAVS
+      %input.busqueda{:type => "search"}/
   #mobile
     = yield
-  #footer
-    .table.full.foot
-      .tcell.t30.lado
+  %footer
+    %ul.submenu
+      %li
         %a{:href => "#"} Legal
-      .tcell.t30.lado
+      %li
         %a{:href => "#"} Contacto
-      .tcell.t30.otro
-        %a{:href => "#"} Sitio web
-      .tcell.t30.otro
+      %li
+        %a{:href => "#"} Sitio Web
+      %li.atras
+        =link_to image_tag('mobile/home/flecha_regreso.png'),'#'
   = javascript_include_tag :mobile

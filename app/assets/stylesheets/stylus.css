@@ -1,0 +1,48 @@
+
+html, body {
+  height: 100%;
+}
+footer{
+  background:#000;
+  width:100%;
+  height:65px;
+  position:absolute;
+  bottom:0;
+  left:0;
+  top: 15px
+}
+.head{
+  background: #000;
+  color: #fff;
+  height: 75px;
+  overflow: auto;
+  width: 100%;
+}
+
+.head a{
+  color:#fff;
+  position: relative;
+  top: 40px;
+}
+.submenu li{
+  display: inline-block;
+  text-align: center;
+  width: 24%;
+}
+.submenu a{
+  color: #fff;
+}
+.menu li{
+display: inline-block;
+width: 32%;
+text-align: center;
+}
+.busqueda{
+  top: 10px;
+  position: relative;
+  width: 100%;
+  height: 40px;
+  -webkit-border-radius: 125px;
+  -moz-border-radius: 125px;
+  border-radius: 125px;
+}
