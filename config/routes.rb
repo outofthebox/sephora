@@ -129,6 +129,8 @@ Sephora::Application.routes.draw do
 
   #mobile
   get 'mobile', :to => 'mobile#home', :as => 'm_home'
+  get 'mobile/favoritos', :to => 'mobile#favoritos', :as => 'm_favoritos'
+  get 'mobile/cosmetiquera', :to => 'mobile#cosmetiquera', :as => 'm_cosmetiquera'
   # última línea, hace match con el resto de las rutas y muestra 404
   match  '*a', :to => 'paginas#error_404'
 end
