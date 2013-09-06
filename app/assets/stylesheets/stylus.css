@@ -37,11 +37,17 @@ width: 32%;
 text-align: center;
 }
 .busqueda{
-  top: 10px;
+  top: 0px;
   position: relative;
   width: 100%;
   height: 40px;
+  }
+#buscar_q{
+  width: 100%;
   -webkit-border-radius: 125px;
   -moz-border-radius: 125px;
   border-radius: 125px;
+  position: relative;
+  width: 100%;
+  height: 40px;
 }

@@ -30,7 +30,13 @@
             %a{:href => "#"} ENTRAR
           %li
             %a{:href => "#"} MIS FAVS
-      %input.busqueda{:type => "search"}/
+      .busqueda
+        = form_for :buscar, { :url => m_busqueda_path, :method => :get } do |f|
+          %p.nowrap
+            .table
+              .tcell.t95
+                = f.text_field :q, :class => 'input', :placeholder  => "BUSCAR", :value => "#{(params[:buscar][:q]) unless params[:buscar].nil?}"
+        %a{ :href => "/" }
   #mobile
     = yield
   %footer
