@@ -232,6 +232,7 @@ GEM
       rack (>= 1.0)
     watu_table_builder (0.3.0)
     websocket (1.0.7)
+    yaml_db (0.2.3)
 
 PLATFORMS
   ruby
@@ -271,3 +272,4 @@ DEPENDENCIES
   uglifier (>= 1.0.3)
   unicorn
   watu_table_builder
+  yaml_db

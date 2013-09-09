@@ -22,6 +22,7 @@ gem 'thinking-sphinx', '~> 3.0.0'
 gem 'mysql2',          '0.3.12b4'
 gem 'flying-sphinx'
 gem 'newrelic_rpm'
+gem 'yaml_db'
 
 group :assets do
   gem "jquery-rails", "~>1.0.19"
