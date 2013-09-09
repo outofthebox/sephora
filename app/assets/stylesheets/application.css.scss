@@ -1610,11 +1610,12 @@ section#obsequios {
   background-color: #fff;
   width: 900px;
   height: 500px;
-  position: absolute;
+  position: fixed;
   top: 160px;
   left: 50%;
   margin-left: -450px;
   border: 1px solid #d2d2d2;
+  outline: 9999px solid rgba(0,0,0,0.6);
   .cerrar {
     border: 1px solid black;
     color: black;
@@ -1652,6 +1653,10 @@ section#obsequios {
     span.marcab {
       font-weight: bold;
     }
+  }
+  .presentaciones {
+    height: 300px;
+    overflow: auto;
   }
   ul {
     li {
