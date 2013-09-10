@@ -9,7 +9,7 @@ $("#suscripcion_sus").click ->
     $("#send").attr "disabled", "disabled"
 $ ->
   $("#slider4").responsiveSlides
-    auto: true
+    auto: false
     timeout: 10000
     pager: false
     nav: true
@@ -28,3 +28,9 @@ $ ->
     $("#lista ul").not(desplegable).slideUp "fast"
     desplegable.slideToggle "fast"
     event.preventDefault()
+
+$("#pollo p").each (index) ->
+  $(this).hide()  unless $(this).text().trim().length
+
+$("#pollo h4").each (index) ->
+  $(this).hide()  unless $(this).text().trim().length

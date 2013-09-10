@@ -9,14 +9,7 @@
       #{number_to_currency(@producto.precio, :precision => 0)}
   .producto
     %p{:itemprop => "name"}
-      =@producto.nombre
-  - if @producto.presentaciones and @producto.presentaciones.any?
-    %ul.presentaciones.nolist.nobullet
-      %li{:id => "prodclick"}
-        = image_tag @producto.foto.url(:chico), :"data-normal" => @producto.foto.url(:normal), :"data-full" => @producto.foto.url(:grande), :"data-nombre" => @producto.nombre, :"data-precio" => number_to_currency(@producto.precio, :precision => 0)
-      - @producto.presentaciones.each do |presentacion|
-        %li{:id => "prodclick"}
-          = image_tag presentacion.foto.url(:chico), :"data-normal" => presentacion.foto.url(:normal), :"data-full" => presentacion.foto.url(:grande), :"data-nombre" => presentacion.nombre, :"data-precio" => number_to_currency(presentacion.precio, :precision => 0)
+      =@producto.nombre  
 .descripcion
   #tabmenu
     %ul

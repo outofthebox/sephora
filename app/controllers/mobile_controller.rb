@@ -43,6 +43,10 @@ class MobileController < ApplicationController
   def lonuevo
     @lonuevo = Seccion.seccion_actual(Seccion.by_slug(:lonuevo))
   end
+  def jotnao
+    @seccion = Seccion.by_slug(params[:seccion])
+    @contenido = Seccion.seccion_actual(@seccion)
+  end
   def registro
   end
 end

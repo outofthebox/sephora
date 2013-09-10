@@ -138,6 +138,7 @@ Sephora::Application.routes.draw do
   get 'mobile/beauty', :to => 'mobile#beauty', :as => 'm_beauty'
   get 'mobile/tiendas', :to => 'mobile#tiendas', :as => 'm_tiendas'
   get 'mobile/nuevo', :to => 'mobile#lonuevo', :as => 'm_nuevo'
+  get 'mobile/hotnow/:seccion', :to => 'mobile#jotnao', :as => 'm_hotnow'
   # última línea, hace match con el resto de las rutas y muestra 404
   match  '*a', :to => 'paginas#error_404'
 end
