@@ -40,7 +40,9 @@ class MobileController < ApplicationController
   def tiendas
     @tiendas = Tienda.all
   end
-
+  def lonuevo
+    @lonuevo = Seccion.seccion_actual(Seccion.by_slug(:lonuevo))
+  end
   def registro
   end
 end
