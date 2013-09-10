@@ -36,6 +36,11 @@ class MobileController < ApplicationController
     @categoria = Categoria.find(@producto.categoria_id)
     @productos_relacionados = @categoria.productos.padres.publicados.where("productos.id != ?", @producto.id).sample(3)
   end
+
+  def tiendas
+    @tiendas = Tienda.all
+  end
+
   def registro
   end
 end

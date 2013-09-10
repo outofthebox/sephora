@@ -20,3 +20,11 @@ $ ->
 
     after: ->
       $(".events").append "<li>after event fired.</li>"
+
+$ ->
+  $("#lista ul").hide()
+  $("#lista li").click (event) ->
+    desplegable = $(this).next()
+    $("#lista ul").not(desplegable).slideUp "fast"
+    desplegable.slideToggle "fast"
+    event.preventDefault()

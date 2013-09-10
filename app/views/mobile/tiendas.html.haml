@@ -1,0 +1,16 @@
+.tienda
+  %ul
+    - @tiendas.each do |t|
+      %li
+        .sucu
+          .cinco
+            = image_tag t.foto
+          .cuatro
+            %p 
+              = t.nombre
+            %p 
+              = t.horario
+            %p 
+              = t.contacto
+            %p 
+              = t.direccion
