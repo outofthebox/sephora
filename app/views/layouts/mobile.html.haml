@@ -8,7 +8,7 @@
   %meta{:charset => "UTF-8"}
   %title
     #{"#{yield(:titulo)} | " if content_for?(:titulo)} Sephora
-  %meta{:content => "width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;", :name => "viewport"}/
+  %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
   %meta{:content => "#{yield(:titulo)} | Sephora México", :property => "og:title"}
   %link{ :rel => "shortcut icon", :href => "/favicon.ico", :type => "image/x-icon"}/
   %meta{:name => "description", :content => yield(:descripcion)}
@@ -39,15 +39,15 @@
         %a{ :href => "/" }
   #mobile
     = yield
-  .main
-  %footer
-    %ul.submenu
-      %li
-        %a{:href => "#"} Legal
-      %li
-        %a{:href => "#"} Contacto
-      %li
-        %a{:href => "#"} Sitio Web
-      %li.atras
-        =link_to image_tag('mobile/home/flecha_regreso.png'), m_home_path
+    .main
+    %footer
+      %ul.submenu
+        %li
+          =link_to 'Legal',m_legal_path
+        %li
+          %a{:href => "#"} Contacto
+        %li
+          %a{:href => "http://sephora.com.mx/"} Sitio Web
+        %li.atras
+          =link_to image_tag('mobile/home/flecha_regreso.png'), m_home_path
   = javascript_include_tag :mobile

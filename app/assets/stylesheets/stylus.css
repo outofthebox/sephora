@@ -20,7 +20,7 @@ footer{
 }
 
 .head a{
-  color:#fff;
+  color:#fff !important;
   position: relative;
   top: 40px;
 }
@@ -30,7 +30,7 @@ footer{
   width: 24%;
 }
 .submenu a{
-  color: #fff;
+  color: #fff !important;
 }
 .menu li{
 display: inline-block;

@@ -35,6 +35,13 @@
       }
     }  
   }
+  //lo nuevo
+  .newproductos{
+    margin-top: 20px;
+    .callbacks_nav{
+      top: 15%;
+    }
+  }
   //hotnow
   .jotnao{
     margin-top: 20px;
@@ -72,7 +79,7 @@
     display: table-cell; 
     vertical-align: top;
     img{
-      margin-top: 800px;
+      margin-top: 40px;
     }
   }
   //beauty
@@ -104,6 +111,7 @@
       }
     }
   }
+  // tiendas
   .sucu{
     display: inline-block;
     width: 100%;
@@ -143,6 +151,49 @@
       position: relative;
       top: 17px;
     }
+  }
+  //video
+  .videos{
+    margin-top: 20px;
+    width: 90%;
+    border-bottom: 1px solid #000;
+    text-align:center;
+    left: 5%;
+    position: relative;
+    h3{
+      text-transform: uppercase;
+    }
+  }
+  //vides
+  .repvideos{
+    width: 90%;
+    left: 5%;
+    position: relative;
+    margin-top: 20px;
+    li{
+      border-bottom:1px solid #000;
+      a, a:visited {
+        color: #333;
+        text-decoration: none;
+        outline: 0;
+      }
+    }
+    .vidimg{
+      display: table-cell; 
+      vertical-align: top;
+      width: 49%;
+      img{
+        width: 150px;
+        height: 150px;
+      }
+    }
+  .titulovideo{
+    display: table-cell; 
+    vertical-align: top;
+    width: 49%;
+  }
+
+
   }
   //body
   .fav{
@@ -234,7 +285,6 @@
   }
   //footer
   footer{
-    position: relative !important;
   }
   .atras{
     img{
@@ -333,7 +383,6 @@
   }
 }
 footer{
-    position: relative !important;
   }
   .atras{
     img{
