@@ -1,12 +1,10 @@
 @media only screen and (max-width: 479px) {
   //header
   #mobile{
-    height: 100%;
     text-align: center;
-    padding-bottom: 65px;
   }
   .contenido{
-    height: 10%;
+    height: 75px;
     width: 90%;
     border-bottom: 1px solid #000;
     margin: 20px;
@@ -195,6 +193,21 @@
 
 
   }
+  //especiales
+  .seccionesp{
+    ul{
+      li{
+        img{
+          width: 90%;
+          height: 340px;
+        }
+      }
+    }
+  }
+  //
+  .legal{
+    margin-top: 20px;
+  }
   //body
   .fav{
     width: 100%;
@@ -271,7 +284,7 @@
     display: inline-block;
     img{
       width: 80%;
-      height: 80%;
+      height: 120px;
     }
   }
   .cajas{
@@ -295,7 +308,17 @@
     }
   }
 }
-
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  //Home
+  .video{
+    width: 100%;
+    position: relative;
+  left: 35%;
+    img{
+      width: 80% !important;
+    }
+  }
+}
 //mas medidas
 .fav{
     width: 100%;
@@ -361,7 +384,7 @@
     }
   }
   .imagenes{
-    height: 170px;
+    height: 150px;
     position: relative;
     text-align: center;
     top: 25px;
