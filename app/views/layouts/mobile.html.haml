@@ -1,23 +1,24 @@
 !!! 5
-:plain
-  <!--[if lt IE 7]> <html lang="es" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-  <!--[if IE 7]>    <html lang="es" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-  <!--[if IE 8]>    <html lang="es" class="no-js lt-ie9"> <![endif]-->
-  <!--[if gt IE 8]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
-%head
-  %meta{:charset => "UTF-8"}
-  %title
-    #{"#{yield(:titulo)} | " if content_for?(:titulo)} Sephora
-  %meta{:content => "width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;", :name => "viewport"}/
-  %meta{:content => "#{yield(:titulo)} | Sephora México", :property => "og:title"}
-  %link{ :rel => "shortcut icon", :href => "/favicon.ico", :type => "image/x-icon"}/
-  %meta{:name => "description", :content => yield(:descripcion)}
-  %meta{:content => yield(:url), :property => "og:url"}
-  %meta{:content => "Sephora México", :property => "og:site_name"}
-  %meta{:content => yield(:imagen), :property => "og:image"}
-  = stylesheet_link_tag :mobile
-  = csrf_meta_tags
-%body 
-  #mobile
-    = yield
-  = javascript_include_tag :mobile
+%html
+  :plain
+    <!--[if lt IE 7]> <html lang="es" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+    <!--[if IE 7]>    <html lang="es" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+    <!--[if IE 8]>    <html lang="es" class="no-js lt-ie9"> <![endif]-->
+    <!--[if gt IE 8]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
+  %head
+    %meta{:charset => "UTF-8"}
+    %title
+      #{"#{yield(:titulo)} | " if content_for?(:titulo)} Sephora
+    %meta{:content => "width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;", :name => "viewport"}/
+    %meta{:content => "#{yield(:titulo)} | Sephora México", :property => "og:title"}
+    %link{ :rel => "shortcut icon", :href => "/favicon.ico", :type => "image/x-icon"}/
+    %meta{:name => "description", :content => yield(:descripcion)}
+    %meta{:content => yield(:url), :property => "og:url"}
+    %meta{:content => "Sephora México", :property => "og:site_name"}
+    %meta{:content => yield(:imagen), :property => "og:image"}
+    = stylesheet_link_tag :mobile
+    = csrf_meta_tags
+  %body 
+    #mobile
+      = yield
+    = javascript_include_tag :mobile

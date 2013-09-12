@@ -165,4 +165,20 @@ class PaginasController < ApplicationController
   end
   def consultor
   end
+  def colorful
+    render :layout => 'colorful'
+  end
+  def colorful_show
+    @datass = params[:personalidad]
+    prods = case @datass 
+      when "hipster" then [8272, 8275, 8276, 8277, 8278, 8279, 8280, 8281, 8282, 8285, 8286, 8287, 8290, 8291, 8292, 8293, 8298, 8299, 8300, 8302, 8303, 8306, 8312, 8319, 8323, 8324, 8327, 8331]
+      when "chic" then [8273, 8274, 8285, 8296, 8297, 8298, 8301, 8302, 8304, 8306, 8307, 8308, 8309, 8310, 8311, 8313, 8314, 8318, 8319, 8320, 8321, 8323, 8324, 8325, 8328, 8329, 8330, 8331] 
+      when "junkie" then [8272, 8274, 8275, 8276, 8277, 8278, 8279, 8280, 8281, 8282, 8283, 8285, 8286, 8287, 8290, 8291, 8292, 8293, 8298, 8299, 8300, 8302, 8303, 8306, 8312, 8313, 8314, 8319, 8322, 8323, 8324, 8327]
+      when "rocker" then [8273, 8284, 8288, 8289, 8294, 8295, 8302, 8303, 8305, 8307, 8308, 8309, 8313, 8314, 8315, 8316, 8317, 8318, 8320, 8324, 8326]
+      else nil
+    end
+    @productos = Producto.find(prods)
+    @principal = Producto.find(8272).slug
+    render :layout => 'colorful'
+  end
 end

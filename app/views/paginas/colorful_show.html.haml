@@ -1,0 +1,37 @@
+#personalidad{:class => "#{params[:personalidad]}"}
+  .info
+    .logo
+    %hr
+    .descripcion
+      - case @datass
+        - when "hipster"
+          %p Única y original es la esencia que define tu personalidad, logrando con los toques perfectos un estilo desenfadado, combinando las tendencias naturales con un pop de color para sorprender con un look inigualable. ¡Inspírate y echa a volar tu imaginación!
+        - when "chic"
+          %p Sofisticada, elegante y con mucho estilo, las mujeres chic tienen el perfect match entre look y actitud, siempre están al tanto de las últimas tendencias y lo reflejan en con su lema: “menos es más”. 
+        - when "junkie"
+          %p Color, color y más color, looks nuevos y atrevidos marcan tu estilo glamoroso, tú no sigues tendencias… tú marcas tendencias, puedes hacer con cualquier color todo un look logrando el equilibrio entre sombras, blush y labios.
+        - when "rocker"
+          %p Desenfadada y rebelde, amante de los accesorios, tu estilo expresa tu individualidad y tu mirada revela tu pasión por la aventura. Desde smokys y delineados intensos hasta toques metálicos, sabes cómo lograr que todos se fijen en ti.
+    %hr
+    .sublogo
+    .descripcion
+      - case @datass
+        - when "hipster"
+          %p La combinación de tonos neutros y coloridos son lo único que necesitas para lucir fantástica. 
+        - when "chic"
+          %p Los tonos neutros y pasteles son ideales para conservar la naturalidad del rostro.
+        - when "junkie"
+          %p Pasando de azules, rosas a esmeraldas, el color es tu arma perfecta. 
+        - when "rocker"
+          %p Negro, tonos metálicos y brillos son perfectos para añadirle una dosis de sofisticación a tu look.
+    %ul.productos
+      - @productos.each do |r|
+        %li
+          = link_to image_tag(r.foto(:chico), :width => 40), producto_ver_path(@principal), :"data-big" => image_path(r.foto(:normal))
+          %p.loadit=image_tag r.foto(:normal), :width => 1
+    / .pinit
+    /   .subsublogo
+    /   %hr
+    /   %a.pinterest{:href=>"#"}
+  #big_image
+

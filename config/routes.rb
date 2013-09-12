@@ -6,6 +6,9 @@ Sephora::Application.routes.draw do
   devise_for :usuarios
 
   root :to => 'paginas#home'
+
+  get '/colorful', :to => 'paginas#colorful', :as => 'colorful'
+  get '/colorful/:personalidad', :to => 'paginas#colorful_show', :as => 'colorful_show'
   
   post 'registro', :to => 'paginas#registro', :as => 'registro'
 
