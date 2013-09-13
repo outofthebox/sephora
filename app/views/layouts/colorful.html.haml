@@ -7,7 +7,7 @@
 %head
   %meta{:charset => "UTF-8"}
   %title
-    #{"#{yield(:titulo)} | " if content_for?(:titulo)} Sephora
+    #{"#{yield(:titulo)} | " if content_for?(:titulo)} Sephora Colorful
   %meta{:content => "#{yield(:titulo)} | Sephora México", :property => "og:title"}
   %link{ :rel => "shortcut icon", :href => "/favicon.ico", :type => "image/x-icon"}/
   %meta{:name => "description", :content => yield(:descripcion)}
@@ -37,10 +37,10 @@
           .cell.left
             %p Share the love for Sephora
             %ul.links
-              %li=link_to '', '#', :class => 'fb'
-              %li=link_to '', '#', :class => 'tw'
-              %li=link_to '', '#', :class => 'yt'
-              %li=link_to '', '#', :class => 'in'
+              %li=link_to '', 'https://www.facebook.com/SephoraMX', :class => 'fb', :target => 'blank'
+              %li=link_to '', 'https://twitter.com/SephoraMX', :class => 'tw', :target => 'blank'
+              %li=link_to '', 'http://www.youtube.com/SephoraMex', :class => 'yt', :target => 'blank'
+              %li=link_to '', 'http://instagram.com/sephoramx', :class => 'in', :target => 'blank'
           .cell.right
             %p.first ¿No sabes cuál es tu personalidad?
             %p=link_to image_tag('colorful/btn_quiz.jpg'), '#', :id => 'quiz'

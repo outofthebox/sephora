@@ -1,3 +1,6 @@
+- content_for :descripcion, "Vive y personaliza el color con las nuevas Sephora Colorful Eyeshadows. ¿Cuál es tu personalidad? ¡Descúbrela!"
+- content_for :url, request.original_url
+- content_for :imagen, "#{request.protocol}#{request.host_with_port}" + image_path("colorful/colorful_social.jpg")
 %ul.personalidades
   %li=link_to '', colorful_show_path('hipster'), :class => 'hipster'
   %li=link_to '', colorful_show_path('chic'), :class => 'chic'

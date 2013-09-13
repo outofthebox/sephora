@@ -1,3 +1,6 @@
+- content_for :titulo, "Personalidad #{params[:personalidad].titleize}"
+- content_for :url, request.original_url
+- content_for :imagen, "#{request.protocol}#{request.host_with_port}" + image_path("colorful/#{params[:personalidad]}_social.jpg")
 #personalidad{:class => "#{params[:personalidad]}"}
   .info
     .logo
@@ -5,12 +8,16 @@
     .descripcion
       - case @datass
         - when "hipster"
+          - content_for :descripcion, "Única y original es la esencia que define tu personalidad, logrando con los toques perfectos un estilo desenfadado, combinando las tendencias naturales con un pop de color para sorprender con un look inigualable. ¡Inspírate y echa a volar tu imaginación!"
           %p Única y original es la esencia que define tu personalidad, logrando con los toques perfectos un estilo desenfadado, combinando las tendencias naturales con un pop de color para sorprender con un look inigualable. ¡Inspírate y echa a volar tu imaginación!
         - when "chic"
+          - content_for :descripcion, "Sofisticada, elegante y con mucho estilo, las mujeres chic tienen el perfect match entre look y actitud, siempre están al tanto de las últimas tendencias y lo reflejan en con su lema: “menos es más”."
           %p Sofisticada, elegante y con mucho estilo, las mujeres chic tienen el perfect match entre look y actitud, siempre están al tanto de las últimas tendencias y lo reflejan en con su lema: “menos es más”. 
         - when "junkie"
+          - content_for :descripcion, "Color, color y más color, looks nuevos y atrevidos marcan tu estilo glamoroso, tú no sigues tendencias… tú marcas tendencias, puedes hacer con cualquier color todo un look logrando el equilibrio entre sombras, blush y labios."
           %p Color, color y más color, looks nuevos y atrevidos marcan tu estilo glamoroso, tú no sigues tendencias… tú marcas tendencias, puedes hacer con cualquier color todo un look logrando el equilibrio entre sombras, blush y labios.
         - when "rocker"
+          - content_for :descripcion, "Desenfadada y rebelde, amante de los accesorios, tu estilo expresa tu individualidad y tu mirada revela tu pasión por la aventura. Desde smokys y delineados intensos hasta toques metálicos, sabes cómo lograr que todos se fijen en ti."
           %p Desenfadada y rebelde, amante de los accesorios, tu estilo expresa tu individualidad y tu mirada revela tu pasión por la aventura. Desde smokys y delineados intensos hasta toques metálicos, sabes cómo lograr que todos se fijen en ti.
     %hr
     .sublogo
