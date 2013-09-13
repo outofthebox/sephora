@@ -7,7 +7,7 @@
 %head
   %meta{:charset => "UTF-8"}
   %title
-    #{"#{yield(:titulo)} | " if content_for?(:titulo)} Sephora Colorful
+    #{"#{yield(:titulo)} | " if content_for?(:titulo)} Sephora Colorfu
   %meta{:content => "#{yield(:titulo)} | Sephora México", :property => "og:title"}
   %link{ :rel => "shortcut icon", :href => "/favicon.ico", :type => "image/x-icon"}/
   %meta{:name => "description", :content => yield(:descripcion)}
@@ -23,76 +23,83 @@
         load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
       });
 %body 
-  #video
-  #colorful
-    .header
-      .contenedor
+  - if params[:action] == "auth_please"
+    #auth
+      .header
         %a.logo{:href=>'/colorful/'}
-    .content
-      .contenedor
-        = yield
-    .footer
-      .contenedor
-        .social
-          .cell.left
-            %p Share the love for Sephora
-            %ul.links
-              %li=link_to '', 'https://www.facebook.com/SephoraMX', :class => 'fb', :target => 'blank'
-              %li=link_to '', 'https://twitter.com/SephoraMX', :class => 'tw', :target => 'blank'
-              %li=link_to '', 'http://www.youtube.com/SephoraMex', :class => 'yt', :target => 'blank'
-              %li=link_to '', 'http://instagram.com/sephoramx', :class => 'in', :target => 'blank'
-          .cell.right
-            %p.first ¿No sabes cuál es tu personalidad?
-            %p=link_to image_tag('colorful/btn_quiz.jpg'), '#', :id => 'quiz'
-  %ul#cuestionario
-    %li
-      %h2 ¿Qué productos de belleza llevas siempre contigo?
-      %p
-        %input{:type => "checkbox", :value => "0"} Bálsamo labial y sombra de un sólo tono.
-      %p
-        %input{:type => "checkbox", :value => "1"} Delineador y esmalte en tonos obscuros.
-      %p
-        %input{:type => "checkbox", :value => "2"} El lipstick y las sombras que te quedan increíble y que jamás pasarán de moda.
-      %p
-        %input{:type => "checkbox", :value => "3"} El último lanzamiento de tu marca favorita y el esmalte de uñas que está marcando tendencia
-    %li
-      %h2 ¿Para una cita cuál es tu look favorito?
-      %p
-        %input{:type => "checkbox", :value => "0"} Skinny jeans, maquillaje natural y un accesorio que destaque.
-      %p
-        %input{:type => "checkbox", :value => "1"} Chamarra de piel y ojos smoky.
-      %p
-        %input{:type => "checkbox", :value => "2"} Blusa con olanes y maquillaje en tonos pastel.
-      %p
-        %input{:type => "checkbox", :value => "3"} Con las últimas tendencias de pies a cabeza, tanto en outfit como maquillaje.
-    %li
-      %h2 En un viernes por la noche ¿Cuál es tu actividad favorita?
-      %p
-        %input{:type => "checkbox", :value => "0"} Reunirte con tus amigos para platicar en un lugar bohemio.
-      %p
-        %input{:type => "checkbox", :value => "1"} Ir al concierto de tu banda favorita.
-      %p
-        %input{:type => "checkbox", :value => "2"} Cena entre amigas en el lugar de moda.
-      %p
-        %input{:type => "checkbox", :value => "3"} Acudir al cocktail de apertura de un nuevo bar.
-    %li
-      %h2 ¿En qué eres especialista?
-      %p
-        %input{:type => "checkbox", :value => "0"} Arte y performance.
-      %p
-        %input{:type => "checkbox", :value => "1"} Música y accesorios.
-      %p
-        %input{:type => "checkbox", :value => "2"} Moda y Estilo.
-      %p
-        %input{:type => "checkbox", :value => "3"} Tendencias de belleza.
-    %li
-      %h2 ¿Cuál de estas frases te identifica?
-      %p
-        %input{:type => "checkbox", :value => "0"} Soy única, nadie es cómo yo.
-      %p
-        %input{:type => "checkbox", :value => "1"} Fuerza y personalidad.
-      %p
-        %input{:type => "checkbox", :value => "2"} Si la moda fuera alguien definitivamente sería yo.
-      %p
-        %input{:type => "checkbox", :value => "3"} Si quieres saber de belleza ¡mira y aprende!
+      = form_for :auth, :url => auth_please_path do |f|
+        =f.text_field :password, :placeholder => 'Pega aquí la contraseña'
+  - else
+    #video
+    #colorful
+      .header
+        .contenedor
+          %a.logo{:href=>'/colorful/'}
+      .content
+        .contenedor
+          = yield
+      .footer
+        .contenedor
+          .social
+            .cell.left
+              %p Share the love for Sephora
+              %ul.links
+                %li=link_to '', 'https://www.facebook.com/SephoraMX', :class => 'fb', :target => 'blank'
+                %li=link_to '', 'https://twitter.com/SephoraMX', :class => 'tw', :target => 'blank'
+                %li=link_to '', 'http://www.youtube.com/SephoraMex', :class => 'yt', :target => 'blank'
+                %li=link_to '', 'http://instagram.com/sephoramx', :class => 'in', :target => 'blank'
+            .cell.right
+              %p.first ¿No sabes cuál es tu personalidad?
+              %p=link_to image_tag('colorful/btn_quiz.jpg'), '#', :id => 'quiz'
+    %ul#cuestionario
+      %li
+        %h2 ¿Qué productos de belleza llevas siempre contigo?
+        %p
+          %input{:type => "checkbox", :value => "0"} Bálsamo labial y sombra de un sólo tono.
+        %p
+          %input{:type => "checkbox", :value => "1"} Delineador y esmalte en tonos obscuros.
+        %p
+          %input{:type => "checkbox", :value => "2"} El lipstick y las sombras que te quedan increíble y que jamás pasarán de moda.
+        %p
+          %input{:type => "checkbox", :value => "3"} El último lanzamiento de tu marca favorita y el esmalte de uñas que está marcando tendencia
+      %li
+        %h2 ¿Para una cita cuál es tu look favorito?
+        %p
+          %input{:type => "checkbox", :value => "0"} Skinny jeans, maquillaje natural y un accesorio que destaque.
+        %p
+          %input{:type => "checkbox", :value => "1"} Chamarra de piel y ojos smoky.
+        %p
+          %input{:type => "checkbox", :value => "2"} Blusa con olanes y maquillaje en tonos pastel.
+        %p
+          %input{:type => "checkbox", :value => "3"} Con las últimas tendencias de pies a cabeza, tanto en outfit como maquillaje.
+      %li
+        %h2 En un viernes por la noche ¿Cuál es tu actividad favorita?
+        %p
+          %input{:type => "checkbox", :value => "0"} Reunirte con tus amigos para platicar en un lugar bohemio.
+        %p
+          %input{:type => "checkbox", :value => "1"} Ir al concierto de tu banda favorita.
+        %p
+          %input{:type => "checkbox", :value => "2"} Cena entre amigas en el lugar de moda.
+        %p
+          %input{:type => "checkbox", :value => "3"} Acudir al cocktail de apertura de un nuevo bar.
+      %li
+        %h2 ¿En qué eres especialista?
+        %p
+          %input{:type => "checkbox", :value => "0"} Arte y performance.
+        %p
+          %input{:type => "checkbox", :value => "1"} Música y accesorios.
+        %p
+          %input{:type => "checkbox", :value => "2"} Moda y Estilo.
+        %p
+          %input{:type => "checkbox", :value => "3"} Tendencias de belleza.
+      %li
+        %h2 ¿Cuál de estas frases te identifica?
+        %p
+          %input{:type => "checkbox", :value => "0"} Soy única, nadie es cómo yo.
+        %p
+          %input{:type => "checkbox", :value => "1"} Fuerza y personalidad.
+        %p
+          %input{:type => "checkbox", :value => "2"} Si la moda fuera alguien definitivamente sería yo.
+        %p
+          %input{:type => "checkbox", :value => "3"} Si quieres saber de belleza ¡mira y aprende!
   = javascript_include_tag :colorful

@@ -8,6 +8,8 @@ Sephora::Application.routes.draw do
   root :to => 'paginas#home'
 
   get '/colorful', :to => 'paginas#colorful', :as => 'colorful'
+  get '/colorful/auth', :to => 'paginas#auth_please', :as => 'auth_please'
+  post '/colorful/auth', :to => 'paginas#auth_please_post', :as => 'auth_please_post'
   get '/colorful/:personalidad', :to => 'paginas#colorful_show', :as => 'colorful_show'
   
   post 'registro', :to => 'paginas#registro', :as => 'registro'

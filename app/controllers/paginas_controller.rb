@@ -1,4 +1,5 @@
 class PaginasController < ApplicationController
+  before_filter :auth, :only => [:colorful, :colorful_show]
   def home
     @bestsellers = Seccion.seccion_actual(Seccion.by_slug(:bestsellers))
     @lonuevo = Seccion.seccion_actual(Seccion.by_slug(:lonuevo))
@@ -180,5 +181,27 @@ class PaginasController < ApplicationController
     @productos = Producto.find(prods)
     @principal = Producto.find(8272).slug
     render :layout => 'colorful'
+  end
+
+  def auth_please
+    render :layout => 'colorful'
+  end
+  def auth_please_post
+    pass = params[:auth][:password]
+    if pass == ENV['colorful']
+      session[:colorful] = ENV['colorful']
+      redirect_to colorful_path
+    else
+      redirect_to auth_please_path
+    end
+  end
+
+  private
+  def auth
+    if session[:colorful] == ENV['colorful']
+      true
+    else
+      redirect_to auth_please_path
+    end
   end
 end

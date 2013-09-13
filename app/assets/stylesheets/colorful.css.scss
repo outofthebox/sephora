@@ -391,3 +391,18 @@ body, html {
 #cuestionario li input {
   display: none;
 }
+#auth {
+  width: 260px;
+  height: 215px;
+  position: absolute;
+  top: 50%; left: 50%;
+  margin-top: -107px;
+  margin-left: -130px;
+  input {
+    border: 0;
+    width: 100%;
+    padding: 3px;
+    font-size: 1.4em;
+    text-align: center;
+  }
+}
