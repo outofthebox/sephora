@@ -8,7 +8,8 @@ $(document).ready ->
 
   $("ul.productos li a").hover (->
     big_image = $(this).data('big')
-    $("#big_image").html('').append('<img src='+big_image+' width=200 />').css('opacity', 1)
+    title = $(this).data('name').replace('Colorful Mono', '')
+    $("#big_image").html('').append('<img src='+big_image+' width=180 /><h3>'+title+'</h3>').css('opacity', 1)
   ), ->
     $("#big_image").css('opacity', 0)
 

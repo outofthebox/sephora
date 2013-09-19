@@ -338,8 +338,19 @@ body, html {
     position: absolute;
     top: 440px;
     left: 380px;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
+    img {
+      vertical-align: top;
+    }
+    h3 {
+      font-size: 0.8em;
+      width: 100%;
+      text-align: center;
+      background-color: #000;
+      letter-spacing: 1px;
+      line-height: 25px;
+    }
   }
   .loadit {
     position: absolute;

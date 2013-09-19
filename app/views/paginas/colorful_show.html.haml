@@ -34,11 +34,10 @@
     %ul.productos
       - @productos.each do |r|
         %li
-          = link_to image_tag(r.foto(:chico), :width => 40), producto_ver_path(@principal), :"data-big" => image_path(r.foto(:normal))
+          = link_to image_tag(r.foto(:chico), :width => 40), producto_ver_path(@principal), :"data-big" => image_path(r.foto(:normal)), :"data-name" => r.nombre
           %p.loadit=image_tag r.foto(:normal), :width => 1
     / .pinit
     /   .subsublogo
     /   %hr
     /   %a.pinterest{:href=>"#"}
   #big_image
-
