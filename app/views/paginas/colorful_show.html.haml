@@ -36,8 +36,8 @@
         %li
           = link_to image_tag(r.foto(:chico), :width => 40), producto_ver_path(@principal), :"data-big" => image_path(r.foto(:normal)), :"data-name" => r.nombre
           %p.loadit=image_tag r.foto(:normal), :width => 1
-    / .pinit
-    /   .subsublogo
-    /   %hr
-    /   %a.pinterest{:href=>"#"}
+    .pinit
+      .subsublogo
+      %hr
+      %a.pinterest{:href=>"http://www.pinterest.com/sephoramx/#{params[:personalidad] == 'junkie' ? 'beauty-junkie' : params[:personalidad]}"}
   #big_image
