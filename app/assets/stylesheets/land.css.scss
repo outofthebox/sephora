@@ -314,6 +314,16 @@
   .container{
     margin-bottom: 20px;
   }
+  //beauty
+
+  .contendbeauty{
+    #lista{
+      li{
+        height: 50px !important;
+        line-height: 50px !important;
+      }
+    }
+  }    
   //productos
   .marca{
     text-align: center;
@@ -504,6 +514,35 @@
   img{
     width: 80%;
     height: 80%;
+  }
+}
+//beatuy
+.beauty{
+  img{
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+.contendbeauty{
+  #lista{
+    li{
+      margin-top: 10px;
+      background: gray;
+      height: 70px;
+      color: #fff;
+      font-size: 25px;;
+      line-height: 30px;
+    }
+    ul{
+      li{
+        background:#fff;
+        color: #000;
+        font-size: 15px;
+        height: auto;
+        line-height: 20px;
+        width: 90%;
+      }
+    }
   }
 }
 footer{
