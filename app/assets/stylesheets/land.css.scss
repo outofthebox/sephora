@@ -111,8 +111,8 @@
   }
   // tiendas
   .sucu{
-    display: inline-block;
     width: 100%;
+    font-size: 0.9em;
   }
   .tienda{
     margin-top: 20px;
@@ -126,11 +126,13 @@
   }
   .cinco{
     width: 48%;
-    display: inline-block;
+    display: table-cell;
+    vertical-align: top;
   }
   .cuatro{
     width: 48%;
-    display: inline-block;
+    display: table-cell;
+    vertical-align: top;
     p{
       display: inline;
     }
@@ -312,6 +314,10 @@
   .container{
     margin-bottom: 20px;
   }
+  //productos
+    .descripcion{
+      text-align: center;
+    }
   //Home
   .video{
     position: relative;
@@ -319,6 +325,12 @@
     text-align: center;
     img{
       width: 80% !important;
+    }
+  }
+  // LO NUEVO
+  .callbacks {
+    img {
+      width: 50% !important;
     }
   }
   //hotnow
