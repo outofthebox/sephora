@@ -373,6 +373,28 @@
       }
     }
   }
+  #pollo{
+    display: table-cell;
+    vertical-align: top;
+    .info{
+      display: table-cell;
+      vertical-align: top;
+      width: 48%;
+      left: 30px;
+      position: relative;
+    }
+    .picture{
+      display: table-cell;
+      vertical-align: top;
+      width: 48%;
+    }
+    img{
+      width: 100%!important;
+    }
+    .callbacks_nav {
+      top: 30%;
+    }
+  }
   //especiales
   .contenido{
     height: 75px;
