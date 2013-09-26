@@ -315,6 +315,21 @@
     margin-bottom: 20px;
   }
   //productos
+  .marca{
+    text-align: center;
+    display: table-cell;
+    vertical-align: top;
+    .info{
+      width: 48%;
+    top: -222px;
+    position: relative;
+    }
+    .producto{
+      width: 48%;
+      position: relative;
+      top: -170px;
+    }
+  }
     .descripcion{
       text-align: center;
     }
