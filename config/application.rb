@@ -57,6 +57,14 @@ module Sephora
     # Enable the asset pipeline
     config.assets.enabled = true
 
+    config.to_prepare do
+        Devise::SessionsController.layout "mobile"
+        Devise::RegistrationsController.layout "mobile"
+        Devise::ConfirmationsController.layout "mobile"
+        Devise::UnlocksController.layout "mobile"
+        Devise::PasswordsController.layout "mobile"
+    end
+
     config.time_zone = "Mexico City"
 
     # Version of your assets, change this if you want to expire all your assets

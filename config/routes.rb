@@ -1,5 +1,5 @@
 Sephora::Application.routes.draw do
-  devise_for :models
+  devise_for :models, :path => 'mobile'
 
   resources :eventotiendas
 
