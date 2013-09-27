@@ -8,10 +8,17 @@
   #model_email{
     position:relative;
     left: 20%;
+    height: 25px;
   }
   #model_password{
     position:relative;
-    left: 20%; 
+    left: 20%;
+    height: 25px; 
+  }
+  #model_password_confirmation{
+    position:relative;
+    left: 20%;
+    height: 25px; 
   }
   .contenido{
     height: 75px;
