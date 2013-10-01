@@ -1,5 +1,6 @@
+before_filter :authenticate_user!
 .fav
-  .medcolumna
+  .medcolumnas
     .caja
       %h6 mis favoritos
   .medcolumna
@@ -19,3 +20,7 @@
       %h5 titulo
       %p
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, non soluta ipsa minus necessitatibus nostrum ipsum sapiente expedita! Non nostrum ut quaerat repellendus velit sunt nulla id itaque libero blanditiis?
+.pollo 
+- if user_signed_in?
+  %li
+    = link_to('Logout', destroy_user_session_path, :method => :delete)

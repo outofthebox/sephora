@@ -1,4 +1,5 @@
 class MobileController < ApplicationController
+  before_filter :authenticate_user!, :only => [:favoritos]
   def home
   end
 
@@ -47,6 +48,6 @@ class MobileController < ApplicationController
     @seccion = Seccion.by_slug(params[:seccion])
     @contenido = Seccion.seccion_actual(@seccion)
   end
-  def registro
+  def favoritos
   end
 end
