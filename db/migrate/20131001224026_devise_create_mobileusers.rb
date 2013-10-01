@@ -1,6 +1,6 @@
-class DeviseCreateModels < ActiveRecord::Migration
+class DeviseCreateMobileusers < ActiveRecord::Migration
   def change
-    create_table(:models) do |t|
+    create_table(:mobileusers) do |t|
       ## Database authenticatable
       t.string :email,              :null => false, :default => ""
       t.string :encrypted_password, :null => false, :default => ""
@@ -33,15 +33,16 @@ class DeviseCreateModels < ActiveRecord::Migration
       ## Token authenticatable
       # t.string :authentication_token
 
-      t.string :mobilelogin
+      # FAVORITOS
+      t.string :favoritos, :default => ""
 
       t.timestamps
     end
 
-    add_index :models, :email,                :unique => true
-    add_index :models, :reset_password_token, :unique => true
-    # add_index :models, :confirmation_token,   :unique => true
-    # add_index :models, :unlock_token,         :unique => true
-    # add_index :models, :authentication_token, :unique => true
+    add_index :mobileusers, :email,                :unique => true
+    add_index :mobileusers, :reset_password_token, :unique => true
+    # add_index :mobileusers, :confirmation_token,   :unique => true
+    # add_index :mobileusers, :unlock_token,         :unique => true
+    # add_index :mobileusers, :authentication_token, :unique => true
   end
 end

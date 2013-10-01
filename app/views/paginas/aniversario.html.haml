@@ -50,7 +50,7 @@
         %li
           - if Rails.application.assets.find_asset("365/#{evento.nombre.parameterize}.jpg")
             = link_to evento.nombre, image_path("365/#{evento.nombre.parameterize}.jpg"), :id => 'eventolink'
-            - else
+          - else
             = evento.nombre
   .thrills
     %hr

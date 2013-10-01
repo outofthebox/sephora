@@ -23,13 +23,19 @@
       .head
         %ul
           %li.logo
-            =image_tag "mobile/home/sephora_logo_mobile.png"
+            =link_to image_tag("mobile/home/sephora_logo_mobile.png"), m_home_path
           %li.corazon
-            =link_to image_tag("mobile/home/favoritos_icon.png"),'#'
+            - if params[:action] == "mobileproducto"
+              =link_to image_tag("mobile/home/favoritos_icon.png"), favoritear_path(@producto)
           %li
-            %a{:href => "mobile/sign_in"} ENTRAR
+            - if current_mobileuser.nil?
+              %a{:href => new_mobileuser_session_path} ENTRAR
+            - else
+              %a{:href => "#"}
+                Bienvenido
+                = current_mobileuser.email
           %li
-            =link_to 'MIS FAVS',m_favoritos_path
+            =link_to 'MIS FAVS', m_favoritos_path
       .busqueda
         = form_for :buscar, { :url => m_busqueda_path, :method => :get } do |f|
           %p.nowrap
