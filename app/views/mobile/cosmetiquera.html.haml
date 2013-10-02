@@ -1,8 +1,8 @@
-before_filter :authenticate_user!
 .fav
-  .medcolumnas
+  .medcolumna
     .caja
-      %h6 mis favoritos
+      %h6 
+        = link_to 'mis favoritos', m_favoritos_path
   .medcolumna
     .caja
       %h6.back mi cosmetiquera
@@ -20,7 +20,3 @@ before_filter :authenticate_user!
       %h5 titulo
       %p
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, non soluta ipsa minus necessitatibus nostrum ipsum sapiente expedita! Non nostrum ut quaerat repellendus velit sunt nulla id itaque libero blanditiis?
-.pollo 
-- if user_signed_in?
-  %li
-    = link_to('Logout', destroy_user_session_path, :method => :delete)

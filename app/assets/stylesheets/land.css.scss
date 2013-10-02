@@ -275,7 +275,7 @@
       }
     }
     .raya{
-      border-right: 1px solid #000;
+      border-left: 1px solid #000;
     }
     .nilproductos{
       height: 380px;
@@ -284,9 +284,6 @@
   .imgfav{
     width: 75%;
    height: 130px
-  }
-  .back{
-      background:#ccc;
   }
   .cora{
     width: 25px;
@@ -531,6 +528,9 @@
   }
 }
 //mas medidas
+.back{
+  background:#ccc;
+}
 .fav{
     width: 100%;
     height: 50px;
@@ -564,7 +564,7 @@
       }
     }
     .raya{
-      border-right: 1px solid #000;
+      border-left: 1px solid #000;
     }
   }
   .imgfav{
