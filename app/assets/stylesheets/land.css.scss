@@ -5,17 +5,17 @@
     margin-top: 20px;; 
   }
   //login
-  #model_email{
+  #mobileuser_email{
     position:relative;
     left: 20%;
     height: 25px;
   }
-  #model_password{
+  #mobileuser_password{
     position:relative;
     left: 20%;
     height: 25px; 
   }
-  #model_password_confirmation{
+  #mobileuser_password_confirmation{
     position:relative;
     left: 20%;
     height: 25px; 
@@ -85,6 +85,8 @@
     display: table-cell; 
     vertical-align: top;
     width: 48%;
+    left: 7px;
+    position: relative;
     h3{
       font-size: 22px;
       line-height: 25px;
@@ -164,10 +166,12 @@
   }
   .logo{
     img{
-      width: 100px;
-      position: relative;
-      top: 17px;
+      top: -35px !important;
     }
+  }
+  .nombre{
+    position:relative;
+    right: 200%;
   }
   //video
   .videos{
@@ -495,7 +499,7 @@
       width: 100%!important;
     }
     .callbacks_nav {
-      top: 30%;
+      top: 40% !important;
     }
   }
   //especiales
@@ -551,6 +555,7 @@
     .medcolumna{
       width: 49%;
       display: inline-block;
+      vertical-align: top;
       img{
         width: 80%;
       }
@@ -586,7 +591,7 @@
     img{
       width: 100px;
       position: relative;
-      top: 17px;
+      top: -15px;
     }
   }
   .imagenes{

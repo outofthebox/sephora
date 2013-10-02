@@ -31,9 +31,10 @@
             - if current_mobileuser.nil?
               %a{:href => new_mobileuser_session_path} ENTRAR
             - else
-              %a{:href => "#"}
-                Bienvenido
-                = current_mobileuser.email
+              .nombre
+                %a{:href => "#"}
+                  Bienvenido
+                  = current_mobileuser.email
           %li
             =link_to 'MIS FAVS', m_favoritos_path
       .busqueda

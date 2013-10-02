@@ -149,8 +149,4 @@
   right: 0;
   }
 
-@media screen and (max-width: 600px) {
-  .callbacks_nav {
-    top: 18%;
-    }
-  }
+ 
