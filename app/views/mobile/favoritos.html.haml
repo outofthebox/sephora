@@ -6,12 +6,17 @@
     .caja
       %h6 mi cosmetiquera
 .cuerpo
-  -@productos.each do |p|
-    .medcolumna
-      .raya
-        =link_to image_tag p.foto
-        .texto
-          %h5 
-            = p.nombre
-          %p
-            = p.descripcion.html_safe
+  - if @productos.nil?
+    .nilproductos
+      %p ¿Qué esperas para agregar tu productos favoritos?
+      %p Solo hay que presionar en el corazón que aparece en la parte superior de cada producto
+  - else
+    -@productos.each do |p|
+      .medcolumna
+        .raya
+          =link_to image_tag p.foto
+          .texto
+            %h5 
+              = p.nombre
+            %p
+              = p.descripcion.html_safe

@@ -49,7 +49,7 @@ class MobileController < ApplicationController
     @contenido = Seccion.seccion_actual(@seccion)
   end
   def favoritos
-    @productos = Producto.find(JSON.parse(current_mobileuser.favoritos))
+    @productos = !current_mobileuser.favoritos.empty? ? Producto.find(JSON.parse(current_mobileuser.favoritos)) : nil
   end
   def favorite
     require 'json'
