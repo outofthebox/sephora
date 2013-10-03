@@ -56,9 +56,8 @@ section#tu-lista{
   }
 }
 section#aniversario{
-  width:810px;
+  width:960px;
   margin:0 auto;
-
   .calendario-contenido{
     position: absolute;
     z-index: 10;
@@ -77,8 +76,8 @@ section#aniversario{
   
   .tiendas-contenido{
     position: absolute;
-    top: 110px;
-    left: -100px;
+    top: 0px;
+    left: -130px;
     width: 290px;
     ol{
       list-style: none;
@@ -101,13 +100,16 @@ section#aniversario{
     z-index: 0;
     position:relative;
     // border-bottom:5px solid #000000;
-    height:550px;
+    height:629px;
+    background: #e3f5ff;
     .pastel{
-      background: image-url('aniversario/pastel.png');
-      width:389px;
+      background: image-url('aniversario/modelo1.png');
+      width:477px;
       height:497px;
       position:absolute;
       z-index: 9999;
+      top: 150px;
+      left: -11px;
     }
     .calendario{
       z-index: -1;
@@ -119,14 +121,14 @@ section#aniversario{
         position:absolute;
         top:0;
         right:0;
-        width:452px; 
+        width:960px; 
         height:92px;      
         text-align:right;       
         
       }
       .calendario-content{
         position:absolute;
-        top:120px;
+        top:220px;
         height:298px;
         width:341px;
         h1{
@@ -146,7 +148,7 @@ section#aniversario{
       top:400px;
       position:absolute;
       width:562px;
-      height:30px;
+      height:5px;
       background-color:#000000;
       color:#ffffff;
       h3{
