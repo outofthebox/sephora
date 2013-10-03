@@ -1,4 +1,4 @@
-- tiendas = { 1 => "Antara", 2 => "Andares", 3 => "Interlomas", 4 => "Satélite", 5 => "Angelópolis" }
+- tiendas = { 1 => "Antara", 2 => "Andares", 3 => "Interlomas", 4 => "Satélite", 5 => "Angelópolis", 6 => "Santa Fe" }
 %section#aniversario
   %header
     .pastel.inlineblock
@@ -9,10 +9,10 @@
         - if params[:tienda]
           .calendario-contenido
             %h3 OCTUBRE
-            = calendar_for @eventos, :year => 2012, :month => 10 do |t|
+            = calendar_for @eventos, :year => 2013, :month => 10 do |t|
               = t.day(:day_method => :fecha) do |day, eventos|
                 - if eventos.any?
-                  %a{ :href => "/365dias/tienda/#{params[:tienda]}/fecha/#{eventos.first.fecha.strftime('%F')}", :style => 'font-weight: bold' }
+                  %a{ :href => "/beautyissue/tienda/#{params[:tienda]}/fecha/#{eventos.first.fecha.strftime('%F')}", :style => 'font-weight: bold' }
                     = day.day
                 - else
                   = day.day
@@ -20,121 +20,48 @@
           %h4 Selecciona tu tienda
           %ol
             %li
-              %a{ :href => "/365dias/tienda/1" }
+              %a{ :href => "/beautyissue/tienda/1" }
                 Sephora Antara (DF)
             %li
-              %a{ :href => "/365dias/tienda/2" }
+              %a{ :href => "/beautyissue/tienda/2" }
                 Sephora Andares (GDL)
             %li
-              %a{ :href => "/365dias/tienda/3" }
+              %a{ :href => "/beautyissue/tienda/3" }
                 Sephora Interlomas (EDO.MEX)
             %li
-              %a{ :href => "/365dias/tienda/6" }
+              %a{ :href => "/beautyissue/tienda/6" }
                 Sephora Santa Fe (DF)
             %li
-              %a{ :href => "/365dias/tienda/4" }
+              %a{ :href => "/beautyissue/tienda/4" }
                 Sephora Satélite (DF)
             %li
-              %a{ :href => "/365dias/tienda/5" }
+              %a{ :href => "/beautyissue/tienda/5" }
                 Sephora Angelópolis (PUE)
-
-
-    - if params[:fecha]
-      .angelopolis
-        %h3 Sephora #{tiendas[params[:tienda].to_i]} <span> #{Date.parse(params[:fecha]).strftime('%e-%b')}</span>
-    - else
-      .angelopolis
-  - if @eventos_fecha and @eventos_fecha.any?
-    %ul.tiendas-lista
-      - @eventos_fecha.each do |evento|
-        %li
-          - if Rails.application.assets.find_asset("365/#{evento.nombre.parameterize}.jpg")
-            = link_to evento.nombre, image_path("365/#{evento.nombre.parameterize}.jpg"), :id => 'eventolink'
-          - else
+      - if params[:fecha]
+        .angelopolis
+          %h3 Sephora #{tiendas[params[:tienda].to_i]} <span> #{Date.parse(params[:fecha]).strftime('%e-%b')}</span>
+      - else
+        .angelopolis
+    - if @eventos_fecha and @eventos_fecha.any?
+      %ul.tiendas-lista
+        - @eventos_fecha.each do |evento|
+          %li
+            %p Lista de eventos
             = evento.nombre
+          %li
+            %P.rosa descripción del evento
+            = evento.descripcion
   .thrills
-    =image_tag 'aniversario/modelo2.png', class: 'inlineblock modelo'
-    //.gana
-    //  %p.tall Gana desde fabulosos <span class="bold">kits de belleza</span> 
-    //  %p.tall hasta un viaje a <span class="bold">New York.</span>
-    //  %p.small con la <span class="bold">compra</span> de <span class="red">$1000</span> en las marcas
-    //  %p.small participantes<span class="red">*</span><span class="bold">responde el quiz</span>
-    //  %p.small y <span class="bold">gana</span> en nuestro countdown de belleza.
-    //=link_to image_tag('aniversario/boton.png'), 'http://www.facebook.com/SephoraMX/app_474975195856291', class: 'boton-participa'
-    //.promocion
-    //  %p
-    //    Promoción válida del 1 de octubre al 9 de noviembre de 2012.
-    //    * Oscar Blandi, Make Up For Ever, Bliss, Bobbi Brown, Nails Inc, Kat Von D, Hello Kitty, Sephora Collection, Urban Decay, Estee Lauder, Phyto, Nars, Dior.
-
-  //.regalos-content
-  //  %ul.nolist.nobullet
-  //    %li
-  //      =link_to image_tag('aniversario/premios/ny.jpg'), image_path('aniversario/premios/thrill/ny.jpg'), :id => 'premioslink', :"data-bghover" => image_path('aniversario/premios/ny_color.jpg')
-  //    %li
-  //      =link_to image_tag('aniversario/premios/bobbi.jpg'), image_path('aniversario/premios/thrill/bobbi.jpg'), :id => 'premioslink', :"data-bghover" => image_path('aniversario/premios/bobbi_color.jpg')
-  //    %li
-  //      =link_to image_tag('aniversario/premios/nails.jpg'), image_path('aniversario/premios/thrill/nails.jpg'), :id => 'premioslink', :"data-bghover" => image_path('aniversario/premios/nails_color.jpg')
-  //    %li
-  //      =link_to image_tag('aniversario/premios/dior.jpg'), image_path('aniversario/premios/thrill/dior.jpg'), :id => 'premioslink', :"data-bghover" => image_path('aniversario/premios/dior_color.jpg')
-  //    %li
-  //      =link_to image_tag('aniversario/premios/kat.jpg'), image_path('aniversario/premios/thrill/kat.jpg'), :id => 'premioslink', :"data-bghover" => image_path('aniversario/premios/kat_color.jpg')
-  //    %li
-  //      =link_to image_tag('aniversario/premios/sephora.jpg'), image_path('aniversario/premios/thrill/sephora.jpg'), :id => 'premioslink', :"data-bghover" => image_path('aniversario/premios/sephora_color.jpg')
-  //    %li
-  //      =link_to image_tag('aniversario/premios/nars.jpg'), image_path('aniversario/premios/thrill/nars.jpg'), :id => 'premioslink', :"data-bghover" => image_path('aniversario/premios/nars_color.jpg')
-  //    %li
-  //      =link_to image_tag('aniversario/premios/estee1.jpg'), image_path('aniversario/premios/thrill/estee1.jpg'), :id => 'premioslink', :"data-bghover" => image_path('aniversario/premios/estee1_color.jpg')
-  //    %li
-  //      =link_to image_tag('aniversario/premios/urban.jpg'), image_path('aniversario/premios/thrill/urban.jpg'), :id => 'premioslink', :"data-bghover" => image_path('aniversario/premios/urban_color.jpg')
-  //    %li
-  //      =link_to image_tag('aniversario/premios/kitty.jpg'), image_path('aniversario/premios/thrill/kitty.jpg'), :id => 'premioslink', :"data-bghover" => image_path('aniversario/premios/kitty_color.jpg')
-  //    %li
-  //      =link_to image_tag('aniversario/premios/phyto.jpg'), image_path('aniversario/premios/thrill/phyto.jpg'), :id => 'premioslink', :"data-bghover" => image_path('aniversario/premios/phyto_color.jpg')
-  //    %li
-  //      =link_to image_tag('aniversario/premios/estee2.jpg'), image_path('aniversario/premios/thrill/estee2.jpg'), :id => 'premioslink', :"data-bghover" => image_path('aniversario/premios/estee2_color.jpg')
-
-  #modal
-    #modalcontent.table.full
-      .pro.tcell.t100
-        %img.poster
-      .social
-        .fb-like{"data-href" => "http://#{request.host+request.fullpath}", "data-layout" => "box_count", "data-send" => "false", "data-show-faces" => "true", "data-width" => "77"}
-        %a.twitter-share-button{"data-lang" => "es", "data-via" => "SephoraMX", :href => "https://twitter.com/share", "data-count" => "vertical"} Twittear
-        :javascript
-          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-    .cerrar
-      X
-    .cerrar2
-      '
-  :plain
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=493323124013433";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-
-    jQuery.preloadImages = function(){
-      for(var i = 0; i<arguments.length; i++){
-        jQuery("<img>").attr("src", arguments[i]);
-      }
-    }
-
-    $.preloadImages(
-      "#{image_path('aniversario/premios/ny_color.jpg')}",
-      "#{image_path('aniversario/premios/ny_color.jpg')}",
-      "#{image_path('aniversario/premios/bobbi_color.jpg')}",
-      "#{image_path('aniversario/premios/nails_color.jpg')}",
-      "#{image_path('aniversario/premios/dior_color.jpg')}",
-      "#{image_path('aniversario/premios/kat_color.jpg')}",
-      "#{image_path('aniversario/premios/sephora_color.jpg')}",
-      "#{image_path('aniversario/premios/nars_color.jpg')}",
-      "#{image_path('aniversario/premios/estee1_color.jpg')}",
-      "#{image_path('aniversario/premios/urban_color.jpg')}",
-      "#{image_path('aniversario/premios/kitty_color.jpg')}",
-      "#{image_path('aniversario/premios/phyto_color.jpg')}",
-      "#{image_path('aniversario/premios/estee2_color.jpg')}"
-    );
-    </script>
+    .descripcion
+      = image_tag 'aniversario/txt2.png'
+    .redes
+      %li.no
+        %p Share the love for Sephora
+      %li
+        = link_to image_tag('aniversario/fb_icon.png'),'https://www.facebook.com/SephoraMX'
+      %li
+        = link_to image_tag('aniversario/tw_icon.png'),'https://twitter.com/sephoramx'
+      %li
+        = link_to image_tag('aniversario/yt_icon.png'),'http://www.youtube.com/SephoraMex'
+      %li
+        = link_to image_tag('aniversario/insta_icon.png'),'http://instagram.com/sephoramx'

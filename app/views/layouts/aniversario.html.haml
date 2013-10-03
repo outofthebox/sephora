@@ -20,13 +20,6 @@
   -# = yield :head
 %body
   = yield
-  #terminos
-    =link_to "Terminos y condiciones", aniversario_terminos_path
-  :javascript
-    Modernizr.load({
-      load: ['//connect.facebook.net/es_LA/all.js#xfbml=1&appId=141773072581182',
-        '//platform.twitter.com/widgets.js']
-    });
   -if ENV['GOOGLE_ANALYTICS_KEY']
     :javascript
       window._gaq = [['_setAccount','#{ENV['GOOGLE_ANALYTICS_KEY']}'],['_trackPageview'],['_trackPageLoadTime']];

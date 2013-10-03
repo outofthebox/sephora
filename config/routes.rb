@@ -117,8 +117,8 @@ Sephora::Application.routes.draw do
   #ANIVERSARIO
   get '365'    => 'paginas#aniversario', :as => :aniversario
   get 'beautyissue'    => 'paginas#aniversario', :as => :aniversario
-  get '365dias/tienda/:tienda'    => 'paginas#aniversario', :as => :aniversario_tienda
-  get '365dias/tienda/:tienda/fecha/:fecha'    => 'paginas#aniversario', :as => :aniversario_tienda_fecha
+  get 'beautyissue/tienda/:tienda'    => 'paginas#aniversario', :as => :aniversario_tienda
+  get 'beautyissue/tienda/:tienda/fecha/:fecha'    => 'paginas#aniversario', :as => :aniversario_tienda_fecha
 
   get '365dias/eventos'    => 'paginas#aniversario_eventos', :as => :aniversario_eventos
 
