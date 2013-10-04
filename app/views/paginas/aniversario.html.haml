@@ -45,12 +45,9 @@
     - if @eventos_fecha and @eventos_fecha.any?
       %ul.tiendas-lista
         - @eventos_fecha.each do |evento|
+          %p Lista de eventos
           %li
-            %p Lista de eventos
-            = evento.nombre
-          %li
-            %P.rosa descripción del evento
-            = evento.descripcion
+            = evento.nombre   
   .thrills
     .descripcion
       = image_tag 'aniversario/txt2.png'
