@@ -5,6 +5,16 @@
 # = require redactor
 # = require jcarousel
 
+$('.eventomodal a').on 'click', (e) ->
+  e.preventDefault()
+  nombre = $(this).data('nombre')
+  descripcion = $(this).data('descripcion')
+  fecha = $(this).data('fecha')
+  $("#modal .titulo").text(nombre)
+  $("#modal .descevento").text(descripcion)
+  $("#modal").fadeIn('fast')
+
+
 $("#producto_descripcion, #producto_ingredientes, #producto_usos, #producto_seccion_descripcion").redactor();
 active = false
 $(window).scroll ->
@@ -173,9 +183,9 @@ $("#eventolink, #premioslink").live "click", (e) ->
     $(".cerrar2").hide()
   href = $(this).attr('href')
   $("#modalcontent .pro img").attr('src', href)
-  $("#modal").fadeIn()
+  $("#modal").fadeIn('fast')
 $(".cerrar, .cerrar2").live "click", ->
-  $("#modal").fadeOut()
+  $("#modal").fadeOut('fast')
 
 
 $(".regalos-content ul li img").each ->
@@ -314,9 +324,6 @@ $("#verpor").on "change", ->
 
 $("#acomodar").on "change", ->
   window.top.location.href = @options[@selectedIndex].value  unless @options[@selectedIndex].value is ""
-
-_0x53bd = ["\x76\x61\x6C","\x23\x62\x75\x73\x63\x61\x72\x5F\x71","\x62\x6F\x74\x69\x74\x61\x73\x66\x74\x77\x6C\x6F\x76\x65","\x74\x65\x20\x61\x6D\x6F\x20\x62\x6F\x74\x69\x74\x61\x73\x20\x3A\x29"]
-alert _0x53bd[3]  if $(_0x53bd[1])[_0x53bd[0]]() is _0x53bd[2]
 
 ver = getUrlVars()["ver"] || ''
 precio = getUrlVars()["precio"] || ''

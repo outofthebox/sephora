@@ -359,3 +359,23 @@ section#fbapp{
     color: #c00;
   }
 }
+#aniversario {
+  background: #e3f5ff;
+  #modal {
+    background: #e3f5ff;
+    .pro{
+      text-align:  center;
+      position: relative;
+      top: 30px;
+      h2{
+        font-size: 2em;
+        text-transform: uppercase;
+      }
+      .descevento{
+        text-align: left;
+        margin: 119px;
+        width: 70%;
+      }
+    }
+  }
+}

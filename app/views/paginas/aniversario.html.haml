@@ -46,8 +46,8 @@
       %ul.tiendas-lista
         %p Lista de eventos
         - @eventos_fecha.each do |evento|
-          %li#premioslink
-            =link_to evento.nombre, :data => {:toggle => "modal", :nombre => evento.nombre}
+          %li.eventomodal
+            =link_to evento.nombre, '#', :data => {:toggle => "modal", :nombre => evento.nombre, :descripcion => evento.descripcion }
   .thrills
     .descripcion
       = image_tag 'aniversario/txt2.png'
@@ -66,12 +66,7 @@
     #modal
       #modalcontent.table.full
         .pro.tcell.t25
-        - if :nombre.nil?
-          %p Selecciona un evento
-        -else
-          - @eventos_fecha.each do |evento|
-            = evento.nombre
+          %h2.titulo
+          %p.descevento
       .cerrar
-        X
-      .cerrar2
         X
