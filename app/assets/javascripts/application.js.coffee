@@ -166,7 +166,7 @@ $("#download .iphone").live "click", (e) ->
 $("#eventolink, #premioslink").live "click", (e) ->
   e.preventDefault()
   if $(this).attr('id') == 'premioslink'
-    $(".social, .cerrar").hide()
+    $(".cerrar").hide()
     $(".cerrar2").show()
   else
     $(".social, .cerrar").show()

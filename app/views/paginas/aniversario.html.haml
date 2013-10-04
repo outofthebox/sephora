@@ -44,10 +44,10 @@
         .angelopolis
     - if @eventos_fecha and @eventos_fecha.any?
       %ul.tiendas-lista
+        %p Lista de eventos
         - @eventos_fecha.each do |evento|
-          %p Lista de eventos
-          %li
-            = evento.nombre   
+          %li#premioslink
+            =link_to evento.nombre, :data => {:toggle => "modal", :nombre => evento.nombre}
   .thrills
     .descripcion
       = image_tag 'aniversario/txt2.png'
@@ -62,3 +62,16 @@
         = link_to image_tag('aniversario/yt_icon.png'),'http://www.youtube.com/SephoraMex'
       %li
         = link_to image_tag('aniversario/insta_icon.png'),'http://instagram.com/sephoramx'
+
+    #modal
+      #modalcontent.table.full
+        .pro.tcell.t25
+        - if :nombre.nil?
+          %p Selecciona un evento
+        -else
+          - @eventos_fecha.each do |evento|
+            = evento.nombre
+      .cerrar
+        X
+      .cerrar2
+        X
