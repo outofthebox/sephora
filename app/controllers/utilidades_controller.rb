@@ -125,7 +125,7 @@ class UtilidadesController < ApplicationController
     # CSV.foreach(csv) do |row|
     #   skus << row[0]
     # end
-    upcs = Producto.all.map{|r| r.image_code}
+    upcs = Producto.all.map{|r| r.upc}
     # upcs = (upcs + upcs2).compact.uniq
     Dir.glob('/home/kinduff/Escritorio/sephora/**/*.jpg').each do |path|
       # img_upc = File.basename(path, ".jpg")[/[a-z]?([0-9]+)/i].gsub(/([^0-9])/, '')

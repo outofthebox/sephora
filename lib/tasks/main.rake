@@ -15,21 +15,33 @@ namespace :import do
     puts hr
     puts "Looping CSV..."
     puts hr
-    CSV.foreach(csv, {:col_sep => "\t"}) do |row|
+    CSV.foreach(csv) do |row|
       upc = row.at(0)
-      image_code = row.at(1)
+      marca = row.at(1)
       nombre = row.at(2)
-      precio = row.at(3)
-      productos << {
-        :upc => upc,
-        :image_code => image_code,
-        :nombre => nombre,
-        :precio => precio,
-        :categoria_id => 78,
-        :marca_id => 52,
-        :publicado => false
-      }
-      puts "#{upc} - OK"
+      nombre_real = row.at(3)
+      categoria = row.at(4)
+      precio = row.at(5)
+      descripcion = row.at(6)
+      usos = row.at(7)
+      ingredientes = row.at(8)
+      unless Producto.find_by_upc(upc)
+        productos << {
+          :upc => upc,
+          :nombre => nombre,
+          :nombre_real => nombre_real,
+          :precio => precio,
+          :categoria_id => categoria,
+          :marca_id => marca,
+          :descripcion => descripcion,
+          :ingredientes => ingredientes,
+          :usos => usos,
+          :publicado => true
+        }
+        puts "#{upc} - OKAY"
+      else
+        puts "#{upc} - NOPE"
+      end
     end
     puts hr2
     puts "Guardando..."
@@ -62,7 +74,7 @@ namespace :import do
       if File.basename(logo_path)[0]!= '.' and !File.directory? logo_path
 
         upc = File.basename(logo_path, '.*') #filename without extension
-        producto = Producto.where(:image_code => upc.to_s).first
+        producto = Producto.where(:upc => upc.to_s).first
         raise "could not find client for client_code #{upc}" if producto.nil?
         puts "#{producto.upc} - UPLOADING"
         File.open(logo_path) do |f|
