@@ -1,4 +1,4 @@
-- provide :titulo, 'Sephora México'
+f- provide :titulo, 'Sephora México'
 - provide :descripcion, "Explora la biblioteca de productos de belleza más grande de latinoamérica. Cosméticos - Maquillaje - Skincare - Perfumes y más de exclusivas marcas."
 - provide :url, "http://sephora.com.mx"
 - provide :imagen, ''
@@ -32,7 +32,7 @@
           =image_tag "home/home_banner2.jpg"
 #separador
   %p.linksrapidos
-    LINKS RÁPIDOS:
+    LINKS RÁPIDOS:f
     %span
       %a{ :href => "/hotnow" }
         HOT NOW
@@ -85,7 +85,7 @@
       %a{ :href => 'http://www.youtube.com/playlist?list=PLXpR-02kmCLEyjn6rLtpe7pQoIRf6d94F'}
         =image_tag "home/2down.jpg"
     .tcell.t50
-      %a{ :href => "http://sephora.com.mx/tiendas" }
+      %a{ :href => "http://sephora.com.mx/beautyissue" }
         =image_tag "home/1down.jpg"
 - unless mobile_device?
   #mod
