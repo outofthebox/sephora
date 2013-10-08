@@ -164,7 +164,7 @@ section#aniversario{
       background-color:#000000;
       color:#000;
       h3{
-        font-size:14px;
+        font-size:1em;
         text-align:right;
         padding-top:7px;
         span{
@@ -208,7 +208,7 @@ section#aniversario{
         }
       }
       .no{
-        width: 20% !important;
+        width: 21% !important;
       }
     }
     p{
@@ -363,6 +363,10 @@ section#fbapp{
   background: #e3f5ff;
   #modal {
     background: #e3f5ff;
+    height: 408px;
+    #modalcontent{
+      height: 276px;
+    }
     .pro{
       text-align:  center;
       position: relative;
@@ -373,9 +377,15 @@ section#fbapp{
       }
       .descevento{
         text-align: left;
-        margin: 119px;
+        margin-left: 125px;
+        margin-top: 57px;
         width: 70%;
       }
     }
+    .fond{
+      background: image-url('aniversario/fondo.png') no-repeat;
+      width: 100%;
+      height: 133px;
+    }  
   }
 }
