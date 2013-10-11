@@ -39,6 +39,7 @@ namespace :import do
           :publicado => true
         }
         puts "#{upc} - OKAY"
+        puts "#{nombre} - ok"
       else
         puts "#{upc} - NOPE"
       end
@@ -59,7 +60,7 @@ namespace :import do
     CSV.foreach(csv) do |row|
       upc = row.at(0)
       producto = Producto.find_by_upc(upc)
-      producto.marca_id = 52
+      producto.marca_id = 144
       if producto.save
         puts "#{producto.upc} - OK"
       end
@@ -70,7 +71,7 @@ namespace :import do
     puts hr
     puts "Importing images"
     puts hr
-    Dir.glob('/home/kinduff/Escritorio/sephora_filtrados/*.jpg').each do |logo_path|
+    Dir.glob('/Users/oob_dg1/Desktop/pollo/sephora/sephora_filtrados/*.jpg').each do |logo_path|
       if File.basename(logo_path)[0]!= '.' and !File.directory? logo_path
 
         upc = File.basename(logo_path, '.*') #filename without extension
@@ -80,7 +81,7 @@ namespace :import do
         File.open(logo_path) do |f|
           producto.foto = f # just assign the logo attribute to a file
           producto.save(:validate => false)
-          FileUtils.mv(logo_path, "/home/kinduff/Escritorio/sephora_ok/#{upc}.jpg")
+          FileUtils.mv(logo_path, "/Users/oob_dg1/Desktop/pollo/sephora/sephora_ok/#{upc}.jpg")
           puts "#{producto.upc} - OK"
         end #file gets closed automatically here
       end

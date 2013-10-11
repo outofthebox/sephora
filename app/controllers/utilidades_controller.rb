@@ -18,12 +18,12 @@ class UtilidadesController < ApplicationController
     # end
 
     # Funcion para un solo CSV
-    data = CSV.parse(File.open('/home/kinduff/Escritorio/parents.csv'), :headers => true, :return_headers => true )
+    data = CSV.parse(File.open('/Users/oob_dg1/Desktop/pollo/sephora/parents.csv'), :headers => true, :return_headers => true )
     data.by_col!
     data.each do |col|
       skus << col.at(1).compact.reject{|r| !(r.to_i > 0) }
     end
-    # raise skus.inspect
+    raise skus.inspect
 
     s = []
     skus.each do |sku|
@@ -127,11 +127,11 @@ class UtilidadesController < ApplicationController
     # end
     upcs = Producto.all.map{|r| r.upc}
     # upcs = (upcs + upcs2).compact.uniq
-    Dir.glob('/home/kinduff/Escritorio/sephora/**/*.jpg').each do |path|
+    Dir.glob('/Users/oob_dg1/Desktop/pollo/sephora/**/*.jpg').each do |path|
       # img_upc = File.basename(path, ".jpg")[/[a-z]?([0-9]+)/i].gsub(/([^0-9])/, '')
       img_upc = File.basename(path, ".jpg")
       if img_upc.in? upcs
-        FileUtils.mv path, "/home/kinduff/Escritorio/sephora_filtrados/#{img_upc}.jpg"
+        FileUtils.mv path, "/Users/oob_dg1/Desktop/pollo/sephora/sephora_filtrados/#{img_upc}.jpg"
       end
     end
   end
@@ -139,7 +139,7 @@ class UtilidadesController < ApplicationController
   def importarimg
     # the logos are in a folder with path logos_dir
     start = 0
-    Dir.glob('/home/kinduff/Escritorio/sephora_filtrados/*.jpg').each do |logo_path|
+    Dir.glob('/Users/oob_dg1/Desktop/pollo/sephora/sephora_filtrados/*.jpg').each do |logo_path|
       if File.basename(logo_path)[0]!= '.' and !File.directory? logo_path
 
         upc = File.basename(logo_path, '.*') #filename without extension
@@ -149,7 +149,7 @@ class UtilidadesController < ApplicationController
         File.open(logo_path) do |f|
           producto.foto = f # just assign the logo attribute to a file
           producto.save(:validate => false)
-          FileUtils.mv(logo_path, "/home/kinduff/Escritorio/sephora_ok/#{upc}.jpg")
+          FileUtils.mv(logo_path, "/Users/oob_dg1/Desktop/pollo/sephora/sephora_ok/#{upc}.jpg")
           return render :text => "Working... HALT BRO! <script>document.location.reload(true)</script>", :layout => false if (start+=1) > 10
         end #file gets closed automatically here
       end
