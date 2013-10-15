@@ -1,0 +1,25 @@
+#background
+	.model1.current
+	.model2.background-hidden
+#main{:view=>"home"}
+	.content.container_24
+		#contenidoDerecho.grid_12.prefix_12
+			.menu_ppal
+				=image_tag("marcjacobs/marc_jacobs_logo.png", alt: "Edit Entry", class: "logo")
+				%ul.menu
+					%li
+						=link_to "ojos", marc_ojos_path
+					%li
+						=link_to "rostro", marc_rostro_path
+					%li
+						=link_to "labios",marc_labios_path
+					%li
+						=link_to "uñas", marc_unas_path
+					%li.upperLine
+						=link_to "favoritos", marc_favs_path
+					%li
+						=link_to "obtén el look", marc_look_path
+					%li
+						=link_to "descarga el catálogo","#"
+			.clearfix
+		.clearfix

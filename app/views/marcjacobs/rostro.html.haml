@@ -1,0 +1,64 @@
+#main{:view=>"rostro"}
+	.content.container_24
+		#izquierda.grid_10
+		#centro.grid_4
+			.menu_ppal
+				=image_tag("marcjacobs/marc_logo_black.png", alt: "Edit Entry", class: "logo")
+				%ul.menu
+					%li
+						=link_to "ojos",marc_ojos_path
+					%li
+						=link_to "rostro",marc_rostro_path, {:class=>"selected"}
+					%li
+						=link_to "labios",marc_labios_path
+					%li
+						=link_to "uñas",marc_unas_path
+					%li.upperLine
+						=link_to "favoritos",marc_favs_path
+					%li
+						=link_to "obtén el look",marc_look_path
+					%li
+						=link_to "descarga el catálogo","#"
+			.clearfix
+		#derecha.grid_10
+			.producto.perfection_powder
+				.mensaje
+					.info
+						%h1
+							PERFECTION POWDER
+						%p
+							Textura innovadora, suave al tacto con acabado natural; tan ligera como una pluma.
+					.irA
+			.producto.genius_gel
+				.mensaje
+					.info
+						%h1
+							GENIUS GEL
+						%p
+							Innovadora base de maquillaje con fórmula a base de gel que proporciona una cobertura completa con acabado natural.
+					.irA
+			.producto.omega_broze
+				.mensaje
+					.info
+						%h1
+							O!MEGA BRONZE
+						%p
+							Tecnología de pigmentos micro-finos para una cobertura sedosa y un acabado mate radiante.
+					.irA
+			.producto.remedy_concealer
+				.mensaje
+					.info
+						%h1
+							REMEDY CONCEALER
+						%p
+							Este iluminador y corrector todo-en-uno es la solución perfecta para desvanecer los signos de fatiga.
+					.irA
+			.producto.shameless_bold_blush
+				.mensaje
+					.info
+						%h1
+							SHAMELES BOLD BLUSH
+						%p
+							Inspirado en el tatuaje de Marc, fórmula cremosa en vibrantes tonos, que se funde en la piel para esculpir perfectamente el rostro.
+					.irA
+		.clearfix

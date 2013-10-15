@@ -1,0 +1,791 @@
+small {
+  font-size: smaller !important;
+}
+
+#background {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  min-width: 980px;
+  background-color: black;
+  overflow: hidden;
+  min-height: 840px;
+  div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding:0;
+    opacity: 1;
+    transition: opacity 2s;
+    width: 100%;
+    min-width: 960px;
+    height: 100%;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color:black;
+  }
+  .model1 {
+    background-image: url("marcjacobs/modelo1.jpg");
+    background-position: 40% 0;
+  }
+  .model2 {
+    background-image: url("marcjacobs/modelo2.jpg");
+    background-position: 20% 0;
+  }
+  div.background-hidden {
+    opacity: 0;
+    transition: opacity 350ms;
+  }
+}
+
+
+#main[view="ojos"], #main[view="rostro"], #main[view="labios"], #main[view="unas"], #main[view="favoritos"], #main[view="look"]{
+   #derecha{
+    background: rgba(245, 245, 245, 0.79);
+     &::before{
+        display: block;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -ms-box-shadow: inset 8px 0px 3px -4px rgba(0, 0, 0, 0.2);
+        -o-box-shadow: inset 8px 0px 3px -4px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: inset 8px 0px 3px -4px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: inset 8px 0px 3px -4px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 8px 0px 3px -4px rgba(0, 0, 0, 0.2);
+      }
+   }
+   #centro{
+    min-height: 1px;
+    height: 100%;
+    .menu_ppal{
+      position:relative;
+      min-height: 100px;
+      margin: auto;
+      height: 100%;
+      display: block;
+      padding-top: 200px;
+      .logo{
+        margin:auto;
+        display: block;
+        height: 23px;
+        width: 134px;
+      }
+      ul.menu {
+        font-family:avantFake, "Helvetiva Neue", "Arial";
+        letter-spacing: 3px;
+        font-size: 14px;
+        width: 140px;
+        margin: auto;
+        display: block;
+        line-height: 1.2em;
+        margin-top: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        color: #797979;
+        height: 320px;
+        li:hover{
+          text-decoration: underline;
+        }
+        li {
+          line-height: 1.3em;
+          margin-bottom: 13px;
+          a{
+            text-decoration: none;
+            color: #797979;
+          }
+          a.selected{
+            text-decoration: underline !important;
+          }
+        }
+        li.upperLine{
+          margin-top:10px;
+          padding-top:14px;
+          border-top:1px solid rgb(190, 189, 189);
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+#main[view="favoritos"]{
+  .content{
+    display: block;
+    position: relative;
+    height: 700px;
+    overflow: hidden;
+    #izquierda{
+      height: 100%;
+      background-image: url("marcjacobs/favoritos/favoritos_main_banner.jpg");
+      background-repeat: no-repeat;
+      box-shadow: inset -15px 0 10px -15px #797979;
+      background-size: cover;
+    }
+    #derecha{
+      height: 100%;
+      overflow: hidden;
+      .contengoFavoritos{
+        position:relative;
+        height: 400px;
+        overflow:hidden;
+        .mensaje{
+          transition: bottom 400ms, opacity 400ms;
+          background: rgba(0, 0, 0, 0.8);
+          display: block;
+          width: 96%;
+          position: absolute;
+          bottom: -374px;
+          opacity: 1;
+          color: black;
+          font-family: avantFake, "Helvetiva Neue", "Arial";
+          padding: 3% 2%;
+          font-weight: normal;
+          text-align: center;
+          height: 365px;
+          .info{
+            width:90%;
+            display: inline-block;
+            padding-top:40px;
+            h1{
+              font-size: 10pt;
+              line-height: 1em;
+              font-weight: normal;
+              letter-spacing: 1px;
+              color: white;
+              margin-bottom: 20px;
+            } 
+            p{
+              font-size: 9pt;
+              line-height: 1em;
+              font-weight: normal;
+              letter-spacing: 1px;
+              box-shadow:0;
+              text-shadow: 0;
+              border:0;
+              color:#bebdbd;
+            }
+            img.irA{
+              width: 26px;
+              height: 25px;
+              display: block;
+              background-repeat: no-repeat;
+              position: absolute;
+              top:10px;
+              left: 50px;
+              -webkit-transform: rotate(270deg);
+              -o-transform: rotate(270deg);
+              -ms-transform: rotate(270deg);
+              -moz-transform: rotate(270deg);
+              transform: rotate(270deg);
+            }
+          }
+        }
+        .producto{
+            background-size:100% 100%;
+            background-repeat:no-repeat;
+            background-position:0 0;
+            height: 290px;
+            width: 125px;
+            display: inline-block;
+            position:relative;
+        }
+        .producto:hover > .mensaje{
+          opacity: 1;
+          transition: bottom 400ms, opacity 400ms;
+          bottom:-80px;
+        }
+        .producto:hover > .mensaje img.irA{
+            -webkit-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+        .brow_tamer{
+          background-image:url("marcjacobs/favoritos/brow_tamer_fav.jpg");
+        }
+        .remedy_fav{
+          background-image:url("marcjacobs/favoritos/remedy_fav.jpg");
+        }
+        .lip_lock_tamer{
+          background-image:url("marcjacobs/favoritos/lip_lock_tamer_fav.jpg");
+        }
+      }
+      .infoVideo{
+        transition: bottom 400ms, opacity 400ms;
+        background: rgba(0, 0, 0, 0.8);
+        display: block;
+        max-width: 390px;
+        color: black;
+        font-family: avantFake, "Helvetiva Neue", "Arial";
+        padding: 3% 2%;
+        font-weight: normal;
+        text-align: center;
+        position:relative;
+         h1{
+            font-size: 10pt;
+            line-height: 1em;
+            margin-bottom: 5px;
+            font-weight: normal;
+            letter-spacing: 1px;
+            color: white;
+            margin-bottom: 15px;
+          } 
+          p{
+            font-size: 9pt;
+            line-height: 1em;
+            font-weight: normal;
+            letter-spacing: 1px;
+            box-shadow:0;
+            text-shadow: 0;
+            border:0;
+            color:#bebdbd;
+          }
+      }
+    }
+  }
+}
+
+
+#main[view="rostro"]{
+  .content{
+    display: block;
+    position: relative;
+    height: 700px;
+    overflow: hidden;
+    #izquierda{
+      height: 100%;
+      background-image: url("marcjacobs/rostro/face_main_banner.jpg");
+      background-repeat: no-repeat;
+      box-shadow: inset -15px 0 10px -15px #797979;
+      background-size: cover;
+    }
+    #derecha{
+      height: 100%;
+      overflow: auto;
+      .producto{
+          background-size:100% 100%;
+          background-repeat:no-repeat;
+          background-position:0 0;
+          height: 233px;
+          display: block;
+          position:relative;
+          overflow: hidden;
+          box-shadow: inset 15px 0 10px -15px #797979;
+      }
+      .producto:hover > .mensaje{
+        opacity: 1;
+        transition: bottom 400ms, opacity 400ms;
+        bottom:0px;
+      }
+      .genius_gel{
+        background-image:url("marcjacobs/rostro/genius_gel.jpg");
+      }
+      .omega_broze{
+        background-image:url("marcjacobs/rostro/omega_broze.jpg");
+      }
+      .perfection_powder{
+        background-image:url("marcjacobs/rostro/perfection_powder.jpg");
+      }
+      .shameless_bold_blush{
+        background-image:url("marcjacobs/rostro/shameless_bold_blush.jpg");
+      }
+      .remedy_concealer{
+        background-image:url("marcjacobs/rostro/remedy_concealer.jpg");
+      }
+      .mensaje{
+        transition: bottom 400ms, opacity 400ms;
+        background: rgba(0, 0, 0, 0.8);
+        display: block;
+        width: 96%;
+        position: absolute;
+        bottom: -100px;
+        opacity: 0;
+        color: black;
+        font-family: avantFake, "Helvetiva Neue", "Arial";
+        padding: 3% 2%;
+        font-weight: normal;
+        .info{
+          width:80%;
+          margin-right: 10%;
+          display: inline-block;
+          h1{
+            font-size: 10pt;
+            line-height: 1em;
+            margin-bottom: 5px;
+            font-weight: normal;
+            letter-spacing: 1px;
+            color: white;
+          } 
+          p{
+            font-size: 9pt;
+            line-height: 1em;
+            font-weight: normal;
+            letter-spacing: 1px;
+            box-shadow:0;
+            text-shadow: 0;
+            border:0;
+            color:#bebdbd;
+          }
+        }
+        .irA {
+          cursor: pointer;
+          width: 26px;
+          height: 25px;
+          background: url("marcjacobs/flecha_prod_ver_mas.png");
+          display: inline-block;
+          background-repeat: no-repeat;
+          position: absolute;
+          top: 35%;
+          right: 20px;
+          transition: right 350ms;
+        }
+        .irA:hover{
+          right: 15px;
+          transition: right 350ms;
+        }
+      }
+    }
+  }
+}
+
+#main[view="ojos"]{
+  .content{
+    display: block;
+    position: relative;
+    height: 700px;
+    overflow: hidden;
+    #izquierda{
+      height: 100%;
+      background-image: url("marcjacobs/ojos/eyes_main_banner.jpg");
+      background-repeat: no-repeat;
+      // box-shadow: inset -10px 0px 29px -12px #797979;
+      box-shadow: inset -15px 0 10px -15px #797979;
+      background-size: cover;
+    }
+    #derecha{
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: none;
+      .producto{
+          background-size:100% 100%;
+          background-repeat:no-repeat;
+          background-position:0 0;
+          height: 233px;
+          display: block;
+          position:relative;
+          overflow: hidden;
+          box-shadow: inset 15px 0 10px -15px #797979;
+      }
+      .producto:hover > .mensaje{
+        opacity: 1;
+        transition: bottom 400ms, opacity 400ms;
+        bottom:0px;
+      }
+      .lash_lifter{
+        background-image:url("marcjacobs/ojos/lash_lifter.jpg");
+      }
+      .highliner{
+        background-image:url("marcjacobs/ojos/highliner.jpg");
+      }
+      .magic_marcer{
+        background-image:url("marcjacobs/ojos/magic_marcer.jpg");
+      }
+      .brow_tamer{
+        background-image:url("marcjacobs/ojos/brow_tamer.jpg");
+      }
+      .style_eye_3{
+        background-image:url("marcjacobs/ojos/style_eye_3.jpg");
+      }
+      .style_eye_7{
+        background-image:url("marcjacobs/ojos/style_eye_7.jpg");
+      }
+      .mensaje{
+        transition: bottom 400ms, opacity 400ms;
+        background: rgba(0, 0, 0, 0.8);
+        display: block;
+        width: 96%;
+        position: absolute;
+        bottom: -100px;
+        opacity: 0;
+        color: black;
+        font-family: avantFake, "Helvetiva Neue", "Arial";
+        padding: 3% 2%;
+        font-weight: normal;
+        .info{
+          width:80%;
+          margin-right: 10%;
+          display: inline-block;
+          h1{
+            font-size: 10pt;
+            line-height: 1em;
+            margin-bottom: 5px;
+            font-weight: normal;
+            letter-spacing: 1px;
+            color: white;
+          } 
+          p{
+            font-size: 9pt;
+            line-height: 1em;
+            font-weight: normal;
+            letter-spacing: 1px;
+            box-shadow:0;
+            text-shadow: 0;
+            border:0;
+            color:#bebdbd;
+          }
+        }
+        .irA {
+          cursor: pointer;
+          width: 26px;
+          height: 25px;
+          background: url("marcjacobs/flecha_prod_ver_mas.png");
+          display: inline-block;
+          background-repeat: no-repeat;
+          position: absolute;
+          top: 35%;
+          right: 20px;
+          transition: right 350ms;
+        }
+        .irA:hover{
+          right: 15px;
+          transition: right 350ms;
+        }
+      }
+    }
+  }
+}
+
+#main[view="labios"]{
+  .content{
+    display: block;
+    position: relative;
+    height: 700px;
+    overflow: hidden;
+    #izquierda{
+      height: 100%;
+      background-image: url("marcjacobs/labios/lips_main_banner.jpg");
+      background-repeat: no-repeat;
+      // box-shadow: inset -10px 0px 29px -12px #797979;
+      box-shadow: inset -15px 0 10px -15px #797979;
+      background-size: cover;
+    }
+    #derecha{
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: none;
+      .producto{
+          background-size:100% 100%;
+          background-repeat:no-repeat;
+          background-position:0 0;
+          height: 233px;
+          display: block;
+          position:relative;
+          overflow: hidden;
+          box-shadow: inset 15px 0 10px -15px #797979;
+      }
+      .producto:hover > .mensaje{
+        opacity: 1;
+        transition: bottom 400ms, opacity 400ms;
+        bottom:0px;
+      }
+      .lip_lock{
+        background-image:url("marcjacobs/labios/lip_lock.jpg");
+      }
+      .lovemarc{
+        background-image:url("marcjacobs/labios/lovemarc.jpg");
+      }
+      .lust_for_laquer{
+        background-image:url("marcjacobs/labios/lust_for_laquer.jpg");
+      }
+      .mensaje{
+        transition: bottom 400ms, opacity 400ms;
+        background: rgba(0, 0, 0, 0.8);
+        display: block;
+        width: 96%;
+        position: absolute;
+        bottom: -100px;
+        opacity: 0;
+        color: black;
+        font-family: avantFake, "Helvetiva Neue", "Arial";
+        padding: 3% 2%;
+        font-weight: normal;
+        .info{
+          width:80%;
+          margin-right: 10%;
+          display: inline-block;
+          h1{
+            font-size: 10pt;
+            line-height: 1em;
+            margin-bottom: 5px;
+            font-weight: normal;
+            letter-spacing: 1px;
+            color: white;
+          } 
+          p{
+            font-size: 9pt;
+            line-height: 1em;
+            font-weight: normal;
+            letter-spacing: 1px;
+            box-shadow:0;
+            text-shadow: 0;
+            border:0;
+            color:#bebdbd;
+          }
+        }
+        .irA {
+          cursor: pointer;
+          width: 26px;
+          height: 25px;
+          background: url("marcjacobs/flecha_prod_ver_mas.png");
+          display: inline-block;
+          background-repeat: no-repeat;
+          position: absolute;
+          top: 35%;
+          right: 20px;
+          transition: right 350ms;
+        }
+        .irA:hover{
+          right: 15px;
+          transition: right 350ms;
+        }
+      }
+    }
+  }
+}
+
+#main[view="unas"]{
+  .content{
+    display: block;
+    position: relative;
+    height: 700px;
+    overflow: hidden;
+    #izquierda{
+      height: 100%;
+      background-image: url("marcjacobs/unas/nails_main_banner.jpg");
+      background-repeat: no-repeat;
+      box-shadow: inset -15px 0 10px -15px #797979;
+      background-size: cover;
+    }
+    #derecha{
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: none;
+      .producto{
+          background-size:100% 100%;
+          background-repeat:no-repeat;
+          background-position:0 0;
+          height: 233px;
+          display: block;
+          position:relative;
+          overflow: hidden;
+          box-shadow: inset 15px 0 10px -15px #797979;
+      }
+      .producto:hover > .mensaje{
+        opacity: 1;
+        transition: bottom 400ms, opacity 400ms;
+        bottom:0px;
+      }
+      .enamored_nail_glaze{
+        background-image:url("marcjacobs/unas/enamored_nail_glaze.jpg");
+      }
+      .mensaje{
+        transition: bottom 400ms, opacity 400ms;
+        background: rgba(0, 0, 0, 0.8);
+        display: block;
+        width: 96%;
+        position: absolute;
+        bottom: -100px;
+        opacity: 0;
+        color: black;
+        font-family: avantFake, "Helvetiva Neue", "Arial";
+        padding: 3% 2%;
+        font-weight: normal;
+        .info{
+          width:80%;
+          margin-right: 10%;
+          display: inline-block;
+          h1{
+            font-size: 10pt;
+            line-height: 1em;
+            margin-bottom: 5px;
+            font-weight: normal;
+            letter-spacing: 1px;
+            color: white;
+          } 
+          p{
+            font-size: 9pt;
+            line-height: 1em;
+            font-weight: normal;
+            letter-spacing: 1px;
+            box-shadow:0;
+            text-shadow: 0;
+            border:0;
+            color:#bebdbd;
+          }
+        }
+        .irA {
+          cursor: pointer;
+          width: 26px;
+          height: 25px;
+          background: url("marcjacobs/flecha_prod_ver_mas.png");
+          display: inline-block;
+          background-repeat: no-repeat;
+          position: absolute;
+          top: 35%;
+          right: 20px;
+          transition: right 350ms;
+        }
+        .irA:hover{
+          right: 15px;
+          transition: right 350ms;
+        }
+      }
+    }
+  }
+}
+
+#main[view="look"]{
+  .content{
+    display: block;
+    position: relative;
+    height: 700px;
+    overflow: hidden;
+    #izquierda{
+      height: 100%;
+      background-image: url("marcjacobs/look/look_main_banner.jpg");
+      background-repeat: no-repeat;
+      box-shadow: inset -15px 0 10px -15px #797979;
+      background-size: cover;
+    }
+    #derecha{
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: none;
+      background:white !important;
+      .producto{
+          background-size:100% 100%;
+          background-repeat:no-repeat;
+          background-position:0 0;
+          height: 300px;
+          display: block;
+          position:relative;
+          overflow: hidden;
+          box-shadow: inset 15px 0 10px -15px #797979;
+          margin-bottom: 10px;
+      }
+      .enamored_nail_glaze{
+        background-image:url("marcjacobs/unas/enamored_nail_glaze.jpg");
+      }
+      .mensaje{
+        transition: opacity 400ms;
+        background: rgb(27, 27, 27);
+        display: block;
+        width: 96%;
+        position: absolute;
+        opacity: 1;
+        color: black;
+        font-family: avantFake, "Helvetiva Neue", "Arial";
+        padding: 4% 2%;
+        bottom:-1px;
+        font-weight: normal;
+        text-align: center;
+        .info{
+          width:100%;
+          display: inline-block;
+          h1 {
+            font-size: 10pt;
+            line-height: 1em;
+            margin-bottom: 5px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #bebdbd;
+            text-decoration: underline;
+          } 
+          p {
+            text-decoration: underline;
+            font-size: 9pt;
+            line-height: 1em;
+            font-weight: normal;
+            letter-spacing: 1px;
+            box-shadow:0;
+            text-shadow: 0;
+            border:0;
+            color:#bebdbd;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+#main[view="home"]{
+  min-height: 700px;
+  .content{
+    height: auto !important;
+    min-height: 100%;
+    display: block;
+    z-index: 2;
+    margin:auto;
+    position: relative;
+    min-height: 700px;
+    #contenidoDerecho{
+      min-height: 100%;
+      height: auto !important;
+      position:relative;
+      display: block;
+      .menu_ppal{
+        position:relative;
+        min-height: 100px;
+        margin: auto;
+        height: 100%;
+        display: block;
+        padding-top: 40%;
+        .logo{
+          margin:auto;
+          display: block;
+        }
+        ul.menu {
+          font-family:avantFake, "Helvetiva Neue", "Arial";
+          letter-spacing: 3px;
+          font-size: 14px;
+          width: 140px;
+          margin: auto;
+          display: block;
+          line-height: 1.2em;
+          margin-top: 30px;
+          text-transform: uppercase;
+          text-align: center;
+          color: rgb(190, 189, 189);
+          height: 320px;
+          li {
+            line-height: 1.3em;
+            margin-bottom: 13px;
+            a{
+              text-decoration: none;
+              color:rgb(190, 189, 189);
+            }
+            a.selected{
+              text-decoration: underline !important;
+            }
+          }
+          li.upperLine{
+            margin-top:10px;
+            padding-top:14px;
+            border-top:1px solid rgb(190, 189, 189);
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
