@@ -23,7 +23,7 @@ class UtilidadesController < ApplicationController
     data.each do |col|
       skus << col.at(1).compact.reject{|r| !(r.to_i > 0) }
     end
-    raise skus.inspect
+    #raise skus.inspect
 
     s = []
     skus.each do |sku|
@@ -37,10 +37,10 @@ class UtilidadesController < ApplicationController
       end
     end
 
-    raise s.inspect
+    #raise s.inspect
 
-    raise s.inspect
-    raise Producto.where(:upc => s.uniq).size.inspect
+    #raise s.inspect
+    #raise Producto.where(:upc => s.uniq).size.inspect
   end
 
   def importar
