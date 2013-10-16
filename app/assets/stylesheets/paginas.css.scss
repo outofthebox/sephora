@@ -132,6 +132,7 @@ small {
     #derecha{
       height: 100%;
       overflow: hidden;
+      background:white;
       .contengoFavoritos{
         position:relative;
         height: 400px;
@@ -229,7 +230,8 @@ small {
         padding: 3% 2%;
         font-weight: normal;
         text-align: center;
-        position:relative;
+        position: relative;
+        margin: -1px 0 1px 0;
          h1{
             font-size: 10pt;
             line-height: 1em;
