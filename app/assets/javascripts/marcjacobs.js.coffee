@@ -1,5 +1,6 @@
 # = require jquery
 # = require jquery_ujs
+# = require tubular
 
 Init = ->
   App = this
@@ -14,22 +15,45 @@ Init::picker = (callback) ->
   enCaso = App.main.getAttribute("view");
   switch enCaso
     when "home"
+      $("#video").tubular
+        videoId: "dPks1pJV0Xs"
+        mute: false
+        repeat: false
       App.footer.className = "black";
       App.header.className = "black";
       App.resize()
       App.initBackground ->
       App.animateBackground 4000
+      $("#marcjacobs").fadeIn 1000, ->
+        $("#marcjacobs").addClass("marcVisible"); 
+      $("#skipIntro").click ->
+          App.skipIntro();
+
+
     when "ojos","unas","labios","rostro","favoritos","look"
+      $("#marcjacobs").addClass("marcVisible");
+      $("#skipIntro").remove();
       App.footer.className = "white";
       App.header.className = "white";
+
+Init::skipIntro = (callback) ->
+    App = this
+    player.stopVideo()
+    player.clearVideo();
+    $("#skipIntro").remove();
+    $('#tubular-player').fadeOut(350);
 
 Init::resize = ->
   App = this
   main = document.querySelector("#main");
+  video = document.querySelector("#tubular-player");
+
   $(main).height(App.getMainHeight()+1)
+  $(video).height(App.getMainHeight()+50)
   
   $(window).resize ->
     $(main).height(App.getMainHeight())
+    $(video).height(App.getMainHeight())
 
 Init::getMainHeight = (callback) ->
   App = this
