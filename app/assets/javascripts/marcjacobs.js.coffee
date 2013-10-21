@@ -41,7 +41,10 @@ Init::skipIntro = (callback) ->
     player.stopVideo()
     player.clearVideo();
     $("#skipIntro").remove();
-    $('#tubular-player').fadeOut(350);
+    $('#tubular-player').fadeOut 350, ->
+      $("#tubular-shield").remove();
+      $("#tubular-container").remove();
+      $('#tubular-player').remove();
 
 Init::resize = ->
   App = this

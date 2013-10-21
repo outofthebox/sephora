@@ -133,13 +133,13 @@ Sephora::Application.routes.draw do
   get 'sephoragifts' => 'paginas#sephoragifts'
 
   #MARCJACOBS
-  get "marcjacobs", :to => "marcjacobs#home", :as => 'marcjacobs'
-  get "marcjacobs/ojos", :to => "marcjacobs#ojos", :as => 'marc_ojos'
-  get "marcjacobs/labios", :to => "marcjacobs#labios", :as => 'marc_labios'
-  get "marcjacobs/unas", :to => "marcjacobs#unas", :as => 'marc_unas'
-  get "marcjacobs/rostro", :to => "marcjacobs#rostro", :as => 'marc_rostro'
-  get "marcjacobs/favoritos", :to => "marcjacobs#favoritos", :as => 'marc_favs'
-  get "marcjacobs/look", :to => "marcjacobs#look", :as => 'marc_look'
+  get "marc-jacobs-beauty", :to => "marcjacobs#home", :as => 'marcjacobs'
+  get "marc-jacobs-beauty/ojos", :to => "marcjacobs#ojos", :as => 'marc_ojos'
+  get "marc-jacobs-beauty/labios", :to => "marcjacobs#labios", :as => 'marc_labios'
+  get "marc-jacobs-beauty/unas", :to => "marcjacobs#unas", :as => 'marc_unas'
+  get "marc-jacobs-beauty/rostro", :to => "marcjacobs#rostro", :as => 'marc_rostro'
+  get "marc-jacobs-beauty/favoritos", :to => "marcjacobs#favoritos", :as => 'marc_favs'
+  get "marc-jacobs-beauty/look", :to => "marcjacobs#look", :as => 'marc_look'
 
 
   # última línea, hace match con el resto de las rutas y muestra 404
