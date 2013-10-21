@@ -1,0 +1,24 @@
+!!!
+%html
+	%head
+	%meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0, maximum-scale=1.0"}
+	%title
+	=stylesheet_link_tag    "marcjacobs", media: "all", "data-turbolinks-track" => true
+	=csrf_meta_tags
+	%body
+		#skipIntro
+		#video
+		#marcjacobs
+			%header#head_container
+				#head
+					%figure.logo
+			=yield
+			%footer#footer_container
+				#footer
+					%p 
+						Comparte el amor por Sephora
+						=link_to "","https://www.facebook.com/SephoraMX", {:class => "icon facebook black", :target=>"_blank"}
+						=link_to "","https://twitter.com/sephoramx", {:class => "icon twitter black", :target=>"_blank"}
+						=link_to "","http://www.youtube.com/SephoraMex", {:class => "icon youtube black", :target=>"_blank"}
+						=link_to "","http://instagram.com/sephoramx", {:class => "icon instagram black", :target=>"_blank"}
+			=javascript_include_tag "marcjacobs", "data-turbolinks-track" => true

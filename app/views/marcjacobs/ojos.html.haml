@@ -1,0 +1,72 @@
+#main{:view=>"ojos"}
+	.content.container_24
+		#izquierda.grid_10
+		#centro.grid_4
+			.menu_ppal
+				=image_tag("marcjacobs/marc_logo_black.png", alt: "Edit Entry", class: "logo")
+				%ul.menu
+					%li
+						=link_to "ojos", marc_ojos_path, {:class=>"selected"}
+					%li
+						=link_to "rostro", marc_rostro_path
+					%li
+						=link_to "labios",marc_labios_path
+					%li
+						=link_to "uñas", marc_unas_path
+					%li.upperLine
+						=link_to "favoritos", marc_favs_path
+					%li
+						=link_to "obtén el look", marc_look_path
+					%li
+						=link_to "descarga el catálogo", "/catalogo_marcjacobs.pdf", {:target=>"_blank"}
+			.clearfix
+		#derecha.grid_10
+			.producto.lash_lifter
+				.mensaje
+					.info
+						%h1
+							LASH LIFTER GEL VOLUME MASCARA
+						%p
+							Tecnología E-Lash-Tic ™ para unas pestañas con máxima curvatura y longitud.
+					.irA
+			.producto.highliner
+				.mensaje
+					.info
+						%h1
+							HIGHLINER
+						%p
+							Delineador en gel a prueba de agua. Fácil aplicación; máximo color.
+					.irA
+			.producto.magic_marcer
+				.mensaje
+					.info
+						%h1
+							MAGIC MARC'ER
+						%p
+							Delineador líquido en lápiz a prueba de agua. Con el tono Blacquer, logra el negro más negro.
+					.irA
+			.producto.brow_tamer
+				.mensaje
+					.info
+						%h1
+							Brow Tamer
+						%p
+							Marc cree que unas cejas perfectas son el primer paso en el ritual de belleza de hombres y mujeres, fue creado con sus especificaciones precisas.
+					.irA
+			.producto.style_eye_3
+				.mensaje
+					.info
+						%h1
+							Style Eye 3
+						%p
+							Pequeños sets de sombras de ojos en armonía para crear tríos icónicos.
+					.irA
+			.producto.style_eye_7
+				.mensaje
+					.info
+						%h1
+							Style Eye 7
+						%p
+							7 tonos en armonía perfecta que se convertirán en tus esenciales.
+					.irA
+		.clearfix

@@ -1,0 +1,32 @@
+#main{:view=>"unas"}
+	.content.container_24
+		#izquierda.grid_10
+		#centro.grid_4
+			.menu_ppal
+				=image_tag("marcjacobs/marc_logo_black.png", alt: "Edit Entry", class: "logo")
+				%ul.menu
+					%li
+						=link_to "ojos", marc_ojos_path
+					%li
+						=link_to "rostro", marc_rostro_path
+					%li
+						=link_to "labios",marc_labios_path
+					%li
+						=link_to "uñas", marc_unas_path, {:class=>"selected"}
+					%li.upperLine
+						=link_to "favoritos", marc_favs_path
+					%li
+						=link_to "obtén el look", marc_look_path
+					%li
+						=link_to "descarga el catálogo", "/catalogo_marcjacobs.pdf", {:target=>"_blank"}
+			.clearfix
+		#derecha.grid_10
+			.producto.enamored_nail_glaze
+				.mensaje
+					.info
+						%h1
+							ENAMORED NAIL GLAZE
+						%p
+							Descubre un brillo increíble con aspecto de gloss con los tonos inspirados en las películas favoritas de Marc.
+					.irA
+		.clearfix

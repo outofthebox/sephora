@@ -1,0 +1,59 @@
+#main{:view=>"favoritos"}
+	.content.container_24
+		#izquierda.grid_10
+		#centro.grid_4
+			.menu_ppal
+				=image_tag("marcjacobs/marc_logo_black.png", alt: "Edit Entry", class: "logo")
+				%ul.menu
+					%li
+						=link_to "ojos", marc_ojos_path
+					%li
+						=link_to "rostro", marc_rostro_path
+					%li
+						=link_to "labios",marc_labios_path
+					%li
+						=link_to "uñas", marc_unas_path
+					%li.upperLine
+						=link_to "favoritos", marc_favs_path, {:class=>"selected"}
+					%li
+						=link_to "obtén el look", marc_look_path
+					%li
+						=link_to "descarga el catálogo", "/catalogo_marcjacobs.pdf", {:target=>"_blank"}
+			.clearfix
+		#derecha.grid_10
+			%iframe{:allowscriptaccess => "always", :allowFullScreen => "true", :frameborder => "0", :height => "229", :src => "http://www.youtube.com/embed/hG0XvHWdtz0", :title => "none", :width => "390"}
+			.infoVideo
+				%h1
+					LOS FAVORITOS DE MARC
+					%br
+						%small
+							Boy tested. Girl approved.
+				%p
+					Esta colección muestra los 3 favoritos de Marc. Labios besables, cejas perfectas y ojos radiantes deben ser favoritos tanto de hombres como de mujeres.
+			.contengoFavoritos
+				.producto.brow_tamer
+					.mensaje
+						.info
+							=image_tag("marcjacobs/flecha_prod_ver_mas.png", :class => 'irA')
+							%h1
+								BROW TAMER
+							%p
+								Marc cree que unas cejas perfectas son el primer paso en el ritual de belleza de hombres y mujeres, fue creado con sus especificaciones precisas.
+				.producto.remedy_fav
+					.mensaje
+						.info
+							=image_tag("marcjacobs/flecha_prod_ver_mas.png", :class => 'irA')
+							%h1
+								REMEDY
+							%p
+								Para “Remedy”, Marc se inspiró en el tipo de mujeres (y hombres) que disfrutan de fiestas toda la noche, pero adoran lucir radiantes en la luz del día.
+						.irA
+				.producto.lip_lock_tamer
+					.mensaje
+						.info
+							=image_tag("marcjacobs/flecha_prod_ver_mas.png", :class => 'irA')
+							%h1
+								LIP LOCK TAMER
+							%p
+								En la búsqueda por un bálsamo labial que fuera lujoso y que protegiera de los rayos del sol, Marc creó “Lip Lock”, el favorito de hombres y mujeres.
+		.clearfix
