@@ -133,7 +133,8 @@ Sephora::Application.routes.draw do
   get 'sephoragifts' => 'paginas#sephoragifts'
 
   #MARCJACOBS
-  get "marc-jacobs-beauty", :to => "marcjacobs#home", :as => 'marcjacobs'
+  get "marc-jacobs-beauty/home", :to => "marcjacobs#home", :as => 'marcjacobs'
+  get "marc-jacobs-beauty/", :to => "marcjacobs#intro", :as => 'marc_intro'
   get "marc-jacobs-beauty/ojos", :to => "marcjacobs#ojos", :as => 'marc_ojos'
   get "marc-jacobs-beauty/labios", :to => "marcjacobs#labios", :as => 'marc_labios'
   get "marc-jacobs-beauty/unas", :to => "marcjacobs#unas", :as => 'marc_unas'

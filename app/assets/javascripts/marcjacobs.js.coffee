@@ -1,6 +1,7 @@
 # = require jquery
 # = require jquery_ujs
 # = require tubular
+# = require perfect-scrollbar.min.js
 
 Init = ->
   App = this
@@ -14,20 +15,25 @@ Init::picker = (callback) ->
   App = this
   enCaso = App.main.getAttribute("view");
   switch enCaso
-    when "home"
+    when "intro"
       $("#video").tubular
         videoId: "dPks1pJV0Xs"
-        mute: false
+        mute: true
         repeat: false
-      App.footer.className = "black";
-      App.header.className = "black";
-      App.resize()
-      App.initBackground ->
-      App.animateBackground 4000
-      $("#marcjacobs").fadeIn 1000, ->
+
+      $(window).load ->
+        player.addEventListener 'onStateChange', (state) ->
+          window.location = "/marc-jacobs-beauty/home" if state.data == 0
+
+    when "home"
+      $(window).load ->
+        App.initBackground ->
+        App.animateBackground 4000
+        App.footer.className = "black";
+        App.header.className = "black";
         $("#marcjacobs").addClass("marcVisible"); 
-      $("#skipIntro").click ->
-          App.skipIntro();
+        $("#skipIntro").remove();
+        App.resize();
 
 
     when "ojos","unas","labios","rostro","favoritos","look"
@@ -35,6 +41,8 @@ Init::picker = (callback) ->
       $("#skipIntro").remove();
       App.footer.className = "white";
       App.header.className = "white";
+        
+
 
 Init::skipIntro = (callback) ->
     App = this
@@ -49,14 +57,11 @@ Init::skipIntro = (callback) ->
 Init::resize = ->
   App = this
   main = document.querySelector("#main");
-  video = document.querySelector("#tubular-player");
 
-  $(main).height(App.getMainHeight()+1)
-  $(video).height(App.getMainHeight()+50)
+  $(main).height(App.getMainHeight())
   
   $(window).resize ->
     $(main).height(App.getMainHeight())
-    $(video).height(App.getMainHeight())
 
 Init::getMainHeight = (callback) ->
   App = this
