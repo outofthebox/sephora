@@ -1,23 +1,37 @@
-!!!
+!!! 5
 %html
-	%head
-		%meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0, maximum-scale=1.0"}
-		%title
-		=stylesheet_link_tag :marcjacobs
-	%body
-		#skipIntro
-		#video
-		#marcjacobs
-			%header#head_container
-				#head
-					%figure.logo
-			=yield
-			%footer#footer_container
-				#footer
-					%p 
-						Comparte el amor por Sephora
-						=link_to "","https://www.facebook.com/SephoraMX", {:class => "icon facebook black", :target=>"_blank"}
-						=link_to "","https://twitter.com/sephoramx", {:class => "icon twitter black", :target=>"_blank"}
-						=link_to "","http://www.youtube.com/SephoraMex", {:class => "icon youtube black", :target=>"_blank"}
-						=link_to "","http://instagram.com/sephoramx", {:class => "icon instagram black", :target=>"_blank"}
-			=javascript_include_tag "marcjacobs", "data-turbolinks-track" => true
+  :plain
+    <!--[if lt IE 7]> <html lang="es" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+    <!--[if IE 7]>    <html lang="es" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+    <!--[if IE 8]>    <html lang="es" class="no-js lt-ie9"> <![endif]-->
+    <!--[if gt IE 8]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
+  %head
+    %meta{:charset => "UTF-8"}
+    %title
+      #{"#{yield(:titulo)} | " if content_for?(:titulo)} Sephora
+    %meta{:content => "width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;", :name => "viewport"}/
+    %meta{:content => "#{yield(:titulo)} | Sephora México", :property => "og:title"}
+    %link{ :rel => "shortcut icon", :href => "/favicon.ico", :type => "image/x-icon"}/
+    %meta{:name => "description", :content => yield(:descripcion)}
+    %meta{:content => yield(:url), :property => "og:url"}
+    %meta{:content => "Sephora México", :property => "og:site_name"}
+    %meta{:content => yield(:imagen), :property => "og:image"}
+    = stylesheet_link_tag :marcjacobs
+    = csrf_meta_tags
+  %body
+    #skipIntro
+    #video
+    #marcjacobs
+      %header#head_container
+        #head
+          %figure.logo
+      = yield
+      %footer#footer_container
+        #footer
+          %p
+            Comparte el amor por Sephora
+            =link_to "","https://www.facebook.com/SephoraMX", {:class => "icon facebook black", :target=>"_blank"}
+            =link_to "","https://twitter.com/sephoramx", {:class => "icon twitter black", :target=>"_blank"}
+            =link_to "","http://www.youtube.com/SephoraMex", {:class => "icon youtube black", :target=>"_blank"}
+            =link_to "","http://instagram.com/sephoramx", {:class => "icon instagram black", :target=>"_blank"}
+    = javascript_include_tag :marcjacobs
