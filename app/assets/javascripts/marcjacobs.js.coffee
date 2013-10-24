@@ -18,7 +18,7 @@ Init::picker = (callback) ->
     when "intro"
       $("#video").tubular
         videoId: "dPks1pJV0Xs"
-        mute: true
+        mute: false
         repeat: false
 
       $(window).load ->
