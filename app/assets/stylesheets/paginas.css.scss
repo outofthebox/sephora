@@ -5,6 +5,41 @@ small {
 #video{
   position:absolute;
 }
+
+
+
+
+
+#main[view="catalogo"]{
+   background: white;
+   position:relative;
+   #contengo_catalogo{
+    position: relative;
+    min-height: 730px;
+    overflow:hidden;
+    .blank{
+      a{
+        text-decoration: none;
+        color:black;
+      }
+      position:absolute;
+      top:0;
+      z-index: 2;
+      width: 960px;
+      height: 15px;
+      background:white;
+      padding-bottom:10px;
+    }
+    iframe{
+      position: absolute;
+      top:-71px;
+    }
+  }
+}
+
+
+
+
 #skipIntro{
   display: block;
   height: 20px;

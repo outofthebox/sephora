@@ -141,6 +141,7 @@ Sephora::Application.routes.draw do
   get "marc-jacobs-beauty/rostro", :to => "marcjacobs#rostro", :as => 'marc_rostro'
   get "marc-jacobs-beauty/favoritos", :to => "marcjacobs#favoritos", :as => 'marc_favs'
   get "marc-jacobs-beauty/look", :to => "marcjacobs#look", :as => 'marc_look'
+  get "marc-jacobs-beauty/catalogo", :to => "marcjacobs#catalogo", :as => 'marc_catalogo'
 
 
   # última línea, hace match con el resto de las rutas y muestra 404

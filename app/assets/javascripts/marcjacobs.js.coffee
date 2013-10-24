@@ -36,7 +36,7 @@ Init::picker = (callback) ->
         App.resize();
 
 
-    when "ojos","unas","labios","rostro","favoritos","look"
+    when "ojos","unas","labios","rostro","favoritos","look","catalogo"
       $("#marcjacobs").addClass("marcVisible");
       $("#skipIntro").remove();
       App.footer.className = "white";
