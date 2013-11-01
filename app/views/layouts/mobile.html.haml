@@ -22,12 +22,10 @@
     .sixteen.columns
       .head
         %ul
-          %li.logo
-            =link_to image_tag("mobile/home/sephora_logo_mobile.png"), m_home_path
           %li.corazon
             - if params[:action] == "mobileproducto"
               =link_to image_tag("mobile/home/favoritos_icon.png"), favoritear_path(@producto)
-          %li
+          %li.entrar
             - if current_mobileuser.nil?
               %a{:href => new_mobileuser_session_path} ENTRAR
             - else
@@ -35,6 +33,8 @@
                 %a{:href => "#"}
                   Bienvenido
                   = current_mobileuser.email
+          %li.logo
+            =link_to image_tag("mobile/home/sephora_logo_mobile.png"), m_home_path
           %li
             =link_to 'MIS FAVS', m_favoritos_path
       .busqueda
