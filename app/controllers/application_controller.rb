@@ -20,7 +20,11 @@ class ApplicationController < ActionController::Base
   end
 
   def layout_by_resource
-    "application"
+    if devise_controller?
+      "mobile"
+    else
+      "application"
+    end
   end
 
   def current_user

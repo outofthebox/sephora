@@ -1,4 +1,6 @@
 Sephora::Application.routes.draw do
+  devise_for :mobileusers, :path => "mobile"
+
   resources :eventotiendas
 
   resources :tiendas
@@ -143,7 +145,21 @@ Sephora::Application.routes.draw do
   get "marc-jacobs-beauty/look", :to => "marcjacobs#look", :as => 'marc_look'
   get "marc-jacobs-beauty/catalogo", :to => "marcjacobs#catalogo", :as => 'marc_catalogo'
 
-
+  #mobile
+  get 'mobile', :to => 'mobile#home', :as => 'm_home'
+  get 'mobile/favoritos', :to => 'mobile#favoritos', :as => 'm_favoritos'
+  get 'mobile/cosmetiquera', :to => 'mobile#cosmetiquera', :as => 'm_cosmetiquera'
+  get 'mobile/busqueda', :to => 'mobile#mobilbusqueda', :as => 'm_busqueda'
+  get 'mobile/producto/:slug', :to => 'mobile#mobileproducto', :as => 'm_producto'
+  get 'mobile/login', :to => 'mobile#login', :as => 'm_login'
+  get 'mobile/especiales', :to => 'mobile#especialesmes', :as => 'm_especiales'
+  get 'mobile/beauty', :to => 'mobile#beauty', :as => 'm_beauty'
+  get 'mobile/tiendas', :to => 'mobile#tiendas', :as => 'm_tiendas'
+  get 'mobile/nuevo', :to => 'mobile#lonuevo', :as => 'm_nuevo'
+  get 'mobile/hotnow/:seccion', :to => 'mobile#jotnao', :as => 'm_hotnow'
+  get 'mobile/video', :to => 'mobile#video', :as => 'm_video'
+  get 'mobile/legal', :to => 'mobile#legales', :as => 'm_legal'
+  get 'mobile/favorite/:id', :to => 'mobile#favorite', :as => 'favoritear'
   # última línea, hace match con el resto de las rutas y muestra 404
   match  '*a', :to => 'paginas#error_404'
 end

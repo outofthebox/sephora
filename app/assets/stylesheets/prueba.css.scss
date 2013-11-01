@@ -1,0 +1,27 @@
+@media only screen and (min-width: 480px) and (max-width: 480px) and (orientation: landscape) {
+  //header
+  .head{
+    ul{
+      height: 50px;
+      li{
+        display: inline-block;
+        width: 24%;
+      }
+    }  
+  }
+  .corazon{
+    img{
+      width: 25px;
+      position: relative;
+      top: 15px;
+      left: 250%;
+    }
+  }
+  .logo{
+    img{
+      width: 100px;
+      position: relative;
+      top: 17px;
+    }
+  }
+}

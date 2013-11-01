@@ -1,0 +1,36 @@
+.marca
+  - unless @producto.marca.logo_file_size.nil?
+    = image_tag @producto.marca.logo.url(:grande)
+    = image_tag @producto.foto.url(:normal), :id => "prod", :class => "imgproducto", :itemprop => 'image'
+  .info
+    %span.marcab
+      =@producto.marca.marca
+    %span.precio{:itemprop => "price"}
+      #{number_to_currency(@producto.precio, :precision => 0)}
+  .producto
+    %p{:itemprop => "name"}
+      =@producto.nombre  
+.descripcion
+  #tabmenu
+    %ul
+      %li
+        %p  DESCRIPCIÓN
+      - unless @producto.ingredientes.nil? || @producto.ingredientes.size < 5
+        %li
+          %a{:href => "#tab2"} INGREDIENTES
+      - unless @producto.usos.nil? || @producto.usos.size < 5
+        %li
+          %a{:href => "#tab3"} USOS
+    .tabcontent
+      - unless @producto.descripcion.nil? || @producto.descripcion.size < 5
+        #tab1.tabdesc
+          %div{:itemprop => "description"}
+            =@producto.descripcion.html_safe
+      - unless @producto.ingredientes.nil? || @producto.ingredientes.size < 5
+        #tab2.tabdesc
+          %div{:itemprop => "description"}
+            =@producto.ingredientes.html_safe
+      - unless @producto.usos.nil? || @producto.usos.size < 5
+        #tab3.tabdesc
+          %div{:itemprop => "description"}
+            =@producto.usos.html_safe

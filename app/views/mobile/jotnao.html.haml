@@ -1,0 +1,26 @@
+.jotnao
+  .ima
+    = image_tag 'mobile/home/2.jpg'
+  .tex
+    %p lo más nuevo, lo más hot, de lo que todo mundo está hablando
+.hotnow
+- provide :titulo, @seccion.nombre.split(' ').map {|w| w.capitalize }.join(' ')
+.vethotnow{ :class => "seccion-#{@seccion.try(:nombre).try(:parameterize)}"}
+  - if @contenido and (seccion_productos = @contenido.producto_seccion) and seccion_productos.any?
+    - if @contenido.cover_file_name
+      .cover
+  #pollo
+    %ul#slider4.rslides
+      - seccion_productos.each_with_index do |seccion_producto, i|
+        - producto = seccion_producto.producto
+        %li
+          .table.full
+            .info
+              %h3
+                = producto.marca.marca
+              %h5
+                = producto.nombre_real.empty? ? producto.nombre : producto.nombre_real
+              - unless seccion_producto.descripcion.empty?
+                = seccion_producto.descripcion.html_safe
+            .picture
+              =link_to image_tag(producto.foto.url(:chico)), m_producto_path(producto.slug)
