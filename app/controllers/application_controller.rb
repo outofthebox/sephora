@@ -10,6 +10,14 @@ class ApplicationController < ActionController::Base
     end
   end
 
+
+  # -----------------------------
+  # I was searching
+  # You were on a mission
+  # And our hearts combined like
+  # A neutron star collision
+  # -----------------------------
+
   # Para devise http://stackoverflow.com/questions/4982073/different-layout-for-sign-in-action-in-devise
   layout :layout_by_resource
 
