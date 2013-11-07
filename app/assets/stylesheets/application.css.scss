@@ -74,6 +74,134 @@ ul.breadcrumbs{
     }
   }
 }
+
+
+// holiday
+.liston_left{
+  background:url("holiday/2013/liston_izq.png");
+  width:210px;
+  height:485px;
+  position:absolute;
+  left:-210px;
+  top:350px;
+}
+.liston_right{
+  background:url("holiday/2013/liston_der.png");
+  width:210px;
+  height:485px;
+  position: absolute;
+  right:-210px;
+  top:160px;
+}
+
+.loader {
+    text-align: center;
+}
+.loader span {
+    opacity: 0;
+    display: inline-block;
+    margin: -280px 100px 54px  -200px;
+    background: #ff0000;
+    -webkit-animation: loader 10s infinite  linear;
+    -moz-animation: loader 10s infinite  linear;
+    position: relative;
+    z-index: 1000000000000000;
+}
+
+.loader span.l1{
+  background:url("holiday/2013/boca_voladora.png");
+  top:-50px;
+  width: 47px;
+  height: 21px;
+}
+
+.loader span.l2{
+  background:url("holiday/2013/circulito_volador.png");
+  top:-100px;
+  width: 37px;
+  height: 38px;
+}
+
+.loader span.l3{
+  background:url("holiday/2013/corazon_volador.png");
+  top:0px;
+  width: 50px;
+  height: 47px;
+}
+
+.loader span:nth-child(5n+5) {
+
+    -webkit-animation-delay: 1.3s;
+    -moz-animation-delay: 1.3s;
+}
+.loader span:nth-child(3n+2) {
+
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+}
+.loader span:nth-child(2n+5) {
+
+    -webkit-animation-delay: 1.7s;
+    -moz-animation-delay: 1.7s;
+}
+
+.loader span:nth-child(3n+10) {
+
+    -webkit-animation-delay: 2.7s;
+    -moz-animation-delay: 2.7s;
+}
+.loader span:nth-child(7n+2) {
+
+    -webkit-animation-delay: 3.5s;
+    -moz-animation-delay: 3.5s;
+}
+.loader span:nth-child(4n+5) {
+
+    -webkit-animation-delay: 5.5s;
+    -moz-animation-delay: 5.5s;
+}
+.loader span:nth-child(3n+7) {
+
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+}
+@-webkit-keyframes loader {
+  0% {
+    opacity: 1;
+
+  -webkit-transform: translate(0, 0px) rotateZ(0deg);
+  }
+  75% {
+    opacity: 1;
+
+  -webkit-transform: translate(100px, 600px) rotateZ(270deg); 
+  }
+  100% {
+    opacity: 0;
+
+  -webkit-transform: translate(150px, 800px) rotateZ(360deg);
+  }
+}
+@-moz-keyframes loader {
+  0% {
+    opacity: 1;
+    
+  -webkit-transform: translate(0, 0px) rotateZ(0deg);
+  }
+  75% {
+    opacity: 1;
+   
+  -webkit-transform: translate(100px, 600px) rotateZ(270deg); 
+  }
+  100% {
+    opacity: 0;
+    
+  -webkit-transform: translate(150px, 800px) rotateZ(360deg);
+  }
+}
+
+
+
 // BANDA NEGRA SUPERIOR
 #head-sup {
   background: #000;
@@ -317,6 +445,11 @@ ul.breadcrumbs{
         height: 31px;
         background: image-url('logo.gif');
         margin: 0 auto;
+        &.holiday{
+          background: image-url('holiday/2013/logo.png') !important;
+          height: 31px;
+          width: 213px;
+        }
       }
     }
     nav#menu {
