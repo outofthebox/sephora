@@ -1,3 +1,6 @@
 #Baiduspider
 User-agent: Baiduspider
 Disallow: /
+
+User-agent: Baiduspider-mobile
+Allow: /your-image-directory/
