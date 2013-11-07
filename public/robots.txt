@@ -4,3 +4,6 @@ Disallow: /
 
 User-agent: Baiduspider-mobile
 Allow: /your-image-directory/
+
+User-agent: Baiduspider/2.0 
+Disallow: /
