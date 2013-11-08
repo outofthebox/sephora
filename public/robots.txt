@@ -1,6 +1,6 @@
 ########################################################
 #
-#    Sephora.com Robots File
+#    Sephora.com.mx Robots File
 #    Last Updated on November 7th, 2013
 #
 ########################################################

@@ -23,6 +23,7 @@ gem 'mysql2',          '0.3.12b4'
 gem 'flying-sphinx'
 gem 'newrelic_rpm'
 gem 'yaml_db'
+gem "rack-block", "~> 0.1.1"
 
 group :assets do
   gem "jquery-rails", "~>1.0.19"
