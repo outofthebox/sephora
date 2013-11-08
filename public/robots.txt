@@ -17,11 +17,11 @@ Disallow: *
 
 #Bing
 User-agent: bingbot 
-Disallow: /
+Disallow: *
 
 #MSN
 User-Agent: msnbot
-Disallow: /
+Disallow: *
 
 # Yahoo!
 User-agent: Slurp
@@ -59,4 +59,4 @@ User-agent: Naverbot
 Disallow:*
 
 User-agent: MJ12bot
-Disallow: /
+Disallow: *
