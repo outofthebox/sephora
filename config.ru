@@ -5,11 +5,11 @@ require ::File.expand_path('../config/environment',  __FILE__)
 
 use Rack::Block do
 	ua_pattern /Baiduspider/i do
-		halt 404
+		halt 500
 	end
 
 	ip_pattern "180.76." do
-		halt 404
+		halt 500
 	end
 end
 
