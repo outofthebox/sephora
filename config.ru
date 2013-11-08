@@ -8,7 +8,7 @@ use Rack::Block do
 		halt 404
 	end
 
-	ip_pattern 180.76 do
+	ip_pattern "180.76." do
 		halt 404
 	end
 end
