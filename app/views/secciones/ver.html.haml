@@ -22,7 +22,10 @@
                   %h4
                     = producto.marca.marca
                   %h5
-                    = producto.nombre_real.empty? ? producto.nombre : producto.nombre_real
+                    -unless producto.nombre_real.nil? or producto.nombre_real.empty?
+                      = producto.nombre 
+                    - else 
+                      = producto.nombre_real
                   - unless seccion_producto.descripcion.empty?
                     %p
                       = seccion_producto.descripcion.html_safe
