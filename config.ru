@@ -7,10 +7,6 @@ use Rack::Block do
 	ua_pattern /Baiduspider/i do
 		halt 500
 	end
-
-	ip_pattern "180.76." do
-		halt 500
-	end
 end
 
 run Sephora::Application
