@@ -8,9 +8,55 @@
 #Baiduspider
 User-agent: Baiduspider
 Crawl-delay: 30
-Disallow: /
+Disallow: *
 
 #Baiduspider 2.0
 User-agent: Baiduspider/2.0 
 Crawl-delay: 30
-Disallow: /
+Disallow: *
+
+#Bing
+User-Agent: bingbot
+Disallow: *
+Crawl-delay: 5
+
+#MSN
+User-Agent: msnbot
+Disallow: /basket*
+Disallow: /profile*
+Crawl-delay: 5
+
+# Yahoo!
+User-agent: Slurp
+Disallow: *
+Crawl-delay: 5
+
+# Ask
+User-agent: Teoma
+Disallow: *
+Crawl-delay: 5
+
+# SEOMoz
+User-Agent: rogerbot
+Disallow: *
+Crawl-delay: 5
+
+User-agent: Yandex
+Disallow: *
+Crawl-delay: 5
+
+User-agent: Yeti
+Disallow: *
+Crawl-delay: 5
+
+User-agent: teoma
+Disallow: *
+
+User-agent: Slurp
+Disallow:*
+
+User-agent: seznambot
+Disallow:*
+
+User-agent: Naverbot
+Disallow:*
