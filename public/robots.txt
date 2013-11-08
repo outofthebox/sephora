@@ -1,0 +1,16 @@
+########################################################
+#
+#    Sephora.com.mx Robots File
+#    Last Updated on November 7th, 2013
+#
+########################################################
+
+#Baiduspider
+User-agent: Baiduspider
+Crawl-delay: 30
+Disallow: /
+
+#Baiduspider 2.0
+User-agent: Baiduspider/2.0 
+Crawl-delay: 30
+Disallow: /
