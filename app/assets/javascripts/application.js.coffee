@@ -87,7 +87,7 @@ intervalID = setInterval(->
 , 5000)
 
 count = 1
-slides = 2
+slides = 3
 width = 760
 counter = '/' + slides
 $(".prox p").text('1' + counter)
