@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131001224026) do
+ActiveRecord::Schema.define(:version => 20131108202847) do sephora_tips
 
   create_table "categoria_productos", :force => true do |t|
     t.integer  "producto_id"
@@ -201,6 +201,18 @@ ActiveRecord::Schema.define(:version => 20131001224026) do
     t.string   "mapa"
     t.float    "latitud"
     t.float    "longitud"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.string   "foto_file_name"
+    t.string   "foto_content_type"
+    t.integer  "foto_file_size"
+    t.datetime "foto_updated_at"
+  end
+
+  create_table "tips", :force => true do |t|
+    t.string   "nombre"
+    t.string   "correo"
+    t.text     "tip"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
     t.string   "foto_file_name"
