@@ -168,6 +168,7 @@ Sephora::Application.routes.draw do
 
   #sephora_tips
   get "sephora_tips", :to => 'sephora_tips#index', :as => "sephora_tips"
+  post "sephora_tips", :to => 'sephora_tips#index', :as => "sephora_tips"
   post 'sephora_tips/send', :to => 'sephora_tips#post_tip', :as => 'post_sephora_tips'
 
   # última línea, hace match con el resto de las rutas y muestra 404
