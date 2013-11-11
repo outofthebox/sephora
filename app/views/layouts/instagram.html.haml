@@ -1,0 +1,18 @@
+!!!! 5
+%html
+  :plain
+    <!--[if lt IE 7]> <html lang="es" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+    <!--[if IE 7]>    <html lang="es" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+    <!--[if IE 8]>    <html lang="es" class="no-js lt-ie9"> <![endif]-->
+    <!--[if gt IE 8]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
+  %head
+    %meta{:charset => "UTF-8"}
+    %title Sephora Tips
+    = stylesheet_link_tag :insta_sephora
+    = csrf_meta_tags
+  %body
+    #wrapper
+      #contenido
+        = yield
+      #footer
+  = javascript_include_tag :insta_sephora
