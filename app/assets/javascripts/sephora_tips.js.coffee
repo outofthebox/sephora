@@ -1,14 +1,11 @@
 # = require jquery
-# = require_tree .
 
-Init = ->
-  $(".bottones.howto").click ->
-    $(".box.participar").addClass("visible");
 
-  $(".bottones.prices").click ->
-    $(".box.premios").addClass("visible");
+$(".bottones.howto").click ->
+  $(".box.participar").addClass("visible");
 
-  $(".box .cerrar").click ->
-    $(this).parent().removeClass("visible");
+$(".bottones.prices").click ->
+  $(".box.premios").addClass("visible");
 
-i = new Init();
+$(".box .cerrar").click ->
+  $(this).parent().removeClass("visible");
