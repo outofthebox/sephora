@@ -6,8 +6,11 @@ class ApplicationController < ActionController::Base
   def redirect_main_domain
     dominio = 'sephora.com.mx'
     if request.env["rack.url_scheme"] == "https" 
-      if request.env['HTTP_HOST'] != dominio
-        redirect_to "https://#{dominio}#{request.fullpath}"
+      if request.env['HTTP_HOST'] == "sephoramexico.herokuapp.com"
+      else
+        if request.env['HTTP_HOST'] != dominio
+          redirect_to "https://#{dominio}#{request.fullpath}"
+        end
       end
     else
       if request.env['HTTP_HOST'] != dominio
