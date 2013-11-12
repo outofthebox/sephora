@@ -10,7 +10,6 @@
  *
  *= require 960.css.scss
  *= require_self
- *= require_tree .
  */
 
  html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -84,156 +83,18 @@ html, body {
 
 #vista{
 	width:100%;
-	height:1276px;
+	height:460px;
 	display: block;
 	position:relative;
+	padding-top:520px;
 	&[pagina="inicio"]{
-		background-image: url("https://trello-attachments.s3.amazonaws.com/500464f18775ae05042186fd/52782fe4b56f2a0c15001d80/709b22c1158be359884c377a44032207/tips_FB_main.jpg");
+		background-image: url("insta_sephora/instagram.jpg");
+		background-repeat:no-repeat;
+		background-size:contain;
+		background-color:white;
 	}
-	&[pagina="enviado"]{
-		background-image: url("https://trello-attachments.s3.amazonaws.com/500464f18775ae05042186fd/52782fe4b56f2a0c15001d80/d71e50d98a5d229dd0b1e4ee9ab20909/tips_FB_caja_llena.jpg");
-	}
-	.box{
-		display: none;
-		opacity: 0;
-		transition: opacity 800ms;
-		&.visible{
-			display: block;
-			opacity: 1;
-			transition: opacity 800ms;
-		}
-		.cerrar{
-			position:absolute;
-			top:2px;
-			right:2px;
-			color:white;
-			display: block;
-			min-height: 41px;
-			min-width: 36px;
-			text-align:center;
-			cursor: pointer;
-			background-image:url("close_icon.png");
-			background-size:cover;
-			background-position:0 0;
-		}
-		background-color:#000000;
-		background-color:rgba(0,0,0,0.9);
-		font-family: Tahoma;
-		font-size:12px;
-		color:white;
-		position:absolute;
-		width: 450px;
-		min-height: 375px;
-		top:350px;
-		z-index: 4;
-		margin:auto;
-		left:150px;
-		text-align: center;
-		h3{
-			color:red;
-			font-size: 14px;
-			line-height: 1.2em;
-			margin-top:40px;
-		}
-		&.premios h3{
-			margin-top:120px;
-		}
-		p{
-			width: 400px;
-			font-size: 12px;
-			line-height: 1.6em;
-			color:#ccc;
-			margin:20px auto;
-			strong{
-				font-weight: bold;
-				color:white;
-			}
-			small{
-				font-size: 10px;
-			}
-		}
-	}
-	.bottones{
-		display: block;
-		position: absolute;
-		height: 27px;
-		width: 155px;
-		cursor: pointer;
-		&.howto{
-			top: 371px;
-			left: 205px;
-		}
-		&.prices{
-			top: 371px;
-			left: 397px;
-		}
-	}
-	.formulario{
-		width: 314px;
-		position: absolute;
-		top: 422px;
-		left: 220px;
-		height: 220PX;
-		input[type="text"]{
-			width: 309px;
-			height: 24px;
-			border:0;
-			position:absolute;
-			&[name="tip[nombre]"]{
-				top: 26px;
-				left: 2px;
-			}
-			&[name="tip[correo]"]{
-				top:81px;
-				left:2px;
-			}
-			&[name="tip[tip]"]{
-				top:136px;
-				left:2px;
-			}
-		}
-		.fakeUploadFoto{
-			width: 313px;
-			height: 28px;
-			border: 0;
-			position: absolute;
-			top: 190px;
-			left: 0px;
-			color: white;
-			opacity: 1;
-			z-index: 1;
-			background: black;
-			cursor: pointer;
-			display: block;
-			text-align: center;
-			font-family: Tahoma;
-			font-size: 12px;
-			line-height: 28px;
-		}
-		input[type="submit"]{
-			width: 102px;
-			height: 29px;
-			border: 0;
-			position: absolute;
-			background-color: rgb(243, 12, 12);
-			top: 243px;
-			right: 1px;
-			color:white;
-			opacity: 0;
-			cursor: pointer;
-		}
-		input[type="file"]{
-			width: 309px;
-			height: 24px;
-			border:0;
-			position:absolute;
-			z-index: 2;
-			opacity: 0;
-			cursor:pointer;
-			&[name="tip[foto]"]{
-				top:195px;
-				left:2px;
-			}
-		}
+	.thumb {
+		width: 187px;
+		padding: 9px 0;
 	}
 }

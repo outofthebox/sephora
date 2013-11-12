@@ -23,6 +23,7 @@ gem 'mysql2',          '0.3.12b4'
 gem 'flying-sphinx'
 gem 'newrelic_rpm'
 gem 'yaml_db'
+gem 'instagram'
 gem "rack-block", "~> 0.1.1"
 
 group :assets do
