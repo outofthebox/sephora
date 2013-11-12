@@ -157,6 +157,8 @@ class PaginasController < ApplicationController
       render :wallpapers
     end
   end
+  def comunicado
+  end
   def bloggers
   end
   def sephoragifts
