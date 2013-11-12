@@ -1,12 +1,18 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  before_filter :redirect_main_domain if Rails.env.production?
+  before_filter :redirect_main_domain #if Rails.env.production?
 
   def redirect_main_domain
     dominio = 'sephora.com.mx'
-    if request.env['HTTP_HOST'] != dominio
-      redirect_to "http://#{dominio}#{request.fullpath}"
+    if request.env["rack.url_scheme"] == "https" 
+      if request.env['HTTP_HOST'] != dominio
+        redirect_to "https://#{dominio}#{request.fullpath}"
+      end
+    else
+      if request.env['HTTP_HOST'] != dominio
+        redirect_to "http://#{dominio}#{request.fullpath}"
+      end
     end
   end
 
