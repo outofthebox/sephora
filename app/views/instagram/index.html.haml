@@ -1,3 +1,4 @@
 #vista{:pagina => "inicio"} 
-  - @instagram.each do |i|
-    =image_tag i.images.standard_resolution.url, :class => "thumb"
+	- @instagram.each do |i|
+		%a{:href=>i.link, :target => "_blank"}
+			=image_tag i.images.standard_resolution.url, :class => "thumb"
