@@ -4,7 +4,7 @@ class InstagramController < ApplicationController
   end
 
   def new_stuff
-  	puts request.body.read
+  	render :text => request.body.read
     # Instagram.process_subscription(request.body.read) do |handler|
     #   handler.on_tag_changed do |tag, data|
     #     Instagram.tag_recent_media(tag).data.each do |data|
