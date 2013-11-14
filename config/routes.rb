@@ -169,7 +169,7 @@ Sephora::Application.routes.draw do
   #instaCosas
   get "instagram", :to => 'instagram#index', :as => "insta_sephora"
   post "instagram", :to => 'instagram#index', :as => "insta_sephora"
-  get "instagram/new-stuff", :to => 'instagram#new_stuff', :as => "insta_sephora_new"
+  post "instagram/suscribir", :to => 'instagram#new_stuff', :as => "insta_sephora_new"
 
 
   #Comunicados
