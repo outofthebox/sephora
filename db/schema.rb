@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131108202847) do
+ActiveRecord::Schema.define(:version => 20131114184005) do
 
   create_table "categoria_productos", :force => true do |t|
     t.integer  "producto_id"
@@ -120,6 +120,25 @@ ActiveRecord::Schema.define(:version => 20131108202847) do
   add_index "mobileusers", ["email"], :name => "index_mobileusers_on_email", :unique => true
   add_index "mobileusers", ["reset_password_token"], :name => "index_mobileusers_on_reset_password_token", :unique => true
 
+  create_table "models", :force => true do |t|
+    t.string   "email",                  :default => "", :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "mobilelogin"
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
+  end
+
+  add_index "models", ["email"], :name => "index_models_on_email", :unique => true
+  add_index "models", ["reset_password_token"], :name => "index_models_on_reset_password_token", :unique => true
+
   create_table "producto_secciones", :force => true do |t|
     t.integer  "producto_id"
     t.integer  "seccion_id"
@@ -190,6 +209,19 @@ ActiveRecord::Schema.define(:version => 20131108202847) do
     t.string   "cover_content_type"
     t.integer  "cover_file_size"
     t.datetime "cover_updated_at"
+  end
+
+  create_table "sephoragrams", :force => true do |t|
+    t.string   "instagram_id"
+    t.string   "instagram_link"
+    t.string   "pic_thumb"
+    t.string   "pic_med"
+    t.string   "pic_large"
+    t.string   "fullname"
+    t.string   "username"
+    t.boolean  "publicado",      :default => false
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
   end
 
   create_table "tiendas", :force => true do |t|
