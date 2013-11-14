@@ -1,6 +1,6 @@
 class InstagramController < ApplicationController
   def index
-  	@instagram = Instagram.tag_recent_media("GiftmaniaSephora", {:count => 8})
+  	@fotos = Foto.where(:publicado => false).order('created_at DESC').all
   end
 
   def new_stuff
@@ -8,6 +8,16 @@ class InstagramController < ApplicationController
       handler.on_tag_changed do |tag, data|
         Instagram.tag_recent_media(tag).data.each do |data|
           puts data.inspect
+          sephoragram = Sephoragram.find_or_create_by_instagram_id(
+            :instagram_id => data.id,
+            :instagram_link => data.link,
+            :pic_thumb => data.images.thumbnail.url,
+            :pic_med => data.images.low_resolution.url,
+            :pic_large => data.images.standard_resolution.url,
+            :fullname => data.user.full_name,
+            :username => data.user.username
+          )
+          sephoragram.save
         end
       end
     end
