@@ -5,7 +5,7 @@ class InstagramController < ApplicationController
 
   def new_stuff
     Instagram.process_subscription(request.body) do |handler|
-      handler.on_tag_changed do |tag, data|
+      handler.on_tag_changed do |tag, data.to_a|
         Instagram.tag_recent_media(tag).data.each do |data|
           puts data.inspect
           sephoragram = Sephoragram.find_or_create_by_instagram_id(
