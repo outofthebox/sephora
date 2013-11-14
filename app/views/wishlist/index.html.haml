@@ -1,34 +1,35 @@
 #vista{:pagina => "inicio"}
-  .box.participar
-    .cerrar
-    %h3 CÓMO PARTICIPAR:  
-    %p
-      %strong - Ingresa a la app y añade la información solicitada: 
-      %br
-      E mail, nombre, tip de belleza y foto.
-    %p
-      %strong - Comparte tu mejor tip 
-      de belleza en 140 caracteres, perfecto para iniciar un 2014 lleno de belleza y color.
-    %p
-      \- Añade una foto del tip
-    %p
-      %strong - Sé parte del primer Beauty Book 2014 de Sephora México
-      %br
-      que se compartirá en exclusiva con toda la comunidad de Sephora México en Enero 2014 y gana fabulosos obsequios.
-    %p 
-      \- Tienes hasta el 
-      %strong 31 de Diciembre de 2013
-      para participar.
-  .box.premios
-    .cerrar
-    %h3 PREMIOS:  
-    %p
-      Los
-      %strong 3 mejores tips
-      ,seleccionados por un jurado especial de Sephora México
-      %strong ganarán un Holiday Kit.
-    %p 
-      %small *El monto de los premios, dependerá de la cantidad de tips compartidos, entre mas tips, mas grandes seran los regalos.
+  #box  
+    .box.participar
+      .cerrar
+      %h3 CÓMO PARTICIPAR:  
+      %p
+        %strong - Ingresa a la app y añade la información solicitada: 
+        %br
+        E mail, nombre, tip de belleza y foto.
+      %p
+        %strong - Comparte tu mejor tip 
+        de belleza en 140 caracteres, perfecto para iniciar un 2014 lleno de belleza y color.
+      %p
+        \- Añade una foto del tip
+      %p
+        %strong - Sé parte del primer Beauty Book 2014 de Sephora México
+        %br
+        que se compartirá en exclusiva con toda la comunidad de Sephora México en Enero 2014 y gana fabulosos obsequios.
+      %p 
+        \- Tienes hasta el 
+        %strong 31 de Diciembre de 2013
+        para participar.
+    .box.premios
+      .cerrar
+      %h3 PREMIOS:  
+      %p
+        Los
+        %strong 3 mejores tips
+        ,seleccionados por un jurado especial de Sephora México
+        %strong ganarán un Holiday Kit.
+      %p 
+        %small *El monto de los premios, dependerá de la cantidad de tips compartidos, entre mas tips, mas grandes seran los regalos.
   .bottones.howto
   .bottones.prices
   .slider_items.wishlist
@@ -63,6 +64,8 @@
               .producto-p
                 %p
                   = producto.nombre_real
+              .producto-agregar
+                =link_to image_tag("wishlist/corazon.png"), "/#"
   .slider_items.roller
     %button.left
     %button.right
@@ -79,6 +82,8 @@
               .producto-p
                 %p
                   = producto.nombre_real
+              .producto-agregar
+                =link_to image_tag("wishlist/corazon.png"), "/#"
   .slider_items.maquillaje
     %button.left
     %button.right
@@ -95,6 +100,8 @@
               .producto-p
                 %p
                   = producto.nombre_real
+              .producto-agregar
+                =link_to image_tag("wishlist/corazon.png"), "/#"
   .slider_items.skincare
     %button.left
     %button.right
@@ -111,6 +118,8 @@
               .producto-p
                 %p
                   = producto.nombre_real
+              .producto-agregar
+                =link_to image_tag("wishlist/corazon.png"), "/#"
   .slider_items.cabello
     %button.left
     %button.right
@@ -127,6 +136,8 @@
               .producto-p
                 %p
                   = producto.nombre_real
+              .producto-agregar
+                =link_to image_tag("wishlist/corazon.png"), "/#"
   .slider_items.fra_mujer
     %button.left
     %button.right
@@ -143,6 +154,8 @@
               .producto-p
                 %p
                   = producto.nombre_real
+              .producto-agregar
+                =link_to image_tag("wishlist/corazon.png"), "/#"
   .slider_items.fra_hombre
     %button.left
     %button.right
@@ -159,6 +172,8 @@
               .producto-p
                 %p
                   = producto.nombre_real
+              .producto-agregar
+                =link_to image_tag("wishlist/corazon.png"), "/#"
   #skincare
   #cabello
   #fra_mujer

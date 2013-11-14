@@ -4,8 +4,7 @@
 #- Declaracion de funciones
 #-
 initSlide = (cont, move) ->
-	console.log cont+" .left", $(cont+" .left")
-	$(".slider_items."+cont+" .left").click (ev) ->
+	$(".slider_items."+cont+" .right").click (ev) ->
 		ev.preventDefault();
 		$this = $(this);
 		this.disabled = "disabled";
@@ -16,7 +15,7 @@ initSlide = (cont, move) ->
 			$this.removeAttr("disabled");
 		), 350;
 
-	$(".slider_items."+cont+" .right").click (ev) ->
+	$(".slider_items."+cont+" .left").click (ev) ->
 		ev.preventDefault();
 		$this = $(this);
 		$holiday = $("#"+cont+"_cont");
@@ -38,3 +37,16 @@ initSlide("skincare", 329)
 initSlide("cabello", 329)
 initSlide("fra_mujer", 329)
 initSlide("fra_hombre", 329)
+
+
+$(".bottones.howto").click ->
+  $(".box.participar").addClass("visible");
+  $("#box").addClass("visible");
+
+$(".bottones.prices").click ->
+  $(".box.premios").addClass("visible");
+  $("#box").addClass("visible");
+
+$(".box .cerrar").click ->
+  $(this).parent().removeClass("visible");
+  $("#box").removeClass("visible");

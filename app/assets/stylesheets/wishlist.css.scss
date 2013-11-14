@@ -105,6 +105,23 @@ html, body {
 	&[pagina="inicio"]{
 		background-image: url("wishlist/index.jpg");
 	}
+	#box{
+		background-color:rgba(0,0,0,0.8);
+		width: 100%;
+		height: 1858px;
+		position:absolute;
+		z-index: 6;
+		top:0;
+		left:0;
+		display: none;
+		opacity: 0;
+		transition: opacity 800ms;
+		&.visible{
+			display: block;
+			opacity: 1;
+			transition: opacity 800ms;
+		}
+	}
 	.box{
 		display: none;
 		opacity: 0;
@@ -171,15 +188,14 @@ html, body {
 		height: 30px;
 		width: 133px;
 		cursor: pointer;
+		z-index: 2;
 		&.howto{
-			background: rgba(233,45,67,0.8);
 			top: 278px;
 			left: 455px;
 		}
 		&.prices{
-			background: rgba(133,235,67,0.8);
-			top: 371px;
-			left: 397px;
+			top: 278px;
+			left: 612px;
 		}
 	}
 	.slider_items{
@@ -261,6 +277,17 @@ html, body {
 			overflow:hidden;
 			padding:0;
 			margin:0;
+			.producto-p{
+				height: 30px;
+				max-height: 55px;
+				display: block;
+				margin-bottom: 5px;
+				p{
+					width: 100%;
+					height: 100%;
+					font-size: 12px;
+				}
+			}
 			.producto-imagen img{
 				width: 120px;
 				border:1px solid #ccc;
