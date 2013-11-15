@@ -7,7 +7,7 @@ class InstagramController < ApplicationController
     variable = request.body.read
 
     Instagram.process_subscription(request.body.read) do |handler|
-      handler.on_tag_changed do |tag|
+      handler.on_tag_changed do |tag, dt|
         @instagram = Instagram.tag_recent_media(tag);
         @instagram.each do |data|
           sephoragram = Sephoragram.find_or_create_by_instagram_id(
