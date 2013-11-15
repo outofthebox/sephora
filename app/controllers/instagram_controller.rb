@@ -4,6 +4,8 @@ class InstagramController < ApplicationController
   end
 
   def new_stuff
+    variable = request.body.read
+    raise variable.inspect;
   end
 
   def suscribir
