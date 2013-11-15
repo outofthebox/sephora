@@ -1,15 +1,13 @@
 class InstagramController < ApplicationController
   def index
-    @fotos = Foto.where(:publicado => false).order('created_at DESC').all
+    #@fotos = Foto.where(:publicado => false).order('created_at DESC').all
   end
 
   def new_stuff
-    variable = request.body.read
-
-    Instagram.process_subscription(request.body.read) do |handler|
+    Instagram.process_subscription(request.body.string) do |handler|
       handler.on_tag_changed do |tag, data|
-        @instagram = Instagram.tag_recent_media(tag)
-        @instagram.each do |data|
+        @inst = Instagram.tag_recent_media("GiftmaniaSephora");
+        @inst.each do |data|
           sephoragram = Sephoragram.find_or_create_by_instagram_id(
             :instagram_id => data.id,
             :instagram_link => data.link,
