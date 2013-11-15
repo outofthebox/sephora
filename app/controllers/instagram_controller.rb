@@ -1,6 +1,6 @@
 class InstagramController < ApplicationController
   def index
-    #@fotos = Foto.where(:publicado => false).order('created_at DESC').all
+    @fotos = Foto.where(:publicado => false).order('created_at DESC').all
   end
 
   def new_stuff
