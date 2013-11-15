@@ -1,8 +1,8 @@
 #vista{:pagina => "inicio"} 
 	%ul
 		- @fotos.each do |foto|
-	      %li
-	        = link_to image_tag(foto.pic_med, :width => 180, :height => 180), foto.instagram_link, :target => 'blank', :"data-id" => foto.instagram_id
-	        %p
-	          = link_to "@#{foto.username}", foto.instagram_link, :target => 'blank'
+	    %li
+	      = link_to image_tag(foto.pic_med, :width => 180, :height => 180), foto.instagram_link, :target => 'blank', :"data-id" => foto.instagram_id
+	      %p
+	        = link_to "@#{foto.username}", foto.instagram_link, :target => 'blank'
 
