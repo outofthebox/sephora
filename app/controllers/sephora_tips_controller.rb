@@ -9,8 +9,8 @@ class SephoraTipsController < ApplicationController
 		@tip = Tip.new (@le_tip)
 
 		# intenta guardar en base de datos
-    # if @tip.save
-    # else
-    # end
+    if @tip.save
+    else
+    end
 	end
 end
