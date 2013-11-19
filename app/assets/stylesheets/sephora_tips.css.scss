@@ -131,7 +131,12 @@ html, body {
 		left:150px;
 		text-align: center;
 		h3{
-			color:red;
+			&.rosa{
+				color:#F8A8C3;
+			}
+			&.azul{
+				color:#5BC5BB;
+			}
 			font-size: 14px;
 			line-height: 1.2em;
 			margin-top:40px;
