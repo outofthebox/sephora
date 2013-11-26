@@ -22,12 +22,12 @@
   = javascript_include_tag :modernizr
   = stylesheet_link_tag :application
   = csrf_meta_tags
-  -if ENV['GOOGLE_ANALYTICS_KEY']
-    :javascript
-      window._gaq = [['_setAccount','#{ENV['GOOGLE_ANALYTICS_KEY']}'],['_trackPageview'],['_trackPageLoadTime']];
-      Modernizr.load({
-        load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
-      });
+  //-if ENV['GOOGLE_ANALYTICS_KEY']
+  //  :javascript
+  //    window._gaq = [['_setAccount','#{ENV['GOOGLE_ANALYTICS_KEY']}'],['_trackPageview'],['_trackPageLoadTime']];
+  //    Modernizr.load({
+  //      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+  //    });
   %meta{:content => "qCft4n7tHfODiCl-UWgEd_uquba_MLlevA9txPjkYkk", :name => "google-site-verification"}
 %body
   #head-sup
@@ -251,18 +251,5 @@
         #internacional
           %a.middle{:href => 'http://www.sephora.com/international/international.jsp', :target => '_blank'} Internacional
           %span.icon
-  :plain
-    <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-11107291-7']);
-    _gaq.push(['_setDomainName', 'sephora.com.mx']);
-    _gaq.push(['_trackPageview']);
-  
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-    </script>
   = javascript_include_tag :application
   %script{:src => "//assets.pinterest.com/js/pinit.js", :type => "text/javascript"}
