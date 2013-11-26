@@ -24,9 +24,9 @@
   = csrf_meta_tags
   -if ENV['GOOGLE_ANALYTICS_KEY']
     :javascript
-      window._gaq = [['_setAccount','#{ENV['GOOGLE_ANALYTICS_KEY']}'],['_trackPageview'],['_trackPageLoadTime']];
+      window._gaq = [['_setAccount','#{ENV['GOOGLE_ANALYTICS_KEY']}'],['_trackPageview'],['_trackPageLoadTime'],['_setDomainName', 'sephora.com.mx']];
       Modernizr.load({
-        load: ('https:' == location.protocol ? '//ssl' : '//www') + 'stats.g.doubleclick.net/dc.js'
+        ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
       });
   %meta{:content => "qCft4n7tHfODiCl-UWgEd_uquba_MLlevA9txPjkYkk", :name => "google-site-verification"}
 %body
