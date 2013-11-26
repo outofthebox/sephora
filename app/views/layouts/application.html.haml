@@ -25,9 +25,11 @@
   -if ENV['GOOGLE_ANALYTICS_KEY']
     :javascript
       window._gaq = [['_setAccount','#{ENV['GOOGLE_ANALYTICS_KEY']}'],['_trackPageview'],['_trackPageLoadTime'],['_setDomainName', 'sephora.com.mx']];
-      Modernizr.load({
-        ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-      });
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
   %meta{:content => "qCft4n7tHfODiCl-UWgEd_uquba_MLlevA9txPjkYkk", :name => "google-site-verification"}
 %body
   #head-sup
