@@ -58,7 +58,7 @@
       .contenedor
         - unless @categoria.cover_file_name.nil?
           - unless @categoria.urlslug.nil? || @categoria.urlslug.empty?
-            = link_to image_tag(@categoria.cover.url(:normal)), producto_ver_path(@categoria.urlslug)
+            = link_to image_tag(@categoria.cover.url(:normal)),(@categoria.urlslug)
           - else
             = image_tag(@categoria.cover.url(:normal))
       .catalogo
