@@ -99,11 +99,12 @@ html, body {
 
 #vista{
 	width:100%;
-	height: 1858px;
+	height: 1534px;
 	display: block;
 	position:relative;
 	&[pagina="inicio"]{
-		background-image: url("wishlist/index.jpg");
+		background-image: url("wishlist/index.png");
+		background-color: #FFFFFF;
 	}
 	#box{
 		background-color:rgba(0,0,0,0.8);
@@ -126,6 +127,12 @@ html, body {
 		display: none;
 		opacity: 0;
 		transition: opacity 800ms;
+		&.full{
+			transition: opacity 800ms;
+			height: 140px;
+			overflow: hidden;
+			min-height: 140px;
+		}
 		&.visible{
 			display: block;
 			opacity: 1;
@@ -159,13 +166,15 @@ html, body {
 		left:150px;
 		text-align: center;
 		h3{
-			color:red;
+			color: rgb(114, 211, 219);
 			font-size: 14px;
 			line-height: 1.2em;
-			margin-top:40px;
-		}
-		&.premios h3{
-			margin-top:120px;
+			font-weight: bold;
+			letter-spacing: 1px;
+			border-bottom:1px solid white;
+			width: 80%;
+			padding-bottom: 10px;
+			margin:40px auto 5px auto;
 		}
 		p{
 			width: 400px;
@@ -173,6 +182,7 @@ html, body {
 			line-height: 1.6em;
 			color:#ccc;
 			margin:20px auto;
+			letter-spacing: 1px;
 			strong{
 				font-weight: bold;
 				color:white;
@@ -206,21 +216,22 @@ html, body {
 		font-size: 14px;
 		position: absolute;
 		&.wishlist{
-			top: 348px;
-			left:0;
+			top: 330px;
+			left: 0;
 			width: 100%;
+			height: 213px;
 		}
 		&.holiday{
 			.left{}
 			.right{}
-			top: 628px;
+			top: 590px;
 			left:0;
 			width: 100%;
 		}
 		&.roller{
 			.left{}
 			.right{}
-			top: 948px;
+			top: 902px;
 			left: 0;
 		}
 		&.maquillaje{
@@ -231,13 +242,13 @@ html, body {
 				right:3px;
 			}
 			width:356px;
-			top: 948px;
+			top: 902px;
 			left: 404px;
 		}
 		&.skincare{
 			.left{}
 			.right{}
-			top:1240px;
+			top:1230px;
 			left:0;
 		}
 		&.cabello{
@@ -248,7 +259,7 @@ html, body {
 				right:3px;
 			}
 			width:356px;
-			top:1240px;
+			top:1230px;
 			left:404px;
 		}
 		&.fra_mujer{
@@ -272,59 +283,128 @@ html, body {
 			display: inline-block;
 			vertical-align: top;
 			width: 160px;
-			height: 200px;
+			height: 266px;
 			text-align:center;
 			overflow:hidden;
 			padding:0;
 			margin:0;
+			position:relative;
+			.remover{
+				height: 20px;
+				width: 20px;
+				background-color:black;
+				position:absolute;
+				right: 10px;
+				top: 1px;
+				color:white;
+				font-size: 14px;
+				line-height: 20px;
+				cursor:pointer;
+				display: none;
+			}
 			.producto-p{
 				height: 30px;
-				max-height: 55px;
+				min-height: 45px;
 				display: block;
 				margin-bottom: 5px;
 				p{
 					width: 100%;
 					height: 100%;
 					font-size: 12px;
+					line-height: 15px;
 				}
+			}
+			.producto-imagen{
+				width: 120px;
+				min-height: 122px;
+				border:1px solid #ccc;
+				box-shadow:0px 0px 10px -2px #333;
+				display: block;
+				margin: 0 auto 10px auto;
 			}
 			.producto-imagen img{
 				width: 120px;
-				border:1px solid #ccc;
-				box-shadow:0px 0px 10px -2px #333;
 				margin:auto;
-				margin-bottom: 10px;
 				display: block;
 				max-height: 122px;
+				vertical-align: middle;
+			}
+			.producto-agregar{
+				position: absolute;
+				bottom: 24px;
+				left: 60px;
+				font-size: 10px;
 			}
 		}
 	}
 	#roller, #maquillaje, #skincare, #cabello, #fra_mujer, #fra_hombre{
 		width: 320px;
-		height: 200px;
+		height: 266px;
 		color: black;
 		margin:auto;
 		position:relative;
 		overflow:hidden;
 		#roller_cont, #maquillaje_cont, #skincare_cont, #cabello_cont, #fra_mujer_cont, #fra_hombre_cont{
 			width: 1650px;
-			height: 200px;
+			height: 100%;
 			position:relative;
 			top:0;
 			left:0;
 			transition: left 350ms;
 		}
 	}
-	#holiday, #wishlist{
-		width: 640px;
-		height: 200px;
+	#wishlist{
+		height: 215px;
+		width: 716px;
 		color: black;
 		margin:auto;
 		position:relative;
 		overflow:hidden;
-		#holiday_cont, #wishlist_cont{
+		#wishlist_cont{
+			width: 100%;
+			height: 215px;
+			position:relative;
+			top:0;
+			left:0;
+			transition: left 350ms;
+			li {
+				&.fade-out{
+					opacity: 0 !important;
+					height: 0;
+					width: 0;
+					overflow:hidden;
+					transition: opacity 450ms, height 450ms, width 450ms !important;
+				}
+				&.visible{
+					opacity: 1;
+					transition: opacity 350ms;
+				}
+				display: inline-block;
+				vertical-align: top;
+				width: 140px;
+				position: relative;
+				height: 215px;
+				opacity: 0;
+				transition: opacity 450ms, height 450ms ,width 450ms !important;
+				.producto-agregar{
+					display: none;
+				}
+				.remover{
+					display: block;
+				}
+			}
+		}
+	}
+	#holiday{
+		width: 640px;
+		height: 266px;
+		color: black;
+		margin:auto;
+		position:relative;
+		overflow:hidden;
+		#holiday_cont{
 			width: 1650px;
-			height: 200px;
+			height: 266px;
 			position:relative;
 			top:0;
 			left:0;

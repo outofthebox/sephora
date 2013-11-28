@@ -1,6 +1,13 @@
 # = require jquery
 
 #-
+#- Declaracion de variables
+#-
+
+wishlist_cont = 0;
+
+
+#-
 #- Declaracion de funciones
 #-
 initSlide = (cont, move) ->
@@ -26,9 +33,6 @@ initSlide = (cont, move) ->
 			$this.removeAttr("disabled");
 		), 350;
 
-
-
-
 initSlide("wishlist", 660)
 initSlide("holiday", 660)
 initSlide("roller", 329)
@@ -50,3 +54,31 @@ $(".bottones.prices").click ->
 $(".box .cerrar").click ->
   $(this).parent().removeClass("visible");
   $("#box").removeClass("visible");
+
+
+$(".producto-agregar").click (ev) ->
+	este = this;
+	ev.preventDefault();
+	ev.stopPropagation();
+
+	if wishlist_cont < 5
+		wishlist_cont++
+		clonar = $(este).parent().clone();
+
+		$("#wishlist_cont ul").append(clonar);
+		setTimeout (->
+			$(clonar).addClass("visible");
+		), 50;
+
+		$(clonar).find(".remover").click (ev2) ->
+			remover = this;
+			ev2.preventDefault();
+			ev2.stopPropagation();
+			$(clonar).addClass("fade-out")
+			wishlist_cont--
+			setTimeout (->
+				$(remover).parent().remove();
+			), 450;
+	else
+		$(".box.full").addClass("visible");
+		$("#box").addClass("visible");
