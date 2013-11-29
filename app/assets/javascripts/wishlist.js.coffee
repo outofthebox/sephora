@@ -47,12 +47,11 @@ initSlide = (cont, move) ->
 		), 350;
 
 compartir = (link, imagen) ->
-	console.log link, imagen
 	FB.ui({
 	   method: 'feed',
     name: 'Mi Wishlist 2013',
-    link: link+"",
-    picture: imagen+"",
+    link: "http://sephora.com.mx/"+link,
+    picture: imagen,
     caption: 'By Sephora',
     description: 'Este producto de Sephora ¡me encanta!'
 	}, (response) ->
