@@ -76,8 +76,6 @@ html, body {
 
  body{
  	background-repeat:repeat;
-	width: 100%;
-	height: 100%;
 	font-family: 'Avant', Helvetica, Tahoma;
  }
 
@@ -331,9 +329,20 @@ html, body {
 			}
 			.producto-agregar{
 				position: absolute;
-				bottom: 24px;
+				bottom: 29px;
 				left: 60px;
 				font-size: 10px;
+			}
+			.producto-compartir{
+				position: absolute;
+				width: 82px;
+				height: 18px;
+				background-image: url("wishlist/comparte.jpg");
+				background-repeat:no-repeat;
+				bottom: 8px;
+				left: 35px;
+				font-size: 10px;
+				cursor: pointer;
 			}
 		}
 	}
@@ -387,6 +396,9 @@ html, body {
 				opacity: 0;
 				transition: opacity 450ms, height 450ms ,width 450ms !important;
 				.producto-agregar{
+					display: none;
+				}
+				.producto-compartir{
 					display: none;
 				}
 				.remover{

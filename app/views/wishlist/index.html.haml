@@ -62,8 +62,9 @@
           %li
             .remover
               &times;
-            .producto-imagen
-              =image_tag(producto.foto.url(:chico))
+            %a.producto-link{:href => "producto/"+producto.slug, :target => "_blank"}
+              .producto-imagen
+                =image_tag(producto.foto.url(:chico), :class => "producto-img")
             .producto-info
               %p
                 = producto.marca.marca
@@ -83,8 +84,9 @@
           %li
             .remover
               &times;
-            .producto-imagen
-              =image_tag(producto.foto.url(:chico))
+            %a.producto-link{:href => "producto/"+producto.slug, :target => "_blank"}
+              .producto-imagen
+                =image_tag(producto.foto.url(:chico), :class => "producto-img")
             .producto-info
               %p
                 = producto.marca.marca
@@ -98,6 +100,7 @@
               =image_tag("wishlist/corazon.png")
               %br
               Agregar
+            .producto-compartir
   .slider_items.roller
     %button.left
     %button.right
@@ -108,8 +111,9 @@
           %li
             .remover
               &times;
-            .producto-imagen
-              =image_tag(producto.foto.url(:chico))
+            %a.producto-link{:href => "producto/"+producto.slug, :target => "_blank"}
+              .producto-imagen
+                =image_tag(producto.foto.url(:chico), :class => "producto-img")
             .producto-info
               %p
                 = producto.marca.marca
@@ -123,6 +127,7 @@
               =image_tag("wishlist/corazon.png")
               %br
               Agregar
+            .producto-compartir
   .slider_items.maquillaje
     %button.left
     %button.right
@@ -133,8 +138,9 @@
           %li
             .remover
               &times;
-            .producto-imagen
-              =image_tag(producto.foto.url(:chico))
+            %a.producto-link{:href => "producto/"+producto.slug, :target => "_blank"}
+              .producto-imagen
+                =image_tag(producto.foto.url(:chico), :class => "producto-img")
             .producto-info
               %p
                 = producto.marca.marca
@@ -148,6 +154,7 @@
               =image_tag("wishlist/corazon.png")
               %br
               Agregar
+            .producto-compartir
   .slider_items.skincare
     %button.left
     %button.right
@@ -158,13 +165,14 @@
           %li
             .remover
               &times;
-            .producto-imagen
-              =image_tag(producto.foto.url(:chico))
+            %a.producto-link{:href => "producto/"+producto.slug, :target => "_blank"}
+              .producto-imagen
+                =image_tag(producto.foto.url(:chico), :class => "producto-img")
             .producto-info
               %p
                 = producto.marca.marca
               .producto-p
-                %p
+                %p.producto-nombre
                   = producto.nombre_real
                   %br
                     $
@@ -173,6 +181,7 @@
               =image_tag("wishlist/corazon.png")
               %br
               Agregar
+            .producto-compartir
   .slider_items.cabello
     %button.left
     %button.right
@@ -183,8 +192,9 @@
           %li
             .remover
               &times;
-            .producto-imagen
-              =image_tag(producto.foto.url(:chico))
+            %a.producto-link{:href => "producto/"+producto.slug, :target => "_blank"}
+              .producto-imagen
+                =image_tag(producto.foto.url(:chico), :class => "producto-img")
             .producto-info
               %p
                 = producto.marca.marca
@@ -198,3 +208,4 @@
               =image_tag("wishlist/corazon.png")
               %br
               Agregar
+            .producto-compartir
