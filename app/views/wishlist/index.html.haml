@@ -2,52 +2,78 @@
   #box  
     .box.participar
       .cerrar
-      %h3 CÓMO PARTICIPAR:  
+      %h3 INSTRUCCIONES:  
       %p
-        %strong - Ingresa a la app y añade la información solicitada: 
-        %br
-        E mail, nombre, tip de belleza y foto.
+        %strong 1.
+        Elige hasta
+        %strong 5 productos
+        para crear tu wishlist navideño.
       %p
-        %strong - Comparte tu mejor tip 
-        de belleza en 140 caracteres, perfecto para iniciar un 2014 lleno de belleza y color.
+        %strong 2.
+        Da
+        %strong clic
+        en el botón
+        %strong Mi Wishlist
+        que se encuentra abajo de la bolsa,
+        %strong publica tu Wishlist
+        en tu muro y
+        %strong comenta
+        cómo celebras la Navidad.
       %p
-        \- Añade una foto del tip
+        %strong 3. Cada Viernes hasta el 3 de enero
+        regalaremos uno de nuestros Best Sellers de Holiday al
+        %strong comentario más creativo.
       %p
-        %strong - Sé parte del primer Beauty Book 2014 de Sephora México
-        %br
-        que se compartirá en exclusiva con toda la comunidad de Sephora México en Enero 2014 y gana fabulosos obsequios.
+        %strong Conocerás si eres ganador en nuestro muro de Facebook.
+    .box.full
+      .cerrar
+      %h3 
+        ¡Tu Wishlist ya está completo!
       %p 
-        \- Tienes hasta el 
-        %strong 31 de Diciembre de 2013
-        para participar.
+        Sólo puedes incluir 5 productos en tu lista, si deseas este producto elimina uno de los 5 que ya seleccionaste.
     .box.premios
       .cerrar
-      %h3 PREMIOS:  
-      %p
-        Los
-        %strong 3 mejores tips
-        ,seleccionados por un jurado especial de Sephora México
-        %strong ganarán un Holiday Kit.
+      %h3 BASES DEL CONCURSO
+
+      %p Consulta disponibilidad de los productos en tiendas. Algunas de las marcas aquí mostradas pueden variar en su existencia. Visítanos y pregunta a un asesor Sephora.
+
       %p 
-        %small *El monto de los premios, dependerá de la cantidad de tips compartidos, entre mas tips, mas grandes seran los regalos.
+        Si lo deseas, escríbenos a 
+        %strong sephora@oob.mx 
+        para mayor información de producto.
+      %p Esto no es una compra en línea, es una sugerencia de productos y es responsabilidad del usuario su uso y envío de correos electrónicos.
+      %p Precios sujetos a cambios sin previo aviso. Aplicable sólo para México.
+      %p Sólo pueden participar personas residentes de la República Mexicana.
+      %p La entrega del premio será únicamente en las tiendas Sephora en México.
+      %p 
+        El producto de regalo será de la colección de 
+        %strong Holiday 2013 
+        de nuestras marcas exclusivas.
+      %p Ningún empleado de Sephora ni empleado de las marcas que maneja, podrá formar parte de la promoción ni tener participación de ninguna manera.
+      %p Promoción válida para mayores de 18 años.
   .bottones.howto
   .bottones.prices
   .slider_items.wishlist
-    %button.left
-    %button.right
     #wishlist
       #wishlist_cont
+        %ul
         - seccion_productos = @wishlist
           - seccion_productos.each do | producto |
           %li
-            .producto-imagen
-              =link_to image_tag(producto.foto.url(:chico)), "/#"
+            .remover
+              &times;
+            %a.producto-link{:href => "producto/"+producto.slug, :target => "_blank"}
+              .producto-imagen
+                =image_tag(producto.foto.url(:chico), :class => "producto-img")
             .producto-info
               %p
                 = producto.marca.marca
               .producto-p
                 %p
                   = producto.nombre_real
+                  %br
+                    $
+                    = producto.precio
   .slider_items.holiday
     %button.left
     %button.right
@@ -56,16 +82,25 @@
         - seccion_productos = @seccion1
           - seccion_productos.each do | producto |
           %li
-            .producto-imagen
-              =link_to image_tag(producto.foto.url(:chico)), "/#"
+            .remover
+              &times;
+            %a.producto-link{:href => "producto/"+producto.slug, :target => "_blank"}
+              .producto-imagen
+                =image_tag(producto.foto.url(:chico), :class => "producto-img")
             .producto-info
               %p
                 = producto.marca.marca
               .producto-p
                 %p
                   = producto.nombre_real
-              .producto-agregar
-                =link_to image_tag("wishlist/corazon.png"), "/#"
+                  %br
+                    $
+                    = producto.precio
+            .producto-agregar
+              =image_tag("wishlist/corazon.png")
+              %br
+              Agregar
+            .producto-compartir
   .slider_items.roller
     %button.left
     %button.right
@@ -74,16 +109,25 @@
         - seccion_productos = @seccion2
           - seccion_productos.each do | producto |
           %li
-            .producto-imagen
-              =link_to image_tag(producto.foto.url(:chico)), "/#"
+            .remover
+              &times;
+            %a.producto-link{:href => "producto/"+producto.slug, :target => "_blank"}
+              .producto-imagen
+                =image_tag(producto.foto.url(:chico), :class => "producto-img")
             .producto-info
               %p
                 = producto.marca.marca
               .producto-p
                 %p
                   = producto.nombre_real
-              .producto-agregar
-                =link_to image_tag("wishlist/corazon.png"), "/#"
+                  %br
+                    $
+                    = producto.precio
+            .producto-agregar
+              =image_tag("wishlist/corazon.png")
+              %br
+              Agregar
+            .producto-compartir
   .slider_items.maquillaje
     %button.left
     %button.right
@@ -92,16 +136,25 @@
         - seccion_productos = @seccion3
           - seccion_productos.each do | producto |
           %li
-            .producto-imagen
-              =link_to image_tag(producto.foto.url(:chico)), "/#"
+            .remover
+              &times;
+            %a.producto-link{:href => "producto/"+producto.slug, :target => "_blank"}
+              .producto-imagen
+                =image_tag(producto.foto.url(:chico), :class => "producto-img")
             .producto-info
               %p
                 = producto.marca.marca
               .producto-p
                 %p
                   = producto.nombre_real
-              .producto-agregar
-                =link_to image_tag("wishlist/corazon.png"), "/#"
+                  %br
+                    $
+                    = producto.precio
+            .producto-agregar
+              =image_tag("wishlist/corazon.png")
+              %br
+              Agregar
+            .producto-compartir
   .slider_items.skincare
     %button.left
     %button.right
@@ -110,16 +163,25 @@
         - seccion_productos = @seccion4
           - seccion_productos.each do | producto |
           %li
-            .producto-imagen
-              =link_to image_tag(producto.foto.url(:chico)), "/#"
+            .remover
+              &times;
+            %a.producto-link{:href => "producto/"+producto.slug, :target => "_blank"}
+              .producto-imagen
+                =image_tag(producto.foto.url(:chico), :class => "producto-img")
             .producto-info
               %p
                 = producto.marca.marca
               .producto-p
-                %p
+                %p.producto-nombre
                   = producto.nombre_real
-              .producto-agregar
-                =link_to image_tag("wishlist/corazon.png"), "/#"
+                  %br
+                    $
+                    = producto.precio
+            .producto-agregar
+              =image_tag("wishlist/corazon.png")
+              %br
+              Agregar
+            .producto-compartir
   .slider_items.cabello
     %button.left
     %button.right
@@ -128,53 +190,22 @@
         - seccion_productos = @seccion5
           - seccion_productos.each do | producto |
           %li
-            .producto-imagen
-              =link_to image_tag(producto.foto.url(:chico)), "/#"
+            .remover
+              &times;
+            %a.producto-link{:href => "producto/"+producto.slug, :target => "_blank"}
+              .producto-imagen
+                =image_tag(producto.foto.url(:chico), :class => "producto-img")
             .producto-info
               %p
                 = producto.marca.marca
               .producto-p
                 %p
-                  = producto.nombre_real
-              .producto-agregar
-                =link_to image_tag("wishlist/corazon.png"), "/#"
-  .slider_items.fra_mujer
-    %button.left
-    %button.right
-    #fra_mujer
-      #fra_mujer_cont
-        - seccion_productos = @seccion6
-          - seccion_productos.each do | producto |
-          %li
-            .producto-imagen
-              =link_to image_tag(producto.foto.url(:chico)), "/#"
-            .producto-info
-              %p
-                = producto.marca.marca
-              .producto-p
-                %p
-                  = producto.nombre_real
-              .producto-agregar
-                =link_to image_tag("wishlist/corazon.png"), "/#"
-  .slider_items.fra_hombre
-    %button.left
-    %button.right
-    #fra_hombre
-      #fra_hombre_cont
-        - seccion_productos = @seccion7
-          - seccion_productos.each do | producto |
-          %li
-            .producto-imagen
-              =link_to image_tag(producto.foto.url(:chico)), "/#"
-            .producto-info
-              %p
-                = producto.marca.marca
-              .producto-p
-                %p
-                  = producto.nombre_real
-              .producto-agregar
-                =link_to image_tag("wishlist/corazon.png"), "/#"
-  #skincare
-  #cabello
-  #fra_mujer
-  #fra_hombre
+                  = producto.nombre
+                  %br
+                    $
+                    = producto.precio
+            .producto-agregar
+              =image_tag("wishlist/corazon.png")
+              %br
+              Agregar
+            .producto-compartir

@@ -19,3 +19,26 @@
 .DS_Store
 /db/sphinx/development/producto_core.spl
 /log/*
+
+
+# Linux
+.*
+!.gitignore
+!.htaccess
+*~
+
+# Mac OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+
+# sublimetext
+/*.sublime-project
+*.sublime-workspace
+
+/vendor/bundle
