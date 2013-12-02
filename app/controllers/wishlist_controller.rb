@@ -36,19 +36,12 @@ class WishlistController < ApplicationController
 	end
 
 	def login
-		@request_token = WishlistController.consumer.get_request_token(:oauth_callback => "http://sephoramexico.herokuapp.com/connect/")
-		
-		raise @request_token.inspect
-
-		session[:request_token] = @request_token.token
-  	session[:request_token_secret] = @request_token.secret
-
-  	redirect_to @request_token.authorize_url
+  	redirect_to "https://www.facebook.com/dialog/oauth?client_id=424407284355166&redirect_uri=https://apps.facebook.com/wishlistsephora/conectar/"
 	end
 
 	def conectar
-		
-		raise @request_token
+		@code = params[:code]
+		redirect_to "https://graph.facebook.com/oauth/access_token?client_id=424407284355166&redirect_uri=https://apps.facebook.com/wishlistsephora/nuevo/&client_secret=fc432bdb12fee6f1f8b650f7577e9d56&code="+@code
 	end
 
 
