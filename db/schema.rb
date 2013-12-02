@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131114184005) do
+ActiveRecord::Schema.define(:version => 20131202184210) do
 
   create_table "categoria_productos", :force => true do |t|
     t.integer  "producto_id"
@@ -251,6 +251,20 @@ ActiveRecord::Schema.define(:version => 20131114184005) do
     t.string   "foto_content_type"
     t.integer  "foto_file_size"
     t.datetime "foto_updated_at"
+  end
+
+  create_table "userwishes", :force => true do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "post_id"
+  end
+
+  create_table "userwishes_products", :id => false, :force => true do |t|
+    t.integer "userwish_id"
+    t.integer "product_id"
   end
 
   create_table "usos", :force => true do |t|

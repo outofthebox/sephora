@@ -20,4 +20,17 @@ class WishlistController < ApplicationController
 		@seccion7 = Producto.find(Producto.pluck(:id).sample(10));
 		@seccion8 = Producto.find(Producto.pluck(:id).sample(10));
 	end
+
+	def ver
+		@userwish = Userwish.find params[:id]
+	end
+
+	def user
+		@userwish = Userwish.find params[:id]
+	end
+
+	def nuevo
+		raise request.body.read.inspect 
+		@userwish = Userwish.new
+	end
 end

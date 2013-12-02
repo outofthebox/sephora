@@ -112,6 +112,7 @@ Sephora::Application.routes.draw do
     resources :marcas
     resources :categorias
     resources :secciones
+    resources :userwishes
   end
 
   get '/consultorpersonalbelleza', :to => 'paginas#consultores', :as => 'consultores'
@@ -165,6 +166,12 @@ Sephora::Application.routes.draw do
   #wishlist
   get "wishlist", :to => 'wishlist#index', :as => "wishlist"
   post "wishlist", :to => 'wishlist#index', :as => "wishlist"
+  
+  get "wishlist/nuevo", :to => "wishlist#nuevo", :as => "userwishes_nuevo_path"
+  post "wishlist/nuevo", :to => "wishlist#nuevo", :as => "userwishes_nuevo_path"
+  
+  get 'wishlist/user(/:id)', :to => 'wishlist#ver', :as => 'userwishes_ver'
+  post 'wishlist/user(/:id)', :to => 'wishlist#ver', :as => 'userwishes_ver' 
 
   #instaCosas
   get "instagram", :to => 'instagram#index', :as => "insta_sephora"
