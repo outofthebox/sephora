@@ -143,6 +143,7 @@ GEM
     newrelic_rpm (3.6.6.147)
     nifty-generators (0.4.6)
     nokogiri (1.5.9)
+    oauth (0.4.7)
     orm_adapter (0.4.0)
     paperclip (2.8.0)
       activerecord (>= 2.3.0)
@@ -268,6 +269,7 @@ DEPENDENCIES
   nested_set
   newrelic_rpm
   nifty-generators
+  oauth
   paperclip (~> 2.7)
   pg
   rack-block (~> 0.1.1)

@@ -173,6 +173,13 @@ Sephora::Application.routes.draw do
   get 'wishlist/user(/:id)', :to => 'wishlist#ver', :as => 'userwishes_ver'
   post 'wishlist/user(/:id)', :to => 'wishlist#ver', :as => 'userwishes_ver' 
 
+  get 'wishlist/login', :to => 'wishlist#login', :as => 'userwishes_login'
+  post 'wishlist/login', :to => 'wishlist#login', :as => 'userwishes_login'
+  
+  get 'wishlist/conectar', :to => 'wishlist#conectar', :as => 'userwishes_conectar'
+  post 'wishlist/conectar', :to => 'wishlist#conectar', :as => 'userwishes_conectar'
+
+
   #instaCosas
   get "instagram", :to => 'instagram#index', :as => "insta_sephora"
   post "instagram", :to => 'instagram#index', :as => "insta_sephora"

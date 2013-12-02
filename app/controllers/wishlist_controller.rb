@@ -1,5 +1,11 @@
+require "oauth"
+
 class WishlistController < ApplicationController
 	layout "wishlist"
+
+	def self.consumer
+		OAuth::Consumer.new("424407284355166","fc432bdb12fee6f1f8b650f7577e9d56", :site => 'https://graph.facebook.com', :request_endpoint => 'https://graph.facebook.com', :request_token_path => "/oauth/request_token", :access_token_path  => "/oauth/access_token", :authorize_path     => "/oauth/authorize", :sign_in => true)
+	end
 
 	def index
 		maquillaje = ["3378872058915", "3548752067911", "818015014505", "604214919204", "651986904402", "607710030787", "716170118567", "3378872071488", "94800346031",  "607845038184"]
@@ -28,6 +34,23 @@ class WishlistController < ApplicationController
 	def user
 		@userwish = Userwish.find params[:id]
 	end
+
+	def login
+		@request_token = WishlistController.consumer.get_request_token(:oauth_callback => "http://sephoramexico.herokuapp.com/connect/")
+		
+		raise @request_token.inspect
+
+		session[:request_token] = @request_token.token
+  	session[:request_token_secret] = @request_token.secret
+
+  	redirect_to @request_token.authorize_url
+	end
+
+	def conectar
+		
+		raise @request_token
+	end
+
 
 	def nuevo
 		raise request.body.read.inspect 
