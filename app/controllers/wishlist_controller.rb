@@ -36,12 +36,12 @@ class WishlistController < ApplicationController
 	end
 
 	def login
-  	redirect_to "https://www.facebook.com/dialog/oauth?client_id=424407284355166&redirect_uri=https://apps.facebook.com/wishlistsephora/conectar/"
+  	redirect_to "https://www.facebook.com/dialog/oauth?client_id=424407284355166&redirect_uri=https://sephoramexico.herokuapp.com/wishlist/conectar/"
 	end
 
 	def conectar
 		@code = params[:code]
-		redirect_to "https://graph.facebook.com/oauth/access_token?client_id=424407284355166&redirect_uri=https://apps.facebook.com/wishlistsephora/nuevo/&client_secret=fc432bdb12fee6f1f8b650f7577e9d56&code="+@code
+		redirect_to "https://graph.facebook.com/oauth/access_token?client_id=424407284355166&redirect_uri=https://sephoramexico.herokuapp.com/wishlist/nuevo&client_secret=fc432bdb12fee6f1f8b650f7577e9d56&code="+@code
 	end
 
 

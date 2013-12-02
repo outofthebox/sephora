@@ -17,7 +17,7 @@
 
 
 window.fbAsyncInit = ->
-  fb_login()
+  #fb_login()
 
 #-
 #- Declaracion de variables
