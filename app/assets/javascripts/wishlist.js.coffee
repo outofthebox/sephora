@@ -10,9 +10,14 @@
     return  if d.getElementById(id)
     js = d.createElement(s)
     js.id = id
-    js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=1406140066193642";
+    js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=424407284355166";
     fjs.parentNode.insertBefore js, fjs
   ) document, "script", "facebook-jssdk"
+
+
+
+window.fbAsyncInit = ->
+  fb_login()
 
 #-
 #- Declaracion de variables
@@ -49,20 +54,49 @@ initSlide = (cont, move) ->
 compartir = (link, imagen) ->
 	FB.ui({
 	   method: 'feed',
-    name: 'Mi Wishlist 2013',
+    name: '¡Mira este producto de mi Wishlist Navideño!',
     link: "http://sephora.com.mx/"+link,
     picture: imagen,
-    caption: 'By Sephora',
-    description: 'Este producto de Sephora ¡me encanta!'
+    caption: 'Sephora México',
+    description: 'Este es mi producto favorito. Descubre el Wishlist de Sephora México y crea también el tuyo.'
+	}, (response) ->
+		if response && response.post_id
+		else
+	);
+
+fb_login = ->
+	FB.login ((response) ->
+    
+    #User logged in!
+    if response.authResponse
+    	console.log "conectado"
+    else
+    	console.log "no contectado"
+  ),
+    scope: "email,read_stream,publish_stream"
+
+
+compartirWishlist = ->
+	FB.ui({
+	   method: 'feed',
+    name: '¿No sabe qué regalarme en Navidad? Mira mi wishlist.',
+    link: "#",
+    picture: 'https://www.facebook.com/SephoraMX/app_424407284355166',
+    caption: 'Mi wishlist de Sephora México',
+    description: '!Haz click y crea tambien la tuya para ganar un Holiday Kit!'
 	}, (response) ->
 		if response && response.post_id
 		else
 	);
 
 
+
 #-
 #- Main Script
 #-
+
+# fb_init()
+# fb_login()
 
 initSlide("wishlist", 660)
 initSlide("holiday", 660)
@@ -92,11 +126,10 @@ $(".producto-compartir").click (ev) ->
 	ev.preventDefault();
 	ev.stopPropagation();
 	li = $(este).parent();
+	console.log li[0]
 	link =  $(li).find("a.producto-link").attr("href");
 	imagen =  $(li).find("img.producto-img").attr("src");
 	compartir(link, imagen)
-
-
 
 $(".producto-agregar").click (ev) ->
 	este = this;
