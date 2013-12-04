@@ -94,7 +94,7 @@ compartirWishlist = (username) ->
 	   method: 'feed',
     name: '¿No sabes qué regalarme en Navidad? Mira mi wishlist.',
     link: "https://apps.facebook.com/wishlistsephora/ver/"+username+"/",
-    picture: 'https://www.facebook.com/SephoraMX/app_424407284355166',
+    picture: 'http://sephora.com.mx/assets/holiday/2013/logo-b05b7169d63ec88212dc1e469ae34ad4.png',
     caption: 'Mi wishlist de Sephora México',
     description: '!Haz click y crea tambien la tuya para ganar un Holiday Kit!'
 	}, (response) ->
