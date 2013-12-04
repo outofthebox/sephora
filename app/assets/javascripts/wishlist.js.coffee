@@ -68,13 +68,7 @@ fb_salvar = ->
     if response.authResponse
     	FB.api("/me", (usuario) ->
     		if usuario && !usuario.error
-    			post = compartirWishlist usuario.id
-    			loc_str = "/wishlist/nuevo/"
-    			loc_str += usuario.id+"/"
-    			loc_str += post.id+"/"
-    			$.each upc, (index, str) ->
-    				loc_str += str+"/"
-    			window.location = loc_str
+					compartirWishlist usuario
     	)
     else
     	console.log ""
@@ -88,17 +82,24 @@ fb_salvard = ->
 
   window.location  = loc_str;
 
-compartirWishlist = (username) ->
+compartirWishlist = (usuario) ->
 	FB.ui({
 	   method: 'feed',
     name: '¿No sabes qué regalarme en Navidad? Mira mi wishlist.',
-    link: "https://apps.facebook.com/wishlistsephora/ver/"+username,
+    link: "https://apps.facebook.com/wishlistsephora/ver/"+usuario.id,
     picture: 'http://sephora.com.mx/assets/holiday/2013/logo-b05b7169d63ec88212dc1e469ae34ad4.png',
     caption: 'Mi wishlist de Sephora México',
     description: '!Haz click y crea tambien la tuya para ganar un Holiday Kit!'
-	}, (response) ->
-		if response
-			return response
+	}, (post) ->
+		if post
+			loc_str = "/wishlist/nuevo/"
+			loc_str += usuario.id+"/"
+			loc_str += post.id+"/"
+
+			$.each upc, (index, str) ->
+				loc_str += str+"/"
+			
+			window.location = loc_str
 	);
 
 
