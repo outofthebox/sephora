@@ -48,7 +48,7 @@ class WishlistController < ApplicationController
 						puts "[error al salvar wishlist]"
 					end
 				end
-				redirect_to :wishlist_ver
+				redirect_to "/wishlist/ver/"+existo.uid
 			else
 				redirect_to :wishlist_error
 			end
@@ -64,7 +64,7 @@ class WishlistController < ApplicationController
 						puts "[error al salvar wishlist]"
 					end
 				end
-				redirect_to :wishlist_ver
+				redirect_to "/wishlist/ver/"+@userwish.uid
 			else
 				redirect_to :wishlist_error
 			end

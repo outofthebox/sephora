@@ -4,4 +4,6 @@ class Wishlist < ActiveRecord::Base
 	has_many :productos, :class_name => "Producto"
 	has_many :userwishes, :class_name => "Userwish"
 
+	attr_accessible :producto_id, :userwish_id
+
 end

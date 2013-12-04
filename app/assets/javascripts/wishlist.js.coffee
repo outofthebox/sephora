@@ -76,7 +76,7 @@ fb_salvar = ->
   scope: "email,read_stream,publish_stream"
 
 fb_salvard = ->
-	loc_str = "/wishlist/nuevo/gessgallardo/1/1/"
+	loc_str = "/wishlist/nuevo/1/1/"
 	$.each upc, (index, str) ->
     loc_str += str+"/"
 
@@ -119,7 +119,7 @@ initSlide("fra_hombre", 329)
 
 
 $(".bottones.add_wish").click ->
-	fb_salvar()
+	fb_salvard()
 
 $(".bottones.howto").click ->
   $(".box.participar").addClass("visible");
