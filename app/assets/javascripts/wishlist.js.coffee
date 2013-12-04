@@ -68,13 +68,13 @@ fb_salvar = ->
     if response.authResponse
     	FB.api("/me", (usuario) ->
     		if usuario && !usuario.error
-    			compartirWishlist usuario.id, (post) ->
-	    			loc_str = "/wishlist/nuevo/"
-	    			loc_str += usuario.id+"/"
-	    			loc_str += post.id+"/"
-	    			$.each upc, (index, str) ->
-	    				loc_str += str+"/"
-	    			window.location = loc_str
+    			post = compartirWishlist usuario.id
+    			loc_str = "/wishlist/nuevo/"
+    			loc_str += usuario.id+"/"
+    			loc_str += post.id+"/"
+    			$.each upc, (index, str) ->
+    				loc_str += str+"/"
+    			window.location = loc_str
     	)
     else
     	console.log ""
