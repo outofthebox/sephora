@@ -16,11 +16,11 @@ class WishlistController < ApplicationController
 		@seccion3 = Producto.where(upc: skincare);
 		@seccion4 = Producto.where(upc: rollerballs);
 		@seccion5 = Producto.where(upc: bath);
-		
+
 	end
 
 	def ver
-		existo = Userwish.where(:name => params[:name]).first
+		existo = Userwish.where(:uid => params[:uid]).first
 		if existo != nil
 			wishlist = Wishlist.where(:userwish_id => existo.id).select("producto_id").first(5)
 			@seccion1 = Producto.includes(:wishlist).where(:id => wishlist).first(5)
@@ -33,9 +33,9 @@ class WishlistController < ApplicationController
 		@wishlist = [params[:producto1], params[:producto2], params[:producto3], params[:producto4], params[:producto5], ""];
 		@seccion1 = Producto.where(upc: @wishlist);
 
-		leuser = {:provider => "facebook", :uid => params[:uid], :name => params[:name], :post_id => params[:post_id]}
+		leuser = {:provider => "facebook", :uid => params[:uid], :name => "", :post_id => params[:post_id]}
 
-		existo = Userwish.where(:name => params[:name]).first;
+		existo = Userwish.where(:uid => params[:uid]).first;
 
 		if(existo != nil)
 			if Userwish.update(existo, leuser)
