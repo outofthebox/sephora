@@ -78,7 +78,7 @@ fb_salvar = ->
     			window.location = loc_str
     	)
     else
-    	console.log "miau"
+    	console.log ""
   ),
   scope: "email,read_stream,publish_stream"
 
@@ -119,7 +119,7 @@ initSlide("fra_hombre", 329)
 
 
 $(".bottones.add_wish").click ->
-	fb_salvard()
+	fb_salvar()
 
 $(".bottones.howto").click ->
   $(".box.participar").addClass("visible");
@@ -132,11 +132,6 @@ $(".bottones.prices").click ->
 $(".box .cerrar").click ->
   $(this).parent().removeClass("visible");
   $("#box").removeClass("visible");
-
-
-
-
-
 
 $(".producto-compartir").click (ev) ->
 	este = this;

@@ -167,9 +167,14 @@ Sephora::Application.routes.draw do
   get "wishlist", :to => 'wishlist#index', :as => "wishlist"
   post "wishlist", :to => 'wishlist#index', :as => "wishlist"
   
-  get "wishlist/nuevo/(:name)/(:uid)/(:post_id)/(:producto1)/(:producto2)/(:producto3)/(:producto4)/(:producto5)/", :to => "wishlist#nuevo", :as => "userwishes_nuevo_path"
-  post "wishlist/nuevo/(:name)/(:uid)/(:post_id)/(:producto1)/(:producto2)/(:producto3)/(:producto4)/(:producto5)/", :to => "wishlist#nuevo", :as => "userwishes_nuevo_path"
+  get "wishlist/nuevo/(:name)/(:uid)/(:post_id)/(:producto1)/(:producto2)/(:producto3)/(:producto4)/(:producto5)/", :to => "wishlist#nuevo", :as => "wishlist_nuevo"
+  post "wishlist/nuevo/(:name)/(:uid)/(:post_id)/(:producto1)/(:producto2)/(:producto3)/(:producto4)/(:producto5)/", :to => "wishlist#nuevo", :as => "wishlist_nuevo"
   
+  get "wishlist/ver/(:name)", :to => "wishlist#ver", :as => "wishlist_ver"
+  post "wishlist/ver/(:name)", :to => "wishlist#ver", :as => "wishlist_ver"
+
+  get "wishlist/error", :to => 'wishlist#index', :as => "wishlist_error"
+  post "wishlist/error", :to => 'wishlist#index', :as => "wishlist_error"
 
   #instaCosas
   get "instagram", :to => 'instagram#index', :as => "insta_sephora"

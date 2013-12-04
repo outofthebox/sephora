@@ -16,14 +16,17 @@ class WishlistController < ApplicationController
 		@seccion3 = Producto.where(upc: skincare);
 		@seccion4 = Producto.where(upc: rollerballs);
 		@seccion5 = Producto.where(upc: bath);
-
-
-		@seccion6 = Producto.find(Producto.pluck(:id).sample(10));
-		@seccion7 = Producto.find(Producto.pluck(:id).sample(10));
-		@seccion8 = Producto.find(Producto.pluck(:id).sample(10));
+		
 	end
 
 	def ver
+		existo = Userwish.where(:name => params[:name]).first
+		if existo != nil
+			wishlist = Wishlist.where(:userwish_id => existo.id).select("producto_id").first(5)
+			@seccion1 = Producto.includes(:wishlist).where(:id => wishlist).first(5)
+		else
+			redirect_to :wishlist
+		end
 	end
 
 	def nuevo
@@ -32,19 +35,39 @@ class WishlistController < ApplicationController
 
 		leuser = {:provider => "facebook", :uid => params[:uid], :name => params[:name], :post_id => params[:post_id]}
 
-		@userwish = Userwish.new(leuser)
+		existo = Userwish.where(:name => params[:name]).first;
 
-		if @userwish.save
-			@seccion1.each do |product|
-				leproduct = {:producto_id => product.id, :userwish_id => @userwish.id}
-				new_wishlist = Wishlist.new(leproduct);
-				if new_wishlist.save
-					puts "[salvado]"
-				else
-					puts "[error al salvar wishlist]"
+		if(existo != nil)
+			if Userwish.update(existo, leuser)
+				@seccion1.each do |product|
+					leproduct = {:producto_id => product.id, :userwish_id => existo.id}
+					new_wishlist = Wishlist.new(leproduct);
+					if new_wishlist.save
+						puts "[producto salvado]"
+					else
+						puts "[error al salvar wishlist]"
+					end
 				end
+				redirect_to :wishlist_ver
+			else
+				redirect_to :wishlist_error
 			end
 		else
+			@userwish = Userwish.new(leuser)
+			if @userwish.save
+				@seccion1.each do |product|
+					leproduct = {:producto_id => product.id, :userwish_id => @userwish.id}
+					new_wishlist = Wishlist.new(leproduct);
+					if new_wishlist.save
+						puts "[producto salvado]"
+					else
+						puts "[error al salvar wishlist]"
+					end
+				end
+				redirect_to :wishlist_ver
+			else
+				redirect_to :wishlist_error
+			end
 		end
 	end
 end
