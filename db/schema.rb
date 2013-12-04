@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131202223725) do
+ActiveRecord::Schema.define(:version => 20131204011642) do
 
   create_table "categoria_productos", :force => true do |t|
     t.integer  "producto_id"
@@ -263,11 +263,6 @@ ActiveRecord::Schema.define(:version => 20131202223725) do
     t.string   "access_token"
   end
 
-  create_table "userwishes_products", :id => false, :force => true do |t|
-    t.integer "userwish_id"
-    t.integer "product_id"
-  end
-
   create_table "usos", :force => true do |t|
     t.string   "nombre"
     t.string   "slug"
@@ -307,5 +302,12 @@ ActiveRecord::Schema.define(:version => 20131202223725) do
   add_index "usuarios", ["email"], :name => "index_usuarios_on_email", :unique => true
   add_index "usuarios", ["reset_password_token"], :name => "index_usuarios_on_reset_password_token", :unique => true
   add_index "usuarios", ["unlock_token"], :name => "index_usuarios_on_unlock_token", :unique => true
+
+  create_table "wishlists", :id => false, :force => true do |t|
+    t.integer  "userwish_id"
+    t.integer  "producto_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
 end

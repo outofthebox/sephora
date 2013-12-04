@@ -104,6 +104,42 @@ html, body {
 		background-image: url("wishlist/index.png");
 		background-color: #FFFFFF;
 	}
+	&[pagina="nuevo"]{
+		background-image: url("wishlist/nuevo.png");
+		background-color: #FFFFFF;
+		height: 856px;
+		.slider_items{
+			&.wishlist{
+				top: 370px;
+				#wishlist{
+					.producto-agregar{
+						display: none !important;
+					}
+					.remover{
+						display: none !important;
+					}
+				}
+			}
+		}
+		.comparto_wishlist{
+			display: block;
+			position: absolute;
+			top: 580px;
+			left: 320px;
+			background-color: black;
+			height: 25px;
+			width: 120px;
+			color: #FFF;
+			cursor: pointer;
+			box-shadow:3px 2px 0px rgb(10, 182, 175);
+			font-family: "Avant";
+			font-size:14px;
+			line-height: 25px;
+			text-align: center;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+	}
 	#box{
 		background-color:rgba(0,0,0,0.8);
 		width: 100%;

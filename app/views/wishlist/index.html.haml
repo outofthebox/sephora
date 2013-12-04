@@ -60,7 +60,7 @@
         %ul
         - seccion_productos = @wishlist
           - seccion_productos.each do | producto |
-          %li
+          %li{:"data-upc" =>producto.upc}
             .remover
               &times;
             %a.producto-link{:href => "producto/"+producto.slug, :target => "_blank"}
@@ -82,7 +82,7 @@
       #holiday_cont
         - seccion_productos = @seccion1
           - seccion_productos.each do | producto |
-          %li
+          %li{:"data-upc" =>producto.upc}
             .remover
               &times;
             %a.producto-link{:href => "producto/"+producto.slug, :target => "_blank"}
@@ -109,7 +109,7 @@
       #roller_cont
         - seccion_productos = @seccion2
           - seccion_productos.each do | producto |
-          %li
+          %li{:"data-upc" =>producto.upc}
             .remover
               &times;
             %a.producto-link{:href => "producto/"+producto.slug, :target => "_blank"}
@@ -136,7 +136,7 @@
       #maquillaje_cont
         - seccion_productos = @seccion3
           - seccion_productos.each do | producto |
-          %li
+          %li{:"data-upc" =>producto.upc}
             .remover
               &times;
             %a.producto-link{:href => "producto/"+producto.slug, :target => "_blank"}
@@ -163,7 +163,7 @@
       #skincare_cont
         - seccion_productos = @seccion4
           - seccion_productos.each do | producto |
-          %li
+          %li{:"data-upc" =>producto.upc}
             .remover
               &times;
             %a.producto-link{:href => "producto/"+producto.slug, :target => "_blank"}
@@ -190,7 +190,7 @@
       #cabello_cont
         - seccion_productos = @seccion5
           - seccion_productos.each do | producto |
-          %li
+          %li{:"data-upc" =>producto.upc}
             .remover
               &times;
             %a.producto-link{:href => "producto/"+producto.slug, :target => "_blank"}

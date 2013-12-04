@@ -14,16 +14,15 @@
     fjs.parentNode.insertBefore js, fjs
   ) document, "script", "facebook-jssdk"
 
-
-
 window.fbAsyncInit = ->
-  #fb_login()
+	#fb_login()
 
 #-
 #- Declaracion de variables
 #-
 
 wishlist_cont = 0;
+upc = [];
 
 #-
 #- Declaracion de funciones
@@ -64,29 +63,43 @@ compartir = (link, imagen) ->
 		else
 	);
 
-fb_login = ->
+fb_salvar = ->
 	FB.login ((response) ->
-    
-    #User logged in!
     if response.authResponse
-    	console.log "conectado"
+    	FB.api("/me", (usuario) ->
+    		if usuario && !usuario.error
+    			compartirWishlist usuario.username, (post) ->
+    			loc_str = "/wishlist/nuevo/"
+    			loc_str += usuario.username+"/"
+    			loc_str += usuario.id+"/"
+    			loc_str += post.id+"/"
+    			$.each upc, (index, str) ->
+    				loc_str += str+"/"
+    			window.location = loc_str
+    	)
     else
-    	console.log "no contectado"
+    	console.log "miau"
   ),
-    scope: "email,read_stream,publish_stream"
+  scope: "email,read_stream,publish_stream"
 
+fb_salvard = ->
+	loc_str = "/wishlist/nuevo/gessgallardo/1/1/"
+	$.each upc, (index, str) ->
+    loc_str += str+"/"
 
-compartirWishlist = ->
+  window.location  = loc_str;
+
+compartirWishlist = (username) ->
 	FB.ui({
 	   method: 'feed',
-    name: '¿No sabe qué regalarme en Navidad? Mira mi wishlist.',
-    link: "#",
+    name: '¿No sabes qué regalarme en Navidad? Mira mi wishlist.',
+    link: "https://apps.facebook.com/wishlistsephora/ver/"+username+"/",
     picture: 'https://www.facebook.com/SephoraMX/app_424407284355166',
     caption: 'Mi wishlist de Sephora México',
     description: '!Haz click y crea tambien la tuya para ganar un Holiday Kit!'
 	}, (response) ->
-		if response && response.post_id
-		else
+		if response
+			return response
 	);
 
 
@@ -94,9 +107,6 @@ compartirWishlist = ->
 #-
 #- Main Script
 #-
-
-# fb_init()
-# fb_login()
 
 initSlide("wishlist", 660)
 initSlide("holiday", 660)
@@ -107,6 +117,9 @@ initSlide("cabello", 329)
 initSlide("fra_mujer", 329)
 initSlide("fra_hombre", 329)
 
+
+$(".bottones.add_wish").click ->
+	fb_salvard()
 
 $(".bottones.howto").click ->
   $(".box.participar").addClass("visible");
@@ -121,12 +134,15 @@ $(".box .cerrar").click ->
   $("#box").removeClass("visible");
 
 
+
+
+
+
 $(".producto-compartir").click (ev) ->
 	este = this;
 	ev.preventDefault();
 	ev.stopPropagation();
 	li = $(este).parent();
-	console.log li[0]
 	link =  $(li).find("a.producto-link").attr("href");
 	imagen =  $(li).find("img.producto-img").attr("src");
 	compartir(link, imagen)
@@ -136,12 +152,17 @@ $(".producto-agregar").click (ev) ->
 	ev.preventDefault();
 	ev.stopPropagation();
 	$li = $(este).parent();
+	str_upc = $li.attr("data-upc");
 
 	if wishlist_cont < 5
 		wishlist_cont++
+		
+		upc.push(str_upc);
+		
 		clonar = $li.clone();
 
 		$("#wishlist_cont ul").append(clonar);
+		
 		setTimeout (->
 			$(clonar).addClass("visible");
 		), 50;
@@ -151,7 +172,12 @@ $(".producto-agregar").click (ev) ->
 			ev2.preventDefault();
 			ev2.stopPropagation();
 			$(clonar).addClass("fade-out")
+			
 			wishlist_cont--
+
+			$.each upc, (index, str) ->
+				upc.splice(index, 1) if str is str_upc
+
 			setTimeout (->
 				$(remover).parent().remove();
 			), 450;

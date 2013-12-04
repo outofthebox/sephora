@@ -3,10 +3,6 @@ require "oauth"
 class WishlistController < ApplicationController
 	layout "wishlist"
 
-	def self.consumer
-		OAuth::Consumer.new("424407284355166","fc432bdb12fee6f1f8b650f7577e9d56", :site => 'https://graph.facebook.com', :request_endpoint => 'https://graph.facebook.com', :request_token_path => "/oauth/request_token", :access_token_path  => "/oauth/access_token", :authorize_path     => "/oauth/authorize", :sign_in => true)
-	end
-
 	def index
 		maquillaje = ["3378872058915", "3548752067911", "818015014505", "604214919204", "651986904402", "607710030787", "716170118567", "3378872071488", "94800346031",  "607845038184"]
 		cofres = ["8411061739587", "3607349627423", "3607349624736", "3346470115804", "8410225530459", "8411061739648", "737052629254", "3348901103244", "737052715940", "3605970567910"]
@@ -28,25 +24,27 @@ class WishlistController < ApplicationController
 	end
 
 	def ver
-		@userwish = Userwish.find params[:id]
 	end
-
-	def user
-		@userwish = Userwish.find params[:id]
-	end
-
-	def login
-  	redirect_to "https://www.facebook.com/dialog/oauth?client_id=424407284355166&redirect_uri=https://sephoramexico.herokuapp.com/wishlist/conectar/"
-	end
-
-	def conectar
-		@code = params[:code]
-		redirect_to "https://graph.facebook.com/oauth/access_token?client_id=424407284355166&redirect_uri=https://sephoramexico.herokuapp.com/wishlist/nuevo&client_secret=fc432bdb12fee6f1f8b650f7577e9d56&code="+@code
-	end
-
 
 	def nuevo
-		raise request.body.read.inspect 
-		@userwish = Userwish.new
+		@wishlist = [params[:producto1], params[:producto2], params[:producto3], params[:producto4], params[:producto5], ""];
+		@seccion1 = Producto.where(upc: @wishlist);
+
+		leuser = {:provider => "facebook", :uid => params[:uid], :name => params[:name], :post_id => params[:post_id]}
+
+		@userwish = Userwish.new(leuser)
+
+		if @userwish.save
+			@seccion1.each do |product|
+				leproduct = {:producto_id => product.id, :userwish_id => @userwish.id}
+				new_wishlist = Wishlist.new(leproduct);
+				if new_wishlist.save
+					puts "[salvado]"
+				else
+					puts "[error al salvar wishlist]"
+				end
+			end
+		else
+		end
 	end
 end

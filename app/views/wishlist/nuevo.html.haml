@@ -1,0 +1,78 @@
+#vista{:pagina => "nuevo"}
+  #box  
+    .box.participar
+      .cerrar
+      %h3 INSTRUCCIONES:  
+      %p
+        %strong 1.
+        Elige hasta
+        %strong 5 productos
+        para crear tu wishlist navideño.
+      %p
+        %strong 2.
+        Da
+        %strong clic
+        en el botón
+        %strong Mi Wishlist
+        que se encuentra abajo de la bolsa,
+        %strong publica tu Wishlist
+        en tu muro y
+        %strong comenta
+        cómo celebras la Navidad.
+      %p
+        %strong 3. Cada Viernes hasta el 3 de enero
+        regalaremos uno de nuestros Best Sellers de Holiday al
+        %strong comentario más creativo.
+      %p
+        %strong Conocerás si eres ganador en nuestro muro de Facebook.
+    .box.full
+      .cerrar
+      %h3 
+        ¡Tu Wishlist ya está completo!
+      %p 
+        Sólo puedes incluir 5 productos en tu lista, si deseas este producto elimina uno de los 5 que ya seleccionaste.
+    .box.premios
+      .cerrar
+      %h3 BASES DEL CONCURSO
+
+      %p Consulta disponibilidad de los productos en tiendas. Algunas de las marcas aquí mostradas pueden variar en su existencia. Visítanos y pregunta a un asesor Sephora.
+
+      %p 
+        Si lo deseas, escríbenos a 
+        %strong sephora@oob.mx 
+        para mayor información de producto.
+      %p Esto no es una compra en línea, es una sugerencia de productos y es responsabilidad del usuario su uso y envío de correos electrónicos.
+      %p Precios sujetos a cambios sin previo aviso. Aplicable sólo para México.
+      %p Sólo pueden participar personas residentes de la República Mexicana.
+      %p La entrega del premio será únicamente en las tiendas Sephora en México.
+      %p 
+        El producto de regalo será de la colección de 
+        %strong Holiday 2013 
+        de nuestras marcas exclusivas.
+      %p Ningún empleado de Sephora ni empleado de las marcas que maneja, podrá formar parte de la promoción ni tener participación de ninguna manera.
+      %p Promoción válida para mayores de 18 años.
+  .bottones.howto
+  .bottones.pricesp
+  .comparto_wishlist
+    Compartir
+  .slider_items.wishlist
+    #wishlist
+      #wishlist_cont
+        %ul
+        - seccion_productos = @seccion1
+          - seccion_productos.each do | producto |
+          %li{:"data-upc" =>producto.upc, :class=>"visible"}
+            .remover
+              &times;
+            %a.producto-link{:href => "producto/"+producto.slug, :target => "_blank"}
+              .producto-imagen
+                =image_tag(producto.foto.url(:chico), :class => "producto-img")
+            .producto-info
+              %p
+                = producto.marca.marca
+              .producto-p
+                %p
+                  = producto.nombre_real
+                  %br
+                    $
+                    = producto.precio
