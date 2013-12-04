@@ -91,11 +91,10 @@ compartirWishlist = (usuario) ->
     caption: 'Mi wishlist de Sephora México',
     description: '!Haz click y crea tambien la tuya para ganar un Holiday Kit!'
 	}, (post) ->
-		console.log post
 		if post
 			loc_str = "/wishlist/nuevo/"
 			loc_str += usuario.id+"/"
-			loc_str += post.id+"/"
+			loc_str += post.post_id+"/"
 
 			$.each upc, (index, str) ->
 				loc_str += str+"/"
