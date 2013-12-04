@@ -68,7 +68,7 @@ fb_salvar = ->
     if response.authResponse
     	FB.api("/me", (usuario) ->
     		if usuario && !usuario.error
-					compartirWishlist usuario
+    			compartirWishlist usuario
     	)
     else
     	console.log ""
