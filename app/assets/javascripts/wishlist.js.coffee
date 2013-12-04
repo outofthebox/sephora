@@ -119,7 +119,7 @@ initSlide("fra_hombre", 329)
 
 
 $(".bottones.add_wish").click ->
-	fb_salvard()
+	fb_salvar()
 
 $(".bottones.howto").click ->
   $(".box.participar").addClass("visible");
