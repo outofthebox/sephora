@@ -53,8 +53,9 @@
       %p Promoción válida para mayores de 18 años.
   .bottones.howto
   .bottones.pricesp
-  .comparto_wishlist
-    Compartir
+  %a.comparto_wishlist{:href=>"/wishlist"}
+    ¡Crea el tuyo!
+  }
   .slider_items.wishlist
     #wishlist
       #wishlist_cont
@@ -64,7 +65,7 @@
           %li{:"data-upc" =>producto.upc, :class=>"visible"}
             .remover
               &times;
-            %a.producto-link{:href => "producto/"+producto.slug, :target => "_blank"}
+            %a.producto-link{:href => "/producto/"+producto.slug, :target => "_blank"}
               .producto-imagen
                 =image_tag(producto.foto.url(:chico), :class => "producto-img")
             .producto-info
