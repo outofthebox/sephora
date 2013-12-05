@@ -20,6 +20,7 @@
 
 wishlist_cont = 0;
 upc = [];
+token = "";
 
 #-
 #- Declaracion de funciones
@@ -75,7 +76,7 @@ fb_login = ->
 fb_login_admin = ->
 	FB.login ((response) ->
 		if response.authResponse
-			console.log ""
+			token = FB.getAuthResponse()['accessToken'];
 		else
 			console.log ""
   ),
@@ -197,7 +198,7 @@ startAdmin = ->
 		ev.preventDefault
 		ev.stopPropagation
 		post_id = $(this).attr("data-post_id");
-		FB.api("/post_id", (datos) ->
+		FB.api("/"+post_id+"?access_token="+token, (datos) ->
 			console.log datos
 		)
 
