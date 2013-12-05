@@ -71,6 +71,16 @@ fb_login = ->
   ),
   scope: "email,read_stream,publish_stream"
 
+
+fb_login_admin = ->
+	FB.login ((response) ->
+		if response.authResponse
+			console.log ""
+		else
+			console.log ""
+  ),
+  scope: "email,read_stream,publish_stream"
+
 fb_salvar = ->
 	FB.api("/me", (usuario) ->
 		if usuario && !usuario.error
@@ -208,5 +218,5 @@ switch vista
 		instrucciones()
 	when "admin"
 		window.fbAsyncInit = ->
-			fb_login()
+			fb_login_admin()
 		startAdmin()
