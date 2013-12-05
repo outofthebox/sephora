@@ -180,6 +180,21 @@ startLista = ->
 			$(".box.full").addClass("visible");
 			$("#box").addClass("visible");
 
+#StarAdmin
+
+startAdmin = ->
+	$(".ver").click (ev) ->
+		ev.preventDefault
+		ev.stopPropagation
+		post_id = $(this).attr("data-post_id");
+		FB.api("/post_id", (datos) ->
+			console.log datos
+		)
+
+#=
+#= MAIN SCRIPT
+#=
+
 
 vista = $("#vista").attr("pagina");
 switch vista
@@ -191,4 +206,7 @@ switch vista
 		instrucciones()
 	when "ver", "nuevo"
 		instrucciones()
-		
+	when "admin"
+		window.fbAsyncInit = ->
+			fb_login()
+		startAdmin()

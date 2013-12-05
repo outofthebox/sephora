@@ -3,6 +3,8 @@ require "oauth"
 class WishlistController < ApplicationController
 	layout "wishlist"
 
+	before_filter :authenticate, :only => [:admin]
+
 	def lista
 		maquillaje = ["3378872058915", "3548752067911", "818015014505", "604214919204", "651986904402", "607710030787", "716170118567", "3378872071488", "94800346031",  "607845038184"]
 		cofres = ["8411061739587", "3607349627423", "3607349624736", "3346470115804", "8410225530459", "8411061739648", "737052629254", "3348901103244", "737052715940", "3605970567910"]
@@ -19,8 +21,15 @@ class WishlistController < ApplicationController
 
 	end
 
-	def index
+	def admin
+		@usuarios = Userwish.all
 	end
+
+	def authenticate
+    authenticate_or_request_with_http_basic do |user, password| 
+        session[:admin]= (user == ENV['U'] && password == ENV['P'])
+    end
+  end
 
 	def user
 		existo = Userwish.where(:uid => params[:uid]).first

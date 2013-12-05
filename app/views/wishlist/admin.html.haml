@@ -1,0 +1,24 @@
+#vista{:pagina=>"admin"}
+	%table{:width =>"100%", :class=>"admin_table"}
+		%tr
+			%td
+				UID
+			%td 
+				POST_ID
+			%td
+				LINK
+			%td
+				OPCIONES
+		- @usuarios.each do |user|
+			%tr{:"data-id" => user.uid}
+				%td
+					= user.uid
+				%td
+					= user.post_id
+				%td
+					%a{:href=>make_link(user.post_id)}
+				%td
+					%button.ver{:"data-post_id" => user.post_id}
+						ver
+
+	

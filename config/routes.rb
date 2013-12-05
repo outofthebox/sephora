@@ -167,6 +167,8 @@ Sephora::Application.routes.draw do
   get "wishlist", :to => 'wishlist#index', :as => "wishlist"
   post "wishlist", :to => 'wishlist#index', :as => "wishlist"
 
+  get "wishlist/admin/", :to => 'wishlist#admin', :as => "wishlist_admin"
+  post "wishlist/admin/", :to => 'wishlist#admin', :as => "wishlist_admin"
 
   get "wishlist/lista/", :to => 'wishlist#lista', :as => "wishlist_lista"
   post "wishlist/lista/", :to => 'wishlist#lista', :as => "wishlist_lista"
