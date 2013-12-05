@@ -100,14 +100,20 @@ html, body {
 	height: 1534px;
 	display: block;
 	position:relative;
-	&[pagina="inicio"]{
+	&[pagina="lista"]{
 		background-image: url("wishlist/index.png");
 		background-color: #FFFFFF;
 	}
 	&[pagina="nuevo"]{
 		background-image: url("wishlist/nuevo.png");
 		background-color: #FFFFFF;
-		height: 856px;
+		height: 856px !important;
+		#box{
+			height: 856px
+		}
+		.box{
+			top:100px;
+		}
 		.slider_items{
 			&.wishlist{
 				top: 370px;
@@ -166,6 +172,9 @@ html, body {
 			height: 140px;
 			overflow: hidden;
 			min-height: 140px;
+		}
+		&.premios{
+			top:100px;
 		}
 		&.visible{
 			display: block;

@@ -3,7 +3,7 @@ require "oauth"
 class WishlistController < ApplicationController
 	layout "wishlist"
 
-	def index
+	def lista
 		maquillaje = ["3378872058915", "3548752067911", "818015014505", "604214919204", "651986904402", "607710030787", "716170118567", "3378872071488", "94800346031",  "607845038184"]
 		cofres = ["8411061739587", "3607349627423", "3607349624736", "3346470115804", "8410225530459", "8411061739648", "737052629254", "3348901103244", "737052715940", "3605970567910"]
 		skincare = ["808144830008", "809280119217", "687795361013", "604079102827", "651043071351", "604079104920", "879634004193", "809280119743", "604079102988", "604079103084"]
@@ -12,11 +12,24 @@ class WishlistController < ApplicationController
 
 		@wishlist = []
 		@seccion1 = Producto.where(upc: maquillaje);
-		@seccion2 = Producto.where(upc: cofres);
-		@seccion3 = Producto.where(upc: skincare);
-		@seccion4 = Producto.where(upc: rollerballs);
-		@seccion5 = Producto.where(upc: bath);
+		@seccion2 = Producto.where(upc: skincare);
+		@seccion3 = Producto.where(upc: bath);
+		@seccion4 = Producto.where(upc: cofres);
+		@seccion5 = Producto.where(upc: rollerballs);
 
+	end
+
+	def index
+	end
+
+	def user
+		existo = Userwish.where(:uid => params[:uid]).first
+		if existo != nil
+			wishlist = Wishlist.where(:userwish_id => existo.id).select("producto_id").first(5)
+			@seccion1 = Producto.includes(:wishlist).where(:id => wishlist).first(5)
+		else
+			redirect_to :wishlist_lista
+		end
 	end
 
 	def ver
@@ -25,18 +38,19 @@ class WishlistController < ApplicationController
 			wishlist = Wishlist.where(:userwish_id => existo.id).select("producto_id").first(5)
 			@seccion1 = Producto.includes(:wishlist).where(:id => wishlist).first(5)
 		else
-			redirect_to :wishlist
+			redirect_to :wishlist_lista
 		end
 	end
 
 	def nuevo
-		@wishlist = [params[:producto1], params[:producto2], params[:producto3], params[:producto4], params[:producto5], ""];
+		@wishlist = [params[:producto1], params[:producto2], params[:producto3], params[:producto4], params[:producto5]];
+
 		@seccion1 = Producto.where(upc: @wishlist);
 
 		leuser = {:provider => "facebook", :uid => params[:uid], :name => "", :post_id => params[:post_id]}
 
 		existo = Userwish.where(:uid => params[:uid]).first;
-
+		
 		if(existo != nil)
 			if Userwish.update(existo, leuser)
 				@seccion1.each do |product|
@@ -48,7 +62,7 @@ class WishlistController < ApplicationController
 						puts "[error al salvar wishlist]"
 					end
 				end
-				redirect_to "/wishlist/ver/"+existo.uid
+				redirect_to "/wishlist/mi_lista/"+existo.uid
 			else
 				redirect_to :wishlist_error
 			end
@@ -64,7 +78,7 @@ class WishlistController < ApplicationController
 						puts "[error al salvar wishlist]"
 					end
 				end
-				redirect_to "/wishlist/ver/"+@userwish.uid
+				redirect_to "/wishlist/mi_lista/"+@userwish.uid
 			else
 				redirect_to :wishlist_error
 			end

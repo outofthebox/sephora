@@ -166,6 +166,11 @@ Sephora::Application.routes.draw do
   #wishlist
   get "wishlist", :to => 'wishlist#index', :as => "wishlist"
   post "wishlist", :to => 'wishlist#index', :as => "wishlist"
+
+
+  get "wishlist/lista/", :to => 'wishlist#lista', :as => "wishlist_lista"
+  post "wishlist/lista/", :to => 'wishlist#lista', :as => "wishlist_lista"
+
   
   get "wishlist/nuevo/(:uid)/(:post_id)/(:producto1)/(:producto2)/(:producto3)/(:producto4)/(:producto5)/", :to => "wishlist#nuevo", :as => "wishlist_nuevo"
   post "wishlist/nuevo/(:uid)/(:post_id)/(:producto1)/(:producto2)/(:producto3)/(:producto4)/(:producto5)/", :to => "wishlist#nuevo", :as => "wishlist_nuevo"
@@ -175,6 +180,11 @@ Sephora::Application.routes.draw do
 
   get "wishlist/error", :to => 'wishlist#index', :as => "wishlist_error"
   post "wishlist/error", :to => 'wishlist#index', :as => "wishlist_error"
+
+  get "wishlist/mi_lista/(:uid)", :to => 'wishlist#user', :as => "wishlist_user"
+  post "wishlist/mi_lista/(:uid)", :to => 'wishlist#user', :as => "wishlist_user"
+
+
 
   #instaCosas
   get "instagram", :to => 'instagram#index', :as => "insta_sephora"

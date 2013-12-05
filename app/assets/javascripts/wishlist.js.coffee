@@ -14,9 +14,6 @@
     fjs.parentNode.insertBefore js, fjs
   ) document, "script", "facebook-jssdk"
 
-window.fbAsyncInit = ->
-	#fb_login()
-
 #-
 #- Declaracion de variables
 #-
@@ -63,17 +60,22 @@ compartir = (link, imagen) ->
 		else
 	);
 
-fb_salvar = ->
+fb_login = ->
 	FB.login ((response) ->
-    if response.authResponse
-    	FB.api("/me", (usuario) ->
-    		if usuario && !usuario.error
-    			compartirWishlist usuario
-    	)
-    else
-    	console.log ""
+		if response.authResponse
+			FB.api("/me", (usuario) ->
+				window.location = "/wishlist/mi_lista/"+usuario.id
+			)
+		else
+			console.log ""
   ),
   scope: "email,read_stream,publish_stream"
+
+fb_salvar = ->
+	FB.api("/me", (usuario) ->
+		if usuario && !usuario.error
+			compartirWishlist usuario
+	)
 
 fb_salvard = ->
 	loc_str = "/wishlist/nuevo/1/1/"
@@ -103,79 +105,90 @@ compartirWishlist = (usuario) ->
 	);
 
 
-
-#-
-#- Main Script
-#-
-
-initSlide("wishlist", 660)
-initSlide("holiday", 660)
-initSlide("roller", 329)
-initSlide("maquillaje", 329)
-initSlide("skincare", 329)
-initSlide("cabello", 329)
-initSlide("fra_mujer", 329)
-initSlide("fra_hombre", 329)
-
-
-$(".bottones.add_wish").click ->
-	fb_salvar()
-
-$(".bottones.howto").click ->
-  $(".box.participar").addClass("visible");
-  $("#box").addClass("visible");
-
-$(".bottones.prices").click ->
-  $(".box.premios").addClass("visible");
-  $("#box").addClass("visible");
-
-$(".box .cerrar").click ->
-  $(this).parent().removeClass("visible");
-  $("#box").removeClass("visible");
-
-$(".producto-compartir").click (ev) ->
-	este = this;
-	ev.preventDefault();
-	ev.stopPropagation();
-	li = $(este).parent();
-	link =  $(li).find("a.producto-link").attr("href");
-	imagen =  $(li).find("img.producto-img").attr("src");
-	compartir(link, imagen)
-
-$(".producto-agregar").click (ev) ->
-	este = this;
-	ev.preventDefault();
-	ev.stopPropagation();
-	$li = $(este).parent();
-	str_upc = $li.attr("data-upc");
-
-	if wishlist_cont < 5
-		wishlist_cont++
-		
-		upc.push(str_upc);
-		
-		clonar = $li.clone();
-
-		$("#wishlist_cont ul").append(clonar);
-		
-		setTimeout (->
-			$(clonar).addClass("visible");
-		), 50;
-
-		$(clonar).find(".remover").click (ev2) ->
-			remover = this;
-			ev2.preventDefault();
-			ev2.stopPropagation();
-			$(clonar).addClass("fade-out")
-			
-			wishlist_cont--
-
-			$.each upc, (index, str) ->
-				upc.splice(index, 1) if str is str_upc
-
-			setTimeout (->
-				$(remover).parent().remove();
-			), 450;
-	else
-		$(".box.full").addClass("visible");
+instrucciones = ->
+	$(".bottones.howto").click ->
+		$(".box.participar").addClass("visible");
 		$("#box").addClass("visible");
+
+	$(".bottones.prices").click ->
+		$(".box.premios").addClass("visible");
+		$("#box").addClass("visible");
+
+	$(".box .cerrar").click ->
+		$(this).parent().removeClass("visible");
+		$("#box").removeClass("visible");
+
+startLista = ->
+
+	initSlide("wishlist", 660)
+	initSlide("holiday", 660)
+	initSlide("roller", 329)
+	initSlide("maquillaje", 329)
+	initSlide("skincare", 329)
+	initSlide("cabello", 329)
+	initSlide("fra_mujer", 329)
+	initSlide("fra_hombre", 329)
+
+
+	$(".bottones.add_wish").click ->
+		fb_salvar()
+
+	$(".producto-compartir").click (ev) ->
+		este = this;
+		ev.preventDefault();
+		ev.stopPropagation();
+		li = $(este).parent();
+		link =  $(li).find("a.producto-link").attr("href");
+		imagen =  $(li).find("img.producto-img").attr("src");
+		compartir(link, imagen)
+
+	$(".producto-agregar").click (ev) ->
+		este = this;
+		ev.preventDefault();
+		ev.stopPropagation();
+		$li = $(este).parent();
+		str_upc = $li.attr("data-upc");
+
+		if wishlist_cont < 5
+			wishlist_cont++
+			
+			upc.push(str_upc);
+			
+			clonar = $li.clone();
+
+			$("#wishlist_cont ul").append(clonar);
+			
+			setTimeout (->
+				$(clonar).addClass("visible");
+			), 50;
+
+			$(clonar).find(".remover").click (ev2) ->
+				remover = this;
+				ev2.preventDefault();
+				ev2.stopPropagation();
+				$(clonar).addClass("fade-out")
+				
+				wishlist_cont--
+
+				$.each upc, (index, str) ->
+					upc.splice(index, 1) if str is str_upc
+
+				setTimeout (->
+					$(remover).parent().remove();
+				), 450;
+		else
+			$(".box.full").addClass("visible");
+			$("#box").addClass("visible");
+
+
+vista = $("#vista").attr("pagina");
+switch vista
+	when "index"
+		window.fbAsyncInit = ->
+			fb_login()
+	when "lista"
+		startLista()
+		instrucciones()
+	when "ver", "nuevo"
+		instrucciones()
+		
