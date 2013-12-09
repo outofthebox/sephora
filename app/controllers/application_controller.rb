@@ -20,6 +20,16 @@ class ApplicationController < ActionController::Base
   end
 
 
+  def clear_cache
+    ActionController::Base.new.expire_fragment("categoria_ver", options = nil)
+
+    puts "[--Cache Limpio--]"
+
+
+    redirect_to root_path
+  end
+
+
   # -----------------------------
   # I was searching
   # You were on a mission

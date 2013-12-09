@@ -186,6 +186,8 @@ Sephora::Application.routes.draw do
   get "wishlist/mi_lista/(:uid)", :to => 'wishlist#user', :as => "wishlist_user"
   post "wishlist/mi_lista/(:uid)", :to => 'wishlist#user', :as => "wishlist_user"
 
+  #admin
+  get "/admin/clear", :to => "application#clear_cache", :as => "clear_cache"
 
 
   #instaCosas

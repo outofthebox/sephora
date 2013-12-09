@@ -1,5 +1,6 @@
 class PaginasController < ApplicationController
   before_filter :auth, :only => [:colorful, :colorful_show] if ENV['color_activo'] == '0'
+
   def home
     @bestsellers = Seccion.seccion_actual(Seccion.by_slug(:bestsellers))
     @lonuevo = Seccion.seccion_actual(Seccion.by_slug(:lonuevo))
