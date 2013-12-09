@@ -1,148 +1,147 @@
 - provide :titulo, @categoria.nombre
 - provide :descripcion, @categoria.descripcion
-- cache(:categoria_ver) do
-  %section#categoria
-    %ul.breadcrumbs.nolist.seplist.nobullet
-      - if @categoria.ancestors and @categoria.ancestors.any?
-        - @categoria.ancestors.each do |a|
-          %li
-            .inlineblock
-              = link_to a.nombre, categoria_ver_path(a.slug)
-      %li.highlighted
-        .inlineblock
-          = link_to @categoria.nombre, categoria_ver_path(@categoria.slug)
-    .table.full
-      .contizq.tcell.t25
-        - if @subcategorias && @subcategorias.any?
-          %ul.no-border.bottom
-            %li.current
-              =@categoria.nombre
-              %span (#{@productoscount})
-            - @subcategorias.each do |subcategoria|
-              %li
-                = link_to subcategoria.nombre, categoria_ver_path(subcategoria.slug)
-        - else
-          %ul.no-border.bottom
-            %li.current
-              =@categoria.nombre
-              %span (#{@productoscount})
+%section#categoria
+  %ul.breadcrumbs.nolist.seplist.nobullet
+    - if @categoria.ancestors and @categoria.ancestors.any?
+      - @categoria.ancestors.each do |a|
+        %li
+          .inlineblock
+            = link_to a.nombre, categoria_ver_path(a.slug)
+    %li.highlighted
+      .inlineblock
+        = link_to @categoria.nombre, categoria_ver_path(@categoria.slug)
+  .table.full
+    .contizq.tcell.t25
+      - if @subcategorias && @subcategorias.any?
+        %ul.no-border.bottom
+          %li.current
+            =@categoria.nombre
+            %span (#{@productoscount})
+          - @subcategorias.each do |subcategoria|
             %li
-              %a#vermascat{:href => '#'}
-                Más categorías +
-            .mascat
-              - @categoria.parent.children.each do |categoria|
-                - unless categoria.nombre == @categoria.nombre
-                  %li=link_to categoria.nombre, categoria_ver_path(categoria.slug)
-        %ul
+              = link_to subcategoria.nombre, categoria_ver_path(subcategoria.slug)
+      - else
+        %ul.no-border.bottom
+          %li.current
+            =@categoria.nombre
+            %span (#{@productoscount})
           %li
-            <strong>Filtrar por precio</strong>
-          %li
-            =link_to "Precio alto", request.parameters.merge({:precio => "alto"}), :"data-set" => 'alto'
-          %li
-            =link_to "Precio bajo", request.parameters.merge({:precio => "bajo"}), :"data-set" => 'bajo'
-          %li
-            =link_to "Marca", request.parameters.merge({:ordenar => "marca"}), :"data-set" => 'marca'
-          %li
-          %li
-            <strong>Filtrar por marca</strong>
-          - if @marcas_para_categoria and @marcas_para_categoria.any?
-            - @marcas_para_categoria.each do |r|
-              - if r["id"].to_i.in? @marcas_seleccionadas || []
-                %li.checked
-                  =link_to r["marca"], request.parameters.merge({ :page => nil, :marca => ((@marcas_seleccionadas || []) - [r["id"].to_i]).join(",") })
-              - else  
-                %li.unchecked
-                  =link_to r["marca"], request.parameters.merge({ :page => nil, :marca => ((@marcas_seleccionadas || []) + [r["id"].to_i]).join(",") })
-          %li
-            =link_to "Borrar filtros", categoria_ver_path(@categoria.slug)
-      .contder.tcell.t75
-        .contenedor
-          - unless @categoria.cover_file_name.nil?
-            - unless @categoria.urlslug.nil? || @categoria.urlslug.empty?
-              = link_to image_tag(@categoria.cover.url(:normal)),(@categoria.urlslug)
-            - else
-              = image_tag(@categoria.cover.url(:normal))
-        .catalogo
-          .navegacion
-            %span ver
-            .navegaciones
-              %p{:id => "trigger"}
-                20 por página
-                %span ▼
-              %ul.nobullet.activo.verpor
-                %li
-                  = link_to '20 por página', request.parameters.merge({:ver => 20}), :"data-set" => '20'
-                %li
-                  = link_to '30 por página', request.parameters.merge({:ver => 30}), :"data-set" => '30'
-                %li
-                  = link_to '50 por página', request.parameters.merge({:ver => 50}), :"data-set" => '50'
-            %span acomodar por:
-            .navegaciones
-              %p{:id => "trigger2"}
-                acomodar por
-                %span ▼
-              %ul.nobullet.activo.aco
-                %li
-                  = link_to 'precio alto', request.parameters.merge({:precio => "alto"}), :"data-set" => 'alto'
-                %li
-                  = link_to 'precio bajo', request.parameters.merge({:precio => "bajo"}), :"data-set" => 'bajo'
-                %li
-                  =link_to "marca", request.parameters.merge({:ordenar => "marca"}), :"data-set" => 'marca'
-            .numeros
-              %span
-                = paginate @productos, :window => 1, :left => 2, :right => 0
-              %p
-                =@productoscount
-                artículos
-          - if @productos and @productos.any?
-            %ul.nobullet.nolist.catalogin
-              - @productos.each do |producto|
-                %li
-                  = link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
-                  %h4 #{producto.marca.marca.upcase}
-                  %h4 #{link_to producto.nombre.split(' ').map {|w| w.capitalize }.join(' '), producto_ver_path(producto.slug)}
-                  %p #{number_to_currency(producto.precio, :precision => 0)}
-          .navegacion
-            %span ver
-            .navegaciones
-              %p{:id => "trigger"}
-                20 por página
-                %span ▼
-              %ul.nobullet.activo.verpor
-                %li
-                  = link_to '20 por página', request.parameters.merge({:ver => 20}), :"data-set" => '20'
-                %li
-                  = link_to '30 por página', request.parameters.merge({:ver => 30}), :"data-set" => '30'
-                %li
-                  = link_to '50 por página', request.parameters.merge({:ver => 50}), :"data-set" => '50'
-            %span acomodar por:
-            .navegaciones
-              %p{:id => "trigger2"}
-                acomodar por
-                %span ▼
-              %ul.nobullet.activo.aco
-                %li
-                  = link_to 'precio alto', request.parameters.merge({:precio => "alto"}), :"data-set" => 'alto'
-                %li
-                  = link_to 'precio bajo', request.parameters.merge({:precio => "bajo"}), :"data-set" => 'bajo'
-                %li
-                  =link_to "marca", request.parameters.merge({:ordenar => "marca"}), :"data-set" => 'marca'
-            .numeros
-              %span
-                = paginate @productos, :window => 1, :left => 2, :right => 0
-              %p
-                =@productoscount
-                artículos
-    - unless @categoria.categoria_producto.size == 0
-      .table.full
-        .tcell.t20
-        .tcell.t80
-          .masproducto
-            %h3 Más #{@categoria.nombre}
-            %ul.nobullet
-              - @categoria.categoria_producto.each do |categoria_producto|
-                %li
-                  = link_to image_tag(categoria_producto.producto.foto.url(:chico)), producto_ver_path(categoria_producto.producto.slug)
-                  %h4
-                    #{categoria_producto.producto.nombre}
-                  = simple_format categoria_producto.descripcion unless categoria_producto.descripcion.empty?
+            %a#vermascat{:href => '#'}
+              Más categorías +
+          .mascat
+            - @categoria.parent.children.each do |categoria|
+              - unless categoria.nombre == @categoria.nombre
+                %li=link_to categoria.nombre, categoria_ver_path(categoria.slug)
+      %ul
+        %li
+          <strong>Filtrar por precio</strong>
+        %li
+          =link_to "Precio alto", request.parameters.merge({:precio => "alto"}), :"data-set" => 'alto'
+        %li
+          =link_to "Precio bajo", request.parameters.merge({:precio => "bajo"}), :"data-set" => 'bajo'
+        %li
+          =link_to "Marca", request.parameters.merge({:ordenar => "marca"}), :"data-set" => 'marca'
+        %li
+        %li
+          <strong>Filtrar por marca</strong>
+        - if @marcas_para_categoria and @marcas_para_categoria.any?
+          - @marcas_para_categoria.each do |r|
+            - if r["id"].to_i.in? @marcas_seleccionadas || []
+              %li.checked
+                =link_to r["marca"], request.parameters.merge({ :page => nil, :marca => ((@marcas_seleccionadas || []) - [r["id"].to_i]).join(",") })
+            - else  
+              %li.unchecked
+                =link_to r["marca"], request.parameters.merge({ :page => nil, :marca => ((@marcas_seleccionadas || []) + [r["id"].to_i]).join(",") })
+        %li
+          =link_to "Borrar filtros", categoria_ver_path(@categoria.slug)
+    .contder.tcell.t75
+      .contenedor
+        - unless @categoria.cover_file_name.nil?
+          - unless @categoria.urlslug.nil? || @categoria.urlslug.empty?
+            = link_to image_tag(@categoria.cover.url(:normal)),(@categoria.urlslug)
+          - else
+            = image_tag(@categoria.cover.url(:normal))
+      .catalogo
+        .navegacion
+          %span ver
+          .navegaciones
+            %p{:id => "trigger"}
+              20 por página
+              %span ▼
+            %ul.nobullet.activo.verpor
+              %li
+                = link_to '20 por página', request.parameters.merge({:ver => 20}), :"data-set" => '20'
+              %li
+                = link_to '30 por página', request.parameters.merge({:ver => 30}), :"data-set" => '30'
+              %li
+                = link_to '50 por página', request.parameters.merge({:ver => 50}), :"data-set" => '50'
+          %span acomodar por:
+          .navegaciones
+            %p{:id => "trigger2"}
+              acomodar por
+              %span ▼
+            %ul.nobullet.activo.aco
+              %li
+                = link_to 'precio alto', request.parameters.merge({:precio => "alto"}), :"data-set" => 'alto'
+              %li
+                = link_to 'precio bajo', request.parameters.merge({:precio => "bajo"}), :"data-set" => 'bajo'
+              %li
+                =link_to "marca", request.parameters.merge({:ordenar => "marca"}), :"data-set" => 'marca'
+          .numeros
+            %span
+              = paginate @productos, :window => 1, :left => 2, :right => 0
+            %p
+              =@productoscount
+              artículos
+        - if @productos and @productos.any?
+          %ul.nobullet.nolist.catalogin
+            - @productos.each do |producto|
+              %li
+                = link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
+                %h4 #{producto.marca.marca.upcase}
+                %h4 #{link_to producto.nombre.split(' ').map {|w| w.capitalize }.join(' '), producto_ver_path(producto.slug)}
+                %p #{number_to_currency(producto.precio, :precision => 0)}
+        .navegacion
+          %span ver
+          .navegaciones
+            %p{:id => "trigger"}
+              20 por página
+              %span ▼
+            %ul.nobullet.activo.verpor
+              %li
+                = link_to '20 por página', request.parameters.merge({:ver => 20}), :"data-set" => '20'
+              %li
+                = link_to '30 por página', request.parameters.merge({:ver => 30}), :"data-set" => '30'
+              %li
+                = link_to '50 por página', request.parameters.merge({:ver => 50}), :"data-set" => '50'
+          %span acomodar por:
+          .navegaciones
+            %p{:id => "trigger2"}
+              acomodar por
+              %span ▼
+            %ul.nobullet.activo.aco
+              %li
+                = link_to 'precio alto', request.parameters.merge({:precio => "alto"}), :"data-set" => 'alto'
+              %li
+                = link_to 'precio bajo', request.parameters.merge({:precio => "bajo"}), :"data-set" => 'bajo'
+              %li
+                =link_to "marca", request.parameters.merge({:ordenar => "marca"}), :"data-set" => 'marca'
+          .numeros
+            %span
+              = paginate @productos, :window => 1, :left => 2, :right => 0
+            %p
+              =@productoscount
+              artículos
+  - unless @categoria.categoria_producto.size == 0
+    .table.full
+      .tcell.t20
+      .tcell.t80
+        .masproducto
+          %h3 Más #{@categoria.nombre}
+          %ul.nobullet
+            - @categoria.categoria_producto.each do |categoria_producto|
+              %li
+                = link_to image_tag(categoria_producto.producto.foto.url(:chico)), producto_ver_path(categoria_producto.producto.slug)
+                %h4
+                  #{categoria_producto.producto.nombre}
+                = simple_format categoria_producto.descripcion unless categoria_producto.descripcion.empty?
