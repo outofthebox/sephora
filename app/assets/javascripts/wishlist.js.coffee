@@ -198,8 +198,10 @@ startAdmin = ->
 		ev.preventDefault
 		ev.stopPropagation
 		post_id = $(this).attr("data-post_id");
-		FB.api("/"+post_id+"?access_token="+token, (datos) ->
-			console.log datos
+		FB.api("/"+post_id+"?access_token="+token, (post) ->
+			post_link = post[0].link
+			post_message = post.message
+			posted_by = post.from.name
 		)
 
 #=
