@@ -160,36 +160,48 @@ startLista = ->
 		$li = $(este).parent();
 		str_upc = $li.attr("data-upc");
 
-		if wishlist_cont < 5
-			wishlist_cont++
-			
-			upc.push(str_upc);
-			
-			clonar = $li.clone();
-
-			$("#wishlist_cont ul").append(clonar);
-			
-			setTimeout (->
-				$(clonar).addClass("visible");
-			), 50;
-
-			$(clonar).find(".remover").click (ev2) ->
-				remover = this;
-				ev2.preventDefault();
-				ev2.stopPropagation();
-				$(clonar).addClass("fade-out")
+		if upc_existe(str_upc, upc) == false
+			if wishlist_cont < 5
+				wishlist_cont++
 				
-				wishlist_cont--
+				upc.push(str_upc);
+				
+				clonar = $li.clone();
 
-				$.each upc, (index, str) ->
-					upc.splice(index, 1) if str is str_upc
-
+				$("#wishlist_cont ul").append(clonar);
+				
 				setTimeout (->
-					$(remover).parent().remove();
-				), 450;
+					$(clonar).addClass("visible");
+				), 50;
+
+				$(clonar).find(".remover").click (ev2) ->
+					remover = this;
+					ev2.preventDefault();
+					ev2.stopPropagation();
+					$(clonar).addClass("fade-out")
+					
+					wishlist_cont--
+
+					$.each upc, (index, str) ->
+						upc.splice(index, 1) if str is str_upc
+
+					setTimeout (->
+						$(remover).parent().remove();
+					), 450;
+			else
+				$(".box.full").addClass("visible");
+				$("#box").addClass("visible");
 		else
-			$(".box.full").addClass("visible");
+			$(".box.error").addClass("visible");
 			$("#box").addClass("visible");
+
+upc_existe = (str_upc, arreglo) ->
+  bandera = false
+  $.each arreglo, (index, str) ->
+    if str is str_upc
+      bandera = true
+      return
+  bandera
 
 #StarAdmin
 
