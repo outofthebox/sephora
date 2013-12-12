@@ -65,7 +65,7 @@ fb_login = ->
 	FB.login ((response) ->
 		if response.authResponse
 			FB.api("/me", (usuario) ->
-				window.location = "/wishlist/mi_lista/"+usuario.id
+				window.location = "/wishlist/mi_lista/"+usuario.id+"/"+FB.getAccessToken()
 			)
 		else
 			console.log ""
@@ -91,7 +91,7 @@ fb_salvar = ->
 fb_salvard = ->
 	loc_str = "/wishlist/nuevo/1/1/"
 	$.each upc, (index, str) ->
-    loc_str += str+"/"
+    loc_str += str+"/"+FB.getAccessToken()
 
   window.location  = loc_str;
 

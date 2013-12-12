@@ -174,8 +174,8 @@ Sephora::Application.routes.draw do
   post "wishlist/lista/", :to => 'wishlist#lista', :as => "wishlist_lista"
 
   
-  get "wishlist/nuevo/(:uid)/(:post_id)/(:producto1)/(:producto2)/(:producto3)/(:producto4)/(:producto5)/", :to => "wishlist#nuevo", :as => "wishlist_nuevo"
-  post "wishlist/nuevo/(:uid)/(:post_id)/(:producto1)/(:producto2)/(:producto3)/(:producto4)/(:producto5)/", :to => "wishlist#nuevo", :as => "wishlist_nuevo"
+  get "wishlist/nuevo/(:uid)/(:post_id)/(:producto1)/(:producto2)/(:producto3)/(:producto4)/(:producto5)/(:token)", :to => "wishlist#nuevo", :as => "wishlist_nuevo"
+  post "wishlist/nuevo/(:uid)/(:post_id)/(:producto1)/(:producto2)/(:producto3)/(:producto4)/(:producto5)/(:token)", :to => "wishlist#nuevo", :as => "wishlist_nuevo"
   
   get "wishlist/ver/(:uid)", :to => "wishlist#ver", :as => "wishlist_ver"
   post "wishlist/ver/(:uid)", :to => "wishlist#ver", :as => "wishlist_ver"
@@ -183,8 +183,8 @@ Sephora::Application.routes.draw do
   get "wishlist/error", :to => 'wishlist#index', :as => "wishlist_error"
   post "wishlist/error", :to => 'wishlist#index', :as => "wishlist_error"
 
-  get "wishlist/mi_lista/(:uid)", :to => 'wishlist#user', :as => "wishlist_user"
-  post "wishlist/mi_lista/(:uid)", :to => 'wishlist#user', :as => "wishlist_user"
+  get "wishlist/mi_lista/(:uid)/(:token)", :to => 'wishlist#user', :as => "wishlist_user"
+  post "wishlist/mi_lista/(:uid)/(:token)", :to => 'wishlist#user', :as => "wishlist_user"
 
   #admin
   get "/admin/clear", :to => "application#clear_cache", :as => "clear_cache"
