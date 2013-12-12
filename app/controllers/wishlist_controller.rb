@@ -57,7 +57,7 @@ class WishlistController < ApplicationController
 
 		@seccion1 = Producto.where(upc: @wishlist);
 
-		leuser = {:provider => "facebook", :uid => params[:uid], :name => "", :post_id => params[:post_id]}
+		leuser = {:provider => "facebook", :access_token => params[:token], :uid => params[:uid], :name => "", :post_id => params[:post_id]}
 
 		existo = Userwish.where(:uid => params[:uid]).first;
 		
