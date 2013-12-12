@@ -34,10 +34,10 @@ class WishlistController < ApplicationController
 	def user
 		existo = Userwish.where(:uid => params[:uid]).first
 		if existo != nil
+			Userwish.update(existo.id, :access_token => params[:token])
 			wishlist = Wishlist.where(:userwish_id => existo.id).select("producto_id").first(5)
 			@seccion1 = Producto.includes(:wishlist).where(:id => wishlist).first(5)
 		else
-			Userwish.update(existo.id, :access_token => params[:token])
 			redirect_to :wishlist_lista
 		end
 	end
