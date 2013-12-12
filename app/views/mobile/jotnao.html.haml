@@ -1,6 +1,6 @@
 .jotnao
   .ima
-    = image_tag 'mobile/home/hotnow.png'
+    = image_tag 'mobile/hotnow.png'
 .hotnow
 - provide :titulo, @seccion.nombre.split(' ').map {|w| w.capitalize }.join(' ')
 .vethotnow{ :class => "seccion-#{@seccion.try(:nombre).try(:parameterize)}"}
@@ -18,7 +18,5 @@
                 = producto.marca.marca
               %h5
                 = producto.nombre_real.empty? ? producto.nombre : producto.nombre_real
-              - unless seccion_producto.descripcion.empty?
-                = seccion_producto.descripcion.html_safe
             .picture
-              =link_to image_tag(producto.foto.url(:chico)), m_producto_path(producto.slug)
+              =link_to image_tag(producto.foto.url(:grande)), m_producto_path(producto.slug)

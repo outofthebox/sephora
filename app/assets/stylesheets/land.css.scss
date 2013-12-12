@@ -76,14 +76,17 @@
   .jotnao{
     margin-top: 20px;
     width: 100%;
+    .callbacks_nav{
+      top: 10%;
+    }
     .ima{
       display: table-cell; 
       vertical-align: top;
       height: 100px;
       width: 49%;
       img{
-        width: 100%;
-        height: 100px;
+        width: 95%;
+        height: 120px;
       }
     }
     .tex{
@@ -97,18 +100,13 @@
     }
   }
   .info{
-    display: table-cell; 
-    vertical-align: top;
-    width: 48%;
-    left: 7px;
     position: relative;
     h3{
       font-size: 22px;
       line-height: 25px;
       margin-bottom: 3px;    }
   }
-  .picture{
-    display: table-cell; 
+  .picture{ 
     vertical-align: top;
     img{
       margin-top: 40px;
@@ -153,7 +151,7 @@
     ul{
       li{
         width: 100%;
-        height: 190px;
+        height: auto;
         border-bottom: 1px solid #000
       }
     }
@@ -162,6 +160,9 @@
     width: 48%;
     display: table-cell;
     vertical-align: top;
+    img{
+      width: 95%;
+    }
   }
   .cuatro{
     width: 48%;
@@ -411,7 +412,7 @@
     ul{
       li{
         width: 100%;
-        height: 190px;
+        height: auto;
         border-bottom: 1px solid #000
       }
     }
@@ -493,8 +494,8 @@
       height: 100px;
       width: 49%;
       img{
-        width: 70%;
-        height: 100px;
+        width: 95%;
+        height: 120px;
         margin-left: 15px
       }
     }
