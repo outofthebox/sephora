@@ -1,22 +1,55 @@
 #vista{:pagina=>"admin"}
+	#box  
+		.box.ver_wishlist
+			.cerrar
+			%h3 WISHLIST
+			%ul
+				%dl
+					%dt
+						UID
+					%dd.uid
+						12345678
+				%dl
+					%dt
+						Usuario
+					%dd
+						%a.user_profile{:href=>"./#"}
+							%span.username Juan Pedro Paco Chicorico
+				%dl
+					%dt
+						Mensaje Navideño
+					%dd.mensaje
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. In egestas sed velit vel tempus. Mauris eget augue nulla. Curabitur posuere nullam.
+				%dl
+					%dt
+						Post
+					%dd
+						%a.post{:href=>"./#"}
+							Ver Post
+				%dl
+					%dt
+						Wishlist
+					%dd
+						%a.wishlist{:href=>"./#"}
+							Ver Wishlist
 	%table{:width =>"100%", :class=>"admin_table"}
 		%tr
 			%td
-				UID
-			%td 
-				POST_ID
+				ID
 			%td
-				LINK
+				FB UID
+			%td 
+				POST ID
 			%td
 				OPCIONES
 		- @usuarios.each do |user|
 			%tr{:"data-id" => user.uid}
 				%td
+					= user.id
+				%td
 					= user.uid
 				%td
 					= user.post_id
-				%td
-					%a{:href=>make_link(user.post_id)}
 				%td
 					%button.ver{:"data-post_id" => user.post_id}
 						ver

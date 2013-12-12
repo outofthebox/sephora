@@ -101,6 +101,51 @@ html, body {
 	display: block;
 	position:relative;
 	&[pagina="admin"]{
+		button.ver {
+			background: #ff5656;
+			border: 0;
+			padding: 5px 20px;
+			color: white;
+			line-height: 20px;
+			cursor: pointer;
+			transition: background 350ms;
+			-moz-transition: background 350ms;
+			-webkit-transition: background 350ms;
+			-ms-transition: background 350ms;
+			&:hover{
+				background:#202020;
+				transition: background 350ms;
+				-moz-transition: background 350ms;
+				-webkit-transition: background 350ms;
+				-ms-transition: background 350ms;
+			}
+		}
+		.box{
+			&.ver_wishlist{
+				ul {
+					text-align: left;
+					width: 80%;
+					margin: 20px auto;
+					font-size: 14px;
+					dl{
+						margin:10px 0;
+						dt{
+							margin-bottom: 10px;
+							font-size: 15px;
+							font-weight: bold;
+						}
+						dd{
+							margin-left: 20px;
+							font-size: 12px;
+							a{
+								color:#72d3db;
+								text-decoration: none;
+							}
+						}
+					}
+				}
+			}
+		}
 		table.admin_table {
 			font-family:"Avant";
 		  margin: 0px;
@@ -153,7 +198,7 @@ html, body {
 		    }
 		    &:hover! td {}
 		    &:nth-child(odd) {
-		      background-color: #ff5656;
+		      background-color: #FFB8B8;
 		    }
 		    &:nth-child(even) {
 		      background-color: #ffffff;
@@ -181,11 +226,6 @@ html, body {
 		    }
 		    &:first-child {
 		      td {
-		        background: -o-linear-gradient(bottom, #ff5656 5%, #7f0000 100%);
-		        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ff5656), color-stop(1, #7f0000));
-		        background: -moz-linear-gradient(center top, #ff5656 5%, #7f0000 100%);
-		        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff5656", endColorstr="#7f0000");
-		        background: -o-linear-gradient(top, #ff5656, 7f 0);
 		        background-color: #ff5656;
 		        border: 0px solid #000000;
 		        text-align: center;
@@ -195,11 +235,6 @@ html, body {
 		        color: #ffffff;
 		      }
 		      &:hover td {
-		        background: -o-linear-gradient(bottom, #ff5656 5%, #7f0000 100%);
-		        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ff5656), color-stop(1, #7f0000));
-		        background: -moz-linear-gradient(center top, #ff5656 5%, #7f0000 100%);
-		        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff5656", endColorstr="#7f0000");
-		        background: -o-linear-gradient(top, #ff5656, 7f 0);
 		        background-color: #ff5656;
 		      }
 		      td {

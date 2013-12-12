@@ -206,15 +206,52 @@ upc_existe = (str_upc, arreglo) ->
 #StarAdmin
 
 startAdmin = ->
+	$(".box .cerrar").click ->
+		$(this).parent().removeClass("visible");
+		$("#box").removeClass("visible");
+		
 	$(".ver").click (ev) ->
 		ev.preventDefault
 		ev.stopPropagation
 		post_id = $(this).attr("data-post_id");
 		FB.api("/"+post_id+"?access_token="+token, (post) ->
-			post_link = post[0].link
+			post_link = ""
+			if post.actions && post.actions[0]
+				post_link = post.actions[0].link
 			post_message = post.message
-			posted_by = post.from.name
+			post_by = post.from.name
+			post_wishlist = post.link
+			post_uid = post.from.id
+
+			jsonWishlist =
+				link: post_link,
+				mensaje: post_message,
+				by: post_by,
+				wishlist: post_wishlist,
+				uid: post_uid
+
+			ver_wishlist(jsonWishlist);
 		)
+
+ver_wishlist = (post) ->
+	dd_uid = $(".ver_wishlist dd.uid");
+	a_user_profile = $(".ver_wishlist dd a.user_profile");
+	span_username = $(".ver_wishlist dd span.username");
+	dd_mensaje = $(".ver_wishlist dd.mensaje");
+	a_post = $(".ver_wishlist a.post");
+	a_wishlist = $(".ver_wishlist a.wishlist");
+
+	$(dd_uid).text(post.uid);
+	$(a_user_profile).attr("href", "http://www.facebook.com/"+post.uid);
+	$(span_username).text(post.by);
+	$(dd_mensaje).text(post.mensaje);
+	$(a_post).attr("href", post.link);
+	$(a_wishlist).attr("href", post.wishlist);
+
+	$(".box.ver_wishlist").addClass("visible");
+	$("#box").addClass("visible");
+
+
 
 #=
 #= MAIN SCRIPT
