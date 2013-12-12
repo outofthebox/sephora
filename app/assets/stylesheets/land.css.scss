@@ -1,5 +1,18 @@
 @media only screen and (max-width: 479px) {
   //header
+  #buscar_q{
+    text-align: center;
+    left: 10px;
+  }
+  .imagenes{
+    height: 110px;
+  }
+  .masimg{
+    height: 130px;
+  }
+  .video{
+    height: 160px;
+  }
   #mobile{
     text-align: center;
     margin-top: 20px;; 
@@ -47,6 +60,8 @@
       li{
         display: inline-block;
         width: 24%;
+        position: relative;
+        left: 5px;
       }
     }  
   }
@@ -330,6 +345,19 @@
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+  #buscar_q{
+    text-align: center;
+    left: 10px;
+  }
+  .imagenes{
+    height: 140px;
+  }
+  .masimg{
+    height: 170px;
+  }
+  .video{
+    height: 180px;
+  }
   .container{
     margin-bottom: 20px;
   }
@@ -599,14 +627,12 @@
     }
   }
   .imagenes{
-    height: 150px;
     position: relative;
     text-align: center;
     top: 25px;
     margin-left: 7px;
   }
   .masimg{
-    height: 170px;
     position: relative;
     text-align: center;
     top: 25px;
@@ -616,8 +642,8 @@
   width: 30%;
   display: inline-block;
   img{
-    width: 80%;
-    height: 80%;
+    width: 85%;
+    height: 85%;
   }
 }
 //beatuy

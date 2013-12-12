@@ -44,11 +44,10 @@ text-align: center;
   height: 40px;
   }
 #buscar_q{
-  width: 100%;
   -webkit-border-radius: 125px;
   -moz-border-radius: 125px;
   border-radius: 125px;
   position: relative;
-  width: 100%;
+  width: 95%;
   height: 40px;
 }

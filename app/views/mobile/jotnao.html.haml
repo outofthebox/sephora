@@ -1,8 +1,6 @@
 .jotnao
   .ima
-    = image_tag 'mobile/home/2.jpg'
-  .tex
-    %p lo más nuevo, lo más hot, de lo que todo mundo está hablando
+    = image_tag 'mobile/home/hotnow.png'
 .hotnow
 - provide :titulo, @seccion.nombre.split(' ').map {|w| w.capitalize }.join(' ')
 .vethotnow{ :class => "seccion-#{@seccion.try(:nombre).try(:parameterize)}"}
