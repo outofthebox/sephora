@@ -202,33 +202,12 @@
     }
   }
   //vides
-  .repvideos{
-    width: 90%;
-    left: 5%;
-    position: relative;
-    margin-top: 20px;
-    li{
-      border-bottom:1px solid #000;
-      a, a:visited {
-        color: #333;
-        text-decoration: none;
-        outline: 0;
+   #videos{
+    ul{
+      li{
+        border-bottom: 2px solid #000;
       }
     }
-    .vidimg{
-      display: table-cell; 
-      vertical-align: top;
-      width: 49%;
-      img{
-        width: 150px;
-        height: 150px;
-      }
-    }
-  .titulovideo{
-    display: table-cell; 
-    vertical-align: top;
-    width: 49%;
-  }
   }
   //especiales
   .seccionesp{
@@ -374,33 +353,15 @@
       text-transform: uppercase;
     }
   }
-  .repvideos{
-    width: 90%;
-    left: 5%;
-    position: relative;
-    margin-top: 20px;
-    li{
-      border-bottom:1px solid #000;
-        a, a:visited {
-          color: #333;
-          text-decoration: none;
-          outline: 0;
-        }
-    }
-  }  
-  .vidimg{
-    display: table-cell; 
-    vertical-align: top;
-    width: 49%;
-    img{
-      width: 220px;
-      height: 150px;
+  #videos{
+    ul{
+      li{
+        border-bottom: 1px solid #000;
+      }
     }
   }
-  .titulovideo{
-    display: table-cell; 
-    vertical-align: top;
-    width: 49%;
+  .clearfix{
+    border-bottom: 1px solid #000;
   }
   //Tienda
   .sucu{

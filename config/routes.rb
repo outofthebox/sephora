@@ -161,6 +161,7 @@ Sephora::Application.routes.draw do
   get 'mobile/video', :to => 'mobile#video', :as => 'm_video'
   get 'mobile/legal', :to => 'mobile#legales', :as => 'm_legal'
   get 'mobile/favorite/:id', :to => 'mobile#favorite', :as => 'favoritear'
+  get 'mobile/wallpapers', :to => 'mobile#wallpapers', :as => 'm_wallpaper'
   
 
   #wishlist

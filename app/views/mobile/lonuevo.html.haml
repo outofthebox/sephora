@@ -10,7 +10,8 @@
             = producto.marca.marca.upcase
           %h5
             =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), m_producto_path(producto.slug)
-          %h5
+          %h5.precio
+            precio
             = producto.precio
           - unless lonuevo_producto.descripcion.empty?
             %p
