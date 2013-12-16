@@ -1,5 +1,9 @@
 #admin
-	%h1 Administrador de Tips.
+	%h1
+		Administrador de Tips.
+		%span.pull_right
+			%a.download{:href=>sephora_tips_download_path+".csv"}
+				Descargar
 	%table#ver-minimalist
 		%tr 
 			%th Folio
@@ -25,5 +29,5 @@
 						%tr
 							%th Imagen
 							%td 
-								= image_tag tip.foto(:small)
+								= image_tag tip.foto(:medium)
 	

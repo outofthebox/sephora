@@ -1,3 +1,5 @@
+require "csv"
+
 class SephoraTipsController < ApplicationController
   def index
 		@tip = Tip.new
@@ -19,5 +21,12 @@ class SephoraTipsController < ApplicationController
 	end
 
 	def download
+		@tips = Tip.all
+
+		respond_to do |format|
+      format.html
+      format.csv { render text: Tip.to_csv}
+    end
+
 	end
 end

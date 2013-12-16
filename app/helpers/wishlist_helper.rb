@@ -1,3 +1,5 @@
+
+
 module WishlistHelper
 	def make_link(id)
 		md = id.match /(\d*)_(\d*)/

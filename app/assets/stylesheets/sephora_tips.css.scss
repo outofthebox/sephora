@@ -252,6 +252,11 @@ html, body {
 
 #admin{
 	margin:auto;
+  .pull_right {
+    float: right;
+    margin-right: 10px;
+
+  }
 	table{
     margin-bottom: 20px;
   }
@@ -266,7 +271,7 @@ html, body {
       display: none;
     }
   }
-  .btn_regresar{
+  .download{
     background: #C4252C;
     padding:5px;
     color:white;
@@ -274,9 +279,11 @@ html, body {
     text-align: center;
     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
     display: inline-block;
-    width: 20%;
-    margin:0 2.5% 0 0;
+    width: auto;
     cursor: pointer;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
   }
   h1{
     font-size: 18pt;
