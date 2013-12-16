@@ -1,6 +1,6 @@
 .marca
   - unless @producto.marca.logo_file_size.nil?
-    = image_tag @producto.marca.logo.url(:grande)
+    = image_tag @producto.marca.logo.url(:grande),{:style => "width:310px"}
     = image_tag @producto.foto.url(:normal), :id => "prod", :class => "imgproducto", :itemprop => 'image'
   .info
     %span.marcab
