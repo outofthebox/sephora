@@ -13,4 +13,11 @@ class SephoraTipsController < ApplicationController
     else
     end
 	end
+
+	def admin
+		@tips = Tip.all
+	end
+
+	def download
+	end
 end

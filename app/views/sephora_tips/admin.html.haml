@@ -1,0 +1,29 @@
+#admin
+	%h1 Administrador de Tips.
+	%table#ver-minimalist
+		%tr 
+			%th Folio
+			%th Beauty Tip 2014
+		- @tips.each do |tip|
+			%tr
+				%td.colored 
+					= tip.id
+				%td
+					%table#ver-minimalist
+						%tr
+							%th Nombre
+							%td 
+								= tip.nombre
+						%tr
+							%th Correo
+							%td 
+								= tip.correo
+						%tr
+							%th Tip
+							%td 
+								= tip.tip
+						%tr
+							%th Imagen
+							%td 
+								= image_tag tip.foto.url(:chico)
+	
