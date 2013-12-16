@@ -1,0 +1,21 @@
+.wallpaper
+  %h4 instrucciones
+  %p 1.- Elige tu Wallpaper Sephora favorito.
+  %p 2.- Mantén presionada la imagen.
+  %p 3. Selecciona “Guardar imagen” para guardarla en tu teléfono.
+  %p 4.-  Selecciónala como fondo de pantalla.
+.touchslider
+  .touchslider-viewport
+    %div
+      .touchslider-item
+        = image_tag "mobile/wallpaper/2.jpg",{:style => "width:310px"}
+      .touchslider-item
+        = image_tag "mobile/wallpaper/3.jpg",{:style => "width:310px"}
+      .touchslider-item
+        = image_tag "mobile/wallpaper/4.jpg", {:style => "width:310px"}
+  %div
+    %span.touchslider-prev ←
+    %span.touchslider-nav-item.touchslider-nav-item-current 1
+    %span.touchslider-nav-item 2
+    %span.touchslider-nav-item 3
+    %span.touchslider-next →

@@ -1,6 +1,7 @@
 # = require jquery
 # = require jquery_ujs
 # = require responsiveslides.min.js
+# = require jquery.touchslider.min.js
 
 $("#suscripcion_sus").click ->
   if $(this).is(":checked")
@@ -69,3 +70,6 @@ $ ->
       htmlString += "<div class=\"videothumb\"><a href=\"" + ytlink + "\" target=\"_blank\"><img src=\"" + thumbimg + "\" width=\"97%\" height=\"270\"></a></div>"
 
     $("#videos").html htmlString + "</ul>"
+
+jQuery ($) ->
+  $(".touchslider").touchSlider mouseTouch: true
