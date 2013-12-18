@@ -26,6 +26,7 @@ gem 'yaml_db'
 gem 'instagram'
 gem "rack-block", "~> 0.1.1"
 gem "oauth"
+gem 'acts-as-taggable-on'
 
 group :assets do
   gem "jquery-rails", "~>1.0.19"
