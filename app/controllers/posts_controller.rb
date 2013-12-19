@@ -1,4 +1,4 @@
-class BlogController < ApplicationController
+class PostsController < ApplicationController
   def index
     if params[:tag]
       @posts = Post.tagged_with(params[:tag]).order('created_at DESC')
@@ -16,7 +16,7 @@ class BlogController < ApplicationController
   end
   def create
     @posts = Post.new params[:post]
-    if @post.save
+    if @posts.save
       redirect_to blog_post(@post)
     else
       render :new
@@ -27,7 +27,7 @@ class BlogController < ApplicationController
   end
   def update
     @posts = Post.find params(:id)
-    if @post.update_attributes params[:post]
+    if @posts.update_attributes params[:post]
       redirect_to blog_post(@post)
     else
       render :edit
@@ -46,5 +46,6 @@ class BlogController < ApplicationController
     else
       render :show
     end
-  end
+  endclass PostsController < ApplicationController
+end
 end
