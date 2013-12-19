@@ -5,11 +5,12 @@ class PostsController < ApplicationController
     else
       @posts = Post.order('created_at DESC')
     end
+    Post.last(5)
   end
   def show
-    @post = Post.find params[:id]
+    @posts = Post.find params[:id]
     @comment = Comment.new
-    @comments = @post.comments.where(:publicado => true, :tipo => 1).order('created_at DESC')
+    @comments = Comment.where(:publicado => true).order('created_at DESC')
   end
   def new
     @posts = Post.new
@@ -17,7 +18,7 @@ class PostsController < ApplicationController
   def create
     @posts = Post.new params[:post]
     if @posts.save
-      redirect_to blog_post(@post)
+      redirect_to post_path
     else
       render :new
     end
@@ -28,7 +29,7 @@ class PostsController < ApplicationController
   def update
     @posts = Post.find params(:id)
     if @posts.update_attributes params[:post]
-      redirect_to blog_post(@post)
+      redirect_to post_path
     else
       render :edit
     end
@@ -38,14 +39,12 @@ class PostsController < ApplicationController
   end
   def comment
     @comment = Comment.new params[:comment]
-    @comment.parent = params[:id]
-    @comment.tipo = 1
+    @comment.post_id = params[:id]
     if @comment.save
       flash[:notice] = true
       redirect_to post_path(params[:id])
     else
       render :show
     end
-  endclass PostsController < ApplicationController
-end
+  end
 end

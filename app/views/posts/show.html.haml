@@ -1,1 +1,28 @@
-show.html.haml
+%h2 
+  = @posts.title
+  = @posts.subtitle
+= image_tag @posts.imagen(:grande)
+%p
+  = @posts.content.html_safe
+%p
+  = @posts.date
+%p
+  =raw @posts.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join()
+.comentarios
+  - if flash[:notice]
+    #modal
+      %h2 ¡Muchas gracias!
+      %p Tu comentario será revisado y aprobado en breve.
+      %a#cerrar{:href=>"#"} Cerrar
+  %h3 Deja un comentario
+  = render 'comments'
+  - if @comments.empty?
+    %p.note Sin comentarios por el momento.
+  - else
+    %ul.comentarios
+      - @comments.each do |c|
+        %li
+          .table.full
+            .tcell.t90
+              %h4
+                =c.comentario

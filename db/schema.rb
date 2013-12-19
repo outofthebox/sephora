@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(:version => 20131219162359) do
     t.integer  "padre"
     t.text     "comentario"
     t.boolean  "publicado",  :default => false
+    t.integer  "post_id"
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
   end

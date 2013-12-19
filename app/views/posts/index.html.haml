@@ -1,0 +1,13 @@
+-if params[:tag]
+  %p.tag
+    Filtrado por tag 
+    %strong= params[:tag]
+    = link_to "Regresar", post_path
+%ul
+  - @posts.each do|post|
+    %li
+      = link_to post.title, post_path(post)
+    %li
+      = link_to (image_tag post.imagen(:grande)), post_path(post)
+    %li
+      = link_to post.extracto.html_safe, post_path(post)
