@@ -15,6 +15,9 @@ ActiveRecord::Schema.define(:version => 20131218215121) do
 
   create_table "blog_categorias", :force => true do |t|
     t.string   "categoria"
+    t.integer  "parent_id"
+    t.integer  "lft"
+    t.integer  "rgt"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -159,14 +162,15 @@ ActiveRecord::Schema.define(:version => 20131218215121) do
 
   create_table "posts", :force => true do |t|
     t.string   "title"
-    t.string   "slubtitle"
+    t.string   "subtitle"
     t.string   "slug"
     t.text     "content"
     t.text     "extracto"
     t.integer  "visitas"
     t.integer  "categoria_id"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
+    t.boolean  "publicado",           :default => true
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
     t.string   "imagen_file_name"
     t.string   "imagen_content_type"
     t.integer  "imagen_file_size"
