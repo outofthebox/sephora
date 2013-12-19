@@ -9,8 +9,11 @@ class PostsController < ApplicationController
   end
   def show
     @posts = Post.find params[:id]
+    @categorias = BlogCategoria.where(:id => @posts.categoria_id)
     @comment = Comment.new
-    @comments = Comment.where(:publicado => true).order('created_at DESC')
+    @comments = Comment.where(:publicado => true, :post_id => params[:id]).order('created_at DESC')
+    @posts.update_attributes(:visitas => + 1)
+
   end
   def new
     @posts = Post.new
