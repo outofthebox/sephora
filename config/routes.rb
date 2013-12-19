@@ -209,7 +209,6 @@ Sephora::Application.routes.draw do
   get "sephora_tips/admin/", :to => 'sephora_tips#admin', :as => "sephora_tips_admin"
   get "sephora_tips/admin/download", :to => 'sephora_tips#download', :as => "sephora_tips_download"
   #blog
-  resources :blog
   resources :posts
   get 'blog/tags/:tag', :to => 'blog#tags', :as => 'tag'
 
