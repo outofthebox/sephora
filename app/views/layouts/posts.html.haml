@@ -192,7 +192,7 @@
             %a{:href => "/tu-lista"}
               Tu Lista
           %li
-            %a{:href => "/posts"}
+            %a{:href => "/blog"}
               Blog
           %li.tiendas
             %a{:href => "/tiendas"}
@@ -208,6 +208,13 @@
                 - @marcas_all.each do |marca|
                   %option{ :value => "/marca/#{marca.slug}" }
                     = marca.marca
+    .blog
+      =image_tag "blog/logo.jpg"
+    .categorias
+      - @bgcategorias.each do |post|
+        %ul.nobullet.nolist
+          %li
+            = post.categoria
 
     = yield
 

@@ -1,0 +1,5 @@
+= form_for @comment, :url => comment_post_path do |f|
+  %p
+    = f.labelbrtextarea "Comentar", :comentario, :class => "full"
+  %p
+    =f.submit! "Comentar"

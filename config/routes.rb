@@ -210,7 +210,8 @@ Sephora::Application.routes.draw do
   get "sephora_tips/admin/download", :to => 'sephora_tips#download', :as => "sephora_tips_download"
   #blog
   resources :posts
-  get 'blog/tags/:tag', :to => 'blog#tags', :as => 'tag'
+  get 'posts/tags/:tag', :to => 'blog#index', :as => 'tag'
+  post '/posts/:id/comment', :to => 'posts#comment', :as => 'comment_post'
 
   # última línea, hace match con el resto de las rutas y muestra 404
   match  '*a', :to => 'paginas#error_404'

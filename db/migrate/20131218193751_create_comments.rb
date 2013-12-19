@@ -4,6 +4,7 @@ class CreateComments < ActiveRecord::Migration
       t.integer :padre
       t.text :comentario
       t.boolean :publicado, :default => false
+      t.integer :post_id
 
       t.timestamps
     end
