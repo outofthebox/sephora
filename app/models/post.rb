@@ -1,8 +1,7 @@
 class Post < ActiveRecord::Base
-  attr_accessible :content, :slug, :title, :extracto, :categoria_id, :tag_list, :imagen, :publicado
+  attr_accessible :content, :slug, :title,:subtitle, :extracto, :categoria_id, :tag_list, :imagen, :publicado
   acts_as_taggable
   has_one :categoria
-  belongs_to :tag
   has_many :usuario
 
   has_attached_file :imagen, {
