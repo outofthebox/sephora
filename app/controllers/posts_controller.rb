@@ -12,8 +12,8 @@ class PostsController < ApplicationController
     @categorias = BlogCategoria.where(:id => @posts.categoria_id)
     @comment = Comment.new
     @comments = Comment.where(:publicado => true, :post_id => params[:id]).order('created_at DESC')
-    @posts.update_attributes(:visitas => + 1)
-
+    @posts.increment
+    @visitas = Post.order('visitas DESC').last(5)
   end
   def new
     @posts = Post.new
