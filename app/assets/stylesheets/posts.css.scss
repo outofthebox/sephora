@@ -153,20 +153,28 @@
 }
 
 #sec_2{
-	width:200px;
+	width:210px;
 	margin-left:18px;
 	display: inline-block;
 	vertical-align:top;
-	h2{
-		background:black;
-		width: 180px;
-		font-size: 14px;
-		color:white;
-		line-height: 1.2em;
-		padding:15px;
-		font-family: "Avant";
-		letter-spacing: 1px;
-	}
+  .widget{
+  	h2{
+  		background:black;
+  		width: 180px;
+  		font-size: 14px;
+  		color:white;
+  		line-height: 1.2em;
+  		padding:15px;
+  		font-family: "Avant";
+  		letter-spacing: 1px;
+  	}
+    .insta_pic{
+      width: 103px;
+      height: 103px;
+      margin-bottom: 5px;
+      display: inline-block;
+    }
+  }
 }
 
 $withslider: 760px;
