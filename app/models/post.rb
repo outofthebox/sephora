@@ -15,6 +15,11 @@ class Post < ActiveRecord::Base
   def to_param
     "#{id}-#{slug}"
   end
+  def increment(by = 1)
+    self.visitas ||= 0
+    self.visitas += by
+    self.save
+  end
 
   def date
     I18n.localize(self.created_at, :format => '%d de %B, %Y' )
