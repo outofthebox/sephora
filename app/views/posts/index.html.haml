@@ -3,11 +3,34 @@
     Filtrado por tag 
     %strong= params[:tag]
     = link_to "Regresar", post_path
-%ul
+
+#sec_1
   - @posts.each do|post|
-    %li
-      = link_to post.title, post_path(post)
-    %li
+    %div.post{:id=>"post-"+post.id.to_s}
       = link_to (image_tag post.imagen(:grande)), post_path(post)
-    %li
-      = link_to post.extracto.html_safe, post_path(post)
+      %h1 
+        %span
+          Hot Now
+        = " - " + post.title
+      = post.extracto.html_safe
+      %ul.tools
+        %li.fecha
+          = "Fecha: "+post.created_at.to_date.to_s
+        %li.coments
+          Comentarios: 12
+        %li.cat
+          Categoria: HotNow
+        %li.loves
+          Loves: 1
+      .tags
+        %p
+          Tags:
+          %span.etiquetas
+            uno, dos, tres, cuatro
+
+#sec_2
+  %h2 Ultimos Tweets
+  %h2 Facebook
+  %h2 Instagram
+  %h2 Las 5 más vistas
+
