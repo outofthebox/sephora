@@ -11,6 +11,10 @@
 %p
   -@categorias.each do|f|
     = f.categoria
+%p
+  Ranking
+  = @res
+  = render 'ranking'
 .comentarios
   - if flash[:notice]
     #modal

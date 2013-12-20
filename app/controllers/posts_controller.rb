@@ -2,23 +2,26 @@ class PostsController < ApplicationController
   def index
     inst_recent = Instagram.user_recent_media(24459425);
     @recientes = inst_recent.first(4);
-
     if params[:tag]
       @posts = Post.tagged_with(params[:tag]).order('created_at DESC')
     else
       @posts = Post.order('created_at DESC')
     end
-    
     @visitas = Post.order('visitas DESC').last(5)
-
   end
   def show
     @posts = Post.find params[:id]
     @categorias = BlogCategoria.where(:id => @posts.categoria_id)
     @comment = Comment.new
+    @ranking = Ranking.new
     @comments = Comment.where(:publicado => true, :post_id => params[:id]).order('created_at DESC')
     @posts.increment
     @visitas = Post.order('visitas DESC').last(5)
+    @raiting = Ranking.where(:post_id => params[:id]).sum('raiting') 
+    @total = Ranking.where(:post_id => params[:id]).count
+    if  @total > 0
+      @res = @raiting/@total
+    end
   end
   def new
     @posts = Post.new
@@ -35,7 +38,7 @@ class PostsController < ApplicationController
     @posts = Post.find params[:id]
   end
   def update
-    @posts = Post.find params(:id)
+    @posts = Post.find params[:id]
     if @posts.update_attributes params[:post]
       redirect_to post_path
     else
@@ -50,6 +53,16 @@ class PostsController < ApplicationController
     @comment.post_id = params[:id]
     if @comment.save
       flash[:notice] = true
+      redirect_to post_path(params[:id])
+    else
+      render :show
+    end
+  end
+  def ranking
+    @ranking = Ranking.new
+    @ranking.raiting = params[:commit].to_i.inspect
+    @ranking.post_id = params[:id]
+    if @ranking.save
       redirect_to post_path(params[:id])
     else
       render :show
