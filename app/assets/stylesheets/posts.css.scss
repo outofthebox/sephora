@@ -34,10 +34,14 @@
 	border-right: 1px solid black;
 	vertical-align:top;
 	.post{
+    &:last-child{
+      border-bottom:0px;
+    }
 		width: 100%;
 		margin-bottom: 30px;
 		padding-bottom:30px;
 		border-bottom:1px solid black;
+    position: relative;
 		img{
 			margin-bottom: 20px;
 		}
@@ -130,9 +134,22 @@
       }
     }
 	}
-	.post:last-child{
-		border-bottom:0px;
-	}
+  .leer_mas {
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    background: black;
+    color: white !important;
+    padding: 13px;
+    text-transform: lowercase;
+    font-size: 14px;
+    &:first-letter{
+      text-transform: capitalize !important;
+    }
+    &:hover{
+      text-decoration: underline;
+    }
+  }
 }
 
 #sec_2{
