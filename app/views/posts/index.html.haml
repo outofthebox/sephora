@@ -6,27 +6,41 @@
 
 #sec_1
   - @posts.each do|post|
+   
+    - stats = stats(post.id);
     %div.post{:id=>"post-"+post.id.to_s}
       = link_to (image_tag post.imagen(:grande)), post_path(post)
       %h1 
         %span
           Hot Now
         = " - " + post.title
-      = post.extracto.html_safe
+      %p
+        = post.extracto.html_safe
       %ul.tools
         %li.fecha
+          %i
           = "Fecha: "+post.created_at.to_date.to_s
         %li.coments
-          Comentarios: 12
+          %i
+          = "Comentarios: "+ stats.comments.count.to_s
         %li.cat
-          Categoria: HotNow
+          %i
+          - if stats.categorias.count > 0
+            Categoria: HotNow
+          - else
+            Categoria: Sephora
         %li.loves
+          %i
           Loves: 1
-      .tags
-        %p
+      %ul.tags
+        %li.tag
+          %i
           Tags:
-          %span.etiquetas
-            uno, dos, tres, cuatro
+        %li Uno
+        %li Dos
+        %li Tres
+        %li Cuatro
+        %li Cinco
 
 #sec_2
   %h2 Ultimos Tweets

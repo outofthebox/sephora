@@ -27,7 +27,7 @@
 }
 
 #sec_1{
-	font-family: sans-serif, Tahoma;
+	font-family: "Avant", Tahoma;
 	width:700px;
 	padding-right:31px;
 	display: inline-block;
@@ -55,16 +55,80 @@
 		}
 		p{
 			line-height: 1.2em;
-			font-size: 14px;
+			font-size: 15px;
+      letter-spacing: 1px;
 		}
 		ul.tools{
+      font-family: sans-serif;
 			padding:0;
-			margin:0;
 			font-size: 12px;
+      margin:10px 0;
 			li{
-				display: inline-block;
+        display: inline-block;
+        position:relative;
+        padding-left:20px;
+        margin:0 10px;
+        &:first-child{
+          margin-left:0;
+        }
+        i{
+          display: inline-block;
+          position:absolute;
+          width: 16px;
+          height:16px;
+          background-size:contain;
+          background-repeat:no-repeat;
+        }
+        &.fecha i {
+          background-image:url("blog/reloj.jpg");
+          top: -1px;
+          left:0px;
+        }
+        &.coments i {
+          background-image:url("blog/msg.jpg");
+          top: -1px;
+          left:0px;
+        }
+        &.cat i {
+          background-image:url("blog/cog.jpg");
+          top: -1px;
+          left:0px;
+        }
+        &.loves i {
+          background-image:url("blog/corazon.jpg");
+          top: -1px;
+          left:0px;
+        }
 			}
 		}
+    ul.tags{
+      padding:0;
+      margin:10px 0;
+      font-size: 12px;
+      font-family: sans-serif;
+      li{
+        display: inline-block;
+        position:relative;
+        margin:0 2.5px;
+        &:first-child{
+          padding-left:20px;
+          margin-left:0;
+        }
+        i{
+          display: inline-block;
+          position:absolute;
+          width: 16px;
+          height:16px;
+          background-size:contain;
+          background-repeat:no-repeat;
+        }
+        &.tag i{
+          background-image:url("blog/tags.jpg");
+          top: -1px;
+          left:0px;
+        }
+      }
+    }
 	}
 	.post:last-child{
 		border-bottom:0px;
