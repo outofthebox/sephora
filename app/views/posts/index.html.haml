@@ -45,8 +45,15 @@
 #sec_2
   .widget
     %h2 Ultimos Tweets
+    %a.twitter-timeline{"data-widget-id" => "414112878661074944", :height =>"300px", :href => "https://twitter.com/SephoraMX", :"data-chrome" => "noheader nofooter transparent", :"data-border-color" => "#FFFFFF"}
+    :javascript
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+
   .widget
     %h2 Facebook
+    .fb-like-box{"data-colorscheme" => "light", "data-header" => "false", "data-href" => "http://www.facebook.com/sephoramx", "data-show-border" => "false", "data-show-faces" => "false", "data-stream" => "false", "data-width" => "210px", "data-height" => "80px"}
+
   .widget
     %h2 Instagram
     - @recientes.each do |data|

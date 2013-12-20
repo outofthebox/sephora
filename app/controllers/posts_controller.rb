@@ -8,7 +8,9 @@ class PostsController < ApplicationController
     else
       @posts = Post.order('created_at DESC')
     end
-    Post.last(5)
+    
+    @visitas = Post.order('visitas DESC').last(5)
+
   end
   def show
     @posts = Post.find params[:id]
