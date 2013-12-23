@@ -5,11 +5,14 @@ class PostsController < ApplicationController
     if params[:tag]
       @posts = Post.tagged_with(params[:tag]).order('created_at DESC')
     else
-      @posts = Post.order('created_at DESC')
+      @posts = Post.order('created_at DESC').page(params[:page]).per(5)
     end
     @visitas = Post.order('visitas DESC').last(5)
   end
+
   def show
+    inst_recent = Instagram.user_recent_media(24459425);
+    @recientes = inst_recent.first(4);
     @posts = Post.find params[:id]
     @categorias = BlogCategoria.where(:id => @posts.categoria_id)
     @comment = Comment.new
@@ -19,10 +22,15 @@ class PostsController < ApplicationController
     @visitas = Post.order('visitas DESC').last(5)
     @raiting = Ranking.where(:post_id => params[:id]).sum('raiting') 
     @total = Ranking.where(:post_id => params[:id]).count
+    
     if  @total > 0
       @res = @raiting/@total
     end
+
+    @visitas = Post.order('visitas DESC').last(5)
+
   end
+  å
   def new
     @posts = Post.new
   end

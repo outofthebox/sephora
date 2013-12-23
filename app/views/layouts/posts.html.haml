@@ -216,9 +216,31 @@
         %ul.nobullet.nolist
           %li
             = post.categoria
+    #sec_1
+      = yield
+    #sec_2
+      .widget
+        %h2 Ultimos Tweets
+        %a.twitter-timeline{"data-widget-id" => "414112878661074944", :height =>"300px", :href => "https://twitter.com/SephoraMX", :"data-chrome" => "noheader nofooter transparent", :"data-border-color" => "#FFFFFF"}
+        :javascript
+          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 
-    = yield
 
+      .widget
+        %h2 Facebook
+        .fb-like-box{"data-colorscheme" => "light", "data-header" => "false", "data-href" => "http://www.facebook.com/sephoramx", "data-show-border" => "false", "data-show-faces" => "false", "data-stream" => "false", "data-width" => "210px", "data-height" => "80px"}
+
+      .widget
+        %h2 Instagram
+        - @recientes.each do |data|
+          = image_tag(data.images.thumbnail.url, :width => 100, :height => 100, :class => "insta_pic")
+      .widget
+        %h2 Las 5 más vistas
+        - @visitas.each do |v|
+          %p
+            = v.title
+          %p
+            = v.extracto.html_safe
     #footer
       #sus-cata
         .table.full
