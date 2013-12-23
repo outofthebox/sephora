@@ -1,6 +1,7 @@
 class Post < ActiveRecord::Base
   attr_accessible :content, :slug, :title,:subtitle, :extracto, :categoria_id, :tag_list, :imagen, :publicado, :visitas
   acts_as_taggable
+  paginates_per 10
   has_one :categoria
   has_many :usuario
 
