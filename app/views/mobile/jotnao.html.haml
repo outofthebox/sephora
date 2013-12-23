@@ -20,4 +20,4 @@
                 %h5
                   = producto.nombre_real.empty? ? producto.nombre : producto.nombre_real
               .picture
-                =link_to image_tag(producto.foto.url(:grande),{:style => "width:310px"}), m_producto_path(producto.slug)
+                =link_to image_tag(producto.foto.url(:normal)), m_producto_path(producto.slug)
