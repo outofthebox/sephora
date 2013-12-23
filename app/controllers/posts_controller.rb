@@ -30,7 +30,6 @@ class PostsController < ApplicationController
     @visitas = Post.order('visitas DESC').last(5)
 
   end
-  å
   def new
     @posts = Post.new
   end
