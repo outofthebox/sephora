@@ -8,15 +8,15 @@ module PostsHelper
     le_comments = Comment.where(:publicado => true, :post_id => id).order('created_at DESC')
     le_love = PostFav.where(:id => id)
 
-		raiting = Ranking.where(:post_id => params[:id]).sum('raiting') 
-		total = Ranking.where(:post_id => params[:id]).count
+		raiting = Ranking.where(:post_id => id).sum('raiting') 
+		total = Ranking.where(:post_id => id).count
 
-		res = 0;
+		le_rank = 0;
 		if  total > 0
-			res = raiting/total
+			le_rank = raiting/total
 		end
 
-    json = {:post => le_post, :categorias => le_categorias, :comments => le_comments, :ranking => res, :tags => le_tags, :love => le_love}
+    json = {:post => le_post, :categorias => le_categorias, :comments => le_comments, :ranking => le_rank, :tags => le_tags, :love => le_love}
     
     stats = OpenStruct.new(json)
 

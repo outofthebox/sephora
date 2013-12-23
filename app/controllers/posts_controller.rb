@@ -11,21 +11,14 @@ class PostsController < ApplicationController
   end
 
   def show
-    inst_recent = Instagram.user_recent_media(24459425);
-    @recientes = inst_recent.first(4);
-    @posts = Post.find params[:id]
-    @categorias = BlogCategoria.where(:id => @posts.categoria_id)
     @comment = Comment.new
     @ranking = Ranking.new
-    @comments = Comment.where(:publicado => true, :post_id => params[:id]).order('created_at DESC')
-    @posts.increment
-    @visitas = Post.order('visitas DESC').last(5)
-    @raiting = Ranking.where(:post_id => params[:id]).sum('raiting') 
-    @total = Ranking.where(:post_id => params[:id]).count
+    inst_recent = Instagram.user_recent_media(24459425);
+    @recientes = inst_recent.first(4);
+
+    @posts = Post.find params[:id]
     
-    if  @total > 0
-      @res = @raiting/@total
-    end
+    @posts.increment
 
     @visitas = Post.order('visitas DESC').last(5)
 
@@ -42,6 +35,9 @@ class PostsController < ApplicationController
     end
   end
   def edit
+    inst_recent = Instagram.user_recent_media(24459425);
+    @recientes = inst_recent.first(4);
+    @visitas = Post.order('visitas DESC').last(5)
     @posts = Post.find params[:id]
   end
   def update

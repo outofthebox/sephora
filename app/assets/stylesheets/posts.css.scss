@@ -58,10 +58,11 @@
 			}
 		}
 		p{
-			line-height: 1.2em;
-			font-size: 15px;
-      letter-spacing: 1px;
+			line-height: 1.5em;
+      font-size: 14px;
+      letter-spacing: 0px;
       margin-bottom: 30px;
+      font-family: sans-serif;
 		}
 		ul.tools{
       font-family: sans-serif;
@@ -151,6 +152,92 @@
       text-decoration: underline;
     }
   }
+  #view[vista="show"]{
+    ul.tags{
+      padding-bottom: 20px;
+      margin-bottom: 50px;
+      border-bottom: 1px solid black;
+    }
+    .compartir{
+      background-image: url("blog/comparte.jpg");
+      width: 100%;
+      background-size: contain;
+      height: 68px;
+      background-repeat: no-repeat;
+      border: none;
+      margin: 20px 0;
+    }
+    .rank_love {
+      height: 29px;
+      position: relative;
+      .div_gauge {
+        background:rgb(255, 239, 60);
+        max-width: 150px;
+        height: 28px;
+        position: absolute;
+        z-index: 0;
+        transition: width 450ms;
+        -moz-transition: width 450ms;
+        -webkit-transition: width 450ms;
+        -ms-transition: width 450ms;
+        &.stars-1{
+          min-width:31px;
+          -moz-transition: width 450ms;
+          -webkit-transition: width 450ms;
+          -ms-transition: width 450ms;
+        }
+        &.stars-2{
+          min-width:62px;
+          -moz-transition: width 450ms;
+          -webkit-transition: width 450ms;
+          -ms-transition: width 450ms;
+        }
+        &.stars-3{
+          min-width:93px;
+          -moz-transition: width 450ms;
+          -webkit-transition: width 450ms;
+          -ms-transition: width 450ms;
+        }
+        &.stars-4{
+          min-width:124px;
+          -moz-transition: width 450ms;
+          -webkit-transition: width 450ms;
+          -ms-transition: width 450ms;
+        }
+        &.stars-5{
+          min-width:155px;
+          -moz-transition: width 450ms;
+          -webkit-transition: width 450ms;
+          -ms-transition: width 450ms;
+        }
+      }
+      .btn-estrella{
+        border: none;
+        width: 31px;
+        height: 28px;
+        background-image: url("blog/ranking.png");
+        background-color:transparent;
+        background-size: contain;
+        text-indent: -100px;
+        overflow: hidden;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+        display: block;
+        float: left;
+        z-index: 2;
+        position: relative;
+        &.fill{
+          background-color: #FFF03D;
+        }
+      }
+      #new_ranking {
+        width: 155px;
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
 }
 
 #sec_2{
@@ -169,6 +256,28 @@
   		font-family: "Avant";
   		letter-spacing: 1px;
   	}
+    h3{
+      position:relative;
+      font-size: 12px;
+      font-weight: bold;
+      padding-left: 15px;
+      &:before{
+        position:absolute;
+        top:0;
+        left:0;
+        background:black;
+        width: 10px;
+        height: 10px;
+        border-radius:20px;
+        content: "";
+      }
+    }
+    p{
+      font-size: 10px;
+      padding-left:15px;
+      line-height:1.2em;
+      margin-bottom: 10px;
+    }
     .insta_pic{
       width: 103px;
       height: 103px;

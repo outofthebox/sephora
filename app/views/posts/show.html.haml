@@ -1,35 +1,54 @@
-%h2 
-  = @posts.title
-  = @posts.subtitle
-= image_tag @posts.imagen(:grande)
-%p
-  = @posts.content.html_safe
-%p
-  = @posts.date
-%p
-  =raw @posts.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join()
-%p
-  -@categorias.each do|f|
-    = f.categoria
-%p
-  Ranking
-  = @res
-  = render 'ranking'
-.comentarios
-  - if flash[:notice]
-    #modal
-      %h2 ¡Muchas gracias!
-      %p Tu comentario será revisado y aprobado en breve.
-      %a#cerrar{:href=>"#"} Cerrar
-  %h3 Deja un comentario
-  = render 'comments'
-  - if @comments.empty?
-    %p.note Sin comentarios por el momento.
-  - else
-    %ul.comentarios
-      - @comments.each do |c|
+#view{:vista=>"show"}
+  - stats = stats(@posts.id);
+  %div.post{:id=>"post-"+@posts.id.to_s}
+    = link_to (image_tag @posts.imagen(:grande)), post_path(@post)
+    %h1 
+      %span
+        Hot Now
+      = " - " + @posts.title
+    %p
+      = @posts.content.html_safe
+    .rank_love
+      = render 'ranking'
+    .compartir
+    %ul.tools
+      %li.fecha
+        %i
+        = "Fecha: "+@posts.created_at.to_date.to_s
+      %li.coments
+        %i
+        = "Comentarios: "+ stats.comments.count.to_s
+      %li.cat
+        %i
+        - if stats.categorias.count > 0
+          Categoria: HotNow
+        - else
+          Categoria: Sephora
+      %li.loves
+        %i
+        = stats.love.count
+    %ul.tags
+      %li.tag
+        %i
+        Tags:
+      - stats.tags.each do |tag|
         %li
-          .table.full
-            .tcell.t90
-              %h4
-                =c.comentario
+          =tag.name
+    .comentarios
+      - if flash[:notice]
+        #modal
+          %h2 ¡Muchas gracias!
+          %p Tu comentario será revisado y aprobado en breve.
+          %a#cerrar{:href=>"#"} Cerrar
+      %h3 Deja un comentario
+      = render 'comments'
+      - if stats.comments.empty?
+        %p.note Sin comentarios por el momento.
+      - else
+        %ul.comentarios
+          - stats.comments.each do |c|
+            %li
+              .table.full
+                .tcell.t90
+                  %h4
+                    =c.comentario
