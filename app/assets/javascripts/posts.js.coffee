@@ -4,6 +4,8 @@
 
 # = require jquery
 # = require jquery.urlshortener
+# = require redactor
+
 
 
 
@@ -22,6 +24,11 @@ call_action = (valor) ->
 	switch valor
 		when "show"
 			call_show()
+		when "new"
+			call_new()
+
+call_new = ->
+	$("#post_content, #post_extracto").redactor();
 
 
 # Funciones por Vista
