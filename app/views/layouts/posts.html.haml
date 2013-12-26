@@ -238,9 +238,9 @@
         %h2 Las 5 más vistas
         - @visitas.each do |v|
           %h3
-            = v.title
+            = link_to "#{v.title}",post_path(v)
           %p
-            = v.extracto[0,80]+"...".html_safe
+            = v.extracto[0,80].html_safe+"..."
     #footer
       #sus-cata
         .table.full
