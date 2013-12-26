@@ -20,7 +20,7 @@ $('.eventomodal a').on 'click', (e) ->
   $("#modal").fadeIn('fast')
 
 
-$("#producto_descripcion, #producto_ingredientes, #producto_usos, #producto_seccion_descripcion").redactor();
+$("#producto_descripcion, #producto_ingredientes, #producto_usos, #producto_seccion_descripcion, #post_content, #post_extracto").redactor();
 active = false
 $(window).scroll ->
   if $("body").scrollTop() > 130

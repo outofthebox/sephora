@@ -1,0 +1,27 @@
+=form_for @posts do |f|
+  %p
+    = f.select :categoria_id, ([["Raíz", nil]] + nested_set_options(BlogCategoria, @categoria) {|i, level| "#{'&nbsp;' * (level.to_i+1)}".html_safe + " #{i.categoria}" })
+  %p
+    =form_error @posts, :title
+    =f.labelbrtext "Titulo", :title, :class => "big full"
+  %p
+    =form_error @posts, :subtitle
+    =f.labelbrtext "Subtitulo", :subtitle, :class => "big full"
+  %p
+    =f.check_box :publicado
+    =f.label :publicado, "Publicado"
+  %p
+    =form_error @posts, :content
+    =f.labelbrtextarea "Descripción", :content, :class => "full"
+  %p
+    =form_error @posts, :extracto
+    =f.labelbrtextarea "Extracto", :extracto, :class => "full"
+  %p
+    =form_error @posts, :imagen
+    =f.label :imagen, "Banner:"
+    =f.file_field :imagen
+  %p 
+    Tags
+    =f.text_field :tag_list, :placeholder => "Tags (separado por comas)"
+  %p.rgt
+    =f.submit! "guardar"

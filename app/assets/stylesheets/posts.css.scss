@@ -1,0 +1,303 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// = require reset
+// = require eses
+// = require_self
+// = require widgets
+// = require secciones
+// = require jquery.ui.all
+// = require redactor
+// = require tango
+// = require application
+
+@font-face {
+    font-family: 'Avant';
+    src: url('/fuentes/ag-extralight-webfont-webfont.eot');
+    src: url('/fuentes/ag-extralight-webfont-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fuentes/ag-extralight-webfont-webfont.woff') format('woff'),
+         url('/fuentes/ag-extralight-webfont-webfont.ttf') format('truetype'),
+         url('/fuentes/ag-extralight-webfont-webfont.svg#itc_avant_garde_gothic_extrRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.blog{
+	margin-bottom:20px;
+}
+
+#sec_1{
+	font-family: "Avant", Tahoma;
+	width:700px;
+	padding-right:27px;
+	display: inline-block;
+	border-right: 1px solid black;
+	vertical-align:top;
+	.post{
+    &:last-child{
+      border-bottom:0px;
+    }
+		width: 100%;
+		margin-bottom: 30px;
+		padding-bottom:30px;
+		border-bottom:1px solid black;
+    position: relative;
+		img{
+			margin-bottom: 20px;
+		}
+		h1{
+			font-size: 30px;
+			line-height: 1.2em;
+			margin-bottom: 10px;
+			font-weight: normal;
+			span{
+				font-weight: bolder;
+				font-style: italic;
+				font-family: Times;
+				font-size: 35px;
+			}
+		}
+		p{
+			line-height: 1.5em;
+      font-size: 14px;
+      letter-spacing: 0px;
+      margin-bottom: 30px;
+      font-family: sans-serif;
+		}
+		ul.tools{
+      font-family: sans-serif;
+			padding:0;
+			font-size: 12px;
+      margin:10px 0;
+			li{
+        display: inline-block;
+        position:relative;
+        padding-left:20px;
+        margin:0 10px;
+        &:first-child{
+          margin-left:0;
+        }
+        i{
+          display: inline-block;
+          position:absolute;
+          width: 16px;
+          height:16px;
+          background-size:contain;
+          background-repeat:no-repeat;
+        }
+        &.fecha i {
+          background-image:url("blog/reloj.jpg");
+          top: -1px;
+          left:0px;
+        }
+        &.coments i {
+          background-image:url("blog/msg.jpg");
+          top: -1px;
+          left:0px;
+        }
+        &.cat i {
+          background-image:url("blog/cog.jpg");
+          top: -1px;
+          left:0px;
+        }
+        &.loves i {
+          background-image:url("blog/corazon.jpg");
+          top: -1px;
+          left:0px;
+        }
+			}
+		}
+    ul.tags{
+      padding:0;
+      margin:10px 0;
+      font-size: 12px;
+      font-family: sans-serif;
+      li{
+        display: inline-block;
+        position:relative;
+        margin:0 2.5px;
+        &:first-child{
+          padding-left:20px;
+          margin-left:0;
+        }
+        i{
+          display: inline-block;
+          position:absolute;
+          width: 16px;
+          height:16px;
+          background-size:contain;
+          background-repeat:no-repeat;
+        }
+        &.tag i{
+          background-image:url("blog/tags.jpg");
+          top: -1px;
+          left:0px;
+        }
+      }
+    }
+	}
+  .leer_mas {
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    background: black;
+    color: white !important;
+    padding: 13px;
+    text-transform: lowercase;
+    font-size: 14px;
+    &:first-letter{
+      text-transform: capitalize !important;
+    }
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  #view[vista="show"]{
+    ul.tags{
+      padding-bottom: 20px;
+      margin-bottom: 50px;
+      border-bottom: 1px solid black;
+    }
+    .compartir{
+      background-image: url("blog/comparte.jpg");
+      width: 100%;
+      background-size: contain;
+      height: 68px;
+      background-repeat: no-repeat;
+      border: none;
+      margin: 20px 0;
+      .share_button{
+        width: 69px;
+        height: 70px;
+        display: inline-block;
+        float: right;
+        margin: 1px;
+        position: relative;
+        top: -11px;
+        cursor: pointer;
+        &.ml_share{
+          background:black;
+          cursor: auto;
+        }
+      }
+    }
+    .rank_love {
+      height: 29px;
+      position: relative;
+      .div_gauge {
+        background:rgb(255, 239, 60);
+        max-width: 150px;
+        height: 28px;
+        position: absolute;
+        z-index: 0;
+        transition: width 450ms;
+        -moz-transition: width 450ms;
+        -webkit-transition: width 450ms;
+        -ms-transition: width 450ms;
+        &.stars-1{
+          min-width:31px;
+          -moz-transition: width 450ms;
+          -webkit-transition: width 450ms;
+          -ms-transition: width 450ms;
+        }
+        &.stars-2{
+          min-width:62px;
+          -moz-transition: width 450ms;
+          -webkit-transition: width 450ms;
+          -ms-transition: width 450ms;
+        }
+        &.stars-3{
+          min-width:93px;
+          -moz-transition: width 450ms;
+          -webkit-transition: width 450ms;
+          -ms-transition: width 450ms;
+        }
+        &.stars-4{
+          min-width:124px;
+          -moz-transition: width 450ms;
+          -webkit-transition: width 450ms;
+          -ms-transition: width 450ms;
+        }
+        &.stars-5{
+          min-width:155px;
+          -moz-transition: width 450ms;
+          -webkit-transition: width 450ms;
+          -ms-transition: width 450ms;
+        }
+      }
+      .btn-estrella{
+        border: none;
+        width: 31px;
+        height: 28px;
+        background-image: url("blog/ranking.png");
+        background-color:transparent;
+        background-size: contain;
+        text-indent: -100px;
+        overflow: hidden;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+        display: block;
+        float: left;
+        z-index: 2;
+        position: relative;
+        &.fill{
+          background-color: #FFF03D;
+        }
+      }
+      #new_ranking {
+        width: 155px;
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+}
+
+#sec_2{
+	width:210px;
+	margin-left:18px;
+	display: inline-block;
+	vertical-align:top;
+  .widget{
+  	h2{
+  		background:black;
+  		width: 180px;
+  		font-size: 14px;
+  		color:white;
+  		line-height: 1.2em;
+  		padding:15px;
+  		font-family: "Avant";
+  		letter-spacing: 1px;
+  	}
+    h3{
+      position:relative;
+      font-size: 12px;
+      font-weight: bold;
+      padding-left: 15px;
+      &:before{
+        position:absolute;
+        top:0;
+        left:0;
+        background:black;
+        width: 10px;
+        height: 10px;
+        border-radius:20px;
+        content: "";
+      }
+    }
+    p{
+      font-size: 10px;
+      padding-left:15px;
+      line-height:1.2em;
+      margin-bottom: 10px;
+    }
+    .insta_pic{
+      width: 103px;
+      height: 103px;
+      margin-bottom: 5px;
+      display: inline-block;
+    }
+  }
+}

@@ -44,6 +44,7 @@ class ApplicationController < ActionController::Base
 
   before_filter do
     @marcas_all = Marca.order(:marca)
+    @bgcategorias = BlogCategoria.all
   end
 
   def layout_by_resource
