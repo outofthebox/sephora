@@ -33,7 +33,7 @@ class PostsController < ApplicationController
   def create
     @posts = Post.new params[:post]
     if @posts.save
-      redirect_to post_path
+      redirect_to posts_path
     else
       render :new
     end
@@ -47,7 +47,7 @@ class PostsController < ApplicationController
   def update
     @posts = Post.find params[:id]
     if @posts.update_attributes params[:post]
-      redirect_to post_path
+      redirect_to posts_path
     else
       render :edit
     end
@@ -60,7 +60,7 @@ class PostsController < ApplicationController
     @comment.post_id = params[:id]
     if @comment.save
       flash[:notice] = true
-      redirect_to post_path(params[:id])
+      redirect_to posts_path(params[:id])
     else
       render :show
     end
@@ -70,7 +70,7 @@ class PostsController < ApplicationController
     @ranking.raiting = params[:commit].to_i.inspect
     @ranking.post_id = params[:id]
     if @ranking.save
-      redirect_to post_path(params[:id])
+      redirect_to posts_path(params[:id])
     else
       render :show
     end
