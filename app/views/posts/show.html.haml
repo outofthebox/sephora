@@ -1,16 +1,23 @@
 #view{:vista=>"show"}
   - stats = stats(@posts.id);
   %div.post{:id=>"post-"+@posts.id.to_s}
-    = link_to (image_tag @posts.imagen(:grande)), post_path(@post)
-    %h1 
+    = link_to (image_tag @posts.imagen(:grande), :class=>"post_img"), post_path(@post)
+    %h1.post_title 
       %span
         Hot Now
       = " - " + @posts.title
     %p
       = @posts.content.html_safe
+    %input{:type => "hidden", :class=>"post_extracto", :value=>@posts.extracto.html_safe} 
     .rank_love
       = render 'ranking'
     .compartir
+      .share_button.ml_share
+      .share_button.pt_share
+      .share_button.gp_share
+      .share_button.tw_share
+      .share_button.fb_share
+      .clearfix
     %ul.tools
       %li.fecha
         %i
@@ -21,7 +28,7 @@
       %li.cat
         %i
         - if stats.categorias.count > 0
-          Categoria: HotNow
+          Categoria: stats.categoria.categoria
         - else
           Categoria: Sephora
       %li.loves
@@ -34,21 +41,6 @@
       - stats.tags.each do |tag|
         %li
           =tag.name
-    .comentarios
-      - if flash[:notice]
-        #modal
-          %h2 ¡Muchas gracias!
-          %p Tu comentario será revisado y aprobado en breve.
-          %a#cerrar{:href=>"#"} Cerrar
-      %h3 Deja un comentario
-      = render 'comments'
-      - if stats.comments.empty?
-        %p.note Sin comentarios por el momento.
-      - else
-        %ul.comentarios
-          - stats.comments.each do |c|
-            %li
-              .table.full
-                .tcell.t90
-                  %h4
-                    =c.comentario
+
+    #disqus_thread
+      = disqus_thread.html_safe

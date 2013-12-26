@@ -1,3 +1,5 @@
+require "disqus"
+
 class PostsController < ApplicationController
   def index
     inst_recent = Instagram.user_recent_media(24459425);
@@ -21,7 +23,6 @@ class PostsController < ApplicationController
     @posts.increment
 
     @visitas = Post.order('visitas DESC').last(5)
-
   end
   def new
     @posts = Post.new

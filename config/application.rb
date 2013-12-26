@@ -1,6 +1,7 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+require "disqus"
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -12,6 +13,21 @@ end
 module Sephora
   class Application < Rails::Application
     $usuario_roles = { :admin => 'Admin', :editor => 'Editor', :usuario => 'Usuario', :suspendido => 'Suspendido' }
+
+
+    Disqus::defaults[:api_key]         = "j1CJAeCXd09glueixRrFbESoNCGrlL7qJHq5dmsJ4e2Un8TiWhRdH126wOoQkSXn" # your api key
+    Disqus::defaults[:account]         = "sephoramx", # your disqus account
+    Disqus::defaults[:developer]       = true, # allows threads to work on localhost
+    Disqus::defaults[:container_id]    = 'disqus_thread', # desired thread container
+    Disqus::defaults[:avatar_size]     = 48, # squared pixel size of avatars
+    Disqus::defaults[:color]           = "grey", # theme color
+    Disqus::defaults[:default_tab]     = "popular", # default widget tab
+    Disqus::defaults[:hide_avatars]    = false, # hide or show avatars
+    Disqus::defaults[:hide_mods]       = true, # hide or show moderation
+    Disqus::defaults[:num_items]       = 15, # number of comments to display
+    Disqus::defaults[:show_powered_by] = false, # show or hide powered by line
+
+
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
