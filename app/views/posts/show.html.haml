@@ -1,6 +1,7 @@
 #view{:vista=>"show"}
   - stats = stats(@posts.id);
   %div.post{:id=>"post-"+@posts.id.to_s}
+    %input{:type => "hidden", :value=>@posts.title, :id=>"inp_title"}
     = link_to (image_tag @posts.imagen(:grande), :class=>"post_img"), post_path(@post)
     %h1.post_title 
       %span
@@ -9,8 +10,8 @@
     %p
       = @posts.content.html_safe
     %input{:type => "hidden", :class=>"post_extracto", :value=>@posts.extracto.html_safe} 
-    .rank_love
-      = render 'ranking'
+    / .rank_love
+    /   = render 'ranking'
     .compartir
       .share_button.ml_share
       .share_button.pt_share
@@ -31,9 +32,9 @@
           Categoria: stats.categoria.categoria
         - else
           Categoria: Sephora
-      %li.loves
-        %i
-        = stats.love.count
+      / %li.loves
+      /   %i
+      /   = stats.love.count
     %ul.tags
       %li.tag
         %i
@@ -43,4 +44,18 @@
           =tag.name
 
     #disqus_thread
-      = disqus_thread.html_safe
+      :javascript
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        window.onload = function(){
+          var title = document.getElementById("inp_title");
+          var disqus_shortname = 'sephoramx'; // Required - Replace example with your forum shortname
+          var disqus_url = document.location.href;
+          var disqus_identifier = title.value;
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        }
