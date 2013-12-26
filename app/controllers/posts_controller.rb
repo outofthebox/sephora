@@ -26,6 +26,9 @@ class PostsController < ApplicationController
   end
   def new
     @posts = Post.new
+    inst_recent = Instagram.user_recent_media(24459425);
+    @recientes = inst_recent.first(4);
+    @visitas = Post.order('visitas DESC').last(5)
   end
   def create
     @posts = Post.new params[:post]
