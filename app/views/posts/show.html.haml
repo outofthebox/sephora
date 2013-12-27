@@ -4,10 +4,13 @@
     %input{:type => "hidden", :value=>@posts.title, :id=>"inp_title"}
     %input{:type => "hidden", :value=>post_path(@post), :id=>"inp_peramlink"}
     = link_to (image_tag @posts.imagen(:grande), :class=>"post_img"), post_path(@post)
-    %h1.post_title 
+    %h1.post_title  
       %span
-        Hot Now
-      = " - " + @posts.title
+        - if stats.categorias.count > 0
+          = stats.categorias[0].categoria
+        - else
+          Sephora
+      =  " - " + @posts.title
     %p
       = @posts.content.html_safe
     %input{:type => "hidden", :class=>"post_extracto", :value=>@posts.extracto.html_safe} 

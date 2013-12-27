@@ -78,7 +78,7 @@ call_show = ->
 			link: window.location.href,
 			picture: post_img,
 			caption: "Sephora Blog!",
-			description: post_extracto
+			description: jQuery(post_extracto).text()
 		}, (post) ->
 			if post
 				console.log post
