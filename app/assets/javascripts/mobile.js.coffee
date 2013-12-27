@@ -67,7 +67,7 @@ $ ->
       numviews = item["yt$statistics"]["viewCount"]
       numcomms = item["gd$comments"]["gd$feedLink"]["countHint"]
       htmlString += "<li class=\"clearfix\">"
-      htmlString += "<div class=\"videothumb\"><a href=\"" + ytlink + "\" target=\"_blank\"><img src=\"" + thumbimg + "\" width=\"97%\" height=\"270\"></a></div>"
+      htmlString += "<div class=\"videothumb\"><a href=\"" + ytlink + "\" target=\"_blank\"><img src=\"" + thumbimg + "\" width=\"97%\" height=\"97%\"></a></div>"
       htmlString += "<div class=\"title\"><h5>" + title + "</h5>"
 
     $("#videos").html htmlString + "</ul>"

@@ -226,9 +226,13 @@
   }
   //vides
    #videos{
+    margin-top: 8px;
     ul{
       li{
         border-bottom: 2px solid #000;
+        display: inline-block;
+        width: 49%;
+        vertical-align: top;
       }
     }
   }
@@ -380,6 +384,10 @@
     ul{
       li{
         border-bottom: 1px solid #000;
+        display: inline-block;
+        width: 49%;
+        vertical-align: top;
+
       }
     }
   }
