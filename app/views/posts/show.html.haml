@@ -2,6 +2,7 @@
   - stats = stats(@posts.id);
   %div.post{:id=>"post-"+@posts.id.to_s}
     %input{:type => "hidden", :value=>@posts.title, :id=>"inp_title"}
+    %input{:type => "hidden", :value=>post_path(@post), :id=>"inp_peramlink"}
     = link_to (image_tag @posts.imagen(:grande), :class=>"post_img"), post_path(@post)
     %h1.post_title 
       %span
@@ -13,7 +14,6 @@
     / .rank_love
     /   = render 'ranking'
     .compartir
-      .share_button.ml_share
       .share_button.pt_share
       .share_button.gp_share
       .share_button.tw_share
@@ -26,11 +26,11 @@
       %li.coments
         %i
         = "Comentarios: "
-        - disqus_comment_counts.html_safe
+        = link_to "0", post_path(@posts, :anchor => "disqus_thread"), :"data-disqus-identifer" => @posts.slug 
       %li.cat
         %i
         - if stats.categorias.count > 0
-          Categoria: stats.categoria.categoria
+          = "Categoria: " + stats.categorias[0].categoria 
         - else
           Categoria: Sephora
       / %li.loves
@@ -42,14 +42,15 @@
         Tags:
       - stats.tags.each do |tag|
         %li
-          =tag.name
+          %a{:href=>posts_path+"?tag="+tag.name}
+            = tag.name
 
     #disqus_thread
       :javascript
         window.onload = function(){
           var title = document.getElementById("inp_title");
-          var disqus_shortname = 'sephoramx'; // Required - Replace example with your forum shortname
-          var disqus_url = document.location.href;
+          var disqus_shortname = 'sephoramx';
+          var disqus_url = document.getElementById("inp_permalink");
           var disqus_identifier = title.value;
 
           (function() {
@@ -58,3 +59,13 @@
               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
           })();
         }
+  :javascript
+    var disqus_shortname = "sephoramx";
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+

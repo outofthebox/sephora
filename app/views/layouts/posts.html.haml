@@ -211,11 +211,12 @@
                     = marca.marca
     .blog
       =image_tag "blog/logo.jpg"
-    .categorias
-      - @bgcategorias.each do |post|
-        %ul.nobullet.nolist
-          %li
-            = post.categoria
+    %ul.categorias.nobullet.nolist
+      - @bgcategorias.each do |cat|
+        - cls = cat.categoria.strip
+        %li{:name=>cls}
+          %a{:href=>posts_path+"?categoria="+cat.id.to_s}
+            = cat.categoria
     #sec_1
       = yield
     #sec_2

@@ -1,18 +1,20 @@
 #view{:vista => "index"}
   -if params[:tag]
-    %p.tag
+    %h3.banner.tag
       Filtrado por tag 
       %strong= params[:tag]
-      = link_to "Regresar", post_path
-      
+
   - @posts.each do|post| 
     - stats = stats(post.id);
     %div.post{:id=>"post-"+post.id.to_s}
       = link_to (image_tag post.imagen(:grande)), post_path(post)
       %h1 
         %span
-          Hot Now
-        = " - " + post.title
+          - if stats.categorias.count > 0
+            = stats.categorias[0].categoria
+          - else
+            Sephora
+        =  " - " + post.title
       %p
         = post.extracto.html_safe
       %ul.tools
@@ -21,23 +23,34 @@
           = "Fecha: "+post.created_at.to_date.to_s
         %li.coments
           %i
-          = "Comentarios: "+ stats.comments.count.to_s
+          = "Comentarios: "
+          = link_to "0", post_path(post, :anchor => "disqus_thread"), :"data-disqus-identifer" => post.slug 
         %li.cat
           %i
           - if stats.categorias.count > 0
-            Categoria: HotNow
+            = "Categoria: " + stats.categorias[0].categoria 
           - else
             Categoria: Sephora
-        %li.loves
-          %i
-          = stats.love.count
+        / %li.loves
+        /   %i
+        /   = stats.love.count
       %ul.tags
         %li.tag
           %i
           Tags:
         - stats.tags.each do |tag|
           %li
-            =tag.name
+            %a{:href=>posts_path+"?tag="+tag.name}
+              = tag.name
       = link_to "leer más...", post_path(post), {:class=>"leer_mas"}
-    = paginate @posts
+      :javascript
+        var disqus_shortname = "sephoramx";
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+  = paginate @posts
 

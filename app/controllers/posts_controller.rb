@@ -4,11 +4,17 @@ class PostsController < ApplicationController
   def index
     inst_recent = Instagram.user_recent_media(24459425);
     @recientes = inst_recent.first(4);
+
     if params[:tag]
-      @posts = Post.tagged_with(params[:tag]).order('created_at DESC')
+      @posts = Post.tagged_with(params[:tag]).order('created_at DESC').page(params[:page]).per(5)
+    elsif params[:categoria]
+      @posts = Post.where(:categoria_id => params[:categoria]).order('created_at DESC').page(params[:page]).per(5)
     else
       @posts = Post.order('created_at DESC').page(params[:page]).per(5)
     end
+
+
+
     @visitas = Post.order('visitas DESC').last(5)
   end
 
