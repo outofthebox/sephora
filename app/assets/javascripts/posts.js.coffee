@@ -6,18 +6,25 @@
 # = require jquery.urlshortener
 # = require redactor
 
-
-
-
 # Inicializador
-
 $(document).ready ->
 	jQuery.urlShortener.settings.apiKey = 'AIzaSyAwvORpxsdPhnJhP5ZNb1IVa6lq-oyH3XQ';
 	$ppal = $("#view");
 	le_switch = $ppal[0].getAttribute("vista");
-	console.log le_switch
+
+	$("ul.allmenu li").hover((->
+		$(this).find('.submenu').show();
+	), (->
+		$(this).find('.submenu').hide();
+	))	
+
 	call_action(le_switch)
 
+$(window).scroll ->
+  if $("body").scrollTop() > 130
+    $("#menu ul.allmenu").appendTo('#head-sup .contenedor').hide().fadeIn('fast')
+  else
+    $("#head-sup ul.allmenu").appendTo "#menu"
 
 # Manejador de vista
 call_action = (valor) ->
@@ -27,11 +34,11 @@ call_action = (valor) ->
 		when "new"
 			call_new()
 
+
+# Funciones por Vista
 call_new = ->
 	$("#post_content, #post_extracto").redactor();
 
-
-# Funciones por Vista
 call_show = ->
 	$gauge = $(".div_gauge");
 	post_img = $(".post_img").attr("src");

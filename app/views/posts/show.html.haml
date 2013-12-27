@@ -25,7 +25,8 @@
         = "Fecha: "+@posts.created_at.to_date.to_s
       %li.coments
         %i
-        = "Comentarios: "+ stats.comments.count.to_s
+        = "Comentarios: "
+        - disqus_comment_counts.html_safe
       %li.cat
         %i
         - if stats.categorias.count > 0
@@ -45,14 +46,12 @@
 
     #disqus_thread
       :javascript
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
         window.onload = function(){
           var title = document.getElementById("inp_title");
           var disqus_shortname = 'sephoramx'; // Required - Replace example with your forum shortname
           var disqus_url = document.location.href;
           var disqus_identifier = title.value;
 
-          /* * * DON'T EDIT BELOW THIS LINE * * */
           (function() {
               var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
               dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

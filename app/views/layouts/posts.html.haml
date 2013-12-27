@@ -19,6 +19,7 @@
   %meta{:content => yield(:url), :property => "og:url"}
   %meta{:content => "Sephora México", :property => "og:site_name"}
   %meta{:content => yield(:imagen), :property => "og:image"}
+  = javascript_include_tag :modernizr
   = stylesheet_link_tag "posts"
   = csrf_meta_tags
   %meta{:content => "qCft4n7tHfODiCl-UWgEd_uquba_MLlevA9txPjkYkk", :name => "google-site-verification"}
@@ -191,9 +192,9 @@
           %li
             %a{:href => "/tu-lista"}
               Tu Lista
-          %li
-            %a{:href => "/posts"}
-              Blog
+          / %li
+          /   %a{:href => "/posts"}
+          /     Blog
           %li.tiendas
             %a{:href => "/tiendas"}
               Tiendas
