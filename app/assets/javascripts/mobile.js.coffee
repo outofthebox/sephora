@@ -68,7 +68,7 @@ $ ->
       numcomms = item["gd$comments"]["gd$feedLink"]["countHint"]
       htmlString += "<li class=\"clearfix\">"
       htmlString += "<div class=\"videothumb\"><a href=\"" + ytlink + "\" target=\"_blank\"><img src=\"" + thumbimg + "\" width=\"97%\" height=\"97%\"></a></div>"
-      htmlString += "<div class=\"title\"><h5>" + title + "</h5>"
+      htmlString += "<div class=\"title\"><h6>" + title.substring(0,40)+"..."+ "</h6>"
 
     $("#videos").html htmlString + "</ul>"
 
