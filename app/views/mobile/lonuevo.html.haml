@@ -7,7 +7,7 @@
             - producto = lonuevo_producto.producto
             %li
               .imagen
-                =link_to image_tag(producto.foto.url(:normal)), m_producto_path(producto.slug)
+                =link_to image_tag(producto.foto.url(:mediano)), m_producto_path(producto.slug)
               %h5.marca
                 = producto.marca.marca.upcase
               %h5
