@@ -15,9 +15,12 @@
           %li
             .table.full
               .picture
-                =link_to image_tag(producto.foto.url(:normal)), m_producto_path(producto.slug)
+                =link_to image_tag(producto.foto.url(:mediano)), m_producto_path(producto.slug)
               .info
                 %h3
                   = producto.marca.marca
                 %h5
                   = producto.nombre_real.empty? ? producto.nombre : producto.nombre_real
+                %h5.precio
+                  $
+                  = producto.precio.to_i
