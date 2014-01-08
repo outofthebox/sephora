@@ -15,7 +15,7 @@
           %li
             .table.full
               .picture
-                =link_to image_tag(producto.foto.url(:mediano)), m_producto_path(producto.slug)
+                =link_to image_tag(producto.foto.url(:chico)), m_producto_path(producto.slug)
               .info
                 %h3
                   = producto.marca.marca
