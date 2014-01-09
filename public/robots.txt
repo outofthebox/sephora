@@ -61,5 +61,28 @@ Disallow:*
 User-agent: MJ12bot
 Disallow: *
 
-User-agent: *
-Disallow: *
+User-agent: Googlebot
+# disallow all files ending with these extensions
+Allow: /*
+Disallow: /*.php$
+Disallow: /*.js$
+Disallow: /*.inc$
+Disallow: /*.css$
+Disallow: /*.gz$
+Disallow: /*.wmv$
+Disallow: /*.cgi$
+Disallow: /*.xhtml$
+
+ 
+# disallow all files with ? in url
+Disallow: /*?*
+
+# allow google image bot to search all images
+User-agent: Googlebot-Image
+Disallow:
+Allow: /*
+ 
+# allow adsense bot on entire site
+User-agent: Mediapartners-Google*
+Disallow:
+Allow: /*

@@ -9,7 +9,7 @@
   - if current_page?('/')
     %title Sephora México
     %meta{:content => "Sephora México", :property => "og:title"}
-    %meta{:name => "robots", :content => "noindex"}
+    %meta{:name => "robots", :content => "nofollow"}
   -else
     %title
       #{"#{yield(:titulo)} | " if content_for?(:titulo)} Sephora
