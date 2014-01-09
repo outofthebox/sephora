@@ -21,7 +21,7 @@ Sephora::Application.routes.draw do
 
   get 'buscare', :to => 'utilidades#search', :as => 'buscare'
 
-  get   ':seccion', :to => 'secciones#ver', :constraints => { :seccion => /allure2013|lanzamientosfall|backtoschool|potencializahighlights|fraganciasparael|skincareparael|narsblushes|obsessionsbeautybloggers|hotnow|bestsellers|bbcreams|tintedmoisturizers|sephorabath|probrushes|beautyobsessions|vacaciones|ouidad|esteelaudernails|bronzers|clasicosdeskincare|mascaras2013|aceitesskincareagosto2013|mascarillas|cccreams2013|skincarehighlightsoctubre|maquillajebijoux|rollerballs|fragancias30ml|fraganciasholiday|showergelphilosphy|skincareholiday|cofresholiday/ }
+  get   ':seccion', :to => 'secciones#ver', :constraints => { :seccion => /allure2013|lanzamientosfall|backtoschool|potencializahighlights|fraganciasparael|skincareparael|narsblushes|obsessionsbeautybloggers|hotnow|bestsellers|bbcreams|tintedmoisturizers|sephorabath|probrushes|beautyobsessions|vacaciones|ouidad|esteelaudernails|bronzers|clasicosdeskincare|mascaras2013|aceitesskincareagosto2013|mascarillas|cccreams2013|skincarehighlightsoctubre|maquillajebijoux|rollerballs|fragancias30ml|fraganciasholiday|showergelphilosphy|skincareholiday|cofresholiday|obsesionesskincare|arielcollection|beautysteals/ }
   get   'soluciones(/:id)', :to => 'secciones#soluciones', :as => 'soluciones'
   get   'favorites(/:id)', :to => 'secciones#favorites', :as => 'favorites'
   get   'holiday', :to => 'paginas#holiday', :as => 'holiday'
