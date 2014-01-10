@@ -89,7 +89,7 @@ intervalID = setInterval(->
 , 5000)
 
 count = 1
-slides = 3
+slides = $(".diapositiva").size()
 width = 760
 counter = '/' + slides
 $(".prox p").text('1' + counter)
