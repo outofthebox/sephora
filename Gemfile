@@ -28,6 +28,7 @@ gem "rack-block", "~> 0.1.1"
 gem "oauth"
 gem 'acts-as-taggable-on'
 gem "disqus"
+gem "to_xls"
 
 group :assets do
   gem "jquery-rails", "~>1.0.19"

@@ -395,4 +395,18 @@ class UtilidadesController < ApplicationController
       raise 'Not found'.inspect 
     end
   end
+  def exportcsv
+    require 'csv'
+    @final_productos = []
+    productos = Marca.all
+    respond_to do |format|
+      format.html
+      format.xml{render :xml => productos}
+      #format.xls #{ send_data @final_productos.to_csv(col_sep: "\t") }
+      format.xls {send_data productos.to_xls, :filename => "Marca.xls"}
+      #  response.headers['Content-Disposition'] = "attachment; filename=sales_#{@final_productos}.xls"
+      #  render "exportcsv.xls.haml"
+      format.xml
+    end
+  end
 end
