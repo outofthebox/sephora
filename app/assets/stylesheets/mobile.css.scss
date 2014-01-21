@@ -100,7 +100,12 @@ html, body{
     }
     &[vista="favoritos"]{
       h6{
-        
+        margin-bottom: 5px;
+        font-size: 23px;
+        font-family: "Avant";
+        letter-spacing: 1px;
+        text-align: center;
+        display: block;
       }
     }
     &[vista="home"]{
