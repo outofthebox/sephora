@@ -1,10 +1,6 @@
-//--------- Bkckup
-// require responsiveslides.css
-// require stylus.css
-// require land.css.scss
-// require base.css
-//-----------
-
+// Place all the styles related to the mob controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
 //= require bootstrap
 //= require responsiveslides.css
 
@@ -98,11 +94,6 @@ html, body{
     .imagenes, .masimg, .video{
       margin-bottom: 10px;
     }
-    &[vista="favoritos"]{
-      h6{
-        
-      }
-    }
     &[vista="home"]{
       .columnas{
         width: 31.7%;
@@ -112,67 +103,6 @@ html, body{
         }
         img{
           width: 100%;
-        }
-      }
-    }
-    &[vista="producto"]{
-      .le_marca{
-        width: 80%;
-        margin:auto;
-        display: block;
-      }
-      .le_producto{
-        width: 280px;
-        margin:auto;
-        display: block;
-      }
-      .info{
-        width: 100%;
-        margin:30px 0;
-        text-align: center;
-        .marcab{
-          margin-bottom: 5px;
-          font-size: 18px;
-          font-family: "Avant";
-          letter-spacing: 1px;
-          text-align: center;
-          display: block;
-        }
-        .precio{
-          margin-bottom: 5px;
-          font-size: 18px;
-          font-family: "Avant";
-          letter-spacing: 1px;
-          text-align: center;
-          color:white;
-          background:#000;
-          border-radius:5px;
-          padding: 5px;
-        }
-        .producto{
-          margin-bottom: 10px;
-          font-size: 23px;
-          font-family: "Avant";
-          letter-spacing: 1px;
-          text-align: center;
-          display: block;
-        }
-      }
-      .descripcion{
-        p{
-          b{
-            display: block;
-            width: 100%;
-            line-height: 1.2em;
-            margin-bottom: 5px;
-            font-size: 18px;
-            font-family: "Avant";
-            letter-spacing: 1px;
-            text-align: center;
-            color:white;
-            background:#000;
-            padding: 5px;
-          }
         }
       }
     }
@@ -394,5 +324,3 @@ html, body{
     }
   }
 }
-
-

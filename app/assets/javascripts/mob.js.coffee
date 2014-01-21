@@ -1,44 +1,42 @@
-
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 # = require jquery
-# = require bootstrap
+# = require jquery_ujs
 # = require responsiveslides.min.js
 # = require jquery.touchslider.min.js
 
-$(document).ready ->
-  vista = $("#main").attr("vista");
-  do_select(vista)
+$("#suscripcion_sus").click ->
+  if $(this).is(":checked")
+    $("#send").removeAttr "disabled"
+  else
+    $("#send").attr "disabled", "disabled"
+$ ->
+  $("#slider4").responsiveSlides
+    auto: false
+    timeout: 10000
+    pager: false
+    nav: true
+    speed: 500
+    namespace: "callbacks"
+    before: ->
+      $(".events").append "<li>before event fired.</li>"
 
-do_select = (vista) ->
-  switch vista
-    when "lonuevo"
-      do_lonuevo();
-    when "hotnow"
-      do_hotnow();
-    when "beauty"
-      do_beauty();
-    when "videos"
-      do_videos();
+    after: ->
+      $(".events").append "<li>after event fired.</li>"
 
-do_lonuevo = ->
-  jQuery ($) ->
-    $(".touchslider").touchSlider mouseTouch: true
-
-do_hotnow = ->
-  jQuery ($) ->
-    $(".touchslider").touchSlider mouseTouch: true    
-  
-do_beauty = ->
-  $("#lista ul").hide();
-  $("#lista li.cabecera").click (event) ->
-    desplegable = $(this).find(".contenido");
-    $("#lista ul.contenido").not(desplegable).slideUp "fast"
+$ ->
+  $("#lista ul").hide()
+  $("#lista li").click (event) ->
+    desplegable = $(this).next()
+    $("#lista ul").not(desplegable).slideUp "fast"
     desplegable.slideToggle "fast"
     event.preventDefault()
 
-do_videos = ->
+$("#pollo p").each (index) ->
+  $(this).hide()  unless $(this).text().trim().length
+
+$("#pollo h4").each (index) ->
+  $(this).hide()  unless $(this).text().trim().length
+
+$ ->
   commafy = (arg) ->
     arg += ""
     num = arg.split(".")
@@ -52,10 +50,8 @@ do_videos = ->
       dec = num[1]
       dec = dec.replace(/(\d{3})/g, "$1 ")  if dec.length > 4
     ((if typeof num[0] isnt "undefined" then int else "")) + ((if typeof num[1] isnt "undefined" then "." + dec else ""))
-  
   htmlString = "<ul id=\"videoslisting\">"
   ytapiurl = "http://gdata.youtube.com/feeds/api/users/SephoraMex/uploads?alt=json&max-results=10"
-  
   $.getJSON ytapiurl, (data) ->
     $.each data.feed.entry, (i, item) ->
       title = item["title"]["$t"]
@@ -75,3 +71,6 @@ do_videos = ->
       htmlString += "<div class=\"title\"><h6>" + title.substring(0,40)+"..."+ "</h6>"
 
     $("#videos").html htmlString + "</ul>"
+
+jQuery ($) ->
+  $(".touchslider").touchSlider mouseTouch: true

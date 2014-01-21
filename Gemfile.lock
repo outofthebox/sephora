@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/thomas-mcdonald/bootstrap-sass.git
+  revision: 4b61cdd0b43b7743f84c748dbad782db950bc489
+  specs:
+    bootstrap-sass (3.0.3.0)
+      sass (~> 3.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -258,6 +265,7 @@ DEPENDENCIES
   activerecord-import
   acts-as-taggable-on
   aws-sdk
+  bootstrap-sass!
   cancan
   coffee-rails (~> 3.2.1)
   devise

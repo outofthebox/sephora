@@ -1,0 +1,60 @@
+!!! 5
+:plain
+  <!--[if lt IE 7]> <html lang="es" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+  <!--[if IE 7]>    <html lang="es" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+  <!--[if IE 8]>    <html lang="es" class="no-js lt-ie9"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
+%head
+  %meta{:charset => "UTF-8"}
+  %title
+    #{"#{yield(:titulo)} | " if content_for?(:titulo)} Sephora
+  %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+  %meta{:content => "#{yield(:titulo)} | Sephora México", :property => "og:title"}
+  %link{ :rel => "shortcut icon", :href => "/favicon.ico", :type => "image/x-icon"}/
+  %meta{:name => "description", :content => yield(:descripcion)}
+  %meta{:content => yield(:url), :property => "og:url"}
+  %meta{:content => "Sephora México", :property => "og:site_name"}
+  %meta{:content => yield(:imagen), :property => "og:image"}
+  = stylesheet_link_tag :mobile
+  = csrf_meta_tags
+%body 
+  .container
+    .sixteen.columns
+      .head
+        %ul
+          %li.entrar
+            - if current_mobileuser.nil?
+              %a{:href => new_mobileuser_session_path} ENTRAR
+            - else
+              .nombre
+                %a{:href => "#"}
+                  Bienvenido
+                  = current_mobileuser.email
+          %li.corazon
+            - if params[:action] == "mobileproducto"
+              =link_to image_tag("mobile/home/favoritos_icon.png"), favoritear_path(@producto)
+          %li.logo
+            =link_to image_tag("mobile/home/sephora_logo_mobile.png"), m_home_path
+          %li
+            =link_to 'MIS FAVS', m_favoritos_path
+      .busqueda
+        = form_for :buscar, { :url => m_busqueda_path, :method => :get } do |f|
+          %p.nowrap
+            .table
+              .tcell.t95
+                = f.text_field :q, :class => 'input', :placeholder  => "BUSCAR", :value => "#{(params[:buscar][:q]) unless params[:buscar].nil?}"
+        %a{ :href => "/" }
+  #mobile
+    = yield
+    .main
+    %footer
+      %ul.submenu
+        %li
+          =link_to 'Legal',m_legal_path
+        %li
+          %a{:href => "#"} Contacto
+        %li
+          %a{:href => "http://sephora.com.mx/"} Sitio Web
+        %li.atras
+          =link_to image_tag('mobile/home/flecha_regreso.png'), m_home_path
+  = javascript_include_tag :mobile

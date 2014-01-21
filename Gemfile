@@ -30,6 +30,8 @@ gem 'acts-as-taggable-on'
 gem "disqus"
 gem "to_xls"
 
+gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
+
 group :assets do
   gem "jquery-rails", "~>1.0.19"
   gem 'jquery-ui-rails'

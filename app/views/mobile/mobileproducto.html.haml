@@ -1,27 +1,26 @@
-.marca
-  - unless @producto.marca.logo_file_size.nil?
-    = image_tag @producto.marca.logo.url(:grande),{:style => "width:310px"}
-    = image_tag @producto.foto.url(:normal), :id => "prod", :class => "imgproducto", :itemprop => 'image'
-  .info
-    %span.marcab
-      =@producto.marca.marca
-    %span.precio{:itemprop => "price"}
-      #{number_to_currency(@producto.precio, :precision => 0)}
-  .producto
-    %p{:itemprop => "name"}
-      =@producto.nombre  
-.descripcion
-  #tabmenu
-    %ul
+#main{:vista=>"producto"}
+  .marca
+    - unless @producto.marca.logo_file_size.nil?
+      = image_tag @producto.marca.logo.url(:grande),{:class =>"le_marca"}
+      = image_tag @producto.foto.url(:normal), :id => "prod", :class => "le_producto", :itemprop => 'image'
+    .info
+      %span.marcab
+        =@producto.marca.marca
+      %span.producto
+        %p{:itemprop => "name"}
+          =@producto.nombre
+      %span.precio{:itemprop => "price"}
+        #{number_to_currency(@producto.precio, :precision => 0)}
+  .descripcion
+    %ul.ingredientes
       %li
-        %p  DESCRIPCIÓN
       - unless @producto.ingredientes.nil? || @producto.ingredientes.size < 5
         %li
           %a{:href => "#tab2"} INGREDIENTES
       - unless @producto.usos.nil? || @producto.usos.size < 5
         %li
           %a{:href => "#tab3"} USOS
-    .tabcontent
+    .contenidos
       - unless @producto.descripcion.nil? || @producto.descripcion.size < 5
         #tab1.tabdesc
           %div{:itemprop => "description"}

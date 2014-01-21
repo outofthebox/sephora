@@ -1,19 +1,19 @@
-.fav
-  .columna
-    .caja
-      %h6.back mis favoritos
-.cuerpo
-  - if @productos.nil?
-    .nilproductos
-      %p ¿Qué esperas para agregar tu productos favoritos?
-      %p Solo hay que presionar en el corazón que aparece en la parte superior de cada producto
-  - else
-    -@productos.each do |p|
-      .medcolumna
-        .raya
-          =link_to image_tag p.foto
-          .texto
-            %h5 
-              = p.nombre
-            %p
-              = p.descripcion.html_safe
+#main{:vista=>"favoritos"}
+  .fav
+    %h6 
+      Mis favoritos
+  .cuerpo
+    - if @productos.nil?
+      .nilproductos
+        %p ¿Qué esperas para agregar tu productos favoritos?
+        %p Solo hay que presionar en el corazón que aparece en la parte superior de cada producto
+    - else
+      -@productos.each do |p|
+        .medcolumna
+          .raya
+            =link_to image_tag p.foto
+            .texto
+              %h5 
+                = p.nombre
+              %p
+                = p.descripcion.html_safe
