@@ -1,3 +1,5 @@
+require "csv"
+
 class Categoria < ActiveRecord::Base
   acts_as_nested_set
   attr_accessible :nombre, :parent_id, :cover, :urlslug, :remove_cover, :descripcion
@@ -27,5 +29,18 @@ class Categoria < ActiveRecord::Base
       sql
     query = ActiveRecord::Base.connection.execute(sql)
     query.find_all.map{|q| q }
+  end
+
+  def self.to_csv
+    csv_string = CSV.generate do |csv|
+      csv << ["id", "nombre", "parent_id", "padre", "cover", "urlslug", "descripcion"]
+      all.each do |cat|
+        if cat.parent_id
+          csv << [cat.id, cat.nombre, cat.parent_id, Categoria.find(cat.parent_id).nombre, cat.cover(:grande), cat.urlslug, cat.descripcion]
+        else
+          csv << [cat.id, cat.nombre, cat.parent_id, "padre" , cat.cover(:grande), cat.urlslug, cat.descripcion]
+        end
+      end
+    end
   end
 end

@@ -109,4 +109,13 @@ class CategoriasController < ApplicationController
 
     render :text => orden.to_a
   end
+
+  def export_to_csv
+    if params[:pass] == "outofthebox14"
+      respond_to do |format|
+        format.html
+        format.csv { render text: Categoria.to_csv}
+      end
+    end
+  end
 end

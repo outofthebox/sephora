@@ -92,12 +92,14 @@ Sephora::Application.routes.draw do
 
   get   'politicas-de-privacidad', :to => 'paginas#politicas', :as => 'politicas'
 
+  get   "categorias/download(:pass)", :to => "categorias#export_to_csv", :as => "categorias_to_csv"
   get   'categorias/:id/desvincular/:categoria_producto/:hash', :to => 'categorias#desvincular', :as => 'categoria_desvincular_producto'
   get   'categorias/:id/vincular/:v_id/editar', :to => 'categorias#producto_editar', :as => 'categoria_editar_producto'
   put   'categorias/:id/vincular/:v_id/editar', :to => 'categorias#producto_update'
   post  'categorias/:id/vincular', :to => 'categorias#vincular', :as => 'categoria_vincular_producto'
   post  'categorias/actualizar_orden', :to => 'categorias#actualizar_orden'
   get   'categoria(/:categoria)', :to => 'categorias#ver', :as => 'categoria_ver'  
+
 
   get   'marcas/:id/desvincular/:marca_producto/:hash', :to => 'marcas#desvincular', :as => 'marca_desvincular_producto'
   get   'marcas/:id/vincular/:v_id/editar', :to => 'marcas#producto_editar', :as => 'marca_editar_producto'
