@@ -3,9 +3,9 @@ class UtilidadesController < ApplicationController
   
 
   def search
-    le_prod = Producto.search params
-    le_marca = Marca.search params
-    le_categoria = Marca.search params
+    le_prod = Producto.search params[:buscar][:q]
+    le_marca = Marca.search params[:buscar][:q]
+    le_categoria = Marca.search params[:buscar][:q]
     busqueda = {:productos => le_prod, :marca => le_marca, :categoria => le_categoria}
     raise busqueda.inspect
     return busqueda
