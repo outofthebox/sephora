@@ -1,3 +1,5 @@
+require "csv"
+
 class MarcasController < ApplicationController
   def index
     @marcas = Marca.all
@@ -99,5 +101,15 @@ class MarcasController < ApplicationController
     marcaProducto.update( vinculos, orden.map{|o| { :orden => o }}).reject { |p| p.errors.empty? }
 
     render :text => orden.to_a
+  end
+
+
+  def export_to_csv
+    if params[:pass] == "outofthebox14"
+      respond_to do |format|
+        format.html
+        format.csv { render text: Marca.to_csv}
+      end
+    end
   end
 end

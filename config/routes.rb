@@ -70,8 +70,11 @@ Sephora::Application.routes.draw do
   get   'producto/:slug',  :to => 'productos#show', :as => 'producto_ver'
   get   'productos/busqueda', :to => 'productos#busqueda_old', :as => 'productos_busqueda'
   
-  # get   'marca', :to => 'marcas#index'
+  # [--- MARCAS ---]
+  get   "marcas/download(:pass)", :to => "marcas#export_to_csv", :as => "marcas_to_csv"
   get   'marca/:slug',  :to => 'marcas#show', :as => 'marca_ver'
+
+
 
   get   'admin/productos', :to => 'productos#index_admin'
 

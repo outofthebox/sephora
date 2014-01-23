@@ -24,6 +24,15 @@ class Marca < ActiveRecord::Base
     self.logo = nil if self.remove_logo=="1"
   end
 
+  def self.to_csv
+    csv_string = CSV.generate do |csv|
+      csv << ["id", "marca", "descripcion", "slug", "logo", "promo", "behindthebrand", "video"]
+      all.each do |marca|
+        csv << [marca.id, marca.marca, marca.descripcion, marca.slug, marca.logo(:grande), marca.promo, marca.behindthebrand, marca.video]
+      end
+    end
+  end
+
   def validar
     errors.add :marca, "Escribe una marca" unless self.marca.parameterize.length > 1
   end
