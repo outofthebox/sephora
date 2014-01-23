@@ -1,5 +1,16 @@
 class UtilidadesController < ApplicationController
   http_basic_authenticate_with :name => ENV['U'], :password => ENV['P']
+  
+
+  def search
+    le_prod = Producto.search params
+    le_marca = Marca.search params
+    le_categoria = Marca.search params
+    busqueda = {:productos => le_prod, :marca => le_marca, :categoria => le_categoria}
+    raise busqueda.inspect
+    return busqueda
+  end
+
   def parsearparents
     raise 'error' unless Rails.env.development?
 
