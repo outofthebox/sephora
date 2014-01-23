@@ -334,7 +334,9 @@ ul.breadcrumbs{
       line-height: 34px;
       display: inline-block;
       &:hover {
-
+        .submenu{
+          display: block;
+        }
       }
       &:first-child {
         padding-left: 0;
