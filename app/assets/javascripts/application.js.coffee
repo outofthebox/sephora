@@ -21,6 +21,7 @@ $('.eventomodal a').on 'click', (e) ->
 
 
 $("#producto_descripcion, #producto_ingredientes, #producto_usos, #producto_seccion_descripcion, #post_content, #post_extracto").redactor();
+
 active = false
 $(window).scroll ->
   if $("body").scrollTop() > 130
@@ -73,13 +74,6 @@ $(document).on "click", "a#share", (e) ->
   loc = $(this).attr("href")
   title = escape($(this).attr("title"))
   window.open "http://www.facebook.com/sharer.php?u=" + loc + "&t=" + title, "facebookwindow", "height=450, width=550, top=" + ($(window).height() / 2 - 225) + ", left=" + $(window).width() / 2 + ", toolbar=0, location=0, menubar=0, directories=0, scrollbars=0"
-
-
-$("ul.allmenu li").live
-  mouseenter: ->
-    $(this).find('.submenu').show();
-  mouseleave: ->
-    $(this).find('.submenu').hide();
 
 rotate = ->
   $(".prox.jesus").click()

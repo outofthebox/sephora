@@ -347,6 +347,7 @@ ul.breadcrumbs{
       display: block;
       width: 100%;
       height: 100%;
+      letter-spacing: 1.5px;
       &.holiday {
         color: white;
       }
@@ -432,6 +433,7 @@ ul.breadcrumbs{
     height: 140px;
     margin: 0 auto;
     border-bottom: 1px solid #C1C1C1;
+    margin-bottom: 10px;
     #contenme {
       height: auto;
       padding-top: 30px;
@@ -470,21 +472,38 @@ ul.breadcrumbs{
     nav#menu {
       font-size: 8pt;
       text-align: left;
-      padding-top: 50px;
+      margin-top: 50px;
       font-weight: bold;
+      background: white;
+      color: black;
+      line-height: 10pt;
+      min-height: 21px;
+      padding-top: 10px;
+      margin-bottom: 22px;
+      display: block;
+      padding-left: 5px;
+      padding-right: 5px;
+      position: relative;
       .tiendas, .sociales, .search {
         display: none;
       }
       li {
         padding: 0.6em 0.6em;
         position: relative;
+        display: inline-block;
         &:hover {
-          -webkit-box-shadow: 2px 2px 12px gray;
-          -moz-box-shadow:    2px 2px 12px gray;
-          box-shadow:         2px 2px 12px gray;
-        }
-        &:first-child {
-          padding-left: 0;
+          background: black;
+          color: white !important;
+          font-weight: 500;
+          a{
+            color:#fff;
+          }
+          .submenu{
+            height: auto;
+            transition: height 450ms, opacity 400ms;
+            border: 1px solid black;
+            opacity: 1;
+          }
         }
       }
       a{
@@ -501,13 +520,16 @@ ul.breadcrumbs{
         padding: 0;
         width: 300px;
         position: absolute;
-        background:image-url('bgsub.png');
-        display: none;
-        -webkit-box-shadow: 3px 3px 6px gray;
-        -moz-box-shadow:    3px 3px 6px gray;
-        box-shadow:         3px 3px 6px gray;
+        background:white;
+        display: block;
         overflow: hidden;
         z-index: 9999;
+        top: 26px;
+        left: 0px;
+        overflow: hidden;
+        height: 0;
+        transition: height 450ms, opacity 400ms;
+        opacity: 0;
         li {
           margin: 0;
           padding: 0;
@@ -518,6 +540,9 @@ ul.breadcrumbs{
           line-height: 22px;
           a {
             padding-left: 5px;
+            letter-spacing: inherit;
+            color: black;
+            font-weight: normal;
           }
           &:hover {
             box-shadow: none;
@@ -539,13 +564,14 @@ ul.breadcrumbs{
     }
     .select{
       cursor: pointer;
-      position:absolute;
-      right:-4px;
+      position: absolute;
+      right: 0px;
       width: 80px;
       float: right;
       overflow: hidden;
       height: 20px;
-      margin-top:-20px;
+      top: 12px;
+      border: 1px solid black;
       .trigger{
         font-weight: bold;
         background: white;
@@ -554,21 +580,17 @@ ul.breadcrumbs{
         cursor: pointer;
         padding-left: 5px;
         line-height: 18px;
-        border-top: 1px solid #858585;
-        border-bottom: 1px solid #E2E2E2;
-        border-left: 1px solid #C1C1C1;
-        border-right: 0;
         text-align:left!important;
         .icon{
-          background: image-url('flecha_marca.png') no-repeat 0 0;
-          width: 26px;
+          background: url(/assets/flecha_marca.png) no-repeat center center;
+          width: 20px;
           height: 20px;
           position: absolute;
           right: 0;
-          top: -1px;
+          top: 0px;
         }
         .active{
-          background: image-url('flecha_gris_marca.png') no-repeat 0 0;
+          background: image-url('flecha_gris_marca.png') no-repeat center center;
         }
       }
       select {
@@ -671,8 +693,7 @@ ul.breadcrumbs{
           width: 140px;
           margin: 0;
           padding: 4px;
-          // hack ftw
-          float: right;
+          min-height: 23px;
         }
         input[type=image] {
           margin-left: -10px;
@@ -830,6 +851,7 @@ ul.breadcrumbs{
     margin-bottom: 20px;
     .imagen {
       height: 130px;
+      margin-bottom: 15px;
     }
     h3 {
       text-transform: uppercase;
@@ -841,7 +863,7 @@ ul.breadcrumbs{
     h5 a{
       font-weight: lighter;
       font-family: "Avant", Arial, sans-serif;
-      font-size: 1.2em;
+      font-size: 0.9em;
       letter-spacing: 1px;
     }
     p{
@@ -907,8 +929,8 @@ ul.breadcrumbs{
             padding-top: 5px;
           }
           h5.marca {
-            font-family: "Avant", Arial, sans-serif;
-            font-size: 11pt;
+            font-family: Arial, sans-serif;
+            font-size: 8pt;
             font-weight: bold;
             letter-spacing: 1px;
           }
@@ -1038,21 +1060,35 @@ ul.breadcrumbs{
           width: 150px;
           margin: 10px;
           vertical-align: top;
-          height: 200px;
+          height: 230px;
           img {
             margin-bottom: 10px;
           }
           h4, p {
-            font-family: "Helvetica Neue", Helvetica, Arial;
+            font-family: Arial;
             margin:0;
             padding:0;
             line-height: 1em;
           }
           h4 {
+            font-family: Arial, sans-serif;
+            font-size: 8pt;
+            font-weight: bold;
+            letter-spacing: 1px;          
+            line-height: 1.2em;
+          }
+          h3 {
+            font-weight: lighter;
+            font-family: "Avant", Arial, sans-serif;
             font-size: 0.8em;
+            letter-spacing: 1px;
+            line-height: 1.2em;
+            margin-bottom: 5px;
           }
           p {
             font-size: 0.8em;
+            line-height: 1.2em;
+            color: #c00;
           }
         }
       }
@@ -1834,18 +1870,20 @@ p.selected {
   }
   p#trigger, p#trigger2 {
     cursor: pointer;
-    border: 2px solid #918F90;
+    border: 1px solid #918F90;
     color: #C7C7C7;
     background: transparent;
     width: 90px;
     height: 15px;
     display: block;
     text-decoration: none;
-    padding: 0;
     margin: 0;
+    position: relative;
+    padding: 0 5px;
     span {
       color: black;
       padding-left: 7px;
+      position:absolute;
     }
   }
   ul {
