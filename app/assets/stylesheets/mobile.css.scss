@@ -252,9 +252,11 @@ html, body{
               text-align: center;
               img{
                 width: 80%;
-                height: 150px;
+                height: 140px;
                 margin-left: 20px;
                 max-width: 220px;
+                min-width: 140px;
+                max-height: 220px;
                 display: block;
                 margin:auto;
               }
