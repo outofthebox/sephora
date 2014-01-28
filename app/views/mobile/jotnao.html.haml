@@ -20,10 +20,10 @@
             %li.touchslider-item
               .imagen
                 =link_to image_tag(producto.foto.url(:chico)), m_producto_path(producto.slug)
-              %h5.marca
+              %h5
                 = producto.marca.marca
               %h5
-                =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), m_producto_path(producto.slug)
+                = producto.nombre_real.empty? ? producto.nombre : producto.nombre_real
               %h5.precio
                 $
                 = producto.precio.to_i
