@@ -213,6 +213,9 @@ html, body{
                 font-family: "Avant";
                 letter-spacing: 1px;
                 text-align: center;
+                min-height: 34px;
+                max-height: 34px;
+                overflow: hidden;
               }
             }
           }
