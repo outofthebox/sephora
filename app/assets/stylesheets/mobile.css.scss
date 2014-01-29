@@ -209,10 +209,12 @@ html, body{
             }
             .title{
               h6{
-                font-size: 1.2em;
-                font-family: "Avant";
-                letter-spacing: 1px;
-                text-align: center;
+                 font-family: "Avant";
+                 letter-spacing: 1px;
+                 text-align: center;
+                 min-height: 34px;
+                 max-height: 34px;
+                 overflow: hidden;
               }
             }
           }
@@ -248,12 +250,13 @@ html, body{
               vertical-align: middle;
               text-align: center;
               img{
-                width: 80%;
-                height: 150px;
-                margin-left: 20px;
-                max-width: 220px;
-                display: block;
-                margin:auto;
+                 width: 80%;
+                 height: 140px;
+                 margin-left: 20px;
+                 max-width: 220px;
+                 min-width: 140px;
+                 display: block;
+                 margin:auto;
               }
             }
             .info{
