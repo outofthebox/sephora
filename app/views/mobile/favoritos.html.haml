@@ -8,12 +8,16 @@
         %p ¿Qué esperas para agregar tu productos favoritos?
         %p Solo hay que presionar en el corazón que aparece en la parte superior de cada producto
     - else
-      -@productos.each do |p|
-        .medcolumna
-          .raya
-            =link_to image_tag p.foto
-            .texto
-              %h5 
-                = p.nombre
-              %p
-                = p.descripcion.html_safe
+      %ul.row-fluid.favoritos
+        -@productos.each do |producto|
+          %li.col-lg-4.col-md-4.col-sm-6.col-xs-6.col-12
+            .imagen.text-center
+              =link_to image_tag(producto.foto.url(:chico)), m_producto_path(producto.slug)
+            %h5.marca.text-center
+              = producto.marca.marca
+            %h5.precio.text-center
+              $
+              = producto.precio.to_i
+            %h5.text-center
+              =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), m_producto_path(producto.slug)
+            
