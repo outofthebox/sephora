@@ -82,31 +82,4 @@ class MobileController < ApplicationController
     end
 
   end
-
-  def unfavorite
-    require 'json'
-    
-    user = current_mobileuser
-    counter = 0;
-    le_id = params[:id].scan(/\d+$/).first;
-    le_product = Producto.find(le_id);
-    le_upc = le_product.upc;
-
-    favs = JSON.parse user.favoritos
-    favs.each do |f|
-      if(le_upc == f["id"]) 
-        favs.slice!(counter)
-      end
-      counter = counter + 1;
-    end
-
-    user.favoritos = favs.to_json
-    
-    if user.save
-      redirect_to  m_favoritos_path
-    else
-      redirect_to  m_favoritos_path
-    end
-
-  end
 end
