@@ -27,7 +27,8 @@
               %h5.precio
                 $
                 = producto.precio.to_i
-              =link_to "", m_favorited_path(producto.slug), {:class=>"favorite"}
+              -if mobileuser_signed_in?
+                =link_to "", m_favorited_path(producto.slug), {:class=>"favorite"}
       %div.flechas
         %span.touchslider-prev=image_tag"mobile/flecha_izq.png"
         %span.touchslider-next=image_tag"mobile/flecha_der.png"
