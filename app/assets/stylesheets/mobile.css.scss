@@ -99,52 +99,8 @@ html, body{
       margin-bottom: 10px;
     }
     &[vista="favoritos"]{
-      .favoritos li{
-        margin-bottom: 20px;
-        overflow: hidden;
-      }
       h6{
         margin-bottom: 5px;
-        font-size: 23px;
-        font-family: "Avant";
-        letter-spacing: 1px;
-        text-align: center;
-        display: block;
-        margin-bottom: 30px;
-      }
-      a{
-        font-family: "Avant";
-        letter-spacing: 1px;
-        color:#999;
-        text-decoration: underline;
-        &:hover{
-          color:#333;
-        }
-      }
-      .marcab{
-        margin-bottom: 5px;
-        font-size: 18px;
-        font-family: "Avant";
-        letter-spacing: 1px;
-        text-align: center;
-        display: block;
-      }
-      .precio{
-        margin-bottom: 5px;
-        font-size: 9px;
-        font-family: "Avant";
-        letter-spacing: 1px;
-        color: white;
-        background: #000;
-        border-radius: 5px;
-        padding: 5px;
-        display: table;
-        margin: auto;
-        vertical-align: middle;
-        text-align: center;
-      }
-      .producto{
-        margin-bottom: 10px;
         font-size: 23px;
         font-family: "Avant";
         letter-spacing: 1px;
@@ -362,30 +318,6 @@ html, body{
         margin: auto;
         position:relative;
         height: 400px;
-      }
-      .favorite{
-        background-color: black;
-        background-image: url("mobile/home/favoritos_icon.png");
-        background-size: 27px;
-        position: relative;
-        top: 15px;
-        height: 45px;
-        width: 45px;
-        display: block;
-        margin: auto;
-        background-repeat: no-repeat;
-        background-position: center center;
-        border-radius: 10px;
-        transition: background-color 300ms, border-radius 300ms, background-size 200ms;
-        &.favorited, &:visited, &:active, &:hover{
-          background-color: rgb(177, 27, 27);
-          border-radius: 40%;
-          transition: background-color 300ms, border-radius 300ms;
-        }
-        &:active{
-          background-size: 34px;
-          transition: background-color 300ms, border-radius 300ms, background-size 200ms;
-        }
       }
       .touchslider-viewport{
         width: 280px;

@@ -5,7 +5,20 @@
         .touchslider-viewport
           %ul
             - lonuevo_productos.each do |lonuevo_producto|
-             asd
+              - producto = lonuevo_producto.producto
+              %li.touchslider-item
+                .imagen
+                  =link_to image_tag(producto.foto.url(:mediano)), m_producto_path(producto.slug)
+                %h5.marca
+                  = producto.marca.marca.upcase
+                %h5
+                  =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), m_producto_path(producto.slug)
+                %h5.precio
+                  $
+                  = producto.precio.to_i
+                - unless lonuevo_producto.descripcion.empty?
+                  %p
+                    = lonuevo_producto.descripcion
         %div.flechas
           %span.touchslider-prev
             =image_tag "mobile/flecha_izq.png"

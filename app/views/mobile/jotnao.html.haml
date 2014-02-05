@@ -12,9 +12,9 @@
             .imagen
               = image_tag 'mobile/home/2.png'
             %h5
-              LO MÁS NUEVO, LO MÁS HOT, DE LO QUE TODO EL MUNDO ESTÁ HABLANDO
-            %p.text-center
-              Acerca de la belleza seleccionado por nosotros para ti
+              Hot Now
+            %h5
+              ¡Que es lo mas hot esta temporada en sephora!
           - seccion_productos.each_with_index do |seccion_producto, i|
             - producto = seccion_producto.producto
             %li.touchslider-item
@@ -27,8 +27,6 @@
               %h5.precio
                 $
                 = producto.precio.to_i
-              -if mobileuser_signed_in?
-                =link_to "", m_favorited_path(producto.slug), {:class=>"favorite"}
       %div.flechas
         %span.touchslider-prev=image_tag"mobile/flecha_izq.png"
         %span.touchslider-next=image_tag"mobile/flecha_der.png"
