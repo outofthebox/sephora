@@ -49,27 +49,64 @@ class MobileController < ApplicationController
     @contenido = Seccion.seccion_actual(@seccion)
   end
   def favoritos
-    @productos = !current_mobileuser.favoritos.empty? ? Producto.find(JSON.parse(current_mobileuser.favoritos)) : nil
+    user = current_mobileuser
+
+    @productos = [];
+
+    json_favs = JSON.parse(user.favoritos)
+    json_favs.each do |f|
+      @productos << Producto.where(:upc => f["id"]).first;
+    end
   end
+  
   def favorite
     require 'json'
+    
     @user = current_mobileuser
+    
+    le_id = params[:id].scan(/\d+$/).first;
+
     if @user.favoritos.empty?
-      favs = "[#{params[:id]}]"
+      favs = [{:id => le_id}]
     else
-      favoritos = JSON.parse @user.favoritos
-      id_producto = params[:id].to_i
-      if (favoritos & [id_producto]).empty?
-        favs = (favoritos + [id_producto]).to_s
-      else
-        favs = favoritos
-      end
+      favs = JSON.parse @user.favoritos
+      favs << {:id => le_id}
     end
-    @user.favoritos = favs
+
+    @user.favoritos = favs.to_json
+    
     if @user.save
       redirect_to  m_favoritos_path
     else
       redirect_to  m_favoritos_path
     end
+
+  end
+
+  def unfavorite
+    require 'json'
+    
+    user = current_mobileuser
+    counter = 0;
+    le_id = params[:id].scan(/\d+$/).first;
+    le_product = Producto.find(le_id);
+    le_upc = le_product.upc;
+
+    favs = JSON.parse user.favoritos
+    favs.each do |f|
+      if(le_upc == f["id"]) 
+        favs.slice!(counter)
+      end
+      counter = counter + 1;
+    end
+
+    user.favoritos = favs.to_json
+    
+    if user.save
+      redirect_to  m_favoritos_path
+    else
+      redirect_to  m_favoritos_path
+    end
+
   end
 end
