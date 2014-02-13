@@ -19,6 +19,8 @@
                 - unless lonuevo_producto.descripcion.empty?
                   %p
                     = lonuevo_producto.descripcion
+                -if mobileuser_signed_in?
+                  =link_to "", m_favorited_path(producto.slug), {:class=>"favorite"}
         %div.flechas
           %span.touchslider-prev
             =image_tag "mobile/flecha_izq.png"
