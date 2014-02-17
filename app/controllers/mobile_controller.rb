@@ -3,6 +3,15 @@ class MobileController < ApplicationController
   def home
   end
 
+  def especialesmes
+    especialesmes = "case";
+    user = current_mobileuser
+    @unique = nil;
+    if(user.id <= 50) 
+      @unique = Digest::MD5.hexdigest(user.email+especialesmes);
+    end
+  end
+
   def mobilbusqueda
     params[:buscar][:q] = params[:buscar][:q].gsub(/\//, " ")
     @marcas_seleccionadas = params[:marca].split(",").map{|m| m.to_i } unless params[:marca].nil?

@@ -21,6 +21,15 @@ do_select = (vista) ->
       do_beauty();
     when "videos"
       do_videos();
+    when "especialesmes"
+      do_especialesmes();
+
+do_especialesmes = ->
+  text = "¡Felicidades!\n\nPresenta este codigo en la tienda para reclamar tu case de sephora\n\n Codigo: "
+  uni = $("#unique").val();
+  console.log typeof uni
+  if(uni != null && uni != "" && uni != " ")
+    alert(text+uni);
 
 do_lonuevo = ->
   jQuery ($) ->
