@@ -25,7 +25,7 @@ do_select = (vista) ->
       do_especialesmes();
 
 do_especialesmes = ->
-  text = "¡Felicidades!\n\nPresenta este codigo en la tienda para reclamar tu case de sephora\n\n Codigo: "
+  text = "¡Felicidades!\n\nPresenta este código en la tienda para reclamar tu case de sephora\n\n Código: "
   uni = $("#unique").val();
   console.log typeof uni
   if(uni != null && uni != "" && uni != " ")
