@@ -20,9 +20,9 @@
 }
 
 html, body{
-  // height:100%;
-  // width:100%;
-  // min-height: 100%;
+  height:100%;
+  width:100%;
+  min-height: 100%;
 }
 
 .header, .footer{
@@ -34,6 +34,8 @@ html, body{
   height: 60px;
   display: block;
   padding-top: 10px;
+  position: relative;
+  z-index: 100;
   ul{
     list-style: none;
     color: white;
@@ -355,7 +357,7 @@ html, body{
         }
       }
     }
-    &[vista="lonuevo"], &[vista="hotnow"]{
+    &[vista="lonuevo"], &[vista="hotnow"], &[vista="lomas"], &[vista="wallpaper"]{
       color: black;
       .touchslider{
         width: 95%;
@@ -442,6 +444,20 @@ html, body{
         }
       }
     }
+    &[vista="wallpaper"]{
+      width: 98%;
+      margin:auto;
+      height: 560px;
+      .touchslider{
+        width: 95%;
+        margin: auto;
+        position:relative;
+        height: 560px;
+        .touchslider-viewport{
+          height: 560px;
+        }
+      }
+    }
     .video{
       .columnas{
         display: block;
@@ -450,6 +466,7 @@ html, body{
     }
   }
 }
+
 
 .footer{ 
   ul{

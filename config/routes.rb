@@ -159,7 +159,6 @@ Sephora::Application.routes.draw do
   get 'mobile/busqueda', :to => 'mobile#mobileilbusqueda', :as => 'm_busqueda'
   get 'mobile/producto/:slug', :to => 'mobile#mobileproducto', :as => 'm_producto'
   get 'mobile/login', :to => 'mobile#login', :as => 'm_login'
-  get 'mobile/especiales', :to => 'mobile#especialesmes', :as => 'm_especiales'
   get 'mobile/beauty', :to => 'mobile#beauty', :as => 'm_beauty'
   get 'mobile/tiendas', :to => 'mobile#tiendas', :as => 'm_tiendas'
   get 'mobile/nuevo', :to => 'mobile#lonuevo', :as => 'm_nuevo'
@@ -168,7 +167,14 @@ Sephora::Application.routes.draw do
   get 'mobile/legal', :to => 'mobile#legales', :as => 'm_legal'
   get 'mobile/favorite/:id', :to => 'mobile#favorite', :as => 'm_favorited'
   get 'mobile/unfavorite/:id', :to => 'mobile#unfavorite', :as => 'm_unfavorited'
+
+  # especiales
+  get 'mobile/especiales', :to => 'mobile#especialesmes', :as => 'm_especiales'
   get 'mobile/wallpapers', :to => 'mobile#wallpapers', :as => 'm_wallpaper'
+  get 'mobile/giftcase', :to => 'mobile#giftcase', :as => 'm_giftcase'
+
+  
+  
   get 'mobile/lomas', :to => 'mobile#lomas', :as => 'm_lomas'
 
   

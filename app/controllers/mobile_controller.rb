@@ -3,7 +3,10 @@ class MobileController < ApplicationController
   def home
   end
 
-  def especialesmes
+  def especialmes
+  end
+
+  def giftcase
     especialesmes = "case";
     user = current_mobileuser
     @unique = nil;

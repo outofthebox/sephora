@@ -15,14 +15,24 @@ do_select = (vista) ->
   switch vista
     when "lonuevo"
       do_lonuevo();
+    when "lomas"
+      do_lomas();
     when "hotnow"
       do_hotnow();
     when "beauty"
       do_beauty();
     when "videos"
       do_videos();
-    when "especialesmes"
+    when "giftcase"
       do_especialesmes();
+    when "wallpaper"
+      do_wallpaper();
+
+
+do_wallpaper = ->
+  jQuery ($) ->
+    $(".touchslider").touchSlider mouseTouch: true
+      
 
 do_especialesmes = ->
   text = "¡Felicidades!\n\nPresenta este código en la tienda para reclamar tu case de sephora\n\n Código: "
@@ -30,6 +40,11 @@ do_especialesmes = ->
   console.log typeof uni
   if(uni != null && uni != "" && uni != " ")
     alert(text+uni);
+
+
+do_lomas = ->
+  jQuery ($) ->
+    $(".touchslider").touchSlider mouseTouch: true
 
 do_lonuevo = ->
   jQuery ($) ->
