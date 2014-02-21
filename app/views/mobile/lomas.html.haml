@@ -1,0 +1,23 @@
+#main{:vista=>"lonuevo"}
+  .newproductos
+    .touchslider
+      .touchslider-viewport
+        %ul
+          - @productos.each do |producto|
+            %li.touchslider-item
+              .imagen
+                =link_to image_tag(producto.foto.url(:mediano)), m_producto_path(producto.slug)
+              %h5.marca
+                = producto.marca.marca.upcase
+              %h5
+                =link_to (producto.nombre), m_producto_path(producto.slug)
+              %h5.precio
+                $
+                = producto.precio.to_i
+              -if mobileuser_signed_in?
+                =link_to "", m_favorited_path(producto.slug), {:class=>"favorite"}
+      %div.flechas
+        %span.touchslider-prev
+          =image_tag "mobile/flecha_izq.png"
+        %span.touchslider-next
+          =image_tag "mobile/flecha_der.png"

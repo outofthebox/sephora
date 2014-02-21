@@ -169,6 +169,8 @@ Sephora::Application.routes.draw do
   get 'mobile/favorite/:id', :to => 'mobile#favorite', :as => 'm_favorited'
   get 'mobile/unfavorite/:id', :to => 'mobile#unfavorite', :as => 'm_unfavorited'
   get 'mobile/wallpapers', :to => 'mobile#wallpapers', :as => 'm_wallpaper'
+  get 'mobile/lomas', :to => 'mobile#lomas', :as => 'm_lomas'
+
   
 
   #wishlist

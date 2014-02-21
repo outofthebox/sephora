@@ -50,13 +50,20 @@ class MobileController < ApplicationController
   def tiendas
     @tiendas = Tienda.all
   end
+  
   def lonuevo
     @lonuevo = Seccion.seccion_actual(Seccion.by_slug(:lonuevo))
   end
+  
   def jotnao
     @seccion = Seccion.by_slug(params[:seccion])
     @contenido = Seccion.seccion_actual(@seccion)
   end
+
+  def lomas
+    @productos = Producto.order("visto ASC").first(5);
+  end
+
   def favoritos
     user = current_mobileuser
 
