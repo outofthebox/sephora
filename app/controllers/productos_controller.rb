@@ -89,14 +89,15 @@ class ProductosController < ApplicationController
   def show
     @producto = Producto.includes(:marca, :presentaciones).publicados.where(:slug => params[:slug]).first
     visto = @producto.visto;
-
+    
     if(visto == nil) 
       visto = 1; 
     else 
-      visto += 1; 
+      visto = visto + 1; 
     end
     
-    @producto.update_attributes(:visto => visto);
+    Producto.update(@producto.id, {:visto=>visto})
+    
     @categoria = Categoria.find(@producto.categoria_id)
     @productos_relacionados = @categoria.productos.padres.publicados.where("productos.id != ?", @producto.id).sample(3)
   end
