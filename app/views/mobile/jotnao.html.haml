@@ -25,8 +25,7 @@
               %h5
                 =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), m_producto_path(producto.slug)
               %h5.precio
-                $
-                = producto.precio.to_i
+                = number_to_currency(producto.precio.to_i)
               -if mobileuser_signed_in?
                 =link_to "", m_favorited_path(producto.slug), {:class=>"favorite"}
       %div.flechas
