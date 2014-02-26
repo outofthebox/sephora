@@ -64,7 +64,7 @@ class MobileController < ApplicationController
   end
 
   def lomas
-    @productos = Producto.order("visto ASC").first(5);
+    @productos = Producto.order("visto DESC").first(5);
   end
 
   def favoritos
