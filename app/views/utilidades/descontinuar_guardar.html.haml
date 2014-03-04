@@ -1,0 +1,28 @@
+- if @data
+  - if @actualizado
+    %h3 ¡Precios actualizados con éxito!
+  %table{:border => "1", :cellpadding => "3"}
+    %thead
+      %tr
+        %th
+          UPC
+        %th
+          Producto
+        %th
+          Publicado
+    %tbody
+    - @data.each do |d|
+      %tr
+        %td
+          =d[:upc]
+        %td 
+          =d[:nombre]
+        %td 
+          -if d[:publicado]
+            %p{:style=>"color:#00CC00"} 
+              Publicado
+          -else
+            %p{:style=>"color:#CC0000"} 
+              No Publicado
+- else
+  = raise "error"

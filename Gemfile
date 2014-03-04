@@ -30,6 +30,7 @@ gem "oauth"
 gem 'acts-as-taggable-on'
 gem "disqus"
 gem "to_xls"
+gem "riddle"
 
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
 gem "jquery-rails", "~>1.0.19"

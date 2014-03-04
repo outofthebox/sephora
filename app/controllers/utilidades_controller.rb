@@ -168,6 +168,55 @@ class UtilidadesController < ApplicationController
     render :text => "Gracias por participar :)", :layout => false
   end
 
+  def descontinuar
+    require 'csv'
+    data = []
+    if params[:file]
+      Rails.cache.write('tmp_listaproductos', params[:file].tempfile.read)
+      tmp = Rails.cache.read('tmp_listaproductos')
+      
+      CSV.parse(tmp, :headers => true) do |row|
+        upc = row[0]
+        producto = Producto.where(:upc => upc).first;
+        if(producto)
+          data << producto
+        else
+          data << {:upc => upc, :nombre => "No Encontrado", :publicado => false}
+        end
+      end
+
+      @data = data
+    end
+  end
+
+  def descontinuar_guardar
+    require 'csv'
+    data = []
+    tmp = Rails.cache.read('tmp_listaproductos')
+    
+    productos = []
+
+    CSV.parse(tmp, :headers => true) do |row|
+      upc = row[0]
+      producto = Producto.where(:upc => upc).first;
+      if(producto)
+        data << producto
+        productos << producto
+      else
+        data << {:upc => upc, :nombre => "No Encontrado", :publicado => false}
+      end
+    end
+
+    productos.each do |p|
+      p.update_attributes(:publicado => false)
+    end
+    
+    @data = data
+    @actualizado = true
+
+    render :descontinuar
+  end
+
   def actprecios
     require 'csv'
     data = []
@@ -196,6 +245,8 @@ class UtilidadesController < ApplicationController
       @data = data
     end
   end
+
+
 
   def actprecios_guardar
     require 'csv'

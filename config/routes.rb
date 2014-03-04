@@ -33,7 +33,7 @@ Sephora::Application.routes.draw do
 
   get   'beautybloggers', :to => 'paginas#bloggers', :as => 'bloggers'
 
-  get   'busqueda', :to => 'productos#busqueda', :as => 'busqueda'
+  get   'busqueda', :to => 'productos#busqueda2', :as => 'busqueda'
 
   get   'secciones/:id/desvincular/:producto_seccion/:hash', :to => 'secciones#desvincular', :as => 'seccion_desvincular_producto'
   get   'secciones/:id/vincular/:v_id/editar', :to => 'secciones#producto_editar', :as => 'seccion_editar_producto'
@@ -53,10 +53,18 @@ Sephora::Application.routes.draw do
   get   'importarimg', :to => 'utilidades#importarimg'
   get   'imgmover', :to => 'utilidades#imgmover'
   get   'parsearparents', :to => 'utilidades#parsearparents'
+  
   get   'actprecios', :to => 'utilidades#actprecios'
   post  'actprecios', :to => 'utilidades#actprecios'
   get   'actprecios_save', :to => 'utilidades#actprecios_guardar', :as => 'actprecios_guardar'
   post  'actprecios_save', :to => 'utilidades#actprecios_guardar', :as => 'actprecios_guardar'
+
+
+  get   'descontinuar', :to => 'utilidades#descontinuar'
+  post  'descontinuar', :to => 'utilidades#descontinuar'
+  get   'descontinuar_save', :to => 'utilidades#descontinuar_guardar', :as => 'descontinuar_guardar'
+  post  'descontinuar_save', :to => 'utilidades#descontinuar_guardar', :as => 'descontinuar_guardar'
+  
   get   'updateupc', :to => 'utilidades#update_upc'
   get   'improd', :to => 'utilidades#improd'
   get   'cambiarnombres', :to => 'utilidades#cambiarnombres'

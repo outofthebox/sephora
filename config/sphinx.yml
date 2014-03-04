@@ -1,0 +1,7 @@
+development:
+  morphology: stem_en
+  port: 9312
+  bin_path: "/usr/bin"             # set up the path to binary for searchd
+  searchd_binary_name: searchd
+  indexer_binary_name: indexer
+  #mem_limit: 128M
