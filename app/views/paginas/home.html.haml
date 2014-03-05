@@ -3,31 +3,15 @@
 - provide :url, "http://sephora.com.mx"
 - provide :imagen, 'http://sephora.com.mx/logo.png'
 #slider-home.full
-  #producto.tcell.t25.middle
-    %ul.nobullet.nolist.home
-      - seccion_productos = @contenido.producto_seccion.limit(6)
-      - seccion_productos.each do |seccion_producto|
-        - producto = seccion_producto.producto
-        %li
-          .producto-imagen
-            =image_tag 'home/hotnow.jpg'
-            %br
-            =link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
-          %p.producto-info
-            = producto.marca.marca
-          %p.producto-p
-            =producto.nombre_real.empty? ? producto.nombre : producto.nombre_real
-  #poster.tcell.t75
+  #poster.tcell.full
+    .prox.jesus
+    .ante.jesus
     .contenedor
-      .prox.jesus
-        %p
-      .ante.jesus
-        %p
       .slider
-        %a.diapositiva{:href=> "http://sephora.com.mx/fraganciassanvalentin?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=FraganciasSanValentin"}
-          =image_tag "home/home_banner1.jpg"
-        %a.diapositiva{:href=> "http://sephora.com.mx/hotnow?utm_source=SitioWeb&utm_medium=Banner2&utm_campaign=HotNowMarzo"}
-          =image_tag "home/home_banner3.jpg"
+        %a.diapositiva.first.visible{:href=> "http://sephora.com.mx/mascaras?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=Mascaras"}
+          =image_tag "home/banners/960/banner_1.jpg"
+        %a.diapositiva.last{:href=> "http://sephora.com.mx/hotnow?utm_source=SitioWeb&utm_medium=Banner2&utm_campaign=HotNowMarzo"}
+          =image_tag "home/banners/960/banner_2.jpg"
 #separador
   %p.linksrapidos
     LINKS RÁPIDOS:
@@ -77,6 +61,20 @@
             - unless lonuevo_producto.descripcion.empty?
               %p
                 = lonuevo_producto.descripcion
+  #hotnow
+    %h3.ht_div HOT NOW
+    #slider-wrap
+      %ul.nobullet.nolist#hotnow.jcarousel-skin-tango
+        - seccion_productos = @contenido.producto_seccion.limit(6)
+        - seccion_productos.each do |seccion_producto|
+          - producto = seccion_producto.producto
+          %li
+            .imagen
+              =link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
+            %h5.marca
+              = producto.marca.marca.upcase
+            %h5
+              =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), producto_ver_path(producto.slug)
 #esta-semana
   .table.full
     .tcell.t50
@@ -84,7 +82,7 @@
         =image_tag "home/2down.jpg"
     .tcell.t50
       %a{ :href => "http://sephora.com.mx/tiendas" }
-        =image_tag "home/1down.jpg"
+        =image_tag "home/banners/inferior/izquierdo.jpg"
 - unless mobile_device?
   #mod
     %a.close{:href=>"#"}

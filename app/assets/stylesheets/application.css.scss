@@ -6,8 +6,8 @@
 // = require jquery.ui.all
 // = require redactor
 // = require tango
-$withslider: 760px;
-$slides: 3;
+$withslider: 960px;
+$slides: 2;
 
 img { margin: 0; padding: 0; }
 @media screen and (max-width: 1180px) {
@@ -799,38 +799,76 @@ ul.breadcrumbs{
           width: $withslider;
           overflow: hidden;
           position: relative;
+          height: 399px;
         .slider {
-            width: $withslider*$slides;
+            width: $withslider * $slides;
             font-size: 0;
             position: relative;
           .diapositiva {
+            opacity: 1;
             display: inline;
+            transition: opacity 500ms;
+            &.visible{
+              opacity: 1;
+              transition: opacity 500ms;
+            }
           }
         }
       }
     }
   }
 .prox, .ante {
-  width: 48px;
-  height: 118px;
+  width: 35px;
+  top:373px;
   position: absolute;
-  p {
-    font-size: 12pt;
-    padding-top: 85px;
-    text-align: center;
+  background: #000;
+  height: 29px;
+  &:after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 0px solid transparent;
+    border-bottom: 13px solid transparent;
+    bottom: -13px;
+  }
+  &:before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    display: block;
+    border-top: 7px solid transparent;
+    border-bottom: 8px solid transparent;
+    top: 7px;
+    left: 10px;
   }
 }
 .prox {
-  background: image-url('home/flechader.png');
-  margin-top: 125px;
-  margin-left: 712px;
+  right: -22px;
   z-index: 1000;
+  &:after{
+    border-left: 21px solid #666;
+    right: 0px;
+    z-index: 1;
+  }
+  &:before{
+    border-left: 15px solid #FFF;
+    z-index: 1;
+  }
 }
 .ante {
-  background: image-url('home/flechaizq.png');
-  margin-top: 125px;
-  margin-left: 0;
+  left: -21px;
   z-index: 1000;
+  &:after{
+    border-right: 21px solid #666;
+    left: 0px;
+    z-index: 1;
+  }
+  &:before{
+    border-right: 15px solid #FFF;
+    z-index: 1;
+  }
 }
 
   .linksrapidos {
@@ -847,8 +885,20 @@ ul.breadcrumbs{
       text-decoration: underline;
     }
   }
-
-  #best-sellers, #lo-nuevo {
+  #hotnow{
+    position:relative;
+    .imagen{
+      height: 140px !important;
+      img{
+        max-height: 135px;
+      }
+    }
+    #slideleft, #slideright{
+      position:absolute;
+      top:280px;
+    }
+  }
+  #hotnow, #best-sellers, #lo-nuevo {
     padding-top: 20px;
     text-align: center;
     margin-bottom: 20px;
@@ -862,6 +912,17 @@ ul.breadcrumbs{
       font-family: 'Avant', Helvetica, Arial;
       letter-spacing: 1px;
       font-size: 2.5em;
+      margin-bottom: 30px;
+      &.ht_div{
+        background:url(home/hn_seccion_div.png) center center no-repeat transparent;
+        width: 960px;
+        height: 160px;
+        display: block;
+        text-align: left;
+        text-indent: -1000px;
+        overflow: hidden;
+        margin-bottom: 30px;
+      }
     }
     h5 a{
       font-weight: lighter;
@@ -954,9 +1015,10 @@ ul.breadcrumbs{
     }
     img {
       margin: 15px;
-      -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-      -moz-box-shadow:    0px 0px 15px rgba(0, 0, 0, 0.2);
-      box-shadow:         0px 0px 15px rgba(0, 0, 0, 0.2);
+      margin: 15px;
+      -webkit-box-shadow: 0px 0px 20px -7px #333;
+      -moz-box-shadow: 0px 0px 20px -7px #333;
+      box-shadow: 0px 0px 20px -7px #333;
     }
     ul {
       height: 390px;
