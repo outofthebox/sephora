@@ -33,7 +33,8 @@ Sephora::Application.routes.draw do
 
   get   'beautybloggers', :to => 'paginas#bloggers', :as => 'bloggers'
 
-  get   'busqueda', :to => 'productos#busqueda2', :as => 'busqueda'
+  get   'busqueda', :to => 'productos#busqueda', :as => 'busqueda'
+  get   'busqueda2', :to => 'productos#busqueda2', :as => 'busqueda'
 
   get   'secciones/:id/desvincular/:producto_seccion/:hash', :to => 'secciones#desvincular', :as => 'seccion_desvincular_producto'
   get   'secciones/:id/vincular/:v_id/editar', :to => 'secciones#producto_editar', :as => 'seccion_editar_producto'
