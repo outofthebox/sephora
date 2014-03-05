@@ -17,6 +17,9 @@
   %meta{:content => yield(:imagen), :property => "og:image"}
   = stylesheet_link_tag :mobile
   = csrf_meta_tags
+  = favicon_link_tag 'mobile/iconos/76x76.png', :rel => 'apple-touch-icon', :sizes => "76x76", :type => 'image/png'
+  = favicon_link_tag 'mobile/iconos/120x120.png', :rel => 'apple-touch-icon', :sizes => "120x120", :type => 'image/png'
+  = favicon_link_tag 'mobile/iconos/152x152.png', :rel => 'apple-touch-icon', :sizes => "152x152", :type => 'image/png'
 %body{:style => ""}
   .header
     %ul

@@ -51,7 +51,7 @@ class MobileController < ApplicationController
   end
 
   def tiendas
-    @tiendas = Tienda.all
+    @tiendas = Tienda.order("updated_at DESC")
   end
   
   def lonuevo
@@ -64,7 +64,7 @@ class MobileController < ApplicationController
   end
 
   def lomas
-    @productos = Producto.order("visto DESC").first(5);
+    @productos = Producto.order("visto DESC").first(20);
   end
 
   def favoritos
