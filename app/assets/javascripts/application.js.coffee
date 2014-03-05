@@ -61,7 +61,7 @@ $("#vermascat").on "click", (e) ->
   $(this).parent("li").hide()
 
 jQuery(document).ready ->
-  jQuery("#lonuevo, #bestsellers").jcarousel
+  jQuery("#lonuevo, #bestsellers, #hotnow").jcarousel
     visible: 5
     buttonNextHTML: '<p id="slideright"></p>'
     buttonPrevHTML: '<p id="slideleft"></p>'
@@ -84,41 +84,68 @@ intervalID = setInterval(->
 
 count = 1
 slides = $(".diapositiva").size()
-width = 760
+width = 960
+height = 399
 counter = '/' + slides
+current = $(".diapositiva.visible");
+first = $(".diapositiva.first");
+last = $(".diapositiva.last");
+console.log(current.next().size(), current.prev().size());
+
 $(".prox p").text('1' + counter)
+
 $(".prox.jesus").live "click", ->
   clearInterval intervalID
+
   intervalID = setInterval(->
     rotate()
   , 5000)
+
   $(this).removeClass('jesus')
+  
+  if(current.next().size() > 0)
+    current.removeClass("visible");
+    current = current.next();
+    current.addClass("visible");
+  else
+    current.removeClass("visible");
+    current = first;
+    current.addClass("visible")
+
   if $(".slider").css('margin-left') == '-'+width*(slides-1)+'px'
-    $(".slider").stop().animate {"margin-left": "+="+(slides-1)+"00%"}, "slow", ->
+    $(".slider").stop().animate {"margin-left": "+="+width}, "slow", ->
       $(".prox").addClass('jesus')
     count = 1
-    $(".prox p").text(count + counter)
   else
-    $(".slider").stop().animate {"margin-left": "-=100%"}, "slow", ->
+    $(".slider").stop().animate {"margin-left": "-="+width}, "slow", ->
       $(".prox").addClass('jesus')
     count = count + 1
-    $(".prox p").text(count + counter)
+
 $(".ante.jesus").live "click", ->
   clearInterval intervalID
+  
   intervalID = setInterval(->
     rotate()
   , 5000)
+
+  if(current.next().size() > 0)
+    current.removeClass("visible");
+    current = current.next();
+    current.addClass("visible");
+  else
+    current.removeClass("visible");
+    current = first;
+    current.addClass("visible")
+
   $(this).removeClass('jesus')
   if $(".slider").css('margin-left') == '0px'
-    $(".slider").stop().animate {"margin-left": "-="+(slides-1)+"00%"}, "slow", ->
+    $(".slider").stop().animate {"margin-left": "-="+width}, "slow", ->
       $(".ante").addClass('jesus')
     count = slides
-    $(".prox p").text(count + counter)
   else
-    $(".slider").stop().animate {"margin-left": "+=100%"}, "slow", ->
+    $(".slider").stop().animate {"margin-left": "+="+width}, "slow", ->
       $(".ante").addClass('jesus')
     count = count - 1
-    $(".prox p").text(count + counter)
 
 #Popup
 path = window.location.pathname
