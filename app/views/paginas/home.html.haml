@@ -13,12 +13,10 @@
             =image_tag 'home/hotnow.jpg'
             %br
             =link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
-          .producto-info
-            %p
-              = producto.marca.marca
-            .producto-p
-              %p
-                =producto.nombre_real.empty? ? producto.nombre : producto.nombre_real
+          %p.producto-info
+            = producto.marca.marca
+          %p.producto-p
+            =producto.nombre_real.empty? ? producto.nombre : producto.nombre_real
   #poster.tcell.t75
     .contenedor
       .prox.jesus
@@ -28,7 +26,7 @@
       .slider
         %a.diapositiva{:href=> "http://sephora.com.mx/fraganciassanvalentin?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=FraganciasSanValentin"}
           =image_tag "home/home_banner1.jpg"
-        %a.diapositiva{:href=> "/hotnow"}
+        %a.diapositiva{:href=> "http://sephora.com.mx/hotnow?utm_source=SitioWeb&utm_medium=Banner2&utm_campaign=HotNowMarzo"}
           =image_tag "home/home_banner3.jpg"
 #separador
   %p.linksrapidos

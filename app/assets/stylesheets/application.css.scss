@@ -760,7 +760,7 @@ ul.breadcrumbs{
         text-align:center;
         img{
           margin:0;
-          padding:0;
+          padding:10px 0;
         }
       }
     ul {
@@ -777,18 +777,19 @@ ul.breadcrumbs{
         background: white;
       }
     }
-      .producto-info{
+      .producto-p{
+        font-weight: lighter;
+        font-family: "Avant", Arial, sans-serif;
         font-size: 1em;
-        h4{
-          color:gray;
-          font-weight: 100;
-        }
-        .producto-p{
-          border-top:2px solid #918F90;
-          p{
-            font-size:1em;
-          }
-        }
+        letter-spacing: 1px;
+        line-height: 1.3em;
+      }
+      .producto-info{
+        font-family: Arial, sans-serif;
+        font-size: 13pt;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-transform: uppercase;
       }
     }
     #poster {
