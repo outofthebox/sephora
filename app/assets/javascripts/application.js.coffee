@@ -99,7 +99,7 @@ $(".prox.jesus").live "click", ->
 
   intervalID = setInterval(->
     rotate()
-  , 5000)
+  , 9000)
 
   $(this).removeClass('jesus')
   
@@ -126,7 +126,7 @@ $(".ante.jesus").live "click", ->
   
   intervalID = setInterval(->
     rotate()
-  , 5000)
+  , 9000)
 
   if(current.next().size() > 0)
     current.removeClass("visible");
