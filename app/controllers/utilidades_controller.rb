@@ -178,18 +178,22 @@ class UtilidadesController < ApplicationController
     
       if(params[:descontinuar])
         @data = []
+        upcs = []
+        producto = []
         CSV.parse(tmp, :headers => true) do |row|
           upc = row[0]
-          producto = Producto.where(:upc => upc).first
-          if(producto != nil)
-            puts "[-- Producto Info --]"
-            puts producto.inspect
-            
-            producto.update_attributes(:publicado => false)
+          upcs << upc;
+        end
 
-            @data <<  producto
+        productos = Producto.where(:upc =>upcs, :publicado => true);
 
-          end
+        productos.each do |p|
+          puts "[-- Producto Info --]"
+          puts p.pluck(:id)
+
+          p.update_attributes(:publicado => false)
+
+          @data <<  p
         end
 
         render :descontinuar_guardar
