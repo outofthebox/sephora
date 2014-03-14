@@ -170,51 +170,30 @@ class UtilidadesController < ApplicationController
 
   def descontinuar
     require 'csv'
-    data = []
+
     if params[:file]
       Rails.cache.write('tmp_listaproductos', params[:file].tempfile.read)
       tmp = Rails.cache.read('tmp_listaproductos')
-      
-      CSV.parse(tmp, :headers => true) do |row|
-        upc = row[0]
-        producto = Producto.where(:upc => upc).first;
-        if(producto)
-          data << producto
-        else
-          data << {:upc => upc, :nombre => "No Encontrado", :publicado => false}
+    
+      if(params[:descontinuar])
+        @data = []
+        CSV.parse(tmp, :headers => true) do |row|
+          upc = row[0]
+          producto = Producto.where(:upc => upc).first;
+          if(producto != nil)
+            producto.update_attributes(:publicado => false);
+            @data <<  producto;
+          end
         end
-      end
 
-      @data = data
+
+        render :descontinuar_guardar
+      end
     end
+
   end
 
   def descontinuar_guardar
-    require 'csv'
-    data = []
-    tmp = Rails.cache.read('tmp_listaproductos')
-    
-    productos = []
-
-    CSV.parse(tmp, :headers => true) do |row|
-      upc = row[0]
-      producto = Producto.where(:upc => upc).first;
-      if(producto)
-        data << producto
-        productos << producto
-      else
-        data << {:upc => upc, :nombre => "No Encontrado", :publicado => false}
-      end
-    end
-
-    productos.each do |p|
-      p.update_attributes(:publicado => false)
-    end
-    
-    @data = data
-    @actualizado = true
-
-    render :descontinuar
   end
 
   def actprecios
