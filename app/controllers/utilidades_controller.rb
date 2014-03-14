@@ -189,8 +189,8 @@ class UtilidadesController < ApplicationController
 
         productos.each do |p|
           puts "[-- Producto Info --]"
-          puts p.pluck(:id)
-
+          puts p.id
+          
           p.update_attributes(:publicado => false)
 
           @data <<  p
