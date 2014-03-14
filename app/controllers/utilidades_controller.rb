@@ -1,5 +1,6 @@
 class UtilidadesController < ApplicationController
   http_basic_authenticate_with :name => ENV['U'], :password => ENV['P']
+  skip_before_filter :verify_authenticity_token, :only => [:descontinuar]
   
 
   def search
@@ -179,13 +180,17 @@ class UtilidadesController < ApplicationController
         @data = []
         CSV.parse(tmp, :headers => true) do |row|
           upc = row[0]
-          producto = Producto.where(:upc => upc).first;
+          producto = Producto.where(:upc => upc).first
           if(producto != nil)
-            producto.update_attributes(:publicado => false);
-            @data <<  producto;
+            puts "[-- Producto Info --]"
+            puts producto.inspect
+            
+            producto.update_attributes(:publicado => false)
+
+            @data <<  producto
+
           end
         end
-
 
         render :descontinuar_guardar
       end
