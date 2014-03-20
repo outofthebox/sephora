@@ -11,13 +11,13 @@
   - if current_page?('/')
     %title Sephora México
     %meta{:name => "title", :content => "Sephora México"}
-    %meta{:name => "robots", :content => "index, nofollow"}
   -else
     %title
       #{"#{yield(:titulo)} | " if content_for?(:titulo)} Sephora
     %meta{:name => "title", :content => "#{yield(:titulo)} | Sephora México"}
   %meta{:name => "description", :content => yield(:descripcion)}
   %meta{:name => "keywords", :content => yield(:keywords)}
+  %meta{:name => "robots", :content => "index, nofollow"}
   
   / ## -- OG
   %meta{:property => "og:title", :content => yield(:titulo)}
