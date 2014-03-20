@@ -113,9 +113,46 @@ ul.categorias {
 		padding-bottom:30px;
 		border-bottom:1px solid black;
     position: relative;
-		img{
-			margin-bottom: 20px; max-width: 700px;
-		}
+    .banner{
+      display: block;
+      position: relative;
+  		img{
+  			margin-bottom: 20px; 
+        max-width: 700px;
+        display: block;
+        position: relative;
+  		}
+      &:after{
+        content: '';
+        height: 20px;
+        width: 350px;
+        background-color: transparent;
+        position: absolute;
+        bottom: 3px;
+        z-index: -1;
+        transform: rotate(-1deg);
+        -moz-transform: rotate(-1deg);
+        -ms-transform: rotate(-1deg);
+        -webkit-transform: rotate(-1deg);
+        box-shadow: 0px 0px 41px -2px;
+        left: 0;
+      }
+      &:before{
+        content: '';
+        height: 20px;
+        width: 350px;
+        background-color: transparent;
+        position: absolute;
+        bottom: 3px;
+        z-index: -1;
+        transform: rotate(1deg);
+        -moz-transform: rotate(1deg);
+        -ms-transform: rotate(1deg);
+        -webkit-transform: rotate(1deg);
+        box-shadow: 0px 0px 41px -2px;
+        right: 0;
+      }
+    }
 		h1{
 			font-size: 30px;
 			line-height: 1.2em;
@@ -180,9 +217,10 @@ ul.categorias {
 		}
     ul.tags{
       padding:0;
-      margin:10px 0;
+      margin:20px 0 10px 0;
       font-size: 12px;
       font-family: sans-serif;
+      max-width: 590px;
       li{
         display: inline-block;
         position:relative;

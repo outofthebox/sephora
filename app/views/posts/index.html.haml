@@ -1,3 +1,8 @@
+= provide(:titulo, "El Blog de Sephora!")
+= provide(:descripcion, "")
+= provide(:keywords, "")
+= provide(:url, url_for(:only_path => false))
+
 #view{:vista => "index"}
   -if params[:tag]
     %h3.banner.tag
@@ -6,16 +11,17 @@
 
   - @posts.each do|post| 
     - stats = stats(post.id);
-    %div.post{:id=>"post-"+post.id.to_s}
-      = link_to (image_tag post.imagen(:grande)), post_path(post)
-      %h1 
+    %div.post{:id=>"post-"+post.id.to_s, :itemscope => "", :itemtype => "http://schema.org/Article"}
+      .banner
+        = link_to (image_tag post.imagen(:grande), :itemprop=>"image"), post_path(post)
+      %h1{:itemprop=>"name"}
         %span
           - if stats.categorias.count > 0
             = stats.categorias[0].categoria
           - else
             Sephora
         =  " - " + post.title
-      %p
+      .contenido{:itemprop=>"description"}
         = post.extracto.html_safe
       %ul.tools
         %li.fecha
@@ -35,7 +41,7 @@
         /   %i
         /   = stats.love.count
       %ul.tags
-        %li.tag
+        %li.tag{:itemprop=>"keywords"}
           %i
           Tags:
         - stats.tags.each do |tag|

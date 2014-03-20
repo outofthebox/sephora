@@ -6,22 +6,44 @@
   <!--[if gt IE 8]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
 %head
   %meta{:charset => "UTF-8"}
+  
+  / ## -- Meta
   - if current_page?('/')
     %title Sephora México
-    %meta{:content => "Sephora México", :property => "og:title"}
-    %meta{:name => "robots", :content => "noindex"}
+    %meta{:name => "title", :content => "Sephora México"}
+    %meta{:name => "robots", :content => "index, nofollow"}
   -else
     %title
       #{"#{yield(:titulo)} | " if content_for?(:titulo)} Sephora
-    %meta{:content => "#{yield(:titulo)} | Sephora México", :property => "og:title"}
-  %link{ :rel => "shortcut icon", :href => "/favicon.ico", :type => "image/x-icon"}/
+    %meta{:name => "title", :content => "#{yield(:titulo)} | Sephora México"}
   %meta{:name => "description", :content => yield(:descripcion)}
-  %meta{:content => yield(:url), :property => "og:url"}
-  %meta{:content => "Sephora México", :property => "og:site_name"}
-  %meta{:content => yield(:imagen), :property => "og:image"}
+  %meta{:name => "keywords", :content => yield(:keywords)}
+  
+  / ## -- OG
+  %meta{:property => "og:title", :content => yield(:titulo)}
+  %meta{:property => "og:description", :content => yield(:descripcion)}
+  %meta{:property => "og:image", :content => yield(:imagen)}
+  %meta{:property => "og:url", :content => yield(:url)}
+  %meta{:property => "og:site_name", :content => yield(:titulo)}
+
+  / ## -- FC
+  %meta{:name => "DC.Title", :content => yield(:titulo)}
+  %meta{:name => "DC.Creator", :content => "Sephora México"}
+  %meta{:name => "DC.Subject", :content => yield(:extracto)}
+  %meta{:name => "DC.Description", :content => yield(:descripcion)}
+  %meta{:name => "DC.Publisher", :content => "Sephora México"}
+  %meta{:name => "DC.Contributor", :content => "Out of the Box"}
+  %meta{:name => "DC.Type", :content => "HTML"}
+  %meta{:name => "DC.Format", :content => "HTML"}
+  %meta{:name => "DC.Identifier", :content => "SephoraBlog"}
+  %meta{:name => "DC.Language", :content => "ES"}/
+
+  
+  %link{ :rel => "shortcut icon", :href => "/favicon.ico", :type => "image/x-icon"}/
   = javascript_include_tag :modernizr
   = stylesheet_link_tag "posts"
   = csrf_meta_tags
+
   %meta{:content => "qCft4n7tHfODiCl-UWgEd_uquba_MLlevA9txPjkYkk", :name => "google-site-verification"}
 %body
   #fb-root
@@ -262,10 +284,6 @@
             .footer-boton
               %a{:href => '/tiendas'} Descúbrelos
           .tcell.t30
-            %p.pad
-              DESCARGA<br />EL CATÁLOGO ONLINE
-            .footer-boton
-              %a{:href => 'http://www.pollock.mx/Flipbook/index.html', :target => '_blank'} Descarga aquí
       #sephora-en
         %p
           SEPHORA en:

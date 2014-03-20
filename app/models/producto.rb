@@ -1,10 +1,13 @@
 class Producto < ActiveRecord::Base
-    paginates_per 20
+  acts_as_taggable
+  
+  paginates_per 20
   validate :validar
 
   belongs_to :marca
   belongs_to :categoria
   belongs_to :wishlist
+
   has_many :presentaciones, :class_name => "Producto", :foreign_key => "parent_id"
 
   attr_accessible :id, :nombre, :nombre_real, :sku, :upc, :parent_id, :precio, :descripcion, :ingredientes, :usos, :publicado, :marca_id, :categoria_id, :uso_id, :foto, :image_code, :personalidad, :visto
@@ -33,8 +36,10 @@ class Producto < ActiveRecord::Base
   end
 
   def validar
-    errors.add :precio, "Escribe un precio" unless self.precio.to_i > 0
-    errors.add :upc, "Proporciona el UPC " unless self.upc.parameterize.length > 2
+    if new_record?
+      errors.add :precio, "Escribe un precio" unless self.precio.to_i > 0
+      errors.add :upc, "Proporciona el UPC " unless self.upc.parameterize.length > 2
+    end
   end
 
   def nombre
@@ -72,6 +77,23 @@ class Producto < ActiveRecord::Base
 
   def self.by_slug slug
     self.where(:slug => slug).first
+  end
+
+  def json_ld
+    js = {
+      :"@context" => "http://schema.org",
+      :"@type" => "Product",
+      :"name" => self.nombre,
+      :"image" => self.foto.url(:normal),
+      :"description" => self.descripcion[0..160].html_safe+"...",
+      :"brand" => {
+        :"@type" => "Brand",
+        :"name" => self.marca.marca,
+        :"logo" => self.marca.logo.url(:grande)
+      }
+    }
+
+    return js
   end
 
   def self.rangodeprecios cual=nil

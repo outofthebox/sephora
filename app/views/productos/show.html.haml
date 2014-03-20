@@ -1,8 +1,14 @@
 - provide :titulo, @producto.marca.marca + " - " + @producto.nombre.split(' ').map {|w| w.capitalize }.join(' ')
-- provide :url, "http://sephora.com.mx/producto/#{@producto.slug}"
+- provide(:url, url_for(:only_path => false))
 - provide :imagen, @producto.foto.url(:normal)
+- provide(:keywords, @producto.tags.map(&:name).join(', '))
+
+:javascript
+  #{@producto.json_ld}
+
 -unless @producto.descripcion.nil?
-  - provide :descripcion, @producto.descripcion.html_safe[0..160]
+  - provide :descripcion, strip_tags(@producto.descripcion[0..160]+"...")
+
 %section#producto
   - if can? :edit, @producto
     = link_to "Editar", edit_producto_path(@producto.id)
@@ -24,10 +30,10 @@
           %br
           **La venta on-line no está actualmente disponible en México; visita nuestras tiendas para buscar tus productos favoritos.
 
-    .derecha.tcell.t65
-      .marca
+    .derecha.tcell.t65{}
+      .marca{:itemprop=>"brand", :itemscope=>"", :itemtype=>"http://schema.org/Brand"}
         - unless @producto.marca.logo_file_size.nil?
-          = image_tag @producto.marca.logo.url(:grande)
+          = image_tag @producto.marca.logo.url(:grande), {:itemprop => "logo"}
       .info
         %span.marcab
           =@producto.marca.marca
