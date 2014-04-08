@@ -275,6 +275,12 @@ ul.breadcrumbs{
         height: 17px;
         background-image: image-url('it_icon.png');
       }
+      &.pi {
+        width: 19px;
+        height: 19px;
+        background-image: url(/assets/pinterest_icon.png);
+        background-size: contain;
+      }
     }
   }
   .search {
