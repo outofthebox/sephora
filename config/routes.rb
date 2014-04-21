@@ -238,6 +238,7 @@ Sephora::Application.routes.draw do
   #tabs
 
   get "tabs/sephoragifts", :to => "tabs#sephoragifts", :as => "sephoragifts"
+  post "tabs/sephoragifts", :to => "tabs#sephoragifts", :as => "sephoragifts"
 
 
   #blog
