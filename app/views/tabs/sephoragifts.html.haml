@@ -3,8 +3,12 @@
 - provide :imagen, "http://sephora.com.mx"+ image_path('sephoragifts/tab_icon.png')
 - provide :descripcion, 'Descubre los fabulosos obsequios que tenemos para ti.'
 #sephoragifts
-  =image_tag 'sephoragifts/cabecera.jpg'
-  =image_tag 'sephoragifts/birthday2.jpg'
-  = link_to image_tag('sephoragifts/share.png'), "http://sephora.com.mx/sephoragifts", :id => "share"
-  =image_tag 'sephoragifts/sweet_treats_2.jpg'
-  = link_to image_tag('sephoragifts/share.png'), "http://sephora.com.mx/sephoragifts", :id => "share"
+  %header 
+    = image_tag 'sephoragifts/cabecera.jpg'
+  %section 
+    %article 
+      = image_tag 'sephoragifts/birthday2.jpg', :class=>"banner"
+      = link_to image_tag('sephoragifts/share.png'), "http://sephora.com.mx/sephoragifts", :class => "share pull-right"
+    %article 
+      = image_tag 'sephoragifts/sweet_treats_2.jpg', :class=>"banner"
+      = link_to image_tag('sephoragifts/share.png'), "http://sephora.com.mx/sephoragifts", :class => "share pull-right"

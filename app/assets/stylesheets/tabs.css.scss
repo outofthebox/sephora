@@ -1,3 +1,40 @@
 // Place all the styles related to the tabs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//= require bootstrap
+
+#wrapper{
+	background-image: url("sephora_tips/whitenoise.png") !important;
+	background-color:white;
+	width: 810px;
+	display: block;
+	margin:0;
+}
+
+#contenido{
+	width: 810px;
+	display: block;
+	margin:auto;
+}
+
+
+// --- Sephora Gifts ---
+
+#sephoragifts{
+	width:794px;
+	margin:auto;
+	display:block;
+	section{
+		article{
+			.banner{
+				margin:10px auto;
+				display: block; 
+			}
+			.share{
+				margin:5px 0 10px 0;
+				display: block;
+			}
+		}
+	}
+}
