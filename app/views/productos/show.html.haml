@@ -29,6 +29,8 @@
           *Precios pueden variar sin previo aviso, precios finales disponibles en tienda.
           %br
           **La venta on-line no está actualmente disponible en México; visita nuestras tiendas para buscar tus productos favoritos.
+      .banners-animaciones
+        =link_to image_tag("colecciones/fragancias_top.jpg"), "http://sephora.com.mx/categoria/fragancias?utm_source=SitioWeb&utm_medium=BannerProducto&utm_campaign=Fragancias", {:class => "img_cont"}
 
     .derecha.tcell.t65{}
       .marca{:itemprop=>"brand", :itemscope=>"", :itemtype=>"http://schema.org/Brand"}
@@ -85,7 +87,7 @@
             - @productos_relacionados.each do |producto|
               %li
                 = link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
-                %h4 #{producto.marca.marca}
+                %h5.prd_marca #{producto.marca.marca}
                 %h4 #{link_to producto.nombre, producto_ver_path(producto.slug)}
                 %p #{number_to_currency producto.precio, :precision => 0}
   %p.small
