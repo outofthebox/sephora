@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140226175556) do
+ActiveRecord::Schema.define(:version => 20140508160159) do
 
   create_table "blog_categorias", :force => true do |t|
     t.string   "categoria"
@@ -100,6 +100,17 @@ ActiveRecord::Schema.define(:version => 20140226175556) do
     t.text     "comentario"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "landings", :force => true do |t|
+    t.integer  "marca_id"
+    t.string   "link"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.string   "banner_file_name"
+    t.string   "banner_content_type"
+    t.integer  "banner_file_size"
+    t.datetime "banner_updated_at"
   end
 
   create_table "marca_productos", :force => true do |t|

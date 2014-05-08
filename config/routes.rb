@@ -247,6 +247,17 @@ Sephora::Application.routes.draw do
   post '/posts/:id/comment', :to => 'posts#comment', :as => 'comment_post'
   post 'posts/:id/ranking', :to => 'posts#ranking', :as => 'ranking_post'
 
+
+  
+  resources :landings
+  scope path: :administracion, as: "admin" do
+    resources :landings, except: :index
+
+    match 'landings', to: 'administracion#landings', via: :get
+  end
+
+
+
   # última línea, hace match con el resto de las rutas y muestra 404
   match  '*a', :to => 'paginas#error_404'
 end

@@ -1,0 +1,19 @@
+.row-fluid
+	.col-xs-12.col-md-12.col-lg-12
+		= form_for @landing, :html => {:role => "form", :class=>"form"} do |f|
+			.form-group
+				= f.label :banner, "Banner"
+				= f.file_field :banner
+			.form-group
+				= f.label :link, "Link"
+				= f.text_field :link, {:class=>"form-control"}
+			.form-group
+				%select#marcas{:name => "landing[marca_id]"} 
+					= @marcas.each do |m|
+						%option{:value => m.id, :"data-imagesrc" => m.logo.inspect, :"data-description" => m.descripcion[0..100]} 
+							= m.marca
+				=f.hidden_field :marca_id
+			.btn-group.text-center
+				= f.submit :class => "btn btn-black"
+				%a#btnSubmit.btn.btn-danger{:href=>admin_landings_path} Cancelar
+		.clearfix

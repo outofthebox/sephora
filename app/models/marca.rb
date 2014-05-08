@@ -16,6 +16,8 @@ class Marca < ActiveRecord::Base
   has_many :marca_producto
   has_many :featured, :through => :marca_producto, :class_name => "Producto", :source => :producto
 
+  has_one :landing
+
   validate :validar
   
   before_save do

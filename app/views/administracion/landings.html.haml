@@ -1,0 +1,29 @@
+#main{:vista=>"landings"}
+	.bs-docs-section.col-12.col-md-12.col-lg-12{:role => "main"}
+		.page-header
+			%h2#btn-groups
+				%i.glyphicon.glyphicon.glyphicon-asterisk
+				Landings
+				= link_to "New Landing", new_admin_landing_path, :class=> "btn btn-def pull-right"
+		.contengoTabla.row-fluid
+			%table.table.table-bordered.table-striped.table-hover
+				%thead 
+					%tr
+						%th.text-center Photo
+						%th.text-center Link
+						%th.text-center Marca
+						%th.ver
+							%i.glyphicon.glyphicon-eye-open
+						%th.editar
+							%i.glyphicon.glyphicon-pencil
+						%th.eliminar
+							%i.glyphicon.glyphicon-remove
+				%tbody 
+				- for landing in @landings
+					%tr
+						%td.text-center= image_tag landing.banner, {:class=>"banner"}
+						%td.text-center= landing.link
+						%td.text-center= landing.marca.marca
+						%td.text-center= link_to raw("<i class='glyphicon glyphicon-eye-open'></i>"), landing
+						%td.text-center= link_to raw("<i class='glyphicon glyphicon-pencil'></i>"), edit_admin_landing_path(landing)
+						%td.text-center= link_to raw("<i class='glyphicon glyphicon-remove'></i>"), landing, :confirm => 'Are you sure?', :method => :delete

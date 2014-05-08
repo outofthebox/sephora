@@ -1,0 +1,17 @@
+%h1 Listing landings
+
+%table
+  %tr
+    %th
+    %th
+    %th
+
+  - @landings.each do |landing|
+    %tr
+      %td= link_to 'Show', landing
+      %td= link_to 'Edit', edit_landing_path(landing)
+      %td= link_to 'Destroy', landing, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Landing', new_landing_path

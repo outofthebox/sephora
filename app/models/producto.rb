@@ -80,12 +80,21 @@ class Producto < ActiveRecord::Base
   end
 
   def json_ld
+
+    # Limpiando 
+    descripcion = self.descripcion;
+    if descripcion?
+      descripcion = descripcion[0..160];
+    else
+      descripcion = ""
+    end
+
     js = {
       :"@context" => "http://schema.org",
       :"@type" => "Product",
       :"name" => self.nombre,
       :"image" => self.foto.url(:normal),
-      :"description" => self.descripcion[0..160].html_safe+"...",
+      :"description" => descripcion,
       :"brand" => {
         :"@type" => "Brand",
         :"name" => self.marca.marca,

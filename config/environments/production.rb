@@ -46,7 +46,7 @@ Sephora::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  config.assets.precompile += %w(wishlist.js wishlist.css modernizr.js beta.css mobile.css mobile.js tubular.js perfect-scrollbar.min.js colorful.js colorful.css marcjacobs.css marcjacobs.js insta_sephora.css insta_sephora.js sephora_tips.css sephora_tips.js posts.js posts.css jquery.urlshortener.js)
+  config.assets.precompile += %w(wishlist.js wishlist.css modernizr.js beta.css mobile.css mobile.js tubular.js perfect-scrollbar.min.js colorful.js colorful.css marcjacobs.css marcjacobs.js insta_sephora.css insta_sephora.js sephora_tips.css sephora_tips.js posts.js posts.css jquery.urlshortener.js jquery.ddslick.min.js)
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
