@@ -33,9 +33,6 @@
         =link_to image_tag("colecciones/fragancias_top.jpg"), "http://sephora.com.mx/categoria/fragancias?utm_source=SitioWeb&utm_medium=BannerProducto&utm_campaign=Fragancias", {:class => "img_cont"}
 
     .derecha.tcell.t65{}
-      .banner-marcas
-        - unless @producto.marca.landing.nil?
-          =link_to image_tag(@producto.marca.landing.banner), @producto.marca.landing.link
       .marca{:itemprop=>"brand", :itemscope=>"", :itemtype=>"http://schema.org/Brand"}
         - unless @producto.marca.logo_file_size.nil?
           = image_tag @producto.marca.logo.url(:grande), {:itemprop => "logo"}
