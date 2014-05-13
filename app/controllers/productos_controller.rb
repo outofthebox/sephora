@@ -19,7 +19,8 @@ class ProductosController < ApplicationController
 
     params[:buscar][:q] = params[:buscar][:q].gsub(/\//, " ")
     @marcas_seleccionadas = params[:marca].split(",").map{|m| m.to_i } unless params[:marca].nil?
-    base = Producto.search(params[:buscar][:q], :with => {:publicado => true, :parent_id => 0})
+    
+    base = Producto.search(params[:buscar][:q], :with => {:publicado => true, :parent_id => 0}, :star => true)
     
     if @marcas_seleccionadas.nil? || @marcas_seleccionadas.empty? 
       @productos_filtrados = base
