@@ -9,6 +9,10 @@ Sephora::Application.routes.draw do
 
   root :to => 'paginas#home'
 
+  # ---
+  get "/pup_file", :to => "utilidades#pup_file", :as => "pup_file"
+  # ---
+
   get '/colorful', :to => 'paginas#colorful', :as => 'colorful'
   get '/colorful/auth', :to => 'paginas#auth_please', :as => 'auth_please'
   post '/colorful/auth', :to => 'paginas#auth_please_post', :as => 'auth_please_post'

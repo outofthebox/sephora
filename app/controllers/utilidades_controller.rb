@@ -205,6 +205,31 @@ class UtilidadesController < ApplicationController
   def descontinuar_guardar
   end
 
+  def pup_file
+    require "csv"
+    data = []
+
+    csv_text = File.read("public/pup_20140523.csv")
+    csv = CSV.parse(csv_text, :headers => true)
+    csv.each do |c|
+      upc = c[0]
+      precio_nuevo = [1]
+
+      if precio_nuevo.is_a?(String)
+        precio_nuevo = precio_nuevo.gsub(/[^\d\.]/, '').to_f
+      end
+
+      coll = Producto.where(:upc => upc)
+      if coll.count == 1
+        p = coll.first
+        data << {:upc => upc, :precio_actual => p.precio, :precio_nuevo => precio_nuevo}
+        p.update_attributes(:precio => precio_nuevo)
+      end
+    end
+
+    redirect_to :root
+  end
+
   def actprecios
     require 'csv'
     data = []
