@@ -1,3 +1,5 @@
+require 'rake'
+
 namespace :productos do
 	task :update_precios => :environment do
 		require 'csv'
