@@ -31,7 +31,6 @@ gem 'acts-as-taggable-on'
 gem "disqus"
 gem "to_xls"
 gem "riddle"
-
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
 gem "jquery-rails", "~>1.0.19"
 gem 'jquery-ui-rails'
@@ -39,6 +38,7 @@ gem 'sass-rails',   '~> 3.2.3'
 gem 'coffee-rails', '~> 3.2.1'
 gem 'uglifier', '>= 1.0.3'
 gem 'modernizr-rails'
+gem 'honeybadger'
 
 group :assets do
 end
@@ -47,11 +47,22 @@ group :production do
   gem 'therubyracer'
 end
 
-group :development do
-  gem 'guard'
-  gem 'guard-livereload'
+group :development, :test do
   gem 'fastercsv'
-  gem "nifty-generators"
+  gem 'fabrication-rails'
+  gem 'fivemat'
+  gem 'guard'
+  gem 'guard-livereload', require: false
+  gem 'letter_opener'
+  gem 'nifty-generators'
+  gem 'rspec-rails', '~> 2.0'
+  gem 'spring'
+  gem 'spring-commands-cucumber'
+  gem 'spring-commands-rspec'
 end
 
-gem "mocha", :group => :test
+group :test do
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
+  gem 'selenium-webdriver'
+end

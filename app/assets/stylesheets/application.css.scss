@@ -183,9 +183,9 @@ ul.breadcrumbs{
   }
   75% {
     opacity: 1;
-    -webkit-transform: translate(100px, 600px) rotateZ(270deg); 
-    -moz-transform: translate(100px, 600px) rotateZ(270deg); 
-    -ms-transform: translate(100px, 600px) rotateZ(270deg); 
+    -webkit-transform: translate(100px, 600px) rotateZ(270deg);
+    -moz-transform: translate(100px, 600px) rotateZ(270deg);
+    -ms-transform: translate(100px, 600px) rotateZ(270deg);
   }
   100% {
     opacity: 0;
@@ -203,9 +203,9 @@ ul.breadcrumbs{
   }
   75% {
     opacity: 1;
-    -webkit-transform: translate(100px, 600px) rotateZ(270deg); 
-    -moz-transform: translate(100px, 600px) rotateZ(270deg); 
-    -ms-transform: translate(100px, 600px) rotateZ(270deg); 
+    -webkit-transform: translate(100px, 600px) rotateZ(270deg);
+    -moz-transform: translate(100px, 600px) rotateZ(270deg);
+    -ms-transform: translate(100px, 600px) rotateZ(270deg);
   }
   100% {
     opacity: 0;
@@ -619,7 +619,7 @@ ul.breadcrumbs{
         display: inline;
         opacity: 0;
       }
-    }      
+    }
   }
   #footer {
     border-top: 3px solid #2c2728;
@@ -749,7 +749,7 @@ ul.breadcrumbs{
   width: 100%;
   border-top: 1px solid #B2B2B2;
   height: 50px;
-  padding-top: 15px; 
+  padding-top: 15px;
   #links {
     float: left;
     padding-top: 10px;
@@ -909,7 +909,7 @@ ul.breadcrumbs{
       top:280px;
     }
   }
-  #hotnow, #best-sellers, #lo-nuevo {
+  #hotnow, #best-sellers, #lo-nuevo, #divacareokem, #divacareokeb  {
     padding-top: 20px;
     text-align: center;
     margin-bottom: 20px;
@@ -1038,8 +1038,8 @@ ul.breadcrumbs{
         display: inline-block;
         height:350px;
         .semana-banner{
-          width: 265px; 
-          height: 275px; 
+          width: 265px;
+          height: 275px;
           border-bottom: 5px solid  #231F20;
           img {
             margin:0;
@@ -1097,7 +1097,7 @@ ul.breadcrumbs{
         margin: 0;
         li {
           padding: 2px 0 2px 0;
-          font-size: 0.8em;       
+          font-size: 0.8em;
         }
         .first {
           font-size: 1em;
@@ -1115,7 +1115,7 @@ ul.breadcrumbs{
           padding: 0;
           margin: 0;
         }
-        
+
       }
     }
     .catalogo {
@@ -1150,7 +1150,7 @@ ul.breadcrumbs{
             font-family: Arial, sans-serif;
             font-size: 8pt;
             font-weight: bold;
-            letter-spacing: 1px;          
+            letter-spacing: 1px;
             line-height: 1.2em;
           }
           h3 {
