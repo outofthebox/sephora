@@ -909,10 +909,32 @@ ul.breadcrumbs{
       top:280px;
     }
   }
+
+
+  .center_diva {
+    position: relative;
+    width: 750px;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+  }
+
+  .center_divab {
+    position: relative;
+    width: 950px;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+  }
+
+
   #hotnow, #best-sellers, #lo-nuevo, #divacareokem, #divacareokeb  {
     padding-top: 20px;
     text-align: center;
     margin-bottom: 20px;
+
     .imagen {
       height: 130px;
       margin-bottom: 15px;

@@ -63,7 +63,7 @@
             - unless lonuevo_producto.descripcion.empty?
               %p
                 = lonuevo_producto.descripcion
-  #divacareokem
+  #divacareokem.center_diva
     %h3 Diva Carioca Makeup
     #slider-wrap
       %ul.nobullet.nolist
@@ -76,7 +76,7 @@
               = producto.marca.marca.upcase
             %h5
               =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), producto_ver_path(producto.slug)
-  #divacareokeb
+  #divacareokeb.center_divab
     %h3 Diva Carioca Bath
     #slider-wrap
       %ul.nobullet.nolist
