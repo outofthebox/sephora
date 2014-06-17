@@ -64,3 +64,32 @@
                 %h4 #{marca_producto.producto.marca.marca.upcase}
                 %h4 #{link_to marca_producto.producto.nombre.split(' ').map {|w| w.capitalize }.join(' '), producto_ver_path(marca_producto.producto.slug)}
                 %p $#{number_to_currency(marca_producto.producto.precio, :precision => 0)}
+      - if @marca.slug == 'sephora-collection'
+        #divacareokem
+          %h3.title 
+            Diva Carioca Makeup
+          #slider-wrap
+            %ul.nobullet.nolist
+              - @careoca_makeup.each do |careoca_m|
+                - producto = careoca_m
+                %li
+                  .imagen
+                    =link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
+                  %h5.marca
+                    = producto.marca.marca.upcase
+                  %h5
+                    =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), producto_ver_path(producto.slug)
+        #divacareokeb
+          %h3.title 
+            Diva Carioca Bath
+          #slider-wrap
+            %ul.nobullet.nolist
+              - @careoca_bath.each do |careoca_m|
+                - producto = careoca_m
+                %li
+                  .imagen
+                    =link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
+                  %h5.marca
+                    = producto.marca.marca.upcase
+                  %h5
+                    =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), producto_ver_path(producto.slug)        

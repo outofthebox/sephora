@@ -38,6 +38,8 @@ class MarcasController < ApplicationController
 
   def show
     @marca = Marca.includes(:marca_producto, :featured).where(:slug => params[:slug]).first
+    @careoca_makeup = Producto.where(:upc => ["3378872080497","3378872080473", "3378872080572","3378872080442"])
+    @careoca_bath = Producto.where(:upc => ["3378872079781", "3378872079743", "3378872079750", "3378872079767"])
     f = []
     Producto.where(:marca_id => @marca.id).each do |t|
       f << Categoria.find(t.categoria_id).nombre rescue nil

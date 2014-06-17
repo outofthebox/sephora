@@ -61,7 +61,7 @@ $("#vermascat").on "click", (e) ->
   $(this).parent("li").hide()
 
 jQuery(document).ready ->
-  jQuery("#lonuevo, #bestsellers, #hotnow").jcarousel
+  jQuery("#lonuevo, #bestsellers, #hotnow, #divak1, #divak2").jcarousel
     visible: 5
     buttonNextHTML: '<p id="slideright"></p>'
     buttonPrevHTML: '<p id="slideleft"></p>'

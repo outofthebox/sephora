@@ -10,6 +10,8 @@ class PaginasController < ApplicationController
 
     @careoca_makeup = Producto.where(:upc => ["3378872080497","3378872080473", "3378872080572","3378872080442"])
     @careoca_bath = Producto.where(:upc => ["3378872079781", "3378872079743", "3378872079750", "3378872079767", "3378872079736"])
+
+    
   end
 
   def registro
