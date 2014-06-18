@@ -64,6 +64,8 @@
                 %h4 #{marca_producto.producto.marca.marca.upcase}
                 %h4 #{link_to marca_producto.producto.nombre.split(' ').map {|w| w.capitalize }.join(' '), producto_ver_path(marca_producto.producto.slug)}
                 %p $#{number_to_currency(marca_producto.producto.precio, :precision => 0)}
+        .diva_carioca_titulo
+          =image_tag 'sephora-diva-carioca.png'
       - if @marca.slug == 'sephora-collection'
         #divacareokem
           %h3.title 
