@@ -17,7 +17,7 @@ Sephora::Application.routes.draw do
   get '/colorful/auth', :to => 'paginas#auth_please', :as => 'auth_please'
   post '/colorful/auth', :to => 'paginas#auth_please_post', :as => 'auth_please_post'
   get '/colorful/:personalidad', :to => 'paginas#colorful_show', :as => 'colorful_show'
-  
+
   post 'registro', :to => 'paginas#registro', :as => 'registro'
 
   get 'registro/qr', :to => 'paginas#registro_qr', :as => 'registro_qr'
@@ -26,11 +26,11 @@ Sephora::Application.routes.draw do
   get 'buscare', :to => 'utilidades#search', :as => 'buscare'
 
   get   ':seccion', :to => 'secciones#ver', :constraints => { :seccion => /allure2013|lanzamientosfall|backtoschool|potencializahighlights|fraganciasparael|skincareparael|narsblushes|obsessionsbeautybloggers|hotnow|bestsellers|bbcreams|tintedmoisturizers|sephorabath|probrushes|beautyobsessions|vacaciones|ouidad|esteelaudernails|bronzers|clasicosdeskincare|mascaras2013|aceitesskincareagosto2013|mascarillas|cccreams2013|skincarehighlightsoctubre|maquillajebijoux|rollerballs|fragancias30ml|fraganciasholiday|showergelphilosphy|skincareholiday|cofresholiday|obsesionesskincare|arielcollection|beautysteals|fraganciassanvalentin|mascaras|orquidearadiante|recien-desempacados|detalles-sets|fragancias|labios|divacarioca/ }
-  
+
   get   'soluciones(/:id)', :to => 'secciones#soluciones', :as => 'soluciones'
   get   'favorites(/:id)', :to => 'secciones#favorites', :as => 'favorites'
   get   'holiday', :to => 'paginas#holiday', :as => 'holiday'
-  
+
   get   'holiday/wallpapers', :to => 'paginas#wallpapers', :as => 'wallpapers'
   post   'holiday/wallpapers', :to => 'paginas#wallpaperssend', :as => 'wallpaperssend'
 
@@ -58,7 +58,7 @@ Sephora::Application.routes.draw do
   get   'importarimg', :to => 'utilidades#importarimg'
   get   'imgmover', :to => 'utilidades#imgmover'
   get   'parsearparents', :to => 'utilidades#parsearparents'
-  
+
   get   'actprecios', :to => 'utilidades#actprecios'
   post  'actprecios', :to => 'utilidades#actprecios'
   get   'actprecios_save', :to => 'utilidades#actprecios_guardar', :as => 'actprecios_guardar'
@@ -69,7 +69,7 @@ Sephora::Application.routes.draw do
   post  'descontinuar', :to => 'utilidades#descontinuar'
   get   'descontinuar_save', :to => 'utilidades#descontinuar_guardar', :as => 'descontinuar_guardar'
   post  'descontinuar_save', :to => 'utilidades#descontinuar_guardar', :as => 'descontinuar_guardar'
-  
+
   get   'updateupc', :to => 'utilidades#update_upc'
   get   'improd', :to => 'utilidades#improd'
   get   'cambiarnombres', :to => 'utilidades#cambiarnombres'
@@ -78,11 +78,11 @@ Sephora::Application.routes.draw do
   get   'cambiar_marcas', :to => 'utilidades#cambiar_marcas'
   get   'editar/:upc', :to => 'utilidades#editupc'
   get '/exportcsv',:to => 'utilidades#exportcsv'
-  
+
   get   'producto', :to => 'productos#index', :as => 'producto_index'
   get   'producto/:slug',  :to => 'productos#show', :as => 'producto_ver'
   get   'productos/busqueda', :to => 'productos#busqueda_old', :as => 'productos_busqueda'
-  
+
   # [--- MARCAS ---]
   get   "marcas/download(:pass)", :to => "marcas#export_to_csv", :as => "marcas_to_csv"
   get   'marca/:slug',  :to => 'marcas#show', :as => 'marca_ver'
@@ -111,7 +111,7 @@ Sephora::Application.routes.draw do
   put   'categorias/:id/vincular/:v_id/editar', :to => 'categorias#producto_update'
   post  'categorias/:id/vincular', :to => 'categorias#vincular', :as => 'categoria_vincular_producto'
   post  'categorias/actualizar_orden', :to => 'categorias#actualizar_orden'
-  get   'categoria(/:categoria)', :to => 'categorias#ver', :as => 'categoria_ver'  
+  get   'categoria(/:categoria)', :to => 'categorias#ver', :as => 'categoria_ver'
 
 
   get   'marcas/:id/desvincular/:marca_producto/:hash', :to => 'marcas#desvincular', :as => 'marca_desvincular_producto'
@@ -120,7 +120,7 @@ Sephora::Application.routes.draw do
   post  'marcas/:id/vincular', :to => 'marcas#vincular', :as => 'marca_vincular_producto'
   post  'marcas/actualizar_orden', :to => 'marcas#actualizar_orden'
 
-  get   'categoria(/:categoria)', :to => 'categorias#ver', :as => 'categoria_ver'  
+  get   'categoria(/:categoria)', :to => 'categorias#ver', :as => 'categoria_ver'
 
   get   'producto(/:producto)', :to => 'productos#ver', :as => 'producto_ver'
 
@@ -186,11 +186,11 @@ Sephora::Application.routes.draw do
   get 'mobile/wallpapers', :to => 'mobile#wallpapers', :as => 'm_wallpaper'
   get 'mobile/giftcase', :to => 'mobile#giftcase', :as => 'm_giftcase'
 
-  
-  
+
+
   get 'mobile/lomas', :to => 'mobile#lomas', :as => 'm_lomas'
 
-  
+
 
   #wishlist
   get "wishlist", :to => 'wishlist#index', :as => "wishlist"
@@ -202,10 +202,10 @@ Sephora::Application.routes.draw do
   get "wishlist/lista/", :to => 'wishlist#lista', :as => "wishlist_lista"
   post "wishlist/lista/", :to => 'wishlist#lista', :as => "wishlist_lista"
 
-  
+
   get "wishlist/nuevo/(:uid)/(:post_id)/(:producto1)/(:producto2)/(:producto3)/(:producto4)/(:producto5)/(:token)", :to => "wishlist#nuevo", :as => "wishlist_nuevo"
   post "wishlist/nuevo/(:uid)/(:post_id)/(:producto1)/(:producto2)/(:producto3)/(:producto4)/(:producto5)/(:token)", :to => "wishlist#nuevo", :as => "wishlist_nuevo"
-  
+
   get "wishlist/ver/(:uid)", :to => "wishlist#ver", :as => "wishlist_ver"
   post "wishlist/ver/(:uid)", :to => "wishlist#ver", :as => "wishlist_ver"
 
@@ -236,8 +236,8 @@ Sephora::Application.routes.draw do
 
   get "sephora_tips/admin/", :to => 'sephora_tips#admin', :as => "sephora_tips_admin"
   get "sephora_tips/admin/download", :to => 'sephora_tips#download', :as => "sephora_tips_download"
-  
-  
+
+
 
   #tabs
 
@@ -252,12 +252,17 @@ Sephora::Application.routes.draw do
   post 'posts/:id/ranking', :to => 'posts#ranking', :as => 'ranking_post'
 
 
-  
+
   resources :landings
   scope path: :administracion, as: "admin" do
     resources :landings, except: :index
-
     match 'landings', to: 'administracion#landings', via: :get
+  end
+
+  #brand-minisite
+  get 'sephora-collection', :to => 'sephora_collection#index', :as => 'sephora_collection_index'
+  scope path: :sephora_collection, as: "sephora_collection" do
+    match 'landings', to: 'sephora_collection#landings', via: :get
   end
 
 
