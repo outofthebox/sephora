@@ -10,15 +10,15 @@
     %title Sephora Collection | Sephora México
     = stylesheet_link_tag :sephora_collection
     = csrf_meta_tags
-  %body
+  %body{:class=>@background}
     #header
       .content
         .logo
         %ul.nav
-          %li Maquillaje
-          %li Skincare
-          %li Accesorios
-          %li Bath
+          %li.maquillaje Maquillaje
+          %li.skincare Skincare
+          %li.accesorios Accesorios
+          %li.bath Bath
     #wrapper
       .content
         = yield

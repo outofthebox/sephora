@@ -1,0 +1,66 @@
+#header, #footer, #wrapper{
+  width:100%;
+  min-height:100%;
+  height:auto;
+  .content{
+    width:1200px;
+    margin:auto;
+    display:block;
+  }
+}
+
+#header, #footer{
+  background-color:black;
+  min-height:70px;
+}
+
+#header{
+  margin-bottom:10px;
+  .logo{
+    background-image: url("sephora_collection/header/logo.png");
+    background-size:contain;
+    background-position:center center;
+    background-repeat: no-repeat;
+    height:70px;
+    width:367px;
+    display:inline-block;
+  }
+  .nav{
+    width:700px;
+    display:inline-block;
+    text-align: right;
+    vertical-align: middle;
+    height:70px;
+    li{
+      vertical-align: middle;
+      display:inline-block;
+      width:auto;
+      margin: auto 10px;
+      color:white;
+      opacity: 0.8;
+      transition: opacity 350ms;
+      cursor:pointer;
+      a{
+        text-decoration: none;
+        color:white;
+      }
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+}
+
+#footer{
+  margin-top:10px;
+  zoom: 1;
+  z-index: 1;
+  padding:10px;
+  .content{
+    background-image: url("sephora_collection/home/footer_rayas.png");
+    background-size:contain;
+    background-position:top center;
+    background-repeat: no-repeat;
+    min-height:116px;
+  }
+}

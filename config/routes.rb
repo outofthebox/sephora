@@ -259,13 +259,11 @@ Sephora::Application.routes.draw do
     match 'landings', to: 'administracion#landings', via: :get
   end
 
+
   #brand-minisite
   get 'sephora-collection', :to => 'sephora_collection#index', :as => 'sephora_collection_index'
-  scope path: :sephora_collection, as: "sephora_collection" do
-    match 'landings', to: 'sephora_collection#landings', via: :get
-  end
-
-
+  get 'sephora-collection/maquillaje', :to => 'sephora_collection#maquillaje', :as => 'sephora_collection_maquillaje'
+  get 'sephora-collection/rouge-land', :to => 'sephora_collection#rouge_land', :as => 'sephora_collection_rouge_land'
 
   # última línea, hace match con el resto de las rutas y muestra 404
   match  '*a', :to => 'paginas#error_404'
