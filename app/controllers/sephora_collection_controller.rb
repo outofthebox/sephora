@@ -8,6 +8,15 @@ class SephoraCollectionController < ApplicationController
   def maquillaje
   end
 
+  def outrageus_land
+  end
+
+  def foundation_land
+  end
+
+  def rouge_land
+  end
+
   private
 
   def set_bg_white
