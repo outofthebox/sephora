@@ -1,0 +1,32 @@
+- tip = get_tips
+- must = get_musts
+- texture = get_texture
+#vista{:vista=>"interna", :class=>@collection}
+  #section-head
+  #banner-holder{:class => @collection}
+  #square-holder
+    #square-sec-1
+      .square
+        =link_to image_tag(@productos[0].foto.url(:mediano)), producto_ver_path(@productos[0].slug)
+      .square.tip
+        .hover.must
+        .outerContainer
+          .innerContainer
+            %p
+              =must
+      .square
+        =link_to image_tag(@productos[1].foto.url(:mediano)), producto_ver_path(@productos[1].slug)
+      .square
+        =image_tag(texture)
+      .square.tip
+        .hover.tip
+        .outerContainer
+          .innerContainer
+            %p
+              =tip
+      .square
+        =link_to image_tag(@productos[2].foto.url(:mediano)), producto_ver_path(@productos[2].slug)
+    #square-sec-2
+      .square.big
+      .square
+        =link_to image_tag(@productos[3].foto.url(:mediano)), producto_ver_path(@productos[3].slug)

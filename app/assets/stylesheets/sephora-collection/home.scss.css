@@ -1,0 +1,12 @@
+#vista{
+width:100%;
+max-width:1200px;
+margin:auto;
+display: block;
+  &[vista="inicio"]{
+    background-image:url("sephora_collection/home/back_main_banner.jpg");
+    background-position:top center;
+    background-color:black;
+    min-height: 871px;
+  }
+}

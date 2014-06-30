@@ -1,0 +1,648 @@
+// Place all the styles related to the sephora_collection controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//=require bootstrap
+
+body{
+  font-family: "Avant", Helvetica;4
+  &.white{
+    background-color:white;
+  }
+  &.black{
+    background-color:#000;
+  }
+}
+
+@font-face {
+    font-family: 'Avant';
+    src: url('/fuentes/ag-extralight-webfont-webfont.eot');
+    src: url('/fuentes/ag-extralight-webfont-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fuentes/ag-extralight-webfont-webfont.woff') format('woff'),
+         url('/fuentes/ag-extralight-webfont-webfont.ttf') format('truetype'),
+         url('/fuentes/ag-extralight-webfont-webfont.svg#itc_avant_garde_gothic_extrRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.animate{
+  /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 400ms;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-play-state: running;
+  -webkit-animation-fill-mode: forwards;
+
+  /* Standard syntax */
+  animation-duration: 400ms;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+}
+
+
+.box-animation{
+  -webkit-animation-name: box-animation;
+  animation-name: box-animation;
+  &.box-1{
+    -webkit-animation-delay: 350ms;
+    animation-delay: 350ms;
+  }
+
+  &.box-2{
+   -webkit-animation-delay: 500ms;
+   animation-delay: 500ms;
+  }
+
+  &.box-3{
+    -webkit-animation-delay: 650ms;
+    animation-delay: 650ms;
+  }
+
+  &.box-4{
+    -webkit-animation-delay: 800ms;
+    animation-delay: 800ms;
+  }
+
+  &.box-5{
+    -webkit-animation-delay: 950ms;
+    animation-delay: 950ms;
+  }
+
+  &.box-6{
+    -webkit-animation-delay: 1100ms;
+    animation-delay: 1100ms;
+  }
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes box-animation {
+    0%   {opacity:0; top:-20px;}
+    100% {opacity:1; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes box-animation {
+    0%   {opacity:0; top:-20px;}
+    100% {opacity:1; top:0px;}
+}
+
+
+
+
+.square-animation{
+  -webkit-animation-name: square-animation;
+  animation-name: square-animation;
+  &.box-1{
+    -webkit-animation-delay: 350ms;
+    animation-delay: 350ms;
+  }
+
+  &.box-2{
+   -webkit-animation-delay: 500ms;
+   animation-delay: 500ms;
+  }
+
+  &.box-3{
+    -webkit-animation-delay: 650ms;
+    animation-delay: 650ms;
+  }
+
+  &.box-4{
+    -webkit-animation-delay: 800ms;
+    animation-delay: 800ms;
+  }
+
+  &.box-5{
+    -webkit-animation-delay: 950ms;
+    animation-delay: 950ms;
+  }
+
+  &.box-6{
+    -webkit-animation-delay: 1100ms;
+    animation-delay: 1100ms;
+  }
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes square-animation {
+    0%   {opacity:0;}
+    100% {opacity:1;}
+}
+
+/* Standard syntax */
+@keyframes square-animation {
+    0%   {opacity:0;}
+    100% {opacity:1;}
+}
+
+
+.rouge_animation{
+  -webkit-animation-name: rouge_animation;
+  animation-name: box-animation;
+  animation-duration: 600ms;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rouge_animation {
+    0%   {opacity:0; top:0px;}
+    100% {opacity:1; top:40px;}
+}
+
+/* Standard syntax */
+@keyframes rouge_animation {
+    0%   {opacity:0; top:0px;}
+    100% {opacity:1; top:40px;}
+}
+
+
+.outrageous_animation{
+  -webkit-animation-name: outrageous_animation;
+  animation-name: box-animation;
+  animation-duration: 600ms;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes outrageous_animation {
+    0%   {opacity:0;}
+    100% {opacity:1;}
+}
+
+/* Standard syntax */
+@keyframes outrageous_animation {
+    0%   {opacity:0; top:0px; left:0;}
+    100% {opacity:1; top:40px; left:40px;}
+}
+
+
+
+.circle_animation{
+  -webkit-animation-name: circle_animation;
+  animation-name: box-animation;
+  animation-duration: 600ms;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes circle_animation {
+    0%   {opacity:0; right:0px;}
+    100% {opacity:1; right:40px;}
+}
+
+/* Standard syntax */
+@keyframes circle_animation {
+    0%   {opacity:0; right:0px;}
+    100% {opacity:1; right:40px;}
+}
+
+#header, #footer, #wrapper{
+  width:100%;
+  min-height:100%;
+  height:auto;
+  letter-spacing: 1px;
+  .content{
+    width:1200px;
+    margin:auto;
+    display:block;
+  }
+}
+
+#header, #footer{
+  background-color:black;
+  min-height:70px;
+}
+
+#header{
+  margin-bottom:10px;
+  .logo{
+    background-image: url("sephora_collection/header/logo.png");
+    background-size:contain;
+    background-position:center center;
+    background-repeat: no-repeat;
+    height:70px;
+    width:367px;
+    display:inline-block;
+  }
+  .navegacion{
+    width:700px;
+    display:inline-block;
+    text-align: right;
+    vertical-align: middle;
+    height:70px;
+    li{
+      vertical-align: middle;
+      display:inline-block;
+      width:auto;
+      margin: auto 5px;
+      color:white;
+      opacity: 0.8;
+      transition: opacity 350ms;
+      cursor:pointer;
+      font-weight: bold;
+      padding:0 5px;
+      text-transform: uppercase;
+      transition: border-bottom 350ms;
+      border-bottom:1px solid #000;
+      &:hover, &.current{
+        &.maquillaje{border-bottom:1px solid #EF00EF;}
+        &.skincare{border-bottom:1px solid #00C3F1;}
+        &.accesorios{border-bottom:1px solid #DFF001;}
+        &.bath{border-bottom:1px solid #F29E00;}
+      }
+      a{
+        text-decoration: none;
+        color:white;
+      }
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+}
+
+#footer{
+  margin-top:10px;
+  zoom: 1;
+  z-index: 1;
+  padding:10px;
+  .content{
+    background-image: url("sephora_collection/home/footer_rayas.png");
+    background-size:contain;
+    background-position:top center;
+    background-repeat: no-repeat;
+    min-height:116px;
+  }
+}
+
+
+ #vista{
+  width:100%;
+  max-width:1200px;
+  margin:auto;
+  display: block;
+   &[vista="rouge-land"], &[vista="foundation-land"], &[vista="outrageous-land"]{
+    max-width:100%;
+    #section-1{
+      background-position:center center;
+      background-repeat:no-repeat;
+      min-height: 712px;
+      text-align:center;
+      display:block;
+      position: relative;
+      .asset-1{
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        z-index:2;
+      }
+      .asset-2{
+        position: absolute;
+        top:40px;
+        right:40px;
+        z-index:1;
+        width:620px;
+      }
+    }
+    #section-2{
+      background-position:center center;
+      background-repeat:no-repeat;
+      min-height: 712px;
+      text-align:center;
+      display:block;
+      position: relative;
+      .more-info{
+        background-position:center center;
+        background-repeat:no-repeat;
+        background-color:rgba(0, 0, 0, 0.8);
+        color: white;
+        width: 280px;
+        height: 350px;
+        position: absolute;
+        top:130px;
+        padding:10px;
+        overflow:hidden;
+        h3{
+          font-size: 57px;
+          line-height: 0.9em;
+        }
+        p{
+          width: 240px;
+          margin: auto;
+          font-size: 20px;
+          line-height: 1.2em;
+        }
+        strong{
+          padding:10px 0;
+        }
+      }
+    }
+    #section-3{
+      h3{
+        background-position:center center;
+        background-repeat:no-repeat;
+        width:1132px;
+        height:105px;
+        margin:auto;
+        display:block;
+      }
+      ul#pro-tip{
+        text-align:center;
+        padding:0;
+        margin:0;
+        li{
+          width:355px;
+          height:377px;
+          display:inline-block;
+          position: relative;
+          margin:0 4px;
+          figure{
+            width:100%;
+            img{width:100%;}
+          }
+          p{
+            strong{
+              font-size: 17px;
+              color:white;
+              font-weight: bolder;
+            }
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 5px;
+            margin: 0;
+            line-height: 1.2em;
+            font-size: 12px;
+            min-height: 86px;
+            text-align: center;
+          }
+        }
+      }
+    }
+    #section-4{
+      text-align: center;
+      padding-top:40px;
+      .asset-3, .asset-4{
+        display:inline-block;
+      }
+      .asset-3{
+        width:45%;
+      }
+      .asset-4{
+        width:45%;
+      }
+    }
+  }
+  &[vista="rouge-land"]{
+    #section-1{
+      background-image: url("sephora_collection/rouge_land/section1.jpg");
+    }
+    #section-2{
+      background-image: url("sephora_collection/rouge_land/section2.jpg");
+      .more-info{
+        background-image: url("sephora_collection/rouge_land/txt_rouge2.png");
+      }
+    }
+    #section-3{
+      h3{
+        &.protip{
+          background-image: url("sephora_collection/rouge_land/protip_banner.png");
+        }
+        &.video{
+          background-image: url("sephora_collection/rouge_land/video_banner.png");
+        }
+      }
+    }
+    #video{
+      object{
+        width:100%;
+        min-width: 1200px;
+        height:670px;
+      }
+    }
+  }
+  &[vista="foundation-land"]{
+    #section-1{
+      min-height:750px;
+      background-image: url("sephora_collection/foundation_land/section1.jpg");
+    }
+    #section-2{
+      background-image: url("sephora_collection/foundation_land/section2.jpg");
+      .more-info{
+        height:410px;
+        background-image: url("sephora_collection/foundation_land/text.png");
+        right:0;
+      }
+    }
+    #section-3{
+      h3{
+        &.protip{
+          background-image: url("sephora_collection/rouge_land/protip_banner.png");
+        }
+        &.atrevete{
+         background-image: url("sephora_collection/foundation_land/protip_banner.png");
+        }
+      }
+    }
+    #section-4{
+      background-image: url("sephora_collection/foundation_land/explora.jpg");
+      min-height: 589px;
+    }
+  }
+  &[vista="outrageous-land"]{
+    #section-1{
+      min-height:750px;
+      background-image: url("sephora_collection/outrageous_land/section1.jpg");
+      .asset-1{
+        width: 660px;
+        left: 520px;
+        top: 0;
+      }
+      .asset-2{
+        width: 260px;
+        left: 40px;
+        top: 40px;
+      }
+    }
+    #section-2{
+      background-image: url("sephora_collection/outrageous_land/section2.jpg");
+      .more-info{
+        height:410px;
+        width:300px;
+        background-image: url("sephora_collection/outrageous_land/text.png");
+        right:0;
+      }
+    }
+    #section-3{
+      h3{
+        &.protip{
+          background-image: url("sephora_collection/outrageous_land/protip.png");
+        }
+        &.atrevete{
+          background-image: url("sephora_collection/outrageous_land/atrevete.png");
+        }
+      }
+    }
+    #section-4{
+      background-image: url("sephora_collection/outrageous_land/explora.jpg");
+      min-height: 589px;
+    }
+  }
+  &[vista="interna"]{
+    &.maquillaje{background-image:url("sephora_collection/backs-internas-header/maquillaje_back.jpg");}
+    &.bath{background-image:url("sephora_collection/backs-internas-header/bath_back.jpg");}
+    &.skincare{background-image:url("sephora_collection/backs-internas-header/skincare_back.jpg");}
+    &.accesorios{background-image:url("sephora_collection/backs-internas-header/accesorios_back.jpg");}
+    background-position:center 0px;
+    background-repeat:no-repeat;
+    min-height: 871px;
+    text-align:center;
+    #section-head{
+      width:100%;
+      min-height: 200px;
+      margin-bottom:10px;
+      background-image:url("sephora_collection/header/main_header.png");
+      background-position: center center;
+      background-repeat:no-repeat;
+    }
+    #banner-holder{
+      &.maquillaje{background-image:url("sephora_collection/banners-internas/banners_maquillaje.jpg");}
+      &.bath{background-image:url("sephora_collection/banners-internas/banners_bath.jpg");}
+      &.skincare{background-image:url("sephora_collection/banners-internas/banners_skincare.jpg");}
+      &.accesorios{background-image:url("sephora_collection/banners-internas/banners_accesorios.jpg");}
+      width:390px;
+      height:799px;
+      display:inline-block;
+    }
+    #square-holder{
+      width:800px;
+      height:799px;
+      display:inline-block;
+      text-align:center;
+      vertical-align: top;
+      position: relative;
+      .square{
+        border: 1px solid #e1e1e1;
+        width: 253px;
+        height: 253px;
+        display: inline-block;
+        vertical-align: top;
+        margin: 8px 5px;
+        overflow:hidden;
+        vertical-align: middle;
+        position: relative;
+        background-color:white;
+        .hover{
+          &.must{background-image:url("sephora_collection/texturas/must.jpg");}
+          &.tip{background-image:url("sephora_collection/texturas/trick.jpg");}
+          position: absolute;
+          top:0;
+          width:253px;
+          height:253px;
+          opacity: 1;
+          &:hover{
+            transition: opacity 350ms;
+            opacity: 0;
+          }
+        }
+        &.tip{
+          .outerContainer {
+            display: table;
+            width: 95%; /* width of parent */
+            height: 100%; /* height of parent */
+            overflow: hidden;
+            margin:auto;
+            .innerContainer {
+              display: table-cell;
+              vertical-align: middle;
+              width: 100%;
+              margin: 0 auto;
+              text-align: center;
+              p{
+                font-size: 18px;
+                color: #333;
+              }
+            }
+          }
+        }
+        img{
+          margin-top:10px;
+          width:220px;
+          vertical-align: middle;
+          display:block;
+        }
+        &.big{
+          height:522px;
+        }
+      }
+      #square-sec-1{
+        width: 535px;
+      }
+      #square-sec-2{
+        width: 260px;
+      }
+      #square-sec-1, #square-sec-2{ display:inline-block; vertical-align:top; text-align:center;}
+    }
+  }
+  &[vista="index"]{
+    background-image:url("sephora_collection/home/back_main_banner.jpg");
+    background-position:top center;
+    background-color:black;
+    background-repeat:no-repeat;
+    min-height: 871px;
+    #section-head{
+      width:100%;
+      min-height: 200px;
+      margin-bottom:10px;
+      background-image:url("sephora_collection/header/main_header.png");
+      background-position: center center;
+      background-repeat:no-repeat;
+    }
+    #box-holder{
+      width:100%;
+      display:block;
+      margin-bottom: 10px;
+      text-align: center;
+      .box{
+        display:inline-block;
+        background-position:center center;
+        background-repeat:no-repeat;
+        width:32.9%;
+        height:651px;
+        vertical-align: top;
+        position: relative;
+        overflow: hidden;
+        opacity:0;
+        .hover{
+          position: absolute;
+          top:0;
+          width:100%;
+          height:651px;
+          background-color:rgba(0,0,0,0.7);
+          opacity: 0;
+          &:hover{
+            transition: opacity 350ms;
+            opacity: 1;
+          }
+        }
+        &.lip{
+          .hover{ background-image: url("sephora_collection/home/lip_hover.png"); }
+        }
+        &.mascara{
+          .hover{ background-image: url("sephora_collection/home/mascara_hover.png"); }
+        }
+        &.foundation{
+          .hover{ background-image: url("sephora_collection/home/foundation_hover.png"); }
+        }
+      }
+    }
+    #cta-holder{
+      text-align: center;
+      .cta{
+        width: 595px;
+        display:inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+}
