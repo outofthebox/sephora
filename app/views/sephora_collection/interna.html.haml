@@ -17,6 +17,8 @@
       .square
         =link_to image_tag(@productos[1].foto.url(:mediano)), producto_ver_path(@productos[1].slug)
       .square
+        =link_to image_tag(@productos[2].foto.url(:mediano)), producto_ver_path(@productos[2].slug)
+      .square
         =image_tag(texture)
       .square.tip
         .hover.tip
@@ -25,8 +27,8 @@
             %p
               =tip
       .square
-        =link_to image_tag(@productos[2].foto.url(:mediano)), producto_ver_path(@productos[2].slug)
-    #square-sec-2
-      .square.big
-      .square
         =link_to image_tag(@productos[3].foto.url(:mediano)), producto_ver_path(@productos[3].slug)
+      .square
+        =link_to image_tag(@productos[4].foto.url(:mediano)), producto_ver_path(@productos[4].slug)
+      .square
+        =link_to image_tag(@productos[5].foto.url(:mediano)), producto_ver_path(@productos[5].slug)

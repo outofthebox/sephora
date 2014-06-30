@@ -5,7 +5,7 @@
 //=require bootstrap
 
 body{
-  font-family: "Avant", Helvetica;4
+  font-family: "Avant", Helvetica;
   &.white{
     background-color:white;
   }
@@ -566,20 +566,18 @@ body{
           }
         }
         img{
-          margin-top:10px;
           width:220px;
           vertical-align: middle;
           display:block;
+          margin:auto;
+          margin-top:10px;
         }
         &.big{
           height:522px;
         }
       }
       #square-sec-1{
-        width: 535px;
-      }
-      #square-sec-2{
-        width: 260px;
+        width: 800px;
       }
       #square-sec-1, #square-sec-2{ display:inline-block; vertical-align:top; text-align:center;}
     }
