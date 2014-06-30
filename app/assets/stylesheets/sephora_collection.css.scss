@@ -280,7 +280,7 @@ body{
   max-width:1200px;
   margin:auto;
   display: block;
-   &[vista="rouge-land"], &[vista="foundation-land"], &[vista="outrageous-land"]{
+   &[vista="rouge-land"], &[vista="foundation-land"], &[vista="outrageous-land"], &[vista="promociones"]{
     max-width:100%;
     #section-1{
       background-position:center center;
@@ -643,6 +643,27 @@ body{
         display:inline-block;
         vertical-align: middle;
       }
+    }
+  }
+  &[vista="promociones"]{
+    #section-head{
+      width: 100%;
+      height: 380px;
+      margin-bottom: 10px;
+      background-image: url('sephora_collection/promociones/promos_back.png');
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+    #imagen_izq {
+      width: 595px;
+      height: auto;
+      display: inline-block;
+    }
+
+    #imagen_der {
+      width: 595px;
+      height: auto;
+      display: inline-block;
     }
   }
 }

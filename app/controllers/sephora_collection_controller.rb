@@ -4,6 +4,7 @@ class SephoraCollectionController < ApplicationController
   before_filter :set_bg_black, :only => :index
   before_filter :get_productos, :only => :interna
   before_filter :get_collection, :only => :interna
+  before_filter :set_bg_white, :only => :promociones
 
   def index
   end
