@@ -1,19 +1,31 @@
--rand = [1,2].sample
 #vista{:vista=>"index"}
   #section-head
   #box-holder
-    .box.lip.animate.box-animation.box-1
-      %a{:href => sephora_collection_rouge_land_path}
-        .hover
-        =image_tag("sephora_collection/home/lip_#{rand}.jpg")
-    .box.mascara.animate.box-animation.box-2
-      %a{:href => sephora_collection_outrageus_land_path}
-        .hover
-        =image_tag("sephora_collection/home/mascara_#{rand}.jpg")
-    .box.foundation.animate.box-animation.box-3
-      %a{:href => sephora_collection_foundation_land_path}
-        .hover
-        =image_tag("sephora_collection/home/foundation_#{rand}.jpg")
+    #box-wrapper
+      .box.lip.animate.box-animation.box-1
+        %a{:href => sephora_collection_rouge_land_path}
+          .hover
+          =image_tag("sephora_collection/home/lip_1.jpg")
+      .box.mascara.animate.box-animation.box-2
+        %a{:href => sephora_collection_outrageus_land_path}
+          .hover
+          =image_tag("sephora_collection/home/mascara_1.jpg")
+      .box.foundation.animate.box-animation.box-3
+        %a{:href => sephora_collection_foundation_land_path}
+          .hover
+          =image_tag("sephora_collection/home/foundation_1.jpg")
+      .box.lip.animate.box-animation.box-1
+        %a{:href => sephora_collection_rouge_land_path}
+          .hover
+          =image_tag("sephora_collection/home/lip_2.jpg")
+      .box.mascara.animate.box-animation.box-2
+        %a{:href => sephora_collection_outrageus_land_path}
+          .hover
+          =image_tag("sephora_collection/home/mascara_2.jpg")
+      .box.foundation.animate.box-animation.box-3
+        %a{:href => sephora_collection_foundation_land_path}
+          .hover
+          =image_tag("sephora_collection/home/foundation_2.jpg")
   #cta-holder
     .cta.eventos
       %a{:href => "/tiendas"}

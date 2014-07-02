@@ -195,6 +195,46 @@ body{
     100% {opacity:1; right:40px;}
 }
 
+.carro_animation{
+  -webkit-animation-name: carro_animation;
+  animation-name: carro_animation;
+  animation-duration: 350ms;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes carro_animation {
+    0%   {opacity:1; top:0px;}
+    50%  {opacity:0.8; top:-325px;}
+    100% {opacity:1; top:-651px;}
+}
+
+/* Standard syntax */
+@keyframes carro_animation {
+    0%   {opacity:1; top:0px;}
+    50%  {opacity:0.8; top:-325px}
+    100% {opacity:1; top:-651px;}
+}
+
+.carro_away{
+  -webkit-animation-name: carro_away;
+  animation-name: carro_away;
+  animation-duration: 350ms;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes carro_away {
+    100%   {opacity:1; top:0px;}
+    50%  {opacity:0; top:-325px;}
+    0% {opacity:1; top:-651px;}
+}
+
+/* Standard syntax */
+@keyframes carro_away {
+    100%   {opacity:1; top:0px;}
+    50%  {opacity:0; top:-325px}
+    0% {opacity:1; top:-651px;}
+}
+
 #header, #footer, #wrapper{
   width:100%;
   min-height:100%;
@@ -609,16 +649,28 @@ body{
       display:block;
       margin-bottom: 10px;
       text-align: center;
+      overflow: hidden;
+      height: 651px;
+      #box-wrapper{
+        width: 100%;
+        height: 651px;
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        top:0;
+        left:0;
+      }
       .box{
         display:inline-block;
         background-position:center center;
         background-repeat:no-repeat;
-        width:32.9%;
+        width:390px;
         height:651px;
         vertical-align: top;
         position: relative;
         overflow: hidden;
         opacity:0;
+        margin-bottom: 10px;
         .hover{
           position: absolute;
           top:0;
