@@ -1,7 +1,7 @@
 #!/bin/env ruby
 # encoding: utf-8
 module SephoraCollectionHelper
-  def get_tips
+  def get_tips(count)
     interna = params[:interna]
     tips = {
       :maquillaje => [],
@@ -73,10 +73,10 @@ module SephoraCollectionHelper
       "Para mantener la piel de tu cuerpo tersa, usa un exfoliante suave una vez por semana. #SephoraTrick"
     ]
 
-    tips[collection.to_sym].sample
+    tips[collection.to_sym].sample(count)
   end
 
-  def get_musts
+  def get_musts(count)
     #musts = ["Si tu piel es seca usa maquillajes líquidos y si es grasa opta por maquillajes en polvo. #SephoraTrick","Para encontrar tu tono correcto de base, pruébala sobre tu mandíbula, si se difumina por completo en tu piel, encontraste tu tono ideal. #SephoraTrick","Aplica una capa de lip stain antes de tu lipstick, así, si éste se desvanece, aún tendrás color en tus labios. #SephoraTrick","Al aplicar tu mascara enfócate en el centro de las pestañas superiores, así agrandarás tu mirada. #SephoraTrick","Si quieres pestañas con mayor volumen busca una mascara con un cepillo grueso, y si lo que buscas es rizarlas busca uno curvo. #SephoraTrick","Antes de aplicar tu esmalte limpia tu uña con removedor de esmalte, así limpiarás la superficie y la aplicación será mejor. #SephoraTrick","Consigue un color más intenso humedeciendo la brocha al aplicar tus sombras en polvo. #SephoraTrick","Si tienes una sombra tono vainilla puedes usarla para iluminar tu mirada, aplícala debajo de la ceja y al lado del lagrimal. #SephoraTrick","Para que tu delineador dure por más tiempo, aplica antes un poco de sombra del mismo tono, así se fijará y el color será más intenso. #SephoraTrick","¡Atrévete a romper las reglas! Lleva un doble delineado en tonos contrastantes para darle un twist a tu look. #SephoraTrick","Para que tu lipstick dure por más tiempo aplícalo por capas: Aplica una capa, besa un pañuelo y repite el paso. #SephoraTrick","Los tonos de lipstick de la temporada son anaranjado y rosa, si te atreves a llevarlos mantén el resto de tu maquillaje sutil. #SephoraTrick","Si quieres lograr unos labios con mayor volumen delinéalos por fuera con el delineador universal de Sephora Collection. #SephoraTrick"]
 
     interna = params[:interna]
@@ -140,7 +140,7 @@ module SephoraCollectionHelper
       "Exfolia tu cuerpo una vez por semana y logra una piel suave, tersa y delicadamente perfumada. Body Scrub. $150"
     ]
 
-    musts[collection.to_sym].sample
+    musts[collection.to_sym].sample(count)
   end
 
   def get_texture
