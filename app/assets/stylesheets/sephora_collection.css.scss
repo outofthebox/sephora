@@ -545,6 +545,7 @@ body{
     background-repeat:no-repeat;
     min-height: 871px;
     text-align:center;
+    background-attachment: fixed;
     #section-head{
       width:100%;
       min-height: 200px;
@@ -580,6 +581,11 @@ body{
         vertical-align: middle;
         position: relative;
         background-color:white;
+        opacity: 0.8;
+        transition: opacity 350ms;
+        &:hover{
+          opacity: 1;
+        }
         .hover{
           &.must{background-image:url("sephora_collection/texturas/must.jpg");}
           &.tip{background-image:url("sephora_collection/texturas/trick.jpg");}
@@ -588,8 +594,8 @@ body{
           width:253px;
           height:253px;
           opacity: 1;
+          transition: opacity 350ms;
           &:hover{
-            transition: opacity 350ms;
             opacity: 0;
           }
         }
@@ -635,6 +641,7 @@ body{
     background-position:top center;
     background-color:black;
     background-repeat:no-repeat;
+    background-attachment:fixed;
     min-height: 871px;
     #section-head{
       width:100%;

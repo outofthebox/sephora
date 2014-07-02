@@ -144,7 +144,21 @@ module SephoraCollectionHelper
   end
 
   def get_texture
-    index = [1,2,3,4,5,6,7,8,9].sample
-    "sephora_collection/texturas/maquillaje/m_textura#{index}.jpg"
+    interna = params[:interna]
+
+    if ["maquillaje", "skincare", "accesorios", "bath"].include?(interna)
+      collection = interna
+    else
+      collection = "maquillaje"
+    end
+
+    if (collection == "accesorios")
+      index = [1,2,3,4,5,6].sample
+    elsif collection == "bath"
+      index = [1,2,3,4,5,6,7,8].sample
+    else
+      index = [1,2,3,4,5,6,7,8,9,10].sample
+    end
+    "sephora_collection/texturas/#{collection}/textura#{index}.jpg"
   end
 end
