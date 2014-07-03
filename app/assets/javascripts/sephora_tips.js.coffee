@@ -9,3 +9,5 @@ $(".bottones.prices").click ->
 
 $(".box .cerrar").click ->
   $(this).parent().removeClass("visible");
+
+

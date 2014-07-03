@@ -25,3 +25,15 @@ Init::picker = (callback) ->
     	, 8000);
 
 i = new Init();
+
+
+$(".tips_1").hover ->
+  $(".flyout_1").fadeToggle()
+  return
+$(".tips_2").hover ->
+  $(".flyout_2").fadeToggle()
+  return
+$(".tips_3").hover ->
+  $(".flyout_3").fadeToggle()
+  return
+
