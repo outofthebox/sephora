@@ -5,6 +5,26 @@
 #= require jquery
 #= require bootstrap
 
+(($) ->
+  $.fn.parallax = (options) ->
+    windowHeight = $(window).height()
+    settings = $.extend(
+      speed: 0.15
+    , options)
+    @each ->
+      $this = $(this)
+      $(document).scroll ->
+        scrollTop = $(window).scrollTop()
+        offset = $this.offset().top
+        height = $this.outerHeight()
+        return  if offset + height <= scrollTop or offset >= scrollTop + windowHeight
+        yBgPosition = Math.round((offset - scrollTop) * settings.speed)
+        $this.css "background-position", "left " + yBgPosition + "px"
+        return
+      return
+  return
+) jQuery
+
 
 Init = ->
   App = this
@@ -17,21 +37,21 @@ Init::picker = (callback) ->
   enCaso = App.main.getAttribute("vista");
   switch enCaso
     when "index"
-    	setInterval(->
-    		if($("#box-wrapper").hasClass("animate") == false)
-    			$("#box-wrapper").addClass("animate carro_animation");
-    		else
-    			 $("#box-wrapper").toggleClass("carro_away");
-    	, 8000);
+      setInterval(->
+        if($("#box-wrapper").hasClass("animate") == false)
+          $("#box-wrapper").addClass("animate carro_animation");
+        else
+           $("#box-wrapper").toggleClass("carro_away");
+      , 8000);
+      $("#vista").parallax speed: 0.2
     when "interna"
+      $("#section-head").parallax speed: 0.2
       App.get_squares()
       setInterval(->
         App.get_squares()
       , 8000)
-
-      $.get "/sephora-collection/squares/"+gon.collection, (data, status) ->
-        return
     when "outrageous-land", "rouge-land", "foundation-land"
+      $("#section-1").parallax speed: 0.2
       $(".tips_1").hover ->
         $(".flyout_1").fadeToggle()
         return
