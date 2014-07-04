@@ -13,6 +13,7 @@
     = csrf_meta_tags
     = include_gon
   %body{:class=>@background}
+    #fb-root
     #header
       .content
         %a.logo{:href => sephora_collection_index_path}
@@ -30,6 +31,7 @@
         = yield
     #footer
       .content
+        .fb-like{"data-action" => "like", "data-href" => "http://sephora.com.mx/sephora-collection", "data-layout" => "box_count", "data-share" => "false", "data-show-faces" => "false"}
     = javascript_include_tag :sephora_collection
     :plain
       <script>
@@ -37,3 +39,11 @@
         ga('create', 'UA-11107291-7', 'auto');
         ga('send', 'pageview');
       </script>
+    :plain
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&appId=191335521070710&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>

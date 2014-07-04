@@ -311,6 +311,12 @@ body{
     background-position:top center;
     background-repeat: no-repeat;
     min-height:116px;
+    position: relative;
+    .fb-like {
+      position: absolute;
+      top: 19px;
+      left: 290px;
+    }
   }
 }
 
