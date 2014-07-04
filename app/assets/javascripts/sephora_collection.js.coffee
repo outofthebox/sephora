@@ -19,7 +19,7 @@
         height = $this.outerHeight()
         return  if offset + height <= scrollTop or offset >= scrollTop + windowHeight
         yBgPosition = Math.round((offset - scrollTop) * settings.speed)
-        $this.css "background-position", "left " + yBgPosition + "px"
+        $this.css "background-position", "center " + yBgPosition + "px"
         return
       return
   return
