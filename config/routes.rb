@@ -267,6 +267,8 @@ Sephora::Application.routes.draw do
   get 'sephora-collection/foundation-land', :to => 'sephora_collection#foundation_land', :as => 'sephora_collection_foundation_land'
   get 'sephora-collection/outrageus-land', :to => 'sephora_collection#outrageus_land', :as => 'sephora_collection_outrageus_land'
   get 'sephora-collection/promociones', :to => 'sephora_collection#promociones', :as => 'sephora_collection_promociones'
+  # ajax call
+  get "sephora-collection/squares/:interna", :to => 'sephora_collection#load_squares', :as => "sephora_collection_loadsquares"
 
 
   # última línea, hace match con el resto de las rutas y muestra 404

@@ -23,17 +23,30 @@ Init::picker = (callback) ->
     		else
     			 $("#box-wrapper").toggleClass("carro_away");
     	, 8000);
+    when "interna"
+      App.get_squares()
+      setInterval(->
+        App.get_squares()
+      , 8000)
+
+      $.get "/sephora-collection/squares/"+gon.collection, (data, status) ->
+        return
+    when "outrageous-land", "rouge-land", "foundation-land"
+      $(".tips_1").hover ->
+        $(".flyout_1").fadeToggle()
+        return
+      $(".tips_2").hover ->
+        $(".flyout_2").fadeToggle()
+        return
+      $(".tips_3").hover ->
+        $(".flyout_3").fadeToggle()
+        return
+
+Init::get_squares = (callback) ->
+    $.get "/sephora-collection/squares/"+gon.collection, (data, status) ->
+      $("#square-holder").fadeOut 800, ->
+        $("#square-holder").html data if status is "success"
+        $("#square-holder").fadeIn 800
 
 i = new Init();
-
-
-$(".tips_1").hover ->
-  $(".flyout_1").fadeToggle()
-  return
-$(".tips_2").hover ->
-  $(".flyout_2").fadeToggle()
-  return
-$(".tips_3").hover ->
-  $(".flyout_3").fadeToggle()
-  return
 

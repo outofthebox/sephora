@@ -2,7 +2,7 @@ class SephoraCollectionController < ApplicationController
   layout "sephora_collection"
   before_filter :set_bg_white, :only => :maquillaje
   before_filter :set_bg_black, :only => :index
-  before_filter :get_productos, :only => :interna
+  before_filter :get_productos, :only => [:interna, :load_squares]
   before_filter :get_collection, :only => :interna
   before_filter :set_bg_white, :only => :promociones
 
@@ -19,6 +19,10 @@ class SephoraCollectionController < ApplicationController
   end
 
   def rouge_land
+  end
+
+  def load_squares
+    render :partial => "squares", :locals => {:post => []}
   end
 
   private
@@ -52,6 +56,9 @@ class SephoraCollectionController < ApplicationController
     interna = params[:interna]
     if ["maquillaje", "skincare", "accesorios", "bath"].include?(interna)
       @collection = interna
+    else
+      @collection = "maquillaje"
     end
+    gon.collection = @collection
   end
 end

@@ -39,6 +39,7 @@ gem 'coffee-rails', '~> 3.2.1'
 gem 'uglifier', '>= 1.0.3'
 gem 'modernizr-rails'
 gem 'honeybadger'
+gem 'gon'
 
 group :assets do
 end
