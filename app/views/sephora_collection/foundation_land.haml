@@ -38,10 +38,10 @@
     #section-4
       #atrevete
         .asset-3
-          =link_to image_tag("sephora_collection/foundation_land/explora1.jpg"), "http://sephora.com.mx/producto/perfecting-cover-foundation-05-porcelaine-porcelain-1296326"
+          =link_to image_tag("sephora_collection/foundation_land/explora1.jpg"), producto_ver_path(@p1)
           .asset_title
-            Perfecting Cover Foundation
+            = @p1.nombre
         .asset-4
-          =link_to image_tag("sephora_collection/foundation_land/explora2.jpg"), "http://sephora.com.mx/producto/8-hr-mattifying-compact-foundation-10-light-ivory-3378872070412"
+          =link_to image_tag("sephora_collection/foundation_land/explora2.jpg"), producto_ver_path(@p2)
           .asset_title
-            8 HR Mattifying Compact Foundation
+            = @p2.nombre

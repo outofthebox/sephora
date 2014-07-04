@@ -2,9 +2,9 @@
   #section-head
   #section-1
     .asset-2.animate.circle_animation
-      =image_tag("sephora_collection/outrageous_land/circle.png");
-    .asset-1.animate.outrageous_animation
       =image_tag("sephora_collection/outrageous_land/ps_outrageous.png");
+    .asset-1.animate.outrageous_animation
+      =image_tag("sephora_collection/outrageous_land/circle.png");
   #section-2
     .more-info
   #section-3
@@ -38,10 +38,10 @@
     #section-4
       #atrevete
         .asset-3
-          = link_to image_tag("sephora_collection/outrageous_land/explora1.jpg"), "http://sephora.com.mx/producto/outrageous-volume-mascara-blue-3378872076094"
+          = link_to image_tag("sephora_collection/outrageous_land/explora1.jpg"), producto_ver_path(@p1.slug)
           .asset_title
-            Outrageous Volume Mascara Blue
+            =@p1.nombre
         .asset-4
-          = link_to image_tag("sephora_collection/outrageous_land/explora2.jpg"), "http://sephora.com.mx/producto/p-l-masc-trpact-blk-1228048"
+          = link_to image_tag("sephora_collection/outrageous_land/explora2.jpg"), producto_ver_path(@p2.slug)
           .asset_title
-            Full Action Extreme Effect Mascara- Black
+            =@p2.nombre

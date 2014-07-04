@@ -13,9 +13,13 @@ class SephoraCollectionController < ApplicationController
   end
 
   def outrageus_land
+    @p1 = Producto.find_by_upc("3378872076094")
+    @p2 = Producto.find_by_upc("3378872048558")
   end
 
   def foundation_land
+    @p1 = Producto.find_by_upc("3378872055815")
+    @p2 = Producto.find_by_upc("3378872070412")
   end
 
   def rouge_land

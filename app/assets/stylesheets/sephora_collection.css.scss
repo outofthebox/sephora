@@ -391,7 +391,7 @@ body{
         background-repeat:no-repeat;
         width:1132px;
         height:105px;
-        margin:auto;
+        margin:20px auto;
         display:block;
       }
       ul#pro-tip{
@@ -436,6 +436,7 @@ body{
       padding-top:40px;
       .asset-3, .asset-4{
         display:inline-block;
+        vertical-align: top;
       }
       .asset-3{
         width:45%;
@@ -444,8 +445,12 @@ body{
         width:45%;
       }
       .asset_title {
+        font-family: Arial, Helvetica;
         font-size: 25px;
+        margin:auto;
         margin-top: 10px;
+        font-weight: bold;
+        width: 80%;
       }
     }
   }
@@ -507,7 +512,7 @@ body{
   }
   &[vista="outrageous-land"]{
     #section-1{
-      min-height:750px;
+      min-height:800px;
       background-image: url("sephora_collection/outrageous_land/section1.jpg");
       .asset-1{
         width: 660px;
