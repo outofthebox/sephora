@@ -1,11 +1,47 @@
 require 'rake'
 
 namespace :productos do
+  task :unir_productos => :environment do
+    require 'csv'
+
+    raise "Necesario especificar ruta a FILE.csv" unless ENV['FILE']
+
+    file = ENV['FILE'];
+    data = []
+
+    csv_text = File.read(file)
+    csv = CSV.parse(csv_text, :headers => true)
+
+    padre = nil;
+    csv.by_col.each do |col|
+      if col[0] != nil
+        padre = Producto.find_by_upc(col[0])
+        if padre != nil
+          nombre_padre = padre.nombre || "---"
+          puts "Padre: #{nombre_padre}"
+          puts "----------------------"
+          hijos = col[1]
+          hijos.each_with_index do |upc, i|
+            if upc != nil
+              p = Producto.find_by_upc(upc)
+              if p != nil
+                p.update_attribute(:parent_id, padre.id)
+                codigo = p.upc || "--"
+                nombre = p.nombre || "--"
+                puts "#{codigo}\t::\t#{nombre}"
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+
 	task :update_precios => :environment do
 		require 'csv'
 
 		raise "Necesario especificar ruta a FILE.csv" unless ENV['FILE']
-		
+
 		file = ENV['FILE'];
 		data = []
 
@@ -50,9 +86,9 @@ namespace :productos do
 
 	task :update_publicados => :environment do
 		require 'csv'
-		
+
 		raise "Necesario especificar ruta a FILE.csv" unless ENV['FILE']
-		
+
 		file = ENV['FILE'];
 
 		data = []
@@ -62,7 +98,7 @@ namespace :productos do
 		csv.each do |c| data << c["UPC"] unless c["UPC"] == nil; end
 
 		activos_before =  Producto.publicados.count
-		activos = Producto.where(:upc => data)		
+		activos = Producto.where(:upc => data)
 		activos.each do |a| a.update_attribute(:publicado, true) unless (a.publicado == true); end
 		activos_after = Producto.publicados.count
 
