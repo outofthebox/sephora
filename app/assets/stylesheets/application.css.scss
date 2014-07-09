@@ -931,7 +931,11 @@ ul.breadcrumbs{
   }
 
 
-  #hotnow, #best-sellers, #lo-nuevo, #divacareokem, #divacareokeb  {
+  #best-catalogo #slider-wrap ul li{
+    width:121px !important;
+    p{text-align:center;}
+  }
+  #hotnow, #best-sellers, #lo-nuevo, #divacareokem, #divacareokeb, #best-catalogo {
     padding-top: 20px;
     text-align: center;
     margin-bottom: 20px;

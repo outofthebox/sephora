@@ -26,7 +26,7 @@
       - unless @marca.landing.nil?
         .banner-marcas
           =link_to image_tag(@marca.landing.banner), @marca.landing.link, {:class=>"banner_landing"}
-      - unless @marca.logo_file_name.nil? 
+      - unless @marca.logo_file_name.nil?
         .logo-marca
           = image_tag @marca.logo.url(:grande)
       .table.full
@@ -37,7 +37,7 @@
             %p.behindbutton
               Detrás de la marca ▼
         .tcell.t35.vmiddle
-          - unless @marca.promo_file_name.nil? 
+          - unless @marca.promo_file_name.nil?
             = image_tag @marca.promo.url(:grande)
 
       - unless @marca.video.nil? || @marca.video.empty?
@@ -53,23 +53,27 @@
 
       - unless @marca.marca_producto.count == 0
         %h3 EXPLORA LA MARCA
-        .catalogo
+        #best-catalogo.catalogo
           %h4.title
             BEST SELLERS
-          %ul.nobullet.nolist
-            - @marca.marca_producto.each do |marca_producto|
-              %li
-                - unless marca_producto.producto.foto_file_size.nil?
-                  = link_to image_tag(marca_producto.producto.foto(:normal)), producto_ver_path(marca_producto.producto.slug)
-                %h4 #{marca_producto.producto.marca.marca.upcase}
-                %h4 #{link_to marca_producto.producto.nombre.split(' ').map {|w| w.capitalize }.join(' '), producto_ver_path(marca_producto.producto.slug)}
-                %p $#{number_to_currency(marca_producto.producto.precio, :precision => 0)}
+          #slider-wrap
+            %ul.nobullet.nolist
+              - @marca.marca_producto.each do |marca_producto|
+                %li
+                  .imagen
+                    = link_to image_tag(marca_producto.producto.foto(:normal)), producto_ver_path(marca_producto.producto.slug)
+                  %h5.marca
+                    = marca_producto.producto.marca.marca.upcase
+                  %h5
+                    = link_to marca_producto.producto.nombre.split(' ').map {|w| w.capitalize }.join(' '), producto_ver_path(marca_producto.producto.slug)
+                  %p
+                    = number_to_currency(marca_producto.producto.precio, :precision => 0)
 
       - if @marca.slug == 'sephora-collection'
         .diva_carioca_titulo
           =image_tag 'sephora-diva-carioca.png'
         #divacareokem
-          %h3.title 
+          %h3.title
             Diva Carioca Makeup
           #slider-wrap
             %ul.nobullet.nolist
@@ -83,7 +87,7 @@
                   %h5
                     =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), producto_ver_path(producto.slug)
         #divacareokeb
-          %h3.title 
+          %h3.title
             Diva Carioca Bath
           #slider-wrap
             %ul.nobullet.nolist
@@ -95,4 +99,4 @@
                   %h5.marca
                     = producto.marca.marca.upcase
                   %h5
-                    =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), producto_ver_path(producto.slug)        
+                    =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), producto_ver_path(producto.slug)
