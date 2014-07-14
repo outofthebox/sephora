@@ -1,6 +1,26 @@
 require 'rake'
 
 namespace :productos do
+  task :esconder_incompletos => :environment do
+    puts "--- Buscando Productos sin Descripcion ni Imagen"
+    sfd = Producto.where({:foto_file_name => nil, :publicado => true, :descripcion => nil})
+    sfd_count = sfd.count
+    sfd.update_all(:publicado => false)
+    puts "--- #{sfd_count} Ocultados"
+
+    puts "--- Buscando Productos sin Descripcion"
+    sd = Producto.where({:descripcion => nil, :publicado => true})
+    sd_count = sd.count
+    sd.update_all(:publicado => false)
+    puts "--- #{sd_count} Ocultados"
+
+    puts "--- Buscando Productos sin Imagen"
+    sf = Producto.where({:foto_file_name => nil, :publicado => true})
+    sf_count = sf.count
+    sf.update_all(:publicado => false)
+    puts "--- #{sf_count} Ocultados"
+  end
+
   task :unir_productos => :environment do
     require 'csv'
 
