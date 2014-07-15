@@ -1,5 +1,5 @@
 class Marca < ActiveRecord::Base
-  attr_accessible :marca, :descripcion, :slug, :logo, :promo, :behindthebrand, :remove_promo, :remove_logo, :video
+  attr_accessible :marca, :descripcion, :slug, :logo, :promo, :behindthebrand, :remove_promo, :remove_logo, :video, :vista
   attr_accessor :logo, :promo, :remove_promo, :remove_logo
   default_scope :order => "marca ASC"
 
@@ -19,7 +19,7 @@ class Marca < ActiveRecord::Base
   has_one :landing
 
   validate :validar
-  
+
   before_save do
     self.slug = self.marca.parameterize if new_record?
     self.promo = nil if self.remove_promo=="1"

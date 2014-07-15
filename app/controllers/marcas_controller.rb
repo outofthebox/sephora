@@ -1,6 +1,9 @@
 require "csv"
 
 class MarcasController < ApplicationController
+  before_filter :set_marca, :only => [:incrementar_vistas, :show]
+  before_filter :incrementar_vistas, :only => [:show]
+
   def index
     @marcas = Marca.all
     authorize! :manage, @marca
@@ -37,7 +40,6 @@ class MarcasController < ApplicationController
   end
 
   def show
-    @marca = Marca.includes(:marca_producto, :featured).where(:slug => params[:slug]).first
     @careoca_makeup = Producto.where(:upc => ["3378872080497","3378872080473", "3378872080572","3378872080442"])
     @careoca_bath = Producto.where(:upc => ["3378872079781", "3378872079743", "3378872079750", "3378872079767"])
     f = []
@@ -113,5 +115,17 @@ class MarcasController < ApplicationController
         format.csv { render text: Marca.to_csv}
       end
     end
+  end
+
+  private
+
+  def incrementar_vistas
+    vista = @marca.vista || 0
+    vista += 1
+    @marca.update_attribute(:vista, vista)
+  end
+
+  def set_marca
+    @marca = Marca.includes(:marca_producto, :featured).where(:slug => params[:slug]).first
   end
 end

@@ -6,7 +6,7 @@
   <!--[if gt IE 8]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
 %head
   %meta{:charset => "UTF-8"}
-  
+
   / ## -- Meta
   - if current_page?('/')
     %title Sephora México
@@ -18,7 +18,7 @@
   %meta{:name => "description", :content => yield(:descripcion)}
   %meta{:name => "keywords", :content => yield(:keywords)}
   %meta{:name => "robots", :content => "index, nofollow"}
-  
+
   / ## -- OG
   %meta{:property => "og:title", :content => yield(:titulo)}
   %meta{:property => "og:description", :content => yield(:descripcion)}
@@ -37,7 +37,7 @@
   %meta{:name => "DC.Format", :content => "HTML"}
   %meta{:name => "DC.Identifier", :content => "Sephora"}
   %meta{:name => "DC.Language", :content => "ES"}/
-  
+
 
   = javascript_include_tag :modernizr
   = stylesheet_link_tag :application
@@ -219,17 +219,23 @@
           %li.tiendas
             %a{:href => "/tiendas"}
               Tiendas
-          .select
+          %li
             - if @marcas_all and @marcas_all.any?
-              .trigger
-                Marcas 
-                %span.icon 
-              %select#marcas
-                %option
-                  MARCAS
+              %a{:href => "#"}
+                Marcas
+              %ul.nobullet.submenu#marcas
+                %li.noesmarca
+                  LAS MAS BUSCADAS
+                - Marca.all.sample(5).each do |marca|
+                  %li
+                    %a{:href => "/marca/#{marca.slug}"}
+                      = marca.marca
+                %li.noesmarca
+                  TODAS LAS MARCAS
                 - @marcas_all.each do |marca|
-                  %option{ :value => "/marca/#{marca.slug}" }
-                    = marca.marca
+                  %li
+                    %a{ :href => "/marca/#{marca.slug}" }
+                      = marca.marca
 
     = yield
 
