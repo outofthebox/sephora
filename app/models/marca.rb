@@ -1,5 +1,5 @@
 class Marca < ActiveRecord::Base
-  attr_accessible :marca, :descripcion, :slug, :logo, :promo, :behindthebrand, :remove_promo, :remove_logo, :video
+  attr_accessible :marca, :descripcion, :slug, :logo, :promo, :behindthebrand, :remove_promo, :remove_logo, :video, :vista
   attr_accessor :logo, :promo, :remove_promo, :remove_logo
   default_scope :order => "marca ASC"
 
@@ -19,7 +19,7 @@ class Marca < ActiveRecord::Base
   has_one :landing
 
   validate :validar
-  
+
   before_save do
     self.slug = self.marca.parameterize if new_record?
     self.promo = nil if self.remove_promo=="1"
@@ -32,6 +32,15 @@ class Marca < ActiveRecord::Base
       all.each do |marca|
         csv << [marca.id, marca.marca, marca.descripcion, marca.slug, marca.logo(:grande), marca.promo, marca.behindthebrand, marca.video]
       end
+    end
+  end
+
+  def self.mas_buscadas
+    marcas = Marca.where("vista >= 10").order("vista DESC");
+    if marcas.count < 5
+      Marca.all.sample(5);
+    else
+      marcas
     end
   end
 
