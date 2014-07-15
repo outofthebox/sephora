@@ -35,6 +35,15 @@ class Marca < ActiveRecord::Base
     end
   end
 
+  def self.mas_buscadas
+    marcas = Marca.where("vista >= 10").order("vista DESC");
+    if marcas.count < 5
+      Marca.all.sample(5);
+    else
+      marcas
+    end
+  end
+
   def validar
     errors.add :marca, "Escribe una marca" unless self.marca.parameterize.length > 1
   end

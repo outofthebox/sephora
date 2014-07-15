@@ -547,6 +547,9 @@ ul.breadcrumbs{
         height: 0;
         transition: height 450ms, opacity 400ms;
         opacity: 0;
+        &#marca{
+          width:190px;
+        }
         li {
           margin: 0;
           padding: 0;
@@ -557,10 +560,12 @@ ul.breadcrumbs{
           line-height: 22px;
           &.noesmarca {
             &:first-child{margin-top:0;}
-            background: black !important;
+            color:black;
             margin: 20px auto 0px auto;
+            padding-left:5px;
             display: block;
-            text-align: center;
+            text-align: left;
+            font-weight:bolder;
           }
           a {
             padding-left: 5px;

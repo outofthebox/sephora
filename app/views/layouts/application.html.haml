@@ -223,10 +223,10 @@
             - if @marcas_all and @marcas_all.any?
               %a{:href => "#"}
                 Marcas
-              %ul.nobullet.submenu#marcas
+              %ul.nobullet.submenu#marca
                 %li.noesmarca
                   LAS MAS BUSCADAS
-                - Marca.all.sample(5).each do |marca|
+                - Marca.mas_buscadas.each do |marca|
                   %li
                     %a{:href => "/marca/#{marca.slug}"}
                       = marca.marca
