@@ -36,12 +36,8 @@ class Marca < ActiveRecord::Base
   end
 
   def self.mas_buscadas
-    marcas = Marca.where("vista >= 10").order("vista DESC");
-    if marcas.count < 5
-      Marca.all.sample(5);
-    else
-      marcas
-    end
+    marcas = Marca.find([52, 41, 2, 63, 57])
+    marcas
   end
 
   def validar
