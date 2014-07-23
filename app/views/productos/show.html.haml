@@ -40,7 +40,15 @@
         %span.marcab
           =@producto.marca.marca
         %span.precio{:itemprop => "price"}
-          #{number_to_currency(@producto.precio, :precision => 0)}
+          -if @producto.tiene_descuento
+            %span.precio_original
+              #{number_to_currency(@producto.precio, :precision => 0)}
+            %span
+              &nbsp; - &nbsp;
+            %span.tiene_descuento
+              #{number_to_currency(@producto.descuento, :precision => 0)}
+          -else
+            #{number_to_currency(@producto.precio, :precision => 0)}
       .producto
         %p{:itemprop => "name"}
           =@producto.nombre

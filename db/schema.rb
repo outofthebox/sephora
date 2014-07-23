@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140715205022) do
+ActiveRecord::Schema.define(:version => 20140722232624) do
 
   create_table "blog_categorias", :force => true do |t|
     t.string   "categoria"
@@ -246,6 +246,7 @@ ActiveRecord::Schema.define(:version => 20140715205022) do
     t.string   "image_code"
     t.string   "personalidad"
     t.integer  "visto",                                            :default => 0
+    t.decimal  "descuento"
   end
 
   add_index "productos", ["categoria_id"], :name => "index_productos_on_categoria_id"

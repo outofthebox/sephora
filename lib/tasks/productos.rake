@@ -57,6 +57,27 @@ namespace :productos do
     end
   end
 
+  task :update_descuento => :environment do
+    require 'csv'
+
+    raise "Necesario especificar ruta a FILE.csv" unless ENV['FILE']
+
+    file = ENV['FILE'];
+    data = []
+
+    csv_text = File.read(file)
+    csv = CSV.parse(csv_text, :headers => true)
+
+    csv.each do |row|
+      upc = row[0];
+      descuento = row[1].to_f;
+      producto = Producto.find_by_upc(upc)
+      if producto
+        producto.update_attribute(:descuento, descuento)
+      end
+    end
+  end
+
 	task :update_precios => :environment do
 		require 'csv'
 

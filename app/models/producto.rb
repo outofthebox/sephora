@@ -1,6 +1,6 @@
 class Producto < ActiveRecord::Base
   acts_as_taggable
-  
+
   paginates_per 20
   validate :validar
 
@@ -42,6 +42,10 @@ class Producto < ActiveRecord::Base
     end
   end
 
+  def tiene_descuento
+    self.descuento && self.descuento > 0 && self.descuento != nil
+  end
+
   def nombre
     unless self.nombre_real.nil? then self.nombre_real.html_safe else super end
   end
@@ -81,7 +85,7 @@ class Producto < ActiveRecord::Base
 
   def json_ld
 
-    # Limpiando 
+    # Limpiando
     descripcion = self.descripcion;
     if descripcion?
       descripcion = descripcion[0..160];

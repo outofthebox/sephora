@@ -67,7 +67,15 @@
                   %h5
                     = link_to marca_producto.producto.nombre.split(' ').map {|w| w.capitalize }.join(' '), producto_ver_path(marca_producto.producto.slug)
                   %p
-                    = number_to_currency(marca_producto.producto.precio, :precision => 0)
+                    -if marca_producto.producto.tiene_descuento
+                      %span.precio_original
+                        #{number_to_currency(marca_producto.producto.precio, :precision => 0)}
+                      %span
+                        &nbsp; - &nbsp;
+                      %span.tiene_descuento
+                        #{number_to_currency(marca_producto.producto.descuento, :precision => 0)}
+                    -else
+                      #{number_to_currency(marca_producto.producto.precio, :precision => 0)}
 
       - if @marca.slug == 'sephora-collection'
         .diva_carioca_titulo

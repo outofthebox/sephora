@@ -9,6 +9,16 @@
 $withslider: 960px;
 $slides: 3;
 
+
+span.precio_original {
+  color: #BDB9B9;
+  text-decoration: line-through;
+}
+
+span.tiene_descuento {
+  color: #cc0000;
+}
+
 img { margin: 0; padding: 0; }
 @media screen and (max-width: 1180px) {
   .flame-left, .copo, .copo2 {

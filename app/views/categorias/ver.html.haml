@@ -49,7 +49,7 @@
             - if r["id"].to_i.in? @marcas_seleccionadas || []
               %li.checked
                 =link_to r["marca"], request.parameters.merge({ :page => nil, :marca => ((@marcas_seleccionadas || []) - [r["id"].to_i]).join(",") })
-            - else  
+            - else
               %li.unchecked
                 =link_to r["marca"], request.parameters.merge({ :page => nil, :marca => ((@marcas_seleccionadas || []) + [r["id"].to_i]).join(",") })
         %li
@@ -100,7 +100,16 @@
                 = link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
                 %h4 #{producto.marca.marca.upcase}
                 %h3 #{link_to producto.nombre.split(' ').map {|w| w.capitalize }.join(' '), producto_ver_path(producto.slug)}
-                %p #{number_to_currency(producto.precio, :precision => 0)}
+                %p
+                  -if producto.tiene_descuento
+                    %span.precio_original
+                      #{number_to_currency(producto.precio, :precision => 0)}
+                    %span
+                      &nbsp; - &nbsp;
+                    %span.tiene_descuento
+                      #{number_to_currency(producto.descuento, :precision => 0)}
+                  -else
+                    #{number_to_currency(producto.precio, :precision => 0)}
         .navegacion
           %span ver
           .navegaciones
