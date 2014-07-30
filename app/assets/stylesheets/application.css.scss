@@ -75,6 +75,66 @@ ul.breadcrumbs{
   }
 }
 
+.titulo_tienda {
+  text-transform: uppercase;
+}
+
+.tienda_head {
+  height: 150px;
+  position: relative;
+  margin-top: 57px;
+
+  .menu_tienda {
+    position: relative;
+    width: 620px;
+    height: 35px;
+    top: 0;
+    margin-right: auto;
+    margin-left: auto;
+
+    .inner_m {
+      width: 204px;
+      height: 34px;
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .btn_tienda {
+      background-image: url(tiendas/btn_tiendas_black.jpg);
+      background-repeat: no-repeat;
+      &:hover {
+        background-image: url(tiendas/btn_tiendas_over.jpg);
+      }
+    }
+
+    .btn_evento {
+      background-image: url(tiendas/btn_eventos_black.jpg);
+      background-repeat: no-repeat;
+      &:hover{
+        background-image: url(tiendas/btn_eventos_over.jpg);
+      }
+    }
+
+    .btn_beauty {
+      background-image: url(tiendas/btn_studio_black.jpg);
+      background-repeat: no-repeat;
+      &:hover{
+        background-image: url(tiendas/btn_studio_over.jpg);
+      }
+    }
+  }
+  .txt_tienda_header {
+    width: 541px;
+    height: 76px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 39px;
+  }
+}
+
+
 
 // holiday
 .liston_left{

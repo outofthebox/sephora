@@ -7,7 +7,15 @@
     .contizq.tcell.t25
       = render 'paginas/menu_tiendas'
     .contder.tcell.t75
-      %h3 NUESTRAS TIENDAS Y EVENTOS
+      .tienda_header
+        =image_tag 'tiendas/main_banner.jpg'
+      .tienda_head
+        .menu_tienda
+          .btn_tienda.inner_m
+          .btn_evento.inner_m
+          .btn_beauty.inner_m
+      .txt_tienda_header
+        = image_tag 'tiendas/txt_tiendas_header.jpg'
       %ul.nolist
         - @tiendas.each do |tienda|
           %li
@@ -17,16 +25,18 @@
                 %p.mapa
                   = link_to "Ver mapa", tienda_path(tienda.slug)
               .info.tcell.t75
-                %h4
+                %h4{:class=>'titulo_tienda'}
                   = tienda.nombre
                 %p
                   = tienda.direccion.gsub(/\n/, '<br/>').html_safe
                 %p
                   = tienda.contacto
                 %p
+                  = tienda.horario.gsub(/\n/, '<br/>').html_safe
+                %p
                   %br
-                  %b
-                    = link_to '¡Descubre los eventos del mes!', tienda_path(tienda.slug)
+                  -# %b
+                  -#   = link_to '¡Descubre los eventos del mes!', tienda_path(tienda.slug)
 
 - if can? :new, @tienda
   %p= link_to "Nueva Tienda", new_tienda_path
