@@ -14,8 +14,9 @@
           .btn_tienda.inner_m
           .btn_evento.inner_m
           .btn_beauty.inner_m
-      .txt_tienda_header
-        = image_tag 'tiendas/txt_tiendas_header.jpg'
+        %hr{:class=>'sub_menu_tiendas'}
+        .txt_tienda_header
+          = image_tag 'tiendas/txt_tiendas_header.jpg'
       %ul.nolist
         - @tiendas.each do |tienda|
           %li
@@ -23,18 +24,23 @@
               .tcell.t25
                 =link_to image_tag(tienda.foto(:normal)), tienda_path(tienda.slug)
                 %p.mapa
-                  = link_to "Ver mapa", tienda_path(tienda.slug)
+                  = link_to image_tag('tiendas/btn_mapa.jpg'), tienda_path(tienda.slug)
               .info.tcell.t75
-                %h4{:class=>'titulo_tienda'}
-                  = tienda.nombre
-                %p
-                  = tienda.direccion.gsub(/\n/, '<br/>').html_safe
-                %p
-                  = tienda.contacto
-                %p
-                  = tienda.horario.gsub(/\n/, '<br/>').html_safe
-                %p
-                  %br
+                .info_tiendas
+                  %h4{:class=>'titulo_tienda'}
+                    = tienda.nombre
+                  %p
+                    = tienda.direccion.gsub(/\n/, '<br/>').html_safe
+                  %p{:class=>'sub_info_tienda'}
+                    HORARIO
+                  %p
+                    = tienda.horario.gsub(/\n/, '<br/>').html_safe
+                  %p{:class=>'sub_info_tienda'}
+                    TELÉFONO
+                  %p
+                    = tienda.contacto
+                  %p
+                    %br
                   -# %b
                   -#   = link_to '¡Descubre los eventos del mes!', tienda_path(tienda.slug)
 

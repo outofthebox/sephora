@@ -6,7 +6,16 @@
     .contizq.tcell.t25
       = render 'paginas/menu_tiendas'
     .contder.tcell.t75.ctr
-      =image_tag 'consultores/txt_header_consultores.png'
+      .consultor_head
+        =image_tag 'tiendas/main_banner.jpg'
+      .consultores_head
+        .menu_tienda
+          .btn_tienda.inner_m
+          .btn_evento.inner_m
+          .btn_beauty.inner_m
+        %hr{:class=>'sub_menu_tiendas'}
+        .txt_tienda_header
+          = image_tag 'consultores/txt_header.jpg'
       %p
         En <b>90 minutos</b> encontrarás cuáles son los productos ideales para ti y la mejor manera de utilizarlos de la mano de Erasmo Montes, el <b>primer Consultor Personal de Belleza en México</b>.
       %p.boton Citas

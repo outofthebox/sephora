@@ -75,14 +75,95 @@ ul.breadcrumbs{
   }
 }
 
-.titulo_tienda {
-  text-transform: uppercase;
+.info_tiendas {
+  width: 400px;
+  height: auto;
+  font-size: 12px;
+
+    .titulo_tienda {
+    text-transform: uppercase;
+  }
+
+  .sub_info_tienda {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Avant", Arial, sans-serif;
+  }
+}
+
+
+.consultores_head {
+  height: 230px;
+  position: relative;
+  margin-top: 57px;
+  padding-bottom: 50px;
+
+    .menu_tienda {
+    position: relative;
+    width: 620px;
+    height: 35px;
+    top: 0;
+    margin-right: auto;
+    margin-left: auto;
+
+    .inner_m {
+      width: 204px;
+      height: 34px;
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .btn_tienda {
+      background-image: url(tiendas/btn_tiendas_black.jpg);
+      background-repeat: no-repeat;
+      &:hover {
+        background-image: url(tiendas/btn_tiendas_over.jpg);
+      }
+    }
+
+    .btn_evento {
+      background-image: url(tiendas/btn_eventos_black.jpg);
+      background-repeat: no-repeat;
+      &:hover{
+        background-image: url(tiendas/btn_eventos_over.jpg);
+      }
+    }
+
+    .btn_beauty {
+      background-image: url(tiendas/btn_studio_black.jpg);
+      background-repeat: no-repeat;
+      &:hover{
+        background-image: url(tiendas/btn_studio_over.jpg);
+      }
+    }
+  }
+
+  .sub_menu_tiendas {
+    margin-top: -3px;
+    width: 710px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 1px solid black;
+    }
+
+  .txt_tienda_header {
+    width: 541px;
+    height: 76px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 39px;
+    left: 0;
+    right: 0;
+  }
 }
 
 .tienda_head {
   height: 150px;
   position: relative;
   margin-top: 57px;
+  padding-bottom: 50px;
 
   .menu_tienda {
     position: relative;
@@ -124,15 +205,27 @@ ul.breadcrumbs{
       }
     }
   }
+
+  .sub_menu_tiendas {
+    margin-top: -3px;
+    width: 710px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 1px solid black;
+    }
+
   .txt_tienda_header {
     width: 541px;
     height: 76px;
-    position: relative;
+    position: absolute;
     margin-left: auto;
     margin-right: auto;
     margin-top: 39px;
+    left: 0;
+    right: 0;
   }
 }
+
 
 
 
@@ -1796,8 +1889,9 @@ section#tiendas {
           margin: 25px 0 0 30px;
         }
         p.mapa {
-          text-align: center;
-          padding-left: 25px;
+          position: absolute;
+          right: 0;
+          margin-top: -115px;
           a {
             text-decoration: underline;
           }
