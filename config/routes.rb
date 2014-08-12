@@ -96,7 +96,7 @@ Sephora::Application.routes.draw do
 
   get   'tu-lista', :to => 'paginas#tulista'
 
-  # get   'tiendas', :to => 'paginas#tiendas', :as => 'tiendas'
+  get   'tiendas', :to => 'paginas#tiendas', :as => 'tiendas'
   get   'eventos', :to => 'paginas#eventos', :as => 'eventos'
   get   'obsequios', :to => 'paginas#obsequios', :as => 'obsequios'
 
@@ -135,6 +135,9 @@ Sephora::Application.routes.draw do
   end
 
   get '/consultorpersonalbelleza', :to => 'paginas#consultores', :as => 'consultores'
+  get '/servicioexpress', :to => 'paginas#servicio_express', :as => 'servicioexpress'
+  get '/servicioscompletos', :to => 'paginas#servicios_completos', :as => 'servicioscompletos'
+  get '/lista_eventos', :to => 'paginas#lista_eventos', :as => 'eventos' 
 
   #ANIVERSARIO
   get '365'    => 'paginas#aniversario', :as => :aniversario

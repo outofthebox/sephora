@@ -1,0 +1,80 @@
+- provide :titulo, ''
+%section#seccion-ver.consultores
+  %h2{:style => 'text-transform: inherit !important'}
+    Consultor Personal de Belleza
+  .table.full
+    .contizq.tcell.t25
+      = render 'paginas/menu_tiendas'
+    .contder.tcell.t75.ctr
+      .consultor_head
+        =image_tag 'tiendas/main_banner.jpg'
+      .consultores_head.consultor_h
+        .menu_tienda
+          %a{:href=>'/tiendas'}  
+            .btn_tienda.inner_m
+          %a{:href=>'/lista_eventos'}  
+            .btn_evento.inner_m
+          %a{:href=>'/servicioexpress'}  
+            .btn_beauty.inner_m
+        %hr{:class=>'sub_menu_tiendas'}
+        .txt_tienda_header
+          = image_tag 'consultores/txt_header.jpg'
+        .sub_menu_consultor 
+          %a{:href=>'/servicioexpress'}         
+            .btn_servicio_express.inner_menu_c
+          %a{:href=>'/servicioscompletos'} 
+            .btn_servicio_completo.inner_menu_c
+          %a{:href=>'/consultorpersonalbelleza'} 
+            .btn_consultor.inner_menu_c
+      %h4
+        SERVICIOS EXPRESS
+      %hr
+      .consultorp_txt
+        %p{:class=>'belleza_txt'} Transforma áreas específicas de tu look en 15 minutos. 
+        %p{:class=>'belleza_txt'} Sin costo. No requiere previa cita.
+      .express_container
+        #base.express_img
+          =image_tag 'consultores/express/base.jpg'
+          .express_img_txt.display_none.base_txt
+            .express_img_info
+              Encuentra la base de maquillaje ideal para ti. Aprende las técnicas de aplicación de los expertos y logra un acabado perfecto.
+        #trata.express_img
+          =image_tag 'consultores/express/trata.jpg'
+          .express_img_txt.display_none.trata_txt
+            .express_img_info
+              Descubre cómo prevenir, disimular y borrar ojeras, manchas y enrojecimiento.
+        #bronzer.express_img
+          =image_tag 'consultores/express/bronzer.jpg'
+          .express_img_txt.display_none.bronzer_txt
+            .express_img_info
+              Aprende a aplicar tu blush y bronzer para lograr una piel luminosa con un resplandor saludable.
+        #ojos_diario.express_img
+          =image_tag 'consultores/express/ojos_diario.jpg'
+          .express_img_txt.display_none.ojos_diario_txt
+            .express_img_info
+              Crea un toque chic con tonos universalmente halagadores.
+        #smoky.express_img
+          =image_tag 'consultores/express/smoky.jpg'
+          .express_img_txt.display_none.smoky_txt
+            .express_img_info
+              Estás a 5 pasos de perfeccionar un look smoky, intenso y con profundidad.
+        #delineado.express_img
+          =image_tag 'consultores/express/delineado.jpg'
+          .express_img_txt.display_none.delineado_txt
+            .express_img_info
+              Define tu mirada con un delineado delgado, grueso o cat eye.
+        #pestanas.express_img
+          =image_tag 'consultores/express/pestanas.jpg'
+          .express_img_txt.display_none.pestanas_txt
+            .express_img_info
+              Aprende a aplicarte pestañas postizas, para una mirada intensa y seductora.
+        #labios.express_img
+          =image_tag 'consultores/express/labios.jpg'
+          .express_img_txt.display_none.labios_txt
+            .express_img_info
+              Descubre los tips de aplicación del lipstick, lipstain o gloss de los profesionales.
+        
+
+
+
+

@@ -12,6 +12,32 @@
 #})(navigator.userAgent || navigator.vendor || window.opera, "/mobile");
 
 
+$("#base").hover ->
+  $(".base_txt").fadeToggle()
+  return
+$("#trata").hover ->
+  $(".trata_txt").fadeToggle()
+  return
+$("#bronzer").hover ->
+  $(".bronzer_txt").fadeToggle()
+  return
+$("#ojos_diario").hover ->
+  $(".ojos_diario_txt").fadeToggle()
+  return
+$("#smoky").hover ->
+  $(".smoky_txt").fadeToggle()
+  return
+$("#delineado").hover ->
+  $(".delineado_txt").fadeToggle()
+  return
+$("#pestanas").hover ->
+  $(".pestanas_txt").fadeToggle()
+  return
+$("#labios").hover ->
+  $(".labios_txt").fadeToggle()
+  return
+
+
 $('.eventomodal a').on 'click', (e) ->
   e.preventDefault()
   nombre = $(this).data('nombre')

@@ -1,0 +1,66 @@
+- provide :titulo, ''
+%section#seccion-ver.consultores
+  %h2{:style => 'text-transform: inherit !important'}
+    Consultor Personal de Belleza
+  .table.full
+    .contizq.tcell.t25
+      = render 'paginas/menu_tiendas'
+    .contder.tcell.t75.ctr
+      .consultor_head
+        =image_tag 'tiendas/main_banner.jpg'
+      .consultores_head.consultor_h
+        .menu_tienda
+          %a{:href=>'/tiendas'}  
+            .btn_tienda.inner_m
+          %a{:href=>'/lista_eventos'}  
+            .btn_evento.inner_m
+          %a{:href=>'/servicioexpress'}  
+            .btn_beauty.inner_m
+        %hr{:class=>'sub_menu_tiendas'}
+        .txt_tienda_header
+          = image_tag 'consultores/txt_header.jpg'
+        .sub_menu_consultor 
+          %a{:href=>'/servicioexpress'}         
+            .btn_servicio_express.inner_menu_c
+          %a{:href=>'/servicioscompletos'} 
+            .btn_servicio_completo.inner_menu_c
+          %a{:href=>'/consultorpersonalbelleza'} 
+            .btn_consultor.inner_menu_c
+      %h4
+        SERVICIOS COMPLETOS
+      %hr
+      .consultor_container
+        .img_completos
+        .consultor_info
+          .completos_txt 
+            Personaliza tu cambio de imagen de rostro completo en una
+            %span{:class=>'completos_bold'} sesión especializada
+            de 45 minutos con un 
+            %span{:class=>'completos_bold'} Makeup Artist experto.
+            Sin costo en la compra mínima de $750 pesos.
+
+          .reserva_btn
+            =image_tag 'consultores/btn_reserva.jpg'
+          .consultor_sucursales
+            %ul{:class=>'completos_table'}
+              %a{href:'https://outoftheboxmx.wufoo.com/forms/eventos-sephora/def/field108=Satelite'}
+                %li{:class=>'completos_opt'} Sephora Satélite
+              %a{href:'https://outoftheboxmx.wufoo.com/forms/eventos-sephora/def/field108=Angelopolis'}
+                %li{:class=>'completos_opt'} Sephora Angelópolis
+              %a{href:'https://outoftheboxmx.wufoo.com/forms/eventos-sephora/def/field108=Interlomas'}
+                %li{:class=>'completos_opt'} Sephora Interlomas
+              %a{href:'https://outoftheboxmx.wufoo.com/forms/eventos-sephora/def/field108=Antara'}
+                %li{:class=>'completos_opt'} Sephora Antara
+              %a{href:'https://outoftheboxmx.wufoo.com/forms/eventos-sephora/def/field108=Andares'}
+                %li{:class=>'completos_opt'} Sephora Andares
+              %a{href:'https://outoftheboxmx.wufoo.com/forms/eventos-sephora/def/field108=GaleriasGuadalajara'}
+                %li{:class=>'completos_opt'} Sephora Galerías Guadalajara
+              %a{href:'https://outoftheboxmx.wufoo.com/forms/eventos-sephora/def/field108=Coyoacan'}
+                %li{:class=>'completos_opt'} Sephora Coyoacán
+              %a{href:'https://outoftheboxmx.wufoo.com/forms/eventos-sephora/def/field108=SantaFe'}
+                %li{:class=>'completos_opt'} Sephora Santa Fe
+        
+
+
+
+

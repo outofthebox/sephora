@@ -11,9 +11,12 @@
         =image_tag 'tiendas/main_banner.jpg'
       .tienda_head
         .menu_tienda
-          .btn_tienda.inner_m
-          .btn_evento.inner_m
-          .btn_beauty.inner_m
+          %a{:href=>'/tiendas'}  
+            .btn_tienda.inner_m
+          %a{:href=>'/lista_eventos'}  
+            .btn_evento.inner_m
+          %a{:href=>'/servicioexpress'}  
+            .btn_beauty.inner_m
         %hr{:class=>'sub_menu_tiendas'}
         .txt_tienda_header
           = image_tag 'tiendas/txt_tiendas_header.jpg'

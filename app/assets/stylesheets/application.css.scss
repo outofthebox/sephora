@@ -85,26 +85,28 @@ ul.breadcrumbs{
   }
 
   .sub_info_tienda {
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 100 !important;
     font-family: "Avant", Arial, sans-serif;
   }
 }
+
 
 
 .consultores_head {
   height: 230px;
   position: relative;
   margin-top: 57px;
-  padding-bottom: 50px;
+
+
 
     .menu_tienda {
-    position: relative;
-    width: 620px;
-    height: 35px;
-    top: 0;
-    margin-right: auto;
-    margin-left: auto;
+      position: relative;
+      width: 620px;
+      height: 35px;
+      top: 0;
+      margin-right: auto;
+      margin-left: auto;
 
     .inner_m {
       width: 204px;
@@ -149,15 +151,297 @@ ul.breadcrumbs{
 
   .txt_tienda_header {
     width: 541px;
-    height: 76px;
-    position: absolute;
+    height: 145px;
+    position: relative;
     margin-left: auto;
     margin-right: auto;
     margin-top: 39px;
     left: 0;
     right: 0;
   }
+
+  .sub_menu_consultor {
+    position: relative;
+    width: 652px;
+    height: 47px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+
+    .inner_menu_c {
+      width: 215px;
+      height: 45px;
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .btn_servicio_express{
+      background-image: url(consultores/express_normal.jpg);
+      background-repeat: no-repeat;
+      &:hover {
+        background-image: url(consultores/express_over.jpg);
+      }
+    }  
+    .btn_servicio_completo{
+      background-image: url(consultores/completos_normal.jpg);
+      background-repeat: no-repeat;
+      &:hover {
+        background-image: url(consultores/completos_over.jpg);
+      }
+    }
+    .btn_consultor{
+      background-image: url(consultores/consultor.jpg);
+      background-repeat: no-repeat;
+      &:hover {
+        background-image: url(consultores/consultor_over.jpg);
+      }
+    }
+  }
 }
+
+  .consultor_h {
+    padding-bottom: 100px;
+  }
+
+  .evento_h {
+    padding-bottom: 30px
+  }
+
+
+  
+  .eventos {
+    width: 750px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    .foto_evento {
+      width: 161px;
+      height: 161px;
+      position: absolute;
+      left: 18px;
+      top: 18px;
+    }
+    .info_cont_evento {
+      width: 530px;
+      height: auto;
+      position: absolute;
+      right: 0;
+      padding: 20px;
+
+      .titulo_evento {
+        width: 100%;
+        height: auto;
+        font-family: "Avant", Arial, sans-serif;
+        font-size: 1.4em;
+        font-weight: bold;
+        text-align: left;
+        position: relative;
+      }
+
+      .sub_evento {
+        width: 100%;
+        height: auto;
+        font-size: 1em;
+        text-align: left;
+        position: relative;
+        margin-top: 10px;
+      }
+
+      .evento_cont {
+        width: 100%;
+        height: auto;
+        text-align: left;
+        position: relative;
+        margin-top: 10px;
+        font-size: 0.9em;
+
+        .evento_bold {
+          font-family: "Avant", Arial, sans-serif;
+          font-weight: bold;
+          font-size: 1.1em;
+          text-transform: uppercase;
+        }
+
+        .reserva_evento {
+          width: 80px;
+          height: 21px;
+          position: absolute;
+          top: 2px;
+          right:0px;
+          background-image: url(eventos/btn_reserva_eventos.jpg);
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+     .e1 {
+      height: 280px;
+    }
+
+    .e2 {
+      height: 195px;
+    }
+
+    .e3 {
+      height: 200px;
+    }
+
+    .e4 {
+      height: 375px;
+    }
+
+    .e5 {
+      height: 350px;
+    }
+
+    .e6 {
+      height: 305px;
+    }
+
+    .e11 {
+      height: 220px;
+    }
+
+    .e12 {
+      height: 250px;
+    }
+
+.express_container {
+  position: relative;
+  width: 755px;
+  height: 1393px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+
+  .express_img {
+    width: 370px !important;
+    height: 348px;
+    position: relative;
+    display: inline-block !important;
+    border:0;
+    cursor: pointer;
+
+    .express_img_txt {
+      position: absolute;
+      width: 376px;
+      height: 85px;
+      background-color: rgba(255,255,255,0.6);
+      color: #000;
+      text-align: center;
+      font-size: 1.0em;
+      top: 263px;
+
+      .express_img_info {
+        padding: 20px;
+      }
+
+    }
+    .display_none {
+        display: none;
+      }
+  }
+}
+
+.belleza_txt {
+  text-align: center !important;
+  font-size: 1.1em !important;
+}
+
+.consultor_container {
+  position: relative;
+  width: 715px;
+  height: 310px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: black;
+}
+  .img_consultor {
+    position: absolute;
+    width: 375px;
+    height: 310px;
+    left: 0;
+    top: 0;
+    background-image: url(consultores/img_consultor.jpg);
+  }
+
+  .img_completos {    
+    position: absolute;
+    width: 375px;
+    height: 310px;
+    left: 0;
+    top: 0;
+    background-image: url(consultores/completos/img_servicios_completos.jpg);
+  }
+
+
+
+  .consultor_info {
+    width: 340px;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    .completos_txt {
+      width: 90%;
+      height: auto;
+      color: #FFF;
+      font-size: 1em;
+      text-align: center;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10px;
+
+      .completos_bold {
+        font-weight: bold;
+      }
+    }
+
+    .descarga_btn {
+      margin-top: 30px;
+    }
+
+    .reserva_btn {
+      margin-top: 20px;
+    }
+
+    .consultor_sucursales {
+      width: 300px;
+      height: auto;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #FFF;
+      text-decoration: underline;
+
+        .completos_table {
+          -webkit-column-count: 2; /* Chrome, Safari, Opera */
+          -moz-column-count: 2; /* Firefox */
+          column-count: 2;
+
+          .completos_opt {
+            padding-bottom: 10px !important;
+          }
+        }
+
+
+
+      a {
+        color: #FFF;
+      }
+
+      a:hover {
+        color: #FFF;
+        cursor: pointer;
+      }
+    }
+  }
 
 .tienda_head {
   height: 150px;
@@ -225,6 +509,8 @@ ul.breadcrumbs{
     right: 0;
   }
 }
+
+
 
 
 
