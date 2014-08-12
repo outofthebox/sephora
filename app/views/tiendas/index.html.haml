@@ -7,7 +7,19 @@
     .contizq.tcell.t25
       = render 'paginas/menu_tiendas'
     .contder.tcell.t75
-      %h3 NUESTRAS TIENDAS Y EVENTOS
+      .tienda_header
+        =image_tag 'tiendas/main_banner.jpg'
+      .tienda_head
+        .menu_tienda
+          %a{:href=>'/tiendas'}  
+            .btn_tienda.inner_m
+          %a{:href=>'/lista_eventos'}  
+            .btn_evento.inner_m
+          %a{:href=>'/servicioexpress'}  
+            .btn_beauty.inner_m
+        %hr{:class=>'sub_menu_tiendas'}
+        .txt_tienda_header
+          = image_tag 'tiendas/txt_tiendas_header.jpg'
       %ul.nolist
         - @tiendas.each do |tienda|
           %li
@@ -15,18 +27,25 @@
               .tcell.t25
                 =link_to image_tag(tienda.foto(:normal)), tienda_path(tienda.slug)
                 %p.mapa
-                  = link_to "Ver mapa", tienda_path(tienda.slug)
+                  = link_to image_tag('tiendas/btn_mapa.jpg'), tienda_path(tienda.slug)
               .info.tcell.t75
-                %h4
-                  = tienda.nombre
-                %p
-                  = tienda.direccion.gsub(/\n/, '<br/>').html_safe
-                %p
-                  = tienda.contacto
-                %p
-                  %br
-                  %b
-                    = link_to '¡Descubre los eventos del mes!', tienda_path(tienda.slug)
+                .info_tiendas
+                  %h4{:class=>'titulo_tienda'}
+                    = tienda.nombre
+                  %p
+                    = tienda.direccion.gsub(/\n/, '<br/>').html_safe
+                  %p{:class=>'sub_info_tienda'}
+                    HORARIO
+                  %p
+                    = tienda.horario.gsub(/\n/, '<br/>').html_safe
+                  %p{:class=>'sub_info_tienda'}
+                    TELÉFONO
+                  %p
+                    = tienda.contacto
+                  %p
+                    %br
+                  -# %b
+                  -#   = link_to '¡Descubre los eventos del mes!', tienda_path(tienda.slug)
 
 - if can? :new, @tienda
   %p= link_to "Nueva Tienda", new_tienda_path

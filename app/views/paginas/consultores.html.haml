@@ -6,32 +6,49 @@
     .contizq.tcell.t25
       = render 'paginas/menu_tiendas'
     .contder.tcell.t75.ctr
-      =image_tag 'consultores/txt_header_consultores.png'
-      %p
-        En <b>90 minutos</b> encontrarás cuáles son los productos ideales para ti y la mejor manera de utilizarlos de la mano de Erasmo Montes, el <b>primer Consultor Personal de Belleza en México</b>.
-      %p.boton Citas
-      %p.boton Beneficios
-      =image_tag 'consultores/banner_fotos.jpg'
-      .citas
-        %h4 Citas
-        %p Agenda tu cita <b>en tienda</b> o por <b>teléfono</b> al <b>5280 1485</b>
-        %p Completa tu perfil de belleza y envíalo<br />a <b>erasmo.montes@sephora.com <span>24</span> horas antes de tu cita</b>.
-        %a.boton{:href => '/consultorpersonalbelleza/Pre-Appointment_Questionnaire.doc', :blank => 'blank'}
-          Descarga tu perfil
-        %p
-          Realiza la compra de una <b>gift card</b> de <b><span>$1,500</span></b> pesos. *
-          %span.notice *Redimible al final de tu experiencia por los productos que te recomiende nuestro consultor.
-        %h5
-          ¡Listo!
-          %b
-            Vive una experiencia de belleza<br/>completamente personalizada.
-        %hr
-        %h4 Y la experiencia continúa...
-      .table.full.list
-        .tcell.t50.lft
-          %p• <b>Acceso a tu perfil de belleza personalizado y productos ideales para ti.</b>
-          %p• <b>Exclusivas</b> de los últimos lanzamientos y nuevas marcas.
-          %p• <b>Contacto VIP con tu consultor</b> para consejos y recomendaciones futuras.
-          %p• <b>Consejos personalizados</b> para regalos, eventos, ocasiones especiales e ideas fabulosas para que puedas encontrar siempre el regalo perfecto. 
-        .tcell.t50
-          = image_tag 'consultores/foto_abajo_consultores.jpg'
+      .consultor_head
+        =image_tag 'tiendas/main_banner.jpg'
+      .consultores_head
+        .menu_tienda
+          %a{:href=>'/tiendas'}  
+            .btn_tienda.inner_m
+          %a{:href=>'/lista_eventos'}  
+            .btn_evento.inner_m
+          %a{:href=>'/servicioexpress'}  
+            .btn_beauty.inner_m
+        %hr{:class=>'sub_menu_tiendas'}
+        .txt_tienda_header
+          = image_tag 'consultores/txt_header.jpg'
+        .sub_menu_consultor
+          %a{:href=>'/servicioexpress'}         
+            .btn_servicio_express.inner_menu_c
+          %a{:href=>'/servicioscompletos'} 
+            .btn_servicio_completo.inner_menu_c
+          %a{:href=>'/consultorpersonalbelleza'} 
+            .btn_consultor.inner_menu_c
+      %h4
+        CONSULTOR PERSONAL DE BELLEZA
+      %hr
+      .consultorp_txt
+        %p{:class=>'belleza_txt'} Puedes tenerlo todo y redescubrir tu belleza en esta sesión privada de 90 minutos con tu Consultor Personal de Belleza en la compra de una Gift Card de $1,500 pesos redimibles en productos. Agenda tu cita previamente.
+      .consultor_container
+        .img_consultor
+        .consultor_info
+          .descarga_btn
+            %a{:href => '/consultorpersonalbelleza/Pre-Appointment_Questionnaire.doc', :blank => 'blank'}
+              =image_tag 'consultores/btn_descarga_perfil.jpg'
+          .reserva_btn
+            =image_tag 'consultores/btn_reserva.jpg'
+          .consultor_sucursales
+            %ul
+              %a{href:'https://outoftheboxmx.wufoo.com/forms/eventos-sephora/def/field109=Consultor&field108=Andares'}
+                %li Sephora Andares
+              %a{href:'https://outoftheboxmx.wufoo.com/forms/eventos-sephora/def/field109=Consultor&field108=Guadalajara'}
+                %li Sephora Galerías Guadalajara
+              %a{href:'https://outoftheboxmx.wufoo.com/forms/eventos-sephora/def/field109=Consultor&field108=SantaFe'}
+                %li Sephora Santa Fe
+              %a{href:'https://outoftheboxmx.wufoo.com/forms/eventos-sephora/def/field109=Consultor&field108=Coyoacan'}
+                %li Sephora Coyoacán
+
+
+
