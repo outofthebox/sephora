@@ -27,7 +27,7 @@
               .tcell.t25
                 =link_to image_tag(tienda.foto(:normal)), tienda_path(tienda.slug)
                 %p.mapa
-                  = link_to image_tag('tiendas/btn_mapa.jpg'), tienda_path(tienda.slug)
+                  = link_to image_tag('tiendas/btn_mapa.jpg'), 'https://maps.google.com/?q='+(tienda.latitud).to_s+','+(tienda.longitud).to_s
               .info.tcell.t75
                 .info_tiendas
                   %h4{:class=>'titulo_tienda'}
