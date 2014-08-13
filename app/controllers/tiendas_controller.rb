@@ -1,6 +1,6 @@
 class TiendasController < ApplicationController
   def index
-    @tiendas = Tienda.all
+    @tiendas = Tienda.all(:order => 'id')
   end
 
   def show
