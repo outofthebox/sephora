@@ -269,7 +269,8 @@
       #footin
         #links
           %ul.nobullet.nolist.seplist
-            %li Contacto
+            %li 
+              =link_to "Contacto",  "mailto:atencion@sephora.com", :target => "_blank"
             %li Mapa del sitio
             %li
               =link_to "Poĺítica de privacidad", politicas_path
