@@ -42,3 +42,6 @@ Icon
 *.sublime-workspace
 
 /vendor/bundle
+
+#No deberia estar en github
+config/database.yml
