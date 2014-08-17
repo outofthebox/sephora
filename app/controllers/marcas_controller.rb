@@ -47,6 +47,7 @@ class MarcasController < ApplicationController
       f << Categoria.find(t.categoria_id).nombre rescue nil
     end
     @categorias = f.uniq.sort
+    #Categoria.where(:id => [2, 21, 108, 34, 12, 61]).pluck(:name)
   end
 
   def destroy
