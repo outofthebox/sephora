@@ -112,7 +112,7 @@ ul.breadcrumbs{
 
     .menu_tienda {
       position: relative;
-      width: 620px;
+      width: 622px;
       height: 35px;
       top: 0;
       margin-right: auto;
@@ -172,7 +172,7 @@ ul.breadcrumbs{
 
   .sub_menu_consultor {
     position: relative;
-    width: 652px;
+    width: 654px;
     height: 47px;
     margin-right: auto;
     margin-left: auto;
@@ -226,6 +226,7 @@ ul.breadcrumbs{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 5px;
 
     .foto_evento {
       width: 161px;
@@ -266,13 +267,14 @@ ul.breadcrumbs{
         text-align: left;
         position: relative;
         margin-top: 10px;
-        font-size: 0.9em;
+        font-size: 0.7em;
 
         .evento_bold {
           font-family: "Avant", Arial, sans-serif;
           font-weight: bold;
           font-size: 1.1em;
           text-transform: uppercase;
+          padding-right: 10px;
         }
 
         .reserva_evento {
@@ -288,7 +290,7 @@ ul.breadcrumbs{
     }
   }
      .e1 {
-      height: 280px;
+      height: 320px;
     }
 
     .e2 {
@@ -296,23 +298,23 @@ ul.breadcrumbs{
     }
 
     .e3 {
-      height: 200px;
+      height: 213px;
     }
 
     .e4 {
-      height: 375px;
+      height: 415px;
     }
 
     .e5 {
-      height: 350px;
+      height: 394px;
     }
 
     .e6 {
-      height: 305px;
+      height: 352px;
     }
 
     .e11 {
-      height: 220px;
+      height: 287px;
     }
 
     .e12 {
@@ -399,7 +401,7 @@ ul.breadcrumbs{
       width: 90%;
       height: auto;
       color: #FFF;
-      font-size: 1em;
+      font-size: 0.9em;
       text-align: center;
       position: relative;
       margin-left: auto;
