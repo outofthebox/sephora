@@ -8,14 +8,12 @@
     .ante.jesus
     .contenedor
       .slider
-        %a.diapositiva.first.visible{:href=> "http://sephora.com.mx/productospromocion?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=ProductosPromocion"}
-          =image_tag "home/banners/960/banners_agoV3.jpg"
-        %a.diapositiva{:href=> "http://sephora.com.mx/sephora-collection?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=MicroSitioSC"}
-          =image_tag "home/banners/960/banner1.jpg"
-        %a.diapositiva.last{:href=> "http://sephora.com.mx/marca/sephora-collection?utm_source=SitioWeb&utm_medium=Banner2&utm_campaign=BannerDivaCarioca"}
-          =image_tag "home/banners/960/banner2.jpg"
-        %a.diapositiva.last{:href=> "http://sephora.com.mx/hotnow?utm_source=SitioWeb&utm_medium=Banner3&utm_campaign=BannerhotNowJunio"}
-          =image_tag "home/banners/960/banner3.jpg"
+        %a.diapositiva.first.visible{:href=> "http://sephora.com.mx/skincare?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=Skincare"}
+          =image_tag "home/banners/960/banners_principal_skincare.jpg"
+        %a.diapositiva{:href=> "http://sephora.com.mx/hotnow?utm_source=SitioWeb&utm_medium=Banner2&utm_campaign=HotNow"}
+          =image_tag "home/banners/960/hn_agosto.jpg"
+        %a.diapositiva.last{:href=> "http://sephora.com.mx/styling?utm_source=SitioWeb&utm_medium=Banner3&utm_campaign=Styling"}
+          =image_tag "home/banners/960/cabello_agosto.jpg"
 #separador
   %p.linksrapidos
     LINKS RÁPIDOS:
@@ -86,7 +84,7 @@
       %a{ :href => 'http://www.pinterest.com/sephoramx/ya-llegó-el-verano/', :target => 'blank'}
         =image_tag "home/banners/inferior/izquierdo.jpg"
     .tcell.t50
-      %a{ :href => "http://sephora.com.mx/tiendas?utm_source=SitioWeb&utm_medium=BannerInfDer&utm_campaign=BannerEventos" }
+      %a{ :href => "http://sephora.com.mx/lista_eventos?utm_source=SitioWeb&utm_medium=BannerInfDer&utm_campaign=Eventos" }
         =image_tag "home/banners/inferior/derecho.jpg"
 - unless mobile_device?
   #mod
