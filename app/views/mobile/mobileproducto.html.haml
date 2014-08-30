@@ -4,32 +4,10 @@
       = image_tag @producto.marca.logo.url(:grande),{:class =>"le_marca"}
       = image_tag @producto.foto.url(:normal), :id => "prod", :class => "le_producto", :itemprop => 'image'
     .info
+      %span.precio{:itemprop => "price"}
+        #{number_to_currency(@producto.precio, :precision => 0)}
       %span.marcab
         =@producto.marca.marca
       %span.producto
         %p{:itemprop => "name"}
           =@producto.nombre
-      %span.precio{:itemprop => "price"}
-        #{number_to_currency(@producto.precio, :precision => 0)}
-  .descripcion
-    %ul.ingredientes
-      %li
-      - unless @producto.ingredientes.nil? || @producto.ingredientes.size < 5
-        %li
-          %a{:href => "#tab2"} INGREDIENTES
-      - unless @producto.usos.nil? || @producto.usos.size < 5
-        %li
-          %a{:href => "#tab3"} USOS
-    .contenidos
-      - unless @producto.descripcion.nil? || @producto.descripcion.size < 5
-        #tab1.tabdesc
-          %div{:itemprop => "description"}
-            =@producto.descripcion.html_safe
-      - unless @producto.ingredientes.nil? || @producto.ingredientes.size < 5
-        #tab2.tabdesc
-          %div{:itemprop => "description"}
-            =@producto.ingredientes.html_safe
-      - unless @producto.usos.nil? || @producto.usos.size < 5
-        #tab3.tabdesc
-          %div{:itemprop => "description"}
-            =@producto.usos.html_safe

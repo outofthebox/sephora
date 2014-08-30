@@ -173,9 +173,13 @@ html, body{
         display: block;
       }
       .le_producto{
-        width: 280px;
-        margin:auto;
+        max-width: 240px;
+        margin: auto;
         display: block;
+        min-width: 190px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px
       }
       .info{
         width: 100%;
@@ -188,25 +192,28 @@ html, body{
           letter-spacing: 1px;
           text-align: center;
           display: block;
+          font-weight: bold;
+          color: #747474;
         }
         .precio{
           margin-bottom: 5px;
-          font-size: 18px;
+          font-size: 26px;
           font-family: "Avant";
           letter-spacing: 1px;
           text-align: center;
-          color:white;
-          background:#000;
-          border-radius:5px;
+          color: #333;
+          border-radius: 5px;
           padding: 5px;
+          font-weight: 600
         }
         .producto{
           margin-bottom: 10px;
-          font-size: 23px;
+          font-size: 19px;
           font-family: "Avant";
           letter-spacing: 1px;
           text-align: center;
           display: block;
+          font-weight: bold;
         }
       }
       .descripcion{
@@ -219,10 +226,16 @@ html, body{
             font-size: 18px;
             font-family: "Avant";
             letter-spacing: 1px;
-            text-align: center;
-            color:white;
-            background:#000;
+            color: #333;
             padding: 5px;
+            font-weight: bolder;
+            text-align: left;
+            text-transform: uppercase;
+          }
+          span{
+            width: 80%;
+            margin:auto;
+            display: block;
           }
         }
       }
