@@ -11,3 +11,8 @@
       %span.producto
         %p{:itemprop => "name"}
           =@producto.nombre
+    .contenidos
+      - unless @producto.descripcion.nil? || @producto.descripcion.size < 5
+        #tab3.tabdesc
+          %div{:itemprop => "description"}
+            =@producto.descripcion.html_safe
