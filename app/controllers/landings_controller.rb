@@ -33,7 +33,7 @@ class LandingsController < ApplicationController
   def create
     @landing = Landing.new(params[:landing])
     if @landing.save
-      redirect_to admin_landing_path
+      redirect_to landings_path
     end
   end
 
@@ -52,6 +52,7 @@ class LandingsController < ApplicationController
       redirect_to landings_path
     else
       @landing.destroy
+      redirect_to landings_path
     end
   end
 end
