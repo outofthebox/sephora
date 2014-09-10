@@ -126,6 +126,7 @@ namespace :productos do
 
     csv.each do |row|
       upc = row[0];
+      descuento = row[1].gsub!("$",'').gsub!(/\s+/, '') if row[1]
       descuento = row[1].to_f;
       producto = Producto.find_by_upc(upc)
       if producto
