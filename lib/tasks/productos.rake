@@ -129,6 +129,9 @@ namespace :productos do
       descuento = row[1].to_f;
       producto = Producto.find_by_upc(upc)
       if producto
+        codigo = producto.upc || "--"
+        nombre = producto.nombre || "--"
+        puts "#{codigo}\t::\t#{nombre}::\t#{descuento}"
         producto.update_attribute(:descuento, descuento)
       end
     end
