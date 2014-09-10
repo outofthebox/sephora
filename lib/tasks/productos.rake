@@ -23,14 +23,43 @@ namespace :productos do
 
   task :unir_productos => :environment do
     require 'csv'
+    require 'faraday'
+    require 'uri'
 
     raise "Necesario especificar ruta a FILE.csv" unless ENV['FILE']
 
     file = ENV['FILE'];
     data = []
 
-    csv_text = File.read(file)
-    csv = CSV.parse(csv_text, :headers => true)
+    if ENV["REMOTE"]
+      file = "http://www.sephora.com.mx/up_20140708.csv"
+
+      i = URI(file)
+
+      scheme = i.scheme
+      host = i.host
+      path = i.path rescue '/'
+      query = i.query rescue '' 
+
+      host_path = "#{scheme}://#{host}"
+      full_path = "#{scheme}://#{host}#{path}#{query}"
+
+      conn = Faraday.new(:url => host_path) do |faraday|
+        faraday.request  :url_encoded
+        faraday.response :logger
+        faraday.adapter  Faraday.default_adapter
+      end
+
+      request = conn.get do |req|
+        req.url "#{path}#{query}"
+        req.headers['Accept'] = 'application/csv'
+      end
+
+      csv = CSV.parse(request.body, :headers => true)
+    else
+      csv_text = File.read(file)
+      csv = CSV.parse(csv_text, :headers => true)
+    end
 
     padre = nil;
     csv.by_col.each do |col|
