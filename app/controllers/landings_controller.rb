@@ -1,5 +1,7 @@
 class LandingsController < ApplicationController
+  http_basic_authenticate_with :name => ENV['U'], :password => ENV['P']
   layout "administracion"
+  
   # GET /landings
   # GET /landings.json
   def index
@@ -10,6 +12,7 @@ class LandingsController < ApplicationController
   # GET /landings/1.json
   def show
     @landing = Landing.find(params[:id])
+    redirect_to marca_ver_path(@landing.marca.slug)
   end
 
   # GET /landings/new
@@ -38,12 +41,17 @@ class LandingsController < ApplicationController
   # PUT /landings/1.json
   def update
     @landing = Landing.find(params[:id])
+    redirect_to marca_ver_path(@landing.marca.slug)
   end
 
   # DELETE /landings/1
   # DELETE /landings/1.json
   def destroy
-    @landing = Landing.find(params[:id])
-    @landing.destroy
+    @landing = Landing.find(params[:id]) rescue nil
+    unless @landing
+      redirect_to landings_path
+    else
+      @landing.destroy
+    end
   end
 end

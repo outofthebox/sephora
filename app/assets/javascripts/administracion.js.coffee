@@ -3,6 +3,8 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 #=require jquery
+#=require jquery-ui
+#=require jquery_ujs
 #=require bootstrap
 #=require jquery.ddslick.min.js
 
