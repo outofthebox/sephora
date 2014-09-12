@@ -3,6 +3,11 @@ class MobileController < ApplicationController
   def home
   end
 
+  def eventos
+    @eventos = Evento.first
+    raise @eventos.inspect
+  end
+
   def especialmes
   end
 

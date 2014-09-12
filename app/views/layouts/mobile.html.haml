@@ -36,13 +36,6 @@
       %li.favs
         - if current_mobileuser
           =link_to 'MIS FAVS', m_favoritos_path
-  .busqueda
-    = form_for :buscar, { :url => m_busqueda_path, :method => :get } do |f|
-      %p.nowrap
-        .table
-          .tcell.t95
-            = f.text_field :q, :class => 'input', :placeholder  => "BUSCAR", :value => "#{(params[:buscar][:q]) unless params[:buscar].nil?}"
-    %a{ :href => "/" }
   .wrapper
     = yield
   .footer
