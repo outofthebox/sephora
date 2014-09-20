@@ -1,0 +1,29 @@
+#main{:vista=>"events"}
+	.bs-docs-section.col-12.col-md-12.col-lg-12{:role => "main"}
+		.page-header
+			%h2#btn-groups
+				%i.glyphicon.glyphicon.glyphicon-asterisk
+				events
+				= link_to "New event", new_admin_event_path, :class=> "btn btn-def pull-right"
+		.contengoTabla.row-fluid
+			%table.table.table-bordered.table-striped.table-hover
+				%thead 
+					%tr
+						%th.text-center Photo
+						%th.text-center Title
+						%th.text-center Description
+						%th.ver
+							%i.glyphicon.glyphicon-eye-open
+						%th.editar
+							%i.glyphicon.glyphicon-pencil
+						%th.eliminar
+							%i.glyphicon.glyphicon-remove
+				%tbody 
+				- for event in @events
+					%tr
+						%td.text-center= image_tag event.photo, {:class=>"banner"} if event.photo
+						%td.text-center= event.title
+						%td.text-center= event.description
+						%td.text-center= link_to raw("<i class='glyphicon glyphicon-eye-open'></i>"), ""
+						%td.text-center= link_to raw("<i class='glyphicon glyphicon-pencil'></i>"), ""
+						%td.text-center= link_to raw("<i class='glyphicon glyphicon-remove'></i>"), "", :confirm => 'Are you sure?', :method => :delete

@@ -258,9 +258,12 @@ Sephora::Application.routes.draw do
 
 
   resources :landings
+  resources :events, controller: "administracion/events", except: :index
   scope path: :administracion, as: "admin" do
     resources :landings, except: :index
+    resources :events, except: :index, controller: "administracion/events"
     match 'landings', to: 'administracion#landings', via: :get
+    match 'events', to: 'administracion#events', via: :get
   end
 
 

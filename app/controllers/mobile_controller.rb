@@ -4,7 +4,7 @@ class MobileController < ApplicationController
   end
 
   def eventos
-    @eventos = Evento.first
+    @eventos = Tienda.count
     raise @eventos.inspect
   end
 
