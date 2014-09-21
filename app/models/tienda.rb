@@ -1,7 +1,7 @@
 class Tienda < ActiveRecord::Base
   attr_accessible :nombre, :direccion, :horario, :latitud, :longitud, :contacto, :foto, :slug, :mapa
-
   has_many :eventotiendas
+  has_many :store_events
 
   has_attached_file :foto, {
     :styles => { :normal => "142x142>" }

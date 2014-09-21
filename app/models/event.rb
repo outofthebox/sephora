@@ -1,7 +1,6 @@
 class Event < ActiveRecord::Base
+		has_many :store_events
 	  attr_accessible :id, :title, :description, :photo
-	  has_many :store_has_events
-
 		attr_accessor :photo
 		
 	  has_attached_file :photo, {

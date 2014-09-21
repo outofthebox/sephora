@@ -1,0 +1,29 @@
+.col-lg-12
+  .form-group
+    .row
+      =form_for @store_event do |f|
+        .col-lg-8
+          .form-group
+            .input-group
+              %span.input-group-addon
+                Tienda
+              = f.select(:tienda_id, options_from_collection_for_select(Tienda.all, "id", "nombre"), {}, {:class=>"form-control"})
+          .form-group
+            .input-group
+              %span.input-group-addon
+                Evento
+              = f.select(:event_id, options_from_collection_for_select(Event.all, "id", "title"), {}, {:class=>"form-control"})
+          .form-group
+            .input-group
+              %span.input-group-addon
+                Fecha
+              = f.text_field :dates, {:placeholder => "ejm: Septiembre 3, 4, 5", :class => "form-control"}
+          .form-group
+            .input-group
+              %span.input-group-addon
+                Link de Reservacion
+              = f.text_field :link, {:placeholder => "http://www.whoho.com/evento/sephora", :class => "form-control"}
+          .form-group
+            = f.submit "Agregar", {:class => "btn btn-block btn-info"}
+        .col-lg-4
+          .event-image

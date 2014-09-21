@@ -174,6 +174,7 @@ Sephora::Application.routes.draw do
   get 'mobile/beauty', :to => 'mobile#beauty', :as => 'm_beauty'
   get 'mobile/cosmetiquera', :to => 'mobile#cosmetiquera', :as => 'm_cosmetiquera'
   get 'mobile/eventos', :to => 'mobile#eventos', :as => 'm_eventos'
+  get 'mobile/evento/:id', :to => 'mobile#evento_show', :as => 'm_show_evento'
   get 'mobile/favoritos', :to => 'mobile#favoritos', :as => 'm_favoritos'
   get 'mobile/favorite/:id', :to => 'mobile#favorite', :as => 'm_favorited'
   get 'mobile/hotnow/:seccion', :to => 'mobile#jotnao', :as => 'm_hotnow'
@@ -259,11 +260,14 @@ Sephora::Application.routes.draw do
 
   resources :landings
   resources :events, controller: "administracion/events", except: :index
+  resources :store_events, controller: "administracion/store_events", except: :index
   scope path: :administracion, as: "admin" do
     resources :landings, except: :index
     resources :events, except: :index, controller: "administracion/events"
+    resources :store_events, except: :index, controller: "administracion/store_events"
     match 'landings', to: 'administracion#landings', via: :get
     match 'events', to: 'administracion#events', via: :get
+    match 'store_events', to: 'administracion#store_events', via: :get
   end
 
 
@@ -281,3 +285,4 @@ Sephora::Application.routes.draw do
   # última línea, hace match con el resto de las rutas y muestra 404
   match  '*a', :to => 'paginas#error_404'
 end
+

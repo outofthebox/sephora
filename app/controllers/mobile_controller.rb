@@ -4,8 +4,13 @@ class MobileController < ApplicationController
   end
 
   def eventos
-    @eventos = Tienda.count
-    raise @eventos.inspect
+    @eventos = Event.all
+    @tiendas = Tienda.all
+  end
+
+  def evento_show
+    @evento = Event.find(params[:id])
+    @store_event = StoreEvent.where(:event_id => @evento.id)
   end
 
   def especialmes

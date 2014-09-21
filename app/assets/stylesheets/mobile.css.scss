@@ -25,8 +25,11 @@ html, body{
   min-height: 100%;
 }
 
+.header{top:0;}
+.footer{bottom:0;} 
+
 .header, .footer{
-  position:absolute;
+  position:fixed;
   overflow:hidden;
   font-family: "Avant";
   width: 100%;
@@ -85,7 +88,6 @@ html, body{
   height:100%;
   display:block;
   padding-top: 60px;
-  padding-bottom: 60px;
   #main{
     width: 100%;
     padding:10px;
@@ -473,6 +475,68 @@ html, body{
         }
       }
     }
+    &[vista="eventos"]{
+      margin: 10px auto;
+      margin-bottom: 50px;
+      h3{text-align: center; text-transform: uppercase; font-weight: bold;}
+      h4{font-size: 14px; text-align: center;}
+      .evento-imagen{
+        width: 100%;
+        img{
+          display: block;
+          margin: auto;
+          border-radius: 12px;
+          box-shadow: 0px 0px 26px -11px #333;
+          border: 1px solid #F7F7F7;
+          margin-top:10px;
+        }
+      }
+      .image-centered{ text-align: center; margin:auto; display: block; width: 90%;}
+      .contengo-eventos{
+        text-align: center;
+        margin:10px auto;
+        img{
+          display: inline-block;
+          width: 40%;
+          margin:10px 2.5%;
+          border: 1px solid #ccc;
+          border-radius: 12px;
+          box-shadow: 0px 0px 17px -6px #333;
+        }
+      }
+      table{
+        width: 100%;
+        tr{
+          width: 100%;
+          td{
+            padding: 10px 0;
+            &.tienda{ font-size: 14px; font-weight: bold; line-height: 1em;}
+            small{font-size: 10px; font-weight: normal;}
+            &.link{
+              .btn-link{
+                background-color: #000;
+                border-radius: 3px;
+                color:white;
+                position: relative;
+                padding-right: 30px !important;
+                &:after{
+                  position: absolute;
+                  top:12px;
+                  right:5px;
+                  content:'';
+                  display: block;
+                  width: 0;
+                  height: 0;
+                  border-left: 5px solid transparent;
+                  border-right: 5px solid transparent;
+                  border-top: 10px solid red;
+                }
+              }
+            }
+          }
+        }
+      }
+    } 
   }
 }
 

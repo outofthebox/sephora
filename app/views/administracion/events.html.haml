@@ -24,6 +24,10 @@
 						%td.text-center= image_tag event.photo, {:class=>"banner"} if event.photo
 						%td.text-center= event.title
 						%td.text-center= event.description
-						%td.text-center= link_to raw("<i class='glyphicon glyphicon-eye-open'></i>"), ""
-						%td.text-center= link_to raw("<i class='glyphicon glyphicon-pencil'></i>"), ""
+						%td.text-center
+							= link_to "/administracion/events/#{event.id}/" do
+								%i.glyphicon.glyphicon-eye-open
+						%td.text-center
+							= link_to "/administracion/events/#{event.id}/edit" do
+								%i.glyphicon.glyphicon-pencil
 						%td.text-center= link_to raw("<i class='glyphicon glyphicon-remove'></i>"), "", :confirm => 'Are you sure?', :method => :delete
