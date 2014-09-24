@@ -32,19 +32,6 @@ class Administracion::EventsController < ApplicationController
 
   def update
     event = Event.find(params[:id])
-    tiendas_params.each do |tp|
-    	if tp && tp[:activo] == "on"
-    		tienda_id = tp[:tienda_id]
-    		link = tp[:link]
-    		date = tp[:date].inspect
-    		if tp[:id]
-    			she = StoreHasEvent.find(tp[:id])
-    			she.update_attributes({:tienda_id=> tienda_id, :link => link, :dates => date, :event_id => event.id})
-    		else
-		    	she = StoreHasEvent.create(:tienda_id=> tienda_id, :link => link, :dates => date, :event_id => event.id)
-		    end
-	    end
-    end
     event.update_attributes(event_params)
     redirect_to admin_event_path
   end
