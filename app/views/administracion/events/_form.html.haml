@@ -1,0 +1,18 @@
+.row-fluid
+  .col-xs-12.col-md-12.col-lg-12
+    .row
+      .col-lg-12
+        = form_for @event, :html => {:role => "form", :class=>"form"} do |f|
+          .form-group
+            = f.label :photo, "photo"
+            = f.file_field :photo
+          .form-group
+            = f.label :title, "title"
+            = f.text_field :title, {:class=>"form-control"}
+          .form-group
+            = f.label :description, "description"
+            = f.text_field :description, {:class=>"form-control"}
+          .btn-group.text-center
+            = f.submit :class => "btn btn-black"
+            %a#btnSubmit.btn.btn-danger{:href=>admin_events_path} Cancelar
+    .clearfix

@@ -25,7 +25,11 @@ html, body{
   min-height: 100%;
 }
 
+.header{top:0;}
+.footer{bottom:0;} 
+
 .header, .footer{
+  position:fixed;
   overflow:hidden;
   font-family: "Avant";
   width: 100%;
@@ -34,7 +38,6 @@ html, body{
   height: 60px;
   display: block;
   padding-top: 10px;
-  position: relative;
   z-index: 100;
   ul{
     list-style: none;
@@ -82,23 +85,21 @@ html, body{
 
 .wrapper{
   width:100%;
+  height:100%;
   display:block;
-  // min-height:100%;
-  // height:auto;
+  padding-top: 60px;
   #main{
-    width: 93%;
-    display: block;
+    width: 100%;
+    padding:10px;
     margin:auto;
     min-height: 300px;
     overflow: hidden;
+    vertical-align: middle;
     ul{
       list-style: none;
       margin: auto;
       width: 95%;
       padding: 0;
-    }
-    .imagenes, .masimg, .video{
-      margin-bottom: 10px;
     }
     &[vista="favoritos"]{
       .favoritos li{
@@ -155,9 +156,11 @@ html, body{
       }
     }
     &[vista="home"]{
+      text-align: center;
       .columnas{
         width: 31.7%;
         display: inline-block;
+        margin: 5px 0;
         &:nth-child(2){
           margin:0 1%;
         }
@@ -472,17 +475,73 @@ html, body{
         }
       }
     }
-    .video{
-      .columnas{
-        display: block;
-        margin:auto;
+    &[vista="eventos"]{
+      margin: 10px auto;
+      margin-bottom: 50px;
+      h3{text-align: center; text-transform: uppercase; font-weight: bold;}
+      h4{font-size: 14px; text-align: center;}
+      .evento-imagen{
+        width: 100%;
+        img{
+          display: block;
+          margin: auto;
+          border-radius: 12px;
+          box-shadow: 0px 0px 26px -11px #333;
+          border: 1px solid #F7F7F7;
+          margin-top:10px;
+        }
       }
-    }
+      .image-centered{ text-align: center; margin:auto; display: block; width: 90%;}
+      .contengo-eventos{
+        text-align: center;
+        margin:10px auto;
+        img{
+          display: inline-block;
+          width: 40%;
+          margin:10px 2.5%;
+          border: 1px solid #ccc;
+          border-radius: 12px;
+          box-shadow: 0px 0px 17px -6px #333;
+        }
+      }
+      table{
+        width: 100%;
+        tr{
+          width: 100%;
+          td{
+            padding: 10px 0;
+            &.tienda{ font-size: 14px; font-weight: bold; line-height: 1em;}
+            small{font-size: 10px; font-weight: normal;}
+            &.link{
+              .btn-link{
+                background-color: #000;
+                border-radius: 3px;
+                color:white;
+                position: relative;
+                padding-right: 30px !important;
+                &:after{
+                  position: absolute;
+                  top:12px;
+                  right:5px;
+                  content:'';
+                  display: block;
+                  width: 0;
+                  height: 0;
+                  border-left: 5px solid transparent;
+                  border-right: 5px solid transparent;
+                  border-top: 10px solid red;
+                }
+              }
+            }
+          }
+        }
+      }
+    } 
   }
 }
 
-
 .footer{ 
+  bottom:0;
   ul{
     list-style: none;
     color:white;

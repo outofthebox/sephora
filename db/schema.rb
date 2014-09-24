@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140722232624) do
+ActiveRecord::Schema.define(:version => 20140920052053) do
 
   create_table "blog_categorias", :force => true do |t|
     t.string   "categoria"
@@ -55,8 +55,8 @@ ActiveRecord::Schema.define(:version => 20140722232624) do
     t.string   "slug"
     t.boolean  "visible"
     t.integer  "parent_id"
-    t.datetime "created_at",                          :null => false
-    t.datetime "updated_at",                          :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
     t.integer  "lft"
     t.integer  "rgt"
     t.integer  "depth"
@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(:version => 20140722232624) do
     t.integer  "cover_file_size"
     t.datetime "cover_updated_at"
     t.text     "urlslug"
-    t.text     "descripcion",        :default => "0"
+    t.text     "descripcion"
   end
 
   create_table "comments", :force => true do |t|
@@ -92,6 +92,17 @@ ActiveRecord::Schema.define(:version => 20140722232624) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.integer  "tienda_id"
+  end
+
+  create_table "events", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   create_table "feedbacks", :force => true do |t|
@@ -165,6 +176,25 @@ ActiveRecord::Schema.define(:version => 20140722232624) do
 
   add_index "mobileusers", ["email"], :name => "index_mobileusers_on_email", :unique => true
   add_index "mobileusers", ["reset_password_token"], :name => "index_mobileusers_on_reset_password_token", :unique => true
+
+  create_table "models", :force => true do |t|
+    t.string   "email",                  :default => "", :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "mobilelogin"
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
+  end
+
+  add_index "models", ["email"], :name => "index_models_on_email", :unique => true
+  add_index "models", ["reset_password_token"], :name => "index_models_on_reset_password_token", :unique => true
 
   create_table "post_favs", :force => true do |t|
     t.integer  "usuario_id"
@@ -290,6 +320,26 @@ ActiveRecord::Schema.define(:version => 20140722232624) do
     t.boolean  "publicado",      :default => false
     t.datetime "created_at",                        :null => false
     t.datetime "updated_at",                        :null => false
+  end
+
+  create_table "store_events", :force => true do |t|
+    t.integer  "tienda_id"
+    t.integer  "event_id"
+    t.string   "link"
+    t.string   "dates"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "store_events", ["event_id"], :name => "index_store_events_on_event_id"
+  add_index "store_events", ["tienda_id"], :name => "index_store_events_on_tienda_id"
+
+  create_table "store_has_events", :force => true do |t|
+    t.integer  "tienda_id"
+    t.string   "dates"
+    t.string   "link"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "taggings", :force => true do |t|

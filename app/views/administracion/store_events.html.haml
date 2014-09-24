@@ -1,0 +1,39 @@
+#main{:vista=>"store_events"}
+	.bs-docs-section.col-12.col-md-12.col-lg-12{:role => "main"}
+		.page-header
+			%h2#btn-groups
+				%i.glyphicon.glyphicon.glyphicon-asterisk
+				Store Events
+				= link_to "New event", new_admin_store_event_path, :class=> "btn btn-def pull-right"
+		.contengoTabla.row-fluid
+			%table.table.table-bordered.table-striped.table-hover
+				%thead 
+					%tr
+						%th.text-center Event photo
+						%th.text-center Event title
+						%th.text-center Store
+						%th.text-center Dates
+						%th.text-center Register Link
+						%th.ver
+							%i.glyphicon.glyphicon-eye-open
+						%th.editar
+							%i.glyphicon.glyphicon-pencil
+						%th.eliminar
+							%i.glyphicon.glyphicon-remove
+				%tbody 
+				- for store_event in @store_events
+					- event = Event.find(store_event.event_id)
+					- store = Tienda.find(store_event.tienda_id)
+					%tr
+						%td.text-center= image_tag event.photo, {:class=>"media-object"} if event.photo
+						%td.text-center= event.title
+						%td.text-center= store.nombre
+						%td.text-center= store_event.dates
+						%td.text-center= store_event.link
+						%td.text-center
+							= link_to "/administracion/store_events/#{store_event.id}/" do
+								%i.glyphicon.glyphicon-eye-open
+						%td.text-center
+							= link_to "/administracion/store_events/#{store_event.id}/edit" do
+								%i.glyphicon.glyphicon-pencil
+						%td.text-center= link_to raw("<i class='glyphicon glyphicon-remove'></i>"), "/administracion/store_events/#{store_event.id}/", :confirm => 'Are you sure?', :method => :delete

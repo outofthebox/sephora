@@ -1,0 +1,2 @@
+class AnniversaryController < ApplicationController
+end
