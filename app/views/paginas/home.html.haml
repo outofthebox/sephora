@@ -99,3 +99,13 @@
     #modsuc
       %a.close{:href=>"#"}
         X
+  #registro_popup
+    .txt_registro_popup
+    = form_for @registro, :url => registro_path do |f|
+      = f.text_field :email, :type => 'email', :placeholder => 'EMAIL'
+      = f.submit '', :id => 'submit'
+    %a.close{:href=>"#"}
+      X
+
+  #btn_mail_enviar
+    =image_tag 'registro_btn.png'

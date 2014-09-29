@@ -179,6 +179,15 @@ $("a.close").live "click", (e) ->
   e.preventDefault()
   $("#mod, #modsuc").fadeOut()
 
+#Registro
+$("#btn_mail_enviar").live "click", (e) ->
+  e.preventDefault()
+  $("#registro_popup").fadeIn()
+
+$("a.close").live "click", (e) ->
+  e.preventDefault()
+  $("#registro_popup").fadeOut()
+
 #Wallpapers
 $("a.back").live "click", (e) ->
   e.preventDefault()
