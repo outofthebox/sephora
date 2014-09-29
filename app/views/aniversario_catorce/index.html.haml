@@ -1,0 +1,18 @@
+#vista{:vista=> "home"}
+	#seccion-1
+		=image_tag("aniversario-catorce/home/main_banner.jpg")
+	#seccion-2
+		#collage.izquierda
+			%ul.collage_home
+				- @catalogo_home.each do |m|
+					- marca = m[1]
+					- img = marca["imagen"]
+					- nombre = marca["nombre"]
+					%li
+						= link_to image_tag("aniversario-catorce/gallery/home/#{img}"), aniversario_catorce_ver_path(nombre.parameterize)
+			%p.text-right
+				SEPHORA ANTARA, OCTUBRE 31, 1 y 2 DE NOVIEMBRE.
+		#sidebar.derecha
+			=image_tag("aniversario-catorce/home/banner_beauty_studio.jpg", {:class=>"side_banner"})
+			=image_tag("aniversario-catorce/home/banner_studio.jpg", {:class=>"side_banner"})
+			=image_tag("aniversario-catorce/home/banner_prizes.jpg", {:class=>"side_banner"})

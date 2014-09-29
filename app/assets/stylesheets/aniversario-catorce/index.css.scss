@@ -1,0 +1,80 @@
+#seccion-2{
+	background-color:white;
+	background-image: image-url("aniversario-catorce/home/banner_luces.png");
+	background-size:contain;
+	background-repeat:no-repeat;
+	display:block;
+	padding-top:198px;
+	text-align:center;
+	#collage{
+		max-width: 130*5px;
+		display: inline-block;
+		vertical-align: top;
+		ul.collage_home{
+			text-align: left;
+			padding:0;
+			margin:0;
+			li{
+				display: inline-block;
+				width: 124px;
+				margin: 5px auto;
+				opacity: 0.4;
+				transition: opacity 350ms;
+				cursor: pointer;
+				&:hover{
+					opacity: 1;
+				}
+			}
+		}
+		p{
+			line-height: 1.2em;
+			&.text-right{text-align:right;}
+		}
+	}
+	#sidebar{
+		width: 370px;
+		display: inline-block;
+		vertical-align: top;
+		.side_banner{
+			display: block;
+			margin: 20px auto;
+			&:nth-child(1){margin-top:0;}
+		}
+	}
+}
+#seccion-3{
+	background-color:white;
+	width:100%;
+	display:block;
+	text-align:center;
+	padding:20px 0;
+	.regalos{
+		display: block;
+		clear:both;
+		img{width:auto; display:block; margin:auto;}
+		padding-bottom: 40px;
+	}
+	.eventos{
+		width:40%;
+		display: inline-block;
+		img{width:auto; display:block; margin:auto;}
+	}
+	.mapa{
+		width:40%;
+		display: inline-block;
+		img{width:auto; display:block; margin:auto;}
+	}
+	.eventos, .mapa{
+		opacity: 0.4;
+		transition: opacity 450ms;
+		cursor: pointer;
+		&:hover{
+			opacity: 1;
+		}
+	}
+}
+#seccion-4{
+	display:block;
+	background-color:white;
+	img{width:auto; display:block; margin:auto;}
+}

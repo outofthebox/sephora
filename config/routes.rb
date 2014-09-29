@@ -259,6 +259,12 @@ Sephora::Application.routes.draw do
     match 'landings', to: 'administracion#landings', via: :get
   end
 
+  scope path: :aniversario_catorce, as: "aniversario_catorce" do
+    match "/", to: "aniversario_catorce#index", :via => :get
+    match "/makeovers", to: "aniversario_catorce#index", :via => :get
+    match "/ver/:marca", to: "aniversario_catorce#ver_marca", :via => :get, :as => "ver"
+  end
+
 
   #brand-minisite
   get 'sephora-collection/', :to => 'sephora_collection#index', :as => 'sephora_collection_index'
