@@ -270,6 +270,20 @@ Sephora::Application.routes.draw do
     match 'store_events', to: 'administracion#store_events', via: :get
   end
 
+  scope path: :retomakeover, as: "aniversario_catorce" do
+    match "/", to: "aniversario_catorce#index", :via => :get
+    match "makeovers", to: "aniversario_catorce#index", :via => :get
+    match "big_prices", to: "aniversario_catorce#big_prices", :via => :get
+    match "ver/:marca", to: "aniversario_catorce#ver_marca", :via => :get, :as => "ver"
+    scope path: :beauty_trip, as: "beauty_trip" do
+      match "/", to: "aniversario_catorce#beauty_trip", :via => :get
+      match "init", to: "aniversario_catorce#trivia_init", :via => :post, :as => "init"
+      match "start", to: "aniversario_catorce#trivia_start", :via => :get, :as => "start"
+      match "finish", to: "aniversario_catorce#trivia_finish", :via => :post, :as => "finish"
+      match "salvada", to: "aniversario_catorce#trivia_salvada", :via => :get, :as => "salvada"
+    end
+  end
+
 
   #brand-minisite
   get 'sephora-collection/', :to => 'sephora_collection#index', :as => 'sephora_collection_index'

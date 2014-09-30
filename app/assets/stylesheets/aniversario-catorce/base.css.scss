@@ -1,0 +1,159 @@
+@font-face {
+    font-family: 'Avant';
+    src: url('/fuentes/ag-extralight-webfont-webfont.eot');
+    src: url('/fuentes/ag-extralight-webfont-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fuentes/ag-extralight-webfont-webfont.woff') format('woff'),
+         url('/fuentes/ag-extralight-webfont-webfont.ttf') format('truetype'),
+         url('/fuentes/ag-extralight-webfont-webfont.svg#itc_avant_garde_gothic_extrRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#header, #footer, #wrapper{
+  width:100%;
+  min-height:100%;
+  height:auto;
+  letter-spacing: 1px;
+  background-color:#333;
+  .content{
+    max-width:1200px;
+    margin:auto;
+    display:block;
+    position:relative;
+    box-shadow:0px 0px 40px -10px #000;
+    overflow: visible;
+    padding:0;
+  }
+}
+
+#header, #footer{
+  background-color:black;
+  min-height:70px;
+}
+
+#header{
+  position:relative;
+  .logo{
+    position: absolute;
+    top:20px;
+    left:20px;
+    background-image: image-url("aniversario-catorce/logo.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 34px;
+    width: 214px;
+    display: inline-block;
+  }
+  .navegacion{
+    width:100%;
+    display:inline-block;
+    text-align: right;
+    vertical-align: middle;
+    height:70px;
+    padding-top:26px;
+    li{
+      vertical-align: middle;
+      display:inline-block;
+      width:auto;
+      margin: auto 5px;
+      color:white;
+      opacity: 0.8;
+      transition: opacity 350ms;
+      cursor:pointer;
+      font-weight: bold;
+      padding:0 5px;
+      text-transform: uppercase;
+      transition: border-bottom 350ms;
+      border-bottom:1px solid #000;
+      font-size: 13px;
+      font-weight: 400;
+      &:hover, &.current{
+        &.maquillaje{border-bottom:1px solid #EF00EF;}
+        &.skincare{border-bottom:1px solid #00C3F1;}
+        &.accesorios{border-bottom:1px solid #DFF001;}
+        &.bath{border-bottom:1px solid #F29E00;}
+      }
+      a{
+        text-decoration: none;
+        color:white;
+      }
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+}
+
+#footer{
+  zoom: 1;
+  z-index: 1;
+  padding:10px;
+  .content{
+    background-size:contain;
+    background-position:top center;
+    background-repeat: no-repeat;
+    min-height:116px;
+    position: relative;
+    .logo{
+      position: absolute;
+      top:20px;
+      left:20px;
+      background-image: image-url("aniversario-catorce/footer/web.png");
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+      height: 21px;
+      width: 214px;
+      display: inline-block;
+    }
+    .redes{
+      width:100%;
+      display:inline-block;
+      text-align: right;
+      vertical-align: middle;
+      height:70px;
+      padding-top:26px;
+      li{
+        vertical-align: middle;
+        display:inline-block;
+        width:auto;
+        margin: auto 5px;
+        color:white;
+        opacity: 0.8;
+        transition: opacity 350ms;
+        cursor:pointer;
+        font-weight: bold;
+        padding:0 5px;
+        text-transform: uppercase;
+        transition: border-bottom 350ms;
+        border-bottom:1px solid #000;
+        font-size: 13px;
+        font-weight: 400;
+        &:hover, &.current{
+          &.maquillaje{border-bottom:1px solid #EF00EF;}
+          &.skincare{border-bottom:1px solid #00C3F1;}
+          &.accesorios{border-bottom:1px solid #DFF001;}
+          &.bath{border-bottom:1px solid #F29E00;}
+        }
+        a{
+          text-decoration: none;
+          color:white;
+        }
+        &:hover{
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.bases{
+  text-decoration: underline;
+  color:#333;
+  font-weight: 200;
+  font-size: 20px;
+  margin:auto;
+  margin-top:20px;
+  display: block;
+}

@@ -1,0 +1,64 @@
+#ver_marca{
+	background-color:white;
+	background-image: image-url("aniversario-catorce/home/banner_luces.png");
+	background-size:contain;
+	background-repeat:no-repeat;
+	display:block;
+	padding-top:130px;
+	text-align:center;
+	h1{
+		font-family: 'Avant';
+		font-style:italic;
+		padding-bottom:0;
+		margin-bottom: 10px;
+		line-height: 1.2em;
+		font-size: 26px;
+	}
+	.logo_interior{ margin:0px auto 30px auto; display:block;}
+	#video{
+		width: 383px;
+		display: inline-block;
+		vertical-align: top;
+		text-align: left;
+		.imagen-interior{
+			display: block;
+			margin-bottom:10px;
+		}
+		.video{}
+	}
+	#acerca{
+		width: 540px;
+		display: inline-block;
+		vertical-align: top;
+		text-align: left;
+		#lamarca{
+			min-height: 427px;
+			.descripcion{
+				font-size: 16px;
+				line-height: 1.4em;
+				font-weight: 200;
+			}
+		}
+		#board{
+			min-height: 223px;
+			background-color: #F1F0F0;
+			margin-top: 10px;
+		}
+		.board_link{
+			border-top: 1px solid #000;
+			margin:10px auto 0 auto;
+			padding-top: 5px;
+			display: block;
+			text-align: right; 
+			text-transform: uppercase;
+			font-weight: bold;
+			text-decoration: none;
+			color:#333;
+			opacity: 0.8;
+			transition:  opacity 350ms;
+			&:hover{
+				opacity: 1;
+			}
+		}
+	}
+}
