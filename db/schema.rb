@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140722232624) do
+ActiveRecord::Schema.define(:version => 20140930052745) do
 
   create_table "blog_categorias", :force => true do |t|
     t.string   "categoria"
@@ -142,7 +142,6 @@ ActiveRecord::Schema.define(:version => 20140722232624) do
     t.datetime "promo_updated_at"
     t.text     "behindthebrand"
     t.string   "video"
-    t.integer  "vista"
   end
 
   add_index "marcas", ["slug"], :name => "index_marcas_on_slug", :unique => true
@@ -246,7 +245,6 @@ ActiveRecord::Schema.define(:version => 20140722232624) do
     t.string   "image_code"
     t.string   "personalidad"
     t.integer  "visto",                                            :default => 0
-    t.decimal  "descuento"
   end
 
   add_index "productos", ["categoria_id"], :name => "index_productos_on_categoria_id"
@@ -379,6 +377,17 @@ ActiveRecord::Schema.define(:version => 20140722232624) do
     t.string   "nombre"
     t.string   "slug"
     t.boolean  "visible"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "usuario_trivia", :force => true do |t|
+    t.string   "nombre"
+    t.string   "direccion"
+    t.string   "ticket"
+    t.string   "correo"
+    t.string   "telefono"
+    t.text     "respuestas"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

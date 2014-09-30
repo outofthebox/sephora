@@ -1,0 +1,123 @@
+.logo_beauty{
+	display: block;
+	margin:auto;
+	position: relative;
+	top:-40px;
+}
+#beauty{
+	background-color: black;
+	min-height: 200px;
+	display: block;
+	width: 100%;
+	color:white;
+	padding:20px 0;
+	.rojo{color:#E10602;}
+	.beauty_informacion{
+		width: 800px;
+		margin:auto;
+		display: block;
+		p{
+			font-size:16px;
+			font-weight: 200;
+			line-height: 1.2em;
+		}
+		.bases{
+			color:white !important;
+			margin:20px auto;
+			font-size: 14px; 
+		}
+	}
+	form{
+		margin:50px auto;
+		display: block;
+		.form-group{
+			label, input{ display: inline-block !important; }
+			label{ width: 30%; }
+			input{ width: 69%; }
+		}
+		.checkbox{
+			label{margin-right:20px;}
+			input{float:right; padding-right:29px;}
+			text-align: right;
+		}
+		.submit{
+			background-color:#E10602;
+			color:white;
+			float: right;
+		}
+	}
+}
+#trivia{
+	background-color: white;
+	min-height: 200px;
+	display: block;
+	width: 100%;
+	color:black;
+	padding:20px 0;
+	.rojo{color:#E10602;}
+	.trivia_content{
+		width: 800px;
+		margin:auto;
+		display: block;
+		.trivia_slide, #guardado{
+			display: none;
+			&.visible{
+				display: block;
+			}
+		}
+		h1{
+			letter-spacing: -1px;
+			color:white;
+			background-color:black;
+			text-align:left;
+			padding: 15px 10px;
+			span.link{
+				color:white;
+				text-align: right;
+				float:right;
+				padding-right:10px;
+				font-size: 16px;
+				font-weight: 200;
+				letter-spacing: normal;
+				a{color:white;}
+				line-height: 40px;
+			}
+		}
+		h2{
+			color:#E10602;
+			font-size: 24px;
+			margin: 35px auto 5px auto;
+			letter-spacing: -1px;
+			text-transform: uppercase;
+		}
+		p{
+			font-size:16px;
+			font-weight: 200;
+			line-height: 1.2em;
+		}
+		ul{
+			margin:0;
+			padding:0;
+			list-style: none;
+			text-align: center;
+			li{
+				margin: 10px auto;
+				padding: 0;
+				cursor: pointer;
+				span{
+					font-weight: 800;
+				}
+			}
+		}
+		table{
+			margin-top:50px;
+			tr th{text-align: center;}
+		}
+		.submit{
+			background-color:#E10602;
+			color:white;
+			float: right;
+			margin-bottom: 20px;
+		}
+	}
+}

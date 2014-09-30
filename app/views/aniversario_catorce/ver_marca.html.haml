@@ -1,18 +1,23 @@
 #ver_marca
-	= image_tag("aniversario-catorce/home/header_txt_internas.png", {:class => "logo_interior"})
-	#video
-		= image_tag("aniversario-catorce/gallery/interiores/#{@img}", {:class => "imagen-interior"})
-		%iframe.video{:allowfullscreen => "", :title => "false", :badge => "false",  :frameborder => "0", :height => "223", :mozallowfullscreen => "", :src => "//player.vimeo.com/video/98097760", :webkitallowfullscreen => "", :width => "372"}
-	#acerca
-		#lamarca
-			= image_tag("aniversario-catorce/gallery/logos/#{@img}", {:class => "logo"})
-			%h1.acerca
-				= @acerca
-			%h3.titulo
-				= @titulo
-			%p.descripcion
-				= @descripcion
-		#board
-			%a.le_board{"data-pin-board-width" => "540", "data-pin-do" => "embedBoard", "data-pin-scale-height" => "130", "data-pin-scale-width" => "130", :href => "#{@board}"} 
-			%script{:async => "", :src => "//assets.pinterest.com/js/pinit.js", :type => "text/javascript"}
-		= link_to "Ver mas inspiraciones", @board, {:class => "board_link"}
+  = image_tag("aniversario-catorce/home/header_txt_internas.png", {:class => "logo_interior"})
+  #video
+    = image_tag("aniversario-catorce/gallery/interiores/#{@img}", {:class => "imagen-interior"})
+    %iframe.video{:allowfullscreen => "", :title => "false", :badge => "false",  :frameborder => "0", :height => "223", :mozallowfullscreen => "", :src => "//player.vimeo.com/video/98097760", :webkitallowfullscreen => "", :width => "372"}
+  #acerca
+    #lamarca
+      = image_tag("aniversario-catorce/gallery/logos/#{@img}", {:class => "logo"})
+      %h1.acerca
+        = @acerca
+      %h3.titulo
+        = @titulo
+      %p.descripcion
+        = @descripcion
+    #board
+      %a.le_board{"data-pin-board-width" => "540", "data-pin-do" => "embedBoard", "data-pin-scale-height" => "130", "data-pin-scale-width" => "130", :href => "#{@board}"} 
+      %script{:async => "", :src => "//assets.pinterest.com/js/pinit.js", :type => "text/javascript"}
+    = link_to "Ver mas inspiraciones", @board, {:class => "board_link"}
+#seccion-3
+  .eventos
+    = image_tag("aniversario-catorce/home/btn_makeovers.png")
+  .mapa
+    = image_tag("aniversario-catorce/home/btn_mapa.png")

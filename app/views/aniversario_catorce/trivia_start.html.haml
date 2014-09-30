@@ -1,0 +1,114 @@
+#seccion-2
+  = image_tag("aniversario-catorce/home/header_txt_internas.png", {:class => "logo_beauty"})
+  #trivia
+    .trivia_content
+      %h1
+        BEAUTY
+        %span.rojo 
+          TRIP
+        %span.link
+          %a.base{:href => "#"}
+            BASES DEL CONCURSO
+      %p
+        Estás participando por un Beauty Trip. Responde correctamente la trivia en el menor tiempo posible y gana un makeover completo con los expertos de belleza de Shiseido, Bliss, Stila y Sephora en E.U.A.
+      .trivia-1.trivia_slide.animated.fadeIn.visible
+        %h2 Pregunta 1
+        %p ¿Cuántas tiendas de Sephora hay en México?
+        %ul.respuestas#pregunta_1
+          %li.animated{:respuesta => "10", :opcion => "a", :pregunta => "¿Cuántas tiendas de Sephora hay en México?", :p_id => "1"}
+            %span.rojo
+              a.
+            10
+          %li.animated{:respuesta => "9", :opcion => "b", :pregunta =>"¿Cuántas tiendas de Sephora hay en México?", :p_id => "1"}
+            %span.rojo
+              b.
+            9
+          %li.animated{:respuesta => "7", :opcion => "c", :pregunta =>"¿Cuántas tiendas de Sephora hay en México?", :p_id => "1"} 
+            %span.rojo
+              c.
+            7
+      .trivia-2.trivia_slide.animated.fadeIn
+        %h2 Pregunta 2
+        %p ¿Cuál es nuestra cuenta oficial en Facebook?
+        %ul.respuestas#pregunta_2
+          %li.animated{:respuesta => "SephoraMx", :opcion => "a", :pregunta => "¿Cuál es nuestra cuenta oficial en Facebook?", :p_id => "2"}
+            %span.rojo
+              a.
+            SephoraMx
+          %li.animated{:respuesta => "SephoraMexico", :opcion => "b", :pregunta =>"¿Cuál es nuestra cuenta oficial en Facebook?", :p_id => "2"}
+            %span.rojo
+              b.
+            SephoraMexico
+          %li.animated{:respuesta => "SephoraMex", :opcion => "c", :pregunta => "¿Cuál es nuestra cuenta oficial en Facebook?", :p_id => "2"} 
+            %span.rojo
+              c.
+            SephoraMex
+      .trivia-3.trivia_slide.animated.fadeIn
+        %h2 Pregunta 3
+        %p ¿Dónde abrió Bliss su primer establecimiento?
+        %ul.respuestas#pregunta_3
+          %li.animated{:respuesta => "Los Angeles", :opcion => "a", :pregunta => "¿Dónde abrió Bliss su primer establecimiento?", :p_id => "3"}
+            %span.rojo
+              a.
+            Los Angeles
+          %li.animated{:respuesta => "Nueva York", :opcion => "b", :pregunta => "¿Dónde abrió Bliss su primer establecimiento?", :p_id => "3"}
+            %span.rojo
+              b.
+            Nueva York
+          %li.animated{:respuesta => "Florida", :opcion => "c", :pregunta => "¿Dónde abrió Bliss su primer establecimiento?", :p_id => "3"} 
+            %span.rojo
+              c.
+            Florida
+      .trivia-4.trivia_slide.animated.fadeIn
+        %h2 Pregunta 4
+        %p ¿En qué año se fundó Shiseido?
+        %ul.respuestas#pregunta_4
+          %li.animated{:respuesta => "1872", :opcion => "a", :pregunta => "¿En qué año se fundó Shiseido?", :p_id => "4"}
+            %span.rojo
+              a.
+            1872
+          %li.animated{:respuesta => "1990", :opcion => "b", :pregunta => "¿En qué año se fundó Shiseido?", :p_id => "4"}
+            %span.rojo
+              b.
+            1990
+          %li.animated{:respuesta => "2000", :opcion => "c", :pregunta => "¿En qué año se fundó Shiseido?", :p_id => "4"} 
+            %span.rojo
+              c.
+            2000
+      .trivia-5.trivia_slide.animated.fadeIn
+        %h2 Pregunta 5
+        %p ¿En dónde nació Stila?
+        %ul.respuestas#pregunta_5
+          %li.animated{:respuesta => "En Londres", :opcion => "a", :pregunta => "¿En dónde nació Stila?", :p_id => "5"}
+            %span.rojo
+              a.
+            En Londres
+          %li.animated{:respuesta => "En Italia", :opcion => "b", :pregunta => "¿En dónde nació Stila?", :p_id => "5"}
+            %span.rojo
+              b.
+            En Italia
+          %li.animated{:respuesta => "En Hollywood", :opcion => "c", :pregunta => "¿En dónde nació Stila?", :p_id => "5"} 
+            %span.rojo
+              c.
+            En Hollywood
+      .trivia-6.trivia_slide.animated.fadeIn
+        %h2 Respuestas
+        %p Estas son las respuestas que  haz seleccionado.
+        %table#respuestas_usuario.table.table-striped
+          %thead
+            %tr
+              %th ID
+              %th Pregunta
+              %th Opcion
+              %th Respuesta
+          %tbody
+        %btn.btn.submit  
+          ¡Guardar!
+      #guardado.animated.fadeIn
+        %h2 ¡Suerte!
+        %p Tus respuestas han sido registradas, mucha suerte.
+:coffee
+  $ ->
+    bt =  new AniversarioCatorce.BeautyTrip;
+    bt.start()
+
