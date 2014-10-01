@@ -87,14 +87,17 @@
       %a{ :href => "http://sephora.com.mx/lista_eventos?utm_source=SitioWeb&utm_medium=BannerInfDer&utm_campaign=Eventos" }
         =image_tag "home/banners/inferior/derecho.jpg"
 - unless mobile_device?
-  #mod
+  #mod.animated.fadeInDown.register
     %a.close{:href=>"#"}
       X
-    = form_for @registro, :url => registro_path do |f|
-      = f.text_field :nombre
-      = f.text_field :email, :type => 'email'
-      = f.text_field :cp
-      = f.submit '', :id => 'submit'
+    = form_tag "#", {:id => "makkenform"} do |f|
+      .form-control
+        %label Nombre
+        %input{:type=> "text", :name => "nombre"}
+      .form-control
+        %label Email
+        %input{:type=> "text", :name => "email"}
+      %input#submit{:type=>"submit", :value=>"ENVIAR"}
   - if flash[:registro]
     #modsuc
       %a.close{:href=>"#"}
@@ -109,3 +112,16 @@
 
   #btn_mail_enviar
     =image_tag 'registro_btn.png'
+
+:coffee
+  $ ->
+    $("#makkenform").submit (ev) ->
+      ev.preventDefault()
+      ev.stopPropagation()
+      $.post "http://pdc.makken.com.mx/sephora/registro_makken.php", {nombre: "Prueba Sephora 1", email: "prueba-sephora@gessg.com"}, (response) ->
+        if response.error
+        else
+          $("#mod").fadeOut 400, ->
+            $("#mod").fadeIn 400
+            $("#mod").removeClass("register").addClass("thanks")
+

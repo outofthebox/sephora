@@ -396,5 +396,6 @@ $("#trigger2").live "click", ->
 $(".navegaciones ul.aco").on "mouseleave", ->
   $(this).closest('.navegaciones').find("ul.aco").toggleClass "activo"
 
-$(".filterby").html($(".navegaciones ul.verpor li a[data-set="+ver+"]").data("set") + " por página <sp<an>▼</span>") unless $(".navegaciones ul.verpor li a[data-set="+ver+"]").data("set").nil?
-$(".filterby2").html("precio " +$(".navegaciones ul.aco li a[data-set="+precio+"]").data("set") + "<span>▼</span>") unless $(".navegaciones ul.aco li a[data-set="+precio+"]").data("set").nil?
+if $(".navegaciones ul.verpor li a[data-set]") && ver
+  $(".filterby").html($(".navegaciones ul.verpor li a[data-set="+ver+"]").data("set") + " por página <sp<an>▼</span>") unless $(".navegaciones ul.verpor li a[data-set="+ver+"]").data("set").nil?
+  $(".filterby2").html("precio " +$(".navegaciones ul.aco li a[data-set="+precio+"]").data("set") + "<span>▼</span>") unless $(".navegaciones ul.aco li a[data-set="+precio+"]").data("set").nil?

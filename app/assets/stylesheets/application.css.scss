@@ -2743,31 +2743,47 @@ li.unchecked:before {
   left: 50%;
   margin-top: -250px;
   margin-left: -250px;
-  background-image: image-url('home/pop_registro.jpg');
+  &.register{background-image: image-url('home/popup_registro_2.jpg');}
+  &.thanks{
+    background-image: image-url('home/gracias_registro.jpg');
+    form{ display: none;}
+  }
   outline: 20px solid rgba(0,0,0,0.8);
   z-index: 9999;
   display: none;
   form {
     text-align: center;
-    padding-top: 275px;
+    padding-top: 325px;
+    label{
+      display: block;
+      font-weight: bolder;
+    }
     input {
       width: 380px;
       display: inline-block;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
       text-align: center;
       background: none;
-      border: none;
+      border: 1px solid black;
       &:invalid {
         border: none;
       }
     }
     #submit {
       display: block;
-      margin: 0 auto;
+      margin: 10px auto 0 auto;
       width: 110px;
       margin-bottom: 0;
       border: none;
-      background: none;
+      background-color: #EE0000;
+      color:white;
+      border-radius: 3px;
+      padding: 6px 0;
+      opacity: 0.8;
+      transition: opacity 350ms;
+      &:hover{
+        opacity: 1;
+      }
     }
   }
 }
