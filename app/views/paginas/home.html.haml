@@ -91,7 +91,7 @@
     %a.close{:href=>"#"}
       X
     = form_tag "#", {:id => "makkenform"} do |f|
-      .form-control
+      .form-controlform
         %label Nombre
         %input.nombre{:type=> "text", :name => "nombre"}
       .form-control
@@ -102,11 +102,16 @@
     #modsuc
       %a.close{:href=>"#"}
         X
-  #registro_popup
+  #registro_popup.animated.fadeIn
+    .texto-gracias
+      ¡GRACIAS!
     .txt_registro_popup
-    = form_for @registro, :url => registro_path do |f|
-      = f.text_field :email, :type => 'email', :placeholder => 'EMAIL'
-      = f.submit '', :id => 'submit'
+    = form_tag "#", {:id => "makkenregistro"} do |f|
+      .form-control
+        %input.nombre{:type=> "text", :name => "nombre", :placeholder => "Nombre"}
+      .form-control
+        %input.correo{:type=> "text", :name => "email", :placeholder => "correo@micorreo.com"}
+      %input#submit{:type=>"submit", :value=>""}
     %a.close{:href=>"#"}
       X
 
