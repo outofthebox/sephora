@@ -93,10 +93,10 @@
     = form_tag "#", {:id => "makkenform"} do |f|
       .form-control
         %label Nombre
-        %input{:type=> "text", :name => "nombre"}
+        %input.nombre{:type=> "text", :name => "nombre"}
       .form-control
         %label Email
-        %input{:type=> "text", :name => "email"}
+        %input.correo{:type=> "text", :name => "email"}
       %input#submit{:type=>"submit", :value=>"ENVIAR"}
   - if flash[:registro]
     #modsuc
@@ -112,16 +112,4 @@
 
   #btn_mail_enviar
     =image_tag 'registro_btn.png'
-
-:coffee
-  $ ->
-    $("#makkenform").submit (ev) ->
-      ev.preventDefault()
-      ev.stopPropagation()
-      $.post "http://pdc.makken.com.mx/sephora/registro_makken.php", {nombre: "Prueba Sephora 1", email: "prueba-sephora@gessg.com"}, (response) ->
-        if response.error
-        else
-          $("#mod").fadeOut 400, ->
-            $("#mod").fadeIn 400
-            $("#mod").removeClass("register").addClass("thanks")
 

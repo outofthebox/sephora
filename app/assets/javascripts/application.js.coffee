@@ -171,10 +171,23 @@ $(".ante.jesus").live "click", ->
 #Popup
 path = window.location.pathname
 if path == '/'
-  unless $.cookie("mod")
+  unless $.cookie("modal-registro")
     $("#mod").fadeIn()
-    $.cookie "mod", "true",
+    $.cookie "modal-registro", "true",
       expires: 365
+
+  $("#makkenform").submit (ev) ->
+    ev.preventDefault()
+    ev.stopPropagation()
+    nombre = $("#makkenform input.nombre").val();
+    correo = $("#makkenform input.correo").val();
+    $.post "http://pdc.makken.com.mx/sephora/registro_makken.php", {nombre: nombre, email: correo}, (response) ->
+      if response.error
+      else
+        $("#mod").fadeOut 400, ->
+          $("#mod").fadeIn 400
+          $("#mod").removeClass("register").addClass("thanks")
+
 $("a.close").live "click", (e) ->
   e.preventDefault()
   $("#mod, #modsuc").fadeOut()
