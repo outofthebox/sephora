@@ -58,5 +58,6 @@
       }(document, 'script', 'facebook-jssdk'));</script>
     :coffee
       $ ->
-        bt =  new AniversarioCatorce.Vip;
-        bt.soy_vip()
+        if $.cookie("vip_signin")
+          bt =  new AniversarioCatorce.Vip;
+          bt.soy_vip()
