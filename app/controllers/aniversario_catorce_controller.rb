@@ -1,7 +1,7 @@
 class AniversarioCatorceController < ApplicationController
+	before_filter :its_lunched?, :except => [:teaser, :vip_entrance, :vip_signin]
 	before_filter :find_marca_by_name, :only => [:ver_marca]
-	layout "retomakeover/application" , :except => [:teaser]
-	layout "retomakeover/teaser" , :only => [:teaser]
+	layout :resolve_layout
 
 	def index
 		@catalogo_home = get_catalogo["marcas"]
@@ -52,6 +52,36 @@ class AniversarioCatorceController < ApplicationController
 	def teaser
 	end
 
+	def vip_entrance
+	end
+
+	def vip_signin
+		if params[:codigo] == "r3t0s3ph0r4"
+			cookies[:vip_signin] = { :value => true, :expires => 1.hour.from_now }
+
+			redirect_to aniversario_catorce_path
+		else
+			redirect_to aniversario_catorce_vip_path
+		end
+	end
+
+	def its_lunched?
+		if cookies[:vip_signin]
+		else
+			unless Date.parse("31/10/2014").beginning_of_day.to_date <= Date.today.beginning_of_day.to_date
+				redirect_to aniversario_catorce_teaser_path
+			end
+		end
+	end
+
+	def its_logged?
+		if cookies[:vip_signin] == true
+			redirect_to aniversario_catorce_path
+		else
+			redirect_to aniversario_catorce_teaser_path
+		end
+	end
+
 	private
 
 	def get_catalogo
@@ -75,6 +105,17 @@ class AniversarioCatorceController < ApplicationController
 
 	def params_user_trivia
 		params[:usuario_trivia]
+	end
+
+	def resolve_layout
+		case action_name
+		when "vip_entrance"
+			"retomakeover/vip"
+		when "teaser"
+			"retomakeover/teaser"
+		else
+			"retomakeover/application"
+		end
 	end
 
 end

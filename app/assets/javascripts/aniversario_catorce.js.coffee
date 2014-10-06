@@ -4,10 +4,17 @@
 
 #= require jquery
 #= require jquery-ui
+#= require jquery.cookie
 #= require flipclock
 
 $ ->
   window.AniversarioCatorce ||= {}
+
+  class AniversarioCatorce.Vip
+    soy_vip: ->
+      $("*").click (ev) ->
+        ev.preventDefault()
+        ev.stopPropagation()
 
   class AniversarioCatorce.BeautyTrip
     start: () ->

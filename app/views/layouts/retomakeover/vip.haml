@@ -13,27 +13,14 @@
     = csrf_meta_tags
     = include_gon
     = javascript_include_tag :aniversario_catorce
-  %body
+  %body.teaser
     #fb-root
     #header
       .content
         %a.logo{:href => root_path}
-        %ul.navegacion
-          %li
-            =link_to "Makeovers", aniversario_catorce_makeovers_path
-          %li
-            =link_to "Big Prices", aniversario_catorce_big_prices_path
-          %li
-            = link_to "Beauty Studio", "/servicioexpress?utm_source=RetoMakeover&utm_medium=Header&utm_campaign=BeautyStudio"
-          %li
-            = link_to "Estudio Sephora", "/lista_eventos?utm_source=RetoMakeover&utm_medium=Header&utm_campaign=EstudioSephora"
-          %li
-            = link_to "Mapa del evento", "#"
     #wrapper
       .content
         = yield
-        #seccion-4
-          = image_tag("aniversario-catorce/home/marcas_logos.jpg")
     #footer
       .content
         %a.logo{:href => root_path}
@@ -56,7 +43,3 @@
         js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&appId=191335521070710&version=v2.0";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));</script>
-    :coffee
-      $ ->
-        bt =  new AniversarioCatorce.Vip;
-        bt.soy_vip()

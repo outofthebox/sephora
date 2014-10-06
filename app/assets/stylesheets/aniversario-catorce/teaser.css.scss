@@ -67,5 +67,37 @@ body.teaser{
       margin-top: 13%;
       right: 100px;
     }
+    .txt-vip{
+      display: block;
+      position: absolute;
+      width: 33%;
+      min-width: 200px;
+      margin-top: 5%;
+      right: 100px;
+    }
+    .codigo {
+      width: 80%;
+      margin: 20px 0px 0px 70px;
+      display: block;
+      min-height: 50px;
+      line-height: 40px;
+      font-size: 40px;
+      color: white;
+      background: transparent;
+      padding: 0 10px;
+      text-align: center;
+      border:2px solid white;
+    }
+    .submit{
+      text-align: right;
+      float: right;
+      margin-top: 19px;
+      margin-right: 10px;
+      color: white;
+      background: transparent;
+      border: none;
+      font-size: 16px;
+      border-bottom: 1px solid white;
+    }
   }
 }
