@@ -2,7 +2,7 @@
   = image_tag("aniversario-catorce/home/header_txt_internas.png", {:class => "logo_interior"})
   #video
     = image_tag("aniversario-catorce/gallery/interiores/#{@img}", {:class => "imagen-interior"})
-    %iframe.video{:allowfullscreen => "", :title => "false", :badge => "false",  :frameborder => "0", :height => "223", :mozallowfullscreen => "", :src => "//player.vimeo.com/video/98097760", :webkitallowfullscreen => "", :width => "372"}
+    %iframe.video{:allowfullscreen => "", :frameborder => "0", :height => "223", :src => "#{@video}", :width => "372"}
   #acerca
     #lamarca
       = image_tag("aniversario-catorce/gallery/logos/#{@img}", {:class => "logo"})

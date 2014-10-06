@@ -4,6 +4,7 @@
 
 #= require jquery
 #= require jquery-ui
+#= require flipclock
 
 $ ->
   window.AniversarioCatorce ||= {}
@@ -73,6 +74,9 @@ $ ->
       aniv = @
       aniv.data.push(m)
       console.log aniv.data
+
+  class AniversarioCatorce.Teaser
+    console.log("miau")
 
 
 

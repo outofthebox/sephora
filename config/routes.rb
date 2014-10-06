@@ -274,6 +274,8 @@ Sephora::Application.routes.draw do
     match "/", to: "aniversario_catorce#index", :via => :get
     match "makeovers", to: "aniversario_catorce#index", :via => :get
     match "big_prices", to: "aniversario_catorce#big_prices", :via => :get
+    match "teaser", to: "aniversario_catorce#teaser", :via => :get, :as => "teaser"
+    
     match "ver/:marca", to: "aniversario_catorce#ver_marca", :via => :get, :as => "ver"
     scope path: :beauty_trip, as: "beauty_trip" do
       match "/", to: "aniversario_catorce#beauty_trip", :via => :get

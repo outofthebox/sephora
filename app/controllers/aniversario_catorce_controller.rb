@@ -1,5 +1,7 @@
 class AniversarioCatorceController < ApplicationController
 	before_filter :find_marca_by_name, :only => [:ver_marca]
+	layout "retomakeover/application" , :except => [:teaser]
+	layout "retomakeover/teaser" , :only => [:teaser]
 
 	def index
 		@catalogo_home = get_catalogo["marcas"]
@@ -44,6 +46,10 @@ class AniversarioCatorceController < ApplicationController
 		@acerca = @marca["acerca"]
 		@descripcion = @marca["descripcion"]
 		@board = @marca["board"]
+		@video = @marca["video"]
+	end
+
+	def teaser
 	end
 
 	private
