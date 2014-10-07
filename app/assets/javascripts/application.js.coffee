@@ -29,6 +29,9 @@ $("#pestanas").hover ->
 $("#labios").hover ->
   $(".labios_txt").fadeToggle()
   return
+$("#cejas").hover ->
+  $(".cejas_txt").fadeToggle()
+  return
 
 
 $('.eventomodal a').on 'click', (e) ->

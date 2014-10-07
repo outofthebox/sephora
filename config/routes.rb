@@ -134,10 +134,11 @@ Sephora::Application.routes.draw do
     resources :userwishes
   end
 
-  get '/consultorpersonalbelleza', :to => 'paginas#consultores', :as => 'consultores'
-  get '/servicioexpress', :to => 'paginas#servicio_express', :as => 'servicioexpress'
-  get '/servicioscompletos', :to => 'paginas#servicios_completos', :as => 'servicioscompletos'
-  get '/lista_eventos', :to => 'paginas#lista_eventos', :as => 'eventos' 
+  get '/consultapersonalizadabelleza', :to => 'paginas#consultores', :as => 'consultores'
+  get '/minimakeovers', :to => 'paginas#servicio_express', :as => 'servicioexpress'
+  get '/makeoverpersonalizado', :to => 'paginas#servicios_completos', :as => 'servicioscompletos'
+  get '/lista_eventos', :to => 'paginas#lista_eventos', :as => 'eventos'
+  get '/beautyunoauno', :to => 'paginas#beauty', :as => 'beautyunoauno'
 
   #ANIVERSARIO
   get '365'    => 'paginas#aniversario', :as => :aniversario
