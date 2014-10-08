@@ -14,24 +14,25 @@
             .btn_tienda.inner_m
           %a{:href=>'/lista_eventos'}  
             .btn_evento.inner_m
-          %a{:href=>'/servicioexpress'}  
+          %a{:href=>'/minimakeovers'}  
             .btn_beauty.inner_m
         %hr{:class=>'sub_menu_tiendas'}
         .txt_tienda_header
           = image_tag 'consultores/txt_header.jpg'
         .sub_menu_consultor 
-          %a{:href=>'/servicioexpress'}         
-            .btn_servicio_express.inner_menu_c
-          %a{:href=>'/servicioscompletos'} 
-            .btn_servicio_completo.inner_menu_c
-          %a{:href=>'/consultorpersonalbelleza'} 
-            .btn_consultor.inner_menu_c
+          %a{:href=>'/minimakeovers'}         
+            .btn_minimakeover.inner_menu_a
+          %a{:href=>'/makeoverpersonalizado'} 
+            .btn_makeoverp.inner_menu_b
+          %a{:href=>'/beautyunoauno'} 
+            .btn_beautyuno.inner_menu_c
+          %a{:href=>'/consultapersonalizadabelleza'} 
+            .btn_consulta.inner_menu_d
       %h4
-        SERVICIOS EXPRESS
+        MINI MAKEOVERS
       %hr
       .consultorp_txt
-        %p{:class=>'belleza_txt'} Transforma áreas específicas de tu look en 15 minutos. 
-        %p{:class=>'belleza_txt'} Sin costo. No requiere previa cita.
+        %p{:class=>'belleza_txt'} 15 minutos. Gratuito. Looks individuales. Sin previa cita.
       .express_container
         #base.express_img
           =image_tag 'consultores/express/base.jpg'
@@ -73,6 +74,11 @@
           .express_img_txt.display_none.labios_txt
             .express_img_info
               Descubre los tips de aplicación del lipstick, lipstain o gloss de los profesionales.
+        #cejas.express_img
+          =image_tag 'consultores/express/cejas.jpg'
+          .express_img_txt.display_none.cejas_txt
+            .express_img_info
+              Añade definición al instante y enmarca tu rostro con los consejos de los expertos para unas cejas definidas. No se realiza depilado, únicamente diseño de ceja.
         
 
 
