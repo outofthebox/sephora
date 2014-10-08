@@ -9,7 +9,7 @@
           - img = marca["imagen"]
           - nombre = marca["nombre"]
           %li
-            = link_to image_tag("aniversario-catorce/gallery/home/#{img}"), aniversario_catorce_ver_path(nombre.parameterize)
+            = link_to image_tag("aniversario-catorce/gallery/home/#{img}"), restricted(11, aniversario_catorce_ver_path(nombre.parameterize))
       %p.text-right
         SEPHORA ANTARA, OCTUBRE 31, 1 y 2 DE NOVIEMBRE.
     #sidebar.derecha
