@@ -12,7 +12,7 @@ $ ->
 
   class AniversarioCatorce.Vip
     soy_vip: ->
-      $("*").click (ev) ->
+      $("#collage.izquierda *").click (ev) ->
         ev.preventDefault()
         ev.stopPropagation()
 

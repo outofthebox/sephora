@@ -68,7 +68,7 @@ class AniversarioCatorceController < ApplicationController
 	def its_lunched?
 		if cookies[:vip_signin]
 		else
-			unless Date.parse("31/10/2014").beginning_of_day.to_date <= Date.today.beginning_of_day.to_date
+			unless DateTime.new(2014,10,11,11,00,00) <= DateTime.current()
 				redirect_to aniversario_catorce_teaser_path
 			end
 		end
