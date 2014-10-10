@@ -25,7 +25,7 @@
           %li
             .table.full
               .tcell.t25
-                =image_tag(tienda.foto(:normal)
+                =image_tag(tienda.foto(:normal))
                 %p.mapa
                   = link_to image_tag('tiendas/btn_mapa.jpg'), 'https://maps.google.com/?q='+(tienda.latitud).to_s+','+(tienda.longitud).to_s
               .info.tcell.t75
