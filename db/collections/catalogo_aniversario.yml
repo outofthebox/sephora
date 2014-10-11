@@ -105,7 +105,7 @@ marcas:
     descripcion: "Un lugar donde aprender cómo cuidar tu cabello y cómo lograr los peinados más hot en sólo unos cuantos minutos. Los expertos te esperan en nuestro Bar de Peinados."
     imagen: "amika.jpg"
     board: "http://es.pinterest.com/sephoramx/cuidado-del-cabello/"
-    video: ""
+    video: "https://www.youtube.com/embed/V03PzP1t5J4"
     fecha: "2014,10,16,17,00,00"
   marca13:
     nombre: "FORMULA X"
@@ -123,7 +123,7 @@ marcas:
     descripcion: "Una piel sana es una piel hidratada. Aprende con los expertos la guía esencial para mantener tu piel hidratada… y por lo tanto, joven."
     imagen: "shiseido.jpg"
     board: "http://es.pinterest.com/sephoramx/hidrataci%C3%B3n-para-el-rostro/"
-    video: ""
+    video: "https://www.youtube.com/embed/1i42Y6Mi7AE"
     fecha: "2014,10,17,17,00,00"
   marca15:
     nombre: "FRESH"

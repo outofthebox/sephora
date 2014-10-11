@@ -10,6 +10,7 @@ gem 'haml-rails', "~> 0.4"
 gem 'sendgrid'
 gem 'hominid'
 gem 'activerecord-import'
+gem 'delayed_job_active_record'
 gem 'paperclip', '~> 2.7'
 gem 'kaminari'
 gem 'aws-sdk'

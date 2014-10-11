@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140920052053) do
+ActiveRecord::Schema.define(:version => 20141011193513) do
 
   create_table "blog_categorias", :force => true do |t|
     t.string   "categoria"
@@ -76,6 +76,22 @@ ActiveRecord::Schema.define(:version => 20140920052053) do
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
   end
+
+  create_table "delayed_jobs", :force => true do |t|
+    t.integer  "priority",   :default => 0, :null => false
+    t.integer  "attempts",   :default => 0, :null => false
+    t.text     "handler",                   :null => false
+    t.text     "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string   "locked_by"
+    t.string   "queue"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+  end
+
+  add_index "delayed_jobs", ["priority", "run_at"], :name => "delayed_jobs_priority"
 
   create_table "eventos", :force => true do |t|
     t.integer  "tienda"
@@ -153,6 +169,7 @@ ActiveRecord::Schema.define(:version => 20140920052053) do
     t.datetime "promo_updated_at"
     t.text     "behindthebrand"
     t.string   "video"
+    t.integer  "vista"
   end
 
   add_index "marcas", ["slug"], :name => "index_marcas_on_slug", :unique => true
@@ -256,6 +273,7 @@ ActiveRecord::Schema.define(:version => 20140920052053) do
     t.string   "image_code"
     t.string   "personalidad"
     t.integer  "visto",                                            :default => 0
+    t.decimal  "descuento"
   end
 
   add_index "productos", ["categoria_id"], :name => "index_productos_on_categoria_id"
