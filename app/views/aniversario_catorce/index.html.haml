@@ -1,30 +1,31 @@
-#vista{:vista=> "home"}
-  #seccion-1
-    =image_tag("aniversario-catorce/home/main_banner.jpg")
-  #seccion-2
-    #collage.izquierda
-      %ul.collage_home
-        -bandera = 0
-        - @catalogo_home.each_with_index do |m, i|
-          - marca = m[1]
-          - img = marca["imagen"]
-          - nombre = marca["nombre"]
-          - date = marca["fecha"]
-          %li
-            -if coming_soon?(date)
-              .proximamente
-                %p proximamente
-            = link_to image_tag("aniversario-catorce/gallery/home/#{img}"), restricted(date, aniversario_catorce_ver_path(nombre.parameterize))
-      %p.text-right
-        SEPHORA ANTARA, OCTUBRE 31, 1 y 2 DE NOVIEMBRE.
-    #sidebar.derecha
-      = link_to image_tag("aniversario-catorce/home/banner_beauty_studio.jpg", {:class=>"side_banner"}), "/minimakeovers?utm_source=RetoMakeover&utm_medium=Banner1&utm_campaign=BeautyStudio"
-      = link_to image_tag("aniversario-catorce/home/banner_studio.jpg", {:class=>"side_banner"}), "/lista_eventos?utm_source=RetoMakeover&utm_medium=Banner2&utm_campaign=EstudioSephora"
-      = link_to image_tag("aniversario-catorce/home/banner_prizes.jpg", {:class=>"side_banner"}), aniversario_catorce_big_prices_path
-  #seccion-3
-    .regalos
-      = image_tag("aniversario-catorce/home/banner_totebag.jpg")
-    .eventos
-      = image_tag("aniversario-catorce/home/btn_makeovers.png")
-    .mapa
-      = image_tag("aniversario-catorce/home/btn_mapa.png")
+= cache(action: 'index', action_suffix: 'aniversario_index') do
+  #vista{:vista=> "home"}
+    #seccion-1
+      =image_tag("aniversario-catorce/home/main_banner.jpg")
+    #seccion-2
+      #collage.izquierda
+        %ul.collage_home
+          -bandera = 0
+          - @catalogo_home.each_with_index do |m, i|
+            - marca = m[1]
+            - img = marca["imagen"]
+            - nombre = marca["nombre"]
+            - date = marca["fecha"]
+            %li
+              -if coming_soon?(date)
+                .proximamente
+                  %p proximamente
+              = link_to image_tag("aniversario-catorce/gallery/home/#{img}"), restricted(date, aniversario_catorce_ver_path(nombre.parameterize))
+        %p.text-right
+          SEPHORA ANTARA, OCTUBRE 31, 1 y 2 DE NOVIEMBRE.
+      #sidebar.derecha
+        = link_to image_tag("aniversario-catorce/home/banner_beauty_studio.jpg", {:class=>"side_banner"}), "/minimakeovers?utm_source=RetoMakeover&utm_medium=Banner1&utm_campaign=BeautyStudio"
+        = link_to image_tag("aniversario-catorce/home/banner_studio.jpg", {:class=>"side_banner"}), "/lista_eventos?utm_source=RetoMakeover&utm_medium=Banner2&utm_campaign=EstudioSephora"
+        = link_to image_tag("aniversario-catorce/home/banner_prizes.jpg", {:class=>"side_banner"}), aniversario_catorce_big_prices_path
+    #seccion-3
+      .regalos
+        = image_tag("aniversario-catorce/home/banner_totebag.jpg")
+      .eventos
+        = image_tag("aniversario-catorce/home/btn_makeovers.png")
+      .mapa
+        = image_tag("aniversario-catorce/home/btn_mapa.png")
