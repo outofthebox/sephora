@@ -4,12 +4,17 @@
   #seccion-2
     #collage.izquierda
       %ul.collage_home
-        - @catalogo_home.each do |m|
+        -bandera = 0
+        - @catalogo_home.each_with_index do |m, i|
           - marca = m[1]
           - img = marca["imagen"]
           - nombre = marca["nombre"]
+          - date = marca["fecha"]
           %li
-            = link_to image_tag("aniversario-catorce/gallery/home/#{img}"), restricted(11, aniversario_catorce_ver_path(nombre.parameterize))
+            -if coming_soon?(date)
+              .proximamente
+                %p proximamente
+            = link_to image_tag("aniversario-catorce/gallery/home/#{img}"), restricted(date, aniversario_catorce_ver_path(nombre.parameterize))
       %p.text-right
         SEPHORA ANTARA, OCTUBRE 31, 1 y 2 DE NOVIEMBRE.
     #sidebar.derecha

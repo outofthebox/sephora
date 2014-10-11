@@ -21,8 +21,26 @@
 				opacity: 0.4;
 				transition: opacity 350ms;
 				cursor: pointer;
+				position: relative;
 				&:hover{
 					opacity: 1;
+				}
+				.proximamente{
+					width: 100%;
+					height: 100%;
+					display: block;
+					background-color: #000;
+					width: 124px;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					p{
+						color:white;
+						position: absolute;
+						bottom:5px;
+						left:15px;
+					}
 				}
 			}
 		}
