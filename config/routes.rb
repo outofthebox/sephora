@@ -186,6 +186,8 @@ Sephora::Application.routes.draw do
   get 'mobile/tiendas', :to => 'mobile#tiendas', :as => 'm_tiendas'
   get 'mobile/unfavorite/:id', :to => 'mobile#unfavorite', :as => 'm_unfavorited'
   get 'mobile/video', :to => 'mobile#video', :as => 'm_video'
+  get 'mobile/retomakeover', :to => 'mobile#retomakeover', :as => 'm_retomakeover'
+  get 'mobile/retomakeover/ver/:marca', :to => 'mobile#retomakeover_ver', :as => 'm_retomakeover_ver'
 
   # especiales
   get 'mobile/especiales', :to => 'mobile#especialesmes', :as => 'm_especiales'

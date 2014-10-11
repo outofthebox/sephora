@@ -1,6 +1,22 @@
 class MobileController < ApplicationController
   before_filter :authenticate_mobileuser!, :only => [:favoritos]
+  before_filter :find_marca_by_name, :only => [:retomakeover_ver]
+  
   def home
+  end
+
+  def retomakeover
+    @catalogo_home = get_catalogo["marcas"]
+  end
+
+  def retomakeover_ver
+    @img = @marca["imagen"]
+    @nombre = @marca["nombre"]
+    @titulo = @marca["titulo"]
+    @acerca = @marca["acerca"]
+    @descripcion = @marca["descripcion"]
+    @board = @marca["board"]
+    @video = @marca["video"]
   end
 
   def eventos
@@ -136,6 +152,21 @@ class MobileController < ApplicationController
     else
       redirect_to  m_favoritos_path
     end
-
   end
+
+  private
+
+  def get_catalogo
+    catalogo_aniversario_path = File.join(Rails.root, 'db', 'collections', 'catalogo_aniversario.yml');
+    catalogo = YAML.load(File.open(catalogo_aniversario_path))
+  end
+
+  def find_marca_by_name
+    name = params[:marca]
+    marcas = get_catalogo["marcas"]
+    marcas.each do |m|
+      marca = m[1]
+      @marca = marca if marca["nombre"].parameterize == name
+    end
+  end 
 end
