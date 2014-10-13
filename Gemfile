@@ -54,6 +54,7 @@ group :development, :test do
   gem 'fabrication-rails'
   gem 'fivemat'
   gem 'guard'
+  gem 'pry-rails'
   gem 'guard-livereload', require: false
   gem 'letter_opener'
   gem 'nifty-generators'

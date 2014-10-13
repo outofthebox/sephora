@@ -211,6 +211,8 @@ GEM
       coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
+    pry-rails (0.3.2)
+      pry (>= 0.9.10)
     pusher-client (0.4.0)
       websocket (~> 1.0.0)
     rack (1.4.5)
@@ -365,6 +367,7 @@ DEPENDENCIES
   oauth
   paperclip (~> 2.7)
   pg
+  pry-rails
   rack-block (~> 0.1.1)
   rails (= 3.2.0)
   redcarpet (= 1.17.2)
