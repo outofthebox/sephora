@@ -174,8 +174,11 @@ Sephora::Application.routes.draw do
   get 'mobile/busqueda', :to => 'mobile#mobileilbusqueda', :as => 'm_busqueda'
   get 'mobile/beauty', :to => 'mobile#beauty', :as => 'm_beauty'
   get 'mobile/cosmetiquera', :to => 'mobile#cosmetiquera', :as => 'm_cosmetiquera'
+  
   get 'mobile/eventos', :to => 'mobile#eventos', :as => 'm_eventos'
+  get 'mobile/lista_eventos', :to => 'mobile#eventos', :as => 'm_lista_eventos'
   get 'mobile/evento/:id', :to => 'mobile#evento_show', :as => 'm_show_evento'
+  
   get 'mobile/favoritos', :to => 'mobile#favoritos', :as => 'm_favoritos'
   get 'mobile/favorite/:id', :to => 'mobile#favorite', :as => 'm_favorited'
   get 'mobile/hotnow/:seccion', :to => 'mobile#jotnao', :as => 'm_hotnow'
