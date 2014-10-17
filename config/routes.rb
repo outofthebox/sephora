@@ -169,39 +169,6 @@ Sephora::Application.routes.draw do
   get "marc-jacobs-beauty/look", :to => "marcjacobs#look", :as => 'marc_look'
   get "marc-jacobs-beauty/catalogo", :to => "marcjacobs#catalogo", :as => 'marc_catalogo'
 
-  #mobile
-  get 'mobile', :to => 'mobile#home', :as => 'm_home'
-  get 'mobile/busqueda', :to => 'mobile#mobileilbusqueda', :as => 'm_busqueda'
-  get 'mobile/beauty', :to => 'mobile#beauty', :as => 'm_beauty'
-  get 'mobile/cosmetiquera', :to => 'mobile#cosmetiquera', :as => 'm_cosmetiquera'
-  
-  get 'mobile/eventos', :to => 'mobile#eventos', :as => 'm_eventos'
-  get 'mobile/lista_eventos', :to => 'mobile#eventos', :as => 'm_lista_eventos'
-  get 'mobile/evento/:id', :to => 'mobile#evento_show', :as => 'm_show_evento'
-  
-  get 'mobile/favoritos', :to => 'mobile#favoritos', :as => 'm_favoritos'
-  get 'mobile/favorite/:id', :to => 'mobile#favorite', :as => 'm_favorited'
-  get 'mobile/hotnow/:seccion', :to => 'mobile#jotnao', :as => 'm_hotnow'
-  get 'mobile/legal', :to => 'mobile#legales', :as => 'm_legal'
-  get 'mobile/login', :to => 'mobile#login', :as => 'm_login'
-  get 'mobile/nuevo', :to => 'mobile#lonuevo', :as => 'm_nuevo'
-  get 'mobile/producto/:slug', :to => 'mobile#mobileproducto', :as => 'm_producto'
-  get 'mobile/tiendas', :to => 'mobile#tiendas', :as => 'm_tiendas'
-  get 'mobile/unfavorite/:id', :to => 'mobile#unfavorite', :as => 'm_unfavorited'
-  get 'mobile/video', :to => 'mobile#video', :as => 'm_video'
-  get 'mobile/retomakeover', :to => 'mobile#retomakeover', :as => 'm_retomakeover'
-  get 'mobile/retomakeover/ver/:marca', :to => 'mobile#retomakeover_ver', :as => 'm_retomakeover_ver'
-
-  # especiales
-  get 'mobile/especiales', :to => 'mobile#especialesmes', :as => 'm_especiales'
-  get 'mobile/wallpapers', :to => 'mobile#wallpapers', :as => 'm_wallpaper'
-  get 'mobile/giftcase', :to => 'mobile#giftcase', :as => 'm_giftcase'
-
-
-
-  get 'mobile/lomas', :to => 'mobile#lomas', :as => 'm_lomas'
-
-
 
   #wishlist
   get "wishlist", :to => 'wishlist#index', :as => "wishlist"
@@ -278,8 +245,9 @@ Sephora::Application.routes.draw do
 
   scope path: :retomakeover, as: "aniversario_catorce" do
     match "/", to: "aniversario_catorce#index", :via => :get
-    match "makeovers", to: "aniversario_catorce#index", :via => :get
+    match "makeovers", to: "aniversario_catorce#makeovers", :via => :get
     match "big_prices", to: "aniversario_catorce#big_prices", :via => :get
+    match "event_map", to: "aniversario_catorce#event_map", :via => :get
     match "teaser", to: "aniversario_catorce#teaser", :via => :get, :as => "teaser"
     match "vip", to: "aniversario_catorce#vip_entrance", :via => :get, :as => "vip"
     match "vip", to: "aniversario_catorce#vip_signin", :via => :post, :as => "vip_signin"
@@ -294,6 +262,48 @@ Sephora::Application.routes.draw do
       match "salvada", to: "aniversario_catorce#trivia_salvada", :via => :get, :as => "salvada"
     end
   end
+
+  #mobile
+  scope path: :mobile, as: "m" do
+    match "/", :to => 'mobile#home', :as => 'home'
+    
+    match 'busqueda', :to => 'mobile#mobileilbusqueda', :as => 'busqueda'
+    match 'beauty', :to => 'mobile#beauty', :as => 'beauty'
+    match 'cosmetiquera', :to => 'mobile#cosmetiquera', :as => 'cosmetiquera'
+    
+    match 'eventos', :to => 'mobile#eventos', :as => 'eventos'
+    match 'lista_eventos', :to => 'mobile#eventos', :as => 'lista_eventos'
+    match 'evento/:id', :to => 'mobile#evento_show', :as => 'show_evento'  
+
+    match 'producto/:slug', :to => 'mobile#mobileproducto', :as => 'producto'
+    match 'favoritos', :to => 'mobile#favoritos', :as => 'favoritos'
+    match 'favorite/:id', :to => 'mobile#favorite', :as => 'favorited'
+    match 'unfavorite/:id', :to => 'mobile#unfavorite', :as => 'unfavorited'
+    
+    match 'hotnow/:seccion', :to => 'mobile#jotnao', :as => 'hotnow'
+    match 'legal', :to => 'mobile#legales', :as => 'legal'
+    match 'login', :to => 'mobile#login', :as => 'login'
+    match 'nuevo', :to => 'mobile#lonuevo', :as => 'nuevo'
+    match 'tiendas', :to => 'mobile#tiendas', :as => 'tiendas'
+
+    match 'speciales-aniversario', :to => 'mobile#especialesaniversario', :as => 'especiales_aniversario'
+    
+    match 'video', :to => 'mobile#video', :as => 'video'
+    
+    match 'retomakeover', :to => 'mobile#retomakeover', :as => "retomakeover"
+    scope :retomakeover, as: "retomakeover" do
+
+      match 'ver/:marca', :to => 'mobile#retomakeover_ver', :as => 'ver'
+      match "event_map", to: "aniversario_catorce#event_map", :via => :get
+    end
+
+  end
+
+  # especiales
+  get 'mobile/especiales', :to => 'mobile#especialesmes', :as => 'm_especiales'
+  get 'mobile/wallpapers', :to => 'mobile#wallpapers', :as => 'm_wallpaper'
+  get 'mobile/giftcase', :to => 'mobile#giftcase', :as => 'm_giftcase'
+  get 'mobile/lomas', :to => 'mobile#lomas', :as => 'm_lomas'
 
 
   #brand-minisite

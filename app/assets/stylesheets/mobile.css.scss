@@ -711,3 +711,29 @@ html, body{
   }
 }
 
+
+
+
+@media only screen 
+and (orientation : landscape){
+  #map{
+    min-height: 439px;
+  }
+}
+
+
+@media only screen 
+and (orientation : portrait){
+/* Styles */
+  #map{
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+    transform-origin: top right;
+    margin-left: 462px;
+    img{
+      width: 960px;
+      height: 461px;
+    }
+  }
+}
