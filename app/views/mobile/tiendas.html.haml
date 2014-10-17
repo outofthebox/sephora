@@ -7,7 +7,7 @@
             %h5 
               = t.nombre
             .imagen
-              = image_tag t.foto
+              = image_tag t.foto, {:class => "clip-me"}
             .info
               %p 
                 %i.glyphicon.glyphicon-calendar
@@ -18,3 +18,4 @@
               %p
                 %i.glyphicon.glyphicon-home
                 = t.direccion
+              = link_to "Ver mapa", t.map, {:class => "btn btn-block btn-black"}

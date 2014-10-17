@@ -1,6 +1,6 @@
 require 'rake'
 
-namespace :productos do
+namespace :productos do  
   task :esconder_incompletos => :environment do
     puts "--- Buscando Productos sin Descripcion ni Imagen"
     sfd = Producto.where({:foto_file_name => nil, :publicado => true, :descripcion => nil})
