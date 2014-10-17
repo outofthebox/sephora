@@ -24,6 +24,9 @@ class MobileController < ApplicationController
     @tiendas = Tienda.all
   end
 
+  def especialesaniversario
+  end
+
   def evento_show
     @evento = Event.find(params[:id])
     @store_event = StoreEvent.where(:event_id => @evento.id)
