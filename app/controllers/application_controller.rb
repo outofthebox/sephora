@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  before_filter :redirect_main_domain if Rails.env.production?
+  #before_filter :redirect_main_domain if Rails.env.production?
   before_filter :redirect_mobile
 
   def redirect_main_domain
