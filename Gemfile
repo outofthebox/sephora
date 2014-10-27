@@ -1,6 +1,8 @@
 ruby '1.9.3'
 source 'https://rubygems.org'
 
+gem 'rails_12factor', group: :production
+
 gem 'rails', '3.2.0'
 gem 'pg'
 gem 'thinking-sphinx', '~> 3.0.0'

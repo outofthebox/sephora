@@ -73,6 +73,8 @@ module Sephora
     # Enable the asset pipeline
     config.assets.enabled = true
 
+    config.serve_static_assets = true
+
     config.to_prepare do
         Devise::SessionsController.layout "mobile"
         Devise::RegistrationsController.layout "mobile"
