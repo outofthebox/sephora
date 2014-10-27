@@ -4,6 +4,25 @@
   .contendbeauty
     %ul#lista
       %li.cabecera
+        %h5
+          MINI MAKEOVERS
+        %ul.contenido
+          %li 
+            %p 15 minutos. Gratuito. Looks individuales. Sin previa cita.
+            %p Base Perfecta
+            %p Piel Hermosa
+            %p Trata y Oculta
+            %p Blush y Bronzer
+            %p Look Diario
+            %p Smoky Eyes
+            %p Pestañas Postizas
+            %p Labios Perfectos
+            %p Cejas Definidas
+            %p Disponible en todas las tiendas de Sephora México.
+            %p
+              = link_to 'Reserva','/minimakeovers', {:class => "reserva"}
+
+      %li.cabecera
         %h5 
           MAKEOVER PERSONALIZADO
         %ul.contenido
@@ -14,6 +33,8 @@
               Maquillajes completos. Con previa cita.
             %p
               Disponible en todas las tiendas de Sephora México.
+            %p
+              = link_to 'Reserva','/makeoverpersonalizado', {:class => "reserva"}
       %li.cabecera
         %h5 
           BEAUTY UNO A UNO
@@ -25,6 +46,8 @@
               Clase individual, ofrecida por un maquillista certificado, para conocer tu rostro y los básicos del maquillaje. Con previa cita.
             %p
               Disponible en todas las tiendas de Sephora México.
+            %p
+              = link_to 'Reserva','/beautyunoauno', {:class => "reserva"}
       %li.cabecera
         %h5 
           CONSULTA PERSONALIZADA DE BELLEZA
@@ -35,4 +58,4 @@
             %p
               Sesión de belleza exclusiva, dirigida por un consultor especializado y certificado, que incluye un makeover personalizado.
               La Consulta Personalizada está enfocada en skincare, maquillaje, cabello y fragancia. Con previa cita.
-              = link_to 'Reserva','http://sephora.com.mx/consultorpersonalbelleza', {:class => "reserva"}
+              = link_to 'Reserva','/consultapersonalizadabelleza', {:class => "reserva"}
