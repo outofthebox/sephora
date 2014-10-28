@@ -70,9 +70,10 @@ module Sephora
 
     config.assets.initialize_on_precompile = false
 
+    config.assets.precompile += %w(mobile.js)
+
     # Enable the asset pipeline
     config.assets.enabled = true
-
 
     config.to_prepare do
         Devise::SessionsController.layout "mobile"
