@@ -72,7 +72,7 @@ $ ->
         ev.preventDefault()
         ev.stopPropagation()
 
-        $.post "/aniversario_catorce/beauty_trip/finish", {data: aniv.data}, (data) ->
+        $.post "/retomakeover/beauty_trip/finish", {data: aniv.data}, (data) ->
           if data && data.error != true
             $visible.removeClass("visible")
             $("#guardado").addClass("visible")
