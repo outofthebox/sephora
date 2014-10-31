@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141017155409) do
+ActiveRecord::Schema.define(:version => 20141031071017) do
 
   create_table "blog_categorias", :force => true do |t|
     t.string   "categoria"
@@ -55,8 +55,8 @@ ActiveRecord::Schema.define(:version => 20141017155409) do
     t.string   "slug"
     t.boolean  "visible"
     t.integer  "parent_id"
-    t.datetime "created_at",                          :null => false
-    t.datetime "updated_at",                          :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
     t.integer  "lft"
     t.integer  "rgt"
     t.integer  "depth"
@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(:version => 20141017155409) do
     t.integer  "cover_file_size"
     t.datetime "cover_updated_at"
     t.text     "urlslug"
-    t.text     "descripcion",        :default => "0"
+    t.text     "descripcion"
   end
 
   create_table "comments", :force => true do |t|
@@ -98,6 +98,16 @@ ActiveRecord::Schema.define(:version => 20141017155409) do
     t.string   "nombre"
     t.text     "descripcion"
     t.datetime "fecha"
+  end
+
+  create_table "eventotiendas", :force => true do |t|
+    t.string   "nombre"
+    t.text     "horario"
+    t.text     "descripcion"
+    t.text     "informacion"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "tienda_id"
   end
 
   create_table "events", :force => true do |t|
@@ -182,6 +192,25 @@ ActiveRecord::Schema.define(:version => 20141017155409) do
 
   add_index "mobileusers", ["email"], :name => "index_mobileusers_on_email", :unique => true
   add_index "mobileusers", ["reset_password_token"], :name => "index_mobileusers_on_reset_password_token", :unique => true
+
+  create_table "models", :force => true do |t|
+    t.string   "email",                  :default => "", :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "mobilelogin"
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
+  end
+
+  add_index "models", ["email"], :name => "index_models_on_email", :unique => true
+  add_index "models", ["reset_password_token"], :name => "index_models_on_reset_password_token", :unique => true
 
   create_table "post_favs", :force => true do |t|
     t.integer  "usuario_id"
@@ -404,6 +433,7 @@ ActiveRecord::Schema.define(:version => 20141017155409) do
     t.text     "respuestas"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.datetime "start_at"
   end
 
   create_table "usuarios", :force => true do |t|
