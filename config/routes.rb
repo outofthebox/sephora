@@ -260,6 +260,7 @@ Sephora::Application.routes.draw do
       match "start", to: "aniversario_catorce#trivia_start", :via => :get, :as => "start"
       match "finish", to: "aniversario_catorce#trivia_finish", :via => :post, :as => "finish"
       match "salvada", to: "aniversario_catorce#trivia_salvada", :via => :get, :as => "salvada"
+      match "gracias", to: "aniversario_catorce#trivia_gracias", :via => :get, :as => "gracias"
     end
   end
 
