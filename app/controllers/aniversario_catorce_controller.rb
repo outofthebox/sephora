@@ -17,15 +17,22 @@ class AniversarioCatorceController < ApplicationController
 	def trivia_init
 		usuario_trivia = UsuarioTrivia.find_by_ticket(params_user_trivia[:ticket])
 		unless usuario_trivia
-			usuario_trivia = UsuarioTrivia.new(params_user_trivia)
-			if usuario_trivia.save!
-				cookies[:trivia_user] = usuario_trivia.id
-				redirect_to aniversario_catorce_beauty_trip_start_path
+			unless params_user_trivia[:tiket].blank?
+				usuario_trivia = UsuarioTrivia.new(params_user_trivia)
+				usuario_trivia.start_at = DateTime.current
+				if usuario_trivia.save!
+					cookies[:trivia_user] = usuario_trivia.id
+					redirect_to aniversario_catorce_beauty_trip_start_path
+				end
+			else
+				redirect_to aniversario_catorce_beauty_trip_path
 			end
 		else
-			redirect_to aniversario_catorce_beauty_trip_path
+			redirect_to aniversario_catorce_beauty_trip_gracias_path
 		end	
 	end
+
+	def trivia_gracias; end
 
 	def trivia_finish
 		usuario_trivia_id = cookies[:trivia_user];
