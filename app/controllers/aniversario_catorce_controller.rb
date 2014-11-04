@@ -17,7 +17,7 @@ class AniversarioCatorceController < ApplicationController
 	def trivia_init
 		usuario_trivia = UsuarioTrivia.find_by_ticket(params_user_trivia[:ticket])
 		unless usuario_trivia
-			unless params_user_trivia[:tiket].blank?
+			unless params_user_trivia[:ticket].blank?
 				usuario_trivia = UsuarioTrivia.new(params_user_trivia)
 				usuario_trivia.start_at = DateTime.current
 				if usuario_trivia.save!
