@@ -280,6 +280,36 @@
         #internacional
           %a.middle{:href => 'http://www.sephora.com/international/international.jsp', :target => '_blank'} Internacional
           %span.icon
+        - unless mobile_device?
+          #mod.animated.fadeInDown.register
+            %a.close{:href=>"#"}
+              X
+            = form_tag "#", {:id => "makkenform"} do |f|
+              .form-controlform
+                %label Nombre
+                %input.nombre{:type=> "text", :name => "nombre"}
+              .form-control
+                %label Email
+                %input.correo{:type=> "text", :name => "email"}
+              %input#submit{:type=>"submit", :value=>"ENVIAR"}
+        - if flash[:registro]
+          #modsuc
+            %a.close{:href=>"#"}
+              X
+        #registro_popup.animated.fadeIn
+          .texto-gracias
+            ¡GRACIAS!
+          .txt_registro_popup
+          = form_tag "#", {:id => "makkenregistro"} do |f|
+            .form-control
+              %input.nombre{:type=> "text", :name => "nombre", :placeholder => "Nombre"}
+            .form-control
+              %input.correo{:type=> "text", :name => "email", :placeholder => "correo@micorreo.com"}
+            %input#submit{:type=>"submit", :value=>""}
+          %a.close{:href=>"#"}
+            X
+        #btn_mail_enviar
+          =image_tag 'registro_btn.png'
   :javascript
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
