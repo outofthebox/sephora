@@ -84,35 +84,35 @@
     .tcell.t50
       %a{ :href => "/lista_eventos?utm_source=SitioWeb&utm_medium=BannerInfDer&utm_campaign=Eventos" }
         =image_tag "home/banners/inferior/derecho.jpg"
-- unless mobile_device?
-  #mod.animated.fadeInDown.register
-    %a.close{:href=>"#"}
-      X
-    = form_tag "#", {:id => "makkenform"} do |f|
-      .form-controlform
-        %label Nombre
-        %input.nombre{:type=> "text", :name => "nombre"}
-      .form-control
-        %label Email
-        %input.correo{:type=> "text", :name => "email"}
-      %input#submit{:type=>"submit", :value=>"ENVIAR"}
-  - if flash[:registro]
-    #modsuc
-      %a.close{:href=>"#"}
-        X
-  #registro_popup.animated.fadeIn
-    .texto-gracias
-      ¡GRACIAS!
-    .txt_registro_popup
-    = form_tag "#", {:id => "makkenregistro"} do |f|
-      .form-control
-        %input.nombre{:type=> "text", :name => "nombre", :placeholder => "Nombre"}
-      .form-control
-        %input.correo{:type=> "text", :name => "email", :placeholder => "correo@micorreo.com"}
-      %input#submit{:type=>"submit", :value=>""}
-    %a.close{:href=>"#"}
-      X
+/ - unless mobile_device?
+/   #mod.animated.fadeInDown.register
+/     %a.close{:href=>"#"}
+/       X
+/     = form_tag "#", {:id => "makkenform"} do |f|
+/       .form-controlform
+/         %label Nombre
+/         %input.nombre{:type=> "text", :name => "nombre"}
+/       .form-control
+/         %label Email
+/         %input.correo{:type=> "text", :name => "email"}
+/       %input#submit{:type=>"submit", :value=>"ENVIAR"}
+/   - if flash[:registro]
+/     #modsuc
+/       %a.close{:href=>"#"}
+/         X
+/   #registro_popup.animated.fadeIn
+/     .texto-gracias
+/       ¡GRACIAS!
+/     .txt_registro_popup
+/     = form_tag "#", {:id => "makkenregistro"} do |f|
+/       .form-control
+/         %input.nombre{:type=> "text", :name => "nombre", :placeholder => "Nombre"}
+/       .form-control
+/         %input.correo{:type=> "text", :name => "email", :placeholder => "correo@micorreo.com"}
+/       %input#submit{:type=>"submit", :value=>""}
+/     %a.close{:href=>"#"}
+/       X
 
-  #btn_mail_enviar
-    =image_tag 'registro_btn.png'
+/   #btn_mail_enviar
+/     =image_tag 'registro_btn.png'
 

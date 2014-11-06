@@ -1,5 +1,8 @@
 require 'riddle'
 class ProductosController < ApplicationController
+  before_filter :set_producto, :only => [:show]
+  before_filter :set_related, :only => [:show]
+  before_filter :set_visto, :only => [:show]
 
   def index
     @productos = Producto.includes(:marca).padres.order("updated_at DESC").page(params[:page]).per(50)
@@ -103,19 +106,6 @@ class ProductosController < ApplicationController
   end
 
   def show
-    @producto = Producto.includes(:marca, :presentaciones).publicados.where(:slug => params[:slug]).first
-    visto = @producto.visto;
-    
-    if(visto == nil) 
-      visto = 1; 
-    else 
-      visto = visto + 1; 
-    end
-    
-    Producto.update(@producto.id, {:visto=>visto})
-    
-    @categoria = Categoria.find(@producto.categoria_id)
-    @productos_relacionados = @categoria.productos.padres.publicados.where("productos.id != ?", @producto.id).sample(3)
   end
 
   def index_admin
@@ -128,5 +118,35 @@ class ProductosController < ApplicationController
     Producto.delete params[:id]
     authorize! :manage, :destroy
     redirect_to :root
+  end
+
+  private
+
+  def set_producto
+    @producto = Producto.includes(:marca, :presentaciones).publicados.where(:slug => params[:slug]).first
+  end
+
+  def set_related
+    @categoria = Categoria.find(@producto.categoria_id)
+    get_related
+  end
+
+  def get_related
+    case @categoria.id
+    when 67, 68
+      @productos_relacionados = Producto.find([9999, 10000, 10001])
+    else
+      @productos_relacionados = @categoria.productos.padres.publicados.where("productos.id != ?", @producto.id).sample(3)
+    end
+  end
+
+  def set_visto
+    visto = @producto.visto;
+    if(visto == nil) 
+      visto = 1; 
+    else 
+      visto = visto + 1; 
+    end
+    Producto.update(@producto.id, {:visto=>visto})
   end
 end
