@@ -1,10 +1,9 @@
 require "disqus"
 
 class PostsController < ApplicationController
-  def index
-    inst_recent = Instagram.user_recent_media(24459425);
-    @recientes = inst_recent.first(4);
+  before_filter :set_instagram
 
+  def index
     if params[:tag]
       @posts = Post.tagged_with(params[:tag]).order('created_at DESC').page(params[:page]).per(5)
     elsif params[:categoria]
@@ -13,29 +12,22 @@ class PostsController < ApplicationController
       @posts = Post.order('created_at DESC').page(params[:page]).per(5)
     end
 
-
-
     @visitas = Post.order('visitas DESC').last(5)
   end
 
   def show
     @comment = Comment.new
     @ranking = Ranking.new
-    inst_recent = Instagram.user_recent_media(24459425);
-    @recientes = inst_recent.first(4);
-
     @posts = Post.find params[:id]
-    
     @posts.increment
-
     @visitas = Post.order('visitas DESC').last(5)
   end
+  
   def new
     @posts = Post.new
-    inst_recent = Instagram.user_recent_media(24459425);
-    @recientes = inst_recent.first(4);
     @visitas = Post.order('visitas DESC').last(5)
   end
+  
   def create
     @posts = Post.new params[:post]
     if @posts.save
@@ -44,12 +36,12 @@ class PostsController < ApplicationController
       render :new
     end
   end
+  
   def edit
-    inst_recent = Instagram.user_recent_media(24459425);
-    @recientes = inst_recent.first(4);
     @visitas = Post.order('visitas DESC').last(5)
     @posts = Post.find params[:id]
   end
+  
   def update
     @posts = Post.find params[:id]
     if @posts.update_attributes params[:post]
@@ -58,9 +50,10 @@ class PostsController < ApplicationController
       render :edit
     end
   end
+  
   def destroy
-    
   end
+
   def comment
     @comment = Comment.new params[:comment]
     @comment.post_id = params[:id]
@@ -71,6 +64,7 @@ class PostsController < ApplicationController
       render :show
     end
   end
+
   def ranking
     @ranking = Ranking.new
     @ranking.raiting = params[:commit].to_i.inspect
@@ -80,5 +74,15 @@ class PostsController < ApplicationController
     else
       render :show
     end
+  end
+
+  private
+
+  def set_instagram
+    inst_recent = Instagram.user_recent_media(24459425);
+    @recientes = inst_recent.first(4);
+  end
+
+  def auth_please
   end
 end
