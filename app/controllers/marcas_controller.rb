@@ -3,6 +3,7 @@ require "csv"
 class MarcasController < ApplicationController
   before_filter :set_marca, :only => [:incrementar_vistas, :show]
   before_filter :incrementar_vistas, :only => [:show]
+  before_filter :get_parent_categories, :only => [:show]
 
   def index
     @marcas = Marca.all
@@ -42,11 +43,20 @@ class MarcasController < ApplicationController
   def show
     @careoca_makeup = Producto.where(:upc => ["3378872080497","3378872080473", "3378872080572","3378872080442"])
     @careoca_bath = Producto.where(:upc => ["3378872079781", "3378872079743", "3378872079750", "3378872079767"])
-    f = []
-    Producto.where(:marca_id => @marca.id).each do |t|
-      f << Categoria.find(t.categoria_id).nombre rescue nil
+    f_cat = []
+    @f_parent = []
+
+    pic = Producto.includes(:categoria).where(:marca_id => @marca.id);
+    pic.each do |t| f_cat << t.categoria.nombre rescue nil end
+    @categorias = f_cat.uniq.sort
+
+    @parent_categories.each do |pc|
+      p_count = pic.where(:categoria_id => pc.id).count
+      @f_parent << {:id => pc.id, :categoria => pc.nombre, :product_count => p_count, :slug => pc.slug}
     end
-    @categorias = f.uniq.sort
+
+    raise @f_parent.inspect
+
   end
 
   def destroy
@@ -127,5 +137,9 @@ class MarcasController < ApplicationController
 
   def set_marca
     @marca = Marca.includes(:marca_producto, :featured).where(:slug => params[:slug]).first
+  end
+
+  def get_parent_categories
+    @parent_categories = Categoria.where(:parent_id => nil)
   end
 end
