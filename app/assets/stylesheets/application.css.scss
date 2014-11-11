@@ -1699,13 +1699,17 @@ ul.breadcrumbs{
         padding: 5px 0 2px 0;
       }
       ul {
-        border-bottom: 3px solid #231F20;
+        border-top: none;
         list-style: none;
         padding: 0;
         margin: 0;
         li {
           padding: 2px 0 2px 0;
           font-size: 0.8em;
+          &.first{
+            border-bottom: 3px solid #231F20;
+            margin-top: 5px;
+          }
         }
         .first {
           font-size: 1em;
@@ -1899,7 +1903,7 @@ ul.breadcrumbs{
         padding-left: 10px;
         padding-right: 10px;
       ul {
-        border-top: 3px solid #231F20;
+        border-top: none;
         list-style: none;
         margin: 0;
         padding: 0;
@@ -1907,6 +1911,10 @@ ul.breadcrumbs{
           font-size: 0.8em;
           padding-top: 2px;
           padding-bottom: 2px;
+          &.first{
+            border-bottom: 3px solid #231F20;
+            margin-top: 5px;
+          }
         }
         .behindbutton {
           cursor: pointer;
@@ -1926,8 +1934,13 @@ ul.breadcrumbs{
         line-height: 1.4em;
         font-family: Arial;
         text-align: justify;
-        width: 94%;
+        width: 85%;
         margin: 20px auto;
+        br {
+          display: block;
+          min-height: 10px;
+          line-height: 2.4em;
+        }
       }
       .mas {
         color: gray;

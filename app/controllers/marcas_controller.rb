@@ -46,17 +46,16 @@ class MarcasController < ApplicationController
     f_cat = []
     @f_parent = []
 
-    pic = Producto.includes(:categoria).where(:marca_id => @marca.id);
+    pic = Producto.includes(:categoria).where(:marca_id => @marca.id).where(:publicado => true);
     pic.each do |t| f_cat << t.categoria.nombre rescue nil end
     @categorias = f_cat.uniq.sort
 
     @parent_categories.each do |pc|
-      p_count = pic.where(:categoria_id => pc.id).count
+      child_cats = Categoria.where(:parent_id => pc.id).pluck(:id) rescue []
+      child_cats << pc.id
+      p_count = pic.where(:categoria_id => child_cats).where(:parent_id => nil).count
       @f_parent << {:id => pc.id, :categoria => pc.nombre, :product_count => p_count, :slug => pc.slug}
     end
-
-    raise @f_parent.inspect
-
   end
 
   def destroy

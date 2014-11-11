@@ -18,8 +18,9 @@
                   %li
                     = link_to "#{pc[:categoria]} (#{pc[:product_count]})", categoria_ver_path(slug_c)+"?marca=#{@marca.id}"
         - unless @categorias.empty?
-          %li.second
+          %li.first
             Categorías
+          %li.second
             %ul
               - @categorias.each do |t|
                 - slug = Categoria.find_by_nombre(t).slug
