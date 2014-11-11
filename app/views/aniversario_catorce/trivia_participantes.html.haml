@@ -1,0 +1,51 @@
+#seccion-2
+  = image_tag("aniversario-catorce/home/header_txt_internas.png", {:class => "logo_beauty"})
+  #trivia
+    .trivia_content
+      %table.table.table-striped.table-bordered
+        %thead
+          %tr
+            %th Nombre
+            %th Correo
+            %th Ticket
+            %th R1
+            %th R2
+            %th R3
+            %th R4
+            %th R5
+            %th Inicio
+            %th Fin 
+        %tbody
+          - @usuarios.each do |u|
+            - nombre = u.nombre
+            - correo = u.correo
+            - ticket = u.ticket
+            - elapsed_seconds = ((u.created_at - u.start_at) * 24 * 60 * 60).to_i
+            - r1 = u.respuestas["0"]["opcion"]
+            - r2 = u.respuestas["1"]["opcion"]
+            - r3 = u.respuestas["2"]["opcion"]
+            - r4 = u.respuestas["3"]["opcion"]
+            - r5 = u.respuestas["4"]["opcion"]
+            %tr
+              %td
+                = nombre
+              %td
+                = correo
+              %td
+                = ticket
+              %td
+                = r1
+              %td
+                = r2
+              %td
+                = r3
+              %td
+                = r4
+              %td
+                = r5
+              %td
+                = u.created_at
+              %td
+                = u.start_at
+
+        

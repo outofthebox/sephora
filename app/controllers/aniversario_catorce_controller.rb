@@ -14,6 +14,11 @@ class AniversarioCatorceController < ApplicationController
 		redirect_to aniversario_catorce_beauty_trip_path if cookies[:trivia_user].empty?
 	end
 
+	def trivia_participantes
+		@usuarios =  UsuarioTrivia.where("respuestas != ''", nil)
+		@usuarios = @usuarios.map{|u| u.respuestas = JSON.parse(u.respuestas.gsub!(/\=\>/, ":")); u} #regresa el arreglo de respuestas limpio
+	end
+
 	def trivia_init
 		usuario_trivia = UsuarioTrivia.find_by_ticket(params_user_trivia[:ticket])
 		unless usuario_trivia
@@ -124,5 +129,4 @@ class AniversarioCatorceController < ApplicationController
 			"retomakeover/application"
 		end
 	end
-
 end
