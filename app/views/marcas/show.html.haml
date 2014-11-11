@@ -4,16 +4,23 @@
 -unless @marca.descripcion.nil?
   - provide :descripcion, @marca.descripcion.html_safe[0..160]
 %section#marca
-  %h3.title
-    = @marca.marca
   .table.full
     .contizq.tcell.t20
       %ul
         %li.first
           = @marca.marca
-        - unless @categorias.empty?
+        - unless @parent_categories.empty?
           %li.second
+            %ul
+              - @f_parent.each do |pc|
+                - slug_c = pc[:slug]
+                - unless pc[:product_count] == 0
+                  %li
+                    = link_to "#{pc[:categoria]} (#{pc[:product_count]})", categoria_ver_path(slug_c)+"?marca=#{@marca.id}"
+        - unless @categorias.empty?
+          %li.first
             Categorías
+          %li.second
             %ul
               - @categorias.each do |t|
                 - slug = Categoria.find_by_nombre(t).slug
