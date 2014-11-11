@@ -319,6 +319,10 @@ Sephora::Application.routes.draw do
   get "sephora-collection/squares/:interna", :to => 'sephora_collection#load_squares', :as => "sephora_collection_loadsquares"
 
 
+  #sitemap
+
+  get 'sitemap.xml', :to => 'sitemap#index', :defaults => { :format => 'xml' }
+
   # última línea, hace match con el resto de las rutas y muestra 404
   match  '*a', :to => 'paginas#error_404'
 end
