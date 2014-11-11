@@ -66,6 +66,9 @@ a:link, a:active, a:visited, a:hover {
 ul.breadcrumbs{
   padding-left: 10px;
   padding-top: 5px;
+  border-bottom: 3px solid rgb(226, 217, 217);
+  margin: 0px;
+  padding: 10px 0px;
   li {
     font-size: 0.8em;
     display: inline-block;
@@ -1706,8 +1709,15 @@ ul.breadcrumbs{
         li {
           padding: 2px 0 2px 0;
           font-size: 0.8em;
+          strong {
+            border-bottom: 3px solid #EBEBEB;
+            padding: 5px 0;
+            margin: 5px 0;
+            width: 100%;
+            display: block;
+          }
           &.first{
-            border-bottom: 3px solid #231F20;
+            border-bottom: 3px solid #EBEBEB;
             margin-top: 5px;
           }
         }
