@@ -5,7 +5,6 @@ namespace :eventos do
 		require 'remote_file'
     require 'csv'
 
-
     raise "Necesario especificar ruta a FILE.csv" unless ENV['FILE']
 
     file = ENV['FILE'];
