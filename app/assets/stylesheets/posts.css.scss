@@ -57,9 +57,10 @@ ul.categorias {
       border-radius: 100%;
       background-size: 5px;
       background-position: center;
+      left:0;
     }
     position: relative;
-    display: block;
+    display: inline-block;
     float: left;
     text-align: left;
     font-size: 29px;
@@ -69,22 +70,23 @@ ul.categorias {
     font-style: italic;
     line-height: 1.2em;
     padding-left: 40px;
+    margin-right: 16px;
     &[name="Hot News"]{
-      width: 163px;
+      width: 143px;
       &::before{
         left: 0px;
         top: -0px;  
       }
     }
     &[name="Recien Desempacados"]{
-      width: 300px;
+      width: 280px;
       &::before{
         left: -0px;
         top: -0px;
       }
     }
     &[name="Urban Style"]{
-      width: 200px;
+      width: 180px;
       &::before{
         left: 0px;
         top: -0px;  
