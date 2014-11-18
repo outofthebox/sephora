@@ -322,7 +322,7 @@ Sephora::Application.routes.draw do
   # friends and family
   get 'friendsandfamily/', :to => 'friendsandfamily#index', :as => 'friendsandfamily_index'
   post 'friendsandfamily/code', :to => 'friendsandfamily#code', :as => 'friendsandfamily_code'
-  get 'friendsandfamily/gracias', :to => 'friendsandfamily#gracias', :as => 'friendsandfamily_gracias'
+  get 'friendsandfamily/gracias/:id', :to => 'friendsandfamily#gracias', :as => 'friendsandfamily_gracias'
   get 'friendsandfamily/ya_descargaste', :to => 'friendsandfamily#ya_descargaste', :as => 'friendsandfamily_ya_descargaste'
   get 'friendsandfamily/delete_cookie', :to => 'friendsandfamily#delete_cookie', :as => 'friendsandfamily_delete_cookie'
 

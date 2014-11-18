@@ -10,6 +10,7 @@ class FriendsandfamilyController < ApplicationController
 			unless rd && rd.count > 0
 				redirect_to friendsandfamily_index_path
 			else
+				@redemption = rd
 				@link = "https://s3.amazonaws.com/sephoragess/friendsandfamily/cupon_#{code}.pdf"
 			end
 		rescue Exception => e
@@ -18,7 +19,20 @@ class FriendsandfamilyController < ApplicationController
 	end
 
 	def gracias
-		cookies["redemption"] = true
+		redirect_to friendsandfamily_ya_descargaste_path if cookies["redemption"]
+		begin
+			id = params[:id]
+			rd = Redemption.find(id)
+			unless rd && rd.count > 0
+				redirect_to friendsandfamily_index_path
+			else
+				cookies["redemption"] = true
+				count = ((rd.count - 1) >= 0) ? rd.count - 1 : 0
+				rd.update_attribute(:count, count)
+			end
+		rescue Exception => e
+			redirect_to friendsandfamily_index_path
+		end
 	end
 
 	def ya_descargaste
