@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    %title= content_for?(:title) ? yield(:title) : "Friends and Family"
+    = stylesheet_link_tag "friendsandfamily"
+    = javascript_include_tag "friendsandfamily"
+    = csrf_meta_tag
+    
+  %body
+    #header
+    #wrapper
+      = yield

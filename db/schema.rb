@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141031071017) do
+ActiveRecord::Schema.define(:version => 20141118192734) do
 
   create_table "blog_categorias", :force => true do |t|
     t.string   "categoria"
@@ -298,6 +298,13 @@ ActiveRecord::Schema.define(:version => 20141031071017) do
     t.datetime "asset_updated_at"
   end
 
+  create_table "redemptions", :force => true do |t|
+    t.string   "code"
+    t.integer  "count"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "registros", :force => true do |t|
     t.string   "nombre"
     t.string   "email"
@@ -349,6 +356,14 @@ ActiveRecord::Schema.define(:version => 20141031071017) do
 
   add_index "store_events", ["event_id"], :name => "index_store_events_on_event_id"
   add_index "store_events", ["tienda_id"], :name => "index_store_events_on_tienda_id"
+
+  create_table "store_has_events", :force => true do |t|
+    t.integer  "tienda_id"
+    t.string   "dates"
+    t.string   "link"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "taggings", :force => true do |t|
     t.integer  "tag_id"

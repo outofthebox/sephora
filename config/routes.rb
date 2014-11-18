@@ -315,8 +315,16 @@ Sephora::Application.routes.draw do
   get 'sephora-collection/foundation-land', :to => 'sephora_collection#foundation_land', :as => 'sephora_collection_foundation_land'
   get 'sephora-collection/outrageus-land', :to => 'sephora_collection#outrageus_land', :as => 'sephora_collection_outrageus_land'
   get 'sephora-collection/promociones', :to => 'sephora_collection#promociones', :as => 'sephora_collection_promociones'
+
   # ajax call
   get "sephora-collection/squares/:interna", :to => 'sephora_collection#load_squares', :as => "sephora_collection_loadsquares"
+
+  # friends and family
+  get 'friendsandfamily/', :to => 'friendsandfamily#index', :as => 'friendsandfamily_index'
+  post 'friendsandfamily/code', :to => 'friendsandfamily#code', :as => 'friendsandfamily_code'
+  get 'friendsandfamily/gracias', :to => 'friendsandfamily#gracias', :as => 'friendsandfamily_gracias'
+  get 'friendsandfamily/ya_descargaste', :to => 'friendsandfamily#ya_descargaste', :as => 'friendsandfamily_ya_descargaste'
+  get 'friendsandfamily/delete_cookie', :to => 'friendsandfamily#delete_cookie', :as => 'friendsandfamily_delete_cookie'
 
 
   #sitemap
@@ -326,4 +334,5 @@ Sephora::Application.routes.draw do
   # última línea, hace match con el resto de las rutas y muestra 404
   match  '*a', :to => 'paginas#error_404'
 end
+
 
