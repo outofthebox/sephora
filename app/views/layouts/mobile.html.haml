@@ -8,7 +8,7 @@
   %meta{:charset => "UTF-8"}
   %title
     #{"#{yield(:titulo)} | " if content_for?(:titulo)} Sephora
-  %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+  %meta{:content => "user-scalable=0, initial-scale=1.0", :name=>"viewport"}/
   %meta{:content => "#{yield(:titulo)} | Sephora México", :property => "og:title"}
   %link{ :rel => "shortcut icon", :href => "/favicon.ico", :type => "image/x-icon"}/
   %meta{:name => "description", :content => yield(:descripcion)}
