@@ -2887,10 +2887,11 @@ li.unchecked:before {
   display: none;
   form {
     text-align: center;
-    padding-top: 325px;
+    padding-top: 338px;
     label{
       display: block;
       font-weight: bolder;
+      color:white;
     }
     input {
       width: 380px;
@@ -2898,7 +2899,9 @@ li.unchecked:before {
       margin-bottom: 10px;
       text-align: center;
       background: none;
-      border: 1px solid black;
+      border: 1px solid white;
+      height: 30px;
+      color:white;
       &:invalid {
         border: none;
       }
