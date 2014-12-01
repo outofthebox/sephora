@@ -4,6 +4,7 @@
 # = require jquerycookie
 # = require redactor
 # = require jcarousel
+# = require paginas
 
 $("#base").hover ->
   $(".base_txt").fadeToggle()
@@ -98,78 +99,7 @@ $(document).on "click", "a#share", (e) ->
   loc = $(this).attr("href")
   title = escape($(this).attr("title"))
   window.open "http://www.facebook.com/sharer.php?u=" + loc + "&t=" + title, "facebookwindow", "height=450, width=550, top=" + ($(window).height() / 2 - 225) + ", left=" + $(window).width() / 2 + ", toolbar=0, location=0, menubar=0, directories=0, scrollbars=0"
-
-rotate = ->
-  $(".prox.jesus").click()
-
-intervalID = setInterval(->
-  rotate()
-, 5000)
-
-count = 1
-slides = $(".diapositiva").size()
-width = 960
-height = 399
-counter = '/' + slides
-current = $(".diapositiva.visible");
-first = $(".diapositiva.first");
-last = $(".diapositiva.last");
-console.log(current.next().size(), current.prev().size());
-
-$(".prox p").text('1' + counter)
-
-$(".prox.jesus").live "click", ->
-  clearInterval intervalID
-
-  intervalID = setInterval(->
-    rotate()
-  , 9000)
-
-  $(this).removeClass('jesus')
-  
-  if(current.next().size() > 0)
-    current.removeClass("visible");
-    current = current.next();
-    current.addClass("visible");
-  else
-    current.removeClass("visible");
-    current = first;
-    current.addClass("visible")
-
-  if $(".slider").css('margin-left') == '-'+width*(slides-1)+'px'
-    $(".slider").stop().animate {"margin-left": "+="+width}, "slow", ->
-      $(".prox").addClass('jesus')
-    count = 1
-  else
-    $(".slider").stop().animate {"margin-left": "-="+width}, "slow", ->
-      $(".prox").addClass('jesus')
-    count = count + 1
-
-$(".ante.jesus").live "click", ->
-  clearInterval intervalID
-  
-  intervalID = setInterval(->
-    rotate()
-  , 9000)
-
-  if(current.next().size() > 0)
-    current.removeClass("visible");
-    current = current.next();
-    current.addClass("visible");
-  else
-    current.removeClass("visible");
-    current = first;
-    current.addClass("visible")
-
-  $(this).removeClass('jesus')
-  if $(".slider").css('margin-left') == '0px'
-    $(".slider").stop().animate {"margin-left": "-="+width}, "slow", ->
-      $(".ante").addClass('jesus')
-    count = slides
-  else
-    $(".slider").stop().animate {"margin-left": "+="+width}, "slow", ->
-      $(".ante").addClass('jesus')
-    count = count - 1
+1
 
 #Popup
 path = window.location.pathname

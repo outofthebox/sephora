@@ -3,6 +3,8 @@
 - provide :url, "http://sephora.com.mx"
 - provide :imagen, 'http://sephora.com.mx/logo.png'
 #slider-home.full
+  .navidad-1
+  .navidad-2
   #poster.tcell.full
     .prox.jesus
     .ante.jesus
@@ -14,6 +16,10 @@
           =image_tag "home/banners/960/banner2.jpg"
         %a.diapositiva{:href => "http://www.sephora.com.mx/cofresholiday?utm_source=SitioWeb&utm_medium=Banner3&utm_campaign=Favorites"}
           =image_tag "home/banners/960/banner3.jpg"
+  :coffee
+    $ ->
+      a = new Paginas.Index()
+      a.start_slider()
 #separador
   %p.linksrapidos
     LINKS RÁPIDOS:
@@ -26,6 +32,7 @@
     %span
       %a{ :href => "/favorites" }
         FAVORITES
+#linea-rosa
 - if @bestsellers and (bestsellers_productos = @bestsellers.producto_seccion) and bestsellers_productos.any?
   #best-sellers
     %h3 BEST SELLERS
