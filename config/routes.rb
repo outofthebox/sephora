@@ -289,6 +289,7 @@ Sephora::Application.routes.draw do
     match 'tiendas', :to => 'mobile#tiendas', :as => 'tiendas'
 
     match 'speciales-aniversario', :to => 'mobile#especialesaniversario', :as => 'especiales_aniversario'
+    match 'especiales', :to => 'mobile#especialmes', :as => 'especialmes'
     
     match 'video', :to => 'mobile#video', :as => 'video'
     
