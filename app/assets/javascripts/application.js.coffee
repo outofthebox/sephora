@@ -4,7 +4,6 @@
 # = require jquerycookie
 # = require redactor
 # = require jcarousel
-# = require paginas
 
 $("#base").hover ->
   $(".base_txt").fadeToggle()
