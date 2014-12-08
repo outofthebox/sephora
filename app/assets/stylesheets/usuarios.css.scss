@@ -1,0 +1,185 @@
+// Place all the styles related to the usuarios controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@font-face {
+  font-family: 'Avant';
+  src: url('/fuentes/ag-extralight-webfont-webfont.eot');
+  src: url('/fuentes/ag-extralight-webfont-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/fuentes/ag-extralight-webfont-webfont.woff') format('woff'),
+       url('/fuentes/ag-extralight-webfont-webfont.ttf') format('truetype'),
+       url('/fuentes/ag-extralight-webfont-webfont.svg#itc_avant_garde_gothic_extrRg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#usuario_wishlist{
+	width:100%;
+	margin:auto;
+	font-family: 'Avant', Helvetica, Tahoma !important;
+	.banner-regalos{
+		width: 500px;
+		height: 123px;
+		display: block;
+		background: image-url("usuarios/wishlist/titulo_regalos.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		position:relative;
+		left:230px;
+		margin-bottom: 30px;
+	}
+	.slider_items{
+		position:relative;
+		overflow:hidden;
+		font-size: 14px;
+		left: 0;
+		width: 100%;
+		height: 220px;
+		display: block;
+		margin-bottom: 10px;
+		&.wishlist{
+			#wishlist{
+				.producto-agregar{
+					display: none !important;
+				}
+				.remover{
+					display: none !important;
+				}
+			}
+		}
+		&.userlist{
+			min-height: 350px;
+			height: auto;
+		}
+		li{
+			display: inline-block;
+			vertical-align: top;
+			width: 160px;
+			height: 266px;
+			text-align:center;
+			overflow:hidden;
+			padding:0;
+			margin:0;
+			position:relative;
+			.remover{
+				height: 20px;
+				width: 20px;
+				background-color:black;
+				position:absolute;
+				right: 18px;
+				top: 1px;
+				color:white;
+				font-size: 14px;
+				line-height: 20px;
+				cursor:pointer;
+			}
+			.producto-p{
+				height: 30px;
+				min-height: 45px;
+				display: block;
+				margin-bottom: 5px;
+				p{
+					width: 100%;
+					height: 100%;
+					line-height: 15px;
+					font-size: 10pt;
+					margin: 0;
+					padding: 0;
+				}
+			}
+			.producto-info{
+				p{
+					font-family: Arial, sans-serif;
+					font-size: 8pt;
+					font-weight: bold;
+					letter-spacing: 1px;
+					text-transform: uppercase;
+				}
+			}
+			.producto-imagen{
+				width: 120px;
+				min-height: 122px;
+				border:1px solid #ccc;
+				box-shadow:0px 0px 10px -2px #333;
+				display: block;
+				margin: 0 auto 10px auto;
+				background: white;
+			}
+			.producto-imagen img{
+				width: 120px;
+				margin:auto;
+				display: block;
+				max-height: 122px;
+				vertical-align: middle;
+			}
+			.producto-agregar{
+				position: absolute;
+				bottom: 29px;
+				left: 60px;
+				font-size: 10px;
+			}
+			.producto-compartir{
+				position: absolute;
+				width: 82px;
+				height: 18px;
+				background-image: url("wishlist/comparte.jpg");
+				background-repeat:no-repeat;
+				bottom: 8px;
+				left: 35px;
+				font-size: 10px;
+				cursor: pointer;
+			}
+		}
+	}
+	.left, .right{
+		background-color:transparent;
+		display: block;
+		height: 53px;
+		width: 23px;
+		position:absolute;
+		z-index: 2;
+		cursor: pointer;
+		border:0;
+	}
+	.left{
+		left: 20px;
+		background-image: url("wishlist/flecha_left.png");
+		background-size: cover;
+		top: 50px;
+	}
+	.right{
+		right: 20px;
+		background-image: url("wishlist/flecha_right.png");
+		background-size: cover;
+		top: 50px;
+	}
+	#userlist{
+		width: 930px;
+		overflow: auto;
+		margin-left: 30px;
+		display: block;
+		border-top: 1px solid #000;
+		margin-top:30px;
+		padding-top:30px;
+		h1{padding:0; margin: 0 0 10px 0; text-transform: uppercase; font-size: 24px; font-family: Helvetica, Tahoma !important;}
+		h3{padding:0; margin: 0 0 30px 0; text-transform: uppercase; font-size: 20px; font-weight: 800; font-family: Helvetica, Tahoma !important;}
+	}
+	#wishlist{
+		overflow: hidden;
+		width: 830px;
+		margin: auto;
+		padding: 0;
+		position: relative;
+		height: 250px;
+		#wishlist_cont{
+			margin:0;
+			padding:0;
+			width: 1650px;
+			height: 266px;
+			position:absolute;
+			top:0;
+			left:0;
+			transition: left 350ms;
+		}
+	}
+}

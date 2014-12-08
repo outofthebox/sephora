@@ -1,0 +1,53 @@
+#usuario_wishlist
+	= image_tag("usuarios/wishlist/banner.jpg")
+	#regalos_sephora
+		.banner-regalos
+		.slider_items.wishlist
+			%button.left
+			%button.right
+			#wishlist
+				%ul#wishlist_cont
+					- seccion_productos = @wishlist
+					- seccion_productos.each do | producto |
+						%li{:"data-upc" =>producto.upc}
+							.remover
+								&times;
+							%a.producto-link{:href => "/producto/"+producto.slug, :target => "_blank"}
+								.producto-imagen
+									=image_tag(producto.foto.url(:chico), :class => "producto-img")
+							.producto-info
+								%p
+									%strong= producto.marca.marca
+							.producto-p
+								%p
+									= producto.nombre_real
+									%br
+									%strong= "$#{producto.precio}"
+		.slider_items.userlist
+			#userlist
+				%h1.text-center Esta es tu wishlist de belleza para esta navidad.
+				%h3.text-center ¡Es Fabulosa!
+				%ul#userlist_cont
+					- seccion_productos = @usuario
+					- seccion_productos.each do | producto |
+						%li{:"data-upc" =>producto.upc}
+							.remover
+								&times;
+							%a.producto-link{:href => "/producto/"+producto.slug, :target => "_blank"}
+								.producto-imagen
+									=image_tag(producto.foto.url(:chico), :class => "producto-img")
+							.producto-info
+								%p
+									%strong= producto.marca.marca
+							.producto-p
+								%p
+									= producto.nombre_real
+									%br
+									%strong= "$#{producto.precio}"
+:coffee
+	$ ->
+		uw = new Usuarios.Wishlist
+		uw.initSlide("wishlist", 660)
+		ul = new Usuarios.Userlist
+		ul.userlist()
+

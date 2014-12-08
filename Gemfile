@@ -51,6 +51,7 @@ end
 group :development, :test do
   gem 'fastercsv'
   gem 'fabrication-rails'
+  gem 'letter_opener'
   gem 'fivemat'
   gem 'guard'
   gem 'pry-rails'

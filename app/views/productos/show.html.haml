@@ -10,11 +10,17 @@
   - provide :descripcion, strip_tags(@producto.descripcion[0..160]+"...")
 
 %section#producto
-  - if can? :edit, @producto
+  - if current_usuario && current_usuario.rol != "usuario"
     = link_to "Editar", edit_producto_path(@producto.id)
   .table.full
     .product.tcell.t35
       =link_to(image_tag(@producto.foto.url(:normal), :id => "prod", :class => "imgproducto", :itemprop => 'image'), @producto.foto.url(:grande), :id => "prodlink")
+      - fav_class = (current_usuario) ? (current_usuario.productos.include?(@producto)) ? "hover animated infinite pulse" : "" : ""
+      %div{:"data-upc" => @producto.upc, :class => "add_to_favs #{fav_class}"}
+      :coffee
+        $ ->
+          fav = new Usuarios.Userlist()
+          fav.add_to_userlist()
       %p.vistagrande
         =link_to "vista grande", @producto.foto.url(:grande), :id => "prodlink"
       .compartir
