@@ -42,6 +42,7 @@
   = javascript_include_tag :modernizr
   = javascript_include_tag :jquery
   = javascript_include_tag :paginas
+  = javascript_include_tag :usuarios
   = stylesheet_link_tag :application
   = csrf_meta_tags
   %meta{:content => "qCft4n7tHfODiCl-UWgEd_uquba_MLlevA9txPjkYkk", :name => "google-site-verification"}
@@ -238,36 +239,10 @@
                   %li
                     %a{ :href => "/marca/#{marca.slug}" }
                       = marca.marca
-
+        %a.add_to_favs.barra_menu{:href => new_usuario_session_path}
     = yield
 
     #footer
-      #sus-cata
-        .table.full
-          .tcell.t37.suscripcion
-            %span#mail
-            %p
-              ENTÉRATE DE EVENTOS Y PROMOCIONES EXCLUSIVAS
-              = form_for Suscripcion.new, :url => "/suscripcion#suscripcion" do |f|
-                .table
-                  .tcell.t95
-                    = f.email_field :email, :placeholder => "E-Mail", :class => "texto"
-                  .tcell.t5
-                    = image_submit_tag("flecha_internacional.png")
-          .tcell.t33
-            %p.pad2
-              NUESTRAS TIENDAS Y EVENTOS
-            .footer-boton
-              %a{:href => '/tiendas'} Descúbrelos
-          .tcell.t30
-            / %p.pad
-            /   DESCARGA<br />EL CATÁLOGO ONLINE
-            / .footer-boton
-            /   %a{:href => 'http://www.pollock.mx/Flipbook/index.html', :target => '_blank'} Descarga aquí
-      #sephora-en
-        %p
-          SEPHORA en:
-          %a#gp{:href => "https://plus.google.com/109652284724347281502/posts", :target => "_blank"}
       #footin
         #links
           %ul.nobullet.nolist.seplist
@@ -289,7 +264,7 @@
               .form-controlform
                 %label Nombre
                 %input.nombre{:type=> "text", :name => "nombre"}
-              .form-control
+              .form-controlform
                 %label Email
                 %input.correo{:type=> "text", :name => "email"}
               %input#submit{:type=>"submit", :value=>"ENVIAR"}

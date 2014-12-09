@@ -6,9 +6,9 @@ class Producto < ActiveRecord::Base
 
   belongs_to :marca
   belongs_to :categoria
-  belongs_to :wishlist
 
   has_many :presentaciones, :class_name => "Producto", :foreign_key => "parent_id"
+  has_and_belongs_to_many :usuarios
 
   attr_accessible :id, :nombre, :nombre_real, :sku, :upc, :parent_id, :precio, :descripcion, :ingredientes, :usos, :publicado, :marca_id, :categoria_id, :uso_id, :foto, :image_code, :personalidad, :visto
   attr_accessor :foto

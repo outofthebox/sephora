@@ -64,23 +64,23 @@
     #wishlist
       #wishlist_cont
         %ul
-        - seccion_productos = @wishlist
+          - seccion_productos = @wishlist
           - seccion_productos.each do | producto |
-          %li{:"data-upc" =>producto.upc}
-            .remover
-              &times;
-            %a.producto-link{:href => "/producto/"+producto.slug, :target => "_blank"}
-              .producto-imagen
-                =image_tag(producto.foto.url(:chico), :class => "producto-img")
-            .producto-info
-              %p
-                = producto.marca.marca
-              .producto-p
+            %li{:"data-upc" =>producto.upc}
+              .remover
+                &times;
+              %a.producto-link{:href => "/producto/"+producto.slug, :target => "_blank"}
+                .producto-imagen
+                  =image_tag(producto.foto.url(:chico), :class => "producto-img")
+              .producto-info
                 %p
-                  = producto.nombre_real
-                  %br
-                    $
-                    = producto.precio
+                  = producto.marca.marca
+                .producto-p
+                  %p
+                    = producto.nombre_real
+                    %br
+                      $
+                      = producto.precio
   .slider_items.holiday
     %button.left
     %button.right

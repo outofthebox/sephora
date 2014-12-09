@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141118192734) do
+ActiveRecord::Schema.define(:version => 20141208083408) do
 
   create_table "blog_categorias", :force => true do |t|
     t.string   "categoria"
@@ -283,6 +283,14 @@ ActiveRecord::Schema.define(:version => 20141118192734) do
   add_index "productos", ["upc"], :name => "index_productos_on_upc", :unique => true
   add_index "productos", ["uso_id"], :name => "index_productos_on_uso_id"
 
+  create_table "productos_usuarios", :id => false, :force => true do |t|
+    t.integer "usuario_id"
+    t.integer "producto_id"
+  end
+
+  add_index "productos_usuarios", ["producto_id"], :name => "index_productos_usuarios_on_producto_id"
+  add_index "productos_usuarios", ["usuario_id"], :name => "index_productos_usuarios_on_usuario_id"
+
   create_table "rankings", :force => true do |t|
     t.integer  "usuario_id"
     t.integer  "post_id"
@@ -475,6 +483,9 @@ ActiveRecord::Schema.define(:version => 20141118192734) do
     t.text     "meta"
     t.datetime "created_at",                                    :null => false
     t.datetime "updated_at",                                    :null => false
+    t.string   "apellido"
+    t.date     "cumple"
+    t.string   "cp"
   end
 
   add_index "usuarios", ["authentication_token"], :name => "index_usuarios_on_authentication_token", :unique => true

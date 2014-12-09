@@ -51,11 +51,11 @@ end
 group :development, :test do
   gem 'fastercsv'
   gem 'fabrication-rails'
+  gem 'letter_opener'
   gem 'fivemat'
   gem 'guard'
   gem 'pry-rails'
   gem 'guard-livereload', require: false
-  gem 'letter_opener'
   gem 'nifty-generators'
   gem 'rspec-rails', '~> 2.0'
   gem 'spring'

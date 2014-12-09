@@ -1,13 +1,30 @@
 Sephora::Application.routes.draw do
-  devise_for :mobileusers, :path => "mobile"
+  #devise_for :mobileusers, :path => "mobile"
+  
+  #Usuarios
+  devise_for :usuarios, controllers: {
+    sessions: "usuarios/sessions",
+    registrations: "usuarios/registrations",
+    confirmations: "usuarios/confirmations",
+    passwords: "usuarios/passwords",
+    unlocks: "usuarios/unlocks"
+  }
+  get   'usuarios/lista', :to => 'usuarios#lista', :as => 'usuarios_lista'
+  put   'usuario/actualizar/:id', :to => 'usuarios#actualizar', :as => 'usuario_actualizar'
+  get   'usuario/usar_sesion/:id', :to => 'usuarios#usar_sesion', :as => 'usuario_usar_sesion'
+  get   'logout(/:hash)', :to => 'usuarios#logout', :as => 'logout'
+  get   'usuario/perfil', :to => "usuarios#perfil", :as => "usuario"
+  get   'usuario/wishlist', :to => "usuarios#wishlist", :as => "usuario_wishlist"
+  get   'usuario/bienvenido', :to => "usuarios#bienvenido", :as => "usuario_bienvenido"
+  get   'usuario/wishlist/ver/:slug', :to => "usuarios#wishlist_ver", :as => "usuario_wishlist_ver"
+  post  'usuario/wishlist/add/:upc', :to => "usuarios#wishlist_add", :as => "usuario_wishlist_add"
+  post  'usuario/wishlist/del/:upc', :to => "usuarios#wishlist_del", :as => "usuario_wishlist_del"
 
-  resources :eventotiendas
-
-  resources :tiendas
-
-  devise_for :usuarios
 
   root :to => 'paginas#home'
+
+  resources :eventotiendas
+  resources :tiendas
 
   # ---
   get "/pup_file", :to => "utilidades#pup_file", :as => "pup_file"
@@ -48,11 +65,6 @@ Sephora::Application.routes.draw do
 
   get   'feedback', :to => 'secciones#feedback', :as => 'feedbacks'
   post  'feedback', :to => 'secciones#feedback_save', :as => 'feedbacks'
-
-  get   'usuarios/lista', :to => 'usuarios#lista', :as => 'usuarios_lista'
-  put   'usuario/actualizar/:id', :to => 'usuarios#actualizar', :as => 'usuario_actualizar'
-  get   'usuario/usar_sesion/:id', :to => 'usuarios#usar_sesion', :as => 'usuario_usar_sesion'
-  get   'logout(/:hash)', :to => 'usuarios#logout', :as => 'logout'
 
   get   'importar(/:quoi)', :to => 'utilidades#importar'
   get   'importarimg', :to => 'utilidades#importarimg'

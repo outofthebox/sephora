@@ -36,7 +36,6 @@ class ApplicationController < ActionController::Base
     redirect_to root_path
   end
 
-
   # -----------------------------
   # I was searching
   # You were on a mission
@@ -46,7 +45,6 @@ class ApplicationController < ActionController::Base
 
   # Para devise http://stackoverflow.com/questions/4982073/different-layout-for-sign-in-action-in-devise
   layout :layout_by_resource
-
   helper_method :mini_hash, :check_minihash
 
   before_filter do
@@ -55,11 +53,11 @@ class ApplicationController < ActionController::Base
   end
 
   def layout_by_resource
-    if devise_controller?
-      "mobile"
-    else
-      "application"
-    end
+    "application"
+  end
+
+  def after_sign_in_path_for(resource)
+    usuario_path
   end
 
   def current_user

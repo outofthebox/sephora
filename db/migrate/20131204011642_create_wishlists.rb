@@ -1,9 +1,8 @@
 class CreateWishlists < ActiveRecord::Migration
   def change
     create_table :wishlists, :id => false do |t|
-      t.integer :userwish_id
-      t.integer :producto_id
-
+      t.belongs_to :producto
+      t.belongs_to :usuario
       t.timestamps
     end
   end
