@@ -1,6 +1,6 @@
 class UsuariosController < ApplicationController
   include Devise::Controllers::Rememberable
-  load_and_authorize_resource :except => [:logout, :ver]
+  load_and_authorize_resource :only => [:actualizar, :list, :usar_sesion]
 
   def lista; @usuarios = Usuario.order("id DESC"); end
   def perfil; redirect_to usuario_wishlist_path; end
