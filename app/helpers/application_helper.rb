@@ -11,4 +11,7 @@ module ApplicationHelper
       request.user_agent =~ /Mobile|webOS/
     end
   end
+  def image_url(file)
+    request.protocol + request.host_with_port + image_path(file)
+  end
 end

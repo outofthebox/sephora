@@ -4,7 +4,7 @@ class Usuario < ActiveRecord::Base
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
-         :token_authenticatable, :confirmable, :lockable
+         :token_authenticatable
 
   has_and_belongs_to_many :productos
 
@@ -15,6 +15,8 @@ class Usuario < ActiveRecord::Base
     self.rol = "usuario"
     self.rol = "admin" unless Usuario.count > 0
   end
+
+  def slug; "#{self.nombre} #{self.apellido} #{self.id}".parameterize; end
 
   def rol? rol
     self.rol == rol.to_s

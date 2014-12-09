@@ -56,7 +56,6 @@ group :development, :test do
   gem 'guard'
   gem 'pry-rails'
   gem 'guard-livereload', require: false
-  gem 'letter_opener'
   gem 'nifty-generators'
   gem 'rspec-rails', '~> 2.0'
   gem 'spring'

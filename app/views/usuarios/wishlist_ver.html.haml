@@ -1,0 +1,47 @@
+- provide :descripcion, "Este es mi wishlist de belleza para esta navidad, y es ¡Fabuloso!"
+
+/ ## -- OG
+- provide :titulo, "My Wishlist"
+- provide :imagen, image_url("usuarios/wishlist/banner.jpg")
+- provide :url, request.original_url
+- provide :extracto, "Mi wishlist de belleza para esta navidad."
+
+= image_tag("usuarios/wishlist/banner.jpg")
+%section#seccion-ver
+  .table.full
+    .contizq.tcell.t25
+      - unless current_usuario
+        .crea_el_tuyo
+          %h3 ¡Tu tambien crea el tuyo!
+          %p Registrate y tambien comparte tu wishlist para esta navidad.
+          %a.btn.btn-default{:href => "/"}
+            ¡Quiero mi wishlist!
+      -else
+        &nbsp;
+    .contder.tcell.t75
+      %ul.nolist
+        - @usuario.each_with_index do |seccion_producto, i|
+          - producto = seccion_producto
+          %li
+            .table.full
+              .tcell.t15
+                =image_tag "secciones/#{i+1}.png", :class => 'numero'
+              .info.tcell.t60
+                %h4
+                  = producto.marca.marca
+                %h5
+                  -unless producto.nombre_real.nil? or producto.nombre_real.empty?
+                    = producto.nombre
+                  - else
+                    = producto.nombre_real
+              .tcell.t15
+                =link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
+            =image_tag 'secciones/border.png', :class => 'sep'
+:css
+  .crea_el_tuyo {
+    width: 90%;
+    margin: 30px auto;
+    padding: 30px 10px;
+    background: #f9f9f9;
+    border-radius: 10px;
+  }

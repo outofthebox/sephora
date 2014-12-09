@@ -14,7 +14,7 @@ $withslider: 960px;
 $slides: 3;
 
 
-.add_to_favs{
+.add_to_favs, .add_to_favs_link{
   background-image: image-url("usuarios/wishlist/corazon_negro.png");
   width: 28px;
   height: 24px;
@@ -22,15 +22,49 @@ $slides: 3;
   display: block;
   position:absolute;
   right: 12px;
-  top: 10px;
+  top: 250px;
   background-size: cover;
+  cursor: pointer;
   &:hover, &.hover{
     background-image: image-url("usuarios/wishlist/corazon_rosa.png") !important;
   }
   &.barra_menu{
     background-image: image-url("usuarios/wishlist/corazon_rosa.png") !important; 
-    right: -28px;
-    top: -6px;
+    right: 2px;
+    top: 4px;
+  }
+}
+
+.share-me{
+  display: block;
+  width: 280px;
+  margin: 25px auto;
+  h3{
+    padding: 0;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-family: Helvetica, Tahoma !important;
+    text-align: center;
+    font-weight: bold;
+  }
+  .rs{
+    width: 70px;
+    height: 70px;
+    display: block;
+    float:left;
+    margin:0;
+    padding:0;
+    opacity: 1;
+    transition: opacity 450ms;
+    cursor: pointer;
+    &:hover{
+      opacity: 0.8;
+    }
+    &.fb{background-image: image-url("usuarios/share/fb.jpg"); }
+    &.tw{background-image: image-url("usuarios/share/tw.jpg"); }
+    &.pinterest{background-image: image-url("usuarios/share/pinterest.jpg"); }
+    &.gplus{background-image: image-url("usuarios/share/gplus.jpg"); }
   }
 }
 

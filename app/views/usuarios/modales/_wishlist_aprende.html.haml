@@ -1,0 +1,59 @@
+:sass
+	#modal
+		background: rgba(0,0,0,0.9)
+		display: table
+		padding: 30px
+		border-radius: 10px
+		border: none
+		.close
+			color: white
+			font-size: 20px
+			top: 10px
+			right: 15px
+		.table-cell
+			vertical-align: middle
+			display: table-cell
+		.title
+			color: white
+			font-weight: 800
+			font-size: 30px
+			margin-bottom: 10px
+			display: block
+		.subtitle
+			color: rgb(244, 110, 154)
+			font-weight: 800
+			font-size: 26px
+			margin-bottom: 10px
+			display: block
+		.modal_content
+			margin-top: 30px
+			margin-bottom: 30px
+			ul
+				padding: 0
+				margin: 0
+				li
+					font-size: 20px
+					font-weight: 200
+					padding: 0
+					margin: 0 0 5px 0
+					color: white
+					display: block
+					line-height: 26px
+		.modal_buttons
+			display: block
+			.btn.btn-default
+				font-size: 20px
+#modal
+	%a.close.pull-right{:href => root_path}
+		&times;
+	.table-cell
+		%h1.title Mis Beauty Favs
+		%h3.subtitle Aprende Comó:
+		.modal_content
+			%ul
+				%li 1.- Crea tu usuario para acceder a tu lista
+				%li 2.- Selecciona tu producto favorito al dar clic en el ícono de corazón que se encuentra al lado
+				%li 3.- Comparte tu lista con tus amigos y familiares para que conozcan todos tus deseos.
+		.modal_buttons.text-center
+			%a.btn.btn-default{:href => new_usuario_registration_path}
+				¡Quiero Registrarme!

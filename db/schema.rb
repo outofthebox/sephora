@@ -495,8 +495,8 @@ ActiveRecord::Schema.define(:version => 20141208083408) do
   add_index "usuarios", ["unlock_token"], :name => "index_usuarios_on_unlock_token", :unique => true
 
   create_table "wishlists", :id => false, :force => true do |t|
+    t.integer  "userwish_id"
     t.integer  "producto_id"
-    t.integer  "usuario_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end

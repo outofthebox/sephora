@@ -3,9 +3,8 @@ class UsuariosController < ApplicationController
   load_and_authorize_resource :except => [:logout, :ver]
 
   def lista; @usuarios = Usuario.order("id DESC"); end
-  def perfil
-    redirect_to usuario_wishlist_path
-  end
+  def perfil; redirect_to usuario_wishlist_path; end
+  def bienvenido; end
 
   def actualizar
     @usuario = Usuario.find params[:id]
@@ -29,9 +28,15 @@ class UsuariosController < ApplicationController
   end
 
   def wishlist
-    #@wishlist = Producto.where(:upc => ["3378872084327", "3378872084358", "602004060990", "812738013951", "602004065810", "20714695736", "811999020500", "3548752072601", "94800348455", "879634007453", "811999020388", "604214923027", "651043071818", "682223080931", "687795456016", "607710038479", "689304452168", "607845083054", "809280123252", "8410225531425", "20714695453", "3349668526284", "737052756370", "8411061788813", "651986905379"])
-    @wishlist = Producto.last(10)
+    @wishlist = Producto.where(:upc => ["3378872084327", "3378872084358", "602004060990", "812738013951", "602004065810", "20714695736", "811999020500", "3548752072601", "94800348455", "879634007453", "811999020388", "604214923027", "651043071818", "682223080931", "687795456016", "607710038479", "689304452168", "607845083054", "809280123252", "8410225531425", "20714695453", "3349668526284", "737052756370", "8411061788813", "651986905379"])
     @usuario = current_usuario.productos rescue []
+    @bandera = (current_usuario) ? true : false
+  end
+
+  def wishlist_ver
+    usuario_id = params[:slug].match(/([0-9]+)/)[0] rescue nil
+    @usuario = Usuario.find(usuario_id).productos rescue []
+
   end
 
   def wishlist_del

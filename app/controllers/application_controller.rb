@@ -36,7 +36,6 @@ class ApplicationController < ActionController::Base
     redirect_to root_path
   end
 
-
   # -----------------------------
   # I was searching
   # You were on a mission

@@ -239,9 +239,7 @@
                   %li
                     %a{ :href => "/marca/#{marca.slug}" }
                       = marca.marca
-          %li
-            %a.add_to_favs.barra_menu{:href => new_usuario_session_path}
-
+        %a.add_to_favs.barra_menu{:href => new_usuario_session_path}
     = yield
 
     #footer
@@ -266,7 +264,7 @@
               .form-controlform
                 %label Nombre
                 %input.nombre{:type=> "text", :name => "nombre"}
-              .form-control
+              .form-controlform
                 %label Email
                 %input.correo{:type=> "text", :name => "email"}
               %input#submit{:type=>"submit", :value=>"ENVIAR"}

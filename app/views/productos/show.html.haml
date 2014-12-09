@@ -15,8 +15,11 @@
   .table.full
     .product.tcell.t35
       =link_to(image_tag(@producto.foto.url(:normal), :id => "prod", :class => "imgproducto", :itemprop => 'image'), @producto.foto.url(:grande), :id => "prodlink")
-      - fav_class = (current_usuario) ? (current_usuario.productos.include?(@producto)) ? "hover animated infinite pulse" : "" : ""
-      %div{:"data-upc" => @producto.upc, :class => "add_to_favs #{fav_class}"}
+      - if current_usuario
+        - fav_class = (current_usuario) ? (current_usuario.productos.include?(@producto)) ? "hover animated infinite pulse" : "" : ""
+        %div{:"data-upc" => @producto.upc, :class => "add_to_favs #{fav_class}"}
+      -else
+        %a.add_to_favs_link{:href => usuario_wishlist_path}
       :coffee
         $ ->
           fav = new Usuarios.Userlist()
