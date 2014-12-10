@@ -1,0 +1,120 @@
+:sass
+	#modal
+		background: rgba(0,0,0,0.9)
+		display: table
+		padding: 30px
+		border-radius: 10px
+		border: none
+		position: absolute
+		.close
+			color: white
+			font-size: 20px
+			top: 10px
+			right: 15px
+		.table-cell
+			vertical-align: middle
+			display: table-cell
+		.title
+			color: white
+			font-weight: 800
+			font-size: 30px
+			margin-bottom: 10px
+			display: block
+		.subtitle
+			color: rgb(244, 110, 154)
+			font-weight: 800
+			font-size: 26px
+			margin-bottom: 10px
+			display: block
+		.modal_content
+			margin-top: 30px
+			margin-bottom: 30px
+			ul
+				padding: 0
+				margin: 0
+				li
+					font-size: 20px
+					font-weight: 200
+					padding: 0
+					margin: 0 0 5px 0
+					color: white
+					display: block
+					line-height: 26px
+		.modal_buttons
+			display: block
+			.btn.btn-default
+				font-size: 20px
+#modal.hidden.animated.fadeIn
+	%a.close.pull-right{:href => root_path}
+		&times;
+	.table-cell
+		%h1.title Preguntas Frecuentes
+		.modal_content
+			%ul
+				%li 
+					%p
+						%strong 1.	Para realizar mi pedido, ¿qué número tengo que marcar? 
+					%p 01 800 737 40 72
+
+				%li 
+					%p
+						%strong 2.	En caso de que necesite alguna aclaración sobre el status de mi pedido, ¿Por qué medio me puedo comunicar? 
+					%p Directamente al teléfono 01 800 737 40 72 o enviando un correo electrónico a pedidosmx@sephora.com 
+
+				%li 
+					%p
+						%strong 3.	¿Cuánto tiempo tarda en llegar mi pedido? 
+					%p Tu pedido llegará en un plazo de entre 8 y 10 días hábiles.
+
+				%li 
+					%p
+						%strong 4.	¿Cuáles son las formas de pago? 
+					%p Puedes hacer tu pago ya sea mediante depósito en ventanilla o mediante transferencia electrónica.
+
+				%li 
+					%p
+						%strong 5.	¿Cuentan con algún seguro en caso de que mi producto se rompa en el envío? 
+					%p Sí, en dado caso se te enviará de nuevo el producto. 
+
+				%li 
+					%p
+						%strong 6.	¿Tiene algún costo la entrega de los productos? 
+					%p Sí, una vez que hagas tu compra, te daremos los costos adicionales relacionados con el envío el producto.
+
+				%li 
+					%p
+						%strong 7.	¿Se hacen cambios o devoluciones en caso de que no me guste el producto? 
+					%p No, lo sentimos no hay cambios ni devoluciones en caso que el producto no guste. 
+
+				%li 
+					%p
+						%strong 8.	¿Qué pasa si nunca llega mi pedido? 
+					%p Deberás contactar directamente al servicio de mensajería, darles el número de guía que te proporcionamos vía correo electrónico, a fin de que ellos te ayuden a localizar el paquete. 
+
+				%li 
+					%p
+						%strong 9.	¿Cómo puedo dar seguimiento al envío? 
+					%p En la página de internet de UPS, por teléfono utilizando el número de guía que se comparte  en el correo de confirmación
+
+				%li 
+					%p
+						%strong 10.	¿Puedo cancelar un pedido? 
+					%p Una vez que hayas efectuado el pago ya sea mediante depósito o transferencia electrónica y el pedido haya sido confirmado por parte de Sephora México, ya no podrá haber cancelaciones.
+
+				%li 
+					%p
+						%strong 11.	Si ya realicé un pedido y quiero agregar algo más, ¿puedo modificar mi primer pedido o tengo que realizar otro? 
+					%p Tienes que realizar otro pedido 
+
+				%li 
+					%p
+						%strong 12.	¿Qué pasa si me envían un producto que yo no pedí? 
+					%p Puedes conservar el producto equívoco y Sephora te enviará el producto correcto
+				%li 
+					%p
+						%strong 13.	¿Hay un monto mínimo para comprar por teléfono? 
+					%p Si, el monto mínimo de tu compra deberá  ser $1,000 M.N. (con IVA)
+
+		.modal_buttons.text-center
+			.btn.btn-default.btn-cerrar
+				cerrar
