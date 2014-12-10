@@ -191,4 +191,20 @@
 			transition: left 350ms;
 		}
 	}
+	.bought_me{
+		width: 960px;
+		height: 288px;
+		margin: auto;
+		display: block;
+		position: relative;
+		.preguntas_frecuentes{
+			display: block;
+			cursor: pointer;
+			height: 45px;
+			width: 216px;
+			position: absolute;
+			left: 387px;
+			bottom: 0px;
+		}
+	}
 }

@@ -71,22 +71,23 @@ ul.categorias {
     line-height: 1.2em;
     padding-left: 40px;
     margin-right: 16px;
+    a:hover{color: #333;}
     &[name="Hot News"]{
-      width: 143px;
+      width: 163px;
       &::before{
         left: 0px;
         top: -0px;  
       }
     }
     &[name="Recien Desempacados"]{
-      width: 280px;
+      width: 312px;
       &::before{
         left: -0px;
         top: -0px;
       }
     }
     &[name="Urban Style"]{
-      width: 180px;
+      width: 210px;
       &::before{
         left: 0px;
         top: -0px;  
@@ -123,7 +124,7 @@ ul.categorias {
       position: relative;
   		img{
   			margin-bottom: 20px; 
-        max-width: 700px;
+        max-width: 698px;
         display: block;
         position: relative;
   		}
@@ -225,7 +226,7 @@ ul.categorias {
       margin:20px 0 10px 0;
       font-size: 12px;
       font-family: sans-serif;
-      max-width: 590px;
+      max-width: 500px;
       li{
         display: inline-block;
         position:relative;

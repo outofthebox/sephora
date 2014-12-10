@@ -41,6 +41,15 @@ $ ->
         fjs.parentNode.insertBefore js, fjs
       ) document, "script", "facebook-jssdk"
 
+      $("#modal .close").click ->
+        $(this).parent().addClass("hidden")
+
+      $(".modal_buttons .btn-cerrar").click ->
+        $("#modal .close").click()
+
+      $(".preguntas_frecuentes").click ->
+        $("#modal").removeClass("hidden")
+
     userlist: () ->
       $(".remover").click ->
         parent = $(this).parent()
@@ -59,7 +68,6 @@ $ ->
           if(data.status == "exito")
             $this.addClass("animated hover infinite pulse")
         )
-
     sharelist: ->
       post_title = $("meta[property='og:title']").attr("content")
       post_img = $("meta[property='og:image']").attr("content")
@@ -139,3 +147,5 @@ $ ->
         ev.preventDefault();
         ev.stopPropagation();
         pt_share();
+    open_faq: ->
+      console.log(1)

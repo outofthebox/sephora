@@ -96,40 +96,7 @@
             = link_to "#{v.title}",post_path(v)
           %p
             = v.extracto[0,80].html_safe+"..."
-    #footer
-      #sus-cata
-        .table.full
-          .tcell.t37.suscripcion
-            %span#mail
-            %p
-              ENTÉRATE DE EVENTOS Y PROMOCIONES EXCLUSIVAS
-              = form_for Suscripcion.new, :url => "/suscripcion#suscripcion" do |f|
-                .table
-                  .tcell.t95
-                    = f.email_field :email, :placeholder => "E-Mail", :class => "texto"
-                  .tcell.t5
-                    = image_submit_tag("flecha_internacional.png")
-          .tcell.t33
-            %p.pad2
-              NUESTRAS TIENDAS Y EVENTOS
-            .footer-boton
-              %a{:href => '/tiendas'} Descúbrelos
-          .tcell.t30
-      #sephora-en
-        %p
-          SEPHORA en:
-          %a#gp{:href => "https://plus.google.com/109652284724347281502/posts", :target => "_blank"}
-      #footin
-        #links
-          %ul.nobullet.nolist.seplist
-            %li Contacto
-            %li Mapa del sitio
-            %li
-              =link_to "Poĺítica de privacidad", politicas_path
-            %li Empleo
-        #internacional
-          %a.middle{:href => 'http://www.sephora.com/international/international.jsp', :target => '_blank'} Internacional
-          %span.icon
+    = render(:partial => "layouts/footer_nav")
   :javascript
     (function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
