@@ -12,7 +12,7 @@ $ ->
         $this = $(this);
         this.disabled = "disabled";
         $holiday = $("#"+cont+"_cont");
-        if($holiday.position().left >= -1020)
+        if($holiday.position().left >= -2960)
           $holiday.css("left", $holiday.position().left-move)
         setTimeout (->
           $this.removeAttr("disabled");
