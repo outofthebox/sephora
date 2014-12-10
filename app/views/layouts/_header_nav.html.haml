@@ -157,14 +157,21 @@
       %li.tiendas
         %a{:href => "/tiendas"}
           Tiendas
-      .select
+      %li
         - if @marcas_all and @marcas_all.any?
-          .trigger
-            Marcas 
-            %span.icon 
-          %select#marcas
-            %option
-              MARCAS
+          %a{:href => "#"}
+            Marcas
+          %ul.nobullet.submenu#marca
+            %li.noesmarca
+              LAS MAS BUSCADAS
+            - Marca.mas_buscadas.each do |marca|
+              %li
+                %a{:href => "/marca/#{marca.slug}"}
+                  = marca.marca
+            %li.noesmarca
+              TODAS LAS MARCAS
             - @marcas_all.each do |marca|
-              %option{ :value => "/marca/#{marca.slug}" }
-                = marca.marca
+              %li
+                %a{ :href => "/marca/#{marca.slug}" }
+                  = marca.marca
+    %a.add_to_favs.barra_menu{:href => new_usuario_session_path}
