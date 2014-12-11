@@ -74,9 +74,9 @@ class MobileController < ApplicationController
   end
 
   def mobileproducto
-    @producto = Producto.includes(:marca, :presentaciones).publicados.where(:slug => params[:slug]).first
+    @producto = Producto.includes(:marca, :presentaciones).find_by_slug(params[:slug])
     @categoria = Categoria.find(@producto.categoria_id)
-    @productos_relacionados = @categoria.productos.padres.publicados.where("productos.id != ?", @producto.id).sample(3)
+    @productos_relacionados = @categoria.productos.padres.publicados.where("productos.id != ?", @producto.id).sample(3) rescue []
   end
 
   def tiendas

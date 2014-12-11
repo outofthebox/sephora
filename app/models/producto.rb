@@ -50,6 +50,10 @@ class Producto < ActiveRecord::Base
     unless self.nombre_real.nil? then self.nombre_real.html_safe else super end
   end
 
+  def activo?
+    self.publicado == true
+  end
+
   def self.busqueda q
     productos = self
     if q.match(/sku:([\w]*)/)
