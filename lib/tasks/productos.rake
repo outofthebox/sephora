@@ -294,4 +294,32 @@ namespace :productos do
 		puts "##\tDESCONTINUADOS\t||\t#{descontinuados_before}\t||\t#{descontinuados_after}\t##"
 		puts "##########################################################"
 	end
+
+  task :populate_sap => :environment do
+    require 'csv'
+    require 'remote_file'
+
+    raise "Necesario especificar ruta a FILE.csv" unless ENV['FILE']
+
+    file = ENV['FILE'];
+    data = []
+    
+    if ENV["REMOTE"]
+      rm = RemoteFile.new(file)
+      csv = CSV.parse(rm.request.body, :headers => true)
+    else
+      csv_text = File.read(file)
+      csv = CSV.parse(csv_text, :headers => true)
+    end
+
+    csv.each do |c| 
+      upc = c["UPC"] rescue nil
+      sap = c["SAP"] rescue nil
+      unless upc == nil
+        producto = Producto.find_by_upc(upc) rescue nil
+        producto.update_attribute(:sap, sap) if producto && sap != nil
+        puts "#{producto.nombre}\t\t::\t\t#{producto.sap}" if producto && sap != nil
+      end
+    end
+  end
 end
