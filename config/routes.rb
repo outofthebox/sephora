@@ -1,5 +1,5 @@
 Sephora::Application.routes.draw do
-  #devise_for :mobileusers, :path => "mobile"
+  devise_for :mobileusers, :path => "mobile"
   
   #Usuarios
   devise_for :usuarios, controllers: {

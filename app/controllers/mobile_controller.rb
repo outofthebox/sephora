@@ -37,7 +37,7 @@ class MobileController < ApplicationController
 
   def giftcase
     especialesmes = "case";
-    user = current_mobileuser
+    user = current_usuario
     @unique = nil;
     if(user.id <= 50) 
       @unique = Digest::MD5.hexdigest(user.email+especialesmes);
@@ -97,7 +97,7 @@ class MobileController < ApplicationController
   end
 
   def favoritos
-    user = current_mobileuser
+    user = current_usuario
 
     @productos = [];
 
@@ -110,7 +110,7 @@ class MobileController < ApplicationController
   def favorite
     require 'json'
     
-    @user = current_mobileuser
+    @user = current_usuario
     
     le_id = params[:id].scan(/\d+$/).first;
 
@@ -134,7 +134,7 @@ class MobileController < ApplicationController
   def unfavorite
     require 'json'
     
-    user = current_mobileuser
+    user = current_usuario
     counter = 0;
     le_id = params[:id].scan(/\d+$/).first;
     le_product = Producto.find(le_id);

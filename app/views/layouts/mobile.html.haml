@@ -24,17 +24,17 @@
   .header
     %ul
       %li.entrar
-        - if current_mobileuser.nil?
-          %a{:href => new_mobileuser_session_path} ENTRAR
+        - if current_usuario.nil?
+          %a{:href => new_usuario_session_path} ENTRAR
         - else
           .nombre
             %a{:href => "#"}
               Bienvenido
-              = current_mobileuser.email
+              = current_usuario.email
       %li.logo
         =link_to image_tag("mobile/home/sephora_logo_mobile.png"), m_home_path
       %li.favs
-        - if current_mobileuser
+        - if current_usuario
           =link_to 'MIS FAVS', m_favoritos_path
   .wrapper
     = yield

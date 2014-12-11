@@ -23,13 +23,13 @@
       .head
         %ul
           %li.entrar
-            - if current_mobileuser.nil?
-              %a{:href => new_mobileuser_session_path} ENTRAR
+            - if current_usuario.nil?
+              %a{:href => new_usuario_session_path} ENTRAR
             - else
               .nombre
                 %a{:href => "#"}
                   Bienvenido
-                  = current_mobileuser.email
+                  = current_usuario.email
           %li.corazon
             - if params[:action] == "mobileproducto"
               =link_to image_tag("mobile/home/favoritos_icon.png"), favoritear_path(@producto)

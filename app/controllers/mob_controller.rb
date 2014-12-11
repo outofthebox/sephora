@@ -58,11 +58,11 @@ class MobController < ApplicationController
     @contenido = Seccion.seccion_actual(@seccion)
   end
   def favoritos
-    @productos = !current_mobileuser.favoritos.empty? ? Producto.find(JSON.parse(current_mobileuser.favoritos)) : nil
+    @productos = !current_usuario.favoritos.empty? ? Producto.find(JSON.parse(current_usuario.favoritos)) : nil
   end
   def favorite
     require 'json'
-    @user = current_mobileuser
+    @user = current_usuario
     if @user.favoritos.empty?
       favs = "[#{params[:id]}]"
     else
