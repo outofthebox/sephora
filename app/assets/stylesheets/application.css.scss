@@ -1475,12 +1475,12 @@ ul.breadcrumbs{
             opacity: 0;
             display: inline;
             position: absolute;
-            top:400px;
-            transition: opacity 800ms, top 1000ms;
+            left:960px;
+            transition: opacity 800ms;
             &.visible{
               opacity: 1;
-              top: 0px;
-              transition: opacity 800ms, top 1000ms;
+              left: 0px;
+              transition: opacity 800ms;
             }
           }
         }
