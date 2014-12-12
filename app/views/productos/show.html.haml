@@ -61,19 +61,11 @@
       .producto
         %p{:itemprop => "name"}
           =@producto.nombre
-<<<<<<< Updated upstream
-        - if @producto.sku && @producto.sku.length > 3 && !@producto.sku.empty?
-          %p.sku
-            SKU:
-            %span{:itemprop => "sku"}
-              =@producto.sku
         - if @producto.sap && @producto.sap.length > 3 && !@producto.sap.empty?
           %p.sap
             SAP:
             %span{:itemprop => "sap"}
               =@producto.sap
-=======
->>>>>>> Stashed changes
       - if @producto.presentaciones and @producto.presentaciones.any?
         %ul.presentaciones.nolist.nobullet
           %li{:id => "prodclick"}
