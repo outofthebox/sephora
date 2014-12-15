@@ -262,7 +262,6 @@ namespace :productos do
     else
       puts "##################### -- ERROR -- ########################"
     end
-
 	end
 
 	task :update_publicados => :environment do
@@ -320,6 +319,23 @@ namespace :productos do
         producto.update_attribute(:sap, sap) if producto && sap != nil
         puts "#{producto.nombre}\t\t::\t\t#{producto.sap}" if producto && sap != nil
       end
+    end
+  end
+
+  #sanitizers
+  task :sanitize_discount => :environment do
+    Producto.where(:descuento => nil).each do |pd|
+      pd.update_attribute(:descuento, 0)
+    end
+  end
+
+  task :seed_discounts => :environment do
+    Producto.last(100).each do |pd|
+      precio = pd.precio
+      descuento_porcentual = 20
+      descuento = (precio/descuento_porcentual)
+      pd.update_attributes({:descuento => descuento, :descuento_porcentual => descuento_porcentual})
+      puts "#{pd.precio}\t\t#{pd.descuento}\t\t#{pd.descuento_porcentual}"
     end
   end
 end
