@@ -6,10 +6,10 @@
       - @categoria.ancestors.each do |a|
         %li
           .inlineblock
-            = link_to a.nombre, categoria_ver_path(a.slug)
+            = link_to a.nombre, promociones_show_path(a.slug)
     %li.highlighted
       .inlineblock
-        = link_to @categoria.nombre, categoria_ver_path(@categoria.slug)
+        = link_to @categoria.nombre, promociones_show_path(@categoria.slug)
   .table.full
     .contizq.tcell.t25
       - if @subcategorias && @subcategorias.any?
@@ -19,7 +19,7 @@
             %span (#{@productoscount})
           - @subcategorias.each do |subcategoria|
             %li
-              = link_to subcategoria.nombre, categoria_ver_path(subcategoria.slug)
+              = link_to subcategoria.nombre, promociones_show_path(subcategoria.slug)
       - else
         %ul.no-border.bottom
           %li.current
@@ -31,7 +31,7 @@
           .mascat
             - @categoria.parent.children.each do |categoria|
               - unless categoria.nombre == @categoria.nombre
-                %li=link_to categoria.nombre, categoria_ver_path(categoria.slug)
+                %li=link_to categoria.nombre, promociones_show_path(categoria.slug)
       %ul
         %li
           <strong>Filtrar por precio</strong>
@@ -53,14 +53,10 @@
               %li.unchecked
                 =link_to r["marca"], request.parameters.merge({ :page => nil, :marca => ((@marcas_seleccionadas || []) + [r["id"].to_i]).join(",") })
         %li
-          =link_to "Borrar filtros", categoria_ver_path(@categoria.slug)
+          =link_to "Borrar filtros", promociones_show_path(@categoria.slug)
     .contder.tcell.t75
       .contenedor
-        - unless @categoria.cover_file_name.nil?
-          - unless @categoria.urlslug.nil? || @categoria.urlslug.empty?
-            = link_to image_tag(@categoria.cover.url(:normal)),(@categoria.urlslug)
-          - else
-            = image_tag(@categoria.cover.url(:normal))
+        miau
       .catalogo
         .navegacion
           %span ver

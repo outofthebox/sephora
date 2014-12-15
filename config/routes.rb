@@ -125,6 +125,7 @@ Sephora::Application.routes.draw do
   post  'categorias/actualizar_orden', :to => 'categorias#actualizar_orden'
   get   'categoria(/:categoria)', :to => 'categorias#ver', :as => 'categoria_ver'
   get   'rebajas', :to => 'promociones#show', :as => 'promociones_show'
+  get   'rebajas/(:categoria)', :to => 'promociones#show', :as => 'promociones_show'
 
 
   get   'marcas/:id/desvincular/:marca_producto/:hash', :to => 'marcas#desvincular', :as => 'marca_desvincular_producto'
