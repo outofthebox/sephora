@@ -1833,6 +1833,7 @@ ul.breadcrumbs{
           margin: 10px;
           vertical-align: top;
           height: 230px;
+          position: relative;
           img {
             margin-bottom: 10px;
           }
@@ -3267,11 +3268,17 @@ a.close {
   }
 }
 
-.badge-discount{
+.badge-discount, .badge-discount-2{
   border-radius: 100% !important;
   min-height: 36px !important;
   margin-top: 20px !important;
   margin-bottom: 10px !important;
   line-height: 30px !important;
   background-color: rgb(174, 25, 25) !important;
+}
+
+.badge-discount-2{
+  position: absolute;
+  top: -20px;
+  right: -10px;
 }

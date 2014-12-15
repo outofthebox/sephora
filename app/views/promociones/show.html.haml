@@ -106,6 +106,10 @@
           %ul.nobullet.nolist.catalogin
             - @productos.each do |producto|
               %li
+                .pull-right
+                  .badge.badge-discount-2
+                    = "#{producto.descuento_porcentual}%"
+                  .clearfix
                 = link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
                 %h4 #{producto.marca.marca.upcase}
                 %h3 #{link_to producto.nombre.split(' ').map {|w| w.capitalize }.join(' '), producto_ver_path(producto.slug)}
