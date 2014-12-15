@@ -1,37 +1,50 @@
-- provide :titulo, @categoria.nombre
-- provide :descripcion, @categoria.descripcion
+- provide :titulo, "Rebajas"
+- provide :descripcion, "Todas nuestras rebajas"
 %section#categoria
-  %ul.breadcrumbs.nolist.seplist.nobullet
-    - if @categoria.ancestors and @categoria.ancestors.any?
-      - @categoria.ancestors.each do |a|
-        %li
-          .inlineblock
-            = link_to a.nombre, promociones_show_path(a.slug)
-    %li.highlighted
-      .inlineblock
-        = link_to @categoria.nombre, promociones_show_path(@categoria.slug)
+  -if @categoria != nil
+    %ul.breadcrumbs.nolist.seplist.nobullet
+      - if @categoria.ancestors and @categoria.ancestors.any?
+        - @categoria.ancestors.each do |a|
+          %li
+            .inlineblock
+              = link_to a.nombre, promociones_show_path(a.slug)
+      %li.highlighted
+        .inlineblock
+          = link_to @categoria.nombre, promociones_show_path(@categoria.slug)
   .table.full
     .contizq.tcell.t25
-      - if @subcategorias && @subcategorias.any?
-        %ul.no-border.bottom
-          %li.current
-            =@categoria.nombre
-            %span (#{@productoscount})
-          - @subcategorias.each do |subcategoria|
+      -if @categoria != nil
+        - if @subcategorias && @subcategorias.any?
+          %ul.no-border.bottom
+            %li.current
+              =@categoria.nombre
+              %span (#{@productoscount})
+            - @subcategorias.each do |subcategoria|
+              %li
+                = link_to subcategoria.nombre, promociones_show_path(subcategoria.slug)
+        - else
+          %ul.no-border.bottom
+            %li.current
+              =@categoria.nombre
+              %span (#{@productoscount})
             %li
-              = link_to subcategoria.nombre, promociones_show_path(subcategoria.slug)
-      - else
+              %a#vermascat{:href => '#'}
+                Más categorías +
+            .mascat
+              - @categoria.parent.children.each do |categoria|
+                - unless categoria.nombre == @categoria.nombre
+                  %li=link_to categoria.nombre, promociones_show_path(categoria.slug)
+      -else
         %ul.no-border.bottom
           %li.current
-            =@categoria.nombre
+            Rebajas
             %span (#{@productoscount})
           %li
             %a#vermascat{:href => '#'}
               Más categorías +
           .mascat
-            - @categoria.parent.children.each do |categoria|
-              - unless categoria.nombre == @categoria.nombre
-                %li=link_to categoria.nombre, promociones_show_path(categoria.slug)
+            - @categorias.each do |categoria|
+              %li=link_to categoria.nombre, promociones_show_path(categoria.slug)
       %ul
         %li
           <strong>Filtrar por precio</strong>
@@ -53,10 +66,10 @@
               %li.unchecked
                 =link_to r["marca"], request.parameters.merge({ :page => nil, :marca => ((@marcas_seleccionadas || []) + [r["id"].to_i]).join(",") })
         %li
-          =link_to "Borrar filtros", promociones_show_path(@categoria.slug)
+          =link_to "Borrar filtros", promociones_show_path
     .contder.tcell.t75
       .contenedor
-        miau
+        = image_tag("secciones/descuentos.jpg")
       .catalogo
         .navegacion
           %span ver
@@ -137,16 +150,17 @@
             %p
               =@productoscount
               artículos
-  - unless @categoria.categoria_producto.size == 0
-    .table.full
-      .tcell.t20
-      .tcell.t80
-        .masproducto
-          %h3 Más #{@categoria.nombre}
-          %ul.nobullet
-            - @categoria.categoria_producto.each do |categoria_producto|
-              %li
-                = link_to image_tag(categoria_producto.producto.foto.url(:chico)), producto_ver_path(categoria_producto.producto.slug)
-                %h4
-                  #{categoria_producto.producto.nombre}
-                = simple_format categoria_producto.descripcion unless categoria_producto.descripcion.empty?
+  - if @categoria != nil
+    - unless @categoria.categoria_producto.size == 0
+      .table.full
+        .tcell.t20
+        .tcell.t80
+          .masproducto
+            %h3 Más #{@categoria.nombre}
+            %ul.nobullet
+              - @categoria.categoria_producto.each do |categoria_producto|
+                %li
+                  = link_to image_tag(categoria_producto.producto.foto.url(:chico)), producto_ver_path(categoria_producto.producto.slug)
+                  %h4
+                    #{categoria_producto.producto.nombre}
+                  = simple_format categoria_producto.descripcion unless categoria_producto.descripcion.empty?

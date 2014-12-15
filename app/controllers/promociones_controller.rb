@@ -3,10 +3,10 @@ class PromocionesController < ApplicationController
 		@marcas_seleccionadas = params[:marca].split(",").map{|m| m.to_i } unless params[:marca].nil?
     
     @categoria = (params[:categoria]) ? Categoria.includes(:productos).by_slug(params[:categoria]).first : nil
-    subcategorias = @categoria.descendants
-    @subcategorias = subcategorias.reject{|r| r.parent_id != @categoria.id }
     
     if @categoria
+    	subcategorias = @categoria.descendants
+    	@subcategorias = subcategorias.reject{|r| r.parent_id != @categoria.id }
 	    catmap = [@categoria.id] + @subcategorias.map{|s| s.id }
 	    @marcas_para_categoria = Categoria.encontrar_marcas(catmap)
 	    if params[:marca].blank?
@@ -26,7 +26,7 @@ class PromocionesController < ApplicationController
 	      @productos = Producto.publicados.padres.where(:marca_id => @marca.map{|m| m.id }).where("productos.descuento_porcentual != 0").order(preciorder(params[:precio])).page(params[:page]).per(perparams(params[:ver]))
 	      @productoscount = Producto.publicados.padres.where(:marca_id => @marca.map{|m| m.id }).where("productos.descuento_porcentual != 0").count
 	    end
-    	@marcas_para_categoria = Marca.find(@productos.pluck(:marca_id).uniq)
+	    @categorias = Categoria.where(:id => Producto.pluck(:categoria_id).uniq)
 	  end
 
 	end
