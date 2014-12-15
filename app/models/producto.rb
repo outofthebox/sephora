@@ -10,7 +10,7 @@ class Producto < ActiveRecord::Base
   has_many :presentaciones, :class_name => "Producto", :foreign_key => "parent_id"
   has_and_belongs_to_many :usuarios
 
-  attr_accessible :id, :nombre, :nombre_real, :sku, :upc, :parent_id, :precio, :descripcion, :ingredientes, :usos, :publicado, :marca_id, :categoria_id, :uso_id, :foto, :image_code, :personalidad, :visto
+  attr_accessible :id, :nombre, :nombre_real, :sku, :upc, :parent_id, :precio, :descripcion, :ingredientes, :usos, :publicado, :marca_id, :categoria_id, :uso_id, :foto, :image_code, :personalidad, :visto, :descuento, :descuento_porcentual
   attr_accessor :foto
 
   has_attached_file :foto, {

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141211203546) do
+ActiveRecord::Schema.define(:version => 20141215075516) do
 
   create_table "blog_categorias", :force => true do |t|
     t.string   "categoria"
@@ -251,13 +251,13 @@ ActiveRecord::Schema.define(:version => 20141211203546) do
   create_table "productos", :force => true do |t|
     t.string   "nombre"
     t.text     "descripcion"
-    t.decimal  "precio",            :precision => 10, :scale => 2
-    t.boolean  "publicado",                                        :default => true
+    t.decimal  "precio",               :precision => 10, :scale => 2
+    t.boolean  "publicado",                                           :default => true
     t.text     "ingredientes"
     t.text     "usos"
     t.integer  "usuario_id"
-    t.datetime "created_at",                                                         :null => false
-    t.datetime "updated_at",                                                         :null => false
+    t.datetime "created_at",                                                            :null => false
+    t.datetime "updated_at",                                                            :null => false
     t.string   "slug"
     t.integer  "marca_id"
     t.string   "foto_file_name"
@@ -272,9 +272,10 @@ ActiveRecord::Schema.define(:version => 20141211203546) do
     t.string   "upc"
     t.string   "image_code"
     t.string   "personalidad"
-    t.integer  "visto",                                            :default => 0
+    t.integer  "visto",                                               :default => 0
     t.decimal  "descuento"
     t.string   "sap"
+    t.integer  "descuento_porcentual",                                :default => 0
   end
 
   add_index "productos", ["categoria_id"], :name => "index_productos_on_categoria_id"
