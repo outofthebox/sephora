@@ -45,7 +45,7 @@
       .marca{:itemprop=>"brand", :itemscope=>"", :itemtype=>"http://schema.org/Brand"}
         - unless @producto.marca.logo_file_size.nil?
           = image_tag @producto.marca.logo.url(:grande), {:itemprop => "logo"}
-        - if @producto.descuento_porcentual > 0
+        - if @producto.descuento_porcentual && @producto.descuento_porcentual > 0
           .pull-right
             .badge.badge-discount
               = "#{@producto.descuento_porcentual}%"

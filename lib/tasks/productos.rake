@@ -330,6 +330,12 @@ namespace :productos do
     end
   end
 
+  task :sanitize_discount_percent => :environment do
+    Producto.where(:descuento_porcentual => nil).each do |pd|
+      pd.update_attribute(:descuento_porcentual, 0)
+    end
+  end
+
   task :seed_discounts => :environment do
     Producto.last(100).each do |pd|
       precio = pd.precio
