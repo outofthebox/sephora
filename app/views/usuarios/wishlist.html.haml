@@ -29,7 +29,7 @@
 							%p.producto-nombre
 								= producto.nombre_real
 							%p.producto-precio
-								%strong= "$#{producto.precio}"
+								%strong= "#{number_to_currency(producto.precio, :precision => (producto.precio.round == producto.precio) ? 0 : 2)}"
 		.slider_items.userlist
 			#userlist
 				-if @usuario.count > 0
@@ -49,7 +49,7 @@
 								%p.producto-nombre
 									= producto.nombre_real
 								%p.producto-precio
-									%strong= "$#{producto.precio}"
+									%strong= "#{number_to_currency(producto.precio, :precision => (producto.precio.round == producto.precio) ? 0 : 2)}"
 				-else
 					.agrega_favs
 						%h1.title Mis Beauty Favs
