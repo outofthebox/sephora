@@ -316,7 +316,7 @@ namespace :productos do
     csv.each do |c| data << c["UPC"] unless c["UPC"] == nil; end
 
     descontinuados_before =  Producto.where(:publicado => false).count
-    descontinuados = Producto.where(:upc, data)
+    descontinuados = Producto.where(:upc => data)
     descontinuados.each do |d| d.update_attribute(:publicado, false) unless (d.publicado == false); end
     descontinuados_after =  Producto.where(:publicado => false).count
 
