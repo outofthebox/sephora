@@ -125,6 +125,10 @@ class ProductosController < ApplicationController
 
   def set_producto
     @producto = Producto.includes(:marca, :presentaciones).publicados.where(:slug => params[:slug]).first
+    if @producto.blank?
+      redirect_to root_path
+      return
+    end
   end
 
   def set_related
@@ -148,12 +152,14 @@ class ProductosController < ApplicationController
   end
 
   def set_visto
-    visto = @producto.visto;
-    if(visto == nil) 
-      visto = 1; 
-    else 
-      visto = visto + 1; 
+    if @producto
+      visto = @producto.visto;
+      if(visto == nil) 
+        visto = 1; 
+      else 
+        visto = visto + 1; 
+      end
+      Producto.update(@producto.id, {:visto=>visto})
     end
-    Producto.update(@producto.id, {:visto=>visto})
   end
 end
