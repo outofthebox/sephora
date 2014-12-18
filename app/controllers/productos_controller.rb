@@ -128,8 +128,7 @@ class ProductosController < ApplicationController
   end
 
   def set_related
-    @categoria = Categoria.find(@producto.categoria_id)
-    #get_related
+    @categoria = Categoria.find(@producto.categoria_id) rescue []
 
   end
 
