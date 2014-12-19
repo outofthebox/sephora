@@ -42,6 +42,7 @@ gem 'modernizr-rails'
 gem 'gon'
 gem 'raygun4ruby'
 gem "bugsnag"
+gem 'acts_as_suggest', '~> 0.0.2'
 
 group :assets do
 end

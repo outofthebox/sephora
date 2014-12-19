@@ -1,5 +1,6 @@
 class Producto < ActiveRecord::Base
   acts_as_taggable
+  acts_as_suggest
 
   paginates_per 20
   validate :validar
