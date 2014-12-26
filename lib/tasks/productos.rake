@@ -128,7 +128,7 @@ namespace :productos do
       upc = row[0];
       descuento = row[1].gsub!("$",'') if row[1]
       descuento = row[1].to_f;
-      descuento_porcentual = row[2].gsub!("%",'') if row[2]
+      descuento_porcentual = row[2] if row[2]
       producto = Producto.find_by_upc(upc)
       if producto
         producto.update_attributes({:descuento => descuento, :descuento_porcentual => descuento_porcentual})
