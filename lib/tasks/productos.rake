@@ -185,7 +185,7 @@ namespace :productos do
         codigo = producto.upc || "--"
         nombre = producto.nombre || "--"
         puts "#{codigo}\t::\t#{nombre}::\t0"
-        producto.update_attribute(:descuento, 0)
+        producto.update_attributes({:descuento => 0, :descuento_porcentual => 0})
       end
     end
   end
@@ -295,35 +295,34 @@ namespace :productos do
 		puts "##########################################################"
 	end
 
+	task :descontinuados => :environment do
+		require 'csv'
+		require 'remote_file'
 
-    task :descontinuados => :environment do
-    require 'csv'
-    require 'remote_file'
+		raise "Necesario especificar ruta a FILE.csv" unless ENV['FILE']
 
-    raise "Necesario especificar ruta a FILE.csv" unless ENV['FILE']
+		file = ENV['FILE'];
+		data = []
 
-    file = ENV['FILE'];
-    data = []
-    
-    if ENV["REMOTE"]
-      rm = RemoteFile.new(file)
-      csv = CSV.parse(rm.request.body, :headers => true)
-    else
-      csv_text = File.read(file)
-      csv = CSV.parse(csv_text, :headers => true)
-    end
+		if ENV["REMOTE"]
+		  rm = RemoteFile.new(file)
+		  csv = CSV.parse(rm.request.body, :headers => true)
+		else
+		  csv_text = File.read(file)
+		  csv = CSV.parse(csv_text, :headers => true)
+		end
 
-    csv.each do |c| data << c["UPC"] unless c["UPC"] == nil; end
+		csv.each do |c| data << c["UPC"] unless c["UPC"] == nil; end
 
-    descontinuados_before =  Producto.where(:publicado => false).count
-    descontinuados = Producto.where(:upc => data)
-    descontinuados.each do |d| d.update_attribute(:publicado, false) unless (d.publicado == false); end
-    descontinuados_after =  Producto.where(:publicado => false).count
+		descontinuados_before =  Producto.where(:publicado => false).count
+		descontinuados = Producto.where(:upc => data)
+		descontinuados.each do |d| d.update_attribute(:publicado, false) unless (d.publicado == false); end
+		descontinuados_after =  Producto.where(:publicado => false).count
 
-    puts "##########################################################"
-    puts "##\tPRODUCTOS\t||\tANTES\t||\tDESPUES\t##"
-    puts "##\tDESCONTINUADOS\t||\t#{descontinuados_before}\t||\t#{descontinuados_after}\t##"
-    puts "##########################################################"
+		puts "##########################################################"
+		puts "##\tPRODUCTOS\t||\tANTES\t||\tDESPUES\t##"
+		puts "##\tDESCONTINUADOS\t||\t#{descontinuados_before}\t||\t#{descontinuados_after}\t##"
+		puts "##########################################################"
   end
 
   task :populate_sap => :environment do
@@ -364,16 +363,6 @@ namespace :productos do
   task :sanitize_discount_percent => :environment do
     Producto.where(:descuento_porcentual => nil).each do |pd|
       pd.update_attribute(:descuento_porcentual, 0)
-    end
-  end
-
-  task :seed_discounts => :environment do
-    Producto.last(100).each do |pd|
-      precio = pd.precio
-      descuento_porcentual = 20
-      descuento = (precio/descuento_porcentual)
-      pd.update_attributes({:descuento => descuento, :descuento_porcentual => descuento_porcentual})
-      puts "#{pd.precio}\t\t#{pd.descuento}\t\t#{pd.descuento_porcentual}"
     end
   end
 end
