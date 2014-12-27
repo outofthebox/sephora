@@ -1,0 +1,37 @@
+!!! 5
+:plain
+  <!--[if lt IE 7]> <html lang="es" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+  <!--[if IE 7]>    <html lang="es" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+  <!--[if IE 8]>    <html lang="es" class="no-js lt-ie9"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
+%head
+  %meta{:charset => "UTF-8"}
+  %title
+    #{"#{yield(:titulo)} | " if content_for?(:titulo)} Sephora
+  %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+  %meta{:content => "#{yield(:titulo)} | Sephora México", :property => "og:title"}
+  %link{ :rel => "shortcut icon", :href => "/favicon.ico", :type => "image/x-icon"}/
+  %meta{:name => "description", :content => yield(:descripcion)}
+  %meta{:content => yield(:url), :property => "og:url"}
+  %meta{:content => "Sephora México", :property => "og:site_name"}
+  %meta{:content => yield(:imagen), :property => "og:image"}
+  = stylesheet_link_tag :mobile
+  = csrf_meta_tags
+%body 
+  #header
+    %table.header_cont
+      %tr
+        %td.icono.menu
+          %i.glyphicon.glyphicon-th
+        %td.icono.logo=image_tag "logo.gif"
+        %td.icono.login=image_tag "mobile/home/corazon_fav_rojo.png"
+  #main
+    = yield
+  #footer
+  = javascript_include_tag :mobile
+  - unless Rails.env.production?
+    :javascript
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-11107291-7', 'auto');
+      ga('send', 'pageview');
