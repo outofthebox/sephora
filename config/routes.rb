@@ -1,5 +1,4 @@
 Sephora::Application.routes.draw do
-  devise_for :mobileusers, :path => "mobile"
   
   #Usuarios
   devise_for :usuarios, controllers: {
@@ -19,6 +18,11 @@ Sephora::Application.routes.draw do
   get   'usuario/wishlist/ver/:slug', :to => "usuarios#wishlist_ver", :as => "usuario_wishlist_ver"
   post  'usuario/wishlist/add/:upc', :to => "usuarios#wishlist_add", :as => "usuario_wishlist_add"
   post  'usuario/wishlist/del/:upc', :to => "usuarios#wishlist_del", :as => "usuario_wishlist_del"
+
+  #mobile
+  scope path: :mobile, as: "m" do
+    match "/", :to => 'mobile#home', :as => 'home'
+  end
 
 
   root :to => 'paginas#home'
@@ -156,7 +160,6 @@ Sephora::Application.routes.draw do
 
   #ANIVERSARIO
   get '365'    => 'paginas#aniversario', :as => :aniversario
-  #get 'beautyissue'    => 'paginas#aniversario', :as => :aniversario
   get 'beautyissue/tienda/:tienda'    => 'paginas#aniversario', :as => :aniversario_tienda
   get 'beautyissue/tienda/:tienda/fecha/:fecha'    => 'paginas#aniversario', :as => :aniversario_tienda_fecha
 
@@ -232,7 +235,6 @@ Sephora::Application.routes.draw do
 
 
   #tabs
-
   get "tabs/sephoragifts", :to => "tabs#sephoragifts", :as => "sephoragifts"
   post "tabs/sephoragifts", :to => "tabs#sephoragifts", :as => "sephoragifts"
 
@@ -279,49 +281,6 @@ Sephora::Application.routes.draw do
     end
   end
 
-  #mobile
-  scope path: :mobile, as: "m" do
-    match "/", :to => 'mobile#home', :as => 'home'
-    
-    match 'busqueda', :to => 'mobile#mobileilbusqueda', :as => 'busqueda'
-    match 'beauty', :to => 'mobile#beauty', :as => 'beauty'
-    match 'cosmetiquera', :to => 'mobile#cosmetiquera', :as => 'cosmetiquera'
-    
-    match 'eventos', :to => 'mobile#eventos', :as => 'eventos'
-    match 'lista_eventos', :to => 'mobile#eventos', :as => 'lista_eventos'
-    match 'evento/:id', :to => 'mobile#evento_show', :as => 'show_evento'  
-
-    match 'producto/:slug', :to => 'mobile#mobileproducto', :as => 'producto'
-    match 'favoritos', :to => 'mobile#favoritos', :as => 'favoritos'
-    match 'favorite/:id', :to => 'mobile#favorite', :as => 'favorited'
-    match 'unfavorite/:id', :to => 'mobile#unfavorite', :as => 'unfavorited'
-    
-    match 'hotnow/:seccion', :to => 'mobile#jotnao', :as => 'hotnow'
-    match 'legal', :to => 'mobile#legales', :as => 'legal'
-    match 'login', :to => 'mobile#login', :as => 'login'
-    match 'nuevo', :to => 'mobile#lonuevo', :as => 'nuevo'
-    match 'tiendas', :to => 'mobile#tiendas', :as => 'tiendas'
-
-    match 'speciales-aniversario', :to => 'mobile#especialesaniversario', :as => 'especiales_aniversario'
-    match 'especiales', :to => 'mobile#especialmes', :as => 'especialmes'
-    
-    match 'video', :to => 'mobile#video', :as => 'video'
-    
-    match 'retomakeover', :to => 'mobile#retomakeover', :as => "retomakeover"
-    scope :retomakeover, as: "retomakeover" do
-
-      match 'ver/:marca', :to => 'mobile#retomakeover_ver', :as => 'ver'
-      match "event_map", to: "aniversario_catorce#event_map", :via => :get
-    end
-
-  end
-
-  # especiales
-  get 'mobile/especiales', :to => 'mobile#especialesmes', :as => 'm_especiales'
-  get 'mobile/wallpapers', :to => 'mobile#wallpapers', :as => 'm_wallpaper'
-  get 'mobile/giftcase', :to => 'mobile#giftcase', :as => 'm_giftcase'
-  get 'mobile/lomas', :to => 'mobile#lomas', :as => 'm_lomas'
-
 
   #brand-minisite
   get 'sephora-collection/', :to => 'sephora_collection#index', :as => 'sephora_collection_index'
@@ -334,6 +293,7 @@ Sephora::Application.routes.draw do
   # ajax call
   get "sephora-collection/squares/:interna", :to => 'sephora_collection#load_squares', :as => "sephora_collection_loadsquares"
 
+  
   # friends and family
   get 'friendsandfamily/', :to => 'friendsandfamily#index', :as => 'friendsandfamily_index'
   post 'friendsandfamily/code', :to => 'friendsandfamily#code', :as => 'friendsandfamily_code'
@@ -343,9 +303,7 @@ Sephora::Application.routes.draw do
 
 
   #sitemap
-
   get 'sitemap.xml', :to => 'sitemap#index', :defaults => { :format => 'xml' }
-
   # última línea, hace match con el resto de las rutas y muestra 404
   match  '*a', :to => 'paginas#error_404'
 end
