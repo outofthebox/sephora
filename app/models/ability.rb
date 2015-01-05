@@ -1,16 +1,10 @@
 class Ability
   include CanCan::Ability
 
-  def initialize(usuario)
+  def initialize(usuario = nil)
     can :read, :all
-
-    can :manage, :all unless Rails.env.production?
-
-    return unless usuario
-
-    if usuario.rol? :admin
-      can :manage, :all
+    if usuario
+    	can :manage, :all if usuario.rol? :admin
     end
-
   end
 end

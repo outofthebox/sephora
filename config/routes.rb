@@ -1,5 +1,4 @@
 Sephora::Application.routes.draw do
-  devise_for :mobileusers, :path => "mobile"
   
   #Usuarios
   devise_for :usuarios, controllers: {
@@ -9,6 +8,7 @@ Sephora::Application.routes.draw do
     passwords: "usuarios/passwords",
     unlocks: "usuarios/unlocks"
   }
+  
   get   'usuarios/lista', :to => 'usuarios#lista', :as => 'usuarios_lista'
   put   'usuario/actualizar/:id', :to => 'usuarios#actualizar', :as => 'usuario_actualizar'
   get   'usuario/usar_sesion/:id', :to => 'usuarios#usar_sesion', :as => 'usuario_usar_sesion'
@@ -19,6 +19,84 @@ Sephora::Application.routes.draw do
   get   'usuario/wishlist/ver/:slug', :to => "usuarios#wishlist_ver", :as => "usuario_wishlist_ver"
   post  'usuario/wishlist/add/:upc', :to => "usuarios#wishlist_add", :as => "usuario_wishlist_add"
   post  'usuario/wishlist/del/:upc', :to => "usuarios#wishlist_del", :as => "usuario_wishlist_del"
+
+  #mobile
+  scope path: :mobile, as: "m" do
+    match "/", :to => 'mobile#home', :as => 'home'
+    match "download", :to => "mobile#download", :as => "download"
+
+    #marcas
+    match "/marcas", :to => 'mobile/marcas#index', :as => 'marcas'
+    resources :marca, controller: 'mobile/marcas', :except => [:index]
+    scope path: :marca, :as => "marca" do
+    end
+
+    match "/eventos", :to => 'mobile/eventos#index', :as => 'eventos'
+    resources :evento, controller: 'mobile/eventos', :except => [:index]
+    scope path: :evento, :as => "evento" do
+    end
+
+    match "/tiendas", :to => 'mobile/tiendas#index', :as => 'tiendas'
+    resources :tienda, controller: 'mobile/tiendas', :except => [:index]
+    scope path: :tienda, :as => "tienda" do
+    end
+
+    match "/minimakeovers", :to => 'mobile/minimakeovers#index', :as => 'minimakeovers'
+    resources :minimakeover, controller: 'mobile/minimakeovers', :except => [:index]
+    scope path: :minimakeover, :as => "minimakeover" do
+    end
+
+    match "/posts", :to => 'mobile/posts#index', :as => 'posts'
+    resources :post, controller: 'mobile/posts', :except => [:index]
+    scope path: :post, :as => "post" do
+    end
+
+    match "/soluciones", :to => 'mobile/soluciones#index', :as => 'soluciones'
+    resources :solucion, controller: 'mobile/soluciones', :except => [:index]
+    scope path: :solucion, :as => "solucion" do
+    end
+    
+
+    match "/productos", :to => 'mobile/productos#index', :as => 'productos'
+    resources :producto, controller: 'mobile/productos', :except => [:index]
+    scope path: :producto, :as => "producto" do
+    end
+
+    match "/hotnow", :to => "mobile/productos#hotnow", :as => "hotnow"
+    match "/bestsellers", :to => "mobile/productos#bestsellers", :as => "bestsellers"
+    match "/lonuevo", :to => "mobile/productos#lonuevo", :as => "lonuevo"
+    match "/favoritos", :to => "mobile/productos#favoritos", :as => "favoritos"
+
+    match "/specials", :to => 'mobile/specials#index', :as => 'specials'
+    scope path: :special, :as => "special" do
+      match "/wallpapers", :to => "mobile/specials#wallpapers", :as => "wallpapers"
+    end
+
+      #Usuarios
+    devise_for :usuarios, controllers: {
+      sessions: "usuarios/sessions",
+      registrations: "usuarios/registrations",
+      confirmations: "usuarios/confirmations",
+      passwords: "usuarios/passwords",
+      unlocks: "usuarios/unlocks"
+    }
+
+    match "/usuarios", :to => 'mobile/usuarios#index', :as => 'usuarios'
+    scope path: :usuario, :as => "usuario" do
+      match 'logout(/:hash)', :to => 'mobile/usuarios#logout', :as => 'logout'
+      match '/perfil', :to => "mobile/usuarios#perfil", :as => "perfil"
+      match '/wishlist', :to => "mobile/usuarios#wishlist", :as => "wishlist"
+      match '/bienvenido', :to => "mobile/usuarios#bienvenido", :as => "bienvenido"
+    end
+
+
+    match "/categorias", :to => 'mobile/categorias#index', :as => 'categorias'
+    resources :categoria, controller: 'mobile/categorias', :except => [:index]
+    scope path: :categoria, :as => "categoria" do
+    end
+
+
+  end
 
 
   root :to => 'paginas#home'
@@ -156,7 +234,6 @@ Sephora::Application.routes.draw do
 
   #ANIVERSARIO
   get '365'    => 'paginas#aniversario', :as => :aniversario
-  #get 'beautyissue'    => 'paginas#aniversario', :as => :aniversario
   get 'beautyissue/tienda/:tienda'    => 'paginas#aniversario', :as => :aniversario_tienda
   get 'beautyissue/tienda/:tienda/fecha/:fecha'    => 'paginas#aniversario', :as => :aniversario_tienda_fecha
 
@@ -232,7 +309,6 @@ Sephora::Application.routes.draw do
 
 
   #tabs
-
   get "tabs/sephoragifts", :to => "tabs#sephoragifts", :as => "sephoragifts"
   post "tabs/sephoragifts", :to => "tabs#sephoragifts", :as => "sephoragifts"
 
@@ -279,49 +355,6 @@ Sephora::Application.routes.draw do
     end
   end
 
-  #mobile
-  scope path: :mobile, as: "m" do
-    match "/", :to => 'mobile#home', :as => 'home'
-    
-    match 'busqueda', :to => 'mobile#mobileilbusqueda', :as => 'busqueda'
-    match 'beauty', :to => 'mobile#beauty', :as => 'beauty'
-    match 'cosmetiquera', :to => 'mobile#cosmetiquera', :as => 'cosmetiquera'
-    
-    match 'eventos', :to => 'mobile#eventos', :as => 'eventos'
-    match 'lista_eventos', :to => 'mobile#eventos', :as => 'lista_eventos'
-    match 'evento/:id', :to => 'mobile#evento_show', :as => 'show_evento'  
-
-    match 'producto/:slug', :to => 'mobile#mobileproducto', :as => 'producto'
-    match 'favoritos', :to => 'mobile#favoritos', :as => 'favoritos'
-    match 'favorite/:id', :to => 'mobile#favorite', :as => 'favorited'
-    match 'unfavorite/:id', :to => 'mobile#unfavorite', :as => 'unfavorited'
-    
-    match 'hotnow/:seccion', :to => 'mobile#jotnao', :as => 'hotnow'
-    match 'legal', :to => 'mobile#legales', :as => 'legal'
-    match 'login', :to => 'mobile#login', :as => 'login'
-    match 'nuevo', :to => 'mobile#lonuevo', :as => 'nuevo'
-    match 'tiendas', :to => 'mobile#tiendas', :as => 'tiendas'
-
-    match 'speciales-aniversario', :to => 'mobile#especialesaniversario', :as => 'especiales_aniversario'
-    match 'especiales', :to => 'mobile#especialmes', :as => 'especialmes'
-    
-    match 'video', :to => 'mobile#video', :as => 'video'
-    
-    match 'retomakeover', :to => 'mobile#retomakeover', :as => "retomakeover"
-    scope :retomakeover, as: "retomakeover" do
-
-      match 'ver/:marca', :to => 'mobile#retomakeover_ver', :as => 'ver'
-      match "event_map", to: "aniversario_catorce#event_map", :via => :get
-    end
-
-  end
-
-  # especiales
-  get 'mobile/especiales', :to => 'mobile#especialesmes', :as => 'm_especiales'
-  get 'mobile/wallpapers', :to => 'mobile#wallpapers', :as => 'm_wallpaper'
-  get 'mobile/giftcase', :to => 'mobile#giftcase', :as => 'm_giftcase'
-  get 'mobile/lomas', :to => 'mobile#lomas', :as => 'm_lomas'
-
 
   #brand-minisite
   get 'sephora-collection/', :to => 'sephora_collection#index', :as => 'sephora_collection_index'
@@ -334,6 +367,7 @@ Sephora::Application.routes.draw do
   # ajax call
   get "sephora-collection/squares/:interna", :to => 'sephora_collection#load_squares', :as => "sephora_collection_loadsquares"
 
+  
   # friends and family
   get 'friendsandfamily/', :to => 'friendsandfamily#index', :as => 'friendsandfamily_index'
   post 'friendsandfamily/code', :to => 'friendsandfamily#code', :as => 'friendsandfamily_code'
@@ -343,9 +377,7 @@ Sephora::Application.routes.draw do
 
 
   #sitemap
-
   get 'sitemap.xml', :to => 'sitemap#index', :defaults => { :format => 'xml' }
-
   # última línea, hace match con el resto de las rutas y muestra 404
   match  '*a', :to => 'paginas#error_404'
 end

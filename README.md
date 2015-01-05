@@ -39,3 +39,8 @@ Obtener Productos sin Foto
 Obtener Productos sin Foto ni Descripcion
 
 > \copy (SELECT p.upc as upc, m.marca as marca, p.nombre from productos as p LEFT OUTER JOIN marcas as m on m.id = p.marca_id where p.foto_file_name IS NULL and p.descripcion IS NULL and p.publicado is TRUE) TO '/Users/gessgallardo/Documents/sephora/queries/productos_sin_foto_ni_descripcion.cvs' DELIMITER ',' CSV HEADER;
+
+
+## For Mobile V2
+ 
+ rake db:migrate:down VERSION=20131001224

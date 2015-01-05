@@ -1,0 +1,67 @@
+- provide(:titulo, @posts.title)
+- provide(:descripcion, strip_tags(@posts.extracto))
+- provide(:keywords, @posts.tags.map(&:name).join(', '))
+- provide(:imagen, @posts.imagen(:grande))
+- provide(:url, url_for(:only_path => false))
+#posts
+  #single-post
+    - stats = stats(@posts.id);
+    .post{:id=>"post-"+@posts.id.to_s, :itemscope => "", :itemtype => "http://schema.org/Article"}
+      %input{:type => "hidden", :value=>@posts.title, :id=>"inp_title"}
+      %input{:type => "hidden", :value=>post_path(@posts), :id=>"inp_peramlink"}
+      .banner
+        = image_tag @posts.imagen(:grande), {:itemprop=>"image", :class => "blog", :id => "titulos"}
+      %h1
+        - if stats.categorias.count > 0
+          = stats.categorias[0].categoria
+        - else
+          Sephora
+      %h3{:itemprop=>"name"}
+        =  @posts.title
+      .contenido{:itemprop=>"description"}
+        = @posts.extracto.html_safe
+      %ul.tools
+        %li.fecha
+          %i.glyphicon.glyphicon-time
+          = @posts.created_at.to_date.to_s
+      .contenido{:itemprop => "text"}
+        = @posts.content.html_safe
+      %input{:type => "hidden", :class=>"post_extracto", :value=>@posts.extracto.html_safe}
+      .compartir.hidden
+        .share_button.pt_share
+        .share_button.gp_share
+        .share_button.tw_share
+        .share_button.fb_share
+        .clearfix
+      %ul.tags
+        %li.tag
+          %i
+          Tags:
+        - stats.tags.each do |tag|
+          %li
+            %a{:href=>posts_path+"?tag="+tag.name}
+              = tag.name
+
+      #disqus_thread
+        :javascript
+          window.onload = function(){
+            var title = document.getElementById("inp_title");
+            var disqus_shortname = 'sephoramx';
+            var disqus_url = document.getElementById("inp_permalink");
+            var disqus_identifier = title.value;
+
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          }
+    :javascript
+      var disqus_shortname = "sephoramx";
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function () {
+          var s = document.createElement('script'); s.async = true;
+          s.type = 'text/javascript';
+          s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());

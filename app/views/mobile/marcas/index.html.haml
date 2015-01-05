@@ -1,0 +1,11 @@
+#vista
+	#background.marcas
+	#marcas.index
+		=image_tag "mobile/titulos/marcas.png", {:id => "titulos", :class => "marcas"}
+		#contengo_marcas
+			-@marcas.each do |letra, glossary_array|
+				.marcas-header
+					%h1= letra
+				%ul.marcas-list
+					-glossary_array.each do |marca|
+						%li= link_to marca.marca, m_marca_path(marca.slug)

@@ -1,0 +1,2 @@
+module Mobile::PostsHelper
+end

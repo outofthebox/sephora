@@ -1,5 +1,5 @@
 class Usuarios::SessionsController < Devise::SessionsController
-	layout "application"
+	layout :select_layout_type
   # def new
   #   super
   # end

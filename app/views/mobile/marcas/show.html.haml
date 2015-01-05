@@ -1,0 +1,65 @@
+#vista
+	#background.marcas
+	#marcas.show
+		=image_tag "mobile/titulos/marcas.png", {:id => "titulos", :class => "marcas"}
+		#contengo-marca{:itemprop=>"brand", :itemscope=>"", :itemtype=>"http://schema.org/Brand"}
+			= image_tag @marca.logo.url(:grande), {:id => "logo", :itemprop => "logo"}
+			.descripcion-marca{:itemprop => "description"}
+				- chomp_desc(@marca.descripcion).each do |line|
+					%p
+						= line
+			- unless @marca.video.blank?
+				.video-marca
+					= embed(@marca.video)
+			- unless @marca.marca_producto.blank?
+				.explora-marca.banner-negro
+					%h3 EXPLORA LA MARCA
+				.best-sellers-marca
+					%h4 BEST SELLERS
+					%table.producto-marca
+						%tr
+							- @marca.marca_producto.sample(2).each do |marca_producto|
+								%td
+									= link_to image_tag(marca_producto.producto.foto(:normal)), m_producto_path(marca_producto.producto.slug), {:class => "producto-imagen"}
+									%p.producto-marca= marca_producto.producto.marca.marca.upcase
+									%p.producto-nombre= link_to marca_producto.producto.nombre.split(' ').map {|w| w.capitalize }.join(' '), m_producto_path(marca_producto.producto.slug)
+									%p.producto-price
+										-if marca_producto.producto.tiene_descuento
+											%span.precio_original
+												#{number_to_currency(marca_producto.producto.precio, :precision => 0)}
+											%span
+												&nbsp; - &nbsp;
+											%span.tiene_descuento
+												#{number_to_currency(marca_producto.producto.descuento, :precision => 0)}
+										-else
+											#{number_to_currency(marca_producto.producto.precio, :precision => 0)}
+						.clearfix
+			.catalogo-marca
+				.banner-negro
+					%h3 Catálogo de la marca
+	#categorias
+		%ul.all
+			- unless @parent_categories.empty?
+				%li
+					%ul.parent
+						- @f_parent.each do |pc|
+							- slug_c = pc[:slug]
+							- unless pc[:product_count] == 0
+								%li.first
+									= link_to "#{pc[:categoria]} (#{pc[:product_count]})", categoria_ver_path(slug_c)+"?marca=#{@marca.id}"
+								%li
+									- @cats = Categoria.find(pc[:id]).children rescue []
+									- unless @cats.empty?
+										%ul.child
+											- @cats.each do |t|
+												- cat = Categoria.includes(:productos).find(t)
+												- slug = cat.slug
+												- prod_count = cat.productos.where(:marca_id => @marca.id).count
+												- unless prod_count == 0
+													%li.second
+														= link_to m_categorium_path(slug)+"?marca=#{@marca.id}" do
+															= t.nombre
+															.pull-right
+																= prod_count
+							
+

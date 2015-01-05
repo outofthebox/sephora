@@ -1,6 +1,0 @@
-#main{:vista=>"eventos"}
-  = image_tag "mobile/eventos/header.png", {:class => "image-centered"}
-  .contengo-eventos
-    - @eventos.each do |e|
-      = link_to "/mobile/evento/#{e.id}" do
-        = image_tag(e.photo(:normal))

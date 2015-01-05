@@ -1,0 +1,19 @@
+- provide :titulo, "Soluciones"
+- provide :descripcion, 'Nuestro top de productos de gran performance resolverán tus dilemas de belleza.'
+#soluciones
+  =image_tag "mobile/titulos/soluciones.png", {:id => "titulos", :class => "hotnow"}
+  #contengo-soluciones
+    %ul
+      %li
+        =link_to image_tag('soluciones/1.jpg'), m_solucion_path(7)
+      %li
+        =link_to image_tag('soluciones/2.jpg'), m_solucion_path(2)
+      %li
+        =link_to image_tag('soluciones/4.jpg'), m_solucion_path(9)
+      %li
+        =link_to image_tag('soluciones/5.jpg'), m_solucion_path(3)
+      %li
+        =link_to image_tag('soluciones/6.jpg'), m_solucion_path(5)
+      %li
+        =link_to image_tag('soluciones/7.jpg'), m_solucion_path(8)
+= render(:partial => "mobile/layouts/footer")

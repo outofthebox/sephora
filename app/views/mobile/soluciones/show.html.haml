@@ -1,0 +1,23 @@
+- provide :titulo, @solucion.nombre
+#soluciones
+  #single-solucion
+    =image_tag "soluciones/b#{params[:id]}.jpg", {:width => "100%"}
+    - if @solucion.producto_seccion and @solucion.producto_seccion.any?
+      - @solucion.producto_seccion.each do |producto_seccion|
+        - producto = producto_seccion.producto
+        .solucion
+          .prod
+            - unless producto.marca.logo_file_size.nil?
+              = image_tag producto.foto.url(:normal), :id => "prod", :class => "le_producto", :itemprop => 'image'
+            .info
+              %span.marcab
+                =producto.marca.marca
+              %span.producto
+                %p{:itemprop => "name"}
+                  =producto.nombre
+              %span.precio{:itemprop => "price"}
+                #{number_to_currency(producto.precio, :precision => 0)}
+            .contenidos
+              - unless producto_seccion.descripcion.empty?
+                .markdown
+                  =markdown producto_seccion.descripcion

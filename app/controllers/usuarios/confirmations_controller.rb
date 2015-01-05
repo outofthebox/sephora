@@ -1,5 +1,5 @@
 class Usuarios::ConfirmationsController < Devise::ConfirmationsController
-	layout "application"
+	layout :select_layout_type
 	
   # def new
   #   super
