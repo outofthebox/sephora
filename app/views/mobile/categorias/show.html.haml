@@ -1,0 +1,21 @@
+= render(:partial => "mobile/menu/submenu")
+#categoria
+  - if @productos and @productos.any?
+    #contengo_categoria
+      - @productos.each do |producto|
+        .producto
+          = link_to image_tag(producto.foto.url(:chico)), m_producto_path(producto.slug)
+          .producto-marca
+            #{producto.marca.marca.upcase}
+          .producto-nombre
+            #{link_to producto.nombre.split(' ').map {|w| w.capitalize }.join(' '), m_producto_path(producto.slug)}
+          %p.producto-price
+            -if producto.tiene_descuento
+              %span.precio_original
+                #{number_to_currency(producto.precio, :precision => 0)}
+              %span
+                &nbsp; - &nbsp;
+              %span.tiene_descuento
+                #{number_to_currency(producto.descuento, :precision => 0)}
+            -else
+              #{number_to_currency(producto.precio, :precision => 0)}

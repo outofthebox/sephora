@@ -1,5 +1,5 @@
-#hotnow
-  =image_tag "mobile/titulos/hot_now.png", {:id => "titulos", :class => "hotnow"}
+#lonuevo
+  =image_tag "mobile/titulos/lo_nuevo.png", {:id => "titulos", :class => "hotnow"}
   .swiper-container
     .swiper-wrapper
       - seccion_productos = @contenido.producto_seccion.limit(6)
@@ -8,7 +8,7 @@
         .swiper-slide
           .contengo-producto
             .imagen
-              =link_to image_tag(producto.foto.url(:mediano)), m_producto_path(producto.slug)
+              =link_to image_tag(producto.foto.url(:mediano)), producto_ver_path(producto.slug)
             .marca
               = producto.marca.marca.upcase
             .link

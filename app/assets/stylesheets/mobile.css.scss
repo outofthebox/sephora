@@ -301,6 +301,10 @@ html, body{
 		width: 90%;
 		margin:10px auto;
 	}
+	&.soluciones{
+		width: 90%;
+		margin:10px auto;	
+	}
 }
 
 //CSS MARCAS
@@ -508,6 +512,55 @@ html, body{
 	}
 }
 
+#categoria{
+	#contengo_categoria{
+		width: 90%;
+		display: block;
+		margin: 10px auto;
+		.producto{
+			margin:20px 0;
+			display: inline-block;
+			width: 48%;
+			text-align: center;
+			vertical-align: middle;
+			.producto-marca{
+				font-family: Arial, sans-serif;
+				font-size: 8pt;
+				font-weight: bold;
+				letter-spacing: 1px;
+			}
+			.producto-nombre{
+				font-weight: lighter;
+				font-family: "Avant", Arial, sans-serif;
+				font-size: 0.9em;
+				letter-spacing: 1px;
+				min-height: 50px;
+				a{color: inherit;}
+			}
+			.producto-price{
+				font-size: 0.8em;
+				line-height: 1.2em;
+				color: #000;
+				font-weight: bold;
+				span{
+					&.precio_original{color: #BDB9B9; text-decoration: line-through;}
+					&.tiene_descuento{color: #cc0000;}
+				}
+			}
+			.producto-imagen{
+				width: 90%;
+				display: block;
+				position: relative;
+				margin:auto;
+				min-height: 135px;
+				img{
+					width: 100%;
+					display: block;
+				}
+			}
+		}
+	}
+}
 
 #eventos{
 	margin: 10px auto;
@@ -854,7 +907,7 @@ html, body{
 	}
 }
 
-#hotnow{
+#hotnow, #lonuevo, #bestsellers, #favoritos, #misfavoritos{
 	.swiper-container, .swiper-slide {
 		width: 100%;
 		min-width: 320px;
@@ -912,6 +965,84 @@ html, body{
 			}
 		}
   }
+}
+
+#soluciones{
+	width: 100%;
+	#contengo-soluciones{
+		width: 90%;
+		margin: 10px auto;
+		display: block;
+		ul{
+			list-style: none;
+			padding:0;
+			margin:0;
+			li{
+				padding:0;
+				margin:0;
+				display: inline-block;
+				width: 49%;
+				margin: 5px auto;
+				img{width: 100%;}
+			}
+		}
+	}
+	#single-solucion{
+		width: 90%;
+		margin:auto;
+		display: block;
+		h2{
+			text-align: center;
+			font-weight: bold;
+			font-family: Arial, sans-serif;
+			font-size: 10pt;
+			text-align: left;
+		}
+		.le_producto{
+			max-width: 240px;
+			margin: 10px auto;
+			display: block;
+			min-width: 190px;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px
+		}
+		.info{
+			width: 100%;
+			margin:30px 0;
+			text-align: center;
+			.marcab{
+				margin-bottom: 5px;
+				font-size: 16px;
+				font-family: "Avant";
+				letter-spacing: 1px;
+				text-align: center;
+				display: block;
+				font-weight: bold;
+				color: #747474;
+				text-transform: uppercase;
+			}
+			.precio{
+				margin-bottom: 5px;
+				font-size: 0.9em;
+				letter-spacing: 1px;
+				text-align: center;
+				color: #333;
+				border-radius: 5px;
+				padding: 5px;
+				font-weight: 600
+			}
+			.producto{
+				margin-bottom: 10px;
+				font-size: 1em;
+				font-weight: 600;
+				letter-spacing: 1px;
+				text-align: center;
+				display: block;
+				font-weight: bold;
+			}
+		}
+	}
 }
 
 

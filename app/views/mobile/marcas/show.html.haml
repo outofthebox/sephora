@@ -52,8 +52,14 @@
 									- unless @cats.empty?
 										%ul.child
 											- @cats.each do |t|
-												- slug = Categoria.find(t).slug
-												%li.second
-													= link_to t.nombre, categoria_ver_path(slug)+"?marca=#{@marca.id}"
+												- cat = Categoria.includes(:productos).find(t)
+												- slug = cat.slug
+												- prod_count = cat.productos.where(:marca_id => @marca.id).count
+												- unless prod_count == 0
+													%li.second
+														= link_to m_categorium_path(slug)+"?marca=#{@marca.id}" do
+															= t.nombre
+															.pull-right
+																= prod_count
 							
 

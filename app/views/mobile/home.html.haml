@@ -20,25 +20,25 @@
 			%h4 Links Rápidos
 			%ul#quick-links
 				%li
-					HOT NOW
-					.pull-right
-						%i.glyphicon.glyphicon-play{"aria-hidden" => "true"}
+					=link_to m_hotnow_path do
+						HOT NOW
+						.pull-right
+							%i.glyphicon.glyphicon-play{"aria-hidden" => "true"}
 				%li
-					LO NUEVO
-					.pull-right
-						%i.glyphicon.glyphicon-play{"aria-hidden" => "true"}
+					=link_to m_lonuevo_path do
+						LO NUEVO
+						.pull-right
+							%i.glyphicon.glyphicon-play{"aria-hidden" => "true"}
 				%li
-					BEST SELLERS
-					.pull-right
-						%i.glyphicon.glyphicon-play{"aria-hidden" => "true"}
+					=link_to m_bestsellers_path do
+						BEST SELLERS
+						.pull-right
+							%i.glyphicon.glyphicon-play{"aria-hidden" => "true"}
 				%li
-					FAVORITOS
-					.pull-right
-						%i.glyphicon.glyphicon-play{"aria-hidden" => "true"}
-				%li
-					SOLUCIONES
-					.pull-right
-						%i.glyphicon.glyphicon-play{"aria-hidden" => "true"}
+					=link_to m_soluciones_path do
+						SOLUCIONES
+						.pull-right
+							%i.glyphicon.glyphicon-play{"aria-hidden" => "true"}
 		#home-banner
 			=link_to image_tag("mobile/home/ven_a_nuestros.png"), m_eventos_path
 = render(:partial => "mobile/layouts/footer")

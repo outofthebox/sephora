@@ -50,16 +50,51 @@ Sephora::Application.routes.draw do
     scope path: :post, :as => "post" do
     end
 
-    match "/hotnow", :to => "mobile/productos#hotnow", :as => "hotnow"
+    match "/soluciones", :to => 'mobile/soluciones#index', :as => 'soluciones'
+    resources :solucion, controller: 'mobile/soluciones', :except => [:index]
+    scope path: :solucion, :as => "solucion" do
+    end
+    
+
     match "/productos", :to => 'mobile/productos#index', :as => 'productos'
     resources :producto, controller: 'mobile/productos', :except => [:index]
     scope path: :producto, :as => "producto" do
     end
 
+    match "/hotnow", :to => "mobile/productos#hotnow", :as => "hotnow"
+    match "/bestsellers", :to => "mobile/productos#bestsellers", :as => "bestsellers"
+    match "/lonuevo", :to => "mobile/productos#lonuevo", :as => "lonuevo"
+    match "/favoritos", :to => "mobile/productos#favoritos", :as => "favoritos"
+
     match "/specials", :to => 'mobile/specials#index', :as => 'specials'
     resources :special, controller: 'mobile/specials', :except => [:index]
     scope path: :special, :as => "special" do
     end
+
+      #Usuarios
+    devise_for :usuarios, controllers: {
+      sessions: "usuarios/sessions",
+      registrations: "usuarios/registrations",
+      confirmations: "usuarios/confirmations",
+      passwords: "usuarios/passwords",
+      unlocks: "usuarios/unlocks"
+    }
+
+    match "/usuarios", :to => 'mobile/usuarios#index', :as => 'usuarios'
+    scope path: :usuario, :as => "usuario" do
+      match 'logout(/:hash)', :to => 'mobile/usuarios#logout', :as => 'logout'
+      match '/perfil', :to => "mobile/usuarios#perfil", :as => "perfil"
+      match '/wishlist', :to => "mobile/usuarios#wishlist", :as => "wishlist"
+      match '/bienvenido', :to => "mobile/usuarios#bienvenido", :as => "bienvenido"
+    end
+
+
+    match "/categorias", :to => 'mobile/categorias#index', :as => 'categorias'
+    resources :categoria, controller: 'mobile/categorias', :except => [:index]
+    scope path: :categoria, :as => "categoria" do
+    end
+
+
   end
 
 

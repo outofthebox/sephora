@@ -10,4 +10,14 @@ class Mobile::ProductosController < MobileController
     @contenido = Seccion.seccion_actual(@seccion)
   end
 
+  def lonuevo
+  	@seccion = Seccion.includes(:productos).by_slug('lonuevo')
+    @contenido = Seccion.seccion_actual(@seccion)
+  end
+
+  def bestsellers
+  	@seccion = Seccion.includes(:productos).by_slug('bestsellers')
+    @contenido = Seccion.seccion_actual(@seccion)
+  end
+
 end

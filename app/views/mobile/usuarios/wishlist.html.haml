@@ -1,0 +1,44 @@
+#misfavoritos
+	.slider_items.userlist
+		#userlist
+			-if @usuario.count > 0
+				=image_tag "mobile/titulos/mis_favs.png", {:id => "titulos", :class => "mis-favoritos"}
+				%h3.text-center ¡Son Fabulosos!
+				.swiper-container
+					.swiper-wrapper
+						- @usuario.each do |producto|
+							.swiper-slide
+								.contengo-producto
+									.imagen
+										=link_to image_tag(producto.foto.url(:mediano)), producto_ver_path(producto.slug)
+									.marca
+										= producto.marca.marca.upcase
+									.link
+										=link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), m_producto_path(producto.slug)
+									%p.price
+										Hot Now: Exclusivo. Nuevo. 
+										%br
+										Edicion Limitada: 
+										-if producto.tiene_descuento
+											%span.precio_original
+												#{number_to_currency(producto.precio, :precision => 0)}
+											%span
+												&nbsp; - &nbsp;
+											%span.tiene_descuento
+												#{number_to_currency(producto.descuento, :precision => 0)}
+										-else
+											%span
+												#{number_to_currency(producto.precio, :precision => 0)}
+				= render(:partial => "mobile/layouts/footer")
+				:javascript
+					$(function(){
+						var mySwiper = $('.swiper-container').swiper({
+							mode:'horizontal',
+							loop: false
+						});
+					})
+			-else
+				.well
+					%h3.title Mis Favoritos
+					%h4.small Aun no tienes ningun producto favorito
+					%p Selecciona tu producto favorito al dar clic en el ícono de corazón que se encuentra al lado
