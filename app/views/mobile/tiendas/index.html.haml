@@ -1,0 +1,21 @@
+#vista
+	#background.marcas
+	#tiendas.index
+		=image_tag "mobile/titulos/tiendas.png", {:id => "titulos", :class => "marcas"}
+		#contengo_tiendas
+			- @tiendas.each do |t|
+				.establecimiento
+					.imagen= image_tag t.foto, {:class => "clip-me"}
+					.info
+						%h4= t.nombre
+						%h5
+							%i.glyphicon.glyphicon-calendar
+							Horario
+						%p= t.horario
+						%h5
+							%i.glyphicon.glyphicon-phone
+							Teléfono
+						%p= t.contacto
+					= link_to "Ver mapa", t.map, {:class => "btn btn-block btn-black"}
+					.clearfix
+

@@ -8,6 +8,7 @@ Sephora::Application.routes.draw do
     passwords: "usuarios/passwords",
     unlocks: "usuarios/unlocks"
   }
+  
   get   'usuarios/lista', :to => 'usuarios#lista', :as => 'usuarios_lista'
   put   'usuario/actualizar/:id', :to => 'usuarios#actualizar', :as => 'usuario_actualizar'
   get   'usuario/usar_sesion/:id', :to => 'usuarios#usar_sesion', :as => 'usuario_usar_sesion'
@@ -22,6 +23,43 @@ Sephora::Application.routes.draw do
   #mobile
   scope path: :mobile, as: "m" do
     match "/", :to => 'mobile#home', :as => 'home'
+
+    #marcas
+    match "/marcas", :to => 'mobile/marcas#index', :as => 'marcas'
+    resources :marca, controller: 'mobile/marcas', :except => [:index]
+    scope path: :marca, :as => "marca" do
+    end
+
+    match "/eventos", :to => 'mobile/eventos#index', :as => 'eventos'
+    resources :evento, controller: 'mobile/eventos', :except => [:index]
+    scope path: :evento, :as => "evento" do
+    end
+
+    match "/tiendas", :to => 'mobile/tiendas#index', :as => 'tiendas'
+    resources :tienda, controller: 'mobile/tiendas', :except => [:index]
+    scope path: :tienda, :as => "tienda" do
+    end
+
+    match "/minimakeovers", :to => 'mobile/minimakeovers#index', :as => 'minimakeovers'
+    resources :minimakeover, controller: 'mobile/minimakeovers', :except => [:index]
+    scope path: :minimakeover, :as => "minimakeover" do
+    end
+
+    match "/posts", :to => 'mobile/posts#index', :as => 'posts'
+    resources :post, controller: 'mobile/posts', :except => [:index]
+    scope path: :post, :as => "post" do
+    end
+
+    match "/hotnow", :to => "mobile/productos#hotnow", :as => "hotnow"
+    match "/productos", :to => 'mobile/productos#index', :as => 'productos'
+    resources :producto, controller: 'mobile/productos', :except => [:index]
+    scope path: :producto, :as => "producto" do
+    end
+
+    match "/specials", :to => 'mobile/specials#index', :as => 'specials'
+    resources :special, controller: 'mobile/specials', :except => [:index]
+    scope path: :special, :as => "special" do
+    end
   end
 
 

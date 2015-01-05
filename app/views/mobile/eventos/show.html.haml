@@ -1,0 +1,21 @@
+#eventos
+  = image_tag "mobile/titulos/eventos.jpg", {:class => "image-centered"}
+  .evento-imagen
+    = image_tag @evento.photo, {:class=>"img-ev"}
+  .cabecera-eventos
+    %h3= @evento.title
+    %h4= @evento.description
+  .contengo-eventos
+    %table
+      -unless @store_event.empty?
+        - @store_event.each do |se|
+          - tienda = Tienda.find(se.tienda_id)
+          %tr
+            %td.tienda
+              = "#{tienda.nombre.upcase}"
+              %br
+              %small
+                = "#{se.dates.upcase}"
+            %td.link 
+              %a.btn.btn-link{:href => se.link}
+                Reserva

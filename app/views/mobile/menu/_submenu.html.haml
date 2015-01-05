@@ -1,0 +1,99 @@
+%ul#submenu
+	%li
+		%a{:href => "#"} Maquillaje
+		%ul.animated.inner-menu
+			%li
+				%a{:href => categoria_ver_path("rostro")} Rostro
+			%li
+				%a{:href => categoria_ver_path("brochas-y-aplicadores")} Brochas y Aplicadores
+			%li
+				%a{:href => categoria_ver_path("paletas-y-sets")} Paletas y Sets
+			%li
+				%a{:href => categoria_ver_path("ojos")} Ojos
+			%li
+				%a{:href => categoria_ver_path("labios")} Labios
+			%li
+				%a{:href => categoria_ver_path("unas")} Uñas
+			%li
+				%a{:href => categoria_ver_path("cuerpo")} Cuerpo
+	%li
+		%a{:href => "#"} Skincare
+		%ul.animated.inner-menu
+			%li
+				%a{:href => categoria_ver_path("lip-balm-y-tratamientos") } Bálsamo Labial y Tratamientos
+			%li
+				%a{:href => categoria_ver_path("bronceadores-y-autobronceadores") } Bronceadores y Autobronceadores
+			%li
+				%a{:href => categoria_ver_path("suplementos") } Suplemento
+			%li
+				%a{:href => categoria_ver_path("mascarillas-y-exfoliantes") } Mascarillas y Exfoliantes
+			%li
+				%a{:href => categoria_ver_path("sets-de-inicio-y-regimenes") } Sets de Inicio y Regímenes
+			%li
+				%a{:href => categoria_ver_path("limpiadores") } Limpiadores
+			%li
+				%a{:href => categoria_ver_path("hidratantes") } Hidratantes
+			%li
+				%a{:href => categoria_ver_path("tonicos-y-rociadores") } Tónicos y Rociadores
+			%li
+				%a{:href => categoria_ver_path("tratamientos-para-el-rostro") } Tratamientos para el Rostro
+			%li
+				%a{:href => categoria_ver_path("protector-solar") } Protector Solar
+			%li
+				%a{:href => categoria_ver_path("cremas-para-ojos") } Cremas para Ojos
+			%li
+				%a{:href => categoria_ver_path("removedor-de-vellos") } Removedor de Vellos
+			%li
+				%a{:href => categoria_ver_path("bbcream") } BB & CC Creams
+			%li
+				%a{:href => categoria_ver_path("aceites") } Aceites
+	%li
+		%a{:href => "#"} Fragancias
+		%ul.animated.inner-menu
+			%li
+				%a{:href => categoria_ver_path("obsequios-y-sets")} Obsequios y Sets
+			%li
+				%a{:href => categoria_ver_path("hombre")} Hombre
+			%li
+				%a{:href => categoria_ver_path("mujer")} Mujer
+			%li
+				%a{:href => categoria_ver_path("rollerball")} Rollerball
+	%li.more
+		%i.glyphicon.glyphicon-play{"aria-hidden" => "true"}
+	.clearfix
+:coffee
+	$ ->
+		$("#submenu > li a").click ->
+			$inner_menu = $(this).parent().find(".inner-menu");
+			$menu_open = $("#submenu li > ul.open");
+			$lightbox = $("#lightbox")
+
+
+			if $inner_menu.hasClass("open")
+				$inner_menu.addClass("bounceOutRight").delay(500).queue (n) ->
+					$inner_menu.removeClass("open").removeClass("bounceOutRight").removeClass("bounceInLeft")
+					$lightbox.removeClass("fadeIn").addClass("fadeOut").delay(500).queue (m) ->
+						$lightbox.removeClass("open").removeClass("fadeOut")
+						m()
+					n()
+			else
+				if $menu_open.size() > 0
+					$menu_open.addClass("bounceOutRight").delay(500).queue (n) ->
+						$menu_open.removeClass("open").removeClass("bounceOutRight").removeClass("bounceInLeft")
+						$inner_menu.addClass("open").addClass("bounceInLeft")
+						n()
+				else
+					$inner_menu.addClass("open").addClass("bounceInLeft")
+					$lightbox.removeClass("fadeOut").addClass("open").addClass("fadeIn")
+
+
+:coffee
+	$ ->
+		$("#lightbox").click ->
+			$lightbox = $(this)
+			$menu_open = $("#submenu li > ul.open");
+			if $menu_open.size() > 0
+				$menu_open.addClass("bounceOutRight").delay(500).queue (n) ->
+					$menu_open.removeClass("open")
+					n()
+				$lightbox.removeClass("fadeIn").removeClass("fadeOut").removeClass("open")

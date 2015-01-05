@@ -1,57 +1,46 @@
-%ul#submenu
-	%li Maquillaje
-	%li Skincare
-	%li Fragancias
-	%li.more
-		%i.glyphicon.glyphicon-play{"aria-hidden" => "true"}
-	.clearfix
-#home
-	%ul#home-blocks
-		%li#marcas=image_tag("mobile/home/btn_marcas.png")
-		%li#eventos=image_tag("mobile/home/btn_eventos.png")
-		%li#tiendas=image_tag("mobile/home/btn_tiendas.png")
-		%li#beauty-studio=image_tag("mobile/home/btn_beauty_studio.png")
-		%li#blog=image_tag("mobile/home/btn_blog.png")
-		%li#mobile-specials=image_tag("mobile/home/btn_specials.png")
-	#home-links
-		%h4 Links Rápidos
-		%ul#quick-links
-			%li
-				HOT NOW
-				.pull-right
-					%i.glyphicon.glyphicon-play{"aria-hidden" => "true"}
-			%li
-				LO NUEVO
-				.pull-right
-					%i.glyphicon.glyphicon-play{"aria-hidden" => "true"}
-			%li
-				BEST SELLERS
-				.pull-right
-					%i.glyphicon.glyphicon-play{"aria-hidden" => "true"}
-			%li
-				FAVORITOS
-				.pull-right
-					%i.glyphicon.glyphicon-play{"aria-hidden" => "true"}
-			%li
-				SOLUCIONES
-				.pull-right
-					%i.glyphicon.glyphicon-play{"aria-hidden" => "true"}
-	#home-banner
-		=image_tag("mobile/home/ven_a_nuestros.png")
-%ul#redes
-	%li
-		%a.yt{:href => "/"}
-	%li
-		%a.fb{:href => "/"}
-	%li
-		%a.tw{:href => "/"}
-	%li
-		%a.it{:href => "/"}
-	%li
-		%a.pi{:href => "/"}
-%ul#subfooter
-	%li.aviso Aviso privacidad
-	%li Contacto
-	%li Tiendas
-	.clearfix
+= render(:partial => "mobile/menu/submenu")
+#vista
+	#background.home
+	#home
+		%ul#home-blocks
+			%li.animated.flipInY#marcas=link_to image_tag("mobile/home/btn_marcas.png"), m_marcas_path
+			%li.animated.flipInY#eventos=link_to image_tag("mobile/home/btn_eventos.png"), m_eventos_path
+			%li.animated.flipInY#tiendas=link_to image_tag("mobile/home/btn_tiendas.png"), m_tiendas_path
+			%li.animated.flipInY#beauty-studio=link_to image_tag("mobile/home/btn_beauty_studio.png"), m_minimakeovers_path
+			%li.animated.flipInY#blog=link_to image_tag("mobile/home/btn_blog.png"), m_posts_path
+			%li.animated.flipInY#mobile-specials=image_tag("mobile/home/btn_specials.png")
+		:coffee
+			$ ->
+				$("#home-blocks li").click ->
+					$block = $(this)
+					$block.removeClass("flipInY").addClass("pulse").delay(1000).queue (m) ->
+						$block.removeClass("pulse")
+						m();
+		#home-links
+			%h4 Links Rápidos
+			%ul#quick-links
+				%li
+					HOT NOW
+					.pull-right
+						%i.glyphicon.glyphicon-play{"aria-hidden" => "true"}
+				%li
+					LO NUEVO
+					.pull-right
+						%i.glyphicon.glyphicon-play{"aria-hidden" => "true"}
+				%li
+					BEST SELLERS
+					.pull-right
+						%i.glyphicon.glyphicon-play{"aria-hidden" => "true"}
+				%li
+					FAVORITOS
+					.pull-right
+						%i.glyphicon.glyphicon-play{"aria-hidden" => "true"}
+				%li
+					SOLUCIONES
+					.pull-right
+						%i.glyphicon.glyphicon-play{"aria-hidden" => "true"}
+		#home-banner
+			=link_to image_tag("mobile/home/ven_a_nuestros.png"), m_eventos_path
+= render(:partial => "mobile/layouts/footer")
+
 

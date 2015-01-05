@@ -1,0 +1,22 @@
+#vista
+  #posts
+    =image_tag "mobile/blog/banner.jpg", {:class => "blog", :id => "titulos"}
+    #contengo-posts
+      - @posts.each do|post| 
+        - stats = stats(post.id);
+        .post.animated.flipInX{:id=>"post-"+post.id.to_s, :itemscope => "", :itemtype => "http://schema.org/Article"}
+          .banner
+            = link_to (image_tag post.imagen(:mediana), :itemprop=>"image"), m_post_path(post)
+          %h1
+            - if stats.categorias.count > 0
+              = stats.categorias[0].categoria
+            - else
+              Sephora
+          %h3{:itemprop=>"name"}
+            =  post.title
+          .contenido{:itemprop=>"description"}
+            = post.extracto.html_safe
+          %ul.tools
+            %li.fecha
+              %i.glyphicon.glyphicon-time
+              = post.created_at.to_date.to_s

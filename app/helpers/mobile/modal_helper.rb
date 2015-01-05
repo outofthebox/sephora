@@ -1,0 +1,2 @@
+module Mobile::ModalHelper
+end

@@ -16,14 +16,19 @@
   %meta{:content => "Sephora México", :property => "og:site_name"}
   %meta{:content => yield(:imagen), :property => "og:image"}
   = stylesheet_link_tag :mobile
+  = stylesheet_link_tag :"idangerous.swiper"
+  = javascript_include_tag :jquery
+  = javascript_include_tag :bootstrap
+  = javascript_include_tag :"idangerous.swiper"
   = csrf_meta_tags
-%body 
+%body
+  #lightbox.animated
   #header
     %table.header_cont
       %tr
         %td.icono.menu
           %i.glyphicon.glyphicon-th
-        %td.icono.logo=image_tag "logo.gif"
+        %td.icono.logo=link_to image_tag("logo.gif"), m_home_path
         %td.icono.login=image_tag "mobile/home/corazon_fav_rojo.png"
   #main
     = yield
