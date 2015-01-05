@@ -8,7 +8,7 @@
 			%li.animated.flipInY#tiendas=link_to image_tag("mobile/home/btn_tiendas.png"), m_tiendas_path
 			%li.animated.flipInY#beauty-studio=link_to image_tag("mobile/home/btn_beauty_studio.png"), m_minimakeovers_path
 			%li.animated.flipInY#blog=link_to image_tag("mobile/home/btn_blog.png"), m_posts_path
-			%li.animated.flipInY#mobile-specials=image_tag("mobile/home/btn_specials.png")
+			%li.animated.flipInY#mobile-specials=link_to image_tag("mobile/home/btn_specials.png"), m_specials_path
 		:coffee
 			$ ->
 				$("#home-blocks li").click ->

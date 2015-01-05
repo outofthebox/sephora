@@ -1,16 +1,16 @@
 %ul#redes
 	%li
-		%a.yt{:href => "/"}
+		%a.yt{:href => "https://www.youtube.com/user/SephoraMex", :target => "_blank"}
 	%li
-		%a.fb{:href => "/"}
+		%a.fb{:href => "https://www.facebook.com/SephoraMX", :target => "_blank"}
 	%li
-		%a.tw{:href => "/"}
+		%a.tw{:href => "https://twitter.com/SephoraMX", :target => "_blank"}
 	%li
-		%a.it{:href => "/"}
+		%a.it{:href => "http://instagram.com/sephoramx", :target => "_blank"}
 	%li
-		%a.pi{:href => "/"}
+		%a.pi{:href => "http://www.pinterest.com/sephoramx/", :target => "_blank"}
 %ul#subfooter
 	%li.aviso Aviso privacidad
-	%li Contacto
-	%li Tiendas
+	%li= link_to "Contacto", "mailto:contacto@sephora.com.mx", {:target => "_blank"}
+	%li= link_to "Tiendas", m_tiendas_path
 	.clearfix

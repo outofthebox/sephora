@@ -1045,6 +1045,28 @@ html, body{
 	}
 }
 
+#especiales{
+	width: 90%;
+	margin: 20px auto;
+	display: block;
+	.link-especial{
+		img{width: 100%;}
+	}
+}
+
+#wallpapers{
+	.swiper-container, .swiper-slide {
+		width: 100%;
+		margin:auto;
+		min-width: 320px;
+		height: 600px;
+		img{
+			width: 80%;
+			display: block;
+			margin:auto;
+		}
+	}
+}
 
 .btn{
 	&.btn-black{

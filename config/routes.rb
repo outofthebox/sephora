@@ -23,6 +23,7 @@ Sephora::Application.routes.draw do
   #mobile
   scope path: :mobile, as: "m" do
     match "/", :to => 'mobile#home', :as => 'home'
+    match "download", :to => "mobile#download", :as => "download"
 
     #marcas
     match "/marcas", :to => 'mobile/marcas#index', :as => 'marcas'
@@ -67,8 +68,8 @@ Sephora::Application.routes.draw do
     match "/favoritos", :to => "mobile/productos#favoritos", :as => "favoritos"
 
     match "/specials", :to => 'mobile/specials#index', :as => 'specials'
-    resources :special, controller: 'mobile/specials', :except => [:index]
     scope path: :special, :as => "special" do
+      match "/wallpapers", :to => "mobile/specials#wallpapers", :as => "wallpapers"
     end
 
       #Usuarios
