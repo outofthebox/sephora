@@ -1120,6 +1120,13 @@ ul.breadcrumbs{
           height: 31px;
           width: 213px;
         }
+        &.lips{
+          background: image-url('home/lips/sephora_kiss_logo.jpg') !important;
+          height: 34px;
+          width: 243px;
+          background-size:cover;
+          background-position: center;
+        }
       }
     }
     nav#menu {

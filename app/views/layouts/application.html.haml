@@ -49,7 +49,7 @@
 %body
   #head-sup
     .contenedor
-      %a.logo{:href=>root_path}
+      %a.logo.lips{:href=>root_path}
       .search
         = form_for :buscar, { :url => busqueda_path, :method => :get } do |f|
           = f.submit '', :class => 'submit', :id => 'realsubmit'
