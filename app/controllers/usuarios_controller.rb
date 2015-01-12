@@ -2,7 +2,6 @@ class UsuariosController < ApplicationController
   include Devise::Controllers::Rememberable
   load_and_authorize_resource :only => [:actualizar, :list, :usar_sesion]
 
-  def lista; @usuarios = Usuario.order("id DESC"); end
   def perfil; redirect_to usuario_wishlist_path; end
   def bienvenido; end
 
@@ -12,6 +11,23 @@ class UsuariosController < ApplicationController
     @usuario.save
 
     redirect_to request.referer
+  end
+
+  def lista
+    @usuarios = Usuario.order("created_at DESC");
+
+    respond_to do |format|
+      format.html
+      format.csv {
+        csv_string = CSV.generate do |csv|
+          csv << Usuario.attribute_names
+          @usuarios.each do |u|
+            csv << u.attributes.values
+          end
+        end
+        render :text => csv_string
+      }
+    end
   end
 
   def usar_sesion
