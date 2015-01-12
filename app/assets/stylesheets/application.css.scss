@@ -165,7 +165,8 @@ ul.breadcrumbs{
 
 
 .consultores_head {
-  height: 230px;
+  height: auto;
+  min-height: 230px;
   position: relative;
   margin-top: 57px;
 
