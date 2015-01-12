@@ -316,26 +316,30 @@ ul.breadcrumbs{
 
   
   .eventos {
-    width: 750px;
+    width: 710px;
     position: relative;
     display: block;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 5px;
-
+    margin:auto;
+    vertical-align: top;
+    margin-bottom:30px;
     .foto_evento {
+      vertical-align: top;
       width: 161px;
       height: 161px;
-      position: absolute;
+      display: inline-block;
       left: 18px;
       top: 18px;
     }
     .info_cont_evento {
+      vertical-align: top;
       width: 530px;
       height: auto;
-      position: absolute;
+      display: inline-block;
       right: 0;
-      padding: 20px;
+      padding: 0 20px;
 
       .titulo_evento {
         width: 100%;

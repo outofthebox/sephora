@@ -32,7 +32,7 @@
                 .reserva_evento
         - @eventos.each do |evento|
           - store_events = StoreEvent.where(:event_id => evento.id)
-          .eventos.e3
+          .eventos
             .foto_evento
               =image_tag(evento.photo(:normal))
             .info_cont_evento
@@ -45,4 +45,5 @@
                   = store_event.dates.upcase
                   = link_to store_event.link do
                     .reserva_evento
+              .clearfix
         .clearfix
