@@ -7,16 +7,20 @@ class Administracion::StoreEventsController < ApplicationController
 		@store_event = StoreEvent.new
 	end
 
+	def show
+		redirect_to admin_store_events_path
+	end
+
 	def create
 		se = StoreEvent.new(params_store_event)
 		if se.save!
-			redirect_to admin_store_event_path
+			redirect_to admin_store_events_path
 		end
 	end
 
 	def update
 		@store_event.update_attributes(params_store_event)
-		redirect_to admin_store_event_path
+		redirect_to admin_store_events_path
 	end
 
 	def edit
@@ -24,7 +28,7 @@ class Administracion::StoreEventsController < ApplicationController
 
 	def destroy
 		if @store_event.destroy
-			redirect_to admin_store_event_path
+			redirect_to admin_store_events_path
 		end
 	end
 
