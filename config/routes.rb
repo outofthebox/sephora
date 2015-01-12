@@ -124,14 +124,13 @@ Sephora::Application.routes.draw do
 
   get   'soluciones(/:id)', :to => 'secciones#soluciones', :as => 'soluciones'
   get   'favorites(/:id)', :to => 'secciones#favorites', :as => 'favorites'
+  
   get   'holiday', :to => 'paginas#holiday', :as => 'holiday'
-
   get   'holiday/wallpapers', :to => 'paginas#wallpapers', :as => 'wallpapers'
   post   'holiday/wallpapers', :to => 'paginas#wallpaperssend', :as => 'wallpaperssend'
-
   get   'colorvision', :to => 'paginas#colorvision', :as => 'colorvision'
-
   get   'beautybloggers', :to => 'paginas#bloggers', :as => 'bloggers'
+  get   'favoritoslabios', :to => "paginas#favoritoslabios", :as => 'favoritoslabios'
 
   get   'busqueda', :to => 'productos#busqueda', :as => 'busqueda'
 
