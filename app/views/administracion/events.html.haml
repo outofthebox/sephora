@@ -30,4 +30,6 @@
 						%td.text-center
 							= link_to "/administracion/events/#{event.id}/edit" do
 								%i.glyphicon.glyphicon-pencil
-						%td.text-center= link_to raw("<i class='glyphicon glyphicon-remove'></i>"), "", :confirm => 'Are you sure?', :method => :delete
+						%td.text-center
+							= link_to admin_event_path(event), {:confirm => 'Are you sure?', :method => :delete} do
+								.glyphicon.glyphicon-remove
