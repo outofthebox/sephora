@@ -47,6 +47,7 @@ Sephora::Application.routes.draw do
     end
 
     match "/posts", :to => 'mobile/posts#index', :as => 'posts'
+    match "/posts/:id", :to => 'mobile/posts#show', :as => 'posts_show'
     resources :post, controller: 'mobile/posts', :except => [:index]
     scope path: :post, :as => "post" do
     end
