@@ -1,5 +1,5 @@
 class Event < ActiveRecord::Base
-		has_many :store_events
+		has_many :store_events, dependent: :destroy
 	  attr_accessible :id, :title, :description, :photo
 		attr_accessor :photo
 		
