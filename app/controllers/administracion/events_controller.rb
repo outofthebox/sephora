@@ -35,7 +35,7 @@ class Administracion::EventsController < ApplicationController
   def update
     event = Event.find(params[:id])
     event.update_attributes(event_params)
-    redirect_to admin_event_path
+    redirect_to admin_events_path
   end
 
   def destroy
