@@ -32,7 +32,8 @@
                 .evento_cont
                   %span{:class=>'evento_bold'}= tienda.nombre.upcase
                   = store_event.dates.upcase
-                  = link_to store_event.link do
+                  -link = "https://outoftheboxmx.wufoo.com/forms/eventos-sephora/def/field108=#{tienda.nombre.upcase}&field109=#{evento.title}"
+                  = link_to(link, {:target => "_blank"}) do
                     .reserva_evento
               .clearfix
         .clearfix
