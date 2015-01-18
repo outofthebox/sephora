@@ -1,4 +1,8 @@
 class MobileController < ApplicationController
+	def home
+		@marcas = Marca.all
+	end
+
 	def download(name)
 	  send_data jpg,
 	    :filename => "#{name}.jpg",
