@@ -2001,15 +2001,47 @@ ul.breadcrumbs{
       ul {
         border-top: none;
         list-style: none;
-        margin: 0;
+        margin: 20px 0 0 0;
         padding: 0;
         li {
           font-size: 12px;
           padding-top: 2px;
-          padding-bottom: 2px;
+          position: relative;
+          display: block;
+          span{
+            position: absolute;
+            top:10px;
+            right: 0;
+          }
           &.first{
-            border-bottom: 3px solid #231F20;
+            text-transform: uppercase;
+            font-weight: bold;
+          }
+          a{
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #231F20;
+            display: block;
+            width: 100%;
+            color: inherit;
+          }
+          & > ul{
             margin-top: 5px;
+            margin-bottom: 20px;
+            display: none;
+            &.visible{display: block;}
+            li{
+              font-weight: 400;
+              text-transform: none;
+              a{
+                border:none;
+                padding-bottom: 0;
+                margin-bottom: 0;
+                display: block;
+                width: 100%;
+                color: inherit;
+              }
+            }
           }
         }
         .behindbutton {

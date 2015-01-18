@@ -8,21 +8,21 @@
     .contizq.tcell.t20
       %ul
         - unless @parent_categories.empty?
-          %li
-            %ul
-              - @f_parent.each do |pc|
-                - slug_c = pc[:slug]
-                - unless pc[:product_count] == 0
-                  %li.first
-                    = link_to "#{pc[:categoria]} (#{pc[:product_count]})", categoria_ver_path(slug_c)+"?marca=#{@marca.id}"
-                  %li
-                    - @cats = Categoria.find(pc[:id]).children rescue []
-                    - unless @cats.empty?
-                      %ul
-                        - @cats.each do |t|
-                          - slug = Categoria.find(t).slug
-                          %li.second
-                            = link_to t.nombre, categoria_ver_path(slug)+"?marca=#{@marca.id}"
+          - @f_parent.each do |pc|
+            - slug_c = pc[:slug]
+            - unless pc[:product_count] == 0
+              %li.first
+                - cat_link = categoria_ver_path(slug_c)+"?marca=#{@marca.id}"
+                = link_to "#"  do 
+                  ="#{pc[:categoria]} (#{pc[:product_count]})"
+                  %span.glyphicon.glyphicon-plus
+                - @cats = Categoria.find(pc[:id]).children rescue []
+                - unless @cats.empty?
+                  %ul
+                    - @cats.each do |t|
+                      - slug = Categoria.find(t).slug
+                      %li.second
+                        = link_to t.nombre, categoria_ver_path(slug)+"?marca=#{@marca.id}"
         - unless @marca.behindthebrand.empty?
           %li.behindbutton
             Detrás de la marca
@@ -80,3 +80,9 @@
                         #{number_to_currency(marca_producto.producto.descuento, :precision => 0)}
                     -else
                       #{number_to_currency(marca_producto.producto.precio, :precision => 0)}
+
+:coffee
+  $(document).ready ->
+    $("ul li.first").click ->
+      $(this).find("ul").toggleClass("visible")
+      $(this).find("span").toggleClass("glyphicon-plus").toggleClass("glyphicon-minus")
