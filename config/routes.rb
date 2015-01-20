@@ -31,6 +31,8 @@ Sephora::Application.routes.draw do
     scope path: :marca, :as => "marca" do
     end
 
+
+    match "/lista_eventos", :to => 'mobile/eventos#index', :as => 'eventos'
     match "/eventos", :to => 'mobile/eventos#index', :as => 'eventos'
     resources :evento, controller: 'mobile/eventos', :except => [:index]
     scope path: :evento, :as => "evento" do
