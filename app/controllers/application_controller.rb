@@ -3,6 +3,15 @@ class ApplicationController < ActionController::Base
 
   #before_filter :redirect_main_domain if Rails.env.production?
   before_filter :redirect_mobile
+  before_filter :set_search_engine
+
+
+  def set_search_engine
+    @search_cats = []; 
+    Marca.all.each do |m| @search_cats << {label: m.marca, category: "Marcas", link: marca_ver_path(m.slug)} end
+    Categoria.all.each do |c| @search_cats << {label: c.nombre, category: "Categorias", link: categoria_ver_path(c.slug)} end
+    Producto.publicados.each do |p| @search_cats << {label: p.nombre, category: "Productos", link: producto_ver_path(p.slug)} end
+  end
 
   def redirect_main_domain
     dominio = 'sephora.com.mx'
