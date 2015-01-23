@@ -12,6 +12,20 @@ class PaginasController < ApplicationController
     @careoca_bath = Producto.where(:upc => ["3378872079781", "3378872079743", "3378872079750", "3378872079767", "3378872079736"])
   end
 
+  def get_new_search
+    @search_cats = []; 
+    
+    @search_marcas =  Marca.all
+    @search_categorias =  Categoria.all
+    @search_productos =  Producto.publicados
+
+    @search_marcas.each do |m| @search_cats << {label: m.marca, category: "Marcas", link: marca_ver_path(m.slug)} end
+    @search_categorias.each do |c| @search_cats << {label: c.nombre, category: "Categorias", link: categoria_ver_path(c.slug)} end
+    @search_productos.each do |p| @search_cats << {label: p.nombre, category: "Productos", link: producto_ver_path(p.slug)} end
+
+    render json: @search_cats.to_json
+  end
+
   def lista_eventos
     @eventos = Event.all rescue []
     @tiendas = Tienda.all rescue []

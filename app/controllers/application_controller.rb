@@ -8,14 +8,6 @@ class ApplicationController < ActionController::Base
 
   def set_search_engine
     @search_cats = []; 
-    
-    @search_marcas = Rails.cache.fetch("marcas_7", :expires_in => 72.hours) do Marca.all end
-    @search_categorias = Rails.cache.fetch("categorias_7", :expires_in => 72.hours) do Categoria.all end
-    @search_productos = Rails.cache.fetch('productos_7', :expires_in => 72.hours) do Producto.publicados end
-
-    @search_marcas.each do |m| @search_cats << {label: m.marca, category: "Marcas", link: marca_ver_path(m.slug)} end
-    @search_categorias.each do |c| @search_cats << {label: c.nombre, category: "Categorias", link: categoria_ver_path(c.slug)} end
-    @search_productos.each do |p| @search_cats << {label: p.nombre, category: "Productos", link: producto_ver_path(p.slug)} end
   end
 
   def redirect_main_domain
