@@ -26,14 +26,14 @@
         HOT NOW
     %span
       %a{ :href => "/bestsellers" }
-        BEST SELLERS
+        SEPHORA'S PICKS
     %span
       %a{ :href => "/favorites" }
         FAVORITES
 #linea-rosa
 - if @bestsellers and (bestsellers_productos = @bestsellers.producto_seccion) and bestsellers_productos.any?
   #best-sellers
-    %h3 BEST SELLERS
+    %h3 SEPHORA'S PICKS
     #slider-wrap
       %ul.nobullet.nolist.bestsellers#bestsellers.jcarousel-skin-tango
         - bestsellers_productos.each_with_index do |bestsellers_producto, i|
