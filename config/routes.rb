@@ -25,6 +25,9 @@ Sephora::Application.routes.draw do
     match "/", :to => 'mobile#home', :as => 'home'
     match "download", :to => "mobile#download", :as => "download"
 
+    #favoritoslabios
+    match "/favoritoslabios", :to => 'mobile#favoritoslabios', :as => 'favoritoslabios'
+
     #marcas
     match "/marcas", :to => 'mobile/marcas#index', :as => 'marcas'
     resources :marca, controller: 'mobile/marcas', :except => [:index]

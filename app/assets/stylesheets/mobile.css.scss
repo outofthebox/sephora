@@ -1000,11 +1000,39 @@ html, body{
 	}
 }
 
-#hotnow, #lonuevo, #bestsellers, #favoritos, #misfavoritos{
+#hotnow, #lonuevo, #bestsellers, #favoritos, #misfavoritos, #favoritoslabios{
+	.header-text{
+		font-family: 'Avant';
+		text-align: center;
+		small{
+			text-transform: downcase;
+			font-size: 10px;
+		}
+	}
 	.swiper-container, .swiper-slide {
 		width: 100%;
 		min-width: 320px;
 		height: 300px;
+		.arrow-right{
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			margin-top: -15px;
+			width: 17px;
+			height: 30px;
+			color: #333;
+			z-index: 100;
+		}
+		.arrow-left{
+			position: absolute;
+			left: 10px;
+			top: 50%;
+			margin-top: -15px;
+			width: 17px;
+			height: 30px;
+			color: #333;
+			z-index: 100;
+		}
 		.contengo-producto{
 			margin:auto;
 			width: 90%;
@@ -1034,8 +1062,10 @@ html, body{
 				letter-spacing: 1px;
 				font-size: 0.8em;
 				font-weight: bold;
-				margin: 5px 0;
+				margin: 5px auto;
 				padding: 0;
+				max-width: 80%;
+				display: block;
 				a{
 					color: #333;
 				}

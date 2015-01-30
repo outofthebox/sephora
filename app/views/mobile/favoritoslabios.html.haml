@@ -1,0 +1,151 @@
+#favoritoslabios
+  %h3.header-text
+    LIPSTICK
+  .swiper-container.swiper-lipstick
+    %a.arrow-left{:href => "#"}
+      %i.glyphicon.glyphicon-chevron-left
+    %a.arrow-right{:href => "#"}
+      %i.glyphicon.glyphicon-chevron-right
+    .swiper-wrapper
+      - @lipsticks.each do |producto|
+        .swiper-slide
+          .contengo-producto
+            .imagen
+              =link_to image_tag(producto.foto.url(:mediano)), producto_ver_path(producto.slug)
+            .marca
+              = producto.marca.marca.upcase
+            .link
+              =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), m_producto_path(producto.slug)
+            %p.price
+              -if producto.tiene_descuento
+                %span.precio_original
+                  #{number_to_currency(producto.precio, :precision => 0)}
+                %span
+                  &nbsp; - &nbsp;
+                %span.tiene_descuento
+                  #{number_to_currency(producto.descuento, :precision => 0)}
+              -else
+                %span
+                  #{number_to_currency(producto.precio, :precision => 0)}
+  %h3.header-text
+    LIPGLOSS
+  .swiper-container.swiper-lipgloss
+    %a.arrow-left{:href => "#"}
+      %i.glyphicon.glyphicon-chevron-left
+    %a.arrow-right{:href => "#"}
+      %i.glyphicon.glyphicon-chevron-right
+    .swiper-wrapper
+      - @lipglosses.each do |producto|
+        .swiper-slide
+          .contengo-producto
+            .imagen
+              =link_to image_tag(producto.foto.url(:mediano)), producto_ver_path(producto.slug)
+            .marca
+              = producto.marca.marca.upcase
+            .link
+              =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), m_producto_path(producto.slug)
+            %p.price
+              -if producto.tiene_descuento
+                %span.precio_original
+                  #{number_to_currency(producto.precio, :precision => 0)}
+                %span
+                  &nbsp; - &nbsp;
+                %span.tiene_descuento
+                  #{number_to_currency(producto.descuento, :precision => 0)}
+              -else
+                %span
+                  #{number_to_currency(producto.precio, :precision => 0)}
+  %h3.header-text
+    LIPSTAIN
+  .swiper-container.swiper-lipstain
+    %a.arrow-left{:href => "#"}
+      %i.glyphicon.glyphicon-chevron-left
+    %a.arrow-right{:href => "#"}
+      %i.glyphicon.glyphicon-chevron-right
+    .swiper-wrapper
+      - @lipstains.each do |producto|
+        .swiper-slide
+          .contengo-producto
+            .imagen
+              =link_to image_tag(producto.foto.url(:mediano)), producto_ver_path(producto.slug)
+            .marca
+              = producto.marca.marca.upcase
+            .link
+              =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), m_producto_path(producto.slug)
+            %p.price
+              -if producto.tiene_descuento
+                %span.precio_original
+                  #{number_to_currency(producto.precio, :precision => 0)}
+                %span
+                  &nbsp; - &nbsp;
+                %span.tiene_descuento
+                  #{number_to_currency(producto.descuento, :precision => 0)}
+              -else
+                %span
+                  #{number_to_currency(producto.precio, :precision => 0)}
+  %h3.header-text
+    EL ROJO PERFECTO
+  .swiper-container.swiper-perfectred
+    %a.arrow-left{:href => "#"}
+      %i.glyphicon.glyphicon-chevron-left
+    %a.arrow-right{:href => "#"}
+      %i.glyphicon.glyphicon-chevron-right
+    .swiper-wrapper
+      - @perfectred.each do |producto|
+        .swiper-slide
+          .contengo-producto
+            .imagen
+              =link_to image_tag(producto.foto.url(:mediano)), producto_ver_path(producto.slug)
+            .marca
+              = producto.marca.marca.upcase
+            .link
+              =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), m_producto_path(producto.slug)
+            %p.price
+              -if producto.tiene_descuento
+                %span.precio_original
+                  #{number_to_currency(producto.precio, :precision => 0)}
+                %span
+                  &nbsp; - &nbsp;
+                %span.tiene_descuento
+                  #{number_to_currency(producto.descuento, :precision => 0)}
+              -else
+                %span
+                  #{number_to_currency(producto.precio, :precision => 0)}                  
+= render(:partial => "mobile/layouts/footer")
+:javascript
+  $(function(){
+    
+    var swipe_lipstick = $('.swiper-lipstick').swiper({
+      mode:'horizontal',
+      loop: true
+    });
+
+    $('.swiper-lipstick .arrow-left').click(function(ev){ev.preventDefault(); swipe_lipstick.swipePrev()})
+    $('.swiper-lipstick .arrow-right').click(function(ev){ev.preventDefault(); swipe_lipstick.swipeNext()})
+
+
+    var swipe_lipgloss = $('.swiper-lipgloss').swiper({
+      mode:'horizontal',
+      loop: true
+    });
+
+    $('.swiper-lipgloss .arrow-left').click(function(ev){ev.preventDefault(); swipe_lipgloss.swipePrev()})
+    $('.swiper-lipgloss .arrow-right').click(function(ev){ev.preventDefault(); swipe_lipgloss.swipeNext()})
+
+    var swipe_lipstain = $('.swiper-lipstain').swiper({
+      mode:'horizontal',
+      loop: true
+    });
+
+    $('.swiper-lipstain .arrow-left').click(function(ev){ev.preventDefault(); swipe_lipstain.swipePrev()})
+    $('.swiper-lipstain .arrow-right').click(function(ev){ev.preventDefault(); swipe_lipstain.swipeNext()})
+
+    var swipe_perfectred = $('.swiper-perfectred').swiper({
+      mode:'horizontal',
+      loop: true
+    });
+
+    $('.swiper-perfectred .arrow-left').click(function(ev){ev.preventDefault(); swipe_perfectred.swipePrev()})
+    $('.swiper-perfectred .arrow-right').click(function(ev){ev.preventDefault(); swipe_perfectred.swipeNext()})
+
+  })
