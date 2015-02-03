@@ -2,6 +2,7 @@ class InstagramController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
   def index
+    @images = MediaTag.approved.order('created_at ASC')
   end
 
   def suscribe

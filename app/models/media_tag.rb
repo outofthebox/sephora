@@ -1,6 +1,8 @@
 class MediaTag < ActiveRecord::Base
   attr_accessible :instagram_id, :instagram_link, :thumb_url, :pic_url, :video_url, :fullname, :username, :approved
 
+  scope :approved, -> { where(:approved => true) }
+
   def self.parse data
     attributes = {
       :instagram_id => data.id,
@@ -11,7 +13,7 @@ class MediaTag < ActiveRecord::Base
       :fullname => data.user.full_name,
       :username => data.user.username
     }
-    media = MediaTag.find_by_instagram_id(attributes[:instagram_id])
-    MediaTag.create!(attributes) if media.nil?
+    media = find_by_instagram_id(attributes[:instagram_id])
+    create!(attributes) if media.nil?
   end
 end
