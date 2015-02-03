@@ -21,7 +21,7 @@ class InstagramController < ApplicationController
   end
 
   def fetcher
-    Instagram.process_subscription(request.body.string) do |handler|
+    Instagram.process_subscription(request.body.read) do |handler|
       handler.on_tag_changed do |tag, data|
         Instagram.tag_recent_media(tag).each do |data|
           MediaTag.parse data
