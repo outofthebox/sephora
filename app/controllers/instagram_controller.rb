@@ -1,5 +1,5 @@
 class InstagramController < ApplicationController
-  http_basic_authenticate_with :name => ENV['U'], :password => ENV['P'], only: :admin
+  http_basic_authenticate_with :name => ENV['insta_U'], :password => ENV['insta_P'], only: :admin
   skip_before_filter :verify_authenticity_token
 
   def admin
