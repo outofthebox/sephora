@@ -294,10 +294,11 @@ Sephora::Application.routes.draw do
 
 
   #instaCosas
-  get "instagram", :to => 'instagram#index', :as => "insta_sephora"
-  post "instagram", :to => 'instagram#index', :as => "insta_sephora"
-  post "instagram/suscribir", :to => 'instagram#new_stuff', :as => "insta_sephora_new"
-  get "instagram/suscribir", :to => 'instagram#suscribir', :as => "insta_sephora_new"
+  get "sephoralabios", :to => 'instagram#index', :as => "sephoralabios"
+  get "sephoralabios/admin", :to => 'instagram#admin', :as => "sephoralabios_admin"
+  get "sephoralabios/admin/aprobar/:id", :to => 'instagram#admin_aprobar', :as => "sephoralabios_admin_aprobar"
+  get "sephoralabios/suscribir", :to => 'instagram#suscribe', :as => "sephoralabios_suscribe"
+  post "sephoralabios/suscribir", :to => 'instagram#fetcher', :as => "sephoralabios_suscribe_post"
 
 
   #Comunicados
