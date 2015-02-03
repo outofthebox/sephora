@@ -3,7 +3,7 @@ class InstagramController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
   def admin
-    @images = MediaTag.order('created_at ASC')
+    @images = MediaTag.order('created_at DESC')
   end
 
   def admin_aprobar
@@ -13,7 +13,7 @@ class InstagramController < ApplicationController
   end
 
   def index
-    @images = MediaTag.approved.order('created_at ASC')
+    @images = MediaTag.approved.order('created_at DESC')
   end
 
   def suscribe
