@@ -6,5 +6,9 @@
   =image_tag 'sephoralabios/texto.png'
 %ul.media-list
   - @images.each do |image|
-    %li=link_to image_tag('//data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==', class: 'lazy', :'data-original' => image.thumb_url, width: 180, height: 180), image.instagram_link
+    %li
+      =link_to image.instagram_link, target: :blank do
+        .username
+          %span="@#{image.username}"
+        = image_tag('//data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==', class: 'lazy', :'data-original' => image.thumb_url, width: 180, height: 180)
   
