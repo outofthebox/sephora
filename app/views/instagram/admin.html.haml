@@ -1,0 +1,9 @@
+%h2 Administrador
+.logo
+  =image_tag 'sephoralabios/logo_kiss.jpg'
+%ul.media-list
+  - @images.each do |image|
+    %li{class: (image.approved ? 'approved' : 'denied')}
+      =link_to sephoralabios_admin_aprobar_path(image) do
+        .overlay
+        = image_tag('//data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==', class: 'lazy', :'data-original' => image.thumb_url, width: 180, height: 180)

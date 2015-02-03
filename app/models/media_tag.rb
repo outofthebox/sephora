@@ -16,4 +16,8 @@ class MediaTag < ActiveRecord::Base
     media = find_by_instagram_id(attributes[:instagram_id])
     create!(attributes) if media.nil?
   end
+
+  def toggle_approve
+    update_attribute(:approved, !self.approved)
+  end
 end

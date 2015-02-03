@@ -27,9 +27,29 @@
       font-size: 12pt;
       vertical-align: top;
       display: inline-block;
+      position: relative;
+      margin: 5px;
+      &.approved {
+        outline: 3px solid green;
+        .overlay { background-color: green; }
+      }
+      &.denied {
+        outline: 3px solid red;
+        .overlay { background-color: red; }
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        z-index: 10;
+      }
       img {
         vertical-align: top;
-        padding: 5px;
+        z-index: 5;
+        position: relative;
       }
     }
   }
