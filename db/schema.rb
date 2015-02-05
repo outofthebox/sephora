@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141215075516) do
+ActiveRecord::Schema.define(:version => 20150203201636) do
 
   create_table "blog_categorias", :force => true do |t|
     t.string   "categoria"
@@ -173,6 +173,19 @@ ActiveRecord::Schema.define(:version => 20141215075516) do
   end
 
   add_index "marcas", ["slug"], :name => "index_marcas_on_slug", :unique => true
+
+  create_table "media_tags", :force => true do |t|
+    t.string   "instagram_id"
+    t.string   "instagram_link"
+    t.string   "thumb_url"
+    t.string   "pic_url"
+    t.string   "video_url"
+    t.string   "fullname"
+    t.string   "username"
+    t.boolean  "approved",       :default => false
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
+  end
 
   create_table "mobileusers", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
