@@ -24,6 +24,7 @@ Sephora::Application.routes.draw do
   scope path: :mobile, as: "m" do
     match "/", :to => 'mobile#home', :as => 'home'
     match "download", :to => "mobile#download", :as => "download"
+    match "sephoralabios", :to => 'instagram#index', :as => "sephoralabios"
 
     #favoritoslabios
     match "/favoritoslabios", :to => 'mobile#favoritoslabios', :as => 'favoritoslabios'
