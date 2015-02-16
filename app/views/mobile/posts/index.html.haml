@@ -20,3 +20,4 @@
             %li.fecha
               %i.glyphicon.glyphicon-time
               = post.created_at.to_date.to_s
+= paginate @posts, :window => 1, :left => 3, :right => 3
