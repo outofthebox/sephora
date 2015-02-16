@@ -9,6 +9,15 @@
           .contengo-producto
             .imagen
               =link_to image_tag(producto.foto.url(:mediano)), m_producto_path(producto.slug)
+              - if current_usuario
+                - fav_class = (current_usuario) ? (current_usuario.productos.include?(@producto)) ? "hover animated infinite pulse" : "" : ""
+                %div{:"data-upc" => @producto.upc, :class => "add_to_favs #{fav_class}"}
+              -else
+                %a.add_to_favs_link{:href => usuario_wishlist_path}
+              :coffee
+                $ ->
+                  fav = new Usuarios.Userlist()
+                  fav.add_to_userlist()
             .marca
               = producto.marca.marca.upcase
             .link
@@ -27,6 +36,8 @@
               -else
                 %span
                   #{number_to_currency(producto.precio, :precision => 0)}
+            .info
+              = seccion_producto.descripcion.html_safe
   .swiper-button-prev
   .swiper-button-next
 = render(:partial => "mobile/layouts/footer")

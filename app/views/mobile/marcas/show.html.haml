@@ -18,7 +18,7 @@
 					%h4 BEST SELLERS
 					%table.producto-marca
 						%tr
-							- @marca.marca_producto.sample(2).each do |marca_producto|
+							- @marca.marca_producto.each do |marca_producto|
 								%td
 									= link_to image_tag(marca_producto.producto.foto(:normal)), m_producto_path(marca_producto.producto.slug), {:class => "producto-imagen"}
 									%p.producto-marca= marca_producto.producto.marca.marca.upcase

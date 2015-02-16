@@ -4,7 +4,17 @@
       .marca
         - if @producto.activo?
           - unless @producto.marca.logo_file_size.nil?
-            = image_tag @producto.foto.url(:normal), :id => "prod", :class => "le_producto", :itemprop => 'image'
+            .imagen
+              = image_tag @producto.foto.url(:normal), :id => "prod", :class => "le_producto", :itemprop => 'image'
+              - if current_usuario
+                - fav_class = (current_usuario) ? (current_usuario.productos.include?(@producto)) ? "hover animated infinite pulse" : "" : ""
+                %div{:"data-upc" => @producto.upc, :class => "add_to_favs #{fav_class}"}
+              -else
+                %a.add_to_favs_link{:href => usuario_wishlist_path}
+              :coffee
+                $ ->
+                  fav = new Usuarios.Userlist()
+                  fav.add_to_userlist()
           .info
             %span.precio{:itemprop => "price"}
               #{number_to_currency(@producto.precio, :precision => 0)}

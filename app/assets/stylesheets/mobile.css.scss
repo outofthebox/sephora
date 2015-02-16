@@ -939,19 +939,26 @@ html, body{
 		display: block;
 		margin:auto;
 		margin: 10px auto;
-		.le_producto{
-			max-width: 240px;
-			margin: 10px auto;
+		.add_to_favs, .add_to_favs_link{
+			bottom: -65px;
+		}
+		.imagen{
+			width: 196px;
+			height: 196px;
 			display: block;
-			min-width: 190px;
-			padding: 10px;
-			border: 1px solid #ccc;
-			border-radius: 5px
+			margin: auto;
+			cursor: pointer;
+			border: 1px solid #eaeaea;
+			position: relative;
+			img{
+				width: 100%;
+			}
 		}
 		.info{
 			width: 100%;
 			margin:30px 0;
 			text-align: center;
+			position: relative;
 			.marcab{
 				margin-bottom: 5px;
 				font-size: 16px;
@@ -975,12 +982,12 @@ html, body{
 			}
 			.producto{
 				margin-bottom: 10px;
-				font-size: 18px;
+				font-size: 15px;
 				font-weight: 600;
 				letter-spacing: 1px;
 				text-align: center;
 				display: block;
-				font-weight: bold;
+				line-height: 1.1em;
 			}
 		}
 		.descripcion{
@@ -1013,7 +1020,6 @@ html, body{
 	.swiper-container, .swiper-slide {
 		width: 100%;
 		min-width: 320px;
-		height: 300px;
 		.arrow-right{
 			position: absolute;
 			right: 10px;
@@ -1045,12 +1051,23 @@ html, body{
 				margin: auto;
 				cursor: pointer;
 				border: 1px solid #eaeaea;
+				position: relative;
 				img{width: 100%;}
 			}
 			.marca{
 				margin-top: 15px;
 				a{
 					color: #aaa;
+				}
+			}
+			.info{
+				h3 {
+					background: black;
+					color: white;
+					font-size: 14px;
+					padding: 8px;
+					text-align: center;
+					border-radius: 10px 0;
 				}
 			}
 			.marca, .link{
@@ -1234,6 +1251,27 @@ html, body{
 			text-decoration: none;
 		}
 	}
+}
+
+.add_to_favs, .add_to_favs_link{
+  background-image: image-url("usuarios/wishlist/corazon_negro.png");
+	width: 28px;
+	height: 24px;
+	overflow: hidden;
+	display: block;
+	position: absolute;
+	right: -40px;
+	bottom: -35px;
+	background-size: cover;
+	cursor: pointer;
+  &:hover, &.hover{
+    background-image: image-url("usuarios/wishlist/corazon_rosa.png") !important;
+  }
+  &.barra_menu{
+    background-image: image-url("usuarios/wishlist/corazon_rosa.png") !important; 
+    right: 2px;
+    top: 4px;
+  }
 }
 
 
