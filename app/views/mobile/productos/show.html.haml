@@ -13,11 +13,15 @@
             %span.producto
               %p{:itemprop => "name"}
                 =@producto.nombre
-          .contenidos
+          .contenidos{:itemprop => "description"}
             - unless @producto.descripcion.nil? || @producto.descripcion.size < 5
               #tab3.tabdesc
-                .descripcion{:itemprop => "description"}
+                .descripcion
                   =@producto.descripcion.html_safe
+            - unless @producto.usos.nil? || @producto.usos.size < 5
+              #tab3.tabdesc
+                .descripcion
+                  =@producto.usos.html_safe
         - else
           %h1.text-center
             Producto descontinuado :(
