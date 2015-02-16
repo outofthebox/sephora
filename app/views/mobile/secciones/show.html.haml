@@ -1,0 +1,26 @@
+#secciones
+  - if @contenido and (seccion_productos = @contenido.producto_seccion) and seccion_productos.any?
+    - if @contenido.cover_file_name
+      .cover
+        = image_tag @contenido.cover.url(:normal)
+    %ul
+      - seccion_productos.each_with_index do |seccion_producto, i|
+        - producto = seccion_producto.producto
+        %li
+          %table
+            %tbody
+              %tr
+                %td=image_tag "secciones/#{i+1}.png", :class => 'numero'
+                %td
+                  %h4.strong
+                    = producto.marca.marca
+                  %h5
+                    -unless producto.nombre_real.nil? or producto.nombre_real.empty?
+                      = producto.nombre
+                    - else
+                      = producto.nombre_real
+                  - unless seccion_producto.descripcion.empty?
+                    %p
+                      = seccion_producto.descripcion.html_safe
+                %td=link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug), {:class => "producto"}
+          =image_tag 'secciones/border.png', :class => 'sep'
