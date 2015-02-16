@@ -19,5 +19,4 @@ class Mobile::ProductosController < MobileController
   	@seccion = Seccion.includes(:productos).by_slug('bestsellers')
     @contenido = Seccion.seccion_actual(@seccion)
   end
-
 end

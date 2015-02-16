@@ -26,7 +26,12 @@ Sephora::Application.routes.draw do
     match "download", :to => "mobile#download", :as => "download"
     match "sephoralabios", :to => 'instagram#index', :as => "sephoralabios"
     match 'politicas-de-privacidad', :to => 'mobile#politicas', :as => 'politicas'
-
+    match 'rebajas', :to => 'mobile/categorias#rebajas', :as => 'promociones_show'
+    match 'obsequios', :to => 'mobile/categorias#obsequios', :as => 'obsequios'
+    
+    match ':seccion', :to => 'secciones#ver', :constraints => { :seccion => /allure2013|lanzamientosfall|backtoschool|potencializahighlights|fraganciasparael|skincareparael|narsblushes|obsessionsbeautybloggers|bbcreams|tintedmoisturizers|sephorabath|probrushes|beautyobsessions|vacaciones|ouidad|esteelaudernails|bronzers|clasicosdeskincare|mascaras2013|aceitesskincareagosto2013|mascarillas|cccreams2013|skincarehighlightsoctubre|maquillajebijoux|rollerballs|fragancias30ml|fraganciasholiday|showergelphilosphy|skincareholiday|cofresholiday|obsesionesskincare|arielcollection|beautysteals|fraganciassanvalentin|mascaras|orquidearadiante|recien-desempacados|detalles-sets|fragancias|labios|divacarioca|lanzamientossummer|productospromocion|skincare|styling|herramientastop|skincareojos|holiday2014|paletasholiday|sets|coloroftheyear|skincarelabios|rojoperfecto|lanzamientos/ }
+    match 'favorites(/:id)', :to => 'secciones#favorites', :as => 'favorites'
+    
     #favoritoslabios
     match "/favoritoslabios", :to => 'mobile#favoritoslabios', :as => 'favoritoslabios'
 
