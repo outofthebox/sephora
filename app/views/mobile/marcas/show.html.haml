@@ -40,26 +40,33 @@
 	#categorias
 		%ul.all
 			- unless @parent_categories.empty?
-				%li
-					%ul.parent
-						- @f_parent.each do |pc|
-							- slug_c = pc[:slug]
-							- unless pc[:product_count] == 0
-								%li.first
-									= link_to "#{pc[:categoria]} (#{pc[:product_count]})", categoria_ver_path(slug_c)+"?marca=#{@marca.id}"
-								%li
-									- @cats = Categoria.find(pc[:id]).children rescue []
-									- unless @cats.empty?
-										%ul.child
-											- @cats.each do |t|
-												- cat = Categoria.includes(:productos).find(t)
-												- slug = cat.slug
-												- prod_count = cat.productos.where(:marca_id => @marca.id).count
-												- unless prod_count == 0
-													%li.second
-														= link_to m_categorium_path(slug)+"?marca=#{@marca.id}" do
-															= t.nombre
-															.pull-right
-																= prod_count
+				- @f_parent.each do |pc|
+					- slug_c = pc[:slug]
+					- unless pc[:product_count] == 0
+						%li
+							= link_to "#", {:class => "first"} do
+								=pc[:categoria]
+								.pull-right
+									%span.glyphicon.glyphicon-chevron-down
+							- @cats = Categoria.find(pc[:id]).children rescue []
+							- unless @cats.empty?
+								%ul.child
+									- @cats.each do |t|
+										- cat = Categoria.includes(:productos).find(t)
+										- slug = cat.slug
+										- prod_count = cat.productos.where(:marca_id => @marca.id).count
+										- unless prod_count == 0
+											%li.second
+												= link_to m_categorium_path(slug)+"?marca=#{@marca.id}" do
+													= t.nombre
+													.pull-right
+														%span.glyphicon.glyphicon-chevron-right
+:coffee
+	$(document).ready ->
+		$("ul a.first").click (ev) ->
+			ev.preventDefault()
+			ev.stopPropagation()
+			$(this).parent().find("ul").toggleClass("visible")
+			$(this).parent().find("a.first span").toggleClass("glyphicon-chevron-down").toggleClass("glyphicon-chevron-up")
 							
 

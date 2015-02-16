@@ -583,37 +583,35 @@ html, body{
 		list-style: none;
 		padding: 0;
 		margin:0;
+		text-transform: uppercase;
 		li{
-			&.first{
-				line-height: 40px;
+			padding: 0;
+			.first{
+				line-height: 30px;
 				font-size: 14px;
-				padding: 0;
-				margin:0;
+				padding: 5px 10px;
+				margin: 0;
 				font-weight: 400;
 				border-bottom: 1px solid #ccc;
 				background-color: black;
-				color:white;
+				color: white;
+				width: 100%;
+				display: block;
 				a{color:inherit; text-transform: none;}
 			}
-			ul.parent{
-				padding:0;
-				margin:0;
+			& > ul{
+				padding:0 10px;
 				list-style: none;
+				display: none;
+				&.visible{ display: block; }
 				li{
-					padding: 0 5%;
-					ul.child{
-						padding:0;
-						list-style: none;
-						li{
-							line-height: 40px;
-							font-size: 14px;
-							padding: 0;
-							margin:0;
-							font-weight: 400;
-							border-bottom: 1px solid #ccc;
-							a{color:#333;}
-						}
-					}
+					line-height: 40px;
+					font-size: 14px;
+					padding: 0;
+					margin:0;
+					font-weight: 400;
+					border-bottom: 1px solid #ccc;
+					a{color:#333; text-transform: none;}
 				}
 			}
 		}
