@@ -15,7 +15,7 @@
             .link
               =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), m_producto_path(producto.slug)
             %p.price
-              Hot Now: Exclusivo. Nuevo. 
+              Best Seller
               %br
               Edicion Limitada: 
               -if producto.tiene_descuento
@@ -28,11 +28,24 @@
               -else
                 %span
                   #{number_to_currency(producto.precio, :precision => 0)}
+  .swiper-button-prev
+  .swiper-button-next
 = render(:partial => "mobile/layouts/footer")
 :javascript
   $(function(){
     var mySwiper = $('.swiper-container').swiper({
       mode:'horizontal',
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
       loop: true
     });
+    
+    $('.swiper-button-next').bind("click", function(){
+      mySwiper.swipeNext()
+    })
+
+    $('.swiper-button-prev').bind("click", function(){
+      mySwiper.swipePrev()
+    })
   })
+
