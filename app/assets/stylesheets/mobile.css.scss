@@ -96,6 +96,45 @@ html, body{
 
 // CSS SUBMENU
 // @TODO Extraer
+#contengo-submenu{
+	width: 100%;
+	height: 34px;
+}
+
+#contengo-menusflotantes{
+	.inner-menu{
+		line-height: 20px;
+		list-style:none;
+		text-transform: uppercase;
+		font-size: 0.8em;
+
+		padding:0;
+		margin:0;
+		position: absolute;
+		width: 100%;
+		float:left;
+		height: auto;
+		top: 86px;
+		background: white;
+		left:0;
+		display: none;
+		z-index: 1;
+		a{color:inherit; text-decoration: none;}
+		li{
+			line-height: 30px;
+			color:black;
+			width: 100%;
+			text-align: left;
+			text-transform: uppercase;
+			padding-left: 10px;
+			border-bottom: 1px solid #ccc;
+		}
+		&.open{
+			display: block;
+		}
+	}
+}
+
 #submenu, #subfooter{
 	width: 100%;
 	margin:auto;
@@ -117,7 +156,7 @@ html, body{
 		text-transform: uppercase;
 		font-size: 0.8em;
 		a{color:inherit; text-decoration: none;}
-		&:nth-child(2){
+		&:nth-child(2n){
 			width: 30%; 
 			border-left: 1px solid white;
 			border-right: 1px solid white;
@@ -129,31 +168,6 @@ html, body{
 		&.more{
 			text-align: center;
 			width: 10%;
-		}
-		.inner-menu{
-			padding:0;
-			margin:0;
-			position: absolute;
-			width: 100%;
-			float:left;
-			height: auto;
-			top: 32px;
-			background: white;
-			left:0;
-			display: none;
-			z-index: 1;
-			li{
-				line-height: 30px;
-				color:black;
-				width: 100%;
-				text-align: left;
-				text-transform: uppercase;
-				padding-left: 10px;
-				border-bottom: 1px solid #ccc;
-			}
-			&.open{
-				display: block;
-			}
 		}
 	}
 }

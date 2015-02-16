@@ -25,6 +25,7 @@ Sephora::Application.routes.draw do
     match "/", :to => 'mobile#home', :as => 'home'
     match "download", :to => "mobile#download", :as => "download"
     match "sephoralabios", :to => 'instagram#index', :as => "sephoralabios"
+    match 'politicas-de-privacidad', :to => 'mobile#politicas', :as => 'politicas'
 
     #favoritoslabios
     match "/favoritoslabios", :to => 'mobile#favoritoslabios', :as => 'favoritoslabios'
