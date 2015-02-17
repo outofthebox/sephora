@@ -20,7 +20,7 @@ class SeccionesController < ApplicationController
   end
 
   def favorites
-    @seccion = Seccion.by_slug(:favorites)
+    @seccion = Seccion.by_slug(:sephorapicks)
     @subsecciones = Seccion.subsecciones(@seccion)
     @contenido = Seccion.seccion_actual(@seccion)
     if params[:id] and (@favorite = Seccion.subsecciones(@seccion, params[:id]))
