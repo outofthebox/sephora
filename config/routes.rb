@@ -206,6 +206,7 @@ Sephora::Application.routes.draw do
   post  'suscripcion', :to => 'paginas#suscripcion_post'
 
   get   'politicas-de-privacidad', :to => 'paginas#politicas', :as => 'politicas'
+  get   'politicas-de-devoluciones', :to => 'paginas#devoluciones', :as => 'politicas_privacidad'
 
   get   "categorias/download(:pass)", :to => "categorias#export_to_csv", :as => "categorias_to_csv"
   get   'categorias/:id/desvincular/:categoria_producto/:hash', :to => 'categorias#desvincular', :as => 'categoria_desvincular_producto'

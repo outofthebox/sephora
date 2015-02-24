@@ -1,9 +1,9 @@
 - p_url = (current_usuario) ? request.original_url+"/ver/"+current_usuario.slug : request.original_url
-- provide :descripcion, "Mira mi wish list Sephora para esta navidad,  crea la tuya y dile al mundo que ¡los deseas!"
+- provide :descripcion, "Mira mi wish list Sephora,  crea la tuya y dile al mundo que ¡los deseas!"
 - provide :titulo, "Mis BeautyFavs"
 - provide :imagen, image_url("usuarios/wishlist/share_fb.jpg")
 - provide :url, p_url
-- provide :extracto, "Mira mi wish list Sephora para esta navidad,  crea la tuya y dile al mundo que ¡los deseas!"
+- provide :extracto, "Mira mi wish list Sephora,  crea la tuya y dile al mundo que ¡los deseas!"
 
 = render(:partial => "usuarios/modales/wishlist_aprende") if !@bandera
 = render(:partial => "usuarios/modales/wishlist_faq")
@@ -33,7 +33,7 @@
 		.slider_items.userlist
 			#userlist
 				-if @usuario.count > 0
-					%h1.text-center Esta es tu wishlist de belleza para esta navidad.
+					%h1.text-center Esta es tu wishlist de belleza.
 					%h3.text-center ¡Es Fabulosa!
 					%ul#userlist_cont
 						- seccion_productos = @usuario
