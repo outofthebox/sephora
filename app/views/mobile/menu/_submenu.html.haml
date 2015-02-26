@@ -131,11 +131,15 @@
 			%a#flota-accesorios{:href => "#"} Accesorios
 		%li.swiper-slide
 			%a#flota-hombres{:href => "#"} Hombres
+		%li.swiper-slide
+			%a{:href => "/mobile/obsequios"} Obsequios
+		%li.swiper-slide
+			%a{:href => "/mobile/rebajas"} Rebajas
 		.clearfix
 	
 	:javascript
 		$(function(){
-			var mySwiper = $('.swiper-container').swiper({
+			var mySwiper = $('#contengo-submenu').swiper({
 				mode:'horizontal',
 				loop: true,
 				slidesPerView: 3

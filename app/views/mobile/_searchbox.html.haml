@@ -1,0 +1,102 @@
+#searchbox
+  %input{:type => "text", :placeholder => "buscador"}
+  :javascript
+    $(document).ready(function(){
+      $.widget( "custom.catcomplete", $.ui.autocomplete, {
+        _create: function() {
+          this._super();
+          this.widget().menu( "option", "items", "> :not(.ui-autocomplete-category)" );
+        },
+        _renderMenu: function( ul, items ) {
+          var that = this, currentCategory = "";
+          
+          var div_cerrar = document.createElement("div")
+          div_cerrar.className = "ui-cerrar-buscador"
+          $("body").append(div_cerrar)
+
+          var boton_cerrar = document.createElement("button")
+          boton_cerrar.className = "ui-boton-cerrar-buscador"
+          boton_cerrar.appendChild(document.createTextNode("cerrar"))
+          $(".ui-cerrar-buscador").append(boton_cerrar)
+
+          $(".ui-boton-cerrar-buscador").click(function(){
+            $( ".ui-autocomplete" ).css("display", "none")
+            $(".ui-cerrar-buscador").remove()
+          })
+
+          $.each( items, function( index, item ) {
+            var li;
+            if ( item.category != currentCategory ) {
+              ul.append( "<li class='ui-autocomplete-category'>" + item.category + "</li>" );
+              currentCategory = item.category;
+            }
+            a = document.createElement("a")
+            a.setAttribute("href", item.link)
+            a.appendChild(document.createTextNode(item.label))
+
+            li = document.createElement("li")
+            li.appendChild(a)
+            
+            ul.append(li)
+            if ( item.category ) {
+              li.setAttribute( "aria-label", item.category + " : " + item.label );
+              li.setAttribute("link", item.link)
+            }
+          });
+        }
+      });
+
+      $( "#searchbox input" ).catcomplete({delay: 350, source: search_cat, close: function(){}});
+    })
+  :css
+    .ui-autocomplete {
+      background: white;
+      width: 100% !important;
+      padding: 0;
+      list-style: none;
+      z-index: 100;
+      margin: 0;
+      margin-top: 37px !important;
+      left: 0px !important;
+      padding: 10px;
+    }
+    .ui-helper-hidden-accessible{
+      display: none;
+    }
+    .ui-boton-cerrar-buscador {
+      position: relative;
+      margin: 10px auto;
+      display: block;
+      width: 80%;
+      border: none;
+      background-color: rgb(207, 0, 36);
+      color: white;
+      text-transform: Capitalize;
+      font-weight: 600;
+      border-radius: 10px;
+    }
+    .ui-autocomplete-category {
+      font-weight: bold;
+      padding: 10px 0px 0px 0px;
+      margin: 0px 0;
+      font-size: 12px;
+      text-transform: uppercase;
+      overflow: auto;
+      display: block;
+    }
+    .ui-menu .ui-menu-item a{
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+    .ui-cerrar-buscador {
+      display: block;
+      width: 100%;
+      height: 200px;
+      background: rgba(255, 255, 255, 1);
+      position: fixed;
+      z-index: 2;
+      top: 52px;
+      padding: 0;
+      margin: 0;
+      left: 0;
+    }

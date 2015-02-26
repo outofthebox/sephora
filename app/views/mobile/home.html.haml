@@ -1,46 +1,57 @@
 = render(:partial => "mobile/menu/submenu")
 #vista
-	#background.home
-	#home
-		%ul#home-blocks
-			%li.animated.flipInY#marcas=link_to image_tag("mobile/home/btn_marcas.png"), m_marcas_path
-			%li.animated.flipInY#eventos=link_to image_tag("mobile/home/btn_eventos.png"), m_eventos_path
-			%li.animated.flipInY#tiendas=link_to image_tag("mobile/home/btn_tiendas.png"), m_tiendas_path
-			%li.animated.flipInY#beauty-studio=link_to image_tag("mobile/home/btn_beauty_studio.png"), m_minimakeovers_path
-			%li.animated.flipInY#blog=link_to image_tag("mobile/home/btn_blog.png"), m_posts_path
-			%li.animated.flipInY#mobile-specials=link_to image_tag("mobile/home/btn_specials.png"), m_specials_path
-		:coffee
-			$ ->
-				$("#home-blocks li").click ->
-					$block = $(this)
-					$block.removeClass("flipInY").addClass("pulse").delay(1000).queue (m) ->
-						$block.removeClass("pulse")
-						m();
-		#home-links
-			%h4 Links Rápidos
-			%ul#quick-links
-				%li
-					=link_to m_hotnow_path do
-						HOT NOW
-						.pull-right
-							%i.glyphicon.glyphicon-play{"aria-hidden" => "true"}
-				%li
-					=link_to m_lonuevo_path do
-						LO NUEVO
-						.pull-right
-							%i.glyphicon.glyphicon-play{"aria-hidden" => "true"}
-				%li
-					=link_to m_bestsellers_path do
-						SEPHORA'S PICKS
-						.pull-right
-							%i.glyphicon.glyphicon-play{"aria-hidden" => "true"}
-				%li
-					=link_to m_soluciones_path do
-						SOLUCIONES
-						.pull-right
-							%i.glyphicon.glyphicon-play{"aria-hidden" => "true"}
-		#home-banner
-			=link_to image_tag("mobile/home/ven_a_nuestros.png"), m_eventos_path
+  #background.home
+  #home
+    = render(:partial => "mobile/searchbox")
+    %ul#home-blocks
+      %li.animated.flipInY#marcas=link_to image_tag("mobile/home/btn_marcas.png"), m_marcas_path
+      %li.animated.flipInY#eventos=link_to image_tag("mobile/home/btn_eventos.png"), m_eventos_path
+      %li.animated.flipInY#tiendas=link_to image_tag("mobile/home/btn_tiendas.png"), m_tiendas_path
+      %li.animated.flipInY#beauty-studio=link_to image_tag("mobile/home/btn_beauty_studio.png"), m_minimakeovers_path
+      %li.animated.flipInY#blog=link_to image_tag("mobile/home/btn_blog.png"), m_posts_path
+      %li.animated.flipInY#mobile-specials=link_to image_tag("mobile/home/btn_specials.png"), m_specials_path
+    :coffee
+      $ ->
+        $("#home-blocks li").click ->
+          $block = $(this)
+          $block.removeClass("flipInY").addClass("pulse").delay(1000).queue (m) ->
+            $block.removeClass("pulse")
+            m();
+    #home-links
+      %h4 Links Rápidos
+      %ul#quick-links
+        %li
+          =link_to m_hotnow_path do
+            HOT NOW
+            .pull-right
+              %i.glyphicon.glyphicon-play{"aria-hidden" => "true"}
+        %li
+          =link_to m_lonuevo_path do
+            LO NUEVO
+            .pull-right
+              %i.glyphicon.glyphicon-play{"aria-hidden" => "true"}
+        %li
+          =link_to m_bestsellers_path do
+            SEPHORA'S PICKS
+            .pull-right
+              %i.glyphicon.glyphicon-play{"aria-hidden" => "true"}
+        %li
+          =link_to m_soluciones_path do
+            SOLUCIONES
+            .pull-right
+              %i.glyphicon.glyphicon-play{"aria-hidden" => "true"}
+    #home-banner.swiper-container
+      .swiper-wrapper
+        =link_to image_tag("mobile/home/ven_a_nuestros.png"), m_eventos_path, {:class => "swiper-slide"}
+        =link_to image_tag("home/banners/inferior/izquierdo.jpg", {:width => "100%"}), 'http://www.sephora.com.mx/coloroftheyear?utm_source=SitioWeb&utm_medium=FooterI&utm_campaign=ColorOfTheYear', {:class => "swiper-slide"}
+:javascript
+  $(function(){
+    var mySwiper = $('#home-banner').swiper({
+      mode:'horizontal',
+      loop: true,
+      slidesPerView: 1
+    });
+  })
 = render(:partial => "mobile/layouts/footer")
 
 

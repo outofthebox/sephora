@@ -5,6 +5,7 @@
   <!--[if IE 8]>    <html lang="es" class="no-js lt-ie9"> <![endif]-->
   <!--[if gt IE 8]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
 %head
+  = render :partial => "layouts/searchscript"
   %meta{:charset => "UTF-8"}
   %title
     #{"#{yield(:titulo)} | " if content_for?(:titulo)} Sephora
@@ -15,6 +16,7 @@
   %meta{:content => yield(:url), :property => "og:url"}
   %meta{:content => "Sephora México", :property => "og:site_name"}
   %meta{:content => yield(:imagen), :property => "og:image"}
+  %meta{:name=>"viewport", :content=>"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"}
   = stylesheet_link_tag :mobile
   = stylesheet_link_tag :"idangerous.swiper"
   = javascript_include_tag :jquery
@@ -22,6 +24,7 @@
   = javascript_include_tag :"idangerous.swiper"
   = javascript_include_tag :mobile
   = csrf_meta_tags
+  %meta{:content => "qCft4n7tHfODiCl-UWgEd_uquba_MLlevA9txPjkYkk", :name => "google-site-verification"}
 %body
   #lightbox.animated
   = render(:partial => "mobile/layouts/menu")

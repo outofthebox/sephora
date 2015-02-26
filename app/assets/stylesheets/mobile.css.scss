@@ -35,6 +35,20 @@ html, body{
 	}
 }
 
+#searchbox{
+	input{
+		width: 100%;
+		display: block;
+		margin:5px auto;
+		border: none;
+		border: 1px solid #5c5c5c;
+		background-color: rgba(255,255,255,0.8);
+		padding: 0 5px;
+		z-index: 10;
+		position: relative;
+	}
+}
+
 //CSS HEADER
 
 #header{
