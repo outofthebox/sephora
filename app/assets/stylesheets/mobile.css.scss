@@ -416,6 +416,9 @@ html, body{
 	display: block;
 	margin:20px auto;
 	&.marcas{}
+	&.tiendas{
+		width: 100%;
+	}
 	&.hotnow{
 		width: 50% !important;
 	}

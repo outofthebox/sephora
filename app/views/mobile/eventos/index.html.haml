@@ -1,5 +1,5 @@
 #eventos
-  = image_tag "mobile/titulos/eventos.jpg", {:class => "image-centered"}
+  = image_tag "mobile/titulos/eventos.png", {:class => "image-centered", :width => "100%"}
   .contengo-eventos
     - @eventos.each do |e|
       = link_to m_evento_path(e) do
