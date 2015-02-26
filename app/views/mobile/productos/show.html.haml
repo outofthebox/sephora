@@ -32,6 +32,10 @@
               #tab3.tabdesc
                 .descripcion
                   =@producto.usos.html_safe
+            - unless @producto.ingredientes.nil?
+              #tab3.tabdesc
+                .descripcion
+                  =@producto.ingredientes.html_safe
         - else
           %h1.text-center
             Producto descontinuado :(

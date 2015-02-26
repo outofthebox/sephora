@@ -36,12 +36,29 @@
               -else
                 %span
                   #{number_to_currency(producto.precio, :precision => 0)}
+            .ver-mas-contenido.animated.pulse
+              %i.glyphicon.glyphicon-chevron-down.animated
+            .contenidos{:itemprop => "description"}
+              - unless producto.descripcion.nil? || producto.descripcion.size < 5
+                #tab3.tabdesc
+                  .descripcion
+                    =producto.descripcion.html_safe
+              - unless producto.usos.nil? || producto.usos.size < 5
+                #tab3.tabdesc
+                  .descripcion
+                    =producto.usos.html_safe
+              - unless producto.ingredientes.nil?
+                #tab3.tabdesc
+                  .descripcion
+                    =producto.ingredientes.html_safe
   .swiper-button-prev
   .swiper-button-next
 = render(:partial => "mobile/layouts/footer")
 :javascript
+  var mySwiper
+  var flag = 0
   $(function(){
-    var mySwiper = $('.swiper-container').swiper({
+    mySwiper = $('.swiper-container').swiper({
       mode:'horizontal',
       nextButton: '.swiper-button-next',
       prevButton: '.swiper-button-prev',
@@ -55,4 +72,17 @@
     $('.swiper-button-prev').bind("click", function(){
       mySwiper.swipePrev()
     })
+
+    $(".ver-mas-contenido").click(function(){
+      $(".contenidos").toggleClass("animated").toggleClass("fadeIn").toggleClass("visible")
+      $(".ver-mas-contenido i").toggleClass("glyphicon-chevron-down").toggleClass("glyphicon-chevron-up")
+      if($(".contenidos").hasClass("visible")){
+        $.each(mySwiper.slides, function(i, x){$(x).height(2000)})
+        $(mySwiper.wrapper).height(2000)
+      }else{
+        $.each(mySwiper.slides, function(i, x){$(x).height(350)})
+        $(mySwiper.wrapper).height(350)
+      }
+    })
   })
+

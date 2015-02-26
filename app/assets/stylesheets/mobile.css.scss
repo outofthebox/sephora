@@ -527,22 +527,19 @@ html, body{
 				}
 			}
 			.best-sellers-marca{
+				position: relative;
 				h4{
 					font-size: 35px;
 					line-height: 1.2em;
 					font-family: "Avant", "Helvetica Neue", Helvetica, Arial;
 					text-align: center;
 				}
-				table.producto-marca{
+				.producto-marca{
 					padding:0;
 					margin:0;
 					list-style: none;
 					width: 100%;
-					td{
-						margin:0;
-						display: block;
-						float:left;
-						width: 50%;
+					.each-producto{
 						text-align: center;
 						vertical-align: middle;
 						.producto-marca{
@@ -554,9 +551,10 @@ html, body{
 						.producto-nombre{
 							font-weight: lighter;
 							font-family: "Avant", Arial, sans-serif;
-							font-size: 0.9em;
+							font-size: 18px;
 							letter-spacing: 1px;
-							min-height: 50px;
+							min-height: 30px;
+							margin-top: 10px;
 							a{color: inherit;}
 						}
 						.producto-price{
@@ -1131,7 +1129,20 @@ html, body{
 				}
 			}
 		}
+		.contenidos{
+			display: none;
+			opacity: 0;
+			&.visible{
+				display: block;
+			}
+		}
   }
+	.ver-mas-contenido {
+		position: relative;
+		display: block;
+		z-index: 100;
+		text-align: center;
+	}
 }
 
 #soluciones{
