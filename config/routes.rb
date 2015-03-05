@@ -54,6 +54,9 @@ Sephora::Application.routes.draw do
     end
 
     match "/minimakeovers", :to => 'mobile/minimakeovers#index', :as => 'minimakeovers'
+    match "/makeoverpersonalizado", :to => 'mobile/minimakeovers#index', :as => 'makeoverpersonalizado'
+    match "/beautyunoauno", :to => 'mobile/minimakeovers#index', :as => 'beautyunoauno'
+    match "/consultapersonalizadabelleza", :to => 'mobile/minimakeovers#index', :as => 'consultapersonalizadabelleza'
     resources :minimakeover, controller: 'mobile/minimakeovers', :except => [:index]
     scope path: :minimakeover, :as => "minimakeover" do
     end

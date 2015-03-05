@@ -35,6 +35,8 @@
             - unless @producto.ingredientes.nil?
               #tab3.tabdesc
                 .descripcion
+                  %p
+                    %strong INGREDIENTES:
                   =@producto.ingredientes.html_safe
         - else
           %h1.text-center
