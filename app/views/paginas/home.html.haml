@@ -8,12 +8,14 @@
     .ante.jesus
     .contenedor
       .slider
-        %a.diapositiva.first.visible{:href=> "http://www.sephora.com.mx/marca/caudalie?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=CaudalieLaunch"}
-          =image_tag "home/banners/960/banner1.jpg"
-        %a.diapositiva{:href=> "#"}
-          =image_tag "home/banners/960/banner2.jpg"
-        %a.diapositiva{:href => "http://www.sephora.com.mx/favoritoslabios?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=Labios"}
-          =image_tag "home/banners/960/banner3.jpg"
+        %a.diapositiva.first.visible{:href=> "http://www.sephora.com.mx/favoritosmascarillas?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=Mascarillas"}
+          =image_tag "home/banners/mascarillas/main1.jpg"
+        %a.diapositiva{:href=> "http://www.sephora.com.mx/mascarillasnoche?utm_source=SitioWeb&utm_medium=Banner2&utm_campaign=MascarillasNoche"}
+          =image_tag "home/banners/mascarillas/main2.jpg"
+        %a.diapositiva{:href => "http://www.sephora.com.mx/marca/caudalie?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=CaudalieLaunch"}
+          =image_tag "home/banners/mascarillas/main3.jpg"
+        %a.diapositiva{:href => "#"}
+          =image_tag "home/banners/mascarillas/main4.jpg"
   :coffee
     $ ->
       a = new Paginas.Index()
