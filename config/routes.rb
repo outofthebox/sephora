@@ -35,6 +35,9 @@ Sephora::Application.routes.draw do
     #favoritoslabios
     match "/favoritoslabios", :to => 'mobile#favoritoslabios', :as => 'favoritoslabios'
 
+    # favoritosmascarillas
+    match "/favoritosmascarillas", :to => 'mobile#favoritosmascarillas', :as => 'favoritosmascarillas'
+
     #marcas
     match "/marcas", :to => 'mobile/marcas#index', :as => 'marcas'
     resources :marca, controller: 'mobile/marcas', :except => [:index]
@@ -136,7 +139,7 @@ Sephora::Application.routes.draw do
 
   get 'buscare', :to => 'utilidades#search', :as => 'buscare'
 
-  get   ':seccion', :to => 'secciones#ver', :constraints => { :seccion => /allure2013|lanzamientosfall|backtoschool|potencializahighlights|fraganciasparael|skincareparael|narsblushes|obsessionsbeautybloggers|hotnow|bestsellers|bbcreams|tintedmoisturizers|sephorabath|probrushes|beautyobsessions|vacaciones|ouidad|esteelaudernails|bronzers|clasicosdeskincare|mascaras2013|aceitesskincareagosto2013|mascarillas|cccreams2013|skincarehighlightsoctubre|maquillajebijoux|rollerballs|fragancias30ml|fraganciasholiday|showergelphilosphy|skincareholiday|cofresholiday|obsesionesskincare|arielcollection|beautysteals|fraganciassanvalentin|mascaras|orquidearadiante|recien-desempacados|detalles-sets|fragancias|labios|divacarioca|lanzamientossummer|productospromocion|skincare|styling|herramientastop|skincareojos|holiday2014|paletasholiday|sets|coloroftheyear|skincarelabios|rojoperfecto|lanzamientos/ }
+  get   ':seccion', :to => 'secciones#ver', :constraints => { :seccion => /allure2013|lanzamientosfall|backtoschool|potencializahighlights|fraganciasparael|skincareparael|narsblushes|obsessionsbeautybloggers|hotnow|bestsellers|bbcreams|tintedmoisturizers|sephorabath|probrushes|beautyobsessions|vacaciones|ouidad|esteelaudernails|bronzers|clasicosdeskincare|mascaras2013|aceitesskincareagosto2013|mascarillas|cccreams2013|skincarehighlightsoctubre|maquillajebijoux|rollerballs|fragancias30ml|fraganciasholiday|showergelphilosphy|skincareholiday|cofresholiday|obsesionesskincare|arielcollection|beautysteals|fraganciassanvalentin|mascaras|orquidearadiante|recien-desempacados|detalles-sets|fragancias|labios|divacarioca|lanzamientossummer|productospromocion|skincare|styling|herramientastop|skincareojos|holiday2014|paletasholiday|sets|coloroftheyear|skincarelabios|rojoperfecto|lanzamientos|mascarillasnoche/ }
 
   get   'soluciones(/:id)', :to => 'secciones#soluciones', :as => 'soluciones'
   get   'sephorapicks(/:id)', :to => 'secciones#favorites', :as => 'favorites'
@@ -147,6 +150,7 @@ Sephora::Application.routes.draw do
   get   'colorvision', :to => 'paginas#colorvision', :as => 'colorvision'
   get   'beautybloggers', :to => 'paginas#bloggers', :as => 'bloggers'
   get   'favoritoslabios', :to => "paginas#favoritoslabios", :as => 'favoritoslabios'
+  get   'favoritosmascarillas', :to => "paginas#favoritosmascarillas", :as => 'favoritosmascarillas'
 
   get   'busqueda', :to => 'productos#busqueda', :as => 'busqueda'
 

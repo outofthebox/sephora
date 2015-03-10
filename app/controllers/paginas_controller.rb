@@ -193,6 +193,13 @@ class PaginasController < ApplicationController
     @perfectred = Producto.where(:upc => ["3378872044246", "094800341807", "877231001478", "811999020241", "604214271906", "887167016620", "607845010050", "3548752047166", "607710005310"])
   end
 
+  def favoritosmascarillas
+    @hidratantes = Producto.where(:upc => ["809280009037", "3378872082286", "713757240833", "736211449719", "808144215010", "670367404058"])
+    @antiedad = Producto.where(:upc => ["809280101526", "3378872082309", "670367000540", "670367001653", "651043024517", "651473531807"])
+    @multibeneficios = Producto.where(:upc => ["651043021523", "670367001257", "713757241830", "736211224262", "808144250011", "808144350018"])
+    @denoche = Producto.where(:upc => ["808144222018", "20714576219", "670367011867"])
+  end
+
   def sephoragifts
     render :layout => 'clean'
   end
