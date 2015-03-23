@@ -1,0 +1,13 @@
+- provide :titulo, 'Mascarillas Multi Beneficio'
+- provide :descripcion, ''
+%section#categoria.colorvision
+  .table.full
+    .contizq.tcell.t25
+      .barrita
+    .contder.tcell.t75
+      .contenedor
+        = render 'paginas/mascarillas_menu'
+        .mascarillas
+          -links = ["http://www.sephora.com.mx/producto/triple-oxygen-instant-energizing-mask-951731-651043021523?utm_source=LandMascarillas&utm_medium=Multibeneficio&utm_campaign=TripleOxygen","http://www.sephora.com.mx/producto/bright-white-mask-808144350018?utm_source=LandMascarillas&utm_medium=Multibeneficio&utm_campaign=BrightWhite","http://www.sephora.com.mx/producto/powermud-dualcleanse-treatment-713757241830?utm_source=LandMascarillas&utm_medium=Multibeneficio&utm_campaign=Powermud","http://www.sephora.com.mx/producto/pumpkin-enzyme-mask-670367001257?utm_source=LandMascarillas&utm_medium=Multibeneficio&utm_campaign=Pumpkin","http://www.sephora.com.mx/producto/supermud-clearing-treatment-36211224262?utm_source=LandMascarillas&utm_medium=Multibeneficio&utm_campaign=Supermud","http://www.sephora.com.mx/producto/luminizing-black-mask-2-8-oz-1269455?utm_source=LandMascarillas&utm_medium=Multibeneficio&utm_campaign=LuminizingBlack"]
+          -links.each_with_index do |link, i|
+            =link_to image_tag("mascarillas/multibeneficios/multi_r#{i+1}_c1.jpg"), link

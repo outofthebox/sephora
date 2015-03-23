@@ -237,6 +237,12 @@ class PaginasController < ApplicationController
     end
   end
 
+  # mascarillas
+  def mascarillasnocturnas; end
+  def mascarillashidratantes; end
+  def mascarillasantiedad; end
+  def mascarillasmultibeneficio; end
+
   private
   def auth
     if session[:colorful] == ENV['colorful']

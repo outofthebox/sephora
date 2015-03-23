@@ -1,0 +1,13 @@
+- provide :titulo, 'Mascarillas Nocturas'
+- provide :descripcion, ''
+%section#categoria.colorvision
+  .table.full
+    .contizq.tcell.t25
+      .barrita
+    .contder.tcell.t75
+      .contenedor
+        = render 'paginas/mascarillas_menu'
+        .mascarillas
+          - links = ["http://www.sephora.com.mx/producto/camu-camu-power-c-x-30-vitamin-c-brightening-sleeping-mask-670367011867?utm_source=LandMascarillas&utm_medium=Noche&utm_campaign=CamuCamu", "http://www.sephora.com.mx/producto/tsubaki-deep-hydration-sleeping-mask-808144222018?utm_source=LandMascarillas&utm_medium=Noche&utm_campaign=Tsubaki", "http://www.sephora.com.mx/producto/moisture-surge-overnight-mask-100-ml-020714576219?utm_source=LandMascarillas&utm_medium=Noche&utm_campaign=MoistureSurge"]
+          -links.each_with_index do |link, i|
+            =link_to image_tag("mascarillas/noche/noche_r#{i+1}_c1.jpg"), link

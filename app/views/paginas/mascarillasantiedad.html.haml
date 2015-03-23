@@ -1,0 +1,13 @@
+- provide :titulo, 'Mascarillas Anti Edad'
+- provide :descripcion, ''
+%section#categoria.colorvision
+  .table.full
+    .contizq.tcell.t25
+      .barrita
+    .contder.tcell.t75
+      .contenedor
+        = render 'paginas/mascarillas_menu'
+        .mascarillas
+          -links = ["http://www.sephora.com.mx/producto/24k-gold-mask-670367001653?utm_source=LandMascarillas&utm_medium=Antiedad&utm_campaign=24Gold","http://www.sephora.com.mx/producto/face-mask-ginseng-3378872082309?utm_source=LandMascarillas&utm_medium=Antiedad&utm_campaign=FaceGinseng","http://www.sephora.com.mx/producto/black-tea-face-mask-100mlg-1100742?utm_source=LandMascarillas&utm_medium=Antiedad&utm_campaign=BlackTea","http://www.sephora.com.mx/producto/rose-stem-cell-bio-repair-gel-mask-670367000540?utm_source=LandMascarillas&utm_medium=Antiedad&utm_campaign=RoseStem","http://www.sephora.com.mx/producto/multi-face-eted-651043024517?utm_source=LandMascarillas&utm_medium=Antiedad&utm_campaign=Multifaceeted","http://www.sephora.com.mx/producto/chloro-plasma-651473531807?utm_source=LandMascarillas&utm_medium=Antiedad&utm_campaign=ChloroPlasma"]
+          -links.each_with_index do |link, i|
+            =link_to image_tag("mascarillas/antiedad/antiedad_r#{i+1}_c1.jpg"), link

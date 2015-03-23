@@ -20,6 +20,12 @@ Sephora::Application.routes.draw do
   post  'usuario/wishlist/add/:upc', :to => "usuarios#wishlist_add", :as => "usuario_wishlist_add"
   post  'usuario/wishlist/del/:upc', :to => "usuarios#wishlist_del", :as => "usuario_wishlist_del"
 
+  # mascarillas
+  get 'mascarillashidratantes', :to => 'paginas#mascarillashidratantes', as: :mascarillashidratantes
+  get 'mascarillasantiedad', :to => 'paginas#mascarillasantiedad', as: :mascarillasantiedad
+  get 'mascarillasmultibeneficio', :to => 'paginas#mascarillasmultibeneficio', as: :mascarillasmultibeneficio
+  get 'mascarillasnocturnas', :to => 'paginas#mascarillasnocturnas', as: :mascarillasnocturnas
+
   #mobile
   scope path: :mobile, as: "m" do
     match "/", :to => 'mobile#home', :as => 'home'
