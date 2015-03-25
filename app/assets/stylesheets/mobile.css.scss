@@ -1346,3 +1346,27 @@ html, body{
 .swiper-button-prev, .swiper-button-next {
 	top: 40%;
 }
+
+.mascarillas-mobile {
+	width: 100%;
+	text-align: center;
+	.mascarillas {
+		img {
+			width: 100%;
+		}
+	}
+	.mascarillas_menu {
+	  list-style: none;
+	  border-bottom: 5px solid #B1B1B1;
+	  margin: 25px 0 0 0;
+	  padding: 0;
+	  li {
+	    display: inline-block;
+	    margin: 5px 5px;
+	    opacity: 0.8;
+	    &:hover {
+	      opacity: 1;
+	    }
+	  }
+	}
+}

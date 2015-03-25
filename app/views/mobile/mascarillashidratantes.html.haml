@@ -1,0 +1,6 @@
+.mascarillas-mobile
+  = render 'mobile/mascarillas_menu'
+  .mascarillas
+    -links = ["http://www.sephora.com.mx/producto/face-mask-rose-3378872082286?utm_source=LandMascarillas&utm_medium=Hidratantes&utm_campaign=FaceMask","http://www.sephora.com.mx/producto/thirstymud-hydrating-treatment-713757240833?utm_source=LandMascarillas&utm_medium=Hidratantes&utm_campaign=Thirstymud","http://www.sephora.com.mx/producto/rose-100ml-face-mask-562090?utm_source=LandMascarillas&utm_medium=Hidratantes&utm_campaign=RoseFace","http://www.sephora.com.mx/producto/cucumber-gel-masque-37853?utm_source=LandMascarillas&utm_medium=Hidratantes&utm_campaign=Cucumber","http://www.sephora.com.mx/producto/youthmud-tinglexfoliate-treatment-36211449719?utm_source=LandMascarillas&utm_medium=Hidratantes&utm_campaign=Youthmud","http://www.sephora.com.mx/producto/super-cool-blue-calming-mask-808144215010?utm_source=LandMascarillas&utm_medium=Hidratantes&utm_campaign=SuperCool"]
+    -links.each_with_index do |link, i|
+      =link_to image_tag("mascarillas/hidratantes/hidratantes_r#{i+1}_c1.jpg"), link

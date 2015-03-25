@@ -30,4 +30,9 @@ class MobileController < ApplicationController
 	  @multibeneficios = Producto.where(:upc => ["651043021523", "670367001257", "713757241830", "736211224262", "808144250011", "808144350018"])
 	  @denoche = Producto.where(:upc => ["808144222018", "20714576219", "670367011867"])
 	end
+
+	def mascarillashidratantes; end
+	def mascarillasantiedad; end
+	def mascarillasmultibeneficio; end
+	def mascarillasnocturnas; end
 end

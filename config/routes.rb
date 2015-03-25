@@ -120,7 +120,11 @@ Sephora::Application.routes.draw do
     scope path: :categoria, :as => "categoria" do
     end
 
-
+    # mascarillas mobile
+    get 'mascarillashidratantes', :to => 'mobile#mascarillashidratantes', as: :mascarillashidratantes
+    get 'mascarillasantiedad', :to => 'mobile#mascarillasantiedad', as: :mascarillasantiedad
+    get 'mascarillasmultibeneficio', :to => 'mobile#mascarillasmultibeneficio', as: :mascarillasmultibeneficio
+    get 'mascarillasnocturnas', :to => 'mobile#mascarillasnocturnas', as: :mascarillasnocturnas
   end
 
 
