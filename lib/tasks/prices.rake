@@ -8772,8 +8772,9 @@ namespace :update do
       product = Producto.find_by_sku(sku)
       if product
         product.update_attribute(:price, price.to_i)
-        puts product.id
+        puts "#{product.id} - DONE"
       end
+      puts "#{sku} - NOT FOUND"
     end
   end
 end
