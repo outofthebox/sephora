@@ -9017,7 +9017,7 @@ namespace :update do
     prices.each do |upc, price|
       product = Producto.find_by_upc(upc)
       if product
-        product.update_attribute(:price, price)
+        product.update_attribute(:precio, price)
         puts "#{product.id} - DONE"
       end
       puts "#{upc} - NOT FOUND"
