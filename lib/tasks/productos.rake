@@ -229,12 +229,12 @@ namespace :productos do
 		  csv = CSV.parse(csv_text, :headers => true)
     end
     
-		csv.each do |row| sap = row[0]; precio_nuevo = row[1]; precio_nuevo = precio_nuevo.to_f; 	data << {:sap => sap, :precio_nuevo => precio_nuevo}; end
+		csv.each do |row| upc = row[0]; precio_nuevo = row[1]; precio_nuevo = precio_nuevo.to_f; 	data << {:upc => upc, :precio_nuevo => precio_nuevo}; end
 
-		productos = Producto.where(:sap => data.map{|d| d[:sap]})
+		productos = Producto.where(:upc => data.map{|d| d[:upc]})
 
 		data.map{|d|
-      if (producto = productos.reject{|p| p unless p.sap == d[:sap] }.first)
+      if (producto = productos.reject{|p| p unless p.upc == d[:upc] }.first)
         if producto
           d[:precio_actual] = producto.precio
           d[:producto] = producto.nombre
