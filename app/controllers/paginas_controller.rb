@@ -2,7 +2,7 @@ class PaginasController < ApplicationController
   before_filter :auth, :only => [:colorful, :colorful_show] if ENV['color_activo'] == '0'
 
   def home
-    @bestsellers = Seccion.seccion_actual(Seccion.by_slug(:bestsellers))
+    @bestsellers = Seccion.seccion_actual(Seccion.by_slug(:sephorapicks))
     @lonuevo = Seccion.seccion_actual(Seccion.by_slug(:lonuevo))
     @seccion = Seccion.includes(:productos).by_slug('hotnow')
     @contenido = Seccion.seccion_actual(@seccion)
