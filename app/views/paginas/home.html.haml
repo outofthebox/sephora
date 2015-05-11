@@ -8,12 +8,12 @@
     .ante.jesus
     .contenedor
       .slider
-        %a.diapositiva.first.visible{:href=> "http://www.sephora.com.mx/fragancias?utm_source=SitioWeb&utm_medium=Main1&utm_campaign=Fragancias"}
+        %a.diapositiva.first.visible{:href=> "http://www.sephora.com.mx/lista_eventos?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=EventoLancome"}
+          =image_tag "home/banners/banner2.jpg"
+        %a.diapositiva{:href=> "http://www.sephora.com.mx/fragancias?utm_source=SitioWeb&utm_medium=Main1&utm_campaign=Fragancias"}
           =image_tag "home/banners/banner1.png"
         %a.diapositiva{:href=> "http://www.sephora.com.mx/beautyonthefly?utm_source=SitioWeb&utm_medium=Banner2&utm_campaign=BeautyOnTheFly"}
           =image_tag "home/banners/banner0.jpg"
-        %a.diapositiva{:href=> "http://www.sephora.com.mx/marca/living-proof?utm_source=SitioWeb&utm_medium=Banner2&utm_campaign=LivingProof"}
-          =image_tag "home/banners/Banner3.jpg"
   :coffee
     $ ->
       a = new Paginas.Index()
@@ -86,7 +86,7 @@
 #esta-semana
   .table.full
     .tcell.t50
-      %a{ :href => 'http://www.sephora.com.mx/promocion?utm_source=SitioWeb&utm_medium=Footer1&utm_campaign=PromoFragancia' }
+      %a{ :href => 'http://www.sephora.com.mx/promocion?utm_source=SitioWeb&utm_medium=Footer1&utm_campaign=PromoFavoritos' }
         =image_tag "home/banners/inferior/izquierdo.jpg"
     .tcell.t50
       %a{ :href => "http://www.sephora.com.mx/lista_eventos?utm_source=SitioWeb&utm_medium=BannerInfDer&utm_campaign=Eventos" }
