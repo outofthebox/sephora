@@ -1,0 +1,26 @@
+.mascarillas-mobile
+  .mascarillas
+    = image_tag 'miraclecushion/header_landing_v3.jpg'
+    = link_to image_tag('miraclecushion/mc_landing_v3_r2_c1.jpg'), 'http://www.sephora.com.mx/producto/miracle-cushion-01-pure-porcelain-4935421601856?utm_source=LandingLancome&utm_medium=Producto&utm_campaign=MiracleCushion'
+    = image_tag 'miraclecushion/mc_landing_v3_r3_c1.jpg'
+    = image_tag 'miraclecushion/mc_landing_v3_r4_c1.jpg'
+    %iframe.chorizo{:allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/ermWT-aQQ8U?rel=0&amp;showinfo=0", :width => "100%"}
+    :javascript
+      function alturaproporcionalparamivideoporfis(width) {
+        return 9/16*width;
+      }
+      function resizeChorizos() {
+        var chorizos = document.getElementsByClassName("chorizo");
+        for(var i =0, il = chorizos.length;i<il;i++){
+          chorizowidth = chorizos[i].offsetWidth;
+          chorizoheight = alturaproporcionalparamivideoporfis(chorizowidth);
+          chorizos[i].style.height = chorizoheight+'px';
+          console.log(chorizos[i].style.height);
+        }
+      }
+      window.onresize = function(event) {
+        resizeChorizos();
+      }
+      $(document).ready(function(){
+        resizeChorizos();
+      });

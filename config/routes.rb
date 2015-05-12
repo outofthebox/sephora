@@ -26,6 +26,9 @@ Sephora::Application.routes.draw do
   get 'mascarillasmultibeneficio', :to => 'paginas#mascarillasmultibeneficio', as: :mascarillasmultibeneficio
   get 'mascarillasnocturnas', :to => 'paginas#mascarillasnocturnas', as: :mascarillasnocturnas
 
+  # miraclecushion
+  get 'miraclecushion', :to => 'paginas#miraclecushion', as: :miraclecushion
+
   #mobile
   scope path: :mobile, as: "m" do
     match "/", :to => 'mobile#home', :as => 'home'
@@ -125,6 +128,9 @@ Sephora::Application.routes.draw do
     get 'mascarillasantiedad', :to => 'mobile#mascarillasantiedad', as: :mascarillasantiedad
     get 'mascarillasmultibeneficio', :to => 'mobile#mascarillasmultibeneficio', as: :mascarillasmultibeneficio
     get 'mascarillasnocturnas', :to => 'mobile#mascarillasnocturnas', as: :mascarillasnocturnas
+
+    # miraclecushion
+    get 'miraclecushion', :to => 'mobile#miraclecushion', as: :miraclecushion
   end
 
 

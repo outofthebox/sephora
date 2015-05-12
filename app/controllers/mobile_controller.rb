@@ -35,4 +35,7 @@ class MobileController < ApplicationController
 	def mascarillasantiedad; end
 	def mascarillasmultibeneficio; end
 	def mascarillasnocturnas; end
+
+	# miraclecushion
+	def miraclecushion; end
 end
