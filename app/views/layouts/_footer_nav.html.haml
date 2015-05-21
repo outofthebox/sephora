@@ -14,22 +14,6 @@
     #internacional
       %a.middle{:href => 'http://www.sephora.com/international/international.jsp', :target => '_blank'} Internacional
       %span.icon
-    - unless mobile_device?
-      #mod.animated.fadeInDown.register
-        %a.close{:href=>"#"}
-          X
-        = form_tag "#", {:id => "makkenform"} do |f|
-          .form-controlform
-            %label Nombre
-            %input.nombre{:type=> "text", :name => "nombre"}
-          .form-controlform
-            %label Email
-            %input.correo{:type=> "text", :name => "email"}
-          %input#submit{:type=>"submit", :value=>"ENVIAR"}
-    - if flash[:registro]
-      #modsuc
-        %a.close{:href=>"#"}
-          X
     #registro_popup.animated.fadeIn
       .texto-gracias
         ¡GRACIAS!
