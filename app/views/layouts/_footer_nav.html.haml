@@ -19,10 +19,8 @@
         ¡GRACIAS!
       .txt_registro_popup
       = form_tag "#", {:id => "makkenregistro"} do |f|
-        .form-control
-          %input.nombre{:type=> "text", :name => "nombre", :placeholder => "Nombre"}
-        .form-control
-          %input.correo{:type=> "text", :name => "email", :placeholder => "correo@micorreo.com"}
+        %input.nombre{:type=> "text", :name => "nombre", :placeholder => "Nombre"}
+        %input.correo{:type=> "text", :name => "email", :placeholder => "correo@micorreo.com"}
         %input#submit{:type=>"submit", :value=>""}
       %a.close{:href=>"#"}
         X
