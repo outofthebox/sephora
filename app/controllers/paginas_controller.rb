@@ -246,6 +246,12 @@ class PaginasController < ApplicationController
   # miraclecushion
   def miraclecushion; end
 
+  # atelier
+  def collectionazur; end
+  def collectionoriginale; end
+  def collectionmatiere; end
+  def collectionmetal; end
+
   private
   def auth
     if session[:colorful] == ENV['colorful']

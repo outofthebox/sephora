@@ -1,0 +1,21 @@
+- provide :titulo, 'Collection Originale'
+- provide :descripcion, ''
+%section#categoria.colorvision
+  .table.full
+    .contizq.tcell.t25
+      .barrita
+    .contder.tcell.t75
+      .contenedor
+        = render 'paginas/atelier_header'
+        =image_tag 'atelier/colec_originale.jpg'
+        %ul.nobullet.atelier-list
+          -products = Producto.where(upc: ["3700591201035","3700591203039","3700591213038","3700591216039"])
+          - products.each do |producto|
+            %li
+              .imagen
+                =link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
+              %h5.marca
+                = producto.marca.marca.upcase
+              %h5
+                =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), producto_ver_path(producto.slug)
+              %p.price=number_to_currency(producto.precio, :precision => 0)

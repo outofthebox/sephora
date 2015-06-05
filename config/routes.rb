@@ -29,6 +29,12 @@ Sephora::Application.routes.draw do
   # miraclecushion
   get 'miraclecushion', :to => 'paginas#miraclecushion', as: :miraclecushion
 
+  # atelier
+  get 'collectionazur', :to => 'paginas#collectionazur', as: :collectionazur
+  get 'collectionoriginale', :to => 'paginas#collectionoriginale', as: :collectionoriginale
+  get 'collectionmatiere', :to => 'paginas#collectionmatiere', as: :collectionmatiere
+  get 'collectionmetal', :to => 'paginas#collectionmetal', as: :collectionmetal
+
   #mobile
   scope path: :mobile, as: "m" do
     match "/", :to => 'mobile#home', :as => 'home'
