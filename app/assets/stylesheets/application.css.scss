@@ -3415,6 +3415,11 @@ a.close {
   }
 }
 #basecontorno {
+  .wrap {
+    margin: 0 auto;
+    width: 960px;
+    max-width: 960px;
+  }
   margin: 0;
   padding: 0;
   * {
@@ -3424,6 +3429,7 @@ a.close {
   .header {
     position: relative;
     z-index: 10;
+    padding-top: 40px;
     .logo {
       vertical-align: top;
     }
@@ -3488,28 +3494,52 @@ a.close {
     z-index: 20;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
     padding: 15px 0;
-    .wrap {
-      width: 772px;
-      margin: 0 auto;
-      .footer-logo {
-        padding: 26px 0;
-      }
-      .social {
-        list-style: none;
-        float: right;
+    .footer-logo {
+      padding: 26px 0;
+    }
+    .social {
+      list-style: none;
+      float: right;
+      display: inline-block;
+      padding: 22px 0;
+      margin-right: 20px;
+      li {
         display: inline-block;
-        padding: 22px 0;
-        margin-right: 20px;
-        li {
-          display: inline-block;
-          margin: 0 5px;
-        }
+        margin: 0 5px;
       }
-      .lines {
-        vertical-align: middle;
-        float: right;
-        display: inline-block;
-      }
+    }
+    .lines {
+      vertical-align: middle;
+      float: right;
+      display: inline-block;
+    }
+  }
+  .content {
+    &.foundation, &.contour {
+      text-align: center;
+    }
+  }
+  .black {
+    background-color: #000;
+  }
+  .brown {
+    background-color: #E3C194;
+  }
+  .brown2 {
+    background-color: #97572F;
+  }
+  .foundation {
+    .concern {
+      background-image: image-url('basecontorno/foundation/concerns_textura.jpg');
+      background-repeat: no-repeat;
+      background-position: left top;
+    }
+  }
+  .contour {
+    .concern {
+      background-image: image-url('basecontorno/contour/contour_concerns_textura.png');
+      background-repeat: no-repeat;
+      background-position: left top;
     }
   }
 }

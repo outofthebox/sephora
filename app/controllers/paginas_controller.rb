@@ -254,7 +254,13 @@ class PaginasController < ApplicationController
 
   # basecontorno
   def basecontorno
-    render layout: 'clean'
+    render layout: 'contorno'
+  end
+  def basecontorno_foundation
+    render layout: 'contorno'
+  end
+  def basecontorno_contour
+    render layout: 'contorno'
   end
 
   private

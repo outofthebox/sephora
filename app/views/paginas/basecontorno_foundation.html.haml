@@ -1,0 +1,66 @@
+#basecontorno
+  .wrap
+    .header.table.full
+      .tcell.t50
+        =link_to image_tag('basecontorno/home/logo.png', class: 'logo'), root_path
+      .tcell.t50
+        %ul.menu
+          %li=link_to "Foundation", basecontorno_foundation_path
+          %li=link_to "Contour", basecontorno_contour_path
+  .content.foundation
+    .wrap
+      .table.full
+        .tcell.t50
+          =image_tag 'basecontorno/foundation/foundation_titulo.png'
+          %h3 Fórmulas innovadoras para el lienzo perfecto
+          %p
+            Como una segunda piel, la base es el
+            %b primer paso
+            para lograr un look impecable.
+          %p
+            Oculta imperfecciones, empareja tu tono, matifica y protege tu piel, conoce nuestras
+            %b fórmulas innovadoras
+            y elige la ideal para ti.
+          = image_tag 'basecontorno/foundation/foundation_mustave_txt.png'
+        .tcell.t50
+          =image_tag 'basecontorno/foundation/foundation_modelo.png'
+    .table.full.black
+      =image_tag 'basecontorno/foundation/concerns_pleca.png'
+    .concern.table.full
+      .wrap
+        .tcell.t30
+        .tcell.t70
+          %h3 ¡CONOCEMOS TU PREOCUPACIÓN Y SABEMOS CÓMO SOLUCIONARLA!
+          %h4 ¿Quieres lograr una base de maquillaje perfecta?
+          %p ¡Identifica tu tipo de piel y descúbrelo con nuestros Beauty Experts!
+          =link_to image_tag('basecontorno/foundation/comienza_btn.png'), '#'
+    .table.full.brown
+      =image_tag 'basecontorno/foundation/bff_pleca.png'
+    .wrap
+      .table.full
+        .tcell.t50
+          =image_tag 'basecontorno/foundation/brochas_txt.png'
+        .tcell.t50
+          =image_tag 'basecontorno/foundation/prebases_txt.png'
+    .table.full.black
+      =image_tag 'basecontorno/foundation/protips_pleca.png'
+    .wrap
+      .table.full
+        .tcell.t33
+          =image_tag 'basecontorno/foundation/found_tip1.png'
+        .tcell.t33
+          =image_tag 'basecontorno/foundation/found_tip2.png'
+        .tcell.t33
+          =image_tag 'basecontorno/foundation/found_tip3.png'
+  .footer
+    .wrap
+      .table.full
+        .tcell.t50  
+          =link_to image_tag('basecontorno/home/web_footer.png', class: 'footer-logo'), root_path
+        .tcell.t50  
+          =image_tag 'basecontorno/home/lineas_footer.png', class: 'lines'
+          %ul.social
+            %li=link_to image_tag('basecontorno/home/fb.png'), 'https://www.facebook.com/SephoraMX', target: :blank
+            %li=link_to image_tag('basecontorno/home/tw.png'), 'https://twitter.com/SephoraMX', target: :blank
+            %li=link_to image_tag('basecontorno/home/yt.png'), 'http://www.youtube.com/SephoraMex', target: :blank
+            %li=link_to image_tag('basecontorno/home/ig.png'), 'https://instagram.com/sephoramx/', target: :blank

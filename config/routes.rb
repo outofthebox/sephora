@@ -142,11 +142,6 @@ Sephora::Application.routes.draw do
 
     # miraclecushion
     get 'miraclecushion', :to => 'mobile#miraclecushion', as: :miraclecushion
-
-    # base contorno
-    get 'base-contorno', :to => 'mobile#basecontorno', as: :basecontorno
-    get 'base-contorno/foundation', :to => 'mobile#basecontorno_foundation', as: :basecontorno_foundation
-    get 'base-contorno/contour', :to => 'mobile#basecontorno_contour', as: :basecontorno_contour
   end
 
 

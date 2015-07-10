@@ -367,5 +367,3 @@ $("#izq").hover ->
 $("#der").hover ->
   girl.removeClass('izq')
   girl.addClass('der')
-if (girl.length > 0)
-  $("#wrap").css('position', 'static')
