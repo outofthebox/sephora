@@ -262,6 +262,12 @@ class PaginasController < ApplicationController
   def basecontorno_contour
     render layout: 'contorno'
   end
+  def basecontorno_foundation_concern
+    render layout: 'contorno'
+  end
+  def basecontorno_contour_concern
+    render layout: 'contorno'
+  end
 
   private
   def auth
