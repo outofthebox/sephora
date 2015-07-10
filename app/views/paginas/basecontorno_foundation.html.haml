@@ -10,8 +10,8 @@
   .content.foundation
     .wrap
       .table.full
-        .tcell.t50
-          =image_tag 'basecontorno/foundation/foundation_titulo.png'
+        .tcell.t50.first-content
+          =image_tag 'basecontorno/foundation/foundation_titulo.png', class: 'inner-title'
           %h3 Fórmulas innovadoras para el lienzo perfecto
           %p
             Como una segunda piel, la base es el
@@ -21,7 +21,31 @@
             Oculta imperfecciones, empareja tu tono, matifica y protege tu piel, conoce nuestras
             %b fórmulas innovadoras
             y elige la ideal para ti.
-          = image_tag 'basecontorno/foundation/foundation_mustave_txt.png'
+          = image_tag 'basecontorno/foundation/foundation_mustave_txt.png', class: 'must'
+          .table.full.products
+            .tcell.t33
+              .prod
+                .img
+                  =image_tag 'missing'
+                %p
+                  %b Sephora Collection
+                %p 10 HR Wear Perfection Foundation 20
+            .tcell.t33
+              .prod
+                .img
+                  =image_tag 'missing'
+                %p
+                  %b Marc Jacobs Beauty
+                %p Genius Gel Super - Charged Foundation
+            .tcell.t33
+              .prod
+                .img
+                  =image_tag 'missing'
+                %p
+                  %b Marc Jacobs Beauty
+                %p HD Invisible Cover Foundation - Pink Porcelain
+          .table.full
+            =link_to "Explora Todas Nuestras Bases >", "http://www.sephora.com.mx/categoria/foundation?utm_source=SitioWeb&utm_medium=Micrositio&utm_campaign=Foundation", class: 'explore'
         .tcell.t50
           =image_tag 'basecontorno/foundation/foundation_modelo.png'
     .table.full.black
@@ -29,27 +53,79 @@
     .concern.table.full
       .wrap
         .tcell.t30
-        .tcell.t70
-          %h3 ¡CONOCEMOS TU PREOCUPACIÓN Y SABEMOS CÓMO SOLUCIONARLA!
+        .tcell.t70.second-content
+          %h3
+            ¡CONOCEMOS TU PREOCUPACIÓN Y SABEMOS CÓMO SOLUCIONARLA!
           %h4 ¿Quieres lograr una base de maquillaje perfecta?
-          %p ¡Identifica tu tipo de piel y descúbrelo con nuestros Beauty Experts!
-          =link_to image_tag('basecontorno/foundation/comienza_btn.png'), '#'
+          %p
+            ¡Identifica tu tipo de piel y descúbrelo
+            %br
+            con nuestros Beauty Experts!
+          =link_to image_tag('basecontorno/foundation/comienza_btn.png'), '#', class: 'link'
     .table.full.brown
       =image_tag 'basecontorno/foundation/bff_pleca.png'
     .wrap
-      .table.full
+      .table.full.third-content
         .tcell.t50
-          =image_tag 'basecontorno/foundation/brochas_txt.png'
+          =image_tag 'basecontorno/foundation/brochas_txt.png', class: 'title'
+          .table.full.products
+            .tcell.t33
+              .prod
+                .img
+                  =image_tag 'missing'
+                %p
+                  %b Sephora Collection
+                %p 10 HR Wear Perfection Foundation 20
+            .tcell.t33
+              .prod
+                .img
+                  =image_tag 'missing'
+                %p
+                  %b Marc Jacobs Beauty
+                %p Genius Gel Super - Charged Foundation
+            .tcell.t33
+              .prod
+                .img
+                  =image_tag 'missing'
+                %p
+                  %b Marc Jacobs Beauty
+                %p HD Invisible Cover Foundation - Pink Porcelain
+          .table.full.explorit
+            =link_to "Explora Todas Nuestras Bases >", "http://www.sephora.com.mx/categoria/brochas-y-aplicadores-brochas?utm_source=SitioWeb&utm_medium=Micrositio&utm_campaign=Brochas", class: 'explore'
         .tcell.t50
-          =image_tag 'basecontorno/foundation/prebases_txt.png'
+          =image_tag 'basecontorno/foundation/prebases_txt.png', class: 'title'
+          .table.full.products
+            .tcell.t33
+              .prod
+                .img
+                  =image_tag 'missing'
+                %p
+                  %b Sephora Collection
+                %p 10 HR Wear Perfection Foundation 20
+            .tcell.t33
+              .prod
+                .img
+                  =image_tag 'missing'
+                %p
+                  %b Marc Jacobs Beauty
+                %p Genius Gel Super - Charged Foundation
+            .tcell.t33
+              .prod
+                .img
+                  =image_tag 'missing'
+                %p
+                  %b Marc Jacobs Beauty
+                %p HD Invisible Cover Foundation - Pink Porcelain
+          .table.full.explorit
+            =link_to "Explora Todas Nuestras Bases >", "http://www.sephora.com.mx/categoria/primer?utm_source=SitioWeb&utm_medium=Micrositio&utm_campaign=Primer", class: 'explore'
     .table.full.black
       =image_tag 'basecontorno/foundation/protips_pleca.png'
     .wrap
-      .table.full
+      .table.full.fourth-section
         .tcell.t33
           =image_tag 'basecontorno/foundation/found_tip1.png'
         .tcell.t33
-          =image_tag 'basecontorno/foundation/found_tip2.png'
+          =image_tag 'basecontorno/foundation/found_tip2.png', class: 'level'
         .tcell.t33
           =image_tag 'basecontorno/foundation/found_tip3.png'
   .footer
