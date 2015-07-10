@@ -359,3 +359,13 @@ $(".navegaciones ul.aco").on "mouseleave", ->
 if $(".navegaciones ul.verpor li a[data-set]") && ver
   $(".filterby").html($(".navegaciones ul.verpor li a[data-set="+ver+"]").data("set") + " por página <sp<an>▼</span>") unless $(".navegaciones ul.verpor li a[data-set="+ver+"]").data("set").nil?
   $(".filterby2").html("precio " +$(".navegaciones ul.aco li a[data-set="+precio+"]").data("set") + "<span>▼</span>") unless $(".navegaciones ul.aco li a[data-set="+precio+"]").data("set").nil?
+
+girl = $("#girl")
+$("#izq").hover ->
+  girl.removeClass('der')
+  girl.addClass('izq')
+$("#der").hover ->
+  girl.removeClass('izq')
+  girl.addClass('der')
+if (girl.length > 0)
+  $("#wrap").css('position', 'static')

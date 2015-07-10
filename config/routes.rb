@@ -29,6 +29,11 @@ Sephora::Application.routes.draw do
   # miraclecushion
   get 'miraclecushion', :to => 'paginas#miraclecushion', as: :miraclecushion
 
+  # base contorno
+  get 'base-contorno', :to => 'paginas#basecontorno', as: :basecontorno
+  get 'base-contorno/foundation', :to => 'paginas#basecontorno_foundation', as: :basecontorno_foundation
+  get 'base-contorno/contour', :to => 'paginas#basecontorno_contour', as: :basecontorno_contour
+
   # atelier
   get 'collectionazur', :to => 'paginas#collectionazur', as: :collectionazur
   get 'collectionoriginale', :to => 'paginas#collectionoriginale', as: :collectionoriginale
@@ -137,6 +142,11 @@ Sephora::Application.routes.draw do
 
     # miraclecushion
     get 'miraclecushion', :to => 'mobile#miraclecushion', as: :miraclecushion
+
+    # base contorno
+    get 'base-contorno', :to => 'mobile#basecontorno', as: :basecontorno
+    get 'base-contorno/foundation', :to => 'mobile#basecontorno_foundation', as: :basecontorno_foundation
+    get 'base-contorno/contour', :to => 'mobile#basecontorno_contour', as: :basecontorno_contour
   end
 
 

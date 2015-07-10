@@ -252,6 +252,11 @@ class PaginasController < ApplicationController
   def collectionmatiere; end
   def collectionmetal; end
 
+  # basecontorno
+  def basecontorno
+    render layout: 'clean'
+  end
+
   private
   def auth
     if session[:colorful] == ENV['colorful']
