@@ -3647,4 +3647,10 @@ a.close {
       margin: 25px 0;
     }
   }
+  .foundation_video, .contour_video {
+    background-image: image-url('basecontorno/video/video_textura.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    text-align: center;
+  }
 }

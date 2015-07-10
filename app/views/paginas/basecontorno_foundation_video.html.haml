@@ -1,0 +1,25 @@
+#basecontorno
+  .wrap
+    .header.table.full
+      .tcell.t50
+        =link_to image_tag('basecontorno/home/logo.png', class: 'logo'), root_path
+      .tcell.t50
+        %ul.menu
+          %li=link_to "Foundation", basecontorno_foundation_path
+          %li=link_to "Contour", basecontorno_contour_path
+  .content.foundation_video
+    %p=image_tag 'basecontorno/video/foundation_ttile.png'
+    .video
+    %p=image_tag 'basecontorno/video/obten_el_look_pleca.png'
+  .footer
+    .wrap
+      .table.full
+        .tcell.t50  
+          =link_to image_tag('basecontorno/home/web_footer.png', class: 'footer-logo'), root_path
+        .tcell.t50  
+          =image_tag 'basecontorno/home/lineas_footer.png', class: 'lines'
+          %ul.social
+            %li=link_to image_tag('basecontorno/home/fb.png'), 'https://www.facebook.com/SephoraMX', target: :blank
+            %li=link_to image_tag('basecontorno/home/tw.png'), 'https://twitter.com/SephoraMX', target: :blank
+            %li=link_to image_tag('basecontorno/home/yt.png'), 'http://www.youtube.com/SephoraMex', target: :blank
+            %li=link_to image_tag('basecontorno/home/ig.png'), 'https://instagram.com/sephoramx/', target: :blank
