@@ -8,9 +8,27 @@
           %li=link_to "Foundation", basecontorno_foundation_path
           %li=link_to "Contour", basecontorno_contour_path
   .content.foundation_video
-    %p=image_tag 'basecontorno/video/foundation_ttile.png'
-    .video
-    %p=image_tag 'basecontorno/video/obten_el_look_pleca.png'
+    .wrap
+      %p=image_tag 'basecontorno/video/foundation_ttile.png'
+      %p
+        %b ¿Qué base de maquillaje es ideal para la piel grasa o con poros?
+      %p
+        %iframe{:allowfullscreen => "", :frameborder => "0", :height => "540", :src => "https://www.youtube.com/embed/UcKnJ8wsv4c", :width => "960"}
+      %p=image_tag 'basecontorno/video/obten_el_look_pleca.png'
+      %ul.nobullet.producto-list
+        -products = Producto.where(upc: ["3548752038584","3548752073271","736150129765","3378872067146","3378872067177","713757273701","3522930010180"])
+        - products.each do |producto|
+          %li
+            .prod
+              .imagen
+                =link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
+              %h5.marca
+                = producto.marca.marca.upcase
+              %h5
+                =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), producto_ver_path(producto.slug)
+              %p.price=number_to_currency(producto.precio, :precision => 0)
+      %h3 ¿Tienes más beauty concerns?
+      %h4 Descubre más videos de nuestros expertos
   .footer
     .wrap
       .table.full

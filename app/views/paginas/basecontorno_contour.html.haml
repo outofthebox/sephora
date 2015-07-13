@@ -23,27 +23,15 @@
             , definirás mejillas, nariz y la forma de tu rostro.
           = image_tag 'basecontorno/contour/contour_musthave_txt.png', class: 'must'
           .table.full.products
-            .tcell.t33
-              .prod
-                .img
-                  =image_tag 'missing'
-                %p
-                  %b Sephora Collection
-                %p 10 HR Wear Perfection Foundation 20
-            .tcell.t33
-              .prod
-                .img
-                  =image_tag 'missing'
-                %p
-                  %b Marc Jacobs Beauty
-                %p Genius Gel Super - Charged Foundation
-            .tcell.t33
-              .prod
-                .img
-                  =image_tag 'missing'
-                %p
-                  %b Marc Jacobs Beauty
-                %p HD Invisible Cover Foundation - Pink Porcelain
+            - ['811999021200', '689304184595', '094800348776'].each do |upc|
+              - prod = Producto.find_by_upc(upc)
+              .tcell.t33
+                .prod
+                  .img
+                    =image_tag prod.foto.url(:chico)
+                  %p
+                    %b=prod.marca.marca
+                  %p=prod.nombre
           .table.full
             =link_to "Explora Todas Nuestras Bases >", "http://www.sephora.com.mx/categoria/contorno?utm_source=SitioWeb&utm_medium=Micrositio&utm_campaign=Contour", class: 'explore'
         .tcell.t50
@@ -63,7 +51,7 @@
             ¡Identifica tu tipo de rostro y aprende a contornearlo
             %br
             con los tips de nuestros expertos!
-          =link_to image_tag('basecontorno/contour/comienza_btn.png'), '#', class: 'link'
+          =link_to image_tag('basecontorno/contour/comienza_btn.png'), basecontorno_contour_concern_path, class: 'link'
     .table.full.brown2
       =image_tag 'basecontorno/contour/contour_bff_pleca.png'
     .wrap
@@ -71,53 +59,29 @@
         .tcell.t50
           =image_tag 'basecontorno/contour/contour_brocahas_txt.png', class: 'title'
           .table.full.products
-            .tcell.t33
-              .prod
-                .img
-                  =image_tag 'missing'
-                %p
-                  %b Sephora Collection
-                %p 10 HR Wear Perfection Foundation 20
-            .tcell.t33
-              .prod
-                .img
-                  =image_tag 'missing'
-                %p
-                  %b Marc Jacobs Beauty
-                %p Genius Gel Super - Charged Foundation
-            .tcell.t33
-              .prod
-                .img
-                  =image_tag 'missing'
-                %p
-                  %b Marc Jacobs Beauty
-                %p HD Invisible Cover Foundation - Pink Porcelain
+            - ['811999021224','94800348806','3378872074977'].each do |upc|
+              - prod = Producto.find_by_upc(upc)
+              .tcell.t33
+                .prod
+                  .img
+                    =image_tag prod.foto.url(:chico)
+                  %p
+                    %b=prod.marca.marca
+                  %p=prod.nombre
           .table.full.explorit
             =link_to "Explora Todas Nuestras Bases >", "http://www.sephora.com.mx/categoria/brochas-y-aplicadores-brochas?utm_source=SitioWeb&utm_medium=Micrositio&utm_campaign=ContourBrochasuu", class: 'explore'
         .tcell.t50
           =image_tag 'basecontorno/contour/bronzers_txt.png', class: 'title'
           .table.full.products
-            .tcell.t33
-              .prod
-                .img
-                  =image_tag 'missing'
-                %p
-                  %b Sephora Collection
-                %p 10 HR Wear Perfection Foundation 20
-            .tcell.t33
-              .prod
-                .img
-                  =image_tag 'missing'
-                %p
-                  %b Marc Jacobs Beauty
-                %p Genius Gel Super - Charged Foundation
-            .tcell.t33
-              .prod
-                .img
-                  =image_tag 'missing'
-                %p
-                  %b Marc Jacobs Beauty
-                %p HD Invisible Cover Foundation - Pink Porcelain
+            - ['3346470419469', '651986701636', '877231001959'].each do |upc|
+              - prod = Producto.find_by_upc(upc)
+              .tcell.t33
+                .prod
+                  .img
+                    =image_tag prod.foto.url(:chico)
+                  %p
+                    %b=prod.marca.marca
+                  %p=prod.nombre
           .table.full.explorit
             =link_to "Explora Todas Nuestras Bases >", "http://www.sephora.com.mx/categoria/bronzer?utm_source=SitioWeb&utm_medium=Micrositio&utm_campaign=Bronzer", class: 'explore'
     .table.full.black

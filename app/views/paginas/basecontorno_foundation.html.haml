@@ -23,27 +23,15 @@
             y elige la ideal para ti.
           = image_tag 'basecontorno/foundation/foundation_mustave_txt.png', class: 'must'
           .table.full.products
-            .tcell.t33
-              .prod
-                .img
-                  =image_tag 'missing'
-                %p
-                  %b Sephora Collection
-                %p 10 HR Wear Perfection Foundation 20
-            .tcell.t33
-              .prod
-                .img
-                  =image_tag 'missing'
-                %p
-                  %b Marc Jacobs Beauty
-                %p Genius Gel Super - Charged Foundation
-            .tcell.t33
-              .prod
-                .img
-                  =image_tag 'missing'
-                %p
-                  %b Marc Jacobs Beauty
-                %p HD Invisible Cover Foundation - Pink Porcelain
+            - ['3378872072713', '818015012921', '3548752030748'].each do |upc|
+              - prod = Producto.find_by_upc(upc)
+              .tcell.t33
+                .prod
+                  .img
+                    =image_tag prod.foto.url(:chico)
+                  %p
+                    %b=prod.marca.marca
+                  %p=prod.nombre
           .table.full
             =link_to "Explora Todas Nuestras Bases >", "http://www.sephora.com.mx/categoria/foundation?utm_source=SitioWeb&utm_medium=Micrositio&utm_campaign=Foundation", class: 'explore'
         .tcell.t50
@@ -61,7 +49,7 @@
             ¡Identifica tu tipo de piel y descúbrelo
             %br
             con nuestros Beauty Experts!
-          =link_to image_tag('basecontorno/foundation/comienza_btn.png'), '#', class: 'link'
+          =link_to image_tag('basecontorno/foundation/comienza_btn.png'), basecontorno_foundation_concern_path, class: 'link'
     .table.full.brown
       =image_tag 'basecontorno/foundation/bff_pleca.png'
     .wrap
@@ -69,53 +57,29 @@
         .tcell.t50
           =image_tag 'basecontorno/foundation/brochas_txt.png', class: 'title'
           .table.full.products
-            .tcell.t33
-              .prod
-                .img
-                  =image_tag 'missing'
-                %p
-                  %b Sephora Collection
-                %p 10 HR Wear Perfection Foundation 20
-            .tcell.t33
-              .prod
-                .img
-                  =image_tag 'missing'
-                %p
-                  %b Marc Jacobs Beauty
-                %p Genius Gel Super - Charged Foundation
-            .tcell.t33
-              .prod
-                .img
-                  =image_tag 'missing'
-                %p
-                  %b Marc Jacobs Beauty
-                %p HD Invisible Cover Foundation - Pink Porcelain
+            - ['3378872074830', '3548752061636', '713757273701'].each do |upc|
+              - prod = Producto.find_by_upc(upc)
+              .tcell.t33
+                .prod
+                  .img
+                    =image_tag prod.foto.url(:chico)
+                  %p
+                    %b=prod.marca.marca
+                  %p=prod.nombre
           .table.full.explorit
             =link_to "Explora Todas Nuestras Bases >", "http://www.sephora.com.mx/categoria/brochas-y-aplicadores-brochas?utm_source=SitioWeb&utm_medium=Micrositio&utm_campaign=Brochas", class: 'explore'
         .tcell.t50
           =image_tag 'basecontorno/foundation/prebases_txt.png', class: 'title'
           .table.full.products
-            .tcell.t33
-              .prod
-                .img
-                  =image_tag 'missing'
-                %p
-                  %b Sephora Collection
-                %p 10 HR Wear Perfection Foundation 20
-            .tcell.t33
-              .prod
-                .img
-                  =image_tag 'missing'
-                %p
-                  %b Marc Jacobs Beauty
-                %p Genius Gel Super - Charged Foundation
-            .tcell.t33
-              .prod
-                .img
-                  =image_tag 'missing'
-                %p
-                  %b Marc Jacobs Beauty
-                %p HD Invisible Cover Foundation - Pink Porcelain
+            - ['3548752073233', '604214849600', '811999021217'].each do |upc|
+              - prod = Producto.find_by_upc(upc)
+              .tcell.t33
+                .prod
+                  .img
+                    =image_tag prod.foto.url(:chico)
+                  %p
+                    %b=prod.marca.marca
+                  %p=prod.nombre
           .table.full.explorit
             =link_to "Explora Todas Nuestras Bases >", "http://www.sephora.com.mx/categoria/primer?utm_source=SitioWeb&utm_medium=Micrositio&utm_campaign=Primer", class: 'explore'
     .table.full.black
