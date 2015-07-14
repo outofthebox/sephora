@@ -8,12 +8,25 @@
           %li=link_to "Foundation", basecontorno_foundation_path
           %li=link_to "Contour", basecontorno_contour_path
   .content.fundation_concern
-    = image_tag 'basecontorno/foundation/concern/foundation_concern_txt.png'
-    %ul
-      %li= image_tag 'basecontorno/foundation/concern/piel_seca.png'
-      %li= image_tag 'basecontorno/foundation/concern/piel_mixta.png'
-      %li= image_tag 'basecontorno/foundation/concern/piel_grasa.png'
-      %li= image_tag 'basecontorno/foundation/concern/piel_sensible.png'
+    .wrap
+      = image_tag 'basecontorno/foundation/concern/foundation_concern_txt.png'
+      %ul
+        %li
+          %a{href: basecontorno_foundation_video_path('seca')}
+            = image_tag 'basecontorno/foundation/concern/piel_seca.png'
+            = image_tag 'basecontorno/foundation/concern/flecha.png', class: 'arrow'
+        %li
+          %a{href: basecontorno_foundation_video_path('mixta')}
+            = image_tag 'basecontorno/foundation/concern/piel_mixta.png'
+            = image_tag 'basecontorno/foundation/concern/flecha.png', class: 'arrow'
+        %li
+          %a{href: basecontorno_foundation_video_path('grasa')}
+            = image_tag 'basecontorno/foundation/concern/piel_grasa.png'
+            = image_tag 'basecontorno/foundation/concern/flecha.png', class: 'arrow'
+        %li
+          %a{href: basecontorno_foundation_video_path('sensible')}
+            = image_tag 'basecontorno/foundation/concern/piel_sensible.png'
+            = image_tag 'basecontorno/foundation/concern/flecha.png', class: 'arrow'
   .footer
     .wrap
       .table.full

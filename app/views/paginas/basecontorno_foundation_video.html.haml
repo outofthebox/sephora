@@ -11,13 +11,12 @@
     .wrap
       %p=image_tag 'basecontorno/video/foundation_ttile.png'
       %p
-        %b ¿Qué base de maquillaje es ideal para la piel grasa o con poros?
+        %b= @question
       %p
-        %iframe{:allowfullscreen => "", :frameborder => "0", :height => "540", :src => "https://www.youtube.com/embed/UcKnJ8wsv4c", :width => "960"}
-      %p=image_tag 'basecontorno/video/obten_el_look_pleca.png'
+        %iframe{:allowfullscreen => "", :frameborder => "0", :height => "540", :src => "https://www.youtube.com/embed/#{@video}", :width => "960"}
+      %p=image_tag 'basecontorno/video/obten_el_look_pleca.png', class: 'pleca'
       %ul.nobullet.producto-list
-        -products = Producto.where(upc: ["3548752038584","3548752073271","736150129765","3378872067146","3378872067177","713757273701","3522930010180"])
-        - products.each do |producto|
+        - @productos.each do |producto|
           %li
             .prod
               .imagen
@@ -26,9 +25,15 @@
                 = producto.marca.marca.upcase
               %h5
                 =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), producto_ver_path(producto.slug)
-              %p.price=number_to_currency(producto.precio, :precision => 0)
       %h3 ¿Tienes más beauty concerns?
       %h4 Descubre más videos de nuestros expertos
+      .table.full.videos
+        .tcell.t33
+          %iframe{:allowfullscreen => "", :frameborder => "0", :height => "169", :src => "https://www.youtube.com/embed/", :width => "300"}
+        .tcell.t33
+          %iframe{:allowfullscreen => "", :frameborder => "0", :height => "169", :src => "https://www.youtube.com/embed/", :width => "300"}
+        .tcell.t33
+          %iframe{:allowfullscreen => "", :frameborder => "0", :height => "169", :src => "https://www.youtube.com/embed/", :width => "300"}
   .footer
     .wrap
       .table.full
@@ -41,3 +46,14 @@
             %li=link_to image_tag('basecontorno/home/tw.png'), 'https://twitter.com/SephoraMX', target: :blank
             %li=link_to image_tag('basecontorno/home/yt.png'), 'http://www.youtube.com/SephoraMex', target: :blank
             %li=link_to image_tag('basecontorno/home/ig.png'), 'https://instagram.com/sephoramx/', target: :blank
+= content_for :footer do
+  %link{:href => "//cdn.jsdelivr.net/jquery.slick/1.5.6/slick.css", :rel => "stylesheet", :type => "text/css"}
+  %script{:src => "//cdn.jsdelivr.net/jquery.slick/1.5.6/slick.min.js", :type => "text/javascript"}
+  :javascript
+    $('.producto-list').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      nextArrow: '<a href="#" class="next"></a>',
+      prevArrow: '<a href="#" class="prev"></a>'
+    });

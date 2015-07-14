@@ -7,10 +7,33 @@
         %ul.menu
           %li=link_to "Foundation", basecontorno_foundation_path
           %li=link_to "Contour", basecontorno_contour_path
-  .content.contour_video
-    %p=image_tag 'basecontorno/video/contour_title.png'
-    .video
-    %p=image_tag 'basecontorno/video/obten_el_look_pleca.png'
+  .content.foundation_video
+    .wrap
+      %p=image_tag 'basecontorno/video/contour_title.png'
+      %p
+        %b= @question
+      %p
+        %iframe{:allowfullscreen => "", :frameborder => "0", :height => "540", :src => "https://www.youtube.com/embed/#{@video}", :width => "960"}
+      %p=image_tag 'basecontorno/video/obten_el_look_pleca.png', class: 'pleca'
+      %ul.nobullet.producto-list
+        - @productos.each do |producto|
+          %li
+            .prod
+              .imagen
+                =link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
+              %h5.marca
+                = producto.marca.marca.upcase
+              %h5
+                =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), producto_ver_path(producto.slug)
+      %h3 ¿Tienes más beauty concerns?
+      %h4 Descubre más videos de nuestros expertos
+      .table.full.videos
+        .tcell.t33
+          %iframe{:allowfullscreen => "", :frameborder => "0", :height => "169", :src => "https://www.youtube.com/embed/", :width => "300"}
+        .tcell.t33
+          %iframe{:allowfullscreen => "", :frameborder => "0", :height => "169", :src => "https://www.youtube.com/embed/", :width => "300"}
+        .tcell.t33
+          %iframe{:allowfullscreen => "", :frameborder => "0", :height => "169", :src => "https://www.youtube.com/embed/", :width => "300"}
   .footer
     .wrap
       .table.full
@@ -23,3 +46,14 @@
             %li=link_to image_tag('basecontorno/home/tw.png'), 'https://twitter.com/SephoraMX', target: :blank
             %li=link_to image_tag('basecontorno/home/yt.png'), 'http://www.youtube.com/SephoraMex', target: :blank
             %li=link_to image_tag('basecontorno/home/ig.png'), 'https://instagram.com/sephoramx/', target: :blank
+= content_for :footer do
+  %link{:href => "//cdn.jsdelivr.net/jquery.slick/1.5.6/slick.css", :rel => "stylesheet", :type => "text/css"}
+  %script{:src => "//cdn.jsdelivr.net/jquery.slick/1.5.6/slick.min.js", :type => "text/javascript"}
+  :javascript
+    $('.producto-list').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      nextArrow: '<a href="#" class="next"></a>',
+      prevArrow: '<a href="#" class="prev"></a>'
+    });

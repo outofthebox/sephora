@@ -14,18 +14,26 @@
       .faces
         .table.full
           .tcell.t50
-            %p=image_tag 'basecontorno/contour/concern/ovalado_facechart.jpg'
-            %p=image_tag 'basecontorno/contour/concern/ovalado_txt.jpg'
+            %a{:href => basecontorno_contour_video_path('ovalado')}
+              %p=image_tag 'basecontorno/contour/concern/ovalado_facechart.jpg'
+              =image_tag 'basecontorno/contour/concern/flecha_cont.png', class: 'arrow'
+              %p=image_tag 'basecontorno/contour/concern/ovalado_txt.jpg'
           .tcell.t50
-            %p=image_tag 'basecontorno/contour/concern/redondo_facechart.jpg'
-            %p=image_tag 'basecontorno/contour/concern/redondo_txt.jpg'
+            %a{:href => basecontorno_contour_video_path('redondo')}
+              %p=image_tag 'basecontorno/contour/concern/redondo_facechart.jpg'
+              =image_tag 'basecontorno/contour/concern/flecha_cont.png', class: 'arrow'
+              %p=image_tag 'basecontorno/contour/concern/redondo_txt.jpg'
         .table.full
           .tcell.t50
-            %p=image_tag 'basecontorno/contour/concern/cuadrado_facechart.jpg'
-            %p=image_tag 'basecontorno/contour/concern/cuadrado_txt.jpg'
+            %a{:href => basecontorno_contour_video_path('cuadrado')}
+              %p=image_tag 'basecontorno/contour/concern/cuadrado_facechart.jpg'
+              =image_tag 'basecontorno/contour/concern/flecha_cont.png', class: 'arrow'
+              %p=image_tag 'basecontorno/contour/concern/cuadrado_txt.jpg'
           .tcell.t50
-            %p=image_tag 'basecontorno/contour/concern/corazon_facechart.jpg'
-            %p=image_tag 'basecontorno/contour/concern/corazon_txt.jpg'
+            %a{:href => basecontorno_contour_video_path('corazon')}
+              %p=image_tag 'basecontorno/contour/concern/corazon_facechart.jpg'
+              =image_tag 'basecontorno/contour/concern/flecha_cont.png', class: 'arrow'
+              %p=image_tag 'basecontorno/contour/concern/corazon_txt.jpg'
   .footer
     .wrap
       .table.full
