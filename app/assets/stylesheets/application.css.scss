@@ -3776,11 +3776,121 @@ a.close {
     }
   }
 }
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-width: 480px) {
   #basecontorno {
     width: 100%;
     min-width: 100%;
     max-width: 100%;
     margin: 0;
-  } 
+    .table, .tcell, .wrap {
+      display: block;
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+    }
+    .header {
+      padding-top: 15px;
+      a {
+        display: block;
+        text-align: center;
+      }
+      .menu {
+        text-align: center;
+        margin-top: 15px;
+        li {
+          width: 100%;
+        }
+      }
+    }
+    .first-content {
+      .modelo {
+        max-width: 100%;
+      }
+    }
+    .pleca {
+      max-width: 100%;
+    }
+    .products {
+      .tcell {
+        padding: 0;
+      }
+      .prod {
+        padding: 15px 0;
+        a {
+          display: block;
+          width: 100%;
+        }
+        .img {
+          width: 100%;
+          height: auto;
+          text-align: center;
+          padding: 15px 0;
+          margin: 0;
+          img {
+            width: auto;
+          }
+        }
+      }
+    }
+    .level {
+      margin: 15px 0 !important;
+    }
+    .second-content {
+      text-align: center;
+      h3 {
+        text-align: center;
+      }
+    }
+    .explore {
+      text-align: center;
+      float: none;
+      margin: 15px 0;
+    }
+  }
+  .fundation_concern {
+    ul {
+      li {
+        width: 100%;
+        img {
+          width: 100%;
+          &.arrow {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .contour_concern {
+    .faces {
+      width: 100% !important;
+    }
+    .arrow {
+      display: none;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25% !important;
+    padding-top: 30px !important; height: 0; overflow: hidden;
+  }
+   
+  .video-container iframe,
+  .video-container object,
+  .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .foundation_video {
+    .producto-list {
+      width: 100% !important;      
+      li {
+      }
+    }
+  }
 }
