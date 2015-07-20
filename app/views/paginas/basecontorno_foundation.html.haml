@@ -74,7 +74,7 @@
             - ['3548752073233', '604214849600', '811999021217'].each do |upc|
               - prod = Producto.find_by_upc(upc)
               .tcell.t33
-                %a.prod{href: producto_ver_path(prod)}
+                %a.prod{href: producto_ver_path(prod.slug)}
                   .img
                     =image_tag prod.foto.url(:chico)
                   %p

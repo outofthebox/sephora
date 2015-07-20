@@ -146,6 +146,15 @@ Sephora::Application.routes.draw do
 
     # miraclecushion
     get 'miraclecushion', :to => 'mobile#miraclecushion', as: :miraclecushion
+
+    # base contorno
+    get 'base-contorno', :to => 'paginas#basecontorno', as: :basecontorno
+    get 'base-contorno/foundation', :to => 'paginas#basecontorno_foundation', as: :basecontorno_foundation
+    get 'base-contorno/foundation/concern', :to => 'paginas#basecontorno_foundation_concern', as: :basecontorno_foundation_concern
+    get 'base-contorno/foundation/video/:tipo', :to => 'paginas#basecontorno_foundation_video', as: :basecontorno_foundation_video
+    get 'base-contorno/contour', :to => 'paginas#basecontorno_contour', as: :basecontorno_contour
+    get 'base-contorno/contour/concern', :to => 'paginas#basecontorno_contour_concern', as: :basecontorno_contour_concern
+    get 'base-contorno/contour/video/:tipo', :to => 'paginas#basecontorno_contour_video', as: :basecontorno_contour_video
   end
 
 
