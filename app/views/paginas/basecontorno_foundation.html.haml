@@ -26,7 +26,7 @@
             - ['3378872072713', '818015012921', '3548752030748'].each do |upc|
               - prod = Producto.find_by_upc(upc)
               .tcell.t33
-                %a.prod{href: producto_path(prod.slug)}
+                %a.prod{href: producto_ver_path(prod.slug)}
                   .img
                     =image_tag prod.foto.url(:chico)
                   %p
@@ -60,7 +60,7 @@
             - ['3378872074830', '3548752061636', '713757273701'].each do |upc|
               - prod = Producto.find_by_upc(upc)
               .tcell.t33
-                %a.prod{href: producto_path(prod.slug)}
+                %a.prod{href: producto_ver_path(prod.slug)}
                   .img
                     =image_tag prod.foto.url(:chico)
                   %p
@@ -74,7 +74,7 @@
             - ['3548752073233', '604214849600', '811999021217'].each do |upc|
               - prod = Producto.find_by_upc(upc)
               .tcell.t33
-                %a.prod{href: producto_path(prod)}
+                %a.prod{href: producto_ver_path(prod)}
                   .img
                     =image_tag prod.foto.url(:chico)
                   %p
