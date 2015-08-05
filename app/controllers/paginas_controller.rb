@@ -270,58 +270,58 @@ class PaginasController < ApplicationController
     render layout: 'contorno'
   end
   def basecontorno_foundation_video
-    data = {
+    @data = {
       sensible: {
         upcs: ['3548752038584','3548752073271','736150129765','3378872067146','3378872067177','713757273701','3522930010180'],
         question: '¿Cuál es la manera más fácil y práctica de cubrir las imperfecciones como rojeces y manchas?',
-        video: ''
+        video: 'e0YImM6lldo'
       },
       seca: {
         upcs: ['098132364329','098132368983','098132132096','3378872067139'],
         question: '¿Cuál es la textura recomendada y la técnica de aplicación para no incrementar las líneas o resecar la piel?',
-        video: ''
+        video: 'PhV1KSG3pgE'
       },
       mixta: {
         upcs: ['899930000828','3378872072713','3548752030601','3548752079068','3378872067177','3378872067146'],
         question: '¿Cuáles son los motivos por los cuales la base de maquillaje no dura?',
-        video: ''
+        video: 'aMvyPGsVOks'
       },
       grasa: {
         upcs: ['607710016606','818015012983','713757273701'],
         question: '¿Qué base de maquillaje es el ideal para el tipo de piel grasa o con poros?',
-        video: ''
+        video: 'rHUMCa4CRjc'
       }
     }
-    result = data[params[:tipo].to_sym]
+    result = @data[params[:tipo].to_sym]
     @productos = Producto.where(:upc => result[:upcs])
     @question = result[:question]
     @video = result[:video]
     render layout: 'contorno'
   end
   def basecontorno_contour_video
-    data = {
+    @data = {
       corazon: {
         upcs: ['3548752083737','818015011832','879634001932','3378872075141','3378872067245','3378872067337','3378872067184','3522930010180','736150133502'],
         question: '¿Cuál es la técnica que debo utilizar para balancear mi rostro con forma de corazón?',
-        video: ''
+        video: 'ukcIFdaGjP4'
       },
       ovalado: {
         upcs: ['094800348776','3548752030601','713757273701','3378872067160','3378872067207','3378872067139','736150082909','3348901130738'],
         question: '¿Cuál es la técnica que debo utilizar para resaltar mis pómulos si mi rostro es ovalado?',
-        video: ''
+        video: 'd-0WzcYM5Iw'
       },
       cuadrado: {
         upcs: ['811999021200','877231000822','818015011917','818015010316','877231001942','3548752079068','811999021224','3378872067139','3378872067245'],
         question: '¿Cuál es la técnica que debo utilizar para suavizar mis ángulos de la mandíbula si mi rostro es cuadrado?',
-        video: ''
+        video: 'udIIsVqAloA'
       },
       redondo: {
         upcs: ['3378872085423','689304184601','3548752067355','713757273701','3548752043816','3548752079068','3378872067207'],
         question: '¿Cuál es la técnica que debo utilizar para crear ángulos  si mi rostro es redondo?',
-        video: ''
+        video: 'R90sdBbMGIw'
       }
     }
-    result = data[params[:tipo].to_sym]
+    result = @data[params[:tipo].to_sym]
     @productos = Producto.where(:upc => result[:upcs])
     @question = result[:question]
     @video = result[:video]

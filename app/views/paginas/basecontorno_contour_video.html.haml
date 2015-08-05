@@ -28,15 +28,10 @@
       %h3 ¿Tienes más beauty concerns?
       %h4 Descubre más videos de nuestros expertos
       .table.full.videos
-        .tcell.t33
-          .video-container
-            %iframe{:allowfullscreen => "", :frameborder => "0", :height => "169", :src => "https://www.youtube.com/embed/", :width => "300"}
-        .tcell.t33
-          .video-container
-            %iframe{:allowfullscreen => "", :frameborder => "0", :height => "169", :src => "https://www.youtube.com/embed/", :width => "300"}
-        .tcell.t33
-          .video-container
-            %iframe{:allowfullscreen => "", :frameborder => "0", :height => "169", :src => "https://www.youtube.com/embed/", :width => "300"}
+        - @data.except(params[:tipo].to_sym).each do |key, result|
+          .tcell.t33
+            .video-container
+              %iframe{:allowfullscreen => "", :frameborder => "0", :height => "169", :src => "https://www.youtube.com/embed/#{result[:video]}", :width => "300"}
   .footer
     .wrap
       .table.full
