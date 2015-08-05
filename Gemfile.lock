@@ -288,7 +288,6 @@ GEM
       websocket (~> 1.0.4)
     sendgrid (1.2.0)
       json
-      json
     sitemap_generator (5.0.0)
       builder
     slop (3.6.0)
@@ -397,3 +396,6 @@ DEPENDENCIES
   unicorn
   watu_table_builder
   yaml_db
+
+BUNDLED WITH
+   1.10.5
