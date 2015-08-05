@@ -98,7 +98,7 @@
   =link_to "X", "#", id: 'close-popup-video'
   =link_to "¡Comienza ahora!", "http://www.sephora.com.mx/base-contorno?utm_source=SitioWeb&utm_medium=VideoIntro&utm_campaign=MicrositioBaseContorno", class: 'popup-decubrelo'
   .video-container
-    %iframe{:allowfullscreen => "", :frameborder => "0", :height => "540", :src => "https://www.youtube.com/embed/2R70lqhMid0", :width => "960"}
+    %iframe{:allowfullscreen => "", :frameborder => "0", :height => "540", :src => "https://www.youtube.com/embed/2R70lqhMid0?autoplay=1", :width => "960"}
 :javascript
   $("#close-popup-video").on("click", function(){
     $("#popup-video").fadeOut();
