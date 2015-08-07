@@ -396,6 +396,3 @@ DEPENDENCIES
   unicorn
   watu_table_builder
   yaml_db
-
-BUNDLED WITH
-   1.10.5

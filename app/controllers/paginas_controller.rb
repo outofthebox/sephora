@@ -274,7 +274,7 @@ class PaginasController < ApplicationController
       sensible: {
         upcs: ['3548752038584','3548752073271','736150129765','3378872067146','3378872067177','713757273701','3522930010180'],
         question: '¿Cuál es la manera más fácil y práctica de cubrir las imperfecciones como rojeces y manchas?',
-        video: 'e0YImM6lldo'
+        video: 'gSeA2slU-DA'
       },
       seca: {
         upcs: ['098132364329','098132368983','098132132096','3378872067139'],
