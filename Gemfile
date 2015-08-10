@@ -70,3 +70,4 @@ group :test do
   gem 'database_cleaner'
   gem 'selenium-webdriver'
 end
+gem 'rack-attack'
