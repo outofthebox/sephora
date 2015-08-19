@@ -292,21 +292,6 @@ Sephora::Application.routes.draw do
   get '/lista_eventos', :to => 'paginas#lista_eventos', :as => 'eventos'
   get '/beautyunoauno', :to => 'paginas#beauty', :as => 'beautyunoauno'
 
-  #ANIVERSARIO
-  get '365'    => 'paginas#aniversario', :as => :aniversario
-  get 'beautyissue/tienda/:tienda'    => 'paginas#aniversario', :as => :aniversario_tienda
-  get 'beautyissue/tienda/:tienda/fecha/:fecha'    => 'paginas#aniversario', :as => :aniversario_tienda_fecha
-
-  get '365dias/eventos'    => 'paginas#aniversario_eventos', :as => :aniversario_eventos
-
-  get '365dias/evento/nuevo'    => 'paginas#aniversario_evento_nuevo', :as => :aniversario_evento_nuevo
-  post '365dias/evento/nuevo'    => 'paginas#aniversario_evento_nuevo_post', :as => :aniversario_evento_nuevo
-
-  get '365dias/evento/:id/editar'    => 'paginas#aniversario_evento_editar', :as => :aniversario_evento_editar
-  put '365dias/evento/:id/editar'    => 'paginas#aniversario_evento_editar_post', :as => :aniversario_evento_editar
-
-  get '365dias/terminos-y-condiciones'  => 'paginas#aniversario_terminos', :as => 'aniversario_terminos'
-
   get 'sephoragifts' => 'paginas#sephoragifts'
 
   #MARCJACOBS
@@ -348,14 +333,6 @@ Sephora::Application.routes.draw do
   get "/admin/clear", :to => "application#clear_cache", :as => "clear_cache"
 
 
-  #instaCosas
-  get "sephoralabios", :to => 'instagram#index', :as => "sephoralabios"
-  get "sephoralabios/admin", :to => 'instagram#admin', :as => "sephoralabios_admin"
-  get "sephoralabios/admin/aprobar/:id", :to => 'instagram#admin_aprobar', :as => "sephoralabios_admin_aprobar"
-  get "sephoralabios/suscribir", :to => 'instagram#suscribe', :as => "sephoralabios_suscribe"
-  post "sephoralabios/suscribir", :to => 'instagram#fetcher', :as => "sephoralabios_suscribe_post"
-
-
   #Comunicados
   get   'comunicado', :to => 'paginas#comunicado', :as => 'comunicado'
 
@@ -393,29 +370,6 @@ Sephora::Application.routes.draw do
     match 'events', to: 'administracion#events', via: :get
     match 'store_events', to: 'administracion#store_events', via: :get
   end
-
-  scope path: :retomakeover, as: "aniversario_catorce" do
-    match "/", to: "aniversario_catorce#index", :via => :get
-    match "makeovers", to: "aniversario_catorce#makeovers", :via => :get
-    match "big_prices", to: "aniversario_catorce#big_prices", :via => :get
-    match "event_map", to: "aniversario_catorce#event_map", :via => :get
-    match "teaser", to: "aniversario_catorce#teaser", :via => :get, :as => "teaser"
-    match "vip", to: "aniversario_catorce#vip_entrance", :via => :get, :as => "vip"
-    match "vip", to: "aniversario_catorce#vip_signin", :via => :post, :as => "vip_signin"
-
-
-    match "ver/:marca", to: "aniversario_catorce#ver_marca", :via => :get, :as => "ver"
-    scope path: :beauty_trip, as: "beauty_trip" do
-      match "/", to: "aniversario_catorce#beauty_trip", :via => :get
-      match "init", to: "aniversario_catorce#trivia_init", :via => :post, :as => "init"
-      match "start", to: "aniversario_catorce#trivia_start", :via => :get, :as => "start"
-      match "finish", to: "aniversario_catorce#trivia_finish", :via => :post, :as => "finish"
-      match "salvada", to: "aniversario_catorce#trivia_salvada", :via => :get, :as => "salvada"
-      match "gracias", to: "aniversario_catorce#trivia_gracias", :via => :get, :as => "gracias"
-      match "participantes", to: "aniversario_catorce#trivia_participantes", :via => :get, :as => "participantes"
-    end
-  end
-
 
   #brand-minisite
   get 'sephora-collection/', :to => 'sephora_collection#index', :as => 'sephora_collection_index'

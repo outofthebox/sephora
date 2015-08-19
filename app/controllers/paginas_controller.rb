@@ -107,7 +107,7 @@ class PaginasController < ApplicationController
   end
 
   def error_404
-    render :file => "error/404", :status => 404
+    render :file => "error/404", :status  => 200
   end
 
   #ANIVERSARIO
