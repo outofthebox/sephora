@@ -3477,15 +3477,16 @@ a.close {
     }
     .line-foundation {
       top: 435px;
-      left: 160px;
+      left: 220px;
     }
     .contour {
       top: 525px;
       left: 260px;
     }
     .line-contour {
-      top: 530px;
-      left: 85px;
+      top: 490px;
+      left: 95px;
+      transform: rotate(24deg);
     }
   }
   .footer {
