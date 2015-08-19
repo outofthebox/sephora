@@ -8,6 +8,20 @@
           %li=link_to "Foundation", basecontorno_foundation_path
           %li=link_to "Contour", basecontorno_contour_path
   .content.foundation
+    .table.full.black
+      =image_tag 'basecontorno/foundation/concerns_pleca.png', class: 'pleca'
+    .concern.table.full
+      .wrap
+        .tcell.t30
+        .tcell.t70.second-content
+          %h3
+            ¡CONOCEMOS TU PREOCUPACIÓN Y SABEMOS CÓMO SOLUCIONARLA!
+          %h4 ¿Quieres lograr una base de maquillaje perfecta?
+          %p
+            ¡Identifica tu tipo de piel y descúbrelo
+            %br
+            con nuestros Beauty Experts!
+          =link_to image_tag('basecontorno/foundation/comienza_btn.png'), basecontorno_foundation_concern_path, class: 'link'
     .wrap
       .table.full.first-content
         .tcell.t50
@@ -36,20 +50,6 @@
             =link_to "Explora Todas Nuestras Bases >", "http://www.sephora.com.mx/categoria/foundation?utm_source=SitioWeb&utm_medium=Micrositio&utm_campaign=Foundation", class: 'explore'
         .tcell.t50
           =image_tag 'basecontorno/foundation/foundation_modelo.png', class: 'modelo'
-    .table.full.black
-      =image_tag 'basecontorno/foundation/concerns_pleca.png', class: 'pleca'
-    .concern.table.full
-      .wrap
-        .tcell.t30
-        .tcell.t70.second-content
-          %h3
-            ¡CONOCEMOS TU PREOCUPACIÓN Y SABEMOS CÓMO SOLUCIONARLA!
-          %h4 ¿Quieres lograr una base de maquillaje perfecta?
-          %p
-            ¡Identifica tu tipo de piel y descúbrelo
-            %br
-            con nuestros Beauty Experts!
-          =link_to image_tag('basecontorno/foundation/comienza_btn.png'), basecontorno_foundation_concern_path, class: 'link'
     .table.full.brown
       =image_tag 'basecontorno/foundation/bff_pleca.png', class: 'pleca'
     .wrap
