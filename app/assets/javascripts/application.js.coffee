@@ -1,4 +1,4 @@
-# = require jquery
+f#btn_mail_enviar# = require jquery
 # = require jquery_ujs
 # = require jquery.ui.all
 # = require jquerycookie
@@ -120,33 +120,9 @@ if path == '/'
           $("#mod").fadeIn 400
           $("#mod").removeClass("register").addClass("thanks")
 
-  $("#makkenregistro").submit (ev) ->
-    ev.preventDefault()
-    ev.stopPropagation()
-    nombre = $("#makkenregistro input.nombre").val();
-    correo = $("#makkenregistro input.correo").val();
-    $.post "http://pdc.makken.com.mx/sephora/registro_makken.php", {nombre: nombre, email: correo}, (response) ->
-      if response.error
-      else
-        $("#registro_popup").fadeOut 400, ->
-          $("#registro_popup form").hide()
-          $("#registro_popup .txt_registro_popup").hide()
-          $("#registro_popup .texto-gracias").show()
-          $("#registro_popup").fadeIn 400
-          $("#registro_popup").removeClass("register").addClass("thanks")
-
 $("a.close").live "click", (e) ->
   e.preventDefault()
   $("#mod, #modsuc").fadeOut()
-
-#Registro
-$("#btn_mail_enviar").live "click", (e) ->
-  e.preventDefault()
-  $("#registro_popup").fadeIn()
-
-$("a.close").live "click", (e) ->
-  e.preventDefault()
-  $("#registro_popup").fadeOut()
 
 #Wallpapers
 $("a.back").live "click", (e) ->
