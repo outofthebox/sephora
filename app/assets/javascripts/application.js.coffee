@@ -1,4 +1,4 @@
-f#btn_mail_enviar# = require jquery
+# = require jquery
 # = require jquery_ujs
 # = require jquery.ui.all
 # = require jquerycookie
