@@ -198,6 +198,7 @@ namespace :productos do
     raise "Necesario especificar ruta a FILE.csv" unless ENV['FILE']
 
     file = ENV['FILE'];
+    headers = ENV['HEADERS'] rescue false
     data = []
 
     if ENV["REMOTE"]
@@ -223,30 +224,38 @@ namespace :productos do
         req.headers['Accept'] = 'application/csv'
       end
 
-      csv = CSV.parse(request.body, :headers => true)
+      csv = CSV.parse(request.body, :headers => headers)
     else
 		  csv_text = File.read(file)
-		  csv = CSV.parse(csv_text, :headers => true)
+		  csv = CSV.parse(csv_text, :headers => headers)
     end
 
-		csv.each do |row| upc = row[0]; precio_nuevo = row[1]; precio_nuevo = precio_nuevo.to_f; 	data << {:upc => upc, :precio_nuevo => precio_nuevo}; end
+		csv.each do |row| code = row[0]; precio_nuevo = row[1]; precio_nuevo = precio_nuevo.to_f; 	data << {:code => code, :precio_nuevo => precio_nuevo}; end
 
     case ENV["CODE"]
       when "sap" || "SAP"
-        productos = Producto.where(:sap => data.map{|d| d[:upc]})
+        productos = Producto.where(:sap => data.map{|d| d[:code]})
+        data.map{|d|
+          if (producto = productos.reject{|p| p unless p.sap == d[:code] }.first)
+            if producto
+              d[:precio_actual] = producto.precio
+              d[:producto] = producto.nombre
+              d[:id] = producto.id
+            end
+          end
+        }
       else
-		    productos = Producto.where(:upc => data.map{|d| d[:upc]})
+		    productos = Producto.where(:upc => data.map{|d| d[:code]})
+        data.map{|d|
+          if (producto = productos.reject{|p| p unless p.upc == d[:code] }.first)
+            if producto
+              d[:precio_actual] = producto.precio
+              d[:producto] = producto.nombre
+              d[:id] = producto.id
+            end
+          end
+        }
     end
-
-		data.map{|d|
-      if (producto = productos.reject{|p| p unless p.upc == d[:upc] }.first)
-        if producto
-          d[:precio_actual] = producto.precio
-          d[:producto] = producto.nombre
-          d[:id] = producto.id
-        end
-      end
-    }
 
     precios = []
     ids = []
