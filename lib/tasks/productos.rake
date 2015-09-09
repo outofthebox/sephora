@@ -1,6 +1,6 @@
 require 'rake'
 
-namespace :productos do  
+namespace :productos do
   task :esconder_incompletos => :environment do
     puts "--- Buscando Productos sin Descripcion ni Imagen"
     sfd = Producto.where({:foto_file_name => nil, :publicado => true, :descripcion => nil})
@@ -38,7 +38,7 @@ namespace :productos do
       scheme = i.scheme
       host = i.host
       path = i.path rescue '/'
-      query = i.query rescue '' 
+      query = i.query rescue ''
 
       host_path = "#{scheme}://#{host}"
       full_path = "#{scheme}://#{host}#{path}#{query}"
@@ -96,13 +96,13 @@ namespace :productos do
     data = []
 
     if ENV["REMOTE"]
-      
+
       i = URI(file)
 
       scheme = i.scheme
       host = i.host
       path = i.path rescue '/'
-      query = i.query rescue '' 
+      query = i.query rescue ''
 
       host_path = "#{scheme}://#{host}"
       full_path = "#{scheme}://#{host}#{path}#{query}"
@@ -150,13 +150,13 @@ namespace :productos do
     data = []
 
     if ENV["REMOTE"]
-      
+
       i = URI(file)
 
       scheme = i.scheme
       host = i.host
       path = i.path rescue '/'
-      query = i.query rescue '' 
+      query = i.query rescue ''
 
       host_path = "#{scheme}://#{host}"
       full_path = "#{scheme}://#{host}#{path}#{query}"
@@ -201,13 +201,13 @@ namespace :productos do
     data = []
 
     if ENV["REMOTE"]
-      
+
       i = URI(file)
 
       scheme = i.scheme
       host = i.host
       path = i.path rescue '/'
-      query = i.query rescue '' 
+      query = i.query rescue ''
 
       host_path = "#{scheme}://#{host}"
       full_path = "#{scheme}://#{host}#{path}#{query}"
@@ -228,10 +228,15 @@ namespace :productos do
 		  csv_text = File.read(file)
 		  csv = CSV.parse(csv_text, :headers => true)
     end
-    
+
 		csv.each do |row| upc = row[0]; precio_nuevo = row[1]; precio_nuevo = precio_nuevo.to_f; 	data << {:upc => upc, :precio_nuevo => precio_nuevo}; end
 
-		productos = Producto.where(:upc => data.map{|d| d[:upc]})
+    case ENV["CODE"]
+      when "sap" || "SAP"
+        productos = Producto.where(:sap => data.map{|d| d[:upc]})
+      else
+		    productos = Producto.where(:upc => data.map{|d| d[:upc]})
+    end
 
 		data.map{|d|
       if (producto = productos.reject{|p| p unless p.upc == d[:upc] }.first)
@@ -333,7 +338,7 @@ namespace :productos do
 
     file = ENV['FILE'];
     data = []
-    
+
     if ENV["REMOTE"]
       rm = RemoteFile.new(file)
       csv = CSV.parse(rm.request.body, :headers => true)
@@ -342,7 +347,7 @@ namespace :productos do
       csv = CSV.parse(csv_text, :headers => true)
     end
 
-    csv.each do |c| 
+    csv.each do |c|
       upc = c["UPC"] rescue nil
       sap = c["SAP"] rescue nil
       unless upc == nil
