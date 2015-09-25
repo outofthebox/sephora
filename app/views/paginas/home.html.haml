@@ -8,7 +8,7 @@
     .ante.jesus
     .contenedor
       .slider
-        %a.diapositiva.first.visible{:href=> "http://www.sephora.com.mx/base-contorno?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=MicrositioBC"}
+        %a.diapositiva.first.visible{:href=> "http://www.sephora.com.mx/marcasexclusivas?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=MarcasExclusivas"}
           =image_tag "home/banners/main_banner_animacion.jpg"
         %a.diapositiva{:href => "#"}
           =image_tag "home/banners/playa_banner.jpg"
@@ -93,29 +93,3 @@
     .tcell.t50
       %a{ :href => "http://www.sephora.com.mx/lista_eventos?utm_source=SitioWeb&utm_medium=BannerInfDer&utm_campaign=Eventos" }
         =image_tag "home/banners/inferior/derecho.jpg"
-#popup-video
-  =link_to "X", "#", id: 'close-popup-video'
-  =link_to "¡Comienza ahora!", "http://www.sephora.com.mx/base-contorno?utm_source=SitioWeb&utm_medium=VideoIntro&utm_campaign=MicrositioBaseContorno", class: 'popup-decubrelo'
-  .video-container
-    %iframe#player{:allowfullscreen => "", :frameborder => "0", :height => "540", :src => "https://www.youtube.com/embed/2R70lqhMid0?autoplay=1&enablejsapi=1", :width => "960"}
-
-:javascript
-  var tag = document.createElement('script');
-
-  tag.src = "https://www.youtube.com/iframe_api";
-  var firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-  var player;
-  function onYouTubeIframeAPIReady() {
-    player = new YT.Player('player', {
-      videoId: '2R70lqhMid0',
-      playerVars: { 'autoplay': 1, 'controls': 0 },
-      events: {}
-    });
-  }
-
-  $("#close-popup-video").on("click", function(){
-    player.stopVideo()
-    $("#popup-video").fadeOut();
-  });
