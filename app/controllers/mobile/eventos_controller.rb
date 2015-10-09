@@ -1,6 +1,7 @@
 class Mobile::EventosController < MobileController
 	def index
-    @eventos = Event.all
+    m = [78, 75, 92, 79, 77, 76, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91]
+    @eventos = Event.all.index_by(&:id).values_at(*m) rescue []
     @tiendas = Tienda.all
   end
 
