@@ -13,6 +13,8 @@ class PaginasController < ApplicationController
     @careoca_bath = Producto.where(:upc => ["3378872079781", "3378872079743", "3378872079750", "3378872079767", "3378872079736"])
   end
 
+  def beautyfair; end
+
   def get_new_search
     @search_cats = []; 
     

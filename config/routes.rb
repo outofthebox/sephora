@@ -390,6 +390,7 @@ Sephora::Application.routes.draw do
   get 'friendsandfamily/ya_descargaste', :to => 'friendsandfamily#ya_descargaste', :as => 'friendsandfamily_ya_descargaste'
   get 'friendsandfamily/delete_cookie', :to => 'friendsandfamily#delete_cookie', :as => 'friendsandfamily_delete_cookie'
 
+  match "/beautyfair", to: "paginas#beautyfair", via: [:get, :post], as: "beautyfair"
 
   #sitemap
   get 'sitemap.xml', :to => 'sitemap#index', :defaults => { :format => 'xml' }
