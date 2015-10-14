@@ -1,0 +1,13 @@
+- provide :titulo, ''
+%section#seccion-ver.consultores
+  = image_tag("beautyfair/bf2015_landingV2_r1_c1.jpg", {class: "img-responsive img-landing-mobile"})
+  = image_tag("beautyfair/bf2015_landingV2_r2_c1.jpg", {class: "img-responsive img-landing-mobile"})
+  = image_tag("beautyfair/bf2015_landingV2_r3_c1.jpg", {class: "img-responsive img-landing-mobile"})
+  #reserva
+    = link_to image_tag("beautyfair/bf2015_landingV2_r4_c1.jpg", {class: "img-responsive img-landing-mobile"}), eventos_path({utm_source: "SitioWeb", utm_medium: "Landing", utm_campaign: "beautyfair"})
+  #marcas_invitadas
+    = image_tag("beautyfair/bf2015_landingV2_r5_c1.jpg", {class: "img-responsive img-landing-mobile"})
+:scss
+  .img-landing-mobile{
+    width: 100%;
+  }

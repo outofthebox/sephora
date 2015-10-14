@@ -68,6 +68,8 @@ Sephora::Application.routes.draw do
     scope path: :marca, :as => "marca" do
     end
 
+    #Landings
+    match "/beautyfair", to: "mobile/landings#beautyfair", via: [:get, :post], as: "beautyfair"
 
     match "/lista_eventos", :to => 'mobile/eventos#index', :as => 'eventos'
     match "/eventos", :to => 'mobile/eventos#index', :as => 'eventos'
