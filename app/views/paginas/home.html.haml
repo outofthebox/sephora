@@ -8,8 +8,8 @@
     .ante.jesus
     .contenedor
       .slider
-        %a.diapositiva.first.visible{:href=> "http://www.sephora.com.mx/marcasexclusivas?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=MarcasExclusivas"}
-          =image_tag "home/banners/main_banner_animacion.jpg"
+        %a.diapositiva.first.visible{:href=> "http://www.sephora.com.mx/sets?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=Holiday2015"}
+          =image_tag "holiday/2015/banner1.jpg"
   :coffee
     $ ->
       a = new Paginas.Index()
@@ -29,6 +29,7 @@
 #linea-rosa
 - if @bestsellers and (bestsellers_productos = @bestsellers.producto_seccion) and bestsellers_productos.any?
   #best-sellers
+    = image_tag("holiday/2015/mono.png", {class: "mono-holiday"})
     %h3 SEPHORA'S PICKS
     #slider-wrap
       %ul.nobullet.nolist.bestsellers#bestsellers.jcarousel-skin-tango
@@ -49,6 +50,7 @@
             /   %small= number_to_currency producto.precio
 - if @lonuevo and (lonuevo_productos = @lonuevo.producto_seccion) and lonuevo_productos.any?
   #best-sellers
+    = image_tag("holiday/2015/mono.png", {class: "mono-holiday"})
     %h3 LO NUEVO
     #slider-wrap
       %ul.nobullet.nolist#lonuevo.jcarousel-skin-tango
@@ -66,7 +68,8 @@
                 = lonuevo_producto.descripcion
 
   #hotnow
-    %h3.ht_div HOT NOW
+    //%h3.ht_div HOT NOW
+    = image_tag("holiday/2015/mono-hotnow.png", {class: "mono-holiday"})
     #slider-wrap
       %ul.nobullet.nolist#hotnow.jcarousel-skin-tango
         - seccion_productos = @contenido.producto_seccion.limit(6)

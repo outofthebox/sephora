@@ -103,6 +103,16 @@ img { margin: 0; padding: 0; }
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Sephora';
+    src: url('/fuentes/Sephora.eot');
+    src: url('/fuentes/Sephora.eot?#iefix') format('embedded-opentype'),
+         url('/fuentes/Sephora.woff') format('woff'),
+         url('/fuentes/Sephora.ttf') format('truetype'),
+         url('/fuentes/Sephora.svg#Sephora') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 @mixin transition($duracion, $propiedad, $estilo) {
   transition: $duracion $propiedad $estilo;
@@ -736,6 +746,12 @@ ul.breadcrumbs{
   top:160px;
 }
 
+.mono-holiday{
+  margin: auto;
+  margin-bottom: 30px;
+  display: block;
+}
+
 .loader {
     text-align: center;
 }
@@ -1133,9 +1149,10 @@ ul.breadcrumbs{
         background: image-url('logo.gif');
         margin: 0 auto;
         &.holiday{
-          background: image-url('holiday/2013/logo.png') !important;
-          height: 31px;
-          width: 213px;
+          background: image-url('holiday/2015/logo.png') no-repeat center center scroll !important;
+          background-size: cover;
+          height: 29px;
+          width: 223px;
         }
         &.lips{
           background: image-url('home/lips/sephora_kiss_logo.jpg') !important;
@@ -1629,7 +1646,7 @@ ul.breadcrumbs{
     h3 {
       text-transform: uppercase;
       font-weight: 100 !important;
-      font-family: 'Avant', Helvetica, Arial;
+      font-family: 'Sephora', 'Avant', Helvetica, Arial;
       letter-spacing: 1px;
       font-size: 2.5em;
       margin-bottom: 30px;
