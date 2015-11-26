@@ -326,7 +326,7 @@ namespace :productos do
 		  csv = CSV.parse(csv_text, :headers => true)
 		end
 
-		csv.each do |c| raise data << c[0] unless c[0] == nil; end
+		csv.each do |c| data << c[0] unless c[0] == nil; end
 
 		descontinuados_before =  Producto.where(:publicado => false).count
 		descontinuados = Producto.where(:upc => data)
