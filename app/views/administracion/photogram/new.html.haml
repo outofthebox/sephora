@@ -3,9 +3,9 @@
     %h3 Suscribirse a publicaciones de instagram
   .page-container
     .row
-      %form.form{action: navidadsephora_suscribe_path, method: "post"}
+      %form.form{action: admin_photogram_index_path, method: "post"}
         = hidden_field_tag(:aspect, "media")
-        = hidden_field_tag(:callback_url, admin_photogram_suscribe_url)
+        = hidden_field_tag(:callback_url, navidadsephora_suscribe_url)
         .col-sm-12
           .form-group
             .input-group
