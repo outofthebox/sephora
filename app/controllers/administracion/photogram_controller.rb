@@ -1,4 +1,5 @@
 class Administracion::PhotogramController < AdministracionController
+  skip_before_filter :verify_authenticity_token
 
   def new
     @photogram =  OpenStruct.new({
@@ -18,7 +19,7 @@ class Administracion::PhotogramController < AdministracionController
       callback_url: params[:callback_url],
     }
     Instagram.create_subscription(sub_params)
-    redirect_to admin_photogram_path("") and return
+    redirect_to admin_photogram_path("")
   end
 
   def update
@@ -29,7 +30,8 @@ class Administracion::PhotogramController < AdministracionController
   end
 
   def suscribe
-    render :text => "#{params['hub.challenge']}"
+    text = params['hub.challenge']
+    render :text => text
   end
 
   def fetch

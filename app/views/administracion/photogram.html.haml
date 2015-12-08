@@ -18,4 +18,4 @@
         %td=s.aspect
         %td=s.callback_url
         %td=s.type
-        %td.text-center= link_to raw("<i class='glyphicon glyphicon-remove'></i>"), s.id, :confirm => 'Are you sure?', :method => :delete
+        %td.text-center= link_to raw("<i class='glyphicon glyphicon-remove'></i>"), admin_photogram_path(s.id), :confirm => 'Are you sure?', :method => :delete

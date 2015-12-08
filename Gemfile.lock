@@ -46,6 +46,11 @@ GEM
       nokogiri (>= 1.4.4)
       uuidtools (~> 2.1)
     bcrypt-ruby (3.1.2)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
+    bugsnag (2.6.0)
+      httparty (>= 0.6, < 1.0)
+      multi_json (~> 1.0)
     builder (3.0.4)
     cancan (1.6.10)
     capybara (2.2.1)
@@ -81,6 +86,7 @@ GEM
       nokogiri (~> 1.5)
       rails (>= 3, < 5)
     database_cleaner (1.2.0)
+    debug_inspector (0.0.2)
     delayed_job (4.0.4)
       activesupport (>= 3.0, < 4.2)
     delayed_job_active_record (4.0.2)
@@ -341,7 +347,9 @@ DEPENDENCIES
   activerecord-import
   acts-as-taggable-on
   aws-sdk
+  binding_of_caller
   bootstrap-sass!
+  bugsnag
   cancan
   coffee-rails (~> 3.2.1)
   cucumber-rails

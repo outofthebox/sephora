@@ -1,6 +1,6 @@
 require "instagram"
 
 Instagram.configure do |config|
-	config.client_id =	"bd7b8d3c8a0d4c18b67fe0b28c0d6bec";
-	config.client_secret = "2d40bf5a9875403a985bcd762251cfd1";
+	config.client_id =	"d95fe733b2454933aeeaf042b1ab1d44";
+	config.client_secret = "5bffb51b30124478a1a5a5828967d741";
 end

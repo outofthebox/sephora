@@ -41,6 +41,7 @@ gem 'uglifier', '>= 1.0.3'
 gem 'modernizr-rails'
 gem 'gon'
 gem 'raygun4ruby'
+gem 'bugsnag'
 
 group :assets do
 end
@@ -50,6 +51,7 @@ group :production do
 end
 
 group :development, :test do
+  gem "binding_of_caller"
   gem 'fastercsv'
   gem 'fabrication-rails'
   gem 'letter_opener'
