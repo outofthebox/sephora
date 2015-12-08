@@ -376,9 +376,14 @@ Sephora::Application.routes.draw do
     resources :landings, except: :index
     resources :events, except: :index, controller: "administracion/events"
     resources :store_events, except: :index, controller: "administracion/store_events"
+
+    resources :photogram, except: :index, controller: "administracion/photogram"
+    match 'photogram/suscribe', to: 'administracion/photogram#suscribe', via: [:get, :post]
+
     match 'landings', to: 'administracion#landings', via: :get
     match 'events', to: 'administracion#events', via: :get
     match 'store_events', to: 'administracion#store_events', via: :get
+    match 'photogram', to: 'administracion#photogram', via: :get
   end
 
   #brand-minisite
@@ -405,7 +410,7 @@ Sephora::Application.routes.draw do
   #sitemap
   get 'sitemap.xml', :to => 'sitemap#index', :defaults => { :format => 'xml' }
   # última línea, hace match con el resto de las rutas y muestra 404
-  match  '*a', :to => 'paginas#error_404'
+  #match  '*a', :to => 'paginas#error_404'
 end
 
 

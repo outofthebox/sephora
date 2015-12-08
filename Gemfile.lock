@@ -46,9 +46,6 @@ GEM
       nokogiri (>= 1.4.4)
       uuidtools (~> 2.1)
     bcrypt-ruby (3.1.2)
-    bugsnag (2.6.0)
-      httparty (>= 0.6, < 1.0)
-      multi_json (~> 1.0)
     builder (3.0.4)
     cancan (1.6.10)
     capybara (2.2.1)
@@ -345,7 +342,6 @@ DEPENDENCIES
   acts-as-taggable-on
   aws-sdk
   bootstrap-sass!
-  bugsnag
   cancan
   coffee-rails (~> 3.2.1)
   cucumber-rails

@@ -41,7 +41,6 @@ gem 'uglifier', '>= 1.0.3'
 gem 'modernizr-rails'
 gem 'gon'
 gem 'raygun4ruby'
-gem "bugsnag"
 
 group :assets do
 end

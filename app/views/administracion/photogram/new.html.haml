@@ -1,0 +1,21 @@
+.container
+  .page-header
+    %h3 Suscribirse a publicaciones de instagram
+  .page-container
+    .row
+      %form.form{action: admin_photogram_index_path, method: "post"}
+        = hidden_field_tag(:aspect, "media")
+        = hidden_field_tag(:callback_url, admin_photogram_suscribe_url)
+        .col-sm-12
+          .form-group
+            .input-group
+              %span.input-group-addon Object
+              - options =  [OpenStruct.new({id: "tag", nombre: "hashtag"}), OpenStruct.new({id: "user", nombre: "usuario"})]
+              = select_tag(:object, options_from_collection_for_select(options, "id", "nombre"), {:class=>"form-control"})
+          .form-group
+            .input-group
+              %span.input-group-addon Object ID
+              = text_field_tag(:object_id, "", {:class=>"form-control"})
+          .form-group
+            = submit_tag("Suscribirse", {:class => "btn btn-info btn-block"})
+

@@ -1,0 +1,21 @@
+%table.table.table-striped
+  %thead
+    %tr
+      %th ID
+      %th Object
+      %th Object id
+      %th Aspect
+      %th Callback URL
+      %th Type
+      %th.text-center
+        %i.glyphicon.glyphicon-remove
+  %tbody
+    - @subscriptions.each do |s|
+      %tr
+        %td=s.id
+        %td=s.object
+        %td=s.object_id
+        %td=s.aspect
+        %td=s.callback_url
+        %td=s.type
+        %td.text-center= link_to raw("<i class='glyphicon glyphicon-remove'></i>"), s.id, :confirm => 'Are you sure?', :method => :delete
