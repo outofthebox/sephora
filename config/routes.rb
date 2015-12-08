@@ -377,8 +377,8 @@ Sephora::Application.routes.draw do
     resources :events, except: :index, controller: "administracion/events"
     resources :store_events, except: :index, controller: "administracion/store_events"
 
-    resources :photogram, except: :index, controller: "administracion/photogram"
     match 'photogram/suscribe', to: 'administracion/photogram#suscribe', via: [:get, :post]
+    resources :photogram, except: :index, controller: "administracion/photogram"
 
     match 'landings', to: 'administracion#landings', via: :get
     match 'events', to: 'administracion#events', via: :get
