@@ -18,10 +18,14 @@ class Administracion::PhotogramController < AdministracionController
       callback_url: params[:callback_url],
     }
     Instagram.create_subscription(sub_params)
-    redirect_to admin_photogram_path({})
+    redirect_to admin_photogram_path("") and return
   end
 
   def update
+  end
+
+  def show
+    redirect_to admin_photogram_path("") and return
   end
 
   def suscribe
@@ -41,6 +45,6 @@ class Administracion::PhotogramController < AdministracionController
 
   def destroy
     Instagram.delete_subscription(params[:id])
-    redirect_to admin_photogram_path({})
+    redirect_to admin_photogram_path("") and return
   end
 end
