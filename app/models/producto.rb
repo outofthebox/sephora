@@ -98,19 +98,19 @@ class Producto < ActiveRecord::Base
     end
 
     js = {
-      :"@context" => "http://schema.org",
-      :"@type" => "Product",
-      :"name" => self.nombre,
-      :"image" => self.foto.url(:normal),
-      :"description" => descripcion,
-      :"brand" => {
-        :"@type" => "Brand",
-        :"name" => self.marca.marca,
-        :"logo" => self.marca.logo.url(:grande)
+      context: "http://schema.org",
+      type: "Product",
+      name: self.nombre,
+      image: self.foto.url(:normal),
+      description: descripcion,
+      brand: {
+        type: "Brand",
+        name: self.marca.marca,
+        logo: self.marca.logo.url(:grande)
       }
     }
 
-    return js
+    return js.to_json
   end
 
   def self.rangodeprecios cual=nil

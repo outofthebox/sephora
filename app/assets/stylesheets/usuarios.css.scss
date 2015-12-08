@@ -13,19 +13,24 @@
   font-style: normal;
 }
 
+#modal {
+  background: rgba(0, 0, 0, 0.9);
+  display: table;
+  padding: 30px;
+  border-radius: 0px !important;
+  border: none;
+  position: absolute;
+  box-shadow: 0px 0px 23px 1px #333 !important;
+}
+
 #usuario_wishlist{
 	width:100%;
 	margin:auto;
 	font-family: 'Avant', Helvetica, Tahoma !important;
 	.banner-regalos{
 		width: 500px;
-		height: 123px;
+		height: 1;
 		display: block;
-		background: image-url("usuarios/wishlist/titulo_regalos.png");
-		background-repeat: no-repeat;
-		background-size: cover;
-		position:relative;
-		left:230px;
 		margin-bottom: 30px;
 	}
 	.slider_items{
@@ -63,6 +68,7 @@
 			position:relative;
 			&:hover{
 				.producto-nombre{text-decoration: underline;}
+				cursor: pointer;
 			}
 			.remover{
 				height: 20px;
@@ -82,8 +88,8 @@
 				display: block;
 				margin: 0;
 				margin-bottom: 5px;
-				line-height: 15px;
-				font-size: 10pt;
+				line-height: 1.1em;
+				font-size: 9pt;
 				padding: 0;
 			}
 			.producto-marca{

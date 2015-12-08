@@ -16,9 +16,9 @@
 									.link
 										=link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), m_producto_path(producto.slug)
 									%p.price
-										Hot Now: Exclusivo. Nuevo. 
+										Hot Now: Exclusivo. Nuevo.
 										%br
-										Edicion Limitada: 
+										Edicion Limitada:
 										-if producto.tiene_descuento
 											%span.precio_original
 												#{number_to_currency(producto.precio, :precision => 0)}
@@ -39,7 +39,8 @@
 					})
 			-else
 				.well
-					%h3.title Mis Favoritos
+					%h3.title Mi Wishlist
 					%h4.small Aun no tienes ningun producto favorito
 					%p Selecciona tu producto favorito al dar clic en el ícono de corazón que se encuentra al lado
-			=image_tag("home/banners/inferior/izquierdo.jpg", {:width => "100%"})
+			=#image_tag("home/banners/inferior/izquierdo.jpg", {:width => "100%"})
+			=image_tag "usuarios/wishlist/bought_mobile.jpg", {:width => "100%"}

@@ -8,7 +8,7 @@
 = render(:partial => "usuarios/modales/wishlist_aprende") if !@bandera
 = render(:partial => "usuarios/modales/wishlist_faq")
 #usuario_wishlist
-	= image_tag("usuarios/wishlist/banner.jpg")
+	= image_tag("usuarios/wishlist/banner.png")
 	#regalos_sephora
 		.banner-regalos
 		.slider_items.wishlist
@@ -56,9 +56,6 @@
 						%h4.subtitle Aun no tienes ningun beauty fav, sigue las siguientes instrucciones y comparte todos tus deseos.
 						%p 1.- Selecciona tu producto favorito al dar clic en el ícono de corazón que se encuentra al lado
 						%p 2.- Comparte tu lista con tus amigos y familiares para que conozcan todos tus deseos.
-		.bought_me.text-center
-			=image_tag "usuarios/wishlist/bought.jpg"
-			.preguntas_frecuentes
 		-if @usuario.count > 0
 			.share-me
 				%h3 Ahora que la tienes ¡compartela!
@@ -67,6 +64,9 @@
 				.rs.gplus
 				.rs.pinterest
 				.clearfix
+		.bought_me.text-center
+			=image_tag "usuarios/wishlist/bought.jpg"
+			.preguntas_frecuentes
 :coffee
 	$ ->
 		uw = new Usuarios.Wishlist
