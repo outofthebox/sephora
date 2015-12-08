@@ -1,5 +1,5 @@
 Sephora::Application.routes.draw do
-  
+
   #Usuarios
   devise_for :usuarios, controllers: {
     sessions: "usuarios/sessions",
@@ -8,7 +8,7 @@ Sephora::Application.routes.draw do
     passwords: "usuarios/passwords",
     unlocks: "usuarios/unlocks"
   }
-  
+
   get   'usuarios/lista', :to => 'usuarios#lista', :as => 'usuarios_lista'
   put   'usuario/actualizar/:id', :to => 'usuarios#actualizar', :as => 'usuario_actualizar'
   get   'usuario/usar_sesion/:id', :to => 'usuarios#usar_sesion', :as => 'usuario_usar_sesion'
@@ -48,14 +48,13 @@ Sephora::Application.routes.draw do
   scope path: :mobile, as: "m" do
     match "/", :to => 'mobile#home', :as => 'home'
     match "download", :to => "mobile#download", :as => "download"
-    match "sephoralabios", :to => 'instagram#index', :as => "sephoralabios"
     match 'politicas-de-privacidad', :to => 'mobile#politicas', :as => 'politicas'
     match 'rebajas', :to => 'mobile/categorias#rebajas', :as => 'promociones_show'
     match 'obsequios', :to => 'mobile/categorias#obsequios', :as => 'obsequios'
-    
+
     match ':seccion', :to => 'mobile/secciones#show', :constraints => {:seccion => /allure2013|lanzamientosfall|backtoschool|potencializahighlights|fraganciasparael|skincareparael|narsblushes|obsessionsbeautybloggers|bbcreams|tintedmoisturizers|sephorabath|probrushes|beautyobsessions|vacaciones|ouidad|esteelaudernails|bronzers|clasicosdeskincare|mascaras2013|aceitesskincareagosto2013|mascarillas|cccreams2013|skincarehighlightsoctubre|maquillajebijoux|rollerballs|fragancias30ml|fraganciasholiday|showergelphilosphy|skincareholiday|cofresholiday|obsesionesskincare|arielcollection|beautysteals|fraganciassanvalentin|mascaras|orquidearadiante|recien-desempacados|detalles-sets|fragancias|labios|divacarioca|lanzamientossummer|productospromocion|skincare|styling|herramientastop|skincareojos|holiday2014|paletasholiday|sets|coloroftheyear|skincarelabios|rojoperfecto|lanzamientos|mascarillasnoche|beautyonthefly|promocion|regalospapa|theyrereal|marcasexclusivas/ }
     match 'favorites(/:id)', :to => 'secciones#favorites', :as => 'favorites'
-    
+
     #favoritoslabios
     match "/favoritoslabios", :to => 'mobile#favoritoslabios', :as => 'favoritoslabios'
 
@@ -100,7 +99,7 @@ Sephora::Application.routes.draw do
     resources :solucion, controller: 'mobile/soluciones', :except => [:index]
     scope path: :solucion, :as => "solucion" do
     end
-    
+
 
     match "/productos", :to => 'mobile/productos#index', :as => 'productos'
     resources :producto, controller: 'mobile/productos', :except => [:index]
@@ -159,6 +158,15 @@ Sephora::Application.routes.draw do
     get 'base-contorno/contour/video/:tipo', :to => 'paginas#basecontorno_contour_video', as: :basecontorno_contour_video
   end
 
+  #Instagram Holiday 2015
+  get "navidadsephora", :to => 'instagram#index', :as => "navidadsephora"
+  get "navidadsephora/admin", :to => 'instagram#admin', :as => "navidadsephora_admin"
+  get "navidadsephora/admin/aprobar/:id", :to => 'instagram#admin_aprobar', :as => "navidadsephora_admin_aprobar"
+  get "navidadsephora/suscribir", :to => 'instagram#suscribe', :as => "navidadsephora_suscribe"
+  post "navidadsephora/suscribir", :to => 'instagram#fetcher', :as => "navidadsephora_suscribe_post"
+  scope path: :mobile, as: "m" do
+    match "navidadsephora", :to => 'instagram#index', :as => "navidadsephora"
+  end
 
   root :to => 'paginas#home'
 
@@ -185,7 +193,7 @@ Sephora::Application.routes.draw do
 
   get   'soluciones(/:id)', :to => 'secciones#soluciones', :as => 'soluciones'
   get   'sephorapicks(/:id)', :to => 'secciones#favorites', :as => 'favorites'
-  
+
   get   'holiday', :to => 'paginas#holiday', :as => 'holiday'
   get   'holiday/wallpapers', :to => 'paginas#wallpapers', :as => 'wallpapers'
   post   'holiday/wallpapers', :to => 'paginas#wallpaperssend', :as => 'wallpaperssend'
@@ -384,7 +392,7 @@ Sephora::Application.routes.draw do
   # ajax call
   get "sephora-collection/squares/:interna", :to => 'sephora_collection#load_squares', :as => "sephora_collection_loadsquares"
 
-  
+
   # friends and family
   get 'friendsandfamily/', :to => 'friendsandfamily#index', :as => 'friendsandfamily_index'
   post 'friendsandfamily/code', :to => 'friendsandfamily#code', :as => 'friendsandfamily_code'

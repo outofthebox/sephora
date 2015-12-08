@@ -1,0 +1,5 @@
+.banner
+  =image_tag 'insta_sephora/header_web.jpg'
+%ul.media-list
+  - @images.each do |image|
+    %li=link_to image_tag('//data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==', class: 'lazy', :'data-original' => image.thumb_url, width: 180, height: 180), image.instagram_link

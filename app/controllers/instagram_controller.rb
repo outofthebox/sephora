@@ -1,5 +1,5 @@
 class InstagramController < ApplicationController
-  http_basic_authenticate_with :name => ENV['insta_U'], :password => ENV['insta_P'], only: :admin
+  http_basic_authenticate_with :name => ENV['U'], :password => ENV['P'], only: :admin
   skip_before_filter :verify_authenticity_token
 
   def admin
@@ -9,7 +9,7 @@ class InstagramController < ApplicationController
   def admin_aprobar
     image = MediaTag.find(params[:id])
     image.toggle_approve if image
-    redirect_to sephoralabios_admin_path
+    redirect_to navidadsephora_admin_path
   end
 
   def index
