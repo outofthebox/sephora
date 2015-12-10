@@ -1325,6 +1325,7 @@ html, body{
 	bottom: -35px;
 	background-size: cover;
 	cursor: pointer;
+	z-index: 100;
   &:hover, &.hover{
     background-image: image-url("usuarios/wishlist/corazon_rosa.png") !important;
   }
