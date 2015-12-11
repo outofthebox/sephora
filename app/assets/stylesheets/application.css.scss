@@ -14,6 +14,17 @@ $withslider: 960px;
 $slides: 3;
 
 
+@media only screen
+and (max-width : 480px){
+  .hidden-mb-xs{
+    display: none !important;
+  }
+  #wrap header#encabezado #contenme #search{
+    display: none !important;
+  }
+}
+
+
 .add_to_favs, .add_to_favs_link{
   background-image: image-url("usuarios/wishlist/corazon_negro.png");
   width: 28px;
@@ -1074,7 +1085,7 @@ ul.breadcrumbs{
 #wrap {
   position:relative;
   margin: 0 auto;
-  width: 960px;
+  width: 100%;
   padding-top: 40px;
   max-width: 960px;
 

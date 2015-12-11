@@ -116,7 +116,7 @@ Sephora::Application.routes.draw do
       match "/wallpapers", :to => "mobile/specials#wallpapers", :as => "wallpapers"
     end
 
-      #Usuarios
+    #Usuarios
     devise_for :usuarios, controllers: {
       sessions: "usuarios/sessions",
       registrations: "usuarios/registrations",
