@@ -8,12 +8,10 @@
     .ante.jesus
     .contenedor
       .slider
-        %a.diapositiva.first.visible{href: " http://www.sephora.com.mx/sets?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=Holiday2015"}
-          =image_tag "holiday/2015/banner1.jpg"
-        %a.diapositiva{href: "http://www.sephora.com.mx/usuario/wishlist?utm_source=SitioWeb&utm_medium=Banner2&utm_campaign=Wishlist"}
-          =image_tag "home/banners/960/banner2.jpg"
+        %a.diapositiva.first.visible{href: "http://www.sephora.com.mx/mascarillas?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=Masks"}
+          =image_tag "home/banners/960/banner1.jpg"
         %a.diapositiva{href: "http://www.sephora.com.mx/marca/benefit?utm_source=SitioWeb&utm_medium=Banner3&utm_campaign=BenBrowBar"}
-          =image_tag "home/banners/960/banner4.jpg"
+          =image_tag "home/banners/960/banner2.jpg"
         %a.diapositiva{href: "#"}
           =image_tag "home/banners/960/banner3.jpg"
   :coffee
@@ -35,7 +33,6 @@
 #linea-rosa
 - if @bestsellers and (bestsellers_productos = @bestsellers.producto_seccion) and bestsellers_productos.any?
   #best-sellers
-    = image_tag("holiday/2015/mono.png", {class: "mono-holiday"})
     %h3 SEPHORA'S PICKS
     #slider-wrap
       %ul.nobullet.nolist.bestsellers#bestsellers.jcarousel-skin-tango
@@ -56,7 +53,6 @@
             /   %small= number_to_currency producto.precio
 - if @lonuevo and (lonuevo_productos = @lonuevo.producto_seccion) and lonuevo_productos.any?
   #best-sellers
-    = image_tag("holiday/2015/mono.png", {class: "mono-holiday"})
     %h3 LO NUEVO
     #slider-wrap
       %ul.nobullet.nolist#lonuevo.jcarousel-skin-tango
@@ -75,7 +71,7 @@
 
   #hotnow
     //%h3.ht_div HOT NOW
-    = image_tag("holiday/2015/mono-hotnow.png", {class: "mono-holiday"})
+    = image_tag("home/hn_seccion_div.png", {class: "mono-holiday"})
     #slider-wrap
       %ul.nobullet.nolist#hotnow.jcarousel-skin-tango
         - seccion_productos = @contenido.producto_seccion.limit(6)
