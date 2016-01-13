@@ -10,5 +10,6 @@
         .mascarillas
           %p.mascarilla-legend
             Cada una de estas mascarillas nocturnas con textura de <strong>crema-gel</strong> contiene un <strong>ingrediente activo</strong> para <strong>iluminar</strong> y <strong>revitalizar</strong> tu piel mientras duermes.
+          .clearfix
           -@face_mask.each do |mask|
             .mascarilla=link_to image_tag(mask[:image]), mask[:link]

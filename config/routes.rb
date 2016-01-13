@@ -21,9 +21,12 @@ Sephora::Application.routes.draw do
   post  'usuario/wishlist/del/:upc', :to => "usuarios#wishlist_del", :as => "usuario_wishlist_del"
 
   # mascarillas
-  get 'mascarillashidratantes', :to => 'paginas#mascarillashidratantes', as: :mascarillashidratantes
-  get 'mascarillasantiedad', :to => 'paginas#mascarillasantiedad', as: :mascarillasantiedad
-  get 'mascarillasmultibeneficio', :to => 'paginas#mascarillasmultibeneficio', as: :mascarillasmultibeneficio
+  # 
+
+  get 'facemask', :to => 'paginas#mascarillasantiedad', as: :mascarillasantiedad
+  get 'eyemask', :to => 'paginas#mascarillasmultibeneficio', as: :mascarillasmultibeneficio
+  get 'sleepingmask', :to => 'paginas#mascarillashidratantes', as: :mascarillashidratantes
+
   get 'mascarillasnocturnas', :to => 'paginas#mascarillasnocturnas', as: :mascarillasnocturnas
 
   # miraclecushion
