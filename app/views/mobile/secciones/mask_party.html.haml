@@ -1,0 +1,18 @@
+- provide :titulo, 'Mascarillas Face Mask'
+- provide :descripcion, ''
+%section#categoria.colorvision
+  .table.full
+    .contizq.tcell.t25
+      .barrita
+    .contder.tcell.t75
+      .contenedor
+        = image_tag 'masks/mask_party/Banner.png', width: "100%"
+        %ul.mascarillas_menu
+          %li=link_to image_tag('masks/mask_party/boton1.png'), mascarillashidratantes_path
+          %li=link_to image_tag('masks/mask_party/boton-2.png'), mascarillasantiedad_path
+          %li=link_to image_tag('masks/mask_party/boton-3.png'), mascarillasmultibeneficio_path
+        .mascarillas
+          %p.mascarilla-legend
+          .clearfix
+          -@face_mask.each do |mask|
+            .mascarilla=link_to image_tag(mask[:image], { width: "100%" }), mask[:link]

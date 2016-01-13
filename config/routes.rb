@@ -64,6 +64,11 @@ Sephora::Application.routes.draw do
     # favoritosmascarillas
     match "/favoritosmascarillas", :to => 'mobile#favoritosmascarillas', :as => 'favoritosmascarillas'
 
+    # mascarillas
+    get 'facemask', :to => 'mobile/secciones#mascarillasantiedad', as: :mascarillasantiedad
+    get 'eyemask', :to => 'mobile/secciones#mascarillasmultibeneficio', as: :mascarillasmultibeneficio
+    get 'sleepingmask', :to => 'mobile/secciones#mascarillashidratantes', as: :mascarillashidratantes
+
     #marcas
     match "/marcas", :to => 'mobile/marcas#index', :as => 'marcas'
     resources :marca, controller: 'mobile/marcas', :except => [:index]

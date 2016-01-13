@@ -1,3 +1,42 @@
 // Place all the styles related to the mobile/secciones controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.mascarillas_menu {
+  background: image-url("masks/mask_party/lineas-rosas.png");
+  list-style: none;
+  margin: 15px 0 15px 0;
+  padding: 10px 0;
+  display: block;
+  li {
+    display: inline-block;
+    margin: 0 1%;
+    opacity: 0.8;
+    width: 30%;
+    img{
+    	width: 100%;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+.mascarillas{
+  background: image-url("masks/mask_party/background.png");
+  background-size: 100%;
+	display: block;
+	width: 96%;
+	margin: auto;
+  .mascarilla-legend{
+		margin-bottom: 50px;
+		display: block;
+		min-height: 1px;
+  }
+  .mascarilla{
+    margin: 10px 0px;
+    &:first-child{
+      margin: 50px 0px 0px 0px;
+    }
+  }
+}
