@@ -124,23 +124,16 @@ Sephora::Application.routes.draw do
       match "/wallpapers", :to => "mobile/specials#wallpapers", :as => "wallpapers"
     end
 
-    #Usuarios
-    devise_for :usuarios, controllers: {
-      sessions: "usuarios/sessions",
-      registrations: "usuarios/registrations",
-      confirmations: "usuarios/confirmations",
-      passwords: "usuarios/passwords",
-      unlocks: "usuarios/unlocks"
-    }
-
     match "/usuarios", :to => 'mobile/usuarios#index', :as => 'usuarios'
     scope path: :usuario, :as => "usuario" do
       match 'logout(/:hash)', :to => 'mobile/usuarios#logout', :as => 'logout'
       match '/perfil', :to => "mobile/usuarios#perfil", :as => "perfil"
       match '/wishlist', :to => "mobile/usuarios#wishlist", :as => "wishlist"
       match '/bienvenido', :to => "mobile/usuarios#bienvenido", :as => "bienvenido"
-    end
 
+      match  '/wishlist/add/:upc', :to => "usuarios#wishlist_add", :as => "wishlist_add"
+      match  '/wishlist/del/:upc', :to => "usuarios#wishlist_del", :as => "wishlist_del"
+    end
 
     match "/categorias", :to => 'mobile/categorias#index', :as => 'categorias'
     resources :categoria, controller: 'mobile/categorias', :except => [:index]
