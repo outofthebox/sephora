@@ -339,6 +339,36 @@ namespace :productos do
 		puts "##########################################################"
   end
 
+  task :reactivados => :environment do
+    require 'csv'
+    require 'remote_file'
+
+    raise "Necesario especificar ruta a FILE.csv" unless ENV['FILE']
+
+    file = ENV['FILE'];
+    data = []
+
+    if ENV["REMOTE"]
+      rm = RemoteFile.new(file)
+      csv = CSV.parse(rm.request.body, :headers => true)
+    else
+      csv_text = File.read(file)
+      csv = CSV.parse(csv_text, :headers => true)
+    end
+
+    csv.each do |c| data << c[0] unless c[0] == nil; end
+
+    reactivados_before =  Producto.where(:publicado => true).count
+    reactivados = Producto.where(:upc => data)
+    reactivados.each do |d| d.update_attribute(:publicado, true) unless (d.publicado == true); end
+    reactivados_after =  Producto.where(:publicado => true).count
+
+    puts "##########################################################"
+    puts "##\tPRODUCTOS\t||\tANTES\t||\tDESPUES\t##"
+    puts "##\treactivados\t||\t#{reactivados_before}\t||\t#{reactivados_after}\t##"
+    puts "##########################################################"
+  end
+
   task :populate_sap => :environment do
     require 'csv'
     require 'remote_file'
