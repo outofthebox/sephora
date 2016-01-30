@@ -10,6 +10,9 @@
       .slider
         %a.diapositiva.first.visible{href: "http://www.sephora.com.mx/sleepingmask?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=SleepingMask"}
           =image_tag "home/banners/960/banner1.jpg"
+        -if Date.today >= Date.new(2016, 2, 1)
+          %a.diapositiva{href: "http://www.sephora.com.mx/rebajas?utm_source=Rebajas&utm_medium=Banner2&utm_campaign=SexyPrices"}
+            =image_tag "home/banners/960/rebajas.jpg"
         %a.diapositiva{href: "http://www.sephora.com.mx/marca/benefit?utm_source=SitioWeb&utm_medium=Banner3&utm_campaign=BenBrowBar"}
           =image_tag "home/banners/960/banner2.jpg"
         %a.diapositiva{href: "#"}
