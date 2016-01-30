@@ -92,6 +92,8 @@ namespace :productos do
 
     raise "Necesario especificar ruta a FILE.csv" unless ENV['FILE']
 
+    code = ENV['CODE'] || "upc"
+
     file = ENV['FILE'];
     data = []
 
@@ -129,7 +131,8 @@ namespace :productos do
       descuento = row[1].gsub!("$",'') if row[1]
       descuento = row[1].to_f;
       descuento_porcentual = row[2] if row[2]
-      producto = Producto.find_by_upc(upc)
+      producto = Producto.find_by_upc(upc) if code == "upc"
+      producto = Producto.find_by_sap(upc) if code == "sap"
       if producto
         producto.update_attributes({:descuento => descuento, :descuento_porcentual => descuento_porcentual})
         codigo = producto.upc || "--"
