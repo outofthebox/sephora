@@ -10,11 +10,8 @@
       .slider
         %a.diapositiva.first.visible{href: "http://www.sephora.com.mx/sleepingmask?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=SleepingMask"}
           =image_tag "home/banners/960/banner1.jpg"
-        -if Date.today >= Date.new(2016, 2, 1)
-          %a.diapositiva{href: "http://www.sephora.com.mx/rebajas?utm_source=Rebajas&utm_medium=Banner2&utm_campaign=SexyPrices"}
-            =image_tag "home/banners/960/rebajas.jpg"
-        %a.diapositiva{href: "http://www.sephora.com.mx/marca/benefit?utm_source=SitioWeb&utm_medium=Banner3&utm_campaign=BenBrowBar"}
-          =image_tag "home/banners/960/banner2.jpg"
+        %a.diapositiva{href: "http://www.sephora.com.mx/rebajas?utm_source=Rebajas&utm_medium=Banner2&utm_campaign=SexyPrices"}
+          =image_tag "home/banners/960/rebajas.jpg"
         %a.diapositiva{href: "http://www.sephora.com.mx/producto/ud-gwen-stefani-eyeshadow-palette-3605971071492?utm_source=SitioWeb&utm_medium=Banner4&utm_campaign=GwenStefani"}
           =image_tag "home/banners/960/banner3.jpg"
   :coffee
@@ -90,7 +87,7 @@
 #esta-semana
   .table.full
     .tcell.t50
-      %a{ :href => 'http://www.sephora.com.mx/tiendas?utm_source=SitioWeb&utm_medium=Banner2&utm_campaign=SephoraPlaya' }
+      %a{ :href => 'http://www.sephora.com.mx/marca/benefit?utm_source=SitioWeb&utm_medium=Footer1&utm_campaign=BrowBar' }
         =image_tag "home/banners/inferior/izquierdo.jpg"
     .tcell.t50
       %a{ :href => "http://www.sephora.com.mx/lista_eventos?utm_source=SitioWeb&utm_medium=BannerInfDer&utm_campaign=Eventos" }
