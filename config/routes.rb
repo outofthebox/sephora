@@ -1,52 +1,4 @@
 Sephora::Application.routes.draw do
-
-  #Usuarios
-  devise_for :usuarios, controllers: {
-    sessions: "usuarios/sessions",
-    registrations: "usuarios/registrations",
-    confirmations: "usuarios/confirmations",
-    passwords: "usuarios/passwords",
-    unlocks: "usuarios/unlocks"
-  }
-
-  get   'usuarios/lista', :to => 'usuarios#lista', :as => 'usuarios_lista'
-  put   'usuario/actualizar/:id', :to => 'usuarios#actualizar', :as => 'usuario_actualizar'
-  get   'usuario/usar_sesion/:id', :to => 'usuarios#usar_sesion', :as => 'usuario_usar_sesion'
-  get   'logout(/:hash)', :to => 'usuarios#logout', :as => 'logout'
-  get   'usuario/perfil', :to => "usuarios#perfil", :as => "usuario"
-  get   'usuario/wishlist', :to => "usuarios#wishlist", :as => "usuario_wishlist"
-  get   'usuario/bienvenido', :to => "usuarios#bienvenido", :as => "usuario_bienvenido"
-  get   'usuario/wishlist/ver/:slug', :to => "usuarios#wishlist_ver", :as => "usuario_wishlist_ver"
-  post  'usuario/wishlist/add/:upc', :to => "usuarios#wishlist_add", :as => "usuario_wishlist_add"
-  post  'usuario/wishlist/del/:upc', :to => "usuarios#wishlist_del", :as => "usuario_wishlist_del"
-
-  # mascarillas
-  # 
-
-  get 'facemask', :to => 'paginas#mascarillasantiedad', as: :mascarillasantiedad
-  get 'eyemask', :to => 'paginas#mascarillasmultibeneficio', as: :mascarillasmultibeneficio
-  get 'sleepingmask', :to => 'paginas#mascarillashidratantes', as: :mascarillashidratantes
-
-  get 'mascarillasnocturnas', :to => 'paginas#mascarillasnocturnas', as: :mascarillasnocturnas
-
-  # miraclecushion
-  get 'miraclecushion', :to => 'paginas#miraclecushion', as: :miraclecushion
-
-  # base contorno
-  get 'base-contorno', :to => 'paginas#basecontorno', as: :basecontorno
-  get 'base-contorno/foundation', :to => 'paginas#basecontorno_foundation', as: :basecontorno_foundation
-  get 'base-contorno/foundation/concern', :to => 'paginas#basecontorno_foundation_concern', as: :basecontorno_foundation_concern
-  get 'base-contorno/foundation/video/:tipo', :to => 'paginas#basecontorno_foundation_video', as: :basecontorno_foundation_video
-  get 'base-contorno/contour', :to => 'paginas#basecontorno_contour', as: :basecontorno_contour
-  get 'base-contorno/contour/concern', :to => 'paginas#basecontorno_contour_concern', as: :basecontorno_contour_concern
-  get 'base-contorno/contour/video/:tipo', :to => 'paginas#basecontorno_contour_video', as: :basecontorno_contour_video
-
-  # atelier
-  get 'collectionazur', :to => 'paginas#collectionazur', as: :collectionazur
-  get 'collectionoriginale', :to => 'paginas#collectionoriginale', as: :collectionoriginale
-  get 'collectionmatiere', :to => 'paginas#collectionmatiere', as: :collectionmatiere
-  get 'collectionmetal', :to => 'paginas#collectionmetal', as: :collectionmetal
-
   #mobile
   scope path: :mobile, as: "m" do
     match "/", :to => 'mobile#home', :as => 'home'
@@ -77,6 +29,7 @@ Sephora::Application.routes.draw do
 
     #Landings
     match "/beautyfair", to: "mobile/landings#beautyfair", via: [:get, :post], as: "beautyfair"
+    match "/masterclass", to: "mobile/landings#masterclass", via: [:get, :post], as: "masterclass"
 
     match "/lista_eventos", :to => 'mobile/eventos#index', :as => 'eventos'
     match "/eventos", :to => 'mobile/eventos#index', :as => 'eventos'
@@ -158,6 +111,53 @@ Sephora::Application.routes.draw do
     get 'base-contorno/contour/concern', :to => 'paginas#basecontorno_contour_concern', as: :basecontorno_contour_concern
     get 'base-contorno/contour/video/:tipo', :to => 'paginas#basecontorno_contour_video', as: :basecontorno_contour_video
   end
+
+  #Usuarios
+  devise_for :usuarios, controllers: {
+    sessions: "usuarios/sessions",
+    registrations: "usuarios/registrations",
+    confirmations: "usuarios/confirmations",
+    passwords: "usuarios/passwords",
+    unlocks: "usuarios/unlocks"
+  }
+
+  get   'usuarios/lista', :to => 'usuarios#lista', :as => 'usuarios_lista'
+  put   'usuario/actualizar/:id', :to => 'usuarios#actualizar', :as => 'usuario_actualizar'
+  get   'usuario/usar_sesion/:id', :to => 'usuarios#usar_sesion', :as => 'usuario_usar_sesion'
+  get   'logout(/:hash)', :to => 'usuarios#logout', :as => 'logout'
+  get   'usuario/perfil', :to => "usuarios#perfil", :as => "usuario"
+  get   'usuario/wishlist', :to => "usuarios#wishlist", :as => "usuario_wishlist"
+  get   'usuario/bienvenido', :to => "usuarios#bienvenido", :as => "usuario_bienvenido"
+  get   'usuario/wishlist/ver/:slug', :to => "usuarios#wishlist_ver", :as => "usuario_wishlist_ver"
+  post  'usuario/wishlist/add/:upc', :to => "usuarios#wishlist_add", :as => "usuario_wishlist_add"
+  post  'usuario/wishlist/del/:upc', :to => "usuarios#wishlist_del", :as => "usuario_wishlist_del"
+
+  # mascarillas
+  # 
+
+  get 'facemask', :to => 'paginas#mascarillasantiedad', as: :mascarillasantiedad
+  get 'eyemask', :to => 'paginas#mascarillasmultibeneficio', as: :mascarillasmultibeneficio
+  get 'sleepingmask', :to => 'paginas#mascarillashidratantes', as: :mascarillashidratantes
+
+  get 'mascarillasnocturnas', :to => 'paginas#mascarillasnocturnas', as: :mascarillasnocturnas
+
+  # miraclecushion
+  get 'miraclecushion', :to => 'paginas#miraclecushion', as: :miraclecushion
+
+  # base contorno
+  get 'base-contorno', :to => 'paginas#basecontorno', as: :basecontorno
+  get 'base-contorno/foundation', :to => 'paginas#basecontorno_foundation', as: :basecontorno_foundation
+  get 'base-contorno/foundation/concern', :to => 'paginas#basecontorno_foundation_concern', as: :basecontorno_foundation_concern
+  get 'base-contorno/foundation/video/:tipo', :to => 'paginas#basecontorno_foundation_video', as: :basecontorno_foundation_video
+  get 'base-contorno/contour', :to => 'paginas#basecontorno_contour', as: :basecontorno_contour
+  get 'base-contorno/contour/concern', :to => 'paginas#basecontorno_contour_concern', as: :basecontorno_contour_concern
+  get 'base-contorno/contour/video/:tipo', :to => 'paginas#basecontorno_contour_video', as: :basecontorno_contour_video
+
+  # atelier
+  get 'collectionazur', :to => 'paginas#collectionazur', as: :collectionazur
+  get 'collectionoriginale', :to => 'paginas#collectionoriginale', as: :collectionoriginale
+  get 'collectionmatiere', :to => 'paginas#collectionmatiere', as: :collectionmatiere
+  get 'collectionmetal', :to => 'paginas#collectionmetal', as: :collectionmetal
 
   #Instagram Holiday 2015
   get "navidadsephora", :to => 'instagram#index', :as => "navidadsephora"
@@ -409,6 +409,7 @@ Sephora::Application.routes.draw do
   get 'friendsandfamily/delete_cookie', :to => 'friendsandfamily#delete_cookie', :as => 'friendsandfamily_delete_cookie'
 
   match "/beautyfair", to: "paginas#beautyfair", via: [:get, :post], as: "beautyfair"
+  match "/masterclass", to: "paginas#masterclass", via: [:get, :post], as: "masterclass"
 
   #sitemap
   get 'sitemap.xml', :to => 'sitemap#index', :defaults => { :format => 'xml' }
