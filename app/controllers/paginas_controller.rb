@@ -15,6 +15,7 @@ class PaginasController < ApplicationController
 
   def beautyfair; end
   def masterclass; end
+  def opening; end
 
   def get_new_search
     @search_cats = []; 
