@@ -30,6 +30,7 @@ Sephora::Application.routes.draw do
     #Landings
     match "/beautyfair", to: "mobile/landings#beautyfair", via: [:get, :post], as: "beautyfair"
     match "/masterclass", to: "mobile/landings#masterclass", via: [:get, :post], as: "masterclass"
+    match "/veracruz", to: "mobile/landings#veracruz", via: [:get, :post], as: "veracruz"
     match "/opening", to: "mobile/landings#opening", via: [:get, :post], as: "opening"
 
     match "/lista_eventos", :to => 'mobile/eventos#index', :as => 'eventos'
@@ -411,6 +412,7 @@ Sephora::Application.routes.draw do
 
   match "/beautyfair", to: "paginas#beautyfair", via: [:get, :post], as: "beautyfair"
   match "/masterclass", to: "paginas#masterclass", via: [:get, :post], as: "masterclass"
+  match "/veracruz", to: "paginas#veracruz", via: [:get, :post], as: "veracruz"
   match "/opening", to: "paginas#opening", via: [:get, :post], as: "opening"
 
   #sitemap
