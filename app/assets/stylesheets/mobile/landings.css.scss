@@ -1,0 +1,252 @@
+#opening{
+  display: block;
+  margin: auto;
+  position: relative;
+  &.mobile{
+    width: 640px;
+    height: 1412px;
+    background: image-url("opening/landing_mobile.jpg");
+    #timer{
+      top: 690px;
+      left: 50px;
+      position: absolute;
+      width: 540px;
+      #pageTimer{
+        display: block;
+        position: relative;
+        color: white;
+        font-size: 100px;
+        font-family: "Gotham", Helvetiva;
+        width: 100%;
+        text-align: center;
+        strong{
+          text-align: center;
+          width: 25%;
+          display: inline-block;
+          position: relative;
+          font-family: "Gotham", Helvetiva;
+          span{
+            position: absolute;
+            top: -24px;
+            left: 0;
+            font-size: 20px;
+            text-transform: UPPERCASE;
+            FONT-FAMILY: Gotham;
+            text-align: center;
+            width: 100%;
+            color: #CF112B;
+            font-family: "Gotham", Helvetiva;
+          }
+        }
+      }
+    }
+  }
+}
+
+//iPhone4
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px)
+and (orientation : portrait) {
+  #opening{
+    display: block;
+    margin: auto;
+    position: relative;
+    &.mobile{
+      width: 320px;
+      height: 712px;
+      background: image-url("opening/landing_mobile.jpg") no-repeat;
+      background-size: contain;
+      #timer{
+        top: 347px;
+        left: 20px;
+        position: absolute;
+        width: 280px;
+        #pageTimer{
+          display: block;
+          position: relative;
+          color: white;
+          font-size: 50px;
+          font-family: "Gotham", Helvetiva;
+          width: 100%;
+          text-align: center;
+          strong{
+            text-align: center;
+            width: 25%;
+            display: inline-block;
+            position: relative;
+            font-family: "Gotham", Helvetiva;
+            span{
+              position: absolute;
+              top: -15px;
+              left: 0;
+              font-size: 10px;
+              text-transform: UPPERCASE;
+              FONT-FAMILY: Gotham;
+              text-align: center;
+              width: 100%;
+              color: #CF112B;
+              font-family: "Gotham", Helvetiva;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//iPhone5
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait) {
+  #opening{
+    display: block;
+    margin: auto;
+    position: relative;
+    &.mobile{
+      width: 320px;
+      height: 712px;
+      background: image-url("opening/landing_mobile.jpg") no-repeat;
+      background-size: contain;
+      #timer{
+        top: 347px;
+        left: 20px;
+        position: absolute;
+        width: 280px;
+        #pageTimer{
+          display: block;
+          position: relative;
+          color: white;
+          font-size: 50px;
+          font-family: "Gotham", Helvetiva;
+          width: 100%;
+          text-align: center;
+          strong{
+            text-align: center;
+            width: 25%;
+            display: inline-block;
+            position: relative;
+            font-family: "Gotham", Helvetiva;
+            span{
+              position: absolute;
+              top: -15px;
+              left: 0;
+              font-size: 10px;
+              text-transform: UPPERCASE;
+              FONT-FAMILY: Gotham;
+              text-align: center;
+              width: 100%;
+              color: #CF112B;
+              font-family: "Gotham", Helvetiva;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//iPhone6S
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 736px)
+and (orientation : portrait) {
+  #opening{
+    display: block;
+    margin: auto;
+    position: relative;
+    &.mobile{
+      width: 414px;
+      height: 827px;
+      background: image-url("opening/landing_mobile.jpg") no-repeat;
+      background-size: contain;
+      #timer{
+        top: 407px;
+        left: 50px;
+        position: absolute;
+        width: 280px;
+        #pageTimer{
+          display: block;
+          position: relative;
+          color: white;
+          font-size: 50px;
+          font-family: "Gotham", Helvetiva;
+          width: 100%;
+          text-align: center;
+          strong{
+            text-align: center;
+            width: 25%;
+            display: inline-block;
+            position: relative;
+            font-family: "Gotham", Helvetiva;
+            span{
+              position: absolute;
+              top: -15px;
+              left: 0;
+              font-size: 10px;
+              text-transform: UPPERCASE;
+              FONT-FAMILY: Gotham;
+              text-align: center;
+              width: 100%;
+              color: #CF112B;
+              font-family: "Gotham", Helvetiva;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//Landscape
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 736px)
+and (orientation : landscape) {
+  #opening{
+    display: block;
+    margin: auto;
+    position: relative;
+    &.mobile{
+      width: 640px;
+      height: 1412px;
+      background: image-url("opening/landing_mobile.jpg");
+      #timer{
+        top: 690px;
+        left: 50px;
+        position: absolute;
+        width: 540px;
+        #pageTimer{
+          display: block;
+          position: relative;
+          color: white;
+          font-size: 100px;
+          font-family: "Gotham", Helvetiva;
+          width: 100%;
+          text-align: center;
+          strong{
+            text-align: center;
+            width: 25%;
+            display: inline-block;
+            position: relative;
+            font-family: "Gotham", Helvetiva;
+            span{
+              position: absolute;
+              top: -24px;
+              left: 0;
+              font-size: 20px;
+              text-transform: UPPERCASE;
+              FONT-FAMILY: Gotham;
+              text-align: center;
+              width: 100%;
+              color: #CF112B;
+              font-family: "Gotham", Helvetiva;
+            }
+          }
+        }
+      }
+    }
+  }
+}

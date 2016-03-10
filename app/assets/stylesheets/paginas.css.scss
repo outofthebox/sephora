@@ -7,7 +7,48 @@ small {
 }
 
 
-
+#opening{
+  display: block;
+  position: relative;
+  margin: auto;
+  &.desktop{
+    width:960px;
+    height: 2000px;
+    background: image-url("opening/landing.jpg");
+    #timer{
+      top: 969px;
+      left: 60px;
+      position: absolute;
+      width: 840px;
+      #pageTimer{
+        display: block;
+        position: relative;
+        color: white;
+        font-size: 110px;
+        font-family: "Gotham";
+        width: 100%;
+        text-align: center;
+        strong{
+          text-align: center;
+          width: 25%;
+          display: inline-block;
+          position: relative;
+          span{
+            position: absolute;
+            top: -36px;
+            left: 0;
+            font-size: 25px;
+            text-transform: UPPERCASE;
+            FONT-FAMILY: Gotham;
+            text-align: center;
+            width: 100%;
+            color: #CF112B;
+          }
+        }
+      }
+    }
+  }
+}
 
 
 #main[view="catalogo"]{

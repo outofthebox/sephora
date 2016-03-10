@@ -9,6 +9,7 @@
 // = require animate
 // = require bootstrap
 // = require usuarios
+// = require paginas
 
 $withslider: 960px;
 $slides: 3;
@@ -121,6 +122,12 @@ img { margin: 0; padding: 0; }
          url('/fuentes/Sephora.woff') format('woff'),
          url('/fuentes/Sephora.ttf') format('truetype'),
          url('/fuentes/Sephora.svg#Sephora') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham';
+    src: url('/fuentes/Gotham.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
