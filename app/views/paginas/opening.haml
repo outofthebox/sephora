@@ -1,12 +1,16 @@
 - provide :titulo, ''
-%section#opening.desktop
-  #timer
-    #pageTimer
-      %strong 10
-      %strong 10
-      %strong 10
-      %strong 10
-:coffee
-  $ ->
-    opening = new Paginas.Opening
-    timer = opening.init_timer()
+- if DateTime.now < DateTime.new(2016,3,17,20,0,0,'-6')
+  %section#opening.desktop
+    #timer
+      #pageTimer
+        %strong 10
+        %strong 10
+        %strong 10
+        %strong 10
+  :coffee
+    $ ->
+      opening = new Paginas.Opening
+      timer = opening.init_timer()
+-else
+  %section
+    =image_tag("opening/landing-fase-tres.jpg")
