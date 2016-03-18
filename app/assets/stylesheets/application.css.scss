@@ -31,23 +31,23 @@ body{
 
 
 .color-explotion-1{
-  background: image-url("colorexplotion/back-01.png") repeat;
+  background: image-url("colorexplotion/01.png") repeat;
   position: absolute;
   top: 0px;
-  left: -120px;
-  width: 380px;
-  height: 2170px;
+  left: -20px;
+  width: 252px;
+  height: 2300px;
   display: block;
   z-index: 0;
   background-size: cover;
 }
 .color-explotion-2{
-  background: image-url("colorexplotion/back-02.png") repeat;
+  background: image-url("colorexplotion/02.png") repeat;
   position: absolute;
   top: 0px;
-  right: -120px;
-  width: 380px;
-  height: 2170px;
+  right: -20px;
+  width: 252px;
+  height: 2300px;
   display: block;
   z-index: 0;
   background-size: cover;
@@ -55,34 +55,22 @@ body{
 
 
 li:hover{
-  a.colore-1,
-  a.colore-2,
-  a.colore-3,
-  a.colore-4,
-  a.colore-5,
-  a.colore-6,
-  a.colore-7,
-  a.colore-8,
-  a.colore-9,
-  a.colore-10,
-  a.colore-11,
-  a.colore-12{
-    color: white !important;
-  }
+  background: none !important;
+  a.colore-1{transition: color 350ms; color: #1C1D79 !important; background-color: none !important; font-weight: 600;}
+  a.colore-2{transition: color 350ms; color: #EF2D23 !important; background-color: none !important; font-weight: 600;}
+  a.colore-3{transition: color 350ms; color: #1FA08A !important; background-color: none !important; font-weight: 600;}
+  a.colore-4{transition: color 350ms; color: #F188B1 !important; background-color: none !important; font-weight: 600;}
+  a.colore-5{transition: color 350ms; color: #265CBC !important; background-color: none !important; font-weight: 600;}
+  a.colore-6{transition: color 350ms; color: #D9CC1E !important; background-color: none !important; font-weight: 600;}
+  a.colore-7{transition: color 350ms; color: #A43134 !important; background-color: none !important; font-weight: 600;}
+  a.colore-8{transition: color 350ms; color: #7C3F84 !important; background-color: none !important; font-weight: 600;}
+  a.colore-9{transition: color 350ms; color: #1FA189 !important; background-color: none !important; font-weight: 600;}
+  a.colore-10{transition: color 350ms; color: #6986CC !important; background-color: none !important; font-weight: 600;}
+  a.colore-11{transition: color 350ms; color: #F12C24 !important; background-color: none !important; font-weight: 600;}
+  a.colore-12{transition: color 350ms; color: #F27DAA !important; background-color: none !important; font-weight: 600;}
 }
 
-a.colore-1{transition: color 350ms; color: #1C1D79 !important; background-color: none !important; font-weight: 600;}
-a.colore-2{transition: color 350ms; color: #EF2D23 !important; background-color: none !important; font-weight: 600;}
-a.colore-3{transition: color 350ms; color: #1FA08A !important; background-color: none !important; font-weight: 600;}
-a.colore-4{transition: color 350ms; color: #F188B1 !important; background-color: none !important; font-weight: 600;}
-a.colore-5{transition: color 350ms; color: #265CBC !important; background-color: none !important; font-weight: 600;}
-a.colore-6{transition: color 350ms; color: #D9CC1E !important; background-color: none !important; font-weight: 600;}
-a.colore-7{transition: color 350ms; color: #A43134 !important; background-color: none !important; font-weight: 600;}
-a.colore-8{transition: color 350ms; color: #7C3F84 !important; background-color: none !important; font-weight: 600;}
-a.colore-9{transition: color 350ms; color: #1FA189 !important; background-color: none !important; font-weight: 600;}
-a.colore-10{transition: color 350ms; color: #6986CC !important; background-color: none !important; font-weight: 600;}
-a.colore-11{transition: color 350ms; color: #F12C24 !important; background-color: none !important; font-weight: 600;}
-a.colore-12{transition: color 350ms; color: #F27DAA !important; background-color: none !important; font-weight: 600;}
+
 
 
 
