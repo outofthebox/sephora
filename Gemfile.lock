@@ -156,6 +156,8 @@ GEM
     httparty (0.13.3)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
+    httpi (2.4.1)
+      rack
     i18n (0.6.9)
     innertube (1.1.0)
     instagram (0.10.0)
@@ -188,6 +190,9 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mandrill (0.0.4)
+      httpi
+      json
     method_source (0.8.2)
     middleware (0.1.0)
     mime-types (1.25.1)
@@ -373,6 +378,7 @@ DEPENDENCIES
   json
   kaminari
   letter_opener
+  mandrill
   modernizr-rails
   mysql2 (= 0.3.12b4)
   nested_set

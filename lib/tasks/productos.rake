@@ -422,7 +422,11 @@ namespace :productos do
     puts "Uploading file #{temp_file.path} to bucket #{bucket_name}."
     puts "Download from: #{url_for_read}"
 
-    product_email({link: url_for_read})
+    template_email({
+      link: url_for_read,
+      message: "Esta es la lista de productos publicados, los podras encontrar en el siguiente link",
+      title: "Resumen de productos en el sitio"
+    })
   end
 
   #sanitizers
@@ -438,10 +442,12 @@ namespace :productos do
     end
   end
 
-  def product_email(params)
+  def template_email(params)
     begin
+      title = params[:title] rescue "Resumen de productos en el sitio"
+      text_message = params[:message] rescue "Esta es la lista de productos publicados, los podras encontrar en el siguiente link"
       link = params[:link] rescue "/"
-      mandrill ||= Mandrill::API.new "WeWfnd1WxDVLyiOrgHk8_w"
+      mandrill ||= Mandrill::API.new "TroFaqX-FKu7l7PIR_JjPg"
       val = {
           "name" => "Valeria Verdejo",
           "type" => "to",
@@ -454,24 +460,24 @@ namespace :productos do
       }
       message = {
           "to"=>[gess],
-          "text"=>"Resumen de productos en el sitio",
-          "headers"=>{"Reply-To"=>"no-reply@outofthebox.com"},
-          "google_analytics_campaign"=>"scarlett@outofthebox.com",
-          "google_analytics_domains"=>["outofthebox.com"],
+          "text"=>title,
+          "headers"=>{"Reply-To"=>"no-reply@gessgallardo.com"},
+          "google_analytics_campaign"=>"scarlett@gessgallardo.com",
+          "google_analytics_domains"=>["gessgallardo.com"],
           "merge_language"=>"mailchimp",
           "track_clicks"=>false,
           "from_name"=>"Scarlett Gallardo",
-          "subject"=>"Resumen de producos publicos",
+          "subject"=>title,
           "html"=>"
             <h4>Hola!</h4>
-            <p>Esta es la lista de productos publicados, los podras encontrar en el siguiente link</p>
+            <p>#{text_message}</p>
             <br><br>
             <a href='#{link}'>Descargame aqui</a>
             <br><br>
             Saludos Scarlett
           ",
           "merge"=>true,
-          "from_email"=>"scarlett@outofthebox.com"
+          "from_email"=>"scarlett@gessgallardo.com"
       }
       result = mandrill.messages.send message
       render json: result.to_json
