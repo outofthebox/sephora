@@ -1,4 +1,5 @@
 require 'rake'
+require "mandrill"
 
 namespace :productos do
   task :esconder_incompletos => :environment do
@@ -404,7 +405,7 @@ namespace :productos do
     #AWS S3 SETUP
     bucket_name = "sephoramexico"
     temp_file = Tempfile.new("publicados_#{Date.today.to_s}")
-    key_path = "publicados/"+File.basename(temp_file)+".csv"
+    key_path = "productos/"+File.basename(temp_file)+".csv"
     s3 = AWS::S3.new
 
     CSV.open(temp_file, "w") do |csv|
