@@ -4,11 +4,13 @@ class Producto < ActiveRecord::Base
   paginates_per 20
   validate :validar
 
-  belongs_to :marca
+  belongs_to :marca, inverse_of: :productos
   belongs_to :categoria
 
   has_many :presentaciones, :class_name => "Producto", :foreign_key => "parent_id"
   has_and_belongs_to_many :usuarios
+
+  scope :publicados, -> { where(publicado: true) }
 
   attr_accessible :id, :nombre, :nombre_real, :sku, :upc, :sap, :parent_id, :precio, :descripcion, :ingredientes, :usos, :publicado, :marca_id, :categoria_id, :uso_id, :foto, :image_code, :personalidad, :visto, :descuento, :descuento_porcentual
   attr_accessor :foto
@@ -47,7 +49,16 @@ class Producto < ActiveRecord::Base
   end
 
   def nombre
-    unless self.nombre_real.nil? then self.nombre_real.html_safe else super end
+    begin
+      nombre_real_exists = self.nombre_real.nil? rescue false
+      unless nombre_real_exists
+        self.nombre_real.html_safe
+      else
+        super
+      end
+    rescue
+      return ""
+    end
   end
 
   def activo?

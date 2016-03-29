@@ -11,7 +11,7 @@ class Marca < ActiveRecord::Base
     :styles => { :grande => "266x266>", :normal => "170x170>", :mini => "100x100>" }
   }.merge(PAPERCLIP_STORAGE_OPTIONS)
 
-  has_many :productos
+  has_many :productos, inverse_of: :marca
 
   has_many :marca_producto
   has_many :featured, :through => :marca_producto, :class_name => "Producto", :source => :producto
