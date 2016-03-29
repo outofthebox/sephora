@@ -421,6 +421,8 @@ namespace :productos do
 
     puts "Uploading file #{temp_file.path} to bucket #{bucket_name}."
     puts "Download from: #{url_for_read}"
+
+    product_email({link: url_for_read})
   end
 
   #sanitizers
@@ -433,6 +435,51 @@ namespace :productos do
   task :sanitize_discount_percent => :environment do
     Producto.where(:descuento_porcentual => nil).each do |pd|
       pd.update_attribute(:descuento_porcentual, 0)
+    end
+  end
+
+  def product_email(params)
+    begin
+      link = params[:link] rescue "/"
+      mandrill ||= Mandrill::API.new "WeWfnd1WxDVLyiOrgHk8_w"
+      val = {
+          "name" => "Valeria Verdejo",
+          "type" => "to",
+          "email" => "valeria@outofthebox.com"
+      }
+      gess = {
+        "name" => "Gess Gallardo",
+        "type" => "to",
+        "email" => "hola@gessgallardo.com"
+      }
+      message = {
+          "to"=>[gess],
+          "text"=>"Resumen de productos en el sitio",
+          "headers"=>{"Reply-To"=>"no-reply@outofthebox.com"},
+          "google_analytics_campaign"=>"scarlett@outofthebox.com",
+          "google_analytics_domains"=>["outofthebox.com"],
+          "merge_language"=>"mailchimp",
+          "track_clicks"=>false,
+          "from_name"=>"Scarlett Gallardo",
+          "subject"=>"Resumen de producos publicos",
+          "html"=>"
+            <h4>Hola!</h4>
+            <p>Esta es la lista de productos publicados, los podras encontrar en el siguiente link</p>
+            <br><br>
+            <a href='#{link}'>Descargame aqui</a>
+            <br><br>
+            Saludos Scarlett
+          ",
+          "merge"=>true,
+          "from_email"=>"scarlett@outofthebox.com"
+      }
+      result = mandrill.messages.send message
+      render json: result.to_json
+    rescue Mandrill::Error => e
+      error_class = "A mandrill error occurred"
+      error_message = "#{e.class} - #{e.message}"
+      error_params = {}
+      send_honey_error(error_class, error_message, error_params)
     end
   end
 end
