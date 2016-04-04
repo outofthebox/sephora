@@ -7,7 +7,6 @@ Sephora::Application.routes.draw do
     match 'rebajas', :to => 'mobile/categorias#rebajas', :as => 'promociones_show'
     match 'obsequios', :to => 'mobile/categorias#obsequios', :as => 'obsequios'
 
-    match ':seccion', :to => 'mobile/secciones#show', :constraints => {:seccion => /allure2013|lanzamientosfall|backtoschool|potencializahighlights|fraganciasparael|skincareparael|narsblushes|obsessionsbeautybloggers|bbcreams|tintedmoisturizers|sephorabath|probrushes|beautyobsessions|vacaciones|ouidad|esteelaudernails|bronzers|clasicosdeskincare|mascaras2013|aceitesskincareagosto2013|mascarillas|cccreams2013|skincarehighlightsoctubre|maquillajebijoux|rollerballs|fragancias30ml|fraganciasholiday|showergelphilosphy|skincareholiday|cofresholiday|obsesionesskincare|arielcollection|beautysteals|fraganciassanvalentin|mascaras|orquidearadiante|recien-desempacados|detalles-sets|fragancias|labios|divacarioca|lanzamientossummer|productospromocion|skincare|styling|herramientastop|skincareojos|holiday2014|paletasholiday|sets|coloroftheyear|skincarelabios|rojoperfecto|lanzamientos|mascarillasnoche|beautyonthefly|promocion|regalospapa|theyrereal|marcasexclusivas|colorexplosion/ }
     match 'favorites(/:id)', :to => 'secciones#favorites', :as => 'favorites'
 
     #favoritoslabios
@@ -112,6 +111,8 @@ Sephora::Application.routes.draw do
     get 'base-contorno/contour', :to => 'paginas#basecontorno_contour', as: :basecontorno_contour
     get 'base-contorno/contour/concern', :to => 'paginas#basecontorno_contour_concern', as: :basecontorno_contour_concern
     get 'base-contorno/contour/video/:tipo', :to => 'paginas#basecontorno_contour_video', as: :basecontorno_contour_video
+
+    match '/:seccion', :to => 'mobile/secciones#show'
   end
 
   #Usuarios
@@ -191,8 +192,6 @@ Sephora::Application.routes.draw do
   post 'registro/qr/reg', :to => 'paginas#registro_qr_reg', :as => 'registro_qr_reg'
 
   get 'buscare', :to => 'utilidades#search', :as => 'buscare'
-
-  get   ':seccion', :to => 'secciones#ver', :constraints => { :seccion => /allure2013|lanzamientosfall|backtoschool|potencializahighlights|fraganciasparael|skincareparael|narsblushes|obsessionsbeautybloggers|hotnow|bestsellers|bbcreams|tintedmoisturizers|sephorabath|probrushes|beautyobsessions|vacaciones|ouidad|esteelaudernails|bronzers|clasicosdeskincare|mascaras2013|aceitesskincareagosto2013|mascarillas|cccreams2013|skincarehighlightsoctubre|maquillajebijoux|rollerballs|fragancias30ml|fraganciasholiday|showergelphilosphy|skincareholiday|cofresholiday|obsesionesskincare|arielcollection|beautysteals|fraganciassanvalentin|mascaras|orquidearadiante|recien-desempacados|detalles-sets|fragancias|labios|divacarioca|lanzamientossummer|productospromocion|skincare|styling|herramientastop|skincareojos|holiday2014|paletasholiday|sets|coloroftheyear|skincarelabios|rojoperfecto|lanzamientos|mascarillasnoche|beautyonthefly|promocion|regalospapa|theyrereal|marcasexclusivas|colorexplosion/ }
 
   get   'soluciones(/:id)', :to => 'secciones#soluciones', :as => 'soluciones'
   get   'sephorapicks(/:id)', :to => 'secciones#favorites', :as => 'favorites'
@@ -416,6 +415,9 @@ Sephora::Application.routes.draw do
   match "/opening", to: "paginas#opening", via: [:get, :post], as: "opening"
 
   #sitemap
+
+  get '/:seccion', :to => 'secciones#ver'
+
   get 'sitemap.xml', :to => 'sitemap#index', :defaults => { :format => 'xml' }
   # última línea, hace match con el resto de las rutas y muestra 404
   #match  '*a', :to => 'paginas#error_404'

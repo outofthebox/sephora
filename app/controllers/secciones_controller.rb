@@ -6,8 +6,12 @@ class SeccionesController < ApplicationController
 
   # hot now, favorites, best sellers
   def ver
-    @seccion = Seccion.by_slug(params[:seccion])
-    @contenido = Seccion.seccion_actual(@seccion)
+    @seccion = Seccion.by_slug(params[:seccion]) rescue false
+    if @seccion != false and !@seccion.nil?
+      @contenido = Seccion.seccion_actual(@seccion)
+    else
+      redirect_to root_path
+    end
   end
 
   def soluciones

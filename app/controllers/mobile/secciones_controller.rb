@@ -1,7 +1,11 @@
 class Mobile::SeccionesController < MobileController
   def show
     @seccion = Seccion.by_slug(params[:seccion])
-    @contenido = Seccion.seccion_actual(@seccion)
+    if @seccion != false and !@seccion.nil?
+      @contenido = Seccion.seccion_actual(@seccion)
+    else
+      redirect_to root_path
+    end
   end
 
   def mascarillashidratantes
