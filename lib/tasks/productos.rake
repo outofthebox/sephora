@@ -1,5 +1,5 @@
 require 'rake'
-require "mandrill-api"
+require "mandrill"
 
 namespace :productos do
   task :esconder_incompletos => :environment do
