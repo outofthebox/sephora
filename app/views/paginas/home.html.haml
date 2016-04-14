@@ -11,16 +11,14 @@
     .ante.jesus
     .contenedor
       .slider
-        %a.diapositiva.first.visible{href: "http://www.sephora.com.mx/colorexplosion?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=ColorExplosion"}
-          =image_tag "home/banners/960/banner1.jpg"
-        %a.diapositiva{:href => "http://www.sephora.com.mx/categoria/sombras?utm_source=SitioWeb&utm_medium=Banner2&utm_campaign=Sombras"}
-          =image_tag "colorexplotion/banner-secundario-sombras.jpg"
+        %a.diapositiva.first.visible{href: "http://www.sephora.com.mx/categoria/labios?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=ColorLabios"}
+          =image_tag "home/banners/banner-color-labios.jpg"
+        %a.diapositiva{href: "http://www.sephora.com.mx/producto/ambient-lighting-powder-diffused-light-877231001959?utm_source=SitioWeb&utm_medium=Banner2&utm_campaign=AmbientHourglass"}
+          =image_tag "home/banners/Hourglass.jpg"
         %a.diapositiva{:href => "http://www.sephora.com.mx/opening?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=Countdown"}
           =image_tag opening_url
         %a.diapositiva{href: "http://www.sephora.com.mx/marca/first-aid-beauty?utm_source=SitioWeb&utm_medium=Banner3&utm_campaign=FAB"}
           =image_tag "home/banners/960/banner2.jpg"
-        %a.diapositiva{href: "http://www.sephora.com.mx/producto/ud-gwen-stefani-eyeshadow-palette-3605971071492?utm_source=SitioWeb&utm_medium=Banner4&utm_campaign=GwenStefani"}
-          =image_tag "home/banners/960/banner3.jpg"
   :coffee
     $ ->
       a = new Paginas.Index()
