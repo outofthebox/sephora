@@ -430,6 +430,35 @@ namespace :productos do
     })
   end
 
+  task :no_publicados => :environment do
+    #AWS S3 SETUP
+    bucket_name = "sephoramexico"
+    temp_file = Tempfile.new("descontinuados_#{Date.today.to_s}")
+    key_path = "productos/"+File.basename(temp_file)+".csv"
+    s3 = AWS::S3.new
+
+    CSV.open(temp_file, "w") do |csv|
+      productos = Producto.includes(:marca).no_publicados.select([:nombre, :upc, :sap, :marca_id, :nombre_real])
+      csv << ["nombre", "upc", "sap", "marca"]
+      productos.each do |p|
+        marca_name = p.marca.marca rescue ""
+        csv << [p.nombre, p.upc, p.sap, marca_name]
+      end
+    end
+
+    s3.buckets[bucket_name].objects[key_path].write(:file => temp_file.path, :acl => :public_read)
+    url_for_read = s3.buckets[bucket_name].objects[key_path].url_for(:read) rescue "/"
+
+    puts "Uploading file #{temp_file.path} to bucket #{bucket_name}."
+    puts "Download from: #{url_for_read}"
+
+    template_email({
+      link: url_for_read,
+      message: "Esta es la lista de productos no publicados, los podras encontrar en el siguiente link",
+      title: "Resumen de productos descontinuados en el sitio"
+    })
+  end
+
   #sanitizers
   task :sanitize_discount => :environment do
     Producto.where(:descuento => nil).each do |pd|
@@ -482,11 +511,12 @@ namespace :productos do
       }
       result = mandrill.messages.send message
       render json: result.to_json
-    rescue Mandrill::Error => e
+    rescue Exception => e
       error_class = "A mandrill error occurred"
       error_message = "#{e.class} - #{e.message}"
       error_params = {}
-      send_honey_error(error_class, error_message, error_params)
+      raise e.inspect
+      #send_honey_error(error_class, error_message, error_params)
     end
   end
 end

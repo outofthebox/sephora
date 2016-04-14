@@ -11,6 +11,7 @@ class Producto < ActiveRecord::Base
   has_and_belongs_to_many :usuarios
 
   scope :publicados, -> { where(publicado: true) }
+  scope :no_publicados, -> { where(publicado: false) }
 
   attr_accessible :id, :nombre, :nombre_real, :sku, :upc, :sap, :parent_id, :precio, :descripcion, :ingredientes, :usos, :publicado, :marca_id, :categoria_id, :uso_id, :foto, :image_code, :personalidad, :visto, :descuento, :descuento_porcentual
   attr_accessor :foto
