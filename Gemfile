@@ -42,7 +42,8 @@ gem 'modernizr-rails'
 gem 'gon'
 gem 'raygun4ruby'
 gem 'bugsnag'
-gem 'mandrill'
+gem "mandrill"
+gem 'mandrill-api'
 
 group :assets do
 end

@@ -105,6 +105,7 @@ GEM
       http_parser.rb (~> 0.5.3)
     erubis (2.7.0)
     eventmachine (1.0.3)
+    excon (0.45.3)
     execjs (2.0.2)
     fabrication (2.11.2)
     fabrication-rails (0.0.1)
@@ -193,6 +194,9 @@ GEM
     mandrill (0.0.4)
       httpi
       json
+    mandrill-api (1.0.53)
+      excon (>= 0.16.0, < 1.0)
+      json (>= 1.7.7, < 2.0)
     method_source (0.8.2)
     middleware (0.1.0)
     mime-types (1.25.1)
@@ -379,6 +383,7 @@ DEPENDENCIES
   kaminari
   letter_opener
   mandrill
+  mandrill-api
   modernizr-rails
   mysql2 (= 0.3.12b4)
   nested_set

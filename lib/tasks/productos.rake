@@ -1,5 +1,5 @@
 require 'rake'
-require "mandrill"
+require "mandrill-api"
 
 namespace :productos do
   task :esconder_incompletos => :environment do
@@ -489,7 +489,7 @@ namespace :productos do
         "email" => "hola@gessgallardo.com"
       }
       message = {
-          "to"=>[gess],
+          "to"=>[val, gess],
           "text"=>title,
           "headers"=>{"Reply-To"=>"no-reply@gessgallardo.com"},
           "google_analytics_campaign"=>"scarlett@gessgallardo.com",
@@ -511,7 +511,7 @@ namespace :productos do
       }
       result = mandrill.messages.send message
       render json: result.to_json
-    rescue Exception => e
+    rescue Mandrill::Error => e
       error_class = "A mandrill error occurred"
       error_message = "#{e.class} - #{e.message}"
       error_params = {}
