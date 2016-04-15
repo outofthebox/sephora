@@ -3,6 +3,13 @@ class Marca < ActiveRecord::Base
   attr_accessor :logo, :promo, :remove_promo, :remove_logo
   default_scope :order => "marca ASC"
 
+  scope :con_productos, -> { joins(:productos).group('marcas.id').having('count(productos.id) > 0') }
+
+  scope :long, joins(:productos).
+    select('marcas.id').
+    group('marcas.id').
+    having('count(productos.id) > 0')
+
   has_attached_file :logo, {
     :styles => { :grande => "375x65>", :normal => "200x57>", :mini => "100x29>" }
   }.merge(PAPERCLIP_STORAGE_OPTIONS)

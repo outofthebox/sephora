@@ -20,7 +20,7 @@ class PaginasController < ApplicationController
   def get_new_search
     @search_cats = []; 
     
-    @search_marcas =  Marca.all
+    @search_marcas =  Marca.con_productos
     @search_categorias =  Categoria.all
     @search_productos =  Producto.publicados
 
