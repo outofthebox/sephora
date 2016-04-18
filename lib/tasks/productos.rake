@@ -459,6 +459,36 @@ namespace :productos do
     })
   end
 
+
+  task :todos => :environment do
+    #AWS S3 SETUP
+    bucket_name = "sephoramexico"
+    temp_file = Tempfile.new("todos_#{Date.today.to_s}")
+    key_path = "productos/"+File.basename(temp_file)+".csv"
+    s3 = AWS::S3.new
+
+    CSV.open(temp_file, "w") do |csv|
+      productos = Producto.all
+      csv << Producto.new.attributes.keys
+      productos.each do |p|
+        marca_name = p.marca.marca rescue ""
+        csv << p.attributes.values
+      end
+    end
+
+    s3.buckets[bucket_name].objects[key_path].write(:file => temp_file.path, :acl => :public_read)
+    url_for_read = s3.buckets[bucket_name].objects[key_path].url_for(:read) rescue "/"
+
+    puts "Uploading file #{temp_file.path} to bucket #{bucket_name}."
+    puts "Download from: #{url_for_read}"
+
+    template_email({
+      link: url_for_read,
+      message: "Esta es la lista de productos",
+      title: "Resumen de productos en el sitio"
+    })
+  end
+
   #sanitizers
   task :sanitize_discount => :environment do
     Producto.where(:descuento => nil).each do |pd|
