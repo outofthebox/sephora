@@ -3,7 +3,7 @@ class Marca < ActiveRecord::Base
   attr_accessor :logo, :promo, :remove_promo, :remove_logo
   default_scope :order => "marca ASC"
 
-  scope :con_productos, -> { joins(:productos).group('marcas.id').having('count(productos.id) > 0') }
+  scope :con_productos, -> { joins(:productos).where('productos.publicado = TRUE').group('marcas.id').having('count(productos.id) > 0') }
 
   scope :long, joins(:productos).
     select('marcas.id').
