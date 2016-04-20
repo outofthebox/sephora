@@ -44,6 +44,7 @@ gem 'raygun4ruby'
 gem 'bugsnag'
 gem "mandrill"
 gem 'mandrill-api'
+gem 'rails_12factor'
 
 group :assets do
 end

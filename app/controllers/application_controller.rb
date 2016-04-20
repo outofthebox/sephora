@@ -87,7 +87,7 @@ class ApplicationController < ActionController::Base
   helper_method :mini_hash, :check_minihash
 
   before_filter do
-    @marcas_all = Marca.order(:marca)
+    @marcas_all = Marca.con_productos
     @bgcategorias = BlogCategoria.order('id ASC').first(4)
   end
 
