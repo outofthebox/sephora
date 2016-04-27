@@ -136,7 +136,7 @@ Sephora::Application.routes.draw do
   post  'usuario/wishlist/del/:upc', :to => "usuarios#wishlist_del", :as => "usuario_wishlist_del"
 
   # mascarillas
-  # 
+  #
 
   get 'facemask', :to => 'paginas#mascarillasantiedad', as: :mascarillasantiedad
   get 'eyemask', :to => 'paginas#mascarillasmultibeneficio', as: :mascarillasmultibeneficio
@@ -413,6 +413,13 @@ Sephora::Application.routes.draw do
   match "/masterclass", to: "paginas#masterclass", via: [:get, :post], as: "masterclass"
   match "/veracruz", to: "paginas#veracruz", via: [:get, :post], as: "veracruz"
   match "/opening", to: "paginas#opening", via: [:get, :post], as: "opening"
+
+  scope :animacion do
+    match "/commodity", to: "animacion#commodity", via:[:get], as: "commodity"
+    match "/clean", to: "animacion#clean", via:[:get], as: "clean"
+    match "/tocca", to: "animacion#tocca", via:[:get], as: "tocca"
+    match "/nest", to: "animacion#nest", via:[:get], as: "nest"
+  end
 
   #sitemap
 

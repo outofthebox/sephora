@@ -5,6 +5,8 @@
 # = require redactor
 # = require jcarousel
 
+# = require animacion
+
 $("#base").hover ->
   $(".base_txt").fadeToggle()
   return
@@ -198,7 +200,7 @@ $("#tabmenu ul li a").click (e) ->
   activeTab = $(this).attr("href")
   $("#tabmenu ul li").removeClass "active"
   $(this).closest('li').addClass "active"
-  $(".tabdesc").hide() 
+  $(".tabdesc").hide()
   $(activeTab).show()
 
 $("select#marcas").on 'change', (e) ->
@@ -217,7 +219,7 @@ if ($widget_vinculos = $(".widget-seccion-producto-vincular")).size()
       data: "q=#{$search.val()}"
       complete: (response)->
         $this.find(".resultados").html response.responseText
-  
+
   $(".producto-vincular").live 'click', (e) ->
     $this = $(this)
     $new_form = $(".widget-seccion-producto-form:not(:visible)").clone()

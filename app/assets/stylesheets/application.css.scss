@@ -7,6 +7,7 @@
 // = require redactor
 // = require tango
 // = require animate
+// = require animacion
 // = require bootstrap
 // = require usuarios
 // = require paginas
@@ -89,7 +90,7 @@ li:hover{
     background-image: image-url("usuarios/wishlist/corazon_rosa.png") !important;
   }
   &.barra_menu{
-    background-image: image-url("usuarios/wishlist/corazon_rosa.png") !important; 
+    background-image: image-url("usuarios/wishlist/corazon_rosa.png") !important;
     right: 2px;
     top: 4px;
   }
@@ -401,7 +402,7 @@ ul.breadcrumbs{
   }
 
 
-  
+
   .eventos {
     width: 710px;
     position: relative;
@@ -574,7 +575,7 @@ ul.breadcrumbs{
     background-image: url(consultores/img_consultor.jpg);
   }
 
-  .img_completos {    
+  .img_completos {
     position: absolute;
     width: 375px;
     height: 310px;
@@ -3702,7 +3703,7 @@ a.close {
       font-size: 10pt;
       margin: 20px 0;
     }
-    .must { 
+    .must {
       margin-top: 25px;
     }
   }
@@ -3984,7 +3985,7 @@ a.close {
     padding-bottom: 56.25% !important;
     padding-top: 30px !important; height: 0; overflow: hidden;
   }
-   
+
   .video-container iframe,
   .video-container object,
   .video-container embed {
@@ -3996,7 +3997,7 @@ a.close {
   }
   .foundation_video {
     .producto-list {
-      width: 100% !important;      
+      width: 100% !important;
       li {
       }
     }
@@ -4051,7 +4052,7 @@ a.close {
     padding-bottom: 56.25% !important;
     padding-top: 30px !important; height: 0; overflow: hidden;
   }
-   
+
   .video-container iframe,
   .video-container object,
   .video-container embed {

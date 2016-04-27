@@ -1,0 +1,27 @@
+#animacion.abril
+  #banner=image_tag('animacion/abril/landing/assets/banner.png')
+  #menu
+    %ul
+      %li.clean
+        %a{:href => "/clean"}
+      %li.commodity
+        %a{:href => "/commodity"}
+      %li.nest
+        %a{:href => "/nest"}
+      %li.tocca
+        %a{:href => "/tocca"}
+  #content=image_tag("animacion/abril/landing/assets/#{@animacion}.png")
+  #carousel
+    %a.navigation.previous{:href => "#"}
+    %a.navigation.next{:href => "#"}
+    %ul.productos
+      - @productos.each do |producto|
+        %li.producto
+          %a{:href => producto_path(producto)}
+            .producto-img=image_tag(producto.foto)
+            .producto-marca=producto.marca.marca
+            .producto-name=producto.nombre
+            .producto-price=producto.precio
+  :coffee
+    $(document).ready ->
+      slider = new Animacion.slider

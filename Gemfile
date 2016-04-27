@@ -49,7 +49,7 @@ group :assets do
 end
 
 group :production do
-  gem 'therubyracer'
+  #gem 'therubyracer'
 end
 
 group :development, :test do

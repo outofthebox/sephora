@@ -1,0 +1,131 @@
+// Place all the styles related to the animacion controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#animacion{
+	width: 747px;
+	display: block;
+	margin: 20px auto;
+	#banner{
+		width: 100%;
+		border-bottom: 1px solid black;
+		margin-bottom: 20px;
+	}
+	#menu{
+		background: image-url("animacion/abril/landing/assets/linea-menu.png");
+		width: 100%;
+		height: 33px;
+		display: block;
+		margin: 0 0 20px 0;
+		padding: 0;
+		ul{
+			background: image-url("animacion/abril/landing/assets/menu.png");
+			width: 100%;
+			height: 33px;
+			display: block;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			li{
+				width: 28%;
+				display: inline-block;
+				height: 33px;
+				cursor: pointer;
+				&.clean{ width: 28%; }
+				&.commodity{ width: 27%; }
+				&.nest{ width: 16%; }
+				&.tocca{ width: 27%; }
+				a{
+					width: 100%;
+					display: block;
+					height: 33px;
+				}
+			}
+		}
+	}
+	#content{
+		width: 701px;
+		display: block;
+		margin: 20px auto;
+	}
+	#carousel{
+		display: flex;
+		overflow:hidden;
+	  position:relative;
+	  width:auto;
+	  .navigation {
+	    display: inline-block;
+	    font-family: verdana,sans-serif;
+	    font-size: 3em;
+	    height: 100%;
+	    width: 51px;
+	    position: absolute;
+	    text-align: center;
+	    transition: all 0.4s;
+	    top: 0;
+	    z-index: 100;
+			-moz-transition:all 0.4s;
+			-ms-transition:all 0.4s;
+			-webkit-transition:all 0.4s;
+			-o-transition:all 0.4s;
+			transition:all 0.4s;
+		}
+		.previous {
+			left: 0px;
+	    background: url(/assets/home/left.png) no-repeat center center;
+	    background-size: 30px;
+		}
+		.next {
+			right: 0px;
+	    background: url(/assets/home/right.png) no-repeat center center;
+	    background-size: 30px;
+		}
+	  .productos{
+	  	position: relative;
+	  	left:0;
+
+			-moz-box-orient:horizontal;
+			-ms-box-orient:horizontal;
+			-webkit-box-orient:horizontal;
+			-o-box-orient:horizontal;
+			box-orient:horizontal;
+
+			display:-moz-box;
+			display:-ms-box;
+			display:-webkit-box;
+			display:-o-box;
+			display:box;
+
+			list-style-type:none;
+			margin:0;
+			padding:0;
+
+			transition: 250ms left;
+			.producto{
+				width: 25%;
+				text-align: center;
+				font-size: 12px;
+
+				.producto-img{
+					width: 100%;
+					img{
+						width: 100%;
+						display: block;
+						margin: auto;
+					}
+				}
+				.producto-marca{
+					font-weight: 600;
+					color: #333;
+					text-transform: uppercase;
+				}
+				.producto-name{
+					font-weight: 200;
+				}
+				.producto-price{
+					font-weight: 600;
+				}
+			}
+		}
+	}
+}
