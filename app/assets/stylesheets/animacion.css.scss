@@ -2,6 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.lateral-1{
+  background: image-url("animacion/abril/landing/assets/01.png") repeat;
+  position: absolute;
+  top: 0px;
+  left: -20px;
+  width: 252px;
+  height: 2300px;
+  display: block;
+  z-index: 0;
+  background-size: cover;
+}
+.lateral-2{
+  background: image-url("animacion/abril/landing/assets/02.png") repeat;
+  position: absolute;
+  top: 0px;
+  right: -20px;
+  width: 252px;
+  height: 2300px;
+  display: block;
+  z-index: 0;
+  background-size: cover;
+}
+
 #animacion{
 	width: 747px;
 	display: block;
