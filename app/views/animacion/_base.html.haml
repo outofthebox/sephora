@@ -17,7 +17,7 @@
     %ul.productos
       - @productos.each do |producto|
         %li.producto
-          %a{:href => producto_path(producto)}
+          %a{:href => producto_ver_path(producto.slug)}
             .producto-img=image_tag(producto.foto)
             .producto-marca=producto.marca.marca
             .producto-name=producto.nombre
