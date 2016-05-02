@@ -18,9 +18,6 @@ class UsuariosController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.csv {
-        render :text => "acceso no disponible"
-      }
     end
   end
 
