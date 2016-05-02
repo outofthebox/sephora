@@ -19,13 +19,7 @@ class UsuariosController < ApplicationController
     respond_to do |format|
       format.html
       format.csv {
-        csv_string = CSV.generate do |csv|
-          csv << Usuario.attribute_names
-          @usuarios.each do |u|
-            csv << u.attributes.values
-          end
-        end
-        render :text => csv_string
+        render :text => "acceso no disponible"
       }
     end
   end
