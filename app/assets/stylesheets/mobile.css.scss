@@ -66,7 +66,7 @@ html, body{
 		margin:auto;
 		text-align: center;
 		tbody{width: 100%;}
-		.icono{  
+		.icono{
 			vertical-align: middle;
 			&.menu{
 				font-size: 2em;
@@ -104,7 +104,7 @@ html, body{
 			display: block;
 			z-index: -1;
 			&.home{
-				background-image: image-url("colorexplotion/mobile-back.jpg");
+				background-image: image-url("animacion/abril/mobile/mobile-back/back.jpg");
 				background-size: cover;
 			}
 		}
@@ -174,7 +174,7 @@ html, body{
 		font-size: 0.8em;
 		a{color:inherit; text-decoration: none;}
 		&:nth-child(2n){
-			width: 30%; 
+			width: 30%;
 			border-left: 1px solid white;
 			border-right: 1px solid white;
 		}
@@ -259,7 +259,7 @@ html, body{
 		width: 100%;
 		display: block;
 		margin:0;
-		padding:0; 
+		padding:0;
 		list-style: none;
 		li{
 			min-height: 40px;
@@ -431,7 +431,7 @@ html, body{
 	}
 	&.soluciones{
 		width: 90%;
-		margin:10px auto;	
+		margin:10px auto;
 	}
 }
 
@@ -463,7 +463,7 @@ html, body{
 				width: 100%;
 				display: block;
 				margin:0;
-				padding:0; 
+				padding:0;
 				list-style: none;
 				li{
 					height: 40px;
@@ -1333,7 +1333,7 @@ html, body{
     background-image: image-url("usuarios/wishlist/corazon_rosa.png") !important;
   }
   &.barra_menu{
-    background-image: image-url("usuarios/wishlist/corazon_rosa.png") !important; 
+    background-image: image-url("usuarios/wishlist/corazon_rosa.png") !important;
     right: 2px;
     top: 4px;
   }
