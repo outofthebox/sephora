@@ -20,7 +20,7 @@
         .txt_tienda_header
           = image_tag 'eventos/txt_header_eventos.jpg'
         - @eventos.each do |evento|
-          - store_events = StoreEvent.where(:event_id => evento.id)
+          - store_events = StoreEvent.where(:event_id => evento.id).order(:dates)
           .eventos
             .foto_evento
               =image_tag(evento.photo(:normal))
