@@ -9,9 +9,11 @@ class ApplicationController < ActionController::Base
   def set_search_engine
     search_cats = []; 
     
-    @search_marcas =  Marca.con_productos
-    @search_categorias =  Categoria.all
-    @search_productos =  Producto.publicados
+    search_marcas =  Marca.con_productos.map{|m| {label: m.marca, category: "Marcas", link: marca_ver_path(m.slug)}}
+    search_categorias =  Categoria.all.map{|c| {label: c.nombre, category: "Categorias", link: categoria_ver_path(c.slug)}}
+    search_productos =  Producto.publicados.map{|p| {label: p.nombre, category: "Productos", link: producto_ver_path(p.slug)}}
+
+    search_cats = search_marcas + search_categorias + search_productos
 
     #@search_marcas.map do |m| search_cats << {label: m.marca, category: "Marcas", link: marca_ver_path(m.slug)} end
     #@search_categorias.map do |c| search_cats << {label: c.nombre, category: "Categorias", link: categoria_ver_path(c.slug)} end
