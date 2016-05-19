@@ -459,7 +459,6 @@ namespace :productos do
     })
   end
 
-
   task :todos => :environment do
     #AWS S3 SETUP
     bucket_name = "sephoramexico"

@@ -5,7 +5,7 @@
   <!--[if IE 8]>    <html lang="es" class="no-js lt-ie9"> <![endif]-->
   <!--[if gt IE 8]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
 %head
-  = render :partial => "layouts/searchscript", locals: {search_cats: @search_cats}
+  %script{:async => "async", :src => "https://sephoramexico.s3.amazonaws.com/settings/search_engine.js", :type => "text/javascript"}
   %meta{:charset => "UTF-8"}
   / ## -- Meta
   - if current_page?('/')

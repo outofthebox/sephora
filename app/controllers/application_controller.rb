@@ -3,12 +3,7 @@ class ApplicationController < ActionController::Base
 
   #before_filter :redirect_main_domain if Rails.env.production?
   before_filter :redirect_mobile
-  before_filter :set_search_engine, except: [:suscribe, :create, :new]
-
-
-  def set_search_engine
-    @search_cats = []
-  end
+  #before_filter :set_search_engine, except: [:suscribe, :create, :new]
 
   def redirect_main_domain
     dominio = 'sephora.com.mx'
