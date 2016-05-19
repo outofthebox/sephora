@@ -7,21 +7,17 @@ class ApplicationController < ActionController::Base
 
 
   def set_search_engine
-    @search_cats = []; 
-    query = "select p.nombre as label, 'Productos' as category, p.slug as slug from productos as p where p.publicado = true"
-    productos =   ActiveRecord::Base.connection.execute(query)
-    productos_array = productos.map{|p| {label: p["label"], category: p["category"], link: "/producto/"+p["slug"]}}
+    search_cats = []; 
+    
+    @search_marcas =  Marca.con_productos
+    @search_categorias =  Categoria.all
+    @search_productos =  Producto.publicados
 
-    query = "select m.marca as label, 'Marcas' as category, m.slug as slug from marcas as m"
-    marcas =  ActiveRecord::Base.connection.execute(query)
-    marcas_array = marcas.map{|p| {label: p["label"], category: p["category"], link: "/marca/"+p["slug"]}}
+    @search_marcas.each do |m| search_cats << {label: m.marca, category: "Marcas", link: marca_ver_path(m.slug)} end
+    @search_categorias.each do |c| search_cats << {label: c.nombre, category: "Categorias", link: categoria_ver_path(c.slug)} end
+    @search_productos.each do |p| search_cats << {label: p.nombre, category: "Productos", link: producto_ver_path(p.slug)} end
 
-    query = "select c.nombre as label, 'Categorias' as category, c.slug as slug from categorias as c"
-    categorias =  ActiveRecord::Base.connection.execute(query)
-    categorias_array = categorias.map{|p| {label: p["label"], category: p["category"], link: "/categoria/"+p["slug"]}}
-
-    search_array = productos_array + marcas_array + categorias_array
-    @search_cats = search_array.to_json
+    @search_cats = search_cats.to_json
   end
 
   def redirect_main_domain
