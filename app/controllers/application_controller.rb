@@ -12,7 +12,17 @@ class ApplicationController < ActionController::Base
     productos =   ActiveRecord::Base.connection.execute(query)
     productos_array = productos.map{|p| {label: p["label"], category: p["category"], link: "/producto/"+p["slug"]}}
 
-    query = "select m.marca as label, 'Marcas' as category, m.slug as slug from marcas as m"
+    query = "
+      SELECT 
+        m.marca as label, 
+        'Marcas' as category, 
+        m.slug as slug 
+      FROM marcas as m 
+      INNER JOIN productos as p ON p.marca_id = m.id
+      WHERE (p.publicado = TRUE) 
+      GROUP BY m.id HAVING count(p.id) > 0 
+      ORDER BY marca ASC
+    "
     marcas =  ActiveRecord::Base.connection.execute(query)
     marcas_array = marcas.map{|p| {label: p["label"], category: p["category"], link: "/marca/"+p["slug"]}}
 
