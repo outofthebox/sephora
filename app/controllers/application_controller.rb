@@ -13,11 +13,11 @@ class ApplicationController < ActionController::Base
     @search_categorias =  Categoria.all
     @search_productos =  Producto.publicados
 
-    @search_marcas.each do |m| search_cats << {label: m.marca, category: "Marcas", link: marca_ver_path(m.slug)} end
-    @search_categorias.each do |c| search_cats << {label: c.nombre, category: "Categorias", link: categoria_ver_path(c.slug)} end
-    @search_productos.each do |p| search_cats << {label: p.nombre, category: "Productos", link: producto_ver_path(p.slug)} end
+    #@search_marcas.map do |m| search_cats << {label: m.marca, category: "Marcas", link: marca_ver_path(m.slug)} end
+    #@search_categorias.map do |c| search_cats << {label: c.nombre, category: "Categorias", link: categoria_ver_path(c.slug)} end
+    #@search_productos.map do |p| search_cats << {label: p.nombre, category: "Productos", link: producto_ver_path(p.slug)} end
 
-    @search_cats = search_cats.to_json
+    #@search_cats = search_cats.to_json
   end
 
   def redirect_main_domain
