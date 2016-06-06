@@ -79,8 +79,9 @@ class PostsController < ApplicationController
   private
 
   def set_instagram
-    inst_recent = Instagram.user_recent_media(24459425);
-    @recientes = inst_recent.first(4);
+    #inst_recent = Instagram.user_recent_media(24459425);
+    #@recientes = inst_recent.first(4);
+    @recientes = []
   end
 
   def auth_please
