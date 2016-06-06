@@ -11,12 +11,10 @@
     .ante.jesus
     .contenedor
       .slider
-        %a.diapositiva.first.visible{href: "http://www.sephora.com.mx/clean?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=Campa%C3%B1aFrag"}
+        %a.diapositiva.first.visible{href: "#"}
+          =image_tag "home/banners/960/banner.jpg"
+        %a.diapositiva{href: "http://www.sephora.com.mx/clean?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=Campa%C3%B1aFrag"}
           =image_tag "animacion/abril/banners/banner.jpg"
-        %a.diapositiva{href: "http://www.sephora.com.mx/producto/ambient-lighting-powder-diffused-light-877231001959?utm_source=SitioWeb&utm_medium=Banner2&utm_campaign=AmbientHourglass"}
-          =image_tag "home/banners/960/hourglass.jpg"
-        %a.diapositiva{href: "http://www.sephora.com.mx/marca/first-aid-beauty?utm_source=SitioWeb&utm_medium=Banner3&utm_campaign=FAB"}
-          =image_tag "home/banners/960/banner2.jpg"
   :coffee
     $ ->
       a = new Paginas.Index()
