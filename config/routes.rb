@@ -413,6 +413,7 @@ Sephora::Application.routes.draw do
   match "/masterclass", to: "paginas#masterclass", via: [:get, :post], as: "masterclass"
   match "/veracruz", to: "paginas#veracruz", via: [:get, :post], as: "veracruz"
   match "/opening", to: "paginas#opening", via: [:get, :post], as: "opening"
+  match '/oasis', :to => 'paginas#oasis', via: [:get, :post], as: "oasis"
 
   scope :animacion do
     match "/commodity", to: "animacion#commodity", via:[:get], as: "commodity"
