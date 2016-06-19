@@ -31,6 +31,7 @@ Sephora::Application.routes.draw do
     match "/masterclass", to: "mobile/landings#masterclass", via: [:get, :post], as: "masterclass"
     match "/veracruz", to: "mobile/landings#veracruz", via: [:get, :post], as: "veracruz"
     match "/opening", to: "mobile/landings#opening", via: [:get, :post], as: "opening"
+    match '/oasis', :to => 'mobile/landings#oasis', via: [:get, :post], as: "oasis"
 
     match "/lista_eventos", :to => 'mobile/eventos#index', :as => 'eventos'
     match "/eventos", :to => 'mobile/eventos#index', :as => 'eventos'
