@@ -17,6 +17,7 @@ class PaginasController < ApplicationController
   def masterclass; end
   def opening; end
   def oasis; end
+  def brow_collection; end
 
   def get_new_search
     @search_cats = []; 

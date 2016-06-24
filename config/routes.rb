@@ -32,6 +32,7 @@ Sephora::Application.routes.draw do
     match "/veracruz", to: "mobile/landings#veracruz", via: [:get, :post], as: "veracruz"
     match "/opening", to: "mobile/landings#opening", via: [:get, :post], as: "opening"
     match '/oasis', :to => 'mobile/landings#oasis', via: [:get, :post], as: "oasis"
+    match '/brow-collection', :to => 'mobile/landings#brow_collection', via: [:get, :post], as: "brow_collection"
 
     match "/lista_eventos", :to => 'mobile/eventos#index', :as => 'eventos'
     match "/eventos", :to => 'mobile/eventos#index', :as => 'eventos'
@@ -415,6 +416,7 @@ Sephora::Application.routes.draw do
   match "/veracruz", to: "paginas#veracruz", via: [:get, :post], as: "veracruz"
   match "/opening", to: "paginas#opening", via: [:get, :post], as: "opening"
   match '/oasis', :to => 'paginas#oasis', via: [:get, :post], as: "oasis"
+  match '/brow-collection', :to => 'paginas#brow_collection', via: [:get, :post], as: "brow_collection"
 
   scope :animacion do
     match "/commodity", to: "animacion#commodity", via:[:get], as: "commodity"
