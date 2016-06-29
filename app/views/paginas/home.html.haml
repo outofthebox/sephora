@@ -11,12 +11,12 @@
     .ante.jesus
     .contenedor
       .slider
-        %a.diapositiva.first.visible{href: "http://www.sephora.com.mx/tiendas?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=OpeningOasis"}
+        %a.diapositiva.first.visible{href: "http://www.sephora.com.mx/bellezaparallevar?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=Bellezaparallevar"}
+          =image_tag "animacion/junio/banner-principal.jpg"
+        %a.diapositiva{href: "http://www.sephora.com.mx/tiendas?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=OpeningOasis"}
           =image_tag "banner-oasis.jpg"
         %a.diapositiva{href: "http://www.sephora.com.mx/brow-collection"}
           =image_tag "brow-collection-banner.jpg"
-        %a.diapositiva{href: "http://www.sephora.com.mx/clean?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=Campa%C3%B1aFrag"}
-          =image_tag "animacion/abril/banners/banner.jpg"
   :coffee
     $ ->
       a = new Paginas.Index()
@@ -74,7 +74,7 @@
 
   #hotnow
     //%h3.ht_div HOT NOW
-    = image_tag("home/hn_seccion_div.png", {class: "mono-holiday"})
+    = image_tag("animacion/junio/beauty-must-haves.png", {class: "animacion-must-have"})
     #slider-wrap
       %ul.nobullet.nolist#hotnow.jcarousel-skin-tango
         - seccion_productos = @contenido.producto_seccion.limit(6)

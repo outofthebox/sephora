@@ -3,4 +3,5 @@ class Mobile::LandingsController < MobileController
   def masterclass; end
   def oasis; end
   def brow_collection; end
+  def bellezaparallevar; end
 end

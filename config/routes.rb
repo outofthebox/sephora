@@ -33,6 +33,7 @@ Sephora::Application.routes.draw do
     match "/opening", to: "mobile/landings#opening", via: [:get, :post], as: "opening"
     match '/oasis', :to => 'mobile/landings#oasis', via: [:get, :post], as: "oasis"
     match '/brow-collection', :to => 'mobile/landings#brow_collection', via: [:get, :post], as: "brow_collection"
+    match '/bellezaparallevar', :to => 'mobile/landings#bellezaparallevar', via: [:get, :post], as: "bellezaparallevar"
 
     match "/lista_eventos", :to => 'mobile/eventos#index', :as => 'eventos'
     match "/eventos", :to => 'mobile/eventos#index', :as => 'eventos'
@@ -418,12 +419,14 @@ Sephora::Application.routes.draw do
   match '/oasis', :to => 'paginas#oasis', via: [:get, :post], as: "oasis"
   match '/brow-collection', :to => 'paginas#brow_collection', via: [:get, :post], as: "brow_collection"
 
-  scope :animacion do
-    match "/commodity", to: "animacion#commodity", via:[:get], as: "commodity"
-    match "/clean", to: "animacion#clean", via:[:get], as: "clean"
-    match "/tocca", to: "animacion#tocca", via:[:get], as: "tocca"
-    match "/nest", to: "animacion#nest", via:[:get], as: "nest"
-  end
+  # scope :animacion do
+  #   match "/commodity", to: "animacion#commodity", via:[:get], as: "commodity"
+  #   match "/clean", to: "animacion#clean", via:[:get], as: "clean"
+  #   match "/tocca", to: "animacion#tocca", via:[:get], as: "tocca"
+  #   match "/nest", to: "animacion#nest", via:[:get], as: "nest"
+  # end
+
+  match "/bellezaparallevar", to: "animacion#index", via:[:get], as: "bellezaparallevar"
 
   #sitemap
 
