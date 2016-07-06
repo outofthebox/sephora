@@ -12,6 +12,7 @@ unless Rails.env.production?
   ENV['AWS_ACCESS_KEY_ID'] = 'AKIAINXYHER7TJ3FDRBA'
   ENV['AWS_SECRET_ACCESS_KEY'] = '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'
 
+  ENV['MAILGUN_SECRET_KEY'] = 'key-c30a13dbaa0c542ed6b5e58a6eb09961'
 
   ENV['U'] = '123'
   ENV['P'] = '123'

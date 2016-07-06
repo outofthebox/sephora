@@ -43,7 +43,7 @@ gem 'gon'
 gem 'raygun4ruby'
 gem 'bugsnag'
 gem "mandrill"
-gem 'mandrill-api'
+gem 'mailgun-ruby', '~>1.0.0', require: 'mailgun'
 
 group :assets do
 end
