@@ -2238,11 +2238,14 @@ ul.breadcrumbs{
       }
     }
     .video {
-      padding: 20px 60px;
-      background: rgb(218, 216, 216);
-      box-shadow: inset 0px 0px 40px -12px dimgray;
+      padding: 0 0 0 50px;
+      background: white;
+      // background: rgb(218, 216, 216);
+      // box-shadow: inset 0px 0px 40px -12px dimgray;
       iframe{
-        box-shadow: 0px 0px 40px -12px black;
+        // box-shadow: 0px 0px 40px -12px black;
+        width: 695px;
+        height: 365px;
       }
     }
   }
