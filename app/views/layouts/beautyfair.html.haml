@@ -1,0 +1,57 @@
+!!! 5
+:plain
+  <!--[if lt IE 7]> <html lang="es" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+  <!--[if IE 7]>    <html lang="es" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+  <!--[if IE 8]>    <html lang="es" class="no-js lt-ie9"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
+%head
+  %script{:src => "https://sephoramexico.s3.amazonaws.com/settings/search_engine.js", :type => "text/javascript"}
+  %meta{:charset => "UTF-8"}
+  / ## -- Meta
+  - if current_page?('/')
+    %title Sephora México
+    %meta{:name => "title", :content => "Sephora México"}
+  -else
+    %title
+      #{"#{yield(:titulo)} | " if content_for?(:titulo)} Sephora
+    %meta{:name => "title", :content => "#{yield(:titulo)} | Sephora México"}
+  %meta{:name => "description", :content => yield(:descripcion)}
+  %meta{:name => "keywords", :content => yield(:keywords)}
+  %meta{:name => "robots", :content => "index, nofollow"}
+
+  / ## -- OG
+  %meta{:property => "og:title", :content => yield(:titulo)}
+  %meta{:property => "og:description", :content => yield(:descripcion)}
+  %meta{:property => "og:image", :content => yield(:imagen)}
+  %meta{:property => "og:url", :content => yield(:url)}
+  %meta{:property => "og:site_name", :content => yield(:titulo)}
+
+  / ## -- FC
+  %meta{:name => "DC.Title", :content => yield(:titulo)}
+  %meta{:name => "DC.Creator", :content => "Sephora México"}
+  %meta{:name => "DC.Subject", :content => yield(:extracto)}
+  %meta{:name => "DC.Description", :content => yield(:descripcion)}
+  %meta{:name => "DC.Publisher", :content => "Sephora México"}
+  %meta{:name => "DC.Contributor", :content => "Out of the Box"}
+  %meta{:name => "DC.Type", :content => "HTML"}
+  %meta{:name => "DC.Format", :content => "HTML"}
+  %meta{:name => "DC.Identifier", :content => "Sephora"}
+  %meta{:name => "DC.Language", :content => "ES"}/
+  = javascript_include_tag :beautyfair
+  = stylesheet_link_tag :beautyfair
+  = csrf_meta_tags
+%body
+  .overlay
+  .chica-sephora
+  .menu-right
+  #menu
+    %ul.nav.navbar-nav.pull-right
+      %li.nav-item=link_to "SEPHORA PLAYA", beautyfair_playa_path
+      %li.nav-item=link_to "SEPHORA ANTEA", beautyfair_antea_path
+      %li.nav-item=link_to "SEPHORA ANDARES", beautyfair_andares_path
+      %li.nav-item=link_to "SEPHORA ANTARA", beautyfair_antara_path
+  #main
+    =yield
+  #footer
+  = javascript_include_tag :analitics
+

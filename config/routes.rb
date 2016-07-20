@@ -426,6 +426,15 @@ Sephora::Application.routes.draw do
   #   match "/nest", to: "animacion#nest", via:[:get], as: "nest"
   # end
 
+  scope '/beautyfair2016', as: "beautyfair" do
+    match '/', :to => 'beautyfair#home', via: [:get, :post], as: "home"
+    match '/tour', :to => 'beautyfair#tour', via: [:get, :post], as: "tour"
+    match '/playa', :to => 'beautyfair#playa', via: [:get, :post], as: "playa"
+    match '/antea', :to => 'beautyfair#antea', via: [:get, :post], as: "antea"
+    match '/andares', :to => 'beautyfair#andares', via: [:get, :post], as: "andares"
+    match '/antara', :to => 'beautyfair#antara', via: [:get, :post], as: "antara"
+  end
+
   match "/bellezaparallevar", to: "animacion#index", via:[:get], as: "bellezaparallevar"
 
   #sitemap
