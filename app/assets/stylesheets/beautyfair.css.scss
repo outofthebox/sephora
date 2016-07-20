@@ -131,8 +131,8 @@ body{
 
 /* Portrait and Landscape */
 @media only screen 
-  and (min-width: 320px) 
-  and (max-width: 480px)
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
     #menu{
       font-size: 25px;
@@ -162,19 +162,26 @@ body{
       }
     }
     .chica-sephora{
-      background: url(/assets/landings/beautyfair/chica-sephora.png) no-repeat -460px 100px;
+      background: image-url("landings/beautyfair/chica-sephora.png") no-repeat -460px 100px;
       min-height: 100%;
       display: block;
       background-size: cover;
       position: static;
+      width: auto;
+      height: 100%;
+    }
+    .contengo-dos{
+      position: relative;
+      height: 100%;
     }
     #main{
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: rgba(0, 0, 0, 0.2);
       img.letras-home {
         width: 100%;
-        position: relative;
+        position: absolute;
         top: 30%;
+        opacity: 0.8;
       }
       #letras-home{
         .boton-comienza {
