@@ -4,12 +4,12 @@
   #home
     = render(:partial => "mobile/searchbox")
     %ul#home-blocks
-      %li.animated.flipInY#marcas=link_to image_tag("mobile/home/btn_marcas.png"), m_marcas_path
-      %li.animated.flipInY#eventos=link_to image_tag("mobile/home/btn_eventos.png"), m_eventos_path
-      %li.animated.flipInY#tiendas=link_to image_tag("mobile/home/btn_tiendas.png"), m_tiendas_path
-      %li.animated.flipInY#beauty-studio=link_to image_tag("mobile/home/btn_beauty_studio.png"), m_minimakeovers_path
-      %li.animated.flipInY#blog=link_to image_tag("mobile/home/btn_blog.png"), m_posts_path
-      %li.animated.flipInY#mobile-specials=link_to image_tag("mobile/home/btn_specials.png"), m_specials_path
+      %li#marcas=link_to image_tag("mobile/home/btn_marcas.png"), m_marcas_path
+      %li#eventos=link_to image_tag("mobile/home/btn_eventos.png"), m_eventos_path
+      %li#tiendas=link_to image_tag("mobile/home/btn_tiendas.png"), m_tiendas_path
+      %li#beauty-studio=link_to image_tag("mobile/home/btn_beauty_studio.png"), m_minimakeovers_path
+      %li#blog=link_to image_tag("mobile/home/btn_blog.png"), m_posts_path
+      %li#mobile-specials=link_to image_tag("mobile/home/btn_specials.png"), m_specials_path
     :coffee
       $ ->
         $("#home-blocks li").click ->
@@ -52,6 +52,17 @@
       slidesPerView: 1
     });
   })
+:javascript
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:152326,hjsv:5};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+
+
 = render(:partial => "mobile/layouts/footer")
 
 

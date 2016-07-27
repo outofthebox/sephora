@@ -4,6 +4,7 @@ Sephora::Application.routes.draw do
     match "/", :to => 'mobile#home', :as => 'home'
     match "download", :to => "mobile#download", :as => "download"
     match 'politicas-de-privacidad', :to => 'mobile#politicas', :as => 'politicas'
+    match 'politicas-de-devoluciones', :to => 'mobile#devoluciones', :as => 'politicas_devoluciones'
     match 'rebajas', :to => 'mobile/categorias#rebajas', :as => 'promociones_show'
     match 'obsequios', :to => 'mobile/categorias#obsequios', :as => 'obsequios'
 
