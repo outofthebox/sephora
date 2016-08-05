@@ -477,15 +477,23 @@ namespace :productos do
 
     s3.buckets[bucket_name].objects[key_path].write(:file => temp_file.path, :acl => :public_read)
     url_for_read = s3.buckets[bucket_name].objects[key_path].url_for(:read) rescue "/"
+    url_for_download = url_for_read.to_s.split("?")[0] rescue url_for_read
 
     puts "Uploading file #{temp_file.path} to bucket #{bucket_name}."
     puts "Download from: #{url_for_read}"
 
-    template_email({
-      link: url_for_read,
-      message: "Esta es la lista de productos",
-      title: "Resumen de productos en el sitio"
-    })
+
+     # First, instantiate the Mailgun Client with your API key
+    mg_client = Mailgun::Client.new ENV['MAILGUN_SECRET_KEY']
+
+    # Define your message parameters
+    message_params =  {
+      from: 'Scarlett Gallardo <scarlett@gessgallardo.com>',
+      to: 'Ana Valeria <valeria@outofthebox.mx>',
+      subject: "Lista de productos sephora",
+      html: "Descarga la lista de productos desde <a href='#{url_for_download}'>aqui</a>",
+      text: "Descarga la lista de productos desde aqui #{url_for_download}"
+    }
   end
 
   #sanitizers
