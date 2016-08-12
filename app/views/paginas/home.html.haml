@@ -11,8 +11,8 @@
     .ante.jesus
     .contenedor
       .slider
-        %a.diapositiva.first.visible{href: "/bellezaparallevar?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=Bellezaparallevar"}
-          =image_tag "animacion/junio/banner-principal.jpg"
+        %a.diapositiva.first.visible{href: "/beautyclasses?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=BeautyClasses"}
+          =image_tag "animacion/agosto/banner-principal.jpg"
         %a.diapositiva{href: "/producto/vice-lipstick-trick-metallized-metallic-pinky-copper-shimmer-with-micro-sparkle-3605971159398?utm_source=SitioWeb&utm_medium=Banner2&utm_campaign=ViceLipstick"}
           =image_tag "home/banners/960/lipstick.jpg"
         %a.diapositiva{href: "/marca/nudestix?utm_source=SitioWeb&utm_medium=Banner2&utm_campaign=Nudestix"}
@@ -78,7 +78,7 @@
 
   #hotnow
     //%h3.ht_div HOT NOW
-    = image_tag("animacion/junio/beauty-must-haves.png", {class: "animacion-must-have"})
+    = image_tag("animacion/agosto/beauty-must-haves.png", {class: "animacion-must-have"})
     #slider-wrap
       %ul.nobullet.nolist#hotnow.jcarousel-skin-tango
         - seccion_productos = @contenido.producto_seccion.limit(6)

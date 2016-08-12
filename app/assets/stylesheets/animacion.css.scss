@@ -3,22 +3,22 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .lateral-1{
-  background: image-url("animacion/junio/lateral-01.png") repeat;
+  background: image-url("animacion/agosto/lateral-01.png") repeat;
   position: absolute;
   top: 70px;
   left: -50px;
-  width: 252px;
+  width: 183px;
   height: 2300px;
   display: block;
   z-index: 0;
   background-size: cover;
 }
 .lateral-2{
-  background: image-url("animacion/junio/lateral-02.png") repeat;
+  background: image-url("animacion/agosto/lateral-02.png") repeat;
   position: absolute;
   top: 70px;
   right: -50px;
-  width: 252px;
+  width: 183px;
   height: 2300px;
   display: block;
   z-index: 0;
@@ -38,6 +38,11 @@
 
 .animacion-must-have{
 	margin-bottom: 60px;
+}
+
+#beautyclasses{
+  display: block;
+  margin: auto;
 }
 
 #animacion{

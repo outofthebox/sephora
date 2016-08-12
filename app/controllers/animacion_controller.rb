@@ -19,4 +19,6 @@ class AnimacionController < ApplicationController
 		@productos = Producto.where(upc: ["814972015210", "814972015203", "814972016149", "814972016132", "814972018204", "814972018211", "840732100490", "840732101220"])
 		render "_base"
 	end
+	def beautyclasses
+	end
 end

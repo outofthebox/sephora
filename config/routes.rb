@@ -28,6 +28,7 @@ Sephora::Application.routes.draw do
     end
 
     #Landings
+    match "/beautyclasses", to: "mobile/landings#beautyclasses", via:[:get], as: "beautyclasses"
     match "/beautyfair", to: "mobile/landings#beautyfair", via: [:get, :post], as: "beautyfair"
     match "/masterclass", to: "mobile/landings#masterclass", via: [:get, :post], as: "masterclass"
     match "/veracruz", to: "mobile/landings#veracruz", via: [:get, :post], as: "veracruz"
@@ -420,12 +421,13 @@ Sephora::Application.routes.draw do
   match '/oasis', :to => 'paginas#oasis', via: [:get, :post], as: "oasis"
   match '/brow-collection', :to => 'paginas#brow_collection', via: [:get, :post], as: "brow_collection"
 
-  # scope :animacion do
-  #   match "/commodity", to: "animacion#commodity", via:[:get], as: "commodity"
-  #   match "/clean", to: "animacion#clean", via:[:get], as: "clean"
-  #   match "/tocca", to: "animacion#tocca", via:[:get], as: "tocca"
-  #   match "/nest", to: "animacion#nest", via:[:get], as: "nest"
-  # end
+  scope :animacion do
+    #match "/commodity", to: "animacion#commodity", via:[:get], as: "commodity"
+    #match "/clean", to: "animacion#clean", via:[:get], as: "clean"
+    #match "/tocca", to: "animacion#tocca", via:[:get], as: "tocca"
+    #match "/nest", to: "animacion#nest", via:[:get], as: "nest"
+    match "/beautyclasses", to: "animacion#beautyclasses", via:[:get], as: "beautyclasses"
+  end
 
   scope '/beautyfair2016', as: "beautyfair" do
     match '/', :to => 'beautyfair#home', via: [:get, :post], as: "home"
