@@ -13,14 +13,14 @@
       .slider
         %a.diapositiva.first.visible{href: "/beautyclasses?utm_source=SitioWeb&utm_medium=Banner1&utm_campaign=BeautyClasses"}
           =image_tag "animacion/agosto/banner-principal.jpg"
+        %a.diapositiva{href: "#"}
+          =image_tag "home/banners/960/antara.jpg"
         %a.diapositiva{href: "/producto/vice-lipstick-trick-metallized-metallic-pinky-copper-shimmer-with-micro-sparkle-3605971159398?utm_source=SitioWeb&utm_medium=Banner2&utm_campaign=ViceLipstick"}
           =image_tag "home/banners/960/lipstick.jpg"
         %a.diapositiva{href: "/marca/nudestix?utm_source=SitioWeb&utm_medium=Banner2&utm_campaign=Nudestix"}
           =image_tag "home/banners/960/nudestix.jpg"
         %a.diapositiva{href: "/supertipsguerlain?utm_source=SitioWeb&utm_medium=Banner3&utm_campaign=SuperTipsGuerlain"}
           =image_tag "home/banners/960/guerlain.jpg"
-        %a.diapositiva{href: "/brow-collection"}
-          =image_tag "brow-collection-banner.jpg"
   :coffee
     $ ->
       a = new Paginas.Index()
@@ -45,6 +45,7 @@
       %ul.nobullet.nolist.bestsellers#bestsellers.jcarousel-skin-tango
         - bestsellers_productos.each_with_index do |bestsellers_producto, i|
           - producto = bestsellers_producto.producto
+          - raise producto.inspect if producto.nombre_real == nil
           %li
             =link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
             %h6.number
@@ -53,6 +54,11 @@
               = producto.marca.marca.upcase
             %h5
               =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), producto_ver_path(producto.slug)
+            - unless bestsellers_producto.descripcion.empty?
+              %p
+                = bestsellers_producto.descripcion
+            / %p
+            /   %small= number_to_currency producto.precio
 - if @lonuevo and (lonuevo_productos = @lonuevo.producto_seccion) and lonuevo_productos.any?
   #best-sellers
     %h3 LO NUEVO
