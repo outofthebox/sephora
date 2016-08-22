@@ -53,11 +53,6 @@
               = producto.marca.marca.upcase
             %h5
               =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), producto_ver_path(producto.slug)
-            - unless bestsellers_producto.descripcion.empty?
-              %p
-                = bestsellers_producto.descripcion
-            / %p
-            /   %small= number_to_currency producto.precio
 - if @lonuevo and (lonuevo_productos = @lonuevo.producto_seccion) and lonuevo_productos.any?
   #best-sellers
     %h3 LO NUEVO
