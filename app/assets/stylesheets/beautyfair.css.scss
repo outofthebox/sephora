@@ -126,6 +126,38 @@ body{
         margin: 37% auto 0 auto;
       }
     }
+    .antea{
+      position: relative;
+      .display-ad{
+        margin-top: 15%;
+        background: image-url("landings/beautyfair/antea.jpg");
+        background-size: cover;
+        min-height: 518px;
+      }
+      .rs{
+        width: 35px;
+        height: 35px;
+        display: block;
+        bottom: 1%;
+        right: 100px;
+        position: absolute;
+        &.twitter{
+          background: image-url("landings/beautyfair/twitter.png") center center;
+          right: 10px;
+          background-size: contain;
+        }
+        &.facebook{
+          background: image-url("landings/beautyfair/facebook.png") center center;
+          right: 60px;
+          background-size: contain;
+        }
+        &.instagram{
+          background: image-url("landings/beautyfair/instagram.png") center center;
+          right: 110px;
+          background-size: contain;
+        }
+      }
+    }
   }
 }
 
