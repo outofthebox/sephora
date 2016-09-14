@@ -126,14 +126,8 @@ body{
         margin: 37% auto 0 auto;
       }
     }
-    .antea{
+    .antea, .andares{
       position: relative;
-      .display-ad{
-        margin-top: 15%;
-        background: image-url("landings/beautyfair/antea.jpg");
-        background-size: cover;
-        min-height: 573px;
-      }
       .rs{
         width: 35px;
         height: 35px;
@@ -156,6 +150,29 @@ body{
           right: 110px;
           background-size: contain;
         }
+      }
+    }
+    .antea{
+      .display-ad{
+        margin-top: 15%;
+        background: image-url("landings/beautyfair/antea.jpg") no-repeat center center;
+        background-size: cover;
+        min-height: 573px;
+      }
+    }
+    .andares{
+      .display-ad{
+        margin-top: 15%;
+        background: image-url("landings/beautyfair/andares.jpg") no-repeat center center;
+        background-size: contain;
+        min-height: 531px;
+      }
+      .rs{
+        width: 35px;
+        height: 35px;
+        display: block;
+        bottom: 3%;
+        right: 100px
       }
     }
   }
