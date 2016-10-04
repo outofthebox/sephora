@@ -7,7 +7,7 @@
 
 
 html { 
-  background: image-url('landings/beautyfair/fondo.jpg') no-repeat 0 0 fixed; 
+  background: image-url('landings/beautyfair/fondo.jpg') no-repeat 0 0 scroll; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -33,7 +33,7 @@ body{
   min-height: 100%;
   display: block;
   background-size: contain;
-  position: static;
+  position: fixed;
   width: 50%;
 }
 
