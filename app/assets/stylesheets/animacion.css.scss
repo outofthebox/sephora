@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .lateral-1{
-  background: image-url("animacion/agosto/lateral-01.png") repeat;
+  background: image-url("animacion/octubre/lado-izquierdo.png") repeat;
   position: absolute;
   top: 70px;
   left: -50px;
@@ -14,10 +14,10 @@
   background-size: cover;
 }
 .lateral-2{
-  background: image-url("animacion/agosto/lateral-02.png") repeat;
+  background: image-url("animacion/octubre/lado-derecho.png") repeat;
   position: absolute;
   top: 70px;
-  right: -50px;
+  right: 0px;
   width: 183px;
   height: 2300px;
   display: block;
