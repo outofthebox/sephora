@@ -1,0 +1,52 @@
+#celebra-con-nosotros
+  =image_tag("landings/celebra_con_nosotros/01.png");
+  .cuadro
+    =link_to(image_tag("landings/celebra_con_nosotros/02.png", {class: "box-right"}), "/lista_eventos");
+    =link_to(image_tag("landings/celebra_con_nosotros/03.png", {class: "box-left"}), "/minimakeovers");
+    .clearfix
+  .cuadro
+    =link_to(image_tag("landings/celebra_con_nosotros/04.png", {class: "box-right"}), "/makeoverpersonalizado");
+    =link_to(image_tag("landings/celebra_con_nosotros/05.png", {class: "box-left"}), "/consultapersonalizadabelleza");
+    .clearfix
+  .footer
+    =image_tag("landings/celebra_con_nosotros/06.png");
+    %a.tw-ccn.cnn{:href => "https://twitter.com/SephoraMX?lang=en", target: "_blank"}
+    %a.fb-ccn.cnn{:href => "https://www.facebook.com/sephoramexico/?brand_redir=16453004404", target: "_blank"}
+    %a.ig-ccn.cnn{:href => "https://www.instagram.com/sephoramx/", target: "_blank"}
+:scss
+  #celebra-con-nosotros{
+    width: 747px;
+    display: block;
+    margin: auto;
+    .cuadro{
+      margin-top: 10px;
+      .box-left{ float: right; }
+      .box-right{ float: left; }
+    }
+    .footer{
+      width: 100%;
+      display: block;
+      position: relative;
+        .cnn{
+          width: 19px;
+          height: 19px;
+          display: block;
+          position: absolute;
+          top: 17px;
+          right: 230px;
+          background-size: cover;
+        }
+        .tw-ccn{
+          background: image-url("landings/celebra_con_nosotros/twitter.png");
+          right: 210px;
+        }
+        .fb-ccn{
+          background: image-url("landings/celebra_con_nosotros/facebook.png");
+          right: 177px;
+        }
+        .ig-ccn{
+          background: image-url("landings/celebra_con_nosotros/instagram.png");
+          right: 140px;
+        }
+    }
+  }
