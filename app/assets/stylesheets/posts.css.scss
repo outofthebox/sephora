@@ -2,15 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// = require reset
-// = require eses
-// = require_self
-// = require widgets
-// = require secciones
-// = require jquery.ui.all
-// = require redactor
-// = require tango
-// = require application
+@import "reset";
+@import "eses";
+@import "widgets";
+@import "secciones";
+@import "jquery.ui.all";
+@import "redactor";
+@import "tango";
+@import "application";
 
 @font-face {
     font-family: 'Avant';

@@ -1,6 +1,5 @@
-//= require_self
-//= require paginas.css.scss
-//= require 960.css.scss
+@import "paginas.css.scss";
+@import "960.css.scss";
 
 @font-face {
     font-family: 'Avant';

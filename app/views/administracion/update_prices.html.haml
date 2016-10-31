@@ -1,0 +1,51 @@
+.bs-docs-section.col-12.col-md-12.col-lg-12{:role => "main"}
+  .page-header
+    %h2#btn-groups
+      %i.glyphicon.glyphicon.glyphicon-file
+      Files
+  .contengoTabla.row-fluid
+    = form_tag admin_upload_file_path, enctype: 'multipart/form-data' do
+      .col-lg-8
+        .form-group
+          .row
+            %label.btn.btn-block.btn-default.btn-file{:for => "file"}
+              = file_field_tag :file, {class: "form", onchange: "$('#upload-file-info').html($(this).val());"}
+              Browse
+            %span#upload-file-info.label.label-info
+      .col-lg-4
+        .form-group
+          .row.text-right
+            = submit_tag 'Upload file', {class: "btn btn-info btn-file"}
+    
+          
+    .col-lg-12
+      %table.table.table-bordered.table-striped.table-hover
+        %thead 
+          %tr
+            %th.text-center Name
+            %th.text-center Url
+        %tbody 
+        - for upload in @uploads
+          %tr
+            %td.text-center= upload.name
+            %td.text-center= upload.url
+
+:css
+  .btn-file {
+      position: relative;
+  }
+  .btn-file input[type=file] {
+      position: absolute;
+      top: 0;
+      right: 0;
+      min-width: 100%;
+      min-height: 100%;
+      font-size: 100px;
+      text-align: right;
+      filter: alpha(opacity=0);
+      opacity: 0;
+      outline: none;
+      background: white;
+      cursor: inherit;
+      display: block;
+  }

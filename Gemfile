@@ -1,7 +1,7 @@
 ruby '2.0.0'
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.0'
+gem 'rails', '3.2'
 gem 'pg'
 gem 'thinking-sphinx'
 gem 'flying-sphinx', '~> 1.0.0'
