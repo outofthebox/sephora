@@ -393,6 +393,11 @@ Sephora::Application.routes.draw do
     match 'events', to: 'administracion#events', via: :get
     match 'store_events', to: 'administracion#store_events', via: :get
     match 'photogram', to: 'administracion#photogram', via: :get
+
+    scope "/productos" do 
+      match 'update_prices', to: 'administracion#update_prices', via: :get
+      match 'upload_file', to: 'administracion#upload_file', via: :post
+    end
   end
 
   #brand-minisite

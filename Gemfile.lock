@@ -52,6 +52,7 @@ GEM
       httparty (>= 0.6, < 1.0)
       multi_json (~> 1.0)
     builder (3.0.4)
+    byebug (9.0.6)
     cancan (1.6.10)
     capybara (2.2.1)
       mime-types (>= 1.16)
@@ -208,7 +209,7 @@ GEM
     multi_test (0.1.1)
     multi_xml (0.5.5)
     multipart-post (1.2.0)
-    mysql2 (0.3.12b4)
+    mysql2 (0.3.17)
     nested_set (1.7.1)
       activerecord (>= 3.0.0)
       railties (>= 3.0.0)
@@ -366,6 +367,7 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass!
   bugsnag
+  byebug
   cancan
   coffee-rails (~> 3.2.1)
   cucumber-rails
@@ -392,7 +394,7 @@ DEPENDENCIES
   mailgun-ruby (~> 1.0.0)
   mandrill
   modernizr-rails
-  mysql2 (= 0.3.12b4)
+  mysql2 (= 0.3.17)
   nested_set
   newrelic_rpm
   nifty-generators
@@ -414,12 +416,15 @@ DEPENDENCIES
   spring
   spring-commands-cucumber
   spring-commands-rspec
-  thinking-sphinx (~> 3.0.0)
+  thinking-sphinx
   to_xls
   uglifier (>= 1.0.3)
   unicorn
   watu_table_builder
   yaml_db
 
+RUBY VERSION
+   ruby 2.0.0p648
+
 BUNDLED WITH
-   1.11.2
+   1.12.5

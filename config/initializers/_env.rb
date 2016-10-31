@@ -9,6 +9,8 @@ unless Rails.env.production?
 
   ENV['S3_KEY'] = 'AKIAINXYHER7TJ3FDRBA'
   ENV['S3_SECRET'] = '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'
+  ENV['S3_BUCKET'] = 'sephoramexico'
+
   ENV['AWS_ACCESS_KEY_ID'] = 'AKIAINXYHER7TJ3FDRBA'
   ENV['AWS_SECRET_ACCESS_KEY'] = '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'
 

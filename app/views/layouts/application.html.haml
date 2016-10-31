@@ -44,6 +44,7 @@
   = javascript_include_tag :"jquery-ui"
   = javascript_include_tag :paginas
   = javascript_include_tag :usuarios
+
   = stylesheet_link_tag :application
   = csrf_meta_tags
 
@@ -138,6 +139,8 @@
     = yield
     = render(:partial => "layouts/footer_nav")
   = javascript_include_tag :application
+  = javascript_include_tag :redactor
+  = javascript_include_tag :jcarousel
   :javascript
     $(document).ready(function(){
       $( "#buscar_q" ).catcomplete({

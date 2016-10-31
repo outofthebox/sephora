@@ -1,9 +1,9 @@
-ruby '1.9.3'
+ruby '2.0.0'
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.0'
 gem 'pg'
-gem 'thinking-sphinx', '~> 3.0.0'
+gem 'thinking-sphinx'
 gem 'flying-sphinx', '~> 1.0.0'
 gem 'haml', "~> 4.0.3"
 gem 'haml-rails', "~> 0.4"
@@ -22,7 +22,7 @@ gem 'json'
 gem 'watu_table_builder', :require => 'table_builder'
 gem 'sitemap_generator'
 gem 'unicorn'
-gem 'mysql2',          '0.3.12b4'
+gem 'mysql2', '0.3.17'
 gem 'newrelic_rpm'
 gem 'yaml_db'
 gem 'instagram'
@@ -66,6 +66,7 @@ group :development, :test do
   gem 'spring'
   gem 'spring-commands-cucumber'
   gem 'spring-commands-rspec'
+  gem "byebug"
 end
 
 group :test do

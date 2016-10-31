@@ -9,8 +9,6 @@ class ProductosController < ApplicationController
     authorize! :manage, @productos
   end
 
-
-
   def busqueda2
     query = params[:buscar][:q];
     productos = Producto.search Riddle.escape(query);
