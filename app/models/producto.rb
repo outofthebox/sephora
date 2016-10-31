@@ -141,4 +141,50 @@ class Producto < ActiveRecord::Base
 
     self.where("productos.precio > ? AND productos.precio <= ?", rango[mirango][0], rango[mirango][1])
   end
+
+
+  def self.update_precios(file, update_prices = false)
+    data = []
+
+    i = URI(file)
+
+    scheme = i.scheme
+    host = i.host
+    path = i.path rescue '/'
+    query = i.query rescue ''
+
+    host_path = "#{scheme}://#{host}"
+    full_path = "#{scheme}://#{host}#{path}#{query}"
+
+    conn = Faraday.new(:url => host_path) do |faraday|
+      faraday.request  :url_encoded
+      faraday.response :logger
+      faraday.adapter  Faraday.default_adapter
+    end
+
+    request = conn.get do |req|
+      req.url "#{path}#{query}"
+      req.headers['Accept'] = 'application/csv'
+    end
+
+    csv = CSV.parse(request.body, :headers => false)
+
+    #csv.each do |row| code = row[0]; precio_nuevo = row[1]; precio_nuevo = precio_nuevo.to_f;   data << {:code => code, :precio_nuevo => precio_nuevo}; end
+
+    all_products = Producto.where(upc: csv.map{|x| x[0]}).map{|prod| {id: prod.id, upc: prod.upc, precio: prod.precio.to_f}}
+
+    nuevos_precios = csv.map do |row|
+      {upc: row[0], nuevo_precio: row[1].to_f}
+    end
+
+    productos = (all_products+nuevos_precios).group_by{|h| h[:upc]}.map{|k,v| v.reduce(:merge)}.select{|x| x[:id].present?}
+
+    ids = productos.map{|x| x[:id]}
+    update_vals = productos.map{|x| {precio: x[:nuevo_precio]}}
+
+    Producto.update(ids, update_vals) if update_prices == true 
+
+    return productos
+  end
+
 end

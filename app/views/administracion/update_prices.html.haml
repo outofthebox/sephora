@@ -1,0 +1,18 @@
+.bs-docs-section.col-12.col-md-12.col-lg-12{:role => "main"}
+  .page-header
+    %h2#btn-groups
+      %i.glyphicon.glyphicon.glyphicon-file
+      Prices
+  .contengoTabla.row-fluid
+    %table.table.table-bordered.table-striped.table-hover
+      %thead 
+        %tr
+          %th UPC
+          %th Precio Anterior
+          %th Precio Nuevo
+      %tbody
+        -@prices.each do |price|
+          %tr
+            %td=price[:upc]
+            %td=price[:precio]
+            %td=price[:nuevo_precio]

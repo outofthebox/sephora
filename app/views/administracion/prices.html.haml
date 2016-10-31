@@ -1,0 +1,14 @@
+.bs-docs-section.col-12.col-md-12.col-lg-12{:role => "main"}
+  .page-header
+    %h2#btn-groups
+      %i.glyphicon.glyphicon.glyphicon-file
+      Prices
+  .contengoTabla.row-fluid
+    = form_tag admin_update_prices_path do
+      .col-lg-12.text-center
+        .form-group
+          %small Selecciona el archivo con el que deseas actualizar los precios
+        .form-group
+          = select_tag(:file_id, options_from_collection_for_select(Upload.all, :id, :name), {class: "form-control"})
+        .form-group
+          = submit_tag 'Actualizar precios', {class: "btn btn-block btn-info btn-file"}
