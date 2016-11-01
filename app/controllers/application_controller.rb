@@ -5,6 +5,12 @@ class ApplicationController < ActionController::Base
   before_filter :redirect_mobile
   #before_filter :set_search_engine, except: [:suscribe, :create, :new]
 
+  def call_rake(task, options = {})
+    options[:rails_env] ||= Rails.env
+    args = options.map { |n, v| "#{n.to_s.upcase}='#{v}'" }
+    system "/usr/bin/rake #{task} #{args.join(' ')} --trace 2>&1 >> #{Rails.root}/log/rake.log &"
+  end
+
   def redirect_main_domain
     dominio = 'sephora.com.mx'
     if request.env["rack.url_scheme"] == "https" 
