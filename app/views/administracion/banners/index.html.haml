@@ -1,0 +1,14 @@
+#main{:vista=>"banners"}
+  .bs-docs-section.col-12.col-md-12.col-lg-12{:role => "main"}
+    .page-header
+      .pull-right=link_to("New", new_admin_banner_path, {class: "btn btn-info"})
+      %h2#btn-groups
+        Banners
+      .clearfix
+    .page-body
+      - @banners.each do |banner|
+        .index-banner
+          .badge.position=banner.priority
+          .imagen=link_to image_tag(banner.image, {width: "100%"}), admin_banner_path(banner)
+          %span.badge.valid-date=banner.valid_from.to_s
+          %span.badge.valid-date=banner.valid_to.to_s

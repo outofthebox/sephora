@@ -379,9 +379,11 @@ Sephora::Application.routes.draw do
   resources :landings
   resources :events, controller: "administracion/events", except: :index
   resources :store_events, controller: "administracion/store_events", except: :index
+  resources :banners, controller: "administracion/banners"
   scope path: :administracion, as: "admin" do
     resources :landings, except: :index
     resources :events, except: :index, controller: "administracion/events"
+    resources :banners, controller: "administracion/banners"
     resources :store_events, except: :index, controller: "administracion/store_events"
 
     match 'photogram/suscribe', to: 'administracion/photogram#suscribe', via: :get
@@ -397,6 +399,9 @@ Sephora::Application.routes.draw do
     scope "/productos" do 
       match 'prices', to: 'administracion#prices', via: :get
       match 'update_prices', to: 'administracion#update_prices', via: :post
+
+      match 'descontinuados', to: 'administracion#descontinuados', via: :get
+      match 'update_descontinuados', to: 'administracion#update_descontinuados', via: :post
 
       match 'files', to: 'administracion#files', via: :get
       match 'upload_file', to: 'administracion#upload_file', via: :post

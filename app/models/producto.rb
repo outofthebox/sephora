@@ -1,3 +1,5 @@
+require "remote_file"
+
 class Producto < ActiveRecord::Base
   acts_as_taggable
 
@@ -187,4 +189,67 @@ class Producto < ActiveRecord::Base
     return productos
   end
 
+  def self.descontinuar(file, descontinuar_productos = false)
+    rm = RemoteFile.new(file)
+    csv = CSV.parse(rm.request.body, :headers => false)
+
+    data = csv.map{|x| x[0]}.select{|y| !y.nil?} rescue []
+    
+    descontinuados_before =  Producto.where(:publicado => false).count rescue 0
+
+    descontinuados = Producto.where(:upc => data)
+    
+    if descontinuar_productos == true
+      descontinuados.update_all({publicado: false});
+      descontinuados_after =  Producto.where(:publicado => false).count
+    else
+      descontinuados_after = descontinuados.count rescue 0
+    end
+
+    response = {
+      before: descontinuados_before,
+      after: descontinuados_after
+    }
+
+    return response
+  end
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

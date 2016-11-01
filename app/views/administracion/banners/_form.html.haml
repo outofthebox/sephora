@@ -1,0 +1,46 @@
+= form_for @banner, :html => {:role => "form", :class=>"form"} do |f|
+  .col-md-4
+    .row
+      .form-group.col-md-12
+        = f.label "Valid From"
+        %br/
+        = f.date_select :valid_from, {default: Date.today}
+        - unless @banner.errors[:valid_from].empty?
+          .error.pull-right.small.text-danger
+            =@banner.errors.messages[:valid_from].join(",")
+      .form-group.col-md-12
+        = f.label "Valid To"
+        %br/
+        = f.date_select :valid_to, {default: Date.today + 1.year}
+        - unless @banner.errors[:valid_to].empty?
+          .error.pull-right.small.text-danger
+            =@banner.errors.messages[:valid_to].join(",")
+      .form-group.col-md-12
+        = f.label "Priority"
+        %br/
+        = f.text_field :priority, {class: "form-control"}
+        - unless @banner.errors[:valid_to].empty?
+          .error.pull-right.small.text-danger
+            =@banner.errors.messages[:valid_to].join(",")
+      .form-group.col-md-12
+        = f.label "Link"
+        %br/
+        = f.text_field :link, {class: "form-control"}
+        - unless @banner.errors[:link].empty?
+          .error.pull-right.small.text-danger
+            =@banner.errors.messages[:link].join(",")
+      .form-group.col-md-12
+        = f.label "Imagen"
+        = f.file_field :image
+        - unless @banner.errors[:image].empty?
+          .error.pull-right.small.text-danger
+            =@banner.errors.messages[:image].join(",")
+      .form-group.col-md-12
+        %label{:for => "pinned"} 
+          Pinned 
+          = f.check_box :pinned
+        - unless @banner.errors[:pinned].empty?
+          .error.pull-right.small.text-danger
+            =@banner.errors.messages[:pinned].join(",")
+      .form-group.col-md-12
+        = f.submit "Guardar", {class: "btn btn-info"}

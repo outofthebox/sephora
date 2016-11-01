@@ -1,0 +1,19 @@
+- if flash[:notice].present?
+  .alert.alert-warning
+    %p=flash[:notice]
+.bs-docs-section.col-12.col-md-12.col-lg-12{:role => "main"}
+  .page-header
+    %h2#btn-groups
+      %i.glyphicon.glyphicon.glyphicon-file
+      Productos Descontinuados
+  .contengoTabla.row-fluid
+    %table.table.table-bordered.table-striped.table-hover
+      %thead 
+        %tr
+          %th Antes
+          %th Despues
+      -if @descontinuados.present?
+        %tbody
+          %tr
+            %td=@descontinuados[:before]
+            %td=@descontinuados[:after]

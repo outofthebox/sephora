@@ -1,0 +1,14 @@
+.bs-docs-section.col-12.col-md-12.col-lg-12{:role => "main"}
+  .page-header
+    %h2#btn-groups
+      %i.glyphicon.glyphicon.glyphicon-file
+      Descontinuar productos
+  .contengoTabla.row-fluid
+    = form_tag admin_update_descontinuados_path do
+      .col-lg-12.text-center
+        .form-group
+          %small Selecciona el archivo con el que deseas descontinuar los productos
+        .form-group
+          = select_tag(:file_id, options_from_collection_for_select(Upload.all, :id, :name), {class: "form-control"})
+        .form-group
+          = submit_tag 'Descontinuar productos', {class: "btn btn-block btn-info btn-file"}

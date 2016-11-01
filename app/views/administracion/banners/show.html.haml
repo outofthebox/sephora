@@ -1,0 +1,11 @@
+- if notice.present?
+  #notice.alert.alert-warning
+    %p= notice
+#main{:vista=>"banners"}
+  .page-body
+    #banner
+      =link_to image_tag(@banner.image, {class: "banner"}), @banner.link, {target: "_blank"}
+    .tools.text-center
+      %br/
+      %a.btn.btn-default{:href => admin_banners_path} Regresar
+      %a.btn.btn-default{:href => edit_admin_banner_path(@banner)} Editar

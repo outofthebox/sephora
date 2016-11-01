@@ -29,6 +29,14 @@ class AdministracionController < ApplicationController
     flash[:notice] = "Prices will be updated shortly..."
   end
 
+  def descontinuados
+  end
+
+  def update_descontinuados
+    @file = Upload.find(params["file_id"])
+    @descontinuados = Producto.descontinuar(@file.url, true)
+  end
+
   def files
     #raise S3_BUCKET.objects.with_prefix('folder_name').collect(&:key).inspect
     @uploads = Upload.all

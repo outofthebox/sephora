@@ -11,14 +11,9 @@
     .ante.jesus
     .contenedor
       .slider
-        %a.diapositiva.first.visible{href: "/5aniv?utm_source=SitioWeb&utm_medium=Banner1&utm_content=5Aniversario"}
-          =image_tag "animacion/octubre/banner-principal.jpg"
-        %a.diapositiva{href: "/shiseidobioperformance?utm_source=SitioWeb&utm_medium=Banner2&utm_content=ShiseidoBioPerformance"}
-          =image_tag "home/banners/960/shiseido.jpg"  
-        %a.diapositiva{href: "/marca/becca?utm_source=SitioWeb&utm_medium=Banner2&utm_campaign=BeccaLaunch"}
-          =image_tag "home/banners/960/becca.jpg"
-        %a.diapositiva{:href => "/producto/jason-wu-for-caudalie-beauty-elixir-100-ml-3522931002016?utm_source=SitioWeb&utm_medium=Banner2&utm_campaign=BEJasonWu"}
-          =image_tag "home/banners/960/caudalie.jpg"
+        - @banners.each_with_index do |banner, i|
+          %a{:href => banner.link, class: (i == 0 ) ? "diapositiva first visible"  : "diapositiva"}
+            =image_tag banner.image
   :coffee
     $ ->
       a = new Paginas.Index()
