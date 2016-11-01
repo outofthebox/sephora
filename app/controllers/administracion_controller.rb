@@ -25,8 +25,8 @@ class AdministracionController < ApplicationController
   def update_prices
     @file = Upload.find(params["file_id"])
     @prices = Producto.update_precios(@file.url, false)
-    call_rake "producto:update_precios", {REMOTE: "TRUE", FILE: @file.url}
-    flash[:notice] = "Updating Prices"
+    call_rake "productos:update_precios", {REMOTE: "TRUE", FILE: @file.url}
+    flash[:notice] = "Prices will be updated shortly..."
   end
 
   def files

@@ -482,18 +482,11 @@ namespace :productos do
     puts "Uploading file #{temp_file.path} to bucket #{bucket_name}."
     puts "Download from: #{url_for_read}"
 
-
-     # First, instantiate the Mailgun Client with your API key
-    mg_client = Mailgun::Client.new ENV['MAILGUN_SECRET_KEY']
-
-    # Define your message parameters
-    message_params =  {
-      from: 'Scarlett Gallardo <scarlett@gessgallardo.com>',
-      to: 'Ana Valeria <valeria@outofthebox.mx>',
-      subject: "Lista de productos sephora",
-      html: "Descarga la lista de productos desde <a href='#{url_for_download}'>aqui</a>",
-      text: "Descarga la lista de productos desde aqui #{url_for_download}"
-    }
+    template_email({
+      link: url_for_read,
+      message: "Esta es la lista de todos los productos, los podras encontrar en el siguiente link",
+      title: "Resumen de productos en el sitio"
+    })
   end
 
   #sanitizers
@@ -511,49 +504,24 @@ namespace :productos do
 
   def template_email(params)
     begin
-      title = params[:title] rescue "Resumen de productos en el sitio"
+      title = params[:title] rescue "Resumen del sitio"
       text_message = params[:message] rescue "Esta es la lista de productos publicados, los podras encontrar en el siguiente link"
       link = params[:link] rescue "/"
-      mandrill ||= Mandrill::API.new "TroFaqX-FKu7l7PIR_JjPg"
-      val = {
-          "name" => "Valeria Verdejo",
-          "type" => "to",
-          "email" => "valeria@outofthebox.com"
+
+      # First, instantiate the Mailgun Client with your API key
+      mg_client = Mailgun::Client.new ENV['MAILGUN_SECRET_KEY']
+
+      # Define your message parameters
+      message_params =  {
+        from: 'Scarlett Gallardo <scarlett@gessgallardo.com>',
+        to: 'Ana Valeria <valeria@outofthebox.mx>',
+        subject: title,
+        html: "#{text_message} <a href='#{link}'>aqui</a>",
+        text: "#{text_message} #{link}"
       }
-      gess = {
-        "name" => "Gess Gallardo",
-        "type" => "to",
-        "email" => "hola@gessgallardo.com"
-      }
-      message = {
-          "to"=>[val, gess],
-          "text"=>title,
-          "headers"=>{"Reply-To"=>"no-reply@gessgallardo.com"},
-          "google_analytics_campaign"=>"scarlett@gessgallardo.com",
-          "google_analytics_domains"=>["gessgallardo.com"],
-          "merge_language"=>"mailchimp",
-          "track_clicks"=>false,
-          "from_name"=>"Scarlett Gallardo",
-          "subject"=>title,
-          "html"=>"
-            <h4>Hola!</h4>
-            <p>#{text_message}</p>
-            <br><br>
-            <a href='#{link}'>Descargame aqui</a>
-            <br><br>
-            Saludos Scarlett
-          ",
-          "merge"=>true,
-          "from_email"=>"scarlett@gessgallardo.com"
-      }
-      result = mandrill.messages.send message
-      render json: result.to_json
-    rescue Mandrill::Error => e
-      error_class = "A mandrill error occurred"
-      error_message = "#{e.class} - #{e.message}"
-      error_params = {}
-      raise e.inspect
-      #send_honey_error(error_class, error_message, error_params)
+
+      #Send your message through the client
+      mg_client.send_message 'gessgallardo.com', message_params
     end
   end
 end
