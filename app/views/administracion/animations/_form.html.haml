@@ -1,0 +1,58 @@
+= form_for @animation, :html => {:role => "form", :class=>"form"} do |f|
+  - if @animation.errors.any?
+    #error_explanation.alert.alert-warning
+      %strong= "#{pluralize(@animation.errors.count, "error")} prohibited this animation from being saved:"
+      %ul
+        - @animation.errors.full_messages.each do |msg|
+          %li= msg
+  .col-md-4
+    .row
+      .form-group.col-md-12
+        = f.label "Nombre de la animacion"
+        %br/
+        = f.text_field :name, {class: "form-control"}
+      .form-group.col-md-12
+        = f.label "Descripcion corta"
+        %br/
+        = f.text_field :description, {class: "form-control"}
+      .form-group.col-md-12
+        = f.label "Valid From"
+        %br/
+        = f.date_select :valid_from, {default: Date.today}
+        - unless @animation.errors[:valid_from].empty?
+          .error.pull-right.small.text-danger
+            =@animation.errors.messages[:valid_from].join(",")
+      .form-group.col-md-12
+        = f.label "Valid To"
+        %br/
+        = f.date_select :valid_to, {default: Date.today + 1.year}
+        - unless @animation.errors[:valid_to].empty?
+          .error.pull-right.small.text-danger
+            =@animation.errors.messages[:valid_to].join(",")
+      .form-group.col-md-12
+        = f.label "Banner Derecho"
+        = f.file_field :banner_right
+        - unless @animation.errors[:banner_right].empty?
+          .error.pull-right.small.text-danger
+            =@animation.errors.messages[:banner_right].join(",")
+      .form-group.col-md-12
+        = f.label "Banner Izquierdo"
+        = f.file_field :banner_left
+        - unless @animation.errors[:banner_left].empty?
+          .error.pull-right.small.text-danger
+            =@animation.errors.messages[:banner_left].join(",")
+      .form-group.col-md-12
+        = f.label "Banner Cabecera"
+        = f.file_field :head_banner
+        - unless @animation.errors[:head_banner].empty?
+          .error.pull-right.small.text-danger
+            =@animation.errors.messages[:head_banner].join(",")
+      .form-group.col-md-12
+        = f.label "Link Banner Cabecera"
+        %br/
+        = f.text_field :head_banner_link, {class: "form-control"}
+        - unless @animation.errors[:head_banner_link].empty?
+          .error.pull-right.small.text-danger
+            =@animation.errors.messages[:head_banner_link].join(",")
+      .form-group.col-md-12
+        = f.submit "Guardar", {class: "btn btn-info"}

@@ -1,0 +1,2 @@
+module Administracion::AnimationsHelper
+end

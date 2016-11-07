@@ -11,7 +11,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20161101062728) do
+ActiveRecord::Schema.define(:version => 20161105081723) do
+
+  create_table "animations", :force => true do |t|
+    t.string   "head_banner_link"
+    t.date     "valid_from"
+    t.date     "valid_to"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+    t.string   "name"
+    t.string   "description"
+    t.string   "right_banner_file_name"
+    t.string   "right_banner_content_type"
+    t.integer  "right_banner_file_size"
+    t.datetime "right_banner_updated_at"
+    t.string   "left_banner_file_name"
+    t.string   "left_banner_content_type"
+    t.integer  "left_banner_file_size"
+    t.datetime "left_banner_updated_at"
+    t.string   "head_banner_file_name"
+    t.string   "head_banner_content_type"
+    t.integer  "head_banner_file_size"
+    t.datetime "head_banner_updated_at"
+  end
 
   create_table "banners", :force => true do |t|
     t.boolean  "pinned"
