@@ -3,23 +3,23 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .lateral-1{
-  background: image-url("animacion/octubre/lado-izquierdo.png") repeat;
+  background: image-url("animacion/noviembre/lado-izquierdo.png") repeat;
   position: absolute;
   top: 70px;
   left: -50px;
-  width: 183px;
-  height: 2300px;
+  width: 150px;
+  height: 2327px;
   display: block;
   z-index: 0;
   background-size: cover;
 }
 .lateral-2{
-  background: image-url("animacion/octubre/lado-derecho.png") repeat;
+  background: image-url("animacion/noviembre/lado-derecho.png") repeat;
   position: absolute;
   top: 70px;
-  right: 0px;
-  width: 183px;
-  height: 2300px;
+  right: -50px;
+  width: 150px;
+  height: 2327px;
   display: block;
   z-index: 0;
   background-size: cover;
