@@ -20,6 +20,7 @@ class PaginasController < ApplicationController
   def oasis; end
   def brow_collection; end
   def celebra_con_nosotros; end
+  def promocionessephora; end
 
   def get_new_search
     @search_cats = []; 

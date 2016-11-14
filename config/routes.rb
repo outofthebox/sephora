@@ -434,6 +434,7 @@ Sephora::Application.routes.draw do
   match '/oasis', :to => 'paginas#oasis', via: [:get, :post], as: "oasis"
   match '/brow-collection', :to => 'paginas#brow_collection', via: [:get, :post], as: "brow_collection"
   match '/5aniv', :to => 'paginas#celebra_con_nosotros', via: [:get, :post], as: "celebra_con_nosotros"
+  match '/promocionessephora', :to => 'paginas#promocionessephora', via: [:get, :post], as: "promocionessephora"
 
   scope :animacion do
     #match "/commodity", to: "animacion#commodity", via:[:get], as: "commodity"
