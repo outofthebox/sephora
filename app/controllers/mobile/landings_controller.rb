@@ -5,4 +5,5 @@ class Mobile::LandingsController < MobileController
   def brow_collection; end
   def bellezaparallevar; end
   def beautyclasses; end
+  def promocionessephora; end
 end

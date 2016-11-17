@@ -36,6 +36,7 @@ Sephora::Application.routes.draw do
     match '/oasis', :to => 'mobile/landings#oasis', via: [:get, :post], as: "oasis"
     match '/brow-collection', :to => 'mobile/landings#brow_collection', via: [:get, :post], as: "brow_collection"
     match '/bellezaparallevar', :to => 'mobile/landings#bellezaparallevar', via: [:get, :post], as: "bellezaparallevar"
+    match '/promocionessephora', :to => 'mobile/landings#promocionessephora', via: [:get, :post], as: "promocionessephora"
 
     match "/lista_eventos", :to => 'mobile/eventos#index', :as => 'eventos'
     match "/eventos", :to => 'mobile/eventos#index', :as => 'eventos'
