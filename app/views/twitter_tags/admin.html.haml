@@ -1,0 +1,7 @@
+.banner=image_tag 'holiday/twitter/twitter_interno.jpg', {width: "100%"}
+%ul.media-list
+  - @twitter_tags.each do |twitter_tag|
+    %li{class: (twitter_tag.approved ? 'approved' : 'denied')}
+      =link_to twitter_tag_approve_path(twitter_tag) do
+        .overlay
+        =image_tag('//data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==', class: 'lazy', :'data-original' => twitter_tag.media_url+":thumb", width: 180, height: 180)

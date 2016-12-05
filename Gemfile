@@ -26,11 +26,13 @@ gem 'unicorn'
 gem 'mysql2',          '0.3.12b4'
 gem 'newrelic_rpm'
 gem 'yaml_db'
-gem 'instagram'
+#gem 'instagram'
 gem "rack-block", "~> 0.1.1"
 gem "oauth"
 gem 'acts-as-taggable-on'
 gem "disqus"
+gem 'twitter', '~> 5.14.0'
+gem 'dotenv', '~> 0.11.1'
 gem "to_xls"
 gem "riddle"
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
@@ -59,9 +61,9 @@ group :development, :test do
   gem 'fabrication-rails'
   gem 'letter_opener'
   gem 'fivemat'
-  gem 'guard'
+  #gem 'guard'
   gem 'pry-rails'
-  gem 'guard-livereload', require: false
+  #gem 'guard-livereload', require: false
   gem 'nifty-generators'
   gem 'rspec-rails', '~> 2.0'
   gem 'spring'

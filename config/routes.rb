@@ -118,6 +118,8 @@ Sephora::Application.routes.draw do
     get 'base-contorno/contour/concern', :to => 'paginas#basecontorno_contour_concern', as: :basecontorno_contour_concern
     get 'base-contorno/contour/video/:tipo', :to => 'paginas#basecontorno_contour_video', as: :basecontorno_contour_video
 
+    get "loveisthereason", :to => 'twitter_tags#index', :as => "mobile_loveisthereason"
+
     match '/:seccion', :to => 'mobile/secciones#show'
   end
 
@@ -182,6 +184,15 @@ Sephora::Application.routes.draw do
 
   resources :eventotiendas
   resources :tiendas
+
+  get "sephoraholiday", to: "holiday#index", as: "sephoraholiday"
+
+  get "loveisthereason/admin", :to => 'twitter_tags#admin', :as => "twitter_tags_admin"
+  get "loveisthereason/collect/:hashtag", :to => 'twitter_tags#collect', :as => "twitter_tags_collect"
+  get "loveisthereason", :to => 'twitter_tags#index', :as => "loveisthereason"
+  resources :twitter_tags do
+    get "approve", :to => 'twitter_tags#approve', :as => "approve"
+  end
 
   # ---
   get "/pup_file", :to => "utilidades#pup_file", :as => "pup_file"

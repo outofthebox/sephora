@@ -1,0 +1,10 @@
+= form_for @twitter_tag do |f|
+  - if @twitter_tag.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@twitter_tag.errors.count, "error")} prohibited this twitter_tag from being saved:"
+      %ul
+        - @twitter_tag.errors.full_messages.each do |msg|
+          %li= msg
+
+  .actions
+    = f.submit 'Save'
