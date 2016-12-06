@@ -119,6 +119,8 @@ Sephora::Application.routes.draw do
     get 'base-contorno/contour/video/:tipo', :to => 'paginas#basecontorno_contour_video', as: :basecontorno_contour_video
 
     get "loveisthereason", :to => 'twitter_tags#index', :as => "mobile_loveisthereason"
+    get "sephoraholiday", :to => 'holiday#index', :as => "mobile_sephoraholiday"
+    get "sharethelove", :to => 'holiday#quotes', :as => "mobile_sharethelove"
 
     match '/:seccion', :to => 'mobile/secciones#show'
   end
