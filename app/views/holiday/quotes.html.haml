@@ -1,0 +1,10 @@
+=image_tag("holiday/frases/01.jpg")
+.cards.text-center
+ - [*1..6].each do |i|
+  =image_tag("holiday/frases/frases/#{i}.png", {class: "phrase-card", width: "180px"})
+:css
+  .phrase-card{
+    width: 180px;
+    margin: 10px;
+    cursor: pointer;
+  }

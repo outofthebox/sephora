@@ -186,6 +186,7 @@ Sephora::Application.routes.draw do
   resources :tiendas
 
   get "sephoraholiday", to: "holiday#index", as: "sephoraholiday"
+  get "sharethelove", to: "holiday#quotes", as: "sharethelove_holiday"
 
   get "loveisthereason/admin", :to => 'twitter_tags#admin', :as => "twitter_tags_admin"
   get "loveisthereason/collect/:hashtag", :to => 'twitter_tags#collect', :as => "twitter_tags_collect"

@@ -8,7 +8,7 @@
 = render(:partial => "usuarios/modales/wishlist_aprende") if !@bandera
 = render(:partial => "usuarios/modales/wishlist_faq")
 #usuario_wishlist
-	= image_tag("usuarios/wishlist/banner.jpg")
+	= image_tag("holiday/wishlist/01.jpg")
 	#regalos_sephora
 		.banner-regalos
 		.slider_items.wishlist
@@ -33,8 +33,8 @@
 		.slider_items.userlist
 			#userlist
 				-if @usuario.count > 0
-					%h1.text-center Mi Wishlist
-					%h3.text-center Dile al mundo tus deseos de belleza, puedes agregar hasta 10 productos.
+					%h1.text-center= image_tag("holiday/wishlist/02.png")
+					%h3.text-center &nbsp;
 					%ul#userlist_cont
 						- seccion_productos = @usuario
 						- seccion_productos.each do | producto |
@@ -52,20 +52,18 @@
 									%strong= "#{number_to_currency(producto.precio, :precision => (producto.precio.round == producto.precio) ? 0 : 2)}"
 				-else
 					.agrega_favs
-						%h1.title Mis Beauty Favs
+						%h1.title My Wishlist
 						%h4.subtitle Aun no tienes ningun beauty fav, sigue las siguientes instrucciones y comparte todos tus deseos.
 						%p 1.- Selecciona tu producto favorito al dar clic en el ícono de corazón que se encuentra al lado
 						%p 2.- Comparte tu lista con tus amigos y familiares para que conozcan todos tus deseos.
 		-if @usuario.count > 0
-			.share-me
+			.share-me.holiday
 				%h3 Ahora que la tienes ¡compartela!
 				.rs.fb
 				.rs.tw
-				.rs.gplus
-				.rs.pinterest
 				.clearfix
 		.bought_me.text-center
-			=image_tag "usuarios/wishlist/bought.jpg"
+			=image_tag "holiday/wishlist/04.jpg"
 			.preguntas_frecuentes
 :coffee
 	$ ->
