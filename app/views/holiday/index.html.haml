@@ -1,5 +1,15 @@
-=image_tag("holiday/landing/01.png")
-=image_tag("holiday/landing/02.jpg")
-=image_tag("holiday/landing/03.png")
-=image_tag("holiday/landing/04.png")
-=image_tag("holiday/landing/05.png")
+:css
+  .padding-twentie{
+    margin-bottom: 30px;
+  }
+
+  .holiday-card{
+    cursor: pointer;
+    display: block;
+  }
+
+=image_tag("holiday/landing/01.png", {class: "holiday-card"})
+= link_to(image_tag("holiday/landing/02.jpg", {target: "_blank", class: "holiday-card padding-twentie"}), "/usuario/wishlist")
+= link_to(image_tag("holiday/landing/03.png", {target: "_blank", class: "holiday-card"}), "/loveisthereason")
+= link_to(image_tag("holiday/landing/04.png", {target: "_blank", class: "holiday-card"}), "/sharethelove")
+=image_tag("holiday/landing/05.png", {class: "holiday-card"})
