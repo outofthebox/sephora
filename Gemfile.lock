@@ -422,3 +422,9 @@ DEPENDENCIES
   unicorn
   watu_table_builder
   yaml_db
+
+RUBY VERSION
+   ruby 1.9.3p551
+
+BUNDLED WITH
+   1.13.6
