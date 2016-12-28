@@ -214,14 +214,9 @@
 		margin: auto;
 		display: block;
 		position: relative;
-		.preguntas_frecuentes{
+		&.preguntas_frecuentes{
 			display: block;
 			cursor: pointer;
-			height: 45px;
-			width: 216px;
-			position: absolute;
-			left: 387px;
-			bottom: 0px;
 		}
 	}
 }

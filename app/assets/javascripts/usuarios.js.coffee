@@ -50,6 +50,10 @@ $ ->
       $(".preguntas_frecuentes").click ->
         $("#modal").removeClass("hidden")
 
+        $('html, body').animate({
+          scrollTop: $("#modal").offset().top
+        }, 1000);
+
     userlist: () ->
       $(".remover").click ->
         parent = $(this).parent()
