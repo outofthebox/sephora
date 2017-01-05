@@ -1038,7 +1038,7 @@ html, body{
 	}
 }
 
-#hotnow, #lonuevo, #bestsellers, #favoritos, #misfavoritos, #favoritoslabios{
+.carousel-container, #hotnow, #lonuevo, #bestsellers, #favoritos, #misfavoritos, #favoritoslabios{
 	.header-text{
 		font-family: 'Avant';
 		text-align: center;
@@ -1373,4 +1373,10 @@ html, body{
 	    }
 	  }
 	}
+}
+
+
+.carousel-container h3 {
+  background: #f9f6f6;
+  padding: 10px 0;
 }

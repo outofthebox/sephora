@@ -1,0 +1,3 @@
+- @carousel.each do |pony|
+  = render(:partial => "carrusel", locals: {titulo: pony[:titulo], productos: pony[:productos], class_name: pony[:class]}) 
+= render(:partial => "mobile/layouts/footer")

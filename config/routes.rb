@@ -21,6 +21,9 @@ Sephora::Application.routes.draw do
     get 'eyemask', :to => 'mobile/secciones#mascarillasmultibeneficio', as: :mascarillasmultibeneficio
     get 'sleepingmask', :to => 'mobile/secciones#mascarillashidratantes', as: :mascarillashidratantes
 
+    get 'mascarillasingredientesnaturales', to: 'mobile/secciones#mascarillasingredientesnaturales', as: :mascarillasingredientesnaturales
+    get 'beneficiosmascarillas', to: 'mobile/secciones#beneficiosmascarillas', as: :beneficiosmascarillas
+
     #marcas
     match "/marcas", :to => 'mobile/marcas#index', :as => 'marcas'
     resources :marca, controller: 'mobile/marcas', :except => [:index]

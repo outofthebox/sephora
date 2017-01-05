@@ -8,6 +8,46 @@ class Mobile::SeccionesController < MobileController
     end
   end
 
+  def mascarillasingredientesnaturales
+  end
+
+  def beneficiosmascarillas
+    hidratacion = Producto.where(:upc => ["809280009037","809280011887","809280113369","809280113352","809280120015","809280126741","809280126307"])
+    antiedad = Producto.where(:upc => ["3522930001379","3522930001386","3522930001621","3522930001775","809280101526","809280120381","809280122057","809280117992","809280116261"])
+    control = Producto.where(:upc => ["851939002821","851939002838","852575005696","809280113376","809280126468","3522930001102","3522930001812"])
+    firmeza = Producto.where(upc: ["3522930001881","3522930001874","3522930001911","3522930001898","809280122163","809280123764","809280126802"])
+    reduccion = Producto.where(upc: ["808144250011","808144270019","808144251018","808144260218","808144271009","808144272006","819002010302","819002010432","819002014300"])
+    luminosidad = Producto.where(upc: ["687795803018","687795389017","687795432010","687795594008","687795606008","670367010365","670367010426","670367011867","670367001011"])
+  
+    @carousel = [{
+      titulo: "Hidratacion",
+      productos: hidratacion,
+      class: "hidratacion"
+    },{
+      titulo: "Antiedad",
+      productos: antiedad,
+      class: "antiedad"
+    },{
+      titulo: "Control de grasas",
+      productos: control ,
+      class: "control-de-grasas"
+    },{
+      titulo: "Firmeza",
+      productos: firmeza,
+      class: "firmeza"
+    },{
+      titulo: "Reduccion de poros",
+      productos: reduccion,
+      class: "reduccion-de-poros"
+    },{
+      titulo: "Luminosidad",
+      productos: luminosidad,
+      class: "luminosidad"
+    }]
+
+  end
+
+
   def mascarillashidratantes
     @face_mask = [{
       name:"Honey",
@@ -44,6 +84,7 @@ class Mobile::SeccionesController < MobileController
     }]
     render "mask_party"
   end
+
   def mascarillasantiedad
     @face_mask = [{
       name: "Honey",
@@ -80,6 +121,7 @@ class Mobile::SeccionesController < MobileController
     }];
     render "mask_party"
   end
+
   def mascarillasmultibeneficio
     @face_mask = [{
       name: "Rose",
