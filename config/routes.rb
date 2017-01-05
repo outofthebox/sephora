@@ -435,6 +435,12 @@ Sephora::Application.routes.draw do
   get "sephora-collection/squares/:interna", :to => 'sephora_collection#load_squares', :as => "sephora_collection_loadsquares"
 
 
+  # /mascarillasingredientesnaturales
+  match "/mascarillasingredientesnaturales", to: "paginas#mascarillasingredientesnaturales", via: [:get, :post], as: "mascarillasingredientesnaturales"
+  match "/beneficiosmascarillas", to: "paginas#beneficiosmascarillas", via: [:get, :post], as: "beneficiosmascarillas"
+
+
+
   # friends and family
   get 'friendsandfamily/', :to => 'friendsandfamily#index', :as => 'friendsandfamily_index'
   post 'friendsandfamily/code', :to => 'friendsandfamily#code', :as => 'friendsandfamily_code'

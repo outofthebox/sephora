@@ -1,0 +1,12 @@
+#best-sellers
+  %h3 Mascarillas Flores
+  #slider-wrap
+    %ul.nobullet.nolist#lonuevo.jcarousel-skin-tango
+      - @lipsticks.each do |producto|
+        %li
+          .imagen
+            =link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
+          %h5.marca
+            = producto.marca.marca.upcase
+          %h5
+            =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), producto_ver_path(producto.slug)

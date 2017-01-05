@@ -1,0 +1,81 @@
+#best-sellers
+  %h3 Hidratación
+  #slider-wrap
+    %ul.nobullet.nolist#lonuevo.jcarousel-skin-tango
+      - @hidratacion.each do |producto|
+        %li
+          .imagen
+            =link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
+          %h5.marca
+            = producto.marca.marca.upcase
+          %h5
+            =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), producto_ver_path(producto.slug)
+#best-sellers
+  %h3 Antiedad
+  #slider-wrap
+    %ul.nobullet.nolist#lonuevo.jcarousel-skin-tango
+      - @antiedad.each do |producto|
+        %li
+          .imagen
+            =link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
+          %h5.marca
+            = producto.marca.marca.upcase
+          %h5
+            =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), producto_ver_path(producto.slug)
+#best-sellers
+  %h3 Control de grasa
+  #slider-wrap
+    %ul.nobullet.nolist#lonuevo.jcarousel-skin-tango
+      - @control.each do |producto|
+        %li
+          .imagen
+            =link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
+          %h5.marca
+            = producto.marca.marca.upcase
+          %h5
+            =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), producto_ver_path(producto.slug)
+#best-sellers
+  %h3 Firmeza
+  #slider-wrap
+    %ul.nobullet.nolist#lonuevo.jcarousel-skin-tango
+      - @firmeza.each do |producto|
+        %li
+          .imagen
+            =link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
+          %h5.marca
+            = producto.marca.marca.upcase
+          %h5
+            =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), producto_ver_path(producto.slug)
+#best-sellers
+  %h3 Reducción de poros
+  #slider-wrap
+    %ul.nobullet.nolist#lonuevo.jcarousel-skin-tango
+      - @reduccion.each do |producto|
+        %li
+          .imagen
+            =link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
+          %h5.marca
+            = producto.marca.marca.upcase
+          %h5
+            =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), producto_ver_path(producto.slug)
+#best-sellers
+  %h3 Luminosidad
+  #slider-wrap
+    %ul.nobullet.nolist#lonuevo.jcarousel-skin-tango
+      - @luminosidad.each do |producto|
+        %li
+          .imagen
+            =link_to image_tag(producto.foto.url(:chico)), producto_ver_path(producto.slug)
+          %h5.marca
+            = producto.marca.marca.upcase
+          %h5
+            =link_to (producto.nombre_real.empty? ? producto.nombre : producto.nombre_real), producto_ver_path(producto.slug)
+
+
+
+
+
+
+
+
+
