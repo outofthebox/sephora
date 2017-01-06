@@ -34,7 +34,7 @@ class ApplicationController < ActionController::Base
         if Rails.env.production?
           redirect_to "#{request.protocol + request.host}/mobile/#{request.fullpath}"
         else
-          redirect_to "#{request.protocol + request.host_with_port}/mobile/#{request.fullpath}" unless ["/usuarios/sign_in"].include?(request.fullpath)
+          redirect_to "#{request.protocol + request.host_with_port}/mobile/#{request.fullpath}" unless ["/usuarios/sign_in", "/usuarios/sign_up", "/usuarios"].include?(request.fullpath)
         end
       end
     end
