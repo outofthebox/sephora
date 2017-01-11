@@ -113,8 +113,8 @@
       text-transform: uppercase;
     }
 %body
-  .lateral-1.left
-  .lateral-2.right
+  .lateral-1.left{style: "background-image: url('#{layout_animation.left}') !important;"}
+  .lateral-2.right{style: "background-image: url('#{layout_animation.right}') !important;"}
   #head-sup
     .contenedor
       %a.logo{:href=>root_path}
@@ -131,8 +131,8 @@
         %a.it{:href=>'http://instagram.com/sephoramx', target: 'blank', title:"Sephora en Instagram"}
         %a.pi{:href=>'http://www.pinterest.com/sephoramx', target: 'blank', title:"Sephora en Pinterest"}
   #header-animacion
-    %a{href: "/categoria/mascarillas-y-exfoliantes?utm_source=SitioWeb&utm_medium=MiniHeader&utm_content=Mascarillas"}
-      =image_tag("mascarillasnaturales/mini-header.jpg")
+    %a{href: @layout_animation.header_to}
+      =@layout_animation.header
   #wrap
     = render(:partial => "layouts/header_nav")
     = yield

@@ -1,0 +1,14 @@
+#main{:vista=>"animations"}
+  .bs-docs-section.col-12.col-md-12.col-lg-12{:role => "main"}
+    .page-header
+      .pull-right=link_to("New", new_admin_animation_path, {class: "btn btn-info"})
+      %h2#btn-groups
+        Animations
+      .clearfix
+    .page-body
+      - @animations.each do |animation|
+        .index-animation
+          .badge.position 1
+          .animation-header=link_to image_tag(animation.header, {width: "100%"}), admin_animation_path(animation)
+          %span.badge.valid-date=animation.valid_from.to_s
+          %span.badge.valid-date=animation.valid_to.to_s
