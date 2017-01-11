@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   #before_filter :set_search_engine, except: [:suscribe, :create, :new]
 
   def get_animation
-    @layout_animation = Animation.in_range.first rescue nil
+    #@layout_animation = Animation.in_range.first rescue nil
   end
 
 
