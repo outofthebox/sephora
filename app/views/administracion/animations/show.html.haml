@@ -1,0 +1,12 @@
+- if notice.present?
+  #notice.alert.alert-warning
+    %p= notice
+#main{:vista=>"animations"}
+  .page-body
+    #animation
+      =link_to image_tag(@animation.header), @animation.header_to, {target: "_blank", class: "header"}
+    .tools.text-center
+      %br/
+      %a.btn.btn-default{:href => admin_animations_path} Regresar
+      %a.btn.btn-default{:href => edit_admin_animation_path(@animation)} Editar
+      = link_to "Borrar", @animation, {:confirm => 'Are you sure?', :method => :delete, class: "btn btn-danger"}

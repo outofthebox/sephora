@@ -3,7 +3,13 @@ class ApplicationController < ActionController::Base
 
   #before_filter :redirect_main_domain if Rails.env.production?
   before_filter :redirect_mobile
+  before_filter :get_animation
   #before_filter :set_search_engine, except: [:suscribe, :create, :new]
+
+  def get_animation
+    @layout_animation = Animation.in_range.first rescue nil
+  end
+
 
   def call_rake(task, options = {})
     options[:rails_env] ||= Rails.env

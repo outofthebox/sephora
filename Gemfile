@@ -61,6 +61,7 @@ group :development, :test do
   gem 'fabrication-rails'
   gem 'letter_opener'
   gem 'fivemat'
+  gem 'factory_girl_rails'
   #gem 'guard'
   gem 'pry-rails'
   #gem 'guard-livereload', require: false

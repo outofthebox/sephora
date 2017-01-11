@@ -11,7 +11,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20161205220644) do
+ActiveRecord::Schema.define(:version => 20170111222734) do
+
+  create_table "animations", :force => true do |t|
+    t.date     "valid_from"
+    t.date     "valid_to"
+    t.string   "header_to"
+    t.string   "left_to"
+    t.string   "right_to"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.string   "header_file_name"
+    t.string   "header_content_type"
+    t.integer  "header_file_size"
+    t.datetime "header_updated_at"
+    t.string   "left_file_name"
+    t.string   "left_content_type"
+    t.integer  "left_file_size"
+    t.datetime "left_updated_at"
+    t.string   "right_file_name"
+    t.string   "right_content_type"
+    t.integer  "right_file_size"
+    t.datetime "right_updated_at"
+  end
 
   create_table "banners", :force => true do |t|
     t.boolean  "pinned"

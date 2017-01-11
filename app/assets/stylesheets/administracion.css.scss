@@ -287,5 +287,14 @@
       background: black;
     }
   }
+  &[vista="animations"]{
+    #animation{
+      a.header{
+        width: 100%;
+        display: block;
+        img{width: 100%; display: block;}
+      }
+    }
+  }
   .media-object{max-width: 50px; max-height: 50px; width: 25px;}
 }
