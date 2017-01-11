@@ -28,6 +28,7 @@ gem 'newrelic_rpm'
 gem 'yaml_db'
 #gem 'instagram'
 gem "rack-block", "~> 0.1.1"
+gem 'rollbar'
 gem "oauth"
 gem 'acts-as-taggable-on'
 gem "disqus"
