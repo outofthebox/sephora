@@ -18,7 +18,7 @@ class ProductosController < ApplicationController
 
   def busqueda
 
-    params[:buscar][:q] = params[:buscar][:q].gsub(/\//, " ")
+    params[:buscar][:q] = params[:buscar][:q].gsub(/\//, " ") if params[:buscar].present? and params[:buscar][:q].present?
     @marcas_seleccionadas = params[:marca].split(",").map{|m| m.to_i } unless params[:marca].nil?
     
     base = Producto.search(params[:buscar][:q], :with => {:publicado => true, :parent_id => 0}, :star => true)
