@@ -29,28 +29,12 @@
         - unless @animation.errors[:header].empty?
           .error.pull-right.small.text-danger
             =@animation.errors.messages[:header].join(",")
-      //left
-      .form-group.col-md-12
-        = f.label "Left Link"
-        %br/
-        = f.text_field :left_to, {class: "form-control"}
-        - unless @animation.errors[:left_to].empty?
-          .error.pull-right.small.text-danger
-            =@animation.errors.messages[:left_to].join(",")
       .form-group.col-md-12
         = f.label "Left Banner"
         = f.file_field :left
         - unless @animation.errors[:left].empty?
           .error.pull-right.small.text-danger
             =@animation.errors.messages[:left].join(",")
-      //right
-      .form-group.col-md-12
-        = f.label "Right Link"
-        %br/
-        = f.text_field :right_to, {class: "form-control"}
-        - unless @animation.errors[:right_to].empty?
-          .error.pull-right.small.text-danger
-            =@animation.errors.messages[:right_to].join(",")
       .form-group.col-md-12
         = f.label "Right Banner"
         = f.file_field :right

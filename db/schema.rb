@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20170111222734) do
+ActiveRecord::Schema.define(:version => 20170112000245) do
 
   create_table "animations", :force => true do |t|
     t.date     "valid_from"
@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(:version => 20170111222734) do
     t.string   "header_to"
     t.string   "left_to"
     t.string   "right_to"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
     t.string   "header_file_name"
     t.string   "header_content_type"
     t.integer  "header_file_size"
@@ -33,6 +33,18 @@ ActiveRecord::Schema.define(:version => 20170111222734) do
     t.string   "right_content_type"
     t.integer  "right_file_size"
     t.datetime "right_updated_at"
+    t.string   "sephora_picks_file_name"
+    t.string   "sephora_picks_content_type"
+    t.integer  "sephora_picks_file_size"
+    t.datetime "sephora_picks_updated_at"
+    t.string   "hot_now_file_name"
+    t.string   "hot_now_content_type"
+    t.integer  "hot_now_file_size"
+    t.datetime "hot_now_updated_at"
+    t.string   "must_have_file_name"
+    t.string   "must_have_content_type"
+    t.integer  "must_have_file_size"
+    t.datetime "must_have_updated_at"
   end
 
   create_table "banners", :force => true do |t|

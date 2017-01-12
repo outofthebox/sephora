@@ -13,5 +13,17 @@ class Animation < ActiveRecord::Base
     :default_url => "//s3.amazonaws.com/sephoramexico/estatico/animaciones/default_:style_producto.png"
   }.merge(PAPERCLIP_STORAGE_OPTIONS)
 
+  has_attached_file :hot_now, {
+    :default_url => "//s3.amazonaws.com/sephoramexico/estatico/animaciones/default_:style_producto.png"
+  }.merge(PAPERCLIP_STORAGE_OPTIONS)
+
+  has_attached_file :sephora_picks, {
+    :default_url => "//s3.amazonaws.com/sephoramexico/estatico/animaciones/default_:style_producto.png"
+  }.merge(PAPERCLIP_STORAGE_OPTIONS)
+
+  has_attached_file :must_have, {
+    :default_url => "//s3.amazonaws.com/sephoramexico/estatico/animaciones/default_:style_producto.png"
+  }.merge(PAPERCLIP_STORAGE_OPTIONS)
+
   scope :in_range, -> { where("DATE(valid_from) <= ? and DATE(valid_to) >= ?", Date.today, Date.today) }
 end
