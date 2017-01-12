@@ -5,6 +5,8 @@
 
 - opening_url = (DateTime.now < DateTime.new(2016,3,17,20,0,0,'-6')) ? "opening/banner.jpg" : "opening/banner-fase-tres.jpg"
 
+- layout_animation = Animation.in_range.last
+
 #slider-home.full
   #poster.tcell.full
     .prox.jesus
@@ -34,7 +36,11 @@
 - if @bestsellers and (bestsellers_productos = @bestsellers.producto_seccion) and bestsellers_productos.any?
   #best-sellers
     //%h3 SEPHORA'S PICKS
-    = image_tag("animacion/sephora-picks.png", {class: "animacion-must-have"})
+    
+    - if layout_animation.present? and layout_animation.sephora_picks.present?
+      = image_tag(layout_animation.sephora_picks, {class: "animacion-must-have"})
+    - else
+      = image_tag("animacion/sephora-picks.png", {class: "animacion-must-have"})
     #slider-wrap
       %ul.nobullet.nolist.bestsellers#bestsellers.jcarousel-skin-tango
         - bestsellers_productos.each_with_index do |bestsellers_producto, i|
@@ -56,7 +62,10 @@
 - if @lonuevo and (lonuevo_productos = @lonuevo.producto_seccion) and lonuevo_productos.any?
   #best-sellers
     //%h3 LO NUEVO
-    = image_tag("animacion/lo-nuevo.png", {class: "animacion-must-have"})
+    - if layout_animation.present? and layout_animation.hot_now.present?
+      = image_tag(layout_animation.hot_now, {class: "animacion-must-have"})
+    - else
+      = image_tag("animacion/lo-nuevo.png", {class: "animacion-must-have"})
     #slider-wrap
       %ul.nobullet.nolist#lonuevo.jcarousel-skin-tango
         - lonuevo_productos.each do |lonuevo_producto|
@@ -74,7 +83,10 @@
 
   #hotnow
     //%h3.ht_div HOT NOW
-    = image_tag("animacion/beauty-must-haves.jpg", {class: "animacion-must-have"})
+    - if layout_animation.present? and layout_animation.must_have.present?
+      = image_tag(layout_animation.must_have, {class: "animacion-must-have"})
+    - else
+      = image_tag("animacion/beauty-must-haves.jpg", {class: "animacion-must-have"})
     #slider-wrap
       %ul.nobullet.nolist#hotnow.jcarousel-skin-tango
         - seccion_productos = @contenido.producto_seccion.limit(6)

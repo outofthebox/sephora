@@ -41,6 +41,27 @@
         - unless @animation.errors[:right].empty?
           .error.pull-right.small.text-danger
             =@animation.errors.messages[:right].join(",")
+
+      .form-group.col-md-12
+        = f.label "Sephora Picks"
+        = f.file_field :sephora_picks
+        - unless @animation.errors[:sephora_picks].empty?
+          .error.pull-right.small.text-danger
+            =@animation.errors.messages[:sephora_picks].join(",")
+
+      .form-group.col-md-12
+        = f.label "Is New"
+        = f.file_field :hot_now
+        - unless @animation.errors[:hot_now].empty?
+          .error.pull-right.small.text-danger
+            =@animation.errors.messages[:hot_now].join(",")
+
+      .form-group.col-md-12
+        = f.label "Must Have"
+        = f.file_field :must_have
+        - unless @animation.errors[:must_have].empty?
+          .error.pull-right.small.text-danger
+            =@animation.errors.messages[:must_have].join(",")
       
       .form-group.col-md-12
         = f.submit "Guardar", {class: "btn btn-info"}

@@ -113,39 +113,38 @@
       text-transform: uppercase;
     }
 %body
-  = cache do
-    - @layout_animation = Animation.in_range.last
-    .lateral-1.left{style: "background-image: url('#{@layout_animation.left}') !important;"}
-    .lateral-2.right{style: "background-image: url('#{@layout_animation.right}') !important;"}
-    #head-sup
-      .contenedor
-        %a.logo{:href=>root_path}
-        .search
-          = form_for :buscar, { :url => busqueda_path, :method => :get } do |f|
-            = f.submit '', :class => 'submit', :id => 'realsubmit'
-            %a.submit#opensearch{:href=>"#"}
-            %a#closesubmit{:href=>"#"} X
-            = f.text_field :q, :class => 'input', :placeholder  => "Buscar", :value => "", :id => "searchbox"
-        .sociales
-          %a.yt{:href=>'http://www.youtube.com/SephoraMex', target: 'blank', title:"Sephora en Youtube"}
-          %a.fb{:href=>'https://www.facebook.com/SephoraMX', target: 'blank', title:"Sephora en Facebook"}
-          %a.tw{:href=>'http://twitter.com/SephoraMX', target: 'blank', title:"Sephora en Twitter"}
-          %a.it{:href=>'http://instagram.com/sephoramx', target: 'blank', title:"Sephora en Instagram"}
-          %a.pi{:href=>'http://www.pinterest.com/sephoramx', target: 'blank', title:"Sephora en Pinterest"}
-    #header-animacion
-      %a{href: @layout_animation.header_to}=image_tag(@layout_animation.header)
-    #wrap
-      = render(:partial => "layouts/header_nav")
-      = yield
-      = render(:partial => "layouts/footer_nav")
-    = javascript_include_tag :application
-    :javascript
-      $(document).ready(function(){
-        $( "#buscar_q" ).catcomplete({
-          delay: 0,
-          source: search_cat
-        });
-      })
-    %script{:src => "//assets.pinterest.com/js/pinit.js", :type => "text/javascript"}
-    %script{:async => "async", :src => "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56670ab3fb2e1e3d", :type => "text/javascript"}
+  - @layout_animation = Animation.in_range.last
+  .lateral-1.left{style: "background-image: url('#{@layout_animation.left}') !important;"}
+  .lateral-2.right{style: "background-image: url('#{@layout_animation.right}') !important;"}
+  #head-sup
+    .contenedor
+      %a.logo{:href=>root_path}
+      .search
+        = form_for :buscar, { :url => busqueda_path, :method => :get } do |f|
+          = f.submit '', :class => 'submit', :id => 'realsubmit'
+          %a.submit#opensearch{:href=>"#"}
+          %a#closesubmit{:href=>"#"} X
+          = f.text_field :q, :class => 'input', :placeholder  => "Buscar", :value => "", :id => "searchbox"
+      .sociales
+        %a.yt{:href=>'http://www.youtube.com/SephoraMex', target: 'blank', title:"Sephora en Youtube"}
+        %a.fb{:href=>'https://www.facebook.com/SephoraMX', target: 'blank', title:"Sephora en Facebook"}
+        %a.tw{:href=>'http://twitter.com/SephoraMX', target: 'blank', title:"Sephora en Twitter"}
+        %a.it{:href=>'http://instagram.com/sephoramx', target: 'blank', title:"Sephora en Instagram"}
+        %a.pi{:href=>'http://www.pinterest.com/sephoramx', target: 'blank', title:"Sephora en Pinterest"}
+  #header-animacion
+    %a{href: @layout_animation.header_to}=image_tag(@layout_animation.header)
+  #wrap
+    = render(:partial => "layouts/header_nav")
+    = yield
+    = render(:partial => "layouts/footer_nav")
+  = javascript_include_tag :application
+  :javascript
+    $(document).ready(function(){
+      $( "#buscar_q" ).catcomplete({
+        delay: 0,
+        source: search_cat
+      });
+    })
+  %script{:src => "//assets.pinterest.com/js/pinit.js", :type => "text/javascript"}
+  %script{:async => "async", :src => "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56670ab3fb2e1e3d", :type => "text/javascript"}
 
