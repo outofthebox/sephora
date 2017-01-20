@@ -40,7 +40,7 @@
     - if layout_animation.present? and layout_animation.sephora_picks.present?
       = image_tag(layout_animation.sephora_picks, {class: "animacion-must-have"})
     - else
-      = image_tag("animacion/sephora-picks.png", {class: "animacion-must-have"})
+      = image_tag("animacion/sephora-picks.jpg", {class: "animacion-must-have"})
     #slider-wrap
       %ul.nobullet.nolist.bestsellers#bestsellers.jcarousel-skin-tango
         - bestsellers_productos.each_with_index do |bestsellers_producto, i|
@@ -65,7 +65,7 @@
     - if layout_animation.present? and layout_animation.hot_now.present?
       = image_tag(layout_animation.hot_now, {class: "animacion-must-have"})
     - else
-      = image_tag("animacion/lo-nuevo.png", {class: "animacion-must-have"})
+      = image_tag("animacion/lo-nuevo.jpg", {class: "animacion-must-have"})
     #slider-wrap
       %ul.nobullet.nolist#lonuevo.jcarousel-skin-tango
         - lonuevo_productos.each do |lonuevo_producto|
