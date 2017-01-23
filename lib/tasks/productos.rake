@@ -409,11 +409,12 @@ namespace :productos do
     s3 = AWS::S3.new
 
     CSV.open(temp_file, "w") do |csv|
-      productos = Producto.includes(:marca).publicados.select([:nombre, :upc, :sap, :marca_id, :nombre_real])
-      csv << ["nombre", "upc", "sap", "marca"]
+      productos = Producto.includes(:marca, :categoria).publicados.select([:nombre, :upc, :sap, :marca_id, :nombre_real, :categoria_id])
+      csv << ["nombre", "upc", "sap", "marca", "categoria"]
       productos.each do |p|
         marca_name = p.marca.marca rescue ""
-        csv << [p.nombre, p.upc, p.sap, marca_name]
+        categoria_name = p.categoria.nombre rescue ""
+        csv << [p.nombre, p.upc, p.sap, marca_name, categoria_name]
       end
     end
 
