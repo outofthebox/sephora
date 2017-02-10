@@ -6,4 +6,5 @@ class Mobile::LandingsController < MobileController
   def bellezaparallevar; end
   def beautyclasses; end
   def promocionessephora; end
+  def regalaconamor; end
 end

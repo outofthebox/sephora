@@ -40,6 +40,7 @@ Sephora::Application.routes.draw do
     match '/brow-collection', :to => 'mobile/landings#brow_collection', via: [:get, :post], as: "brow_collection"
     match '/bellezaparallevar', :to => 'mobile/landings#bellezaparallevar', via: [:get, :post], as: "bellezaparallevar"
     match '/promocionessephora', :to => 'mobile/landings#promocionessephora', via: [:get, :post], as: "promocionessephora"
+    match '/regala-con-amor', :to => 'mobile/landings#regalaconamor', via: [:get, :post], as: "regalaconamor"
 
     match "/lista_eventos", :to => 'mobile/eventos#index', :as => 'eventos'
     match "/eventos", :to => 'mobile/eventos#index', :as => 'eventos'
@@ -461,7 +462,7 @@ Sephora::Application.routes.draw do
   match '/brow-collection', :to => 'paginas#brow_collection', via: [:get, :post], as: "brow_collection"
   match '/5aniv', :to => 'paginas#celebra_con_nosotros', via: [:get, :post], as: "celebra_con_nosotros"
   match '/promocionessephora', :to => 'paginas#promocionessephora', via: [:get, :post], as: "promocionessephora"
-
+  match '/regala-con-amor', :to => 'paginas#regalaconamor', via: [:get, :post], as: "regalaconamor"
   scope :animacion do
     #match "/commodity", to: "animacion#commodity", via:[:get], as: "commodity"
     #match "/clean", to: "animacion#clean", via:[:get], as: "clean"

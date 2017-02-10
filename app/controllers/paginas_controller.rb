@@ -21,6 +21,7 @@ class PaginasController < ApplicationController
   def brow_collection; end
   def celebra_con_nosotros; end
   def promocionessephora; end
+  def regalaconamor; end
 
 
   def mascarillasingredientesnaturales; end
