@@ -1,0 +1,147 @@
+#clinique-crayola{
+	font-family: "Sephora";
+	width: 640px;
+	margin: 40px auto;
+	display: block;
+	overflow: hidden;
+	.header{
+		.logo{
+			display: block;
+			margin: auto;
+		}
+	}
+	.mini-header{
+		margin: 20px auto;
+		.mini-title{
+			font-size: 24px;
+			text-align: center;
+		}
+		.mini-subtitule{
+			font-size: 18px;
+			text-align: center;
+		}
+	}
+	.crayola{
+		vertical-align: top;
+		position: relative;
+		margin: 20px auto;
+		display: block;
+		.crayola-header{
+			background: image-url("paginas/clinique-crayola/mancha-01.png");
+			height: 96px;
+			width: 333px;
+			color: white;
+			font-size: 2.4rem;
+			background-position: 0px 10px;
+			background-repeat: no-repeat;
+			padding-top: 30px;
+			padding-left: 10px;
+			z-index: 2;
+			position: relative;
+		}
+		.crayola-text{
+			margin: 20px 0;
+			font-size: 16px;
+			width: 333px;
+			display: inline-block;
+			vertical-align: top;
+		}
+		.crayola-imagen{
+			width: 346px;
+			position: absolute;
+			top: 32px;
+			right: 0;
+			z-index: 1;
+			img {
+				width: 100%;
+				display: block;
+			}
+		}
+		&.crayola-dos{
+			text-align: right;
+			display: flex;
+			align-content: center;
+			.crayola-section-one{
+				align-self: center;
+				.crayola-imagen{
+					display: block;
+					display: inline-block;
+					position: relative;
+					top:0;
+					left: 0;
+					width: 290px;
+				}
+			}
+			.crayola-section-two{
+				height: auto;
+				align-self: center;
+				.crayola-header{
+					vertical-align: middle;
+					background: image-url("paginas/clinique-crayola/mancha-02.png");
+					height: 55px;
+					width: 321px;
+					display: inline-block;
+					padding-top: 15px;
+					padding-right: 10px;
+				}
+				.crayola-text{
+					vertical-align: middle;
+					display: inline-block;
+					width: 300px;
+				}
+			}
+		}
+		&.crayola-tres{
+			display: flex;
+			align-content: center;
+			.crayola-section-one{
+				align-self: center;
+				.crayola-header{
+					padding-top: 14px;
+					width: 300px;
+					height: 54px;
+					background: image-url("paginas/clinique-crayola/mancha-03.png") no-repeat;
+				}
+			}
+			.crayola-section-two{
+				height: auto;
+				align-self: center;
+				.crayola-imagen{
+					width: 300px;
+					position: relative;
+					top: 0;
+					right: 0;
+					z-index: 1;
+					img {
+						width: 100%;
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	.footer{
+		p{ 
+			font-size: 20px;
+			line-height: 1.3em; 
+			span{
+				font-size: 16px;
+				font-weight: 800;
+			}
+		}
+	}
+	.mini-footer{
+		margin-top: 30px;
+		font-family: Arial;
+		background: black;
+		width: 100%;
+		height: 30px;
+		color: white;
+		line-height: 30px;
+    padding-left: 10px;
+    a{ color: white; font-weight: 800;}
+	}
+	.clearfix{
+		clear: both;
+	}
+}
