@@ -18,6 +18,6 @@
       .texto-gracias
         ¡GRACIAS!
       .txt_registro_popup
-  -unless @popup.present?
+  -if @popup.present?
     #btn_mail_enviar.animated.slideInUp
       =image_tag 'registro_btn.png'
