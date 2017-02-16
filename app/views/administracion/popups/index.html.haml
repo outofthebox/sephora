@@ -1,0 +1,13 @@
+#main{:vista=>"popups"}
+  .bs-docs-section.col-12.col-md-12.col-lg-12{:role => "main"}
+    .page-header
+      .pull-right=link_to("New", new_admin_popup_path({popup_class: "principal"}), {class: "btn btn-info"})
+      %h2#btn-groups
+        Principales
+      .clearfix
+    .page-body
+      - @popups.each do |popup|
+        .index-popup
+          .imagen=link_to image_tag(popup.image, {width: "100%"}), admin_popup_path(popup)
+          %span.badge.valid-date=popup.valid_from.to_s
+          %span.badge.valid-date=popup.valid_to.to_s

@@ -1,0 +1,12 @@
+- if notice.present?
+  #notice.alert.alert-warning
+    %p= notice
+#main{:vista=>"popups"}
+  .page-body
+    #popup
+      =link_to image_tag(@popup.image, {class: "popup"}), @popup.link, {target: "_blank"}
+    .tools.text-center
+      %br/
+      %a.btn.btn-default{:href => admin_popups_path} Regresar
+      %a.btn.btn-default{:href => edit_admin_popup_path(@popup)} Editar
+      = link_to "Borrar", @popup, {:confirm => 'Are you sure?', :method => :delete, class: "btn btn-danger"}

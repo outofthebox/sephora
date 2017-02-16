@@ -406,6 +406,7 @@ Sephora::Application.routes.draw do
     resources :landings, except: :index
     resources :events, except: :index, controller: "administracion/events"
     resources :banners, controller: "administracion/banners"
+    resources :popups, controller: "administracion/popups"
     resources :animations, controller: "administracion/animations"
     resources :store_events, except: :index, controller: "administracion/store_events"
 
