@@ -1,4 +1,4 @@
-class PopupsController < ApplicationController
+class PopupsController < Administracion::PopupsController
   def subscribe
     sc = SimioCartero.new
     
