@@ -1,36 +1,12 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  #before_filter :redirect_main_domain if Rails.env.production?
   before_filter :redirect_mobile
-  before_filter :get_animation
-  #before_filter :set_search_engine, except: [:suscribe, :create, :new]
-
-  def get_animation
-    #@layout_animation = Animation.in_range.first rescue nil
-  end
-
 
   def call_rake(task, options = {})
     options[:rails_env] ||= Rails.env
     args = options.map { |n, v| "#{n.to_s.upcase}='#{v}'" }
     system "rake #{task} #{args.join(' ')} --trace 2>&1 >> #{Rails.root}/log/rake.log &"
-  end
-
-  def redirect_main_domain
-    dominio = 'sephora.com.mx'
-    if request.env["rack.url_scheme"] == "https" 
-      if request.env['HTTP_HOST'] == "sephoramexico.herokuapp.com"
-      else
-        if request.env['HTTP_HOST'] != dominio
-          redirect_to "https://#{dominio}#{request.fullpath}"
-        end
-      end
-    else
-      if request.env['HTTP_HOST'] != dominio
-        redirect_to "http://#{dominio}#{request.fullpath}"
-      end
-    end
   end
 
   def redirect_mobile

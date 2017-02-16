@@ -13,5 +13,9 @@ class Popup < ActiveRecord::Base
 
   scope :in_range, -> { where("DATE(valid_from) <= ? and DATE(valid_to) >= ?", Date.today, Date.today) }
 
+  def self.active_popup
+  	popups = self.in_range
+  	return popups.first if popups.present?
+  end
 end
 

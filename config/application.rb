@@ -92,6 +92,8 @@ module Sephora
       g.fixture_replacement :factory_girl, dir: "spec/factories"
     end
 
+    config.autoload_paths += %W(#{config.root}/lib)
+
     config.time_zone = "Mexico City"
 
     # Version of your assets, change this if you want to expire all your assets

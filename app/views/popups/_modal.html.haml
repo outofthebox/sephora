@@ -1,0 +1,37 @@
+#modal-home.modal.fade.index-popup{role: "dialog"}
+  %button.close-modal.pull-right{:title => "Close", :type => "button"}
+    %span{"aria-hidden" => "true"} &#215;
+    %span.hide Close
+  .imagen=image_tag(popup.image, {width: "100%"})
+  = form_tag(subscribe_popups_path(format: :js), method: "post", remote: true) do
+    .attributes
+      - if popup.email.present?
+        .form-group
+          %input{type: "text", name: "email", class: "form-control"}
+          %label E-MAIL
+      - if popup.name.present?
+        .form-group
+          %input{type: "text", name: "name", class: "form-control"}
+          %label Nombre
+      - if popup.dob.present?
+        .form-group
+          %input{type: "date", name: "dob", class: "form-control"}
+          %label Cumpleaños
+      - if popup.store.present?
+        .form-group
+          %input{type: "text", name: "store", class: "form-control"}
+          %label Tienda
+      %button.btn.btn-black.btn-enviar ENVIAR
+:coffee
+  $(document).ready ->
+    $("#modal-home").modal() unless $.cookie("modal-registro")
+
+    $("#btn_mail_enviar").live "click", (e) ->
+      e.preventDefault()
+      $("#modal-home").modal()
+
+    $("button.close-modal").live "click", (e) ->
+      e.preventDefault()
+      $("#modal-home").modal("hide")
+    
+

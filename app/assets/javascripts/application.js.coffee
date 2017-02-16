@@ -2,11 +2,13 @@
 # = require jquery_ujs
 # = require jquery.ui.all
 # = require jquerycookie
+# = require bootstrap
 # = require redactor
 # = require jcarousel
 # = require s3_direct_upload
 # = require animacion
 # = require holiday
+
 
 #-
 #- FB JSSDK
@@ -127,31 +129,7 @@ $(document).on "click", "a#share", (e) ->
   loc = $(this).attr("href")
   title = escape($(this).attr("title"))
   window.open "http://www.facebook.com/sharer.php?u=" + loc + "&t=" + title, "facebookwindow", "height=450, width=550, top=" + ($(window).height() / 2 - 225) + ", left=" + $(window).width() / 2 + ", toolbar=0, location=0, menubar=0, directories=0, scrollbars=0"
-1
 
-#Popup
-path = window.location.pathname
-if path == '/'
-  unless $.cookie("modal-registro")
-    $("#mod").fadeIn()
-    $.cookie "modal-registro", "true",
-      expires: 365
-
-  $("#makkenform").submit (ev) ->
-    ev.preventDefault()
-    ev.stopPropagation()
-    nombre = $("#makkenform input.nombre").val();
-    correo = $("#makkenform input.correo").val();
-    $.post "http://pdc.makken.com.mx/sephora/registro_makken.php", {nombre: nombre, email: correo}, (response) ->
-      if response.error
-      else
-        $("#mod").fadeOut 400, ->
-          $("#mod").fadeIn 400
-          $("#mod").removeClass("register").addClass("thanks")
-
-$("a.close").live "click", (e) ->
-  e.preventDefault()
-  $("#mod, #modsuc").fadeOut()
 
 #Wallpapers
 $("a.back").live "click", (e) ->
