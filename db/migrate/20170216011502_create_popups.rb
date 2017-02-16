@@ -1,7 +1,7 @@
 class CreatePopups < ActiveRecord::Migration
   def change
     create_table :popups do |t|
-      t.boolean :popup_type
+      t.string :popup_type, default: "one_attribute"
       t.boolean :name
       t.boolean :email
       t.boolean :dob

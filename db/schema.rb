@@ -275,15 +275,15 @@ ActiveRecord::Schema.define(:version => 20170216012952) do
   add_index "models", ["reset_password_token"], :name => "index_models_on_reset_password_token", :unique => true
 
   create_table "popups", :force => true do |t|
-    t.boolean  "popup_type"
+    t.string   "popup_type",         :default => "one_attribute"
     t.boolean  "name"
     t.boolean  "email"
     t.boolean  "dob"
     t.boolean  "store"
     t.date     "valid_from"
     t.date     "valid_to"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at",                                      :null => false
+    t.datetime "updated_at",                                      :null => false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"

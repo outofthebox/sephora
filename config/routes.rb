@@ -401,6 +401,7 @@ Sephora::Application.routes.draw do
   resources :events, controller: "administracion/events", except: :index
   resources :store_events, controller: "administracion/store_events", except: :index
   resources :banners, controller: "administracion/banners"
+  resources :popups, controller: "administracion/popups"
   resources :animations, controller: "administracion/animations"
   scope path: :administracion, as: "admin" do
     resources :landings, except: :index

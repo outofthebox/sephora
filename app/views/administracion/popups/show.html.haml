@@ -4,7 +4,7 @@
 #main{:vista=>"popups"}
   .page-body
     #popup
-      =link_to image_tag(@popup.image, {class: "popup"}), @popup.link, {target: "_blank"}
+      =image_tag(@popup.image, {class: "popup"})
     .tools.text-center
       %br/
       %a.btn.btn-default{:href => admin_popups_path} Regresar

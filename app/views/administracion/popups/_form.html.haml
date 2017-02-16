@@ -18,8 +18,7 @@
       .form-group.col-md-12
         = f.label "Type"
         %br/
-        - popup_types = %w(one_attribute, two_attributes, three_attributes, four_attributes, five_attributes)
-        = f.select(:popup_type, popup_types.map{ |value| [ value, value ] }, {}, {class: "form-control"})
+        = f.select(:popup_type, Popup::POPUP_TYPES.map{ |value| [ value, value ] }, {}, {class: "form-control"})
         - unless @popup.errors[:popup_type].empty?
           .error.pull-right.small.text-danger
             =@popup.errors.messages[:popup_type].join(",")
