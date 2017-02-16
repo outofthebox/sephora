@@ -33,7 +33,7 @@
           %br
           **La venta on-line no está actualmente disponible en México; consulta disponibilidad en tiendas.
       .banners-animaciones
-        =link_to image_tag("mascarillasnaturales/banner-interno.jpg"), "/mascarillasingredientesnaturales?utm_source=SitioWeb&utm_medium=BannerInterno&utm_content=MascarillasIngredientes", {:class => "img_cont"}
+        = link_to(image_tag(@banner_producto.image(:producto)), @banner_producto.link, {:class => "img_cont"}) if @banner_producto.present?
 
     .derecha.tcell.t65{}
       .marca{:itemprop=>"brand", :itemscope=>"", :itemtype=>"http://schema.org/Brand"}
