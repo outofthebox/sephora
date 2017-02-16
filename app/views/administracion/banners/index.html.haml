@@ -26,7 +26,7 @@
             .imagen=link_to image_tag(@producto.image, {width: "100%"}), admin_banner_path(@producto)
             %span.badge.valid-date=@producto.valid_from.to_s
             %span.badge.valid-date=@producto.valid_to.to_s
-      .bs-docs-section.col-8.col-md-8.col-lg-8{:role => "main"}
+    .bs-docs-section.col-8.col-md-8.col-lg-8{:role => "main"}
       .page-header
         .pull-right
           =link_to("Nuevo Banner Izquierdo", new_admin_banner_path({banner_class: "mini_izquierdo"}), {class: "btn btn-info"})
