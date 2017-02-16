@@ -4,9 +4,9 @@ class Administracion::BannersController < ApplicationController
   # GET /banners
   # GET /banners.json
   def index
-    @banners = Banner.prioritise
-
-    #@banners = []
+    @banners = Banner.principal.prioritise
+    @minis = {izq: Banner.get_mini_izquierdo, der: Banner.get_mini_derecho}
+    @producto = Banner.get_banner_producto
 
     respond_to do |format|
       format.html # index.html.erb
@@ -28,7 +28,18 @@ class Administracion::BannersController < ApplicationController
   # GET /banners/new
   # GET /banners/new.json
   def new
-    @banner = Banner.new
+    case params[:banner_class]
+    when "mini_izquierdo"
+      @banner = Banner.mini_izquierdo.new
+    when "mini_derecho"
+      @banner = Banner.mini_derecho.new
+    when "principal"
+      @banner = Banner.principal.new
+    when "producto"
+      @banner = Banner.producto.new
+    else
+      @banner = Banner.new
+    end
 
     respond_to do |format|
       format.html # new.html.erb

@@ -267,6 +267,8 @@
       width: 30%;
       display: inline-block;
       margin: 0 1%;
+      &.minis{ width: 47%; }
+      &.producto{ width: 100%; }
       .imagen{
         margin: auto;
         display: block;

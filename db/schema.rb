@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20170112000245) do
+ActiveRecord::Schema.define(:version => 20170215233427) do
 
   create_table "animations", :force => true do |t|
     t.date     "valid_from"
@@ -52,13 +52,14 @@ ActiveRecord::Schema.define(:version => 20170112000245) do
     t.date     "valid_from"
     t.date     "valid_to"
     t.integer  "priority"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at",                                  :null => false
+    t.datetime "updated_at",                                  :null => false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "link"
+    t.string   "banner_type",        :default => "principal"
   end
 
   create_table "blog_categorias", :force => true do |t|
