@@ -16,6 +16,17 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Sephora';
+    src: url('/fuentes/Sephora.eot');
+    src: url('/fuentes/Sephora.eot?#iefix') format('embedded-opentype'),
+         url('/fuentes/Sephora.woff') format('woff'),
+         url('/fuentes/Sephora.ttf') format('truetype'),
+         url('/fuentes/Sephora.svg#Sephora') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .clear {
   clear: both;
 }
@@ -257,6 +268,70 @@
     }
   }
   &[vista="events"]{}
+  &[vista="popups"]{
+    .popup{
+      margin: auto;
+      display: block;
+    }
+    .index-popup{
+      position: relative;
+      width: 30%;
+      display: inline-block;
+      margin: 0 1%;
+      .imagen{
+        margin: auto;
+        display: block;
+        box-shadow: 0px 0px 13px -3px #333;
+      }
+      .attributes{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding-top: 28%; 
+        input{
+          display: block;
+          margin: 10px auto;
+          width: 60%;
+          box-shadow: none;
+          border: 1px solid #ccc;
+          border-radius: 0px;
+        }
+        label{
+          font-family: 'Sephora', 'Avant';
+          display: block;
+          margin: 10px auto;
+          width: 60%;
+          text-align: center;
+          color: black;
+          font-size: 19px;
+          font-weight: 100;
+        }
+        button.btn-black{
+          background: black;
+          color: white;
+          border: none;
+          border-radius: 0px;
+          display: block;
+          margin: auto;
+        }
+      }
+    }
+    .position {
+      position: absolute;
+      background: black;
+    }
+    .valid-date {
+      float: right;
+      position: relative;
+      top: -25px;
+      right: 10px;
+      font-size: 10px;
+      font-weight: normal;
+      background: black;
+    }
+  }
   &[vista="banners"]{
     .banner{
       margin: auto;
