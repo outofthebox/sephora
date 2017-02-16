@@ -401,7 +401,7 @@ Sephora::Application.routes.draw do
   resources :events, controller: "administracion/events", except: :index
   resources :store_events, controller: "administracion/store_events", except: :index
   resources :banners, controller: "administracion/banners"
-  resources :popups, only: [] do
+  resources :popups do
     collection do
       match 'subscribe', to: 'popups#subscribe', via: [:get, :post], as: :subscribe
     end
