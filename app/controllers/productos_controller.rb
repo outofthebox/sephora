@@ -105,6 +105,7 @@ class ProductosController < ApplicationController
 
   def show
     @productos_relacionados = get_related
+    @banner_producto = Banner.get_banner_producto
   end
 
   def index_admin

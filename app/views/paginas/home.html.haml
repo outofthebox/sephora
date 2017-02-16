@@ -102,8 +102,10 @@
 #esta-semana
   .table.full
     .tcell.t50
-      %a{ :href => '/lista_eventos?utm_source=SitioWeb&utm_medium=BannerInfDer&utm_campaign=Eventos' }
-        =image_tag "home/banners/inferior/izquierdo.jpg"
+      - if @minis[:izq].present?
+        %a{ :href => @minis[:izq].link }
+          =image_tag @minis[:izq].image(:mini)
     .tcell.t50
-      %a{ :href => "/producto/mia-fit-white-3605971071331?utm_source=SitioWeb&utm_medium=Footer2&utm_content=ClarisonicMiaFit" }
-        =image_tag "home/banners/inferior/derecho.jpg"
+      - if @minis[:der].present?
+        %a{ :href => @minis[:der].link }
+          =image_tag @minis[:der].image(:mini)
