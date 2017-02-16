@@ -1,18 +1,32 @@
 #main{:vista=>"popups"}
   .bs-docs-section.col-12.col-md-12.col-lg-12{:role => "main"}
     .page-header
-      .pull-right=link_to("New", new_admin_popup_path({popup_class: "principal"}), {class: "btn btn-info"})
+      .pull-right=link_to("Nuevo Popup", new_admin_popup_path({popup_class: "one_attribute"}), {class: "btn btn-info"})
       %h2#btn-groups
         Popups
       .clearfix
     .page-body
       - @popups.each do |popup|
         .index-popup
-          .imagen=link_to image_tag(popup.image, {width: "100%"}), admin_popup_path(popup)
+          //.imagen=link_to image_tag(popup.image, {width: "100%"}), admin_popup_path(popup)
+          .imagen=link_to image_tag("popup-sephora.jpg", {width: "100%"}), admin_popup_path(popup)
           .attributes
-            - if popup.email.present? == false
-              %input{type: "text", name: "email", class: "form-control"}
-            %label Email
+            - if popup.email.present?
+              .form-group
+                %input{type: "text", name: "email", class: "form-control"}
+                %label Email
+            - if popup.name.present?
+              .form-group
+                %input{type: "text", name: "name", class: "form-control"}
+                %label Nombre
+            - if popup.dob.present?
+              .form-group
+                %input{type: "date", name: "dob", class: "form-control"}
+                %label Cumpleaños
+            - if popup.store.present?
+              .form-group
+                %input{type: "text", name: "store", class: "form-control"}
+                %label Tienda
             %button.btn.btn-black Enviar
           %span.badge.valid-date=popup.valid_from.to_s
           %span.badge.valid-date=popup.valid_to.to_s
