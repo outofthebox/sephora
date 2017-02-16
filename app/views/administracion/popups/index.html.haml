@@ -8,8 +8,7 @@
     .page-body
       - @popups.each do |popup|
         .index-popup
-          //.imagen=link_to image_tag(popup.image, {width: "100%"}), admin_popup_path(popup)
-          .imagen=link_to image_tag("popup-sephora.jpg", {width: "100%"}), admin_popup_path(popup)
+          .imagen=link_to image_tag(popup.image, {width: "100%"}), admin_popup_path(popup)
           .attributes
             - if popup.email.present?
               .form-group

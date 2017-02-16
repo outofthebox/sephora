@@ -24,5 +24,8 @@ unless Rails.env.production?
   ENV["U"]='123'
   ENV["P"]='123'
 
+  ENV["MAILCHIMP_LIST_ID"]="7a38aed469"
+  ENV["MAILCHIMP_API_KEY"]="5c16f848f12baef26740148d3a25c573-us13"
+
   ENV["DEBUG"]=''
 end

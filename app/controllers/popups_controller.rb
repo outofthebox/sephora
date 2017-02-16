@@ -1,85 +1,19 @@
-class PopupsController < AdministracionController
-  # GET /popups
-  # GET /popups.json
-  def index
-    @popups = Popup.all
+class PopupsController < ApplicationController
+  def subscribe
+    sc = SimioCartero.new
+    
+    @response = 500
+    
+    information = {}
+    information[:NAME] = params[:name] if params[:name].present?
+    information[:EMAIL] = params[:email] if params[:email].present?
+    information[:DOB] = params[:bod] if params[:bod].present?
+    information[:STOREID] = params[:store] if params[:store].present? 
 
-    #@popups = []
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @popups }
-    end
-  end
-
-  # GET /popups/1
-  # GET /popups/1.json
-  def show
-    @popup = Popup.find(params[:id])
+    @response = 200 if information[:EMAIL].present? && sc.suscribe_to(information)
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @popup }
-    end
-  end
-
-  # GET /popups/new
-  # GET /popups/new.json
-  def new
-    @popup = Popup.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @popup }
-    end
-  end
-
-  # GET /popups/1/edit
-  def edit
-    @popup = Popup.find(params[:id])
-  end
-
-  # POST /popups
-  # POST /popups.json
-  def create
-    @popup = Popup.new(params[:popup])
-
-    respond_to do |format|
-      if @popup.save
-        format.html { redirect_to @popup, notice: 'Popup was successfully created.' }
-        format.json { render json: @popup, status: :created, location: @popup }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @popup.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PUT /popups/1
-  # PUT /popups/1.json
-  def update
-    @popup = Popup.find(params[:id])
-
-    respond_to do |format|
-      if @popup.update_attributes(params[:popup])
-        format.html { redirect_to @popup, notice: 'Popup was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @popup.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /popups/1
-  # DELETE /popups/1.json
-  def destroy
-    @popup = Popup.find(params[:id])
-    @popup.destroy
-
-    respond_to do |format|
-      format.html { redirect_to popups_url }
-      format.json { head :no_content }
+      format.js
     end
   end
 end

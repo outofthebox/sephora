@@ -48,6 +48,7 @@ gem 'raygun4ruby'
 gem 'bugsnag'
 gem "mandrill"
 gem 'mailgun-ruby', '~>1.0.0', require: 'mailgun'
+gem 'gibbon'
 
 group :assets do
 end

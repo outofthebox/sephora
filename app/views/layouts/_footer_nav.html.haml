@@ -18,38 +18,6 @@
       .texto-gracias
         ¡GRACIAS!
       .txt_registro_popup
-      = form_tag "#", {:id => "makkenregistro"} do |f|
-        %input.nombre{:type=> "text", :name => "nombre", :placeholder => "Nombre"}
-        %input.correo{:type=> "text", :name => "email", :placeholder => "correo@micorreo.com"}
-        %input#submit{:type=>"submit", :value=>""}
-      %a.close{:href=>"#"}
-        X
-    #btn_mail_enviar
+  -unless @popup.present?
+    #btn_mail_enviar.animated.slideInUp
       =image_tag 'registro_btn.png'
-
-
-:coffee
-  $ ->
-    #Registro
-    $("#btn_mail_enviar").live "click", (e) ->
-      e.preventDefault()
-      $("#registro_popup").fadeIn()
-
-    $("a.close").live "click", (e) ->
-      e.preventDefault()
-      $("#registro_popup").fadeOut()
-
-    $("#makkenregistro").submit (ev) ->
-      ev.preventDefault()
-      ev.stopPropagation()
-      nombre = $("#makkenregistro input.nombre").val();
-      correo = $("#makkenregistro input.correo").val();
-      $.post "http://pdc.makken.com.mx/sephora/registro_makken.php", {nombre: nombre, email: correo}, (response) ->
-        if response.error
-        else
-          $("#registro_popup").fadeOut 400, ->
-            $("#registro_popup form").hide()
-            $("#registro_popup .txt_registro_popup").hide()
-            $("#registro_popup .texto-gracias").show()
-            $("#registro_popup").fadeIn 400
-            $("#registro_popup").removeClass("register").addClass("thanks")

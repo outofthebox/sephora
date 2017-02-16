@@ -1,0 +1,57 @@
+.modal#modal-home{
+  width: 720px;
+  max-height: 596px;
+  margin: auto;
+  overflow: hidden;
+  .close-modal{
+    position: relative;
+    z-index: 10;
+    background: black;
+    color: white;
+    border: none;
+    box-shadow: none;
+  }
+  .imagen{
+    margin: auto;
+    display: block;
+    box-shadow: 0px 0px 13px -3px #333;
+  }
+  .attributes{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 30%; 
+    input{
+      display: block;
+      margin: 10px auto;
+      width: 50%;
+      box-shadow: none;
+      border: 1px solid #000;
+      border-radius: 0px;
+    }
+    label{
+      display: block;
+      margin: 10px auto;
+      width: 60%;
+      text-align: center;
+      color: black;
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+    button.btn-black{
+      background: black;
+      color: white;
+      border: none;
+      border-radius: 0px;
+      display: block;
+      margin: auto;
+      font-weight: 100;
+      letter-spacing: 2px;
+      height: 25px;
+      line-height: 1em;
+    }
+  }
+}
