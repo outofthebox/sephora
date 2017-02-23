@@ -8,7 +8,8 @@
 = render(:partial => "usuarios/modales/wishlist_aprende") if !@bandera
 = render(:partial => "usuarios/modales/wishlist_faq")
 #usuario_wishlist
-	= image_tag("holiday/wishlist/01.jpg")
+	- banner = (Banner.wishlist.present?) ? Banner.wishlist.first.image(:wishlist) : "holiday/wishlist/01.jpg"
+	= image_tag(banner)
 	#regalos_sephora
 		.banner-regalos
 		.slider_items.wishlist
@@ -63,7 +64,8 @@
 				.rs.tw
 				.clearfix
 		.bought_me.text-center.preguntas_frecuentes
-			=image_tag "holiday/wishlist/04.jpg"
+			- callcenter = (Banner.callcenter.present?) ? Banner.callcenter.first.image(:callcenter) : "holiday/wishlist/04.jpg"
+			= image_tag(callcenter)
 			.preguntas_frecuentes
 :coffee
 	$ ->

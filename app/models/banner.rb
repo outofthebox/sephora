@@ -1,7 +1,7 @@
 class Banner < ActiveRecord::Base
   attr_accessor :image
 
-  BANNER_TYPES = %w(principal producto mini_izquierdo mini_derecho )
+  BANNER_TYPES = %w(principal producto mini_izquierdo mini_derecho wishlist)
 
   validates :banner_type, presence: true, inclusion: { in: BANNER_TYPES, message: "is not a valid banner type" }
 
@@ -9,9 +9,11 @@ class Banner < ActiveRecord::Base
   scope :producto, -> { where(banner_type: "producto") }
   scope :mini_izquierdo, -> { where(banner_type: "mini_izquierdo") }
   scope :mini_derecho, -> { where(banner_type: "mini_derecho") }
+  scope :wishlist, -> { where(banner_type: "wishlist") }
+  scope :callcenter, -> { where(banner_type: "callcenter") }
   
   has_attached_file :image, {
-    :styles => { :principal => "960x399>", mini: "431x249>", producto: "300x117>"},
+    :styles => { :principal => "960x399>", mini: "431x249>", producto: "300x117>", wishlist: "960x", callcenter: "960x" },
     :default_url => "//s3.amazonaws.com/sephoramexico/estatico/productos/default_:style_producto.png"
   }.merge(PAPERCLIP_STORAGE_OPTIONS)
 

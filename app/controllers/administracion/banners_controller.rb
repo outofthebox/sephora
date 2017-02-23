@@ -37,6 +37,10 @@ class Administracion::BannersController < ApplicationController
       @banner = Banner.principal.new
     when "producto"
       @banner = Banner.producto.new
+    when "wishlist"
+      @banner = Banner.wishlist.new
+    when "callcenter"
+      @banner = Banner.callcenter.new 
     else
       @banner = Banner.new
     end
