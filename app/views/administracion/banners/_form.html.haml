@@ -25,8 +25,7 @@
       .form-group.col-md-12
         = f.label "Type"
         %br/
-        - banner_types = %w(principal producto mini_izquierdo mini_derecho)
-        = f.select(:banner_type, banner_types.map{ |value| [ value, value ] }, {}, {class: "form-control"})
+        = f.select(:banner_type, Banner::BANNER_TYPES.map{ |value| [ value, value ] }, {}, {class: "form-control"})
         - unless @banner.errors[:banner_type].empty?
           .error.pull-right.small.text-danger
             =@banner.errors.messages[:banner_type].join(",")

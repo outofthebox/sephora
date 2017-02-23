@@ -7,6 +7,8 @@ class Administracion::BannersController < ApplicationController
     @banners = Banner.principal.prioritise
     @minis = {izq: Banner.get_mini_izquierdo, der: Banner.get_mini_derecho}
     @producto = Banner.get_banner_producto
+    @wishlist = Banner.get_banner_wishlist
+    @callcenter = Banner.get_banner_callcenter
 
     respond_to do |format|
       format.html # index.html.erb

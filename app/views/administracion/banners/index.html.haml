@@ -47,3 +47,32 @@
             .imagen=link_to image_tag(@minis[:der].image, {width: "100%"}), admin_banner_path(@minis[:der])
             %span.badge.valid-date=@minis[:der].valid_from.to_s
             %span.badge.valid-date=@minis[:der].valid_to.to_s
+    %hr.clearfix
+    .bs-docs-section.col-12.col-md-12.col-lg-12{:role => "main"}
+      .page-header
+        .pull-right
+          =link_to("Nuevo Imagen de Wishlist", new_admin_banner_path({banner_class: "wishlist"}), {class: "btn btn-info"})
+        %h2#btn-groups
+          Wishlist
+        .clearfix
+      .page-body
+        - if @wishlist.present?
+          .index-banner.minis
+            .badge.position=@wishlist.banner_type
+            .imagen=link_to image_tag(@wishlist.image, {width: "100%"}), admin_banner_path(@wishlist)
+            %span.badge.valid-date=@wishlist.valid_from.to_s
+            %span.badge.valid-date=@wishlist.valid_to.to_s
+    .bs-docs-section.col-12.col-md-12.col-lg-12{:role => "main"}
+      .page-header
+        .pull-right
+          =link_to("Nuevo Banner Callcenter", new_admin_banner_path({banner_class: "callcenter"}), {class: "btn btn-info"})
+        %h2#btn-groups
+          Wishlist
+        .clearfix
+      .page-body
+        - if @callcenter.present?
+          .index-banner.minis
+            .badge.position=@callcenter.banner_type
+            .imagen=link_to image_tag(@callcenter.image, {width: "100%"}), admin_banner_path(@callcenter)
+            %span.badge.valid-date=@callcenter.valid_from.to_s
+            %span.badge.valid-date=@callcenter.valid_to.to_s

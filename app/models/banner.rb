@@ -34,4 +34,14 @@ class Banner < ActiveRecord::Base
   	banners = self.producto.in_range
   	return banners.first if banners.present?
   end
+
+  def self.get_banner_wishlist
+    banners = self.wishlist.in_range
+    return banners.first if banners.present?
+  end
+
+  def self.get_banner_callcenter
+    banners = self.callcenter.in_range
+    return banners.first if banners.present?
+  end
 end
