@@ -24,7 +24,7 @@
       %button.btn.btn-black.btn-enviar ENVIAR
 :coffee
   $(document).ready ->
-    $("#modal-home").modal() unless $.cookie("modal-registro")
+    $("#modal-home").modal() unless $.cookie("modal-nuevo-registro")
 
     $("#btn_mail_enviar").live "click", (e) ->
       e.preventDefault()

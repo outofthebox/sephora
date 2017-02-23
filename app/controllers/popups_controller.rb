@@ -6,9 +6,10 @@ class PopupsController < Administracion::PopupsController
     
     information = {}
     information[:NAME] = params[:name] if params[:name].present?
+    information[:PHONE] = params[:phone] if params[:phone].present?
     information[:EMAIL] = params[:email] if params[:email].present?
     information[:DOB] = params[:bod] if params[:bod].present?
-    information[:STOREID] = params[:store] if params[:store].present? 
+    information[:STORE] = params[:store] if params[:store].present? 
 
     @response = 200 if information[:EMAIL].present? && sc.suscribe_to(information)
 
