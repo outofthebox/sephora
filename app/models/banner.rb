@@ -1,7 +1,7 @@
 class Banner < ActiveRecord::Base
   attr_accessor :image
 
-  BANNER_TYPES = %w(principal producto mini_izquierdo mini_derecho wishlist)
+  BANNER_TYPES = %w(principal producto mini_izquierdo mini_derecho wishlist callcenter)
 
   validates :banner_type, presence: true, inclusion: { in: BANNER_TYPES, message: "is not a valid banner type" }
 
