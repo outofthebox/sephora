@@ -1,5 +1,5 @@
 class Animation < ActiveRecord::Base
-	attr_accessor :header, :left, :right
+	attr_accessor :header, :left, :right, :logo
   
   has_attached_file :header, {
     :default_url => "//s3.amazonaws.com/sephoramexico/estatico/animaciones/default_:style_producto.png"
@@ -25,10 +25,14 @@ class Animation < ActiveRecord::Base
     :default_url => "//s3.amazonaws.com/sephoramexico/estatico/animaciones/default_:style_producto.png"
   }.merge(PAPERCLIP_STORAGE_OPTIONS)
 
+  has_attached_file :logo, {
+    :default_url => "//s3.amazonaws.com/sephoramexico/estatico/animaciones/default_:style_producto.png"
+  }.merge(PAPERCLIP_STORAGE_OPTIONS)
+
 
   validates :header, presence: true
-  validates :left, presence: true
-  validates :right, presence: true
+  #validates :left, presence: true
+  #validates :right, presence: true
 
   scope :in_range, -> { where("DATE(valid_from) <= ? and DATE(valid_to) >= ?", Date.today, Date.today) }
 end

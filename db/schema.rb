@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20170224181138) do
+ActiveRecord::Schema.define(:version => 20170301005948) do
 
   create_table "animation_carousels", :force => true do |t|
     t.string   "name"
@@ -60,6 +60,10 @@ ActiveRecord::Schema.define(:version => 20170224181138) do
     t.string   "must_have_content_type"
     t.integer  "must_have_file_size"
     t.datetime "must_have_updated_at"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
   end
 
   create_table "banners", :force => true do |t|

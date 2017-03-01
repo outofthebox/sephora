@@ -1234,21 +1234,8 @@ ul.breadcrumbs{
       #logo {
         width: 265px;
         height: 31px;
-        background: image-url('logo.gif');
         margin: 0 auto;
-        &.holiday{
-          background: image-url('holiday/2015/logo.png') no-repeat center center scroll !important;
-          background-size: cover;
-          height: 29px;
-          width: 225px;
-        }
-        &.lips{
-          background: image-url('home/lips/sephora_kiss_logo.jpg') !important;
-          height: 34px;
-          width: 243px;
-          background-size:cover;
-          background-position: center;
-        }
+        display: block;
       }
     }
     nav#menu {

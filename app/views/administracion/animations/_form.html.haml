@@ -15,7 +15,12 @@
         - unless @animation.errors[:valid_to].empty?
           .error.pull-right.small.text-danger
             =@animation.errors.messages[:valid_to].join(",")
-      //Header
+      .form-group.col-md-12
+        = f.label "Logo"
+        = f.file_field :logo
+        - unless @animation.errors[:logo].empty?
+          .error.pull-right.small.text-danger
+            =@animation.errors.messages[:logo].join(",")
       .form-group.col-md-12
         = f.label "Mini Header Link"
         %br/
