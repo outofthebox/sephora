@@ -1,0 +1,11 @@
+- if notice.present?
+  #notice.alert.alert-warning
+    %p= notice
+#main{:vista=>"animation_carousels"}
+  #animation-carousel.container.text-center
+    .col-md-12
+      = render partial:"administracion/animation_carousels/carousel", locals: {carousel: @carousel, options: {items: 5, show_banner: true, show_name: true}}
+      .tools.text-center
+        =link_to 'Eliminar Carrusel', admin_carousel_path(@carousel), {class: "label label-danger", data: {:confirm => 'Are you sure?'}, method: :delete}
+        =link_to 'Editar Carrusel', edit_admin_carousel_path(@carousel), {class: "label label-warning"}
+        =link_to 'Regresar', admin_animation_carousel_path(@carousel_animation), {class: "label label-info"}

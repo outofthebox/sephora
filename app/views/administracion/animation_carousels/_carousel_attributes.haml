@@ -1,0 +1,16 @@
+.carousels
+  .form-group.col-md-12
+    = c.label "Name"
+    %br/
+    = c.text_field :name, {class: "form-control"}
+  .form-group.col-md-12
+    = c.label "Slug"
+    %br/
+    = c.text_field :slug, {class: "form-control"}
+  .form-group.col-md-12
+    = c.label "Products"
+    %br/
+    = c.text_field :products, {class: "form-control"}
+  .form-group.col-md-12
+    = c.label "Imagen"
+    = c.file_field :image

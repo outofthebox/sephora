@@ -1,0 +1,78 @@
+#main{:vista=>"banners"}
+  .bs-docs-section.col-12.col-md-12.col-lg-12{:role => "main"}
+    .page-header
+      .pull-right=link_to("New", new_admin_banner_path({banner_class: "principal"}), {class: "btn btn-info"})
+      %h2#btn-groups
+        Principales
+      .clearfix
+    .page-body
+      - @banners.each do |banner|
+        .index-banner
+          .badge.position=banner.priority
+          .imagen=link_to image_tag(banner.image, {width: "100%"}), admin_banner_path(banner)
+          %span.badge.valid-date=banner.valid_from.to_s
+          %span.badge.valid-date=banner.valid_to.to_s
+    %hr.clearfix
+    .bs-docs-section.col-4.col-md-4.col-lg-4{:role => "main"}
+      .page-header
+        .pull-right=link_to("Nuevo Banner de Producto", new_admin_banner_path({banner_class: "producto"}), {class: "btn btn-info"})
+        %h2#btn-groups
+          Producto
+        .clearfix
+      .page-body
+        - if @producto.present?
+          .index-banner.producto
+            .badge.position=@producto.banner_type
+            .imagen=link_to image_tag(@producto.image, {width: "100%"}), admin_banner_path(@producto)
+            %span.badge.valid-date=@producto.valid_from.to_s
+            %span.badge.valid-date=@producto.valid_to.to_s
+    .bs-docs-section.col-8.col-md-8.col-lg-8{:role => "main"}
+      .page-header
+        .pull-right
+          =link_to("Nuevo Banner Izquierdo", new_admin_banner_path({banner_class: "mini_izquierdo"}), {class: "btn btn-info"})
+          =link_to("Nuevo Banner Derecho", new_admin_banner_path({banner_class: "mini_derecho"}), {class: "btn btn-info"})
+        %h2#btn-groups
+          Inferiores
+        .clearfix
+      .page-body
+        - if @minis[:izq].present?
+          .index-banner.minis
+            .badge.position=@minis[:izq].banner_type
+            .imagen=link_to image_tag(@minis[:izq].image, {width: "100%"}), admin_banner_path(@minis[:izq])
+            %span.badge.valid-date=@minis[:izq].valid_from.to_s
+            %span.badge.valid-date=@minis[:izq].valid_to.to_s
+        - if @minis[:der].present?
+          .index-banner.minis
+            .badge.position=@minis[:der].banner_type
+            .imagen=link_to image_tag(@minis[:der].image, {width: "100%"}), admin_banner_path(@minis[:der])
+            %span.badge.valid-date=@minis[:der].valid_from.to_s
+            %span.badge.valid-date=@minis[:der].valid_to.to_s
+    %hr.clearfix
+    .bs-docs-section.col-12.col-md-12.col-lg-12{:role => "main"}
+      .page-header
+        .pull-right
+          =link_to("Nuevo Imagen de Wishlist", new_admin_banner_path({banner_class: "wishlist"}), {class: "btn btn-info"})
+        %h2#btn-groups
+          Wishlist
+        .clearfix
+      .page-body
+        - if @wishlist.present?
+          .index-banner.minis
+            .badge.position=@wishlist.banner_type
+            .imagen=link_to image_tag(@wishlist.image, {width: "100%"}), admin_banner_path(@wishlist)
+            %span.badge.valid-date=@wishlist.valid_from.to_s
+            %span.badge.valid-date=@wishlist.valid_to.to_s
+    .bs-docs-section.col-12.col-md-12.col-lg-12{:role => "main"}
+      .page-header
+        .pull-right
+          =link_to("Nuevo Banner Callcenter", new_admin_banner_path({banner_class: "callcenter"}), {class: "btn btn-info"})
+        %h2#btn-groups
+          Callcenter
+        .clearfix
+      .page-body
+        - if @callcenter.present?
+          .index-banner.minis
+            .badge.position=@callcenter.banner_type
+            .imagen=link_to image_tag(@callcenter.image, {width: "100%"}), admin_banner_path(@callcenter)
+            %span.badge.valid-date=@callcenter.valid_from.to_s
+            %span.badge.valid-date=@callcenter.valid_to.to_s

@@ -52,16 +52,7 @@ class Producto < ActiveRecord::Base
   end
 
   def nombre
-    begin
-      nombre_real_exists = self.nombre_real.nil? rescue false
-      unless nombre_real_exists
-        self.nombre_real.html_safe
-      else
-        super
-      end
-    rescue
-      return ""
-    end
+    self.nombre_real.present? ? super : self.nombre_real
   end
 
   def activo?

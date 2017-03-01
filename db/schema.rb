@@ -11,7 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20170215233427) do
+ActiveRecord::Schema.define(:version => 20170224181138) do
+
+  create_table "animation_carousels", :force => true do |t|
+    t.string   "name"
+    t.string   "slug"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.string   "header_file_name"
+    t.string   "header_content_type"
+    t.integer  "header_file_size"
+    t.datetime "header_updated_at"
+    t.string   "footer_file_name"
+    t.string   "footer_content_type"
+    t.integer  "footer_file_size"
+    t.datetime "footer_updated_at"
+  end
 
   create_table "animations", :force => true do |t|
     t.date     "valid_from"
@@ -85,6 +100,19 @@ ActiveRecord::Schema.define(:version => 20170215233427) do
     t.string   "foto_content_type"
     t.integer  "foto_file_size"
     t.datetime "foto_updated_at"
+  end
+
+  create_table "carousels", :force => true do |t|
+    t.string   "products"
+    t.integer  "animation_carousel_id"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "name"
+    t.string   "slug"
   end
 
   create_table "categoria_productos", :force => true do |t|
@@ -273,6 +301,22 @@ ActiveRecord::Schema.define(:version => 20170215233427) do
 
   add_index "models", ["email"], :name => "index_models_on_email", :unique => true
   add_index "models", ["reset_password_token"], :name => "index_models_on_reset_password_token", :unique => true
+
+  create_table "popups", :force => true do |t|
+    t.string   "popup_type",         :default => "one_attribute"
+    t.boolean  "name",               :default => false
+    t.boolean  "email",              :default => true
+    t.boolean  "dob",                :default => false
+    t.boolean  "store",              :default => false
+    t.date     "valid_from"
+    t.date     "valid_to"
+    t.datetime "created_at",                                      :null => false
+    t.datetime "updated_at",                                      :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
 
   create_table "post_favs", :force => true do |t|
     t.integer  "usuario_id"
