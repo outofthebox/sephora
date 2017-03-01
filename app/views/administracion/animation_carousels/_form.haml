@@ -1,0 +1,74 @@
+= form_for @animation_carousel, :html => {:role => "form", :class=>"form"} do |f|
+  .col-md-6
+    %h3#btn-groups Animacion de Carrusel
+    %hr
+    .row
+      .form-group.col-md-12
+        = f.label "Name"
+        %br/
+        = f.text_field :name, {class: "form-control"}
+        - unless @animation_carousel.errors[:name].empty?
+          .error.pull-right.small.text-danger
+            =@animation_carousel.errors.messages[:name].join(",")
+      .form-group.col-md-12
+        = f.label "Header"
+        = f.file_field :header
+        - unless @animation_carousel.errors[:header].empty?
+          .error.pull-right.small.text-danger
+            =@animation_carousel.errors.messages[:header].join(",")
+      .form-group.col-md-12
+        = f.label "Footer"
+        = f.file_field :footer
+        - unless @animation_carousel.errors[:footer].empty?
+          .error.pull-right.small.text-danger
+            =@animation_carousel.errors.messages[:footer].join(",")
+      .form-group.col-md-12
+        = f.submit "Guardar", {class: "btn btn-info"}
+  - if action_name == "edit"
+    .col-md-6
+      %h3 Nuevo Carrusel
+      %hr
+      .row
+        .col-md-12
+          = f.fields_for(@carousel) do |c|
+            .carousels
+              .form-group.col-md-12
+                = c.label "Nombre"
+                %br/
+                = c.text_field :name, {class: "form-control"}
+              .form-group.col-md-12
+                = c.label "Productos"
+                %br/
+                = c.text_field :products, {class: "form-control"}
+              .form-group.col-md-12
+                = c.label "Imagen"
+                = c.file_field :image
+              .form-group.col-md-12
+                =link_to 'Add Carousel', admin_animation_carousel_add_carousel_path(@animation_carousel), {class: "btn btn-info btn-carousel-new", remote: true}
+        .clearfix
+    .col-md-12
+      %h3 Carrousels
+      .clearfix
+      %hr
+      .row
+        .col-md-12#carousels
+          - @animation_carousel.carousels.each do |carousel|
+            = render partial: "carousel", locals: {carousel: carousel, options: {items: 3, show_banner: false, show_name: true, admin: true}}
+:coffee
+  $(".btn-carousel-new").click (ev) ->
+    $btn = $(this)
+    ev.preventDefault()
+    ev.stopPropagation()
+
+    url = $btn.attr("href")
+    data = new FormData($('.form')[0])
+
+    $.ajax
+      type: 'POST'
+      url: url
+      data: new FormData($('.form')[0])
+      processData: false
+      contentType: false
+      success: (data) ->
+        console.log(data)
+        return

@@ -6,17 +6,14 @@
 #=require jquery-ui
 #=require jquery_ujs
 #=require bootstrap
+#=require idangerous.swiper.js
 #=require jquery.ddslick.min.js
 
 
-$(document).ready( ->
-	picker()
-);
-
 picker = ->
-	enCaso = $("#main").attr("vista");
-	switch enCaso
-		when "landing_new"
-			$("#marcas").ddslick 
-				onSelected: (data) ->
-					$("#landing_marca_id").val(data.selectedData.value)
+  enCaso = $("#main").attr("vista");
+  switch enCaso
+    when "landing_new"
+      $("#marcas").ddslick
+        onSelected: (data) ->
+          $("#landing_marca_id").val(data.selectedData.value)

@@ -14,4 +14,9 @@ module ApplicationHelper
   def image_url(file)
     request.protocol + request.host_with_port + image_path(file)
   end
+
+  def setup_animation_carousel(animation_carousel)
+    1.times { animation_carousel.carousels.build } if animation_carousel.carousels.count == 0
+    return animation_carousel
+  end
 end

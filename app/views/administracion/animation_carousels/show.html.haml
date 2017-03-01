@@ -1,0 +1,16 @@
+- if notice.present?
+  #notice.alert.alert-warning
+    %p= notice
+#main{:vista=>"animation_carousels"}
+  .page-body.text-center
+    %h1=@animation_carousel.name
+    %small=@animation_carousel.slug
+  .tools.text-center
+    %br/
+    %a.btn.btn-default.btn-sm{:href => admin_animation_carousels_path} Regresar
+    %a.btn.btn-default.btn-sm{:href => edit_admin_animation_carousel_path(@animation_carousel)} Editar
+    = link_to "Borrar", @animation_carousel, {:confirm => 'Are you sure?', :method => :delete, class: "btn btn-sm btn-danger"}
+  #animation-carousel.container.text-center
+    .col-md-12
+      - @animation_carousel.carousels.each do |carousel|
+        = render partial: "carousel", locals: {carousel: carousel, options: {items: 5, show_banner: true, show_name: false}}

@@ -2,9 +2,13 @@
 %html
   %head
     %title= content_for?(:title) ? yield(:title) : "Sephora Lover Admin"
+    = javascript_include_tag :jquery
+    = javascript_include_tag :"jquery-ui"
+    = javascript_include_tag :administracion
+
     = stylesheet_link_tag "administracion"
     = csrf_meta_tag
-    
+
   %body
     =link_to image_tag('logo.gif'), "#", {:class=>"logo"}
     #header
@@ -18,4 +22,3 @@
         %li=link_to 'Subir CSV', admin_files_path
       .clear
     = yield
-    = javascript_include_tag "administracion"

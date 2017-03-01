@@ -1,0 +1,19 @@
+= form_for @carousel, :html => {:role => "form", :class=>"form"} do |f|
+  .form-group.col-md-12
+    = f.label "Name"
+    %br/
+    = f.text_field :name, {class: "form-control"}
+  .form-group.col-md-12
+    = f.label "Slug"
+    %br/
+    = f.text_field :slug, {class: "form-control"}
+  .form-group.col-md-12
+    = f.label "Products"
+    %br/
+    = f.text_field :products, {class: "form-control"}
+  .form-group.col-md-12
+    = f.label "Imagen"
+    = f.file_field :image
+  .form-group.col-md-12
+    = f.submit "Guardar", {class: "btn btn-info"}
+

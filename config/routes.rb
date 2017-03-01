@@ -1,4 +1,5 @@
 Sephora::Application.routes.draw do
+
   #mobile
   scope path: :mobile, as: "m" do
     match "/", :to => 'mobile#home', :as => 'home'
@@ -41,7 +42,7 @@ Sephora::Application.routes.draw do
     match '/bellezaparallevar', :to => 'mobile/landings#bellezaparallevar', via: [:get, :post], as: "bellezaparallevar"
     match '/promocionessephora', :to => 'mobile/landings#promocionessephora', via: [:get, :post], as: "promocionessephora"
     match '/regala-con-amor', :to => 'mobile/landings#regalaconamor', via: [:get, :post], as: "regalaconamor"
-    
+
     match '/cliniquecrayola', :to => 'mobile/landings#crayola', via: [:get, :post], as: "crayola"
 
     match "/lista_eventos", :to => 'mobile/eventos#index', :as => 'eventos'
@@ -401,6 +402,9 @@ Sephora::Application.routes.draw do
   resources :events, controller: "administracion/events", except: :index
   resources :store_events, controller: "administracion/store_events", except: :index
   resources :banners, controller: "administracion/banners"
+  resources :animation_carousels, controller: "administracion/animation_carousels"
+  resources :carousels, controller: "administracion/carousels"
+
   resources :popups do
     collection do
       match 'subscribe', to: 'popups#subscribe', via: [:get, :post], as: :subscribe
@@ -408,12 +412,17 @@ Sephora::Application.routes.draw do
   end
   resources :animations, controller: "administracion/animations"
   scope path: :administracion, as: "admin" do
+
     resources :landings, except: :index
     resources :events, except: :index, controller: "administracion/events"
     resources :banners, controller: "administracion/banners"
     resources :popups, controller: "administracion/popups"
     resources :animations, controller: "administracion/animations"
     resources :store_events, except: :index, controller: "administracion/store_events"
+    resources :carousels, controller: "administracion/carousels"
+    resources :animation_carousels, controller: "administracion/animation_carousels" do
+      match :add_carousel, to: 'administracion/animation_carousels#add_carousel', via: [:put, :post]
+    end
 
     match 'photogram/suscribe', to: 'administracion/photogram#suscribe', via: :get
     match 'photogram/suscribe', to: 'administracion/photogram#fetch', via: :post

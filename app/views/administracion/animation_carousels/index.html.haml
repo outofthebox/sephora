@@ -1,0 +1,19 @@
+.col-md-12
+  %table.table.table-striped
+    %thead
+      %tr
+        %th ID
+        %th Animacion
+        %th Slug
+        %th Carruseles
+        %th.text-center{colspan: 3} Tools
+    %tbody
+      - @animation_carousels.each do |animation|
+        %tr
+          %td=animation.id
+          %td=animation.name
+          %td=animation.slug
+          %td=animation.carousels.count
+          %td.text-center=link_to "Ver", admin_animation_carousel_path(animation), {class: "btn-block btn btn-info"}
+          %td.text-center=link_to "Editar", edit_admin_animation_carousel_path(animation), {class: "btn-block btn btn-warning"}
+          %td.text-center=link_to "Eliminar", admin_animation_carousel_path(animation), {class: "btn-block btn btn-danger", method: :delete}
