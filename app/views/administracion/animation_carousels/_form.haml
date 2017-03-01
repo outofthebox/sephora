@@ -10,6 +10,14 @@
         - unless @animation_carousel.errors[:name].empty?
           .error.pull-right.small.text-danger
             =@animation_carousel.errors.messages[:name].join(",")
+      -if action_name == "edit"
+        .form-group.col-md-12
+          = f.label "Vanity URL"
+          %br/
+          = f.text_field :slug, {class: "form-control"}
+          - unless @animation_carousel.errors[:slug].empty?
+            .error.pull-right.small.text-danger
+              =@animation_carousel.errors.messages[:slug].join(",")
       .form-group.col-md-12
         = f.label "Header"
         = f.file_field :header

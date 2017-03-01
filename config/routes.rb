@@ -402,8 +402,12 @@ Sephora::Application.routes.draw do
   resources :events, controller: "administracion/events", except: :index
   resources :store_events, controller: "administracion/store_events", except: :index
   resources :banners, controller: "administracion/banners"
+
+  #carruseles
   resources :animation_carousels, controller: "administracion/animation_carousels"
   resources :carousels, controller: "administracion/carousels"
+
+  match 'carrusel/:slug', to: "carrusel#show", as: :ver_carrusel
 
   resources :popups do
     collection do

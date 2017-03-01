@@ -8,7 +8,7 @@
 # = require s3_direct_upload
 # = require animacion
 # = require holiday
-
+# = require idangerous.swiper.js
 
 #-
 #- FB JSSDK

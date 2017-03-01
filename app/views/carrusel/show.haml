@@ -1,0 +1,9 @@
+#main{vista: "carrusel"}
+  -if @animation.header.present?
+    .col-md-12
+      = image_tag(@animation.header, {width: "100%"})
+  -@animation.carousels.each do |carousel|
+    = render partial:"carousel", locals: {carousel: carousel, options: {items: 5, show_banner: true, show_name: false}}
+  -if @animation.footer.present?
+    .col-md-12
+      = image_tag(@animation.footer, {width: "100%"})

@@ -10,7 +10,12 @@ class SeccionesController < ApplicationController
     if @seccion != false and !@seccion.nil?
       @contenido = Seccion.seccion_actual(@seccion)
     else
-      redirect_to root_path
+      animation = AnimationCarousel.find_by_slug(params[:seccion])
+      if animation.present?
+        redirect_to ver_carrusel_path(slug: animation.slug)
+      else
+        redirect_to root_path
+      end
     end
   end
 
