@@ -52,7 +52,7 @@ class Producto < ActiveRecord::Base
   end
 
   def nombre
-    self.nombre_real.present? ? super : self.nombre_real
+    self.nombre_real.present? ? self.nombre_real : super
   end
 
   def activo?
