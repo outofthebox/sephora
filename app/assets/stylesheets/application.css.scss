@@ -1029,6 +1029,14 @@ ul.breadcrumbs{
         background-image: url(/assets/pinterest_icon.png);
         background-size: contain;
       }
+      &.tienda{
+        height: 18px;
+        color: white;
+        font-size: 10px;
+        line-height: 19px;
+        top: -4px;
+        position: relative;
+      }
     }
   }
   .search {
