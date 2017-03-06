@@ -1165,8 +1165,10 @@ ul.breadcrumbs{
   position:relative;
   margin: 0 auto;
   width: 100%;
-  padding-top: 40px;
   max-width: 960px;
+  &.pt{
+    padding-top: 40px;
+  }
 
 // fondo sephora
 .flame-left{
