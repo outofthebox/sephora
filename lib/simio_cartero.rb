@@ -7,22 +7,16 @@ class SimioCartero
 
 	def suscribe_to(params = nil, id_list = nil)
 		id_list ||= ENV["MAILCHIMP_LIST_ID"]
-		
+
 		email = params[:EMAIL] if params[:EMAIL].present?
 		name = params[:NAME] if params[:NAME].present?
-		
-		merge_vars = ( params[:NAME].present? ) ? {:NAME => name } : {}
-
-		unless params[:to_merge_vars].nil?
-			merge_vars.merge!(params[:to_merge_vars])
-		end
 
 		begin
 			information = {
-		  	id: id_list, 
-		  	email: { email: email }, 
-		  	merge_vars: merge_vars,
-		  	double_optin: false, 
+		  	id: id_list,
+		  	email: { email: email },
+		  	merge_vars: params,
+		  	double_optin: false,
 		  	update_existing: true
 		  }
 		  @conn.lists.subscribe(information)

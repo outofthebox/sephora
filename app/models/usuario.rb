@@ -33,6 +33,7 @@ class Usuario < ActiveRecord::Base
       information[:EMAIL] = self.email if self.email.present?
       information[:DOB] = self.cumple.strftime("%d/%m/%Y") if self.cumple.present?
       information[:ZIP_CODE] = self.cp if self.cp.present?
+      information[:REFERENCE] = "beauty-favs"
 
       sc.suscribe_to(information) if information[:EMAIL].present?
     rescue
