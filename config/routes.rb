@@ -38,6 +38,7 @@ Sephora::Application.routes.draw do
     match "/veracruz", to: "mobile/landings#veracruz", via: [:get, :post], as: "veracruz"
     match "/opening", to: "mobile/landings#opening", via: [:get, :post], as: "opening"
     match '/oasis', :to => 'mobile/landings#oasis', via: [:get, :post], as: "oasis"
+    match '/monterrey', :to => 'mobile/landings#monterrey', via: [:get, :post], as: "monterrey"
     match '/brow-collection', :to => 'mobile/landings#brow_collection', via: [:get, :post], as: "brow_collection"
     match '/bellezaparallevar', :to => 'mobile/landings#bellezaparallevar', via: [:get, :post], as: "bellezaparallevar"
     match '/promocionessephora', :to => 'mobile/landings#promocionessephora', via: [:get, :post], as: "promocionessephora"
@@ -188,6 +189,8 @@ Sephora::Application.routes.draw do
   scope path: :mobile, as: "m" do
     match "navidadsephora", :to => 'instagram#index', :as => "navidadsephora"
   end
+
+  get 'monterrey', :to => 'paginas#monterrey', as: :monterrey
 
   root :to => 'paginas#home'
 

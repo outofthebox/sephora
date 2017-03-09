@@ -23,6 +23,7 @@ class PaginasController < ApplicationController
   def celebra_con_nosotros; end
   def promocionessephora; end
   def regalaconamor; end
+  def monterrey; end
 
 
   def mascarillasingredientesnaturales; end
