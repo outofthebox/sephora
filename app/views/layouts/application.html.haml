@@ -114,7 +114,6 @@
     }
 %body
   #modal-viewport
-    - @popup ||= Popup.active_popup
     = render partial: "popups/modal", locals:{ popup: @popup } if @popup.present?
   - @layout_animation = Animation.in_range.last rescue false
   .lateral-1.left{style: "background-image: url('#{@layout_animation.left}') !important;"}
