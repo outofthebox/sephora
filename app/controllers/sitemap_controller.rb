@@ -9,7 +9,7 @@ class SitemapController < ApplicationController
       respond_to do |format|
         format.xml {
           @posts = Post.all
-          @products = Producto.all 
+          @products = Producto.all
         }
       end
     end

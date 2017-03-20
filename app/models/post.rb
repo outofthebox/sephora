@@ -5,6 +5,8 @@ class Post < ActiveRecord::Base
   has_one :categoria
   has_many :usuario
 
+  scope :publicados, -> { where(publicado: true) }
+
   has_attached_file :imagen, {
     :styles => {
       :grande =>["700x400#"],

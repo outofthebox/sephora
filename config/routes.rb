@@ -510,12 +510,13 @@ Sephora::Application.routes.draw do
   match "/bellezaparallevar", to: "animacion#index", via:[:get], as: "bellezaparallevar"
 
   #sitemap
+  #get '/sitemap.xml', :to => 'sitemap#index', :defaults => { :format => 'xml' }
+
+  # última línea, hace match con el resto de las rutas y muestra 404
+  #match  '*a', :to => 'paginas#error_404'
 
   get '/:seccion', :to => 'secciones#ver'
 
-  get 'sitemap.xml', :to => 'sitemap#index', :defaults => { :format => 'xml' }
-  # última línea, hace match con el resto de las rutas y muestra 404
-  #match  '*a', :to => 'paginas#error_404'
 end
 
 

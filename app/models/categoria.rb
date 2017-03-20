@@ -13,6 +13,8 @@ class Categoria < ActiveRecord::Base
   has_many :categoria_producto
   has_many :productos_vinculados, :through => :categoria_producto
 
+  scope :visible, -> { where(visible: true) }
+
   before_save do
     self.cover = nil if self.remove_cover=="1"
   end

@@ -106,6 +106,7 @@ GEM
     dotenv (0.11.1)
       dotenv-deployment (~> 0.0.2)
     dotenv-deployment (0.0.2)
+    dynamic_sitemaps (2.0.0)
     equalizer (0.0.11)
     erubis (2.7.0)
     execjs (2.0.2)
@@ -386,6 +387,7 @@ DEPENDENCIES
   devise
   disqus
   dotenv (~> 0.11.1)
+  dynamic_sitemaps
   fabrication-rails
   factory_girl_rails
   fastercsv
