@@ -25,6 +25,7 @@ class PaginasController < ApplicationController
   def promocionessephora; end
   def regalaconamor; end
   def monterrey; end
+  def sitemap; end
 
 
   def mascarillasingredientesnaturales; end
