@@ -1,0 +1,46 @@
+- items = options[:items] || 5
+- show_banner = options[:show_banner].present?
+- show_name = options[:show_name].present?
+-if show_name and carousel.image.present?
+  %h4.carousel-name.text-center=carousel.name.upcase
+-if show_banner
+  .carousel-banner.p-t-0=image_tag(carousel.image)
+%div{class: "swiper-container #{carousel.slug}"}
+  %a.slideleft.arrow-left{:href => "#"} &nbsp;
+  %a.slideright.arrow-right{:href => "#"} &nbsp;
+  .swiper-wrapper
+    - productos = carousel.getProducts
+    - productos.each do |producto|
+      .swiper-slide
+        .contengo-producto
+          .imagen=link_to image_tag(producto.foto.url(:mediano)), producto_ver_path(producto.slug)
+          .marca= producto.marca.marca.upcase
+          .product-name
+            =link_to producto.nombre, m_producto_path(producto.slug)
+          %p.price
+            -if producto.tiene_descuento
+              %span.precio_original
+                #{number_to_currency(producto.precio, :precision => 0)}
+              %span
+                &nbsp; - &nbsp;
+              %span.tiene_descuento
+                #{number_to_currency(producto.descuento, :precision => 0)}
+            -else
+              %span
+                #{number_to_currency(producto.precio, :precision => 0)}
+%hr
+:coffee
+  $(document).ready ->
+    swipers = $('.swiper-container')
+    swipers_controls = []
+
+    $.each swipers, (i, s)->
+      swipers_controls[i] = $(s).swiper({ mode:'horizontal', loop: true, slidesPerView: #{items}});
+
+      $(s).find('.arrow-left').click (ev) ->
+        ev.preventDefault();
+        swipers_controls[i].swipePrev()
+
+      $(s).find('.arrow-right').click (ev) ->
+        ev.preventDefault();
+        swipers_controls[i].swipeNext()

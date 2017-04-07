@@ -2,9 +2,14 @@
 //= require animate
 //= require mobile/swiper
 //= require_self
+//= require carrusel
+//= require idangerous.swiper
 
 //=require mobile/secciones
 //=require mobile/landings
+.p-t-0{
+	margin-top: 0 !important;
+}
 
 @font-face {
 	font-family: 'Avant';

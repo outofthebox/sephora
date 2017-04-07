@@ -9,6 +9,9 @@ Sephora::Application.routes.draw do
     match 'rebajas', :to => 'mobile/categorias#rebajas', :as => 'promociones_show'
     match 'obsequios', :to => 'mobile/categorias#obsequios', :as => 'obsequios'
 
+    #carrousels
+    match 'carrusel/:slug', to: "mobile/carrusel#show"
+
     match 'favorites(/:id)', :to => 'secciones#favorites', :as => 'favorites'
 
     #favoritoslabios

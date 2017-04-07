@@ -1,0 +1,3 @@
+#main{vista: "carrusel"}
+  -@animation.carousels.each do |carousel|
+    = render partial:"carousel", locals: {carousel: carousel, options: {items: 1, show_banner: true, show_name: false}}
