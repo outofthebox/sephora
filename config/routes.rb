@@ -46,7 +46,7 @@ Sephora::Application.routes.draw do
     match '/bellezaparallevar', :to => 'mobile/landings#bellezaparallevar', via: [:get, :post], as: "bellezaparallevar"
     match '/promocionessephora', :to => 'mobile/landings#promocionessephora', via: [:get, :post], as: "promocionessephora"
     match '/regala-con-amor', :to => 'mobile/landings#regalaconamor', via: [:get, :post], as: "regalaconamor"
-
+    match '/smashboxcovershotpalette', :to => 'mobile/landings#smashboxcovershotpalette', via: [:get, :post], as: "smashboxcovershotpalette"
     match '/cliniquecrayola', :to => 'mobile/landings#crayola', via: [:get, :post], as: "crayola"
 
     match "/lista_eventos", :to => 'mobile/eventos#index', :as => 'eventos'
@@ -155,6 +155,10 @@ Sephora::Application.routes.draw do
   get   'usuario/wishlist/ver/:slug', :to => "usuarios#wishlist_ver", :as => "usuario_wishlist_ver"
   post  'usuario/wishlist/add/:upc', :to => "usuarios#wishlist_add", :as => "usuario_wishlist_add"
   post  'usuario/wishlist/del/:upc', :to => "usuarios#wishlist_del", :as => "usuario_wishlist_del"
+
+
+  #
+  get 'smashboxcovershotpalette', :to => 'paginas#smashboxcovershotpalette', as: :smashboxcovershotpalette
 
   # mascarillas
   #

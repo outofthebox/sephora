@@ -25,6 +25,7 @@ class PaginasController < ApplicationController
   def promocionessephora; end
   def regalaconamor; end
   def monterrey; end
+  def smashboxcovershotpalette; end
   def sitemap; end
 
 
