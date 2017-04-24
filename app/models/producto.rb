@@ -59,6 +59,37 @@ class Producto < ActiveRecord::Base
     self.publicado == true
   end
 
+  def todas_las_categorias
+    cat = try(:categoria)
+    (cat.self_and_ancestors.map(&:nombre) + cat.descendants.map(&:nombre))
+  end
+
+  def json_ld
+
+    # Limpiando
+    descripcion = self.descripcion;
+    if descripcion?
+      descripcion = descripcion[0..160];
+    else
+      descripcion = ""
+    end
+
+    js = {
+      context: "http://schema.org",
+      type: "Product",
+      name: self.nombre,
+      image: self.foto.url(:normal),
+      description: descripcion,
+      brand: {
+        type: "Brand",
+        name: self.marca.marca,
+        logo: self.marca.logo.url(:grande)
+      }
+    }
+
+    return js.to_json
+  end
+
   def self.busqueda q
     productos = self
     if q.match(/sku:([\w]*)/)
@@ -90,32 +121,6 @@ class Producto < ActiveRecord::Base
 
   def self.by_slug slug
     self.where(:slug => slug).first
-  end
-
-  def json_ld
-
-    # Limpiando
-    descripcion = self.descripcion;
-    if descripcion?
-      descripcion = descripcion[0..160];
-    else
-      descripcion = ""
-    end
-
-    js = {
-      context: "http://schema.org",
-      type: "Product",
-      name: self.nombre,
-      image: self.foto.url(:normal),
-      description: descripcion,
-      brand: {
-        type: "Brand",
-        name: self.marca.marca,
-        logo: self.marca.logo.url(:grande)
-      }
-    }
-
-    return js.to_json
   end
 
   def self.rangodeprecios cual=nil
@@ -175,7 +180,7 @@ class Producto < ActiveRecord::Base
     ids = productos.map{|x| x[:id]}
     update_vals = productos.map{|x| {precio: x[:nuevo_precio]}}
 
-    Producto.update(ids, update_vals) if update_prices == true 
+    Producto.update(ids, update_vals) if update_prices == true
 
     return productos
   end
@@ -185,11 +190,11 @@ class Producto < ActiveRecord::Base
     csv = CSV.parse(rm.request.body, :headers => false)
 
     data = csv.map{|x| x[0]}.select{|y| !y.nil?} rescue []
-    
+
     descontinuados_before =  Producto.where(:publicado => false).count rescue 0
 
     descontinuados = Producto.where(:upc => data)
-    
+
     if descontinuar_productos == true
       descontinuados.update_all({publicado: false});
       descontinuados_after =  Producto.where(:publicado => false).count
