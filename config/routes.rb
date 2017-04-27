@@ -48,6 +48,7 @@ Sephora::Application.routes.draw do
     match '/regala-con-amor', :to => 'mobile/landings#regalaconamor', via: [:get, :post], as: "regalaconamor"
     match '/smashboxcovershotpalette', :to => 'mobile/landings#smashboxcovershotpalette', via: [:get, :post], as: "smashboxcovershotpalette"
     match '/cliniquecrayola', :to => 'mobile/landings#crayola', via: [:get, :post], as: "crayola"
+    match '/promociondiadelasmadres', :to => 'mobile/landings#promociondiadelasmadres', via: [:get, :post], as: "promociondiadelasmadres"
 
     match "/lista_eventos", :to => 'mobile/eventos#index', :as => 'eventos'
     match "/eventos", :to => 'mobile/eventos#index', :as => 'eventos'
@@ -496,6 +497,8 @@ Sephora::Application.routes.draw do
   match '/regala-con-amor', :to => 'paginas#regalaconamor', via: [:get, :post], as: "regalaconamor"
 
   match '/cliniquecrayola', :to => 'paginas#crayola', via: [:get, :post], as: "crayola"
+  match '/promociondiadelasmadres', :to => 'paginas#promociondiadelasmadres', via: [:get, :post], as: "promociondiadelasmadres"
+  
   
   scope :animacion do
     #match "/commodity", to: "animacion#commodity", via:[:get], as: "commodity"

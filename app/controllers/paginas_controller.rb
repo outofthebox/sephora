@@ -27,6 +27,7 @@ class PaginasController < ApplicationController
   def monterrey; end
   def smashboxcovershotpalette; end
   def sitemap; end
+  def promociondiadelasmadres; end
 
 
   def mascarillasingredientesnaturales; end
