@@ -9,4 +9,5 @@ class Mobile::LandingsController < MobileController
   def regalaconamor; end
   def monterrey; end
   def smashboxcovershotpalette; end
+  def promociondiadelasmadres; end
 end
