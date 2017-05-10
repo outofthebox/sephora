@@ -490,7 +490,6 @@ namespace :productos do
     })
   end
 
-
   task :full_info => :environment do
     #AWS S3 SETUP
     bucket_name = "sephoramexico"
@@ -519,6 +518,36 @@ namespace :productos do
       link: url_for_read,
       message: "Esta es la lista de todos los productos, los podras encontrar en el siguiente link",
       title: "Resumen de productos en el sitio"
+    })
+  end
+
+  task :full_descriptions => :environment do
+    #AWS S3 SETUP
+    bucket_name = "sephoramexico"
+    temp_file = Tempfile.new("full_descriptions_#{Date.today.to_s}")
+    key_path = "productos/"+File.basename(temp_file)+".csv"
+    s3 = AWS::S3.new
+
+    CSV.open(temp_file, "w") do |csv|
+      productos = Producto.all
+      csv << ["sap", "upc", "marca", "nombre", "descripcion", "usos", "ingredientes"]
+      productos.each do |p|
+        marca_name = p.marca.marca rescue ""
+        csv << [p.sap, p.upc, marca_name, p.nombre, p.descripcion, p.usos, p.ingredientes]
+      end
+    end
+
+    s3.buckets[bucket_name].objects[key_path].write(:file => temp_file.path, :acl => :public_read)
+    url_for_read = s3.buckets[bucket_name].objects[key_path].url_for(:download, expires: 100.years.from_now) rescue "/"
+    url_for_download = url_for_read.to_s.split("?")[0] rescue url_for_read
+
+    puts "Uploading file #{temp_file.path} to bucket #{bucket_name}."
+    puts "Download from: #{url_for_read}"
+
+    template_email({
+      link: url_for_read,
+      message: "Esta es la lista de todos los productos, los podras encontrar en el siguiente link",
+      title: "Resumen de descripciones de productos en el sitio"
     })
   end
 
