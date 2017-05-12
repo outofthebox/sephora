@@ -533,7 +533,10 @@ namespace :productos do
       csv << ["sap", "upc", "marca", "nombre", "descripcion", "usos", "ingredientes"]
       productos.each do |p|
         marca_name = p.marca.marca rescue ""
-        csv << [p.sap, p.upc, marca_name, p.nombre, p.descripcion, p.usos, p.ingredientes]
+        descripcion = ActionView::Base.full_sanitizer.sanitize(p.descripcion)
+        usos = ActionView::Base.full_sanitizer.sanitize(p.usos)
+        ingredientes = ActionView::Base.full_sanitizer.sanitize(p.ingredientes)
+        csv << [p.sap, p.upc, marca_name, p.nombre, descripcion, usos, ingredientes]
       end
     end
 
