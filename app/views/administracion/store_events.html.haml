@@ -4,7 +4,7 @@
 			%h2#btn-groups
 				%i.glyphicon.glyphicon.glyphicon-asterisk
 				Store Events
-				= link_to "New event", new_admin_store_event_path, :class=> "btn btn-def pull-right"
+				= link_to "New event", new_admin_store_event_path, :class=> "btn btn-default pull-right"
 		.contengoTabla.row-fluid
 			%table.table.table-bordered.table-striped.table-hover
 				%thead 
@@ -29,7 +29,7 @@
 						%td.text-center= event.title
 						%td.text-center= store.nombre
 						%td.text-center= store_event.dates
-						%td.text-center= store_event.link
+						%td.text-center= link_to truncate(store_event.link, length: 50), store_event.link
 						%td.text-center
 							= link_to "/administracion/store_events/#{store_event.id}/" do
 								%i.glyphicon.glyphicon-eye-open

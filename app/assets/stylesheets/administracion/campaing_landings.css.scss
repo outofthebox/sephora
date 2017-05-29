@@ -1,0 +1,32 @@
+#campaing_landing{
+	margin: 1.5em 0;
+	padding: 0;
+	-moz-column-gap: 1.5em;
+	-webkit-column-gap: 1.5em;
+	column-gap: 1.5em;
+	font-size: .85em;
+	display: flex;
+	flex-wrap: wrap;
+	.image{
+		display: inline-block;
+    background: #fff;
+    padding: 1em;
+    margin: 0 10px 1.5em;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-shadow: 2px 2px 4px 0 #ccc;
+    height: 320px;
+    overflow: hidden;
+		img.campaing_landing{
+			&.show{
+				max-width: 960px;
+				width: 100%;
+			}
+			&.index{
+				max-width: 320px;
+				width: 100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,53 @@
+#main{
+  &[vista="landings"]{
+    .banner{
+      max-width: 200px;
+    }
+  }
+  &[vista="landing_new"]{
+    .dd-option-image{
+      display: block;
+      width: 98%;
+      max-width: 100% !important;
+      vertical-align: middle;
+      text-align: center;
+      margin: 10px 0;
+      box-shadow: 0px 0px 28px -8px black;
+      border: 1px solid rgb(192, 187, 187);
+      padding: 5px;
+      background: white;
+      max-height: 57px;
+      &[src$="missing.png"]{max-height:57px}
+    }
+    .dd-options{
+      width: 100% !important;
+      min-width: 900px;
+      li{
+        display: inline-block;
+        width: 33%;
+        vertical-align: top;
+        a{
+          height: 168px;
+          min-height:168px !important;
+          .dd-option-text{
+            font-family: Arial, sans-serif;
+            font-size: 8pt;
+            font-weight: bold;
+            letter-spacing: 1px;
+            line-height: 1.2em !important;
+            overflow: hidden;
+            max-height: 20px;
+            text-transform: uppercase;
+            text-align: center;
+          }
+          .dd-desc{
+            font-weight: lighter;
+            font-family: "Avant", Arial, sans-serif;
+            font-size: 0.9em;
+            letter-spacing: 1px;
+          }
+        }
+      }
+    }
+  }
+}

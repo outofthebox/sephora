@@ -7,6 +7,7 @@ gem 'thinking-sphinx', '~> 3.0.0'
 gem 'flying-sphinx', '~> 1.0.0'
 gem 'haml', "~> 4.0.3"
 gem 'haml-rails', "~> 0.4"
+gem 'compass-rails'
 gem 'sendgrid'
 gem 'hominid'
 gem 'activerecord-import'

@@ -1,0 +1,32 @@
+= form_for @campaing_landing, :html => {:role => "form", :class=>"form"} do |f|
+  .col-md-4
+    .row
+      .form-group.col-md-12
+        = f.label "Campaing Name"
+        %br/
+        = f.text_field :campaing_name, {class: "form-control"}
+        - unless @campaing_landing.errors[:campaing_name].empty?
+          .error.pull-right.small.text-danger
+            =@campaing_landing.errors.messages[:campaing_name].join(",")
+      .form-group.col-md-12
+        = f.label "Vanity url"
+        %br/
+        = f.text_field :vanity_url, {class: "form-control"}
+        - unless @campaing_landing.errors[:vanity_url].empty?
+          .error.pull-right.small.text-danger
+            =@campaing_landing.errors.messages[:vanity_url].join(",")
+      .form-group.col-md-12
+        = f.label "Link"
+        %br/
+        = f.text_field :redirect_url, {class: "form-control"}
+        - unless @campaing_landing.errors[:redirect_url].empty?
+          .error.pull-right.small.text-danger
+            =@campaing_landing.errors.messages[:redirect_url].join(",")
+      .form-group.col-md-12
+        = f.label "Imagen"
+        = f.file_field :image
+        - unless @campaing_landing.errors[:image].empty?
+          .error.pull-right.small.text-danger
+            =@campaing_landing.errors.messages[:image].join(",")
+      .form-group.col-md-12
+        = f.submit "Guardar", {class: "btn btn-info"}

@@ -1,0 +1,93 @@
+#main{
+  &[vista="animation_carousels"]{
+    .tools{
+      margin-bottom: 30px;
+    }
+    .swiper-container{
+      margin: 20px auto;
+      width: 90%;
+      display: block;
+      min-height: 300px;
+      height: auto;
+      max-height: 300px;
+    }
+    .edit-carousels{
+      .carousel-name {
+        font-family: Arial, sans-serif;
+        font-size: 8pt;
+        font-weight: bold !important;
+        letter-spacing: 1px;
+      }
+    }
+    .carousel-name {
+      text-transform: uppercase;
+      font-weight: 100 !important;
+      font-family: 'Sephora', 'Avant', Helvetica, Arial;
+      letter-spacing: 1px;
+      font-size: 2.5em;
+      margin: 30px auto;
+      &.ht_div{
+        background:url(home/hn_seccion_div.png) center center no-repeat transparent;
+        width: 960px;
+        height: 160px;
+        display: block;
+        text-align: left;
+        text-indent: -1000px;
+        overflow: hidden;
+        margin-bottom: 30px;
+      }
+    }
+    .carousel-banner{
+      width: 100%;
+      margin: 30px auto;
+    }
+    .admin-carousel-banner{
+      width: 100%;
+    }
+    .slideleft {
+      background: image-url("home/left.png");
+      width: 51px;
+      height: 85px;
+      left: 0px;
+      top: 32px;
+      display: block;
+      position: absolute;
+      z-index: 100;
+    }
+    .slideright {
+      background: image-url("home/right.png");
+      width: 51px;
+      height: 85px;
+      right: 0px;
+      top: 32px;
+      display: block;
+      position: absolute;
+      z-index: 100;
+    }
+    .contengo-producto{
+      .imagen {
+        a{
+          img{
+            height: 130px;
+            display: block;
+            margin: 10px auto;
+          }
+        }
+      }
+      .product-name{
+        font-weight: lighter;
+        font-family: "Avant", Arial, sans-serif;
+        font-size: 0.9em;
+        letter-spacing: 1px;
+        a{ color: black; }
+        margin: 10px auto;
+      }
+      .marca{
+        font-family: Arial, sans-serif;
+        font-size: 8pt;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}

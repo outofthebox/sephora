@@ -3,8 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 //= require bootstrap
+//= require administracion/animations
+//= require administracion/animations_carousels
+//= require administracion/banners
+//= require administracion/brand_landings
+//= require administracion/campaing_landings
+//= require administracion/events
+//= require administracion/others
 //= require idangerous.swiper
 //= require_self
+
+@import "compass";
 
 @font-face {
     font-family: 'Avant';
@@ -28,435 +37,182 @@
     font-style: normal;
 }
 
-.clear {
-  clear: both;
+@mixin clearfix {
+    clear: both;
 }
-.logo{
-  margin:20px auto;
+
+/* VARIABLES */
+$header-bg: #3f51b5;
+$menu-width: 250px!default;
+
+/* BASE */
+html,
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.4;
+  height: 100%;
+  background-color: #eee;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  @include clearfix;
+  margin: 0 20px;
+  background-color: white;
+  box-shadow: 0px 0px 31px 12px #CCC;
+  margin: auto;
+  z-index: 1;
+  min-height: 100%;
+  padding-bottom: 2em;
+}
+
+.site-content {
+  padding-top: 66px;
+}
+
+/* HEADER */
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 66px;
+
+  line-height: 66px;
+  color: #fff;
+
+  background-color: $header-bg;
+  z-index: 2;
+}
+
+.header__logo {
+  font-weight: 700;
+  padding: 0 25px;
+  float: left;
   display: block;
-  width: 200px;
+  font-family: "Sephora";
+  color: white;
+  font-size: 35px;
+  text-decoration: none;
+  &:hover{
+    color: white;
+    text-decoration: none;
+  }
   img{
     width: 100%;
   }
 }
-#header {
-  height: 50px;
-  background-color: #CE5656;
-  padding: 10px;
-  margin:5px 0;
-  ul.menu {
-    list-style: none;
-    padding: 0px;
-    text-align: center;
-    margin: 0;
-    li {
-      background:white;
-      display: inline-block;
-      height: 30px;
-      line-height: 30px;
-      width: 130px;
-      border-radius:5px;
-      a {
-        display: block;
-        width: 100%;
-        height: 100%;
-        color: #000;
-        text-decoration: none;
-      }
-    }
+
+/* MENU */
+.menu {
+  float: left;
+
+  a {
+    padding: 0 10px;
   }
-}
-#dashboard {
-  ul {
-    list-style: none;
-    text-align: center;
-    margin: 25px;
-    li {
-      width: 150px;
-      height: 150px;
-      background-color: #EC1A90;
-      vertical-align: top;
-      border-radius: 100%;
-      margin: 25px;
-      display: inline-block;
-      padding: 10px;
-      .cont {
-        display: table-cell;
-        vertical-align: middle;
-        height: 150px;
-        width: 150px;
-      }
-      a {
-        text-decoration: none;
-      }
-      p {
-        font-size: 1.2em;
-        color: #fff;
-        font-weight: bold;
-      span {
-        font-weight: normal;
-        display: block;
-        line-height: normal;
-        }
-      }
-    }
+
+  a:hover {
+    color: #c5cae9;
   }
 }
 
-#main{
-  margin:auto !important;
-  max-width: 1200px;
-  margin-top:20px !important;
-  position: relative;
-  padding-bottom: 20px;
-  .redactor_editor{
-    height: 118px;
+/* RESPONSIVE */
+@media only screen and (max-width: 1280px) {
+  .site-pusher,
+  .site-container {
+    height: 100%;
   }
-  .redactor_box{
-    height: 150px;
+
+  .site-container {
+    overflow: hidden;
   }
-}
 
-.btn-def{
-  background-color:#CE5656;
-  border-color:#CE5656;
-  color:white;
-  &:hover{
-    color:white;
+  .site-pusher {
+    @include transition-duration(0.3s);
+    @include transform(translateX(0px));
   }
-}
 
-.btn-black{
-  background-color:#333;
-  border-color:#333;
-  color:white;
-  &:hover{
-    background-color:#000;
-    border-color:#000;
-    color:white;
+  .site-content {
+    position: absolute;
+    top: 66px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding-top: 0;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
   }
-}
 
-.controls{
-  padding: 5px;
-  padding-top: 0;
-  .switch{
-    margin:10px 0px;
+  .header {
+    position: static;
   }
-}
 
+  .header__icon {
+    position: relative;
+    display: block;
+    float: left;
+    width: 50px;
+    height: 66px;
 
+    cursor: pointer;
 
-.contengoTabla {
-  text-transform: uppercase;
-  table{
-    font-size: 12px;
-    thead {
-      background: #333; /* Old browsers */
-      color: white;
-      th{
-        border:0;
-        &.ver, &.eliminar, &.editar{
-          width:40px !important;
-        }
-      }
-    }
-    tr{
-      &:hover td{
-        transition: background 250ms;
-      }
-      td{
-        transition: background 250ms;
-        &.ver, &.eliminar, &.editar{
-          width:40px;
-        }
-      }
-    }
-  }
-}
-
-#main{
-  &[vista="landings"]{
-    .banner{
-      max-width: 200px;
-    }
-  }
-  &[vista="landing_new"]{
-    .dd-option-image{
+    &:after {
+      content: '';
+      position: absolute;
       display: block;
-      width: 98%;
-      max-width: 100% !important;
-      vertical-align: middle;
+      width: 1rem;
+      height: 0;
+      top: 16px;
+      left: 15px;
+      @include box-shadow(0 10px 0 1px #fff, 0 16px 0 1px #fff, 0 22px 0 1px #fff);
+    }
+  }
+
+  .menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: darken($header-bg, 5);
+/*    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;*/
+
+    width: $menu-width;
+
+    @include transform(translateX($menu-width * -1));
+    a {
+      display: block;
+      height: 40px;
+
       text-align: center;
-      margin: 10px 0;
-      box-shadow: 0px 0px 28px -8px black;
-      border: 1px solid rgb(192, 187, 187);
-      padding: 5px;
-      background: white;
-      max-height: 57px;
-      &[src$="missing.png"]{max-height:57px}
-    }
-    .dd-options{
-      width: 100% !important;
-      min-width: 900px;
-      li{
-        display: inline-block;
-        width: 33%;
-        vertical-align: top;
-        a{
-          height: 168px;
-          min-height:168px !important;
-          .dd-option-text{
-            font-family: Arial, sans-serif;
-            font-size: 8pt;
-            font-weight: bold;
-            letter-spacing: 1px;
-            line-height: 1.2em !important;
-            overflow: hidden;
-            max-height: 20px;
-            text-transform: uppercase;
-            text-align: center;
-          }
-          .dd-desc{
-            font-weight: lighter;
-            font-family: "Avant", Arial, sans-serif;
-            font-size: 0.9em;
-            letter-spacing: 1px;
-          }
-        }
-      }
+      line-height: 40px;
+
+      border-bottom: 1px solid $header-bg;
     }
   }
-  &[vista="product_gallery"]{
-    #galeria{
-      ul{
-        list-style: none;
-        li{
-          margin:20px auto;
-          .overbox{
-            width: 203px;
-            height: 135px;
-            background: rgba(0, 0, 0, 0.8);
-            display: block;
-            position: absolute;
-            top: 5px;
-            left: 20px;
-            border-radius: 2px;
-            opacity: 0;
-            transition: opacity 350ms;
-          }
-          .eliminar{
-            position: absolute;
-            top: 58px;
-            right: 92px;
-            font-size: 22px;
-            color: white;
-            border-radius: 100%;
-            cursor: pointer;
-          }
-          &:hover{
-            .overbox{
-              transition: opacity 350ms;
-              opacity: 1;
-            }
-          }
-          img.img-thumbnail{
-            width: 213px;
-            height: 145px;
-          }
-        }
-      }
+
+  .with--sidebar {
+    .site-pusher {
+      @include transform(translateX($menu-width));
     }
-  }
-  &[vista="events"]{}
-  &[vista="popups"]{
-    .popup{
-      margin: auto;
-      display: block;
-    }
-    .index-popup{
-      position: relative;
-      width: 30%;
-      display: inline-block;
-      margin: 0 1%;
-      .imagen{
-        margin: auto;
-        display: block;
-        box-shadow: 0px 0px 13px -3px #333;
-      }
-      .attributes{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        padding-top: 28%; 
-        input{
-          display: block;
-          margin: 10px auto;
-          width: 60%;
-          box-shadow: none;
-          border: 1px solid #ccc;
-          border-radius: 0px;
-        }
-        label{
-          font-family: 'Sephora', 'Avant';
-          display: block;
-          margin: 10px auto;
-          width: 60%;
-          text-align: center;
-          color: black;
-          font-size: 19px;
-          font-weight: 100;
-        }
-        button.btn-black{
-          background: black;
-          color: white;
-          border: none;
-          border-radius: 0px;
-          display: block;
-          margin: auto;
-        }
-      }
-    }
-    .position {
+    .site-cache {
       position: absolute;
-      background: black;
-    }
-    .valid-date {
-      float: right;
-      position: relative;
-      top: -25px;
-      right: 10px;
-      font-size: 10px;
-      font-weight: normal;
-      background: black;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.6);
     }
   }
-  &[vista="banners"]{
-    .banner{
-      margin: auto;
-      display: block;
-    }
-    .index-banner{
-      position: relative;
-      width: 30%;
-      display: inline-block;
-      margin: 0 1%;
-      &.minis{ width: 47%; }
-      &.producto{ width: 100%; }
-      .imagen{
-        margin: auto;
-        display: block;
-        box-shadow: 0px 0px 13px -3px #333;
-      }
-    }
-    .position {
-      position: absolute;
-      background: black;
-    }
-    .valid-date {
-      float: right;
-      position: relative;
-      top: -25px;
-      right: 10px;
-      font-size: 10px;
-      font-weight: normal;
-      background: black;
-    }
-  }
-  &[vista="animations"]{
-    #animation{
-      a.header{
-        width: 100%;
-        display: block;
-        img{width: 100%; display: block;}
-      }
-    }
-  }
-  &[vista="animation_carousels"]{
-    .swiper-container{
-      margin: 20px auto;
-      width: 90%;
-      display: block;
-      min-height: 300px;
-      height: auto;
-      max-height: 300px;
-    }
-    .edit-carousels{
-      .carousel-name {
-        font-family: Arial, sans-serif;
-        font-size: 8pt;
-        font-weight: bold !important;
-        letter-spacing: 1px;
-      }
-    }
-    .carousel-name {
-      text-transform: uppercase;
-      font-weight: 100 !important;
-      font-family: 'Sephora', 'Avant', Helvetica, Arial;
-      letter-spacing: 1px;
-      font-size: 2.5em;
-      margin: 30px auto;
-      &.ht_div{
-        background:url(home/hn_seccion_div.png) center center no-repeat transparent;
-        width: 960px;
-        height: 160px;
-        display: block;
-        text-align: left;
-        text-indent: -1000px;
-        overflow: hidden;
-        margin-bottom: 30px;
-      }
-    }
-    .carousel-banner{
-      margin: 30px auto;
-    }
-    .slideleft {
-      background: image-url("home/left.png");
-      width: 51px;
-      height: 85px;
-      left: 0px;
-      top: 32px;
-      display: block;
-      position: absolute;
-      z-index: 100;
-    }
-    .slideright {
-      background: image-url("home/right.png");
-      width: 51px;
-      height: 85px;
-      right: 0px;
-      top: 32px;
-      display: block;
-      position: absolute;
-      z-index: 100;
-    }
-    .contengo-producto{
-      .imagen {
-        a{
-          img{
-            height: 130px;
-            display: block;
-            margin: 10px auto;
-          }
-        }
-      }
-      .product-name{
-        font-weight: lighter;
-        font-family: "Avant", Arial, sans-serif;
-        font-size: 0.9em;
-        letter-spacing: 1px;
-        a{ color: black; }
-        margin: 10px auto;
-      }
-      .marca{
-        font-family: Arial, sans-serif;
-        font-size: 8pt;
-        font-weight: bold;
-        letter-spacing: 1px;
-      }
-    }
-  }
-  .media-object{max-width: 50px; max-height: 50px; width: 25px;}
+}
+
+.row-no-padding > [class*="col-"] {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }

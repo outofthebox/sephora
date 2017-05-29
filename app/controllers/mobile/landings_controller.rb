@@ -1,4 +1,9 @@
 class Mobile::LandingsController < MobileController
+
+  def show
+    @campaing_landing = CampaingLanding.find_by_vanity_url(params[:slug])
+  end
+
 	def beautyfair; end
   def masterclass; end
   def oasis; end

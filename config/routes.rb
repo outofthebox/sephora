@@ -11,6 +11,7 @@ Sephora::Application.routes.draw do
 
     #carrousels
     match 'carrusel/:slug', to: "mobile/carrusel#show"
+    match 'landing/:slug', to: "mobile/landings#show"
 
     match 'favorites(/:id)', :to => 'secciones#favorites', :as => 'favorites'
 
@@ -413,12 +414,14 @@ Sephora::Application.routes.draw do
   resources :events, controller: "administracion/events", except: :index
   resources :store_events, controller: "administracion/store_events", except: :index
   resources :banners, controller: "administracion/banners"
+  resources :campaing_landings, controller: "administracion/campaing_landings"
 
   #carruseles
   resources :animation_carousels, controller: "administracion/animation_carousels"
   resources :carousels, controller: "administracion/carousels"
 
   match 'carrusel/:slug', to: "carrusel#show", as: :ver_carrusel
+  match 'landing/:slug', to: "campaing_landings#show", as: :ver_landing
 
   resources :popups do
     collection do
@@ -432,6 +435,7 @@ Sephora::Application.routes.draw do
     resources :events, except: :index, controller: "administracion/events"
     resources :banners, controller: "administracion/banners"
     resources :popups, controller: "administracion/popups"
+    resources :campaing_landings, controller: "administracion/campaing_landings"
     resources :animations, controller: "administracion/animations"
     resources :store_events, except: :index, controller: "administracion/store_events"
     resources :carousels, controller: "administracion/carousels"

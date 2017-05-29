@@ -4,7 +4,7 @@
 #main{:vista=>"animations"}
   .page-body
     #animation
-      =link_to image_tag(@animation.header), @animation.header_to, {target: "_blank", class: "header"}
+      =link_to image_tag(@animation.header), @animation.header_to, {target: "_blank", class: "animation-header"}
     .tools.text-center
       %br/
       %a.btn.btn-default{:href => admin_animations_path} Regresar

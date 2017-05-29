@@ -10,13 +10,14 @@
     %a.btn.btn-default.btn-sm{:href => admin_animation_carousels_path} Regresar
     %a.btn.btn-default.btn-sm{:href => edit_admin_animation_carousel_path(@animation_carousel)} Editar
     = link_to "Borrar", @animation_carousel, {:confirm => 'Are you sure?', :method => :delete, class: "btn btn-sm btn-danger"}
-  #animation-carousel.container.text-center
-    -if @animation_carousel.header.present?
-      .col-md-12
-        = image_tag(@animation_carousel.header)
-    .col-md-12
-      - @animation_carousel.carousels.each do |carousel|
-        = render partial: "carousel", locals: {carousel: carousel, options: {items: 5, show_banner: true, show_name: false}}
-    -if @animation_carousel.footer.present?
-      .col-md-12
-        = image_tag(@animation_carousel.footer)
+  #animation-carousel.text-center
+    .row.row-fluid.row-no-padding
+      -if @animation_carousel.header.present?
+        .col-md-12
+          = image_tag(@animation_carousel.header, {class: "admin-carousel-banner"})
+      .col-md-12.no-padding
+        - @animation_carousel.carousels.each do |carousel|
+          = render partial: "carousel", locals: {carousel: carousel, options: {items: 5, show_banner: true, show_name: false}}
+      -if @animation_carousel.footer.present?
+        .col-md-12.no-padding
+          = image_tag(@animation_carousel.footer, {class: "admin-carousel-banner"})

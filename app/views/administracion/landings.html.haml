@@ -3,8 +3,8 @@
 		.page-header
 			%h2#btn-groups
 				%i.glyphicon.glyphicon.glyphicon-asterisk
-				Landings
-				= link_to "New Landing", new_admin_landing_path, :class=> "btn btn-def pull-right"
+				Brand Landings
+				= link_to "New Brand Landing", new_admin_landing_path, :class=> "btn btn-default pull-right"
 		.contengoTabla.row-fluid
 			%table.table.table-bordered.table-striped.table-hover
 				%thead 
@@ -22,7 +22,7 @@
 				- for landing in @landings
 					%tr
 						%td.text-center= image_tag landing.banner, {:class=>"banner"}
-						%td.text-center= landing.link
+						%td.text-center= link_to truncate(landing.link.gsub("http://www.sephora.com.mx", ""), :length => 50), landing.link
 						%td.text-center= landing.marca.marca
 						%td.text-center= link_to raw("<i class='glyphicon glyphicon-eye-open'></i>"), landing
 						%td.text-center= link_to raw("<i class='glyphicon glyphicon-pencil'></i>"), edit_admin_landing_path(landing)

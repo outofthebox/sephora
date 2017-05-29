@@ -1,0 +1,12 @@
+#main{:vista=>"campaing_landings"}
+  .bs-docs-section.col-12.col-md-12.col-lg-12{:role => "main"}
+    .page-header
+      .pull-right=link_to("New", new_admin_campaing_landing_path({campaing_landing_class: "principal"}), {class: "btn btn-info"})
+      %h2#btn-groups
+        Principales
+      .clearfix
+    .page-body
+      #campaing_landing
+        - @campaing_landings.each do |campaing_landing|
+          .image=link_to image_tag(campaing_landing.image, {class: "campaing_landing index"}), admin_campaing_landing_path(campaing_landing)
+    %hr.clearfix

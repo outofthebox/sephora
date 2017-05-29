@@ -1,0 +1,44 @@
+#main{
+  &[vista="product_gallery"]{
+    #galeria{
+      ul{
+        list-style: none;
+        li{
+          margin:20px auto;
+          .overbox{
+            width: 203px;
+            height: 135px;
+            background: rgba(0, 0, 0, 0.8);
+            display: block;
+            position: absolute;
+            top: 5px;
+            left: 20px;
+            border-radius: 2px;
+            opacity: 0;
+            transition: opacity 350ms;
+          }
+          .eliminar{
+            position: absolute;
+            top: 58px;
+            right: 92px;
+            font-size: 22px;
+            color: white;
+            border-radius: 100%;
+            cursor: pointer;
+          }
+          &:hover{
+            .overbox{
+              transition: opacity 350ms;
+              opacity: 1;
+            }
+          }
+          img.img-thumbnail{
+            width: 213px;
+            height: 145px;
+          }
+        }
+      }
+    }
+  }
+  .media-object{max-width: 50px; max-height: 50px; width: 25px;}
+}

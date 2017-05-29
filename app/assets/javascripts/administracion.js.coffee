@@ -17,3 +17,16 @@ picker = ->
       $("#marcas").ddslick
         onSelected: (data) ->
           $("#landing_marca_id").val(data.selectedData.value)
+
+$(document).ready ->
+  (($) ->
+    $('#header__icon').click (e) ->
+      e.preventDefault()
+      $('body').toggleClass 'with--sidebar'
+      return
+    $('#site-cache').click (e) ->
+      $('body').removeClass 'with--sidebar'
+      return
+    return
+  ) jQuery
+  return

@@ -1,0 +1,16 @@
+- if notice.present?
+  #notice.alert.alert-warning
+    %p= notice
+#main{:vista=>"campaing_landings"}
+  .page-body
+    .row-fluid
+      .col-md-2
+        .tools.text-center
+          %br/
+          %a.btn.btn-default.btn-block{:href => ver_landing_path(@campaing_landing.vanity_url)} Ver
+          %a.btn.btn-default.btn-block{:href => admin_campaing_landings_path} Regresar
+          %a.btn.btn-default.btn-block{:href => edit_admin_campaing_landing_path(@campaing_landing)} Editar
+          = link_to "Borrar", @campaing_landing, {:confirm => 'Are you sure?', :method => :delete, class: "btn btn-danger btn-block"}
+      .col-md-10
+        #campaing_landing
+          =link_to image_tag(@campaing_landing.image, {class: "campaing_landing show"}), @campaing_landing.vanity_url, {target: "_blank"}

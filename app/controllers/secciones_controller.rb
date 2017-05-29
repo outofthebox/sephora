@@ -10,9 +10,15 @@ class SeccionesController < ApplicationController
     if @seccion != false and !@seccion.nil?
       @contenido = Seccion.seccion_actual(@seccion)
     else
-      animation = AnimationCarousel.find_by_slug(params[:seccion])
-      if animation.present?
-        redirect_to ver_carrusel_path(slug: animation.slug)
+      slugs = {animation: [], campaings: []}
+
+      slugs[:animation] = AnimationCarousel.all.map(&:slug)
+      slugs[:campaings] = CampaingLanding.all.map(&:vanity_url)
+
+      if slugs[:animation].include?(params[:seccion])
+        redirect_to ver_carrusel_path(slug: params[:seccion])
+      elsif slugs[:campaings].include?(params[:seccion])
+        redirect_to ver_landing_path(slug: params[:seccion])
       else
         redirect_to root_path
       end
