@@ -1,3 +1,6 @@
-#main{vista: "carrusel"}
+#main{vista: "landing"}
 	%section#main.text-center
-		.display-block=image_tag(@campaing_landing.image, {witdh: "100%"})
+		- if @campaing_landing.redirect_url.present?
+			.display-block=link_to image_tag(@campaing_landing.image, {style: "display: block; width: 100%;"}), @campaing_landing.redirect_url
+		- else
+			.display-block=image_tag(@campaing_landing.image, {style: "display: block; width: 100%;"})
