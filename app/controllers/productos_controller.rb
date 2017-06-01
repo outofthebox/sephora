@@ -19,10 +19,13 @@ class ProductosController < ApplicationController
   def busqueda
 
     params[:buscar][:q] = params[:buscar][:q].gsub(/\//, " ") if params[:buscar].present? and params[:buscar][:q].present?
+
+    redirect_to(ver_landing_path(slug: 'fentybeauty')) and return if "fenty" == params[:buscar][:q].downcase
+
     @marcas_seleccionadas = params[:marca].split(",").map{|m| m.to_i } unless params[:marca].nil?
-    
+
     base = Producto.search(params[:buscar][:q], :with => {:publicado => true, :parent_id => 0}, :star => true)
-    
+
     if @marcas_seleccionadas.nil? || @marcas_seleccionadas.empty? 
       @productos_filtrados = base
     else
