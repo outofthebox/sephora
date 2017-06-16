@@ -536,7 +536,8 @@ namespace :productos do
         descripcion = ActionView::Base.full_sanitizer.sanitize(p.descripcion)
         usos = ActionView::Base.full_sanitizer.sanitize(p.usos)
         ingredientes = ActionView::Base.full_sanitizer.sanitize(p.ingredientes)
-        csv << [p.sap, p.upc, marca_name, p.nombre, descripcion, usos, ingredientes]
+        categorias = p.todas_las_categorias.join(" - ") rescue []
+        csv << [p.sap, p.upc, marca_name, p.nombre, categorias, descripcion, usos, ingredientes, p.precio, p.publicado]
       end
     end
 
