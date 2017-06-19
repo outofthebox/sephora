@@ -466,6 +466,10 @@ class PaginasController < ApplicationController
     render layout: 'contorno'
   end
 
+  def verify_google_console
+    render text: 'google-site-verification: google73f11619b8774ed8.html', layout: false, content_type: 'text/plain'
+  end
+
   private
   def auth
     if session[:colorful] == ENV['colorful']

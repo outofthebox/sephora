@@ -523,6 +523,8 @@ Sephora::Application.routes.draw do
 
   match "/bellezaparallevar", to: "animacion#index", via:[:get], as: "bellezaparallevar"
 
+  match "/google73f11619b8774ed8.html", to: "paginas#verify_google_console", via:[:get], as: "verify_google_console"
+
   #sitemap
   get '/sitemap', :to => 'paginas#sitemap'
 
