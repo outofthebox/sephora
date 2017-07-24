@@ -2,24 +2,24 @@ Sephora::Application.routes.draw do
 
   #mobile
   scope path: :mobile, as: "m" do
-    match "/", :to => 'mobile#home', :as => 'home'
-    match "download", :to => "mobile#download", :as => "download"
-    match 'politicas-de-privacidad', :to => 'mobile#politicas', :as => 'politicas'
-    match 'politicas-de-devoluciones', :to => 'mobile#devoluciones', :as => 'politicas_devoluciones'
-    match 'rebajas', :to => 'mobile/categorias#rebajas', :as => 'promociones_show'
-    match 'obsequios', :to => 'mobile/categorias#obsequios', :as => 'obsequios'
+    get "/", :to => 'mobile#home', :as => 'home'
+    get "download", :to => "mobile#download", :as => "download"
+    get 'politicas-de-privacidad', :to => 'mobile#politicas', :as => 'politicas'
+    get 'politicas-de-devoluciones', :to => 'mobile#devoluciones', :as => 'politicas_devoluciones'
+    get 'rebajas', :to => 'mobile/categorias#rebajas', :as => 'promociones_show'
+    get 'obsequios', :to => 'mobile/categorias#obsequios', :as => 'obsequios'
 
     #carrousels
-    match 'carrusel/:slug', to: "mobile/carrusel#show"
-    match 'landing/:slug', to: "mobile/landings#show"
+    get 'carrusel/:slug', to: "mobile/carrusel#show"
+    get 'landing/:slug', to: "mobile/landings#show"
 
-    match 'favorites(/:id)', :to => 'secciones#favorites', :as => 'favorites'
+    get 'favorites(/:id)', :to => 'secciones#favorites', :as => 'favorites'
 
     #favoritoslabios
-    match "/favoritoslabios", :to => 'mobile#favoritoslabios', :as => 'favoritoslabios'
+    get "/favoritoslabios", :to => 'mobile#favoritoslabios', :as => 'favoritoslabios'
 
     # favoritosmascarillas
-    match "/favoritosmascarillas", :to => 'mobile#favoritosmascarillas', :as => 'favoritosmascarillas'
+    get "/favoritosmascarillas", :to => 'mobile#favoritosmascarillas', :as => 'favoritosmascarillas'
 
     # mascarillas
     get 'facemask', :to => 'mobile/secciones#mascarillasantiedad', as: :mascarillasantiedad
@@ -30,13 +30,13 @@ Sephora::Application.routes.draw do
     get 'beneficiosmascarillas', to: 'mobile/secciones#beneficiosmascarillas', as: :beneficiosmascarillas
 
     #marcas
-    match "/marcas", :to => 'mobile/marcas#index', :as => 'marcas'
+    get "/marcas", :to => 'mobile/marcas#index', :as => 'marcas'
     resources :marca, controller: 'mobile/marcas', :except => [:index]
     scope path: :marca, :as => "marca" do
     end
 
     #Landings
-    match "/beautyclasses", to: "mobile/landings#beautyclasses", via:[:get], as: "beautyclasses"
+    get "/beautyclasses", to: "mobile/landings#beautyclasses", via:[:get], as: "beautyclasses"
     match "/beautyfair", to: "mobile/landings#beautyfair", via: [:get, :post], as: "beautyfair"
     match "/masterclass", to: "mobile/landings#masterclass", via: [:get, :post], as: "masterclass"
     match "/veracruz", to: "mobile/landings#veracruz", via: [:get, :post], as: "veracruz"
@@ -51,73 +51,73 @@ Sephora::Application.routes.draw do
     match '/cliniquecrayola', :to => 'mobile/landings#crayola', via: [:get, :post], as: "crayola"
     match '/promociondiadelasmadres', :to => 'mobile/landings#promociondiadelasmadres', via: [:get, :post], as: "promociondiadelasmadres"
 
-    match "/lista_eventos", :to => 'mobile/eventos#index', :as => 'eventos'
-    match "/eventos", :to => 'mobile/eventos#index', :as => 'eventos'
+    get "/lista_eventos", :to => 'mobile/eventos#index', :as => 'lista_eventos'
+    get "/eventos", :to => 'mobile/eventos#index', :as => 'eventos'
     resources :evento, controller: 'mobile/eventos', :except => [:index]
     scope path: :evento, :as => "evento" do
     end
 
-    match "/tiendas", :to => 'mobile/tiendas#index', :as => 'tiendas'
+    get "/tiendas", :to => 'mobile/tiendas#index', :as => 'tiendas'
     resources :tienda, controller: 'mobile/tiendas', :except => [:index]
     scope path: :tienda, :as => "tienda" do
     end
 
-    match "/minimakeovers", :to => 'mobile/minimakeovers#index', :as => 'minimakeovers'
-    match "/makeoverpersonalizado", :to => 'mobile/minimakeovers#index', :as => 'makeoverpersonalizado'
-    match "/beautyunoauno", :to => 'mobile/minimakeovers#index', :as => 'beautyunoauno'
-    match "/consultapersonalizadabelleza", :to => 'mobile/minimakeovers#index', :as => 'consultapersonalizadabelleza'
+    get "/minimakeovers", :to => 'mobile/minimakeovers#index', :as => 'minimakeovers'
+    get "/makeoverpersonalizado", :to => 'mobile/minimakeovers#index', :as => 'makeoverpersonalizado'
+    get "/beautyunoauno", :to => 'mobile/minimakeovers#index', :as => 'beautyunoauno'
+    get "/consultapersonalizadabelleza", :to => 'mobile/minimakeovers#index', :as => 'consultapersonalizadabelleza'
     resources :minimakeover, controller: 'mobile/minimakeovers', :except => [:index]
     scope path: :minimakeover, :as => "minimakeover" do
     end
 
-    match "/posts", :to => 'mobile/posts#index', :as => 'posts'
-    match "/posts/:id", :to => 'mobile/posts#show', :as => 'posts_show'
+    get "/posts", :to => 'mobile/posts#index', :as => 'posts'
+    get "/posts/:id", :to => 'mobile/posts#show', :as => 'posts_show'
     resources :post, controller: 'mobile/posts', :except => [:index]
     scope path: :post, :as => "post" do
     end
 
-    match "/soluciones", :to => 'mobile/soluciones#index', :as => 'soluciones'
+    get "/soluciones", :to => 'mobile/soluciones#index', :as => 'soluciones'
     resources :solucion, controller: 'mobile/soluciones', :except => [:index]
     scope path: :solucion, :as => "solucion" do
     end
 
 
-    match "/productos", :to => 'mobile/productos#index', :as => 'productos'
+    get "/productos", :to => 'mobile/productos#index', :as => 'productos'
     resources :producto, controller: 'mobile/productos', :except => [:index]
     scope path: :producto, :as => "producto" do
     end
 
-    match "/hotnow", :to => "mobile/productos#hotnow", :as => "hotnow"
-    match "/bestsellers", :to => "mobile/productos#bestsellers", :as => "bestsellers"
-    match "/lonuevo", :to => "mobile/productos#lonuevo", :as => "lonuevo"
-    match "/sephorapicks", :to => "mobile/productos#favoritos", :as => "favoritos"
+    get "/hotnow", :to => "mobile/productos#hotnow", :as => "hotnow"
+    get "/bestsellers", :to => "mobile/productos#bestsellers", :as => "bestsellers"
+    get "/lonuevo", :to => "mobile/productos#lonuevo", :as => "lonuevo"
+    get "/sephorapicks", :to => "mobile/productos#favoritos", :as => "favoritos"
 
-    match "/specials", :to => 'mobile/specials#index', :as => 'specials'
+    get "/specials", :to => 'mobile/specials#index', :as => 'specials'
     scope path: :special, :as => "special" do
-      match "/wallpapers", :to => "mobile/specials#wallpapers", :as => "wallpapers"
+      get "/wallpapers", :to => "mobile/specials#wallpapers", :as => "wallpapers"
     end
 
-    match "/usuarios", :to => 'mobile/usuarios#index', :as => 'usuarios'
+    get "/usuarios", :to => 'mobile/usuarios#index', :as => 'usuarios'
     scope path: :usuario, :as => "usuario" do
-      match 'logout(/:hash)', :to => 'mobile/usuarios#logout', :as => 'logout'
-      match '/perfil', :to => "mobile/usuarios#perfil", :as => "perfil"
-      match '/wishlist', :to => "mobile/usuarios#wishlist", :as => "wishlist"
-      match '/bienvenido', :to => "mobile/usuarios#bienvenido", :as => "bienvenido"
+      get 'logout(/:hash)', :to => 'mobile/usuarios#logout', :as => 'logout'
+      get '/perfil', :to => "mobile/usuarios#perfil", :as => "perfil"
+      get '/wishlist', :to => "mobile/usuarios#wishlist", :as => "wishlist"
+      get '/bienvenido', :to => "mobile/usuarios#bienvenido", :as => "bienvenido"
 
-      match  '/wishlist/add/:upc', :to => "usuarios#wishlist_add", :as => "wishlist_add"
-      match  '/wishlist/del/:upc', :to => "usuarios#wishlist_del", :as => "wishlist_del"
+      get  '/wishlist/add/:upc', :to => "usuarios#wishlist_add", :as => "wishlist_add"
+      get  '/wishlist/del/:upc', :to => "usuarios#wishlist_del", :as => "wishlist_del"
     end
 
-    match "/categorias", :to => 'mobile/categorias#index', :as => 'categorias'
+    get "/categorias", :to => 'mobile/categorias#index', :as => 'categorias'
     resources :categoria, controller: 'mobile/categorias', :except => [:index]
     scope path: :categoria, :as => "categoria" do
     end
 
     # mascarillas mobile
-    get 'mascarillashidratantes', :to => 'mobile#mascarillashidratantes', as: :mascarillashidratantes
-    get 'mascarillasantiedad', :to => 'mobile#mascarillasantiedad', as: :mascarillasantiedad
-    get 'mascarillasmultibeneficio', :to => 'mobile#mascarillasmultibeneficio', as: :mascarillasmultibeneficio
-    get 'mascarillasnocturnas', :to => 'mobile#mascarillasnocturnas', as: :mascarillasnocturnas
+    get 'mascarillashidratantes', :to => 'mobile#mascarillashidratantes', as: :m_mascarillashidratantes
+    get 'mascarillasantiedad', :to => 'mobile#mascarillasantiedad', as: :m_mascarillasantiedad
+    get 'mascarillasmultibeneficio', :to => 'mobile#mascarillasmultibeneficio', as: :m_mascarillasmultibeneficio
+    get 'mascarillasnocturnas', :to => 'mobile#mascarillasnocturnas', as: :m_mascarillasnocturnas
 
     # miraclecushion
     get 'miraclecushion', :to => 'mobile#miraclecushion', as: :miraclecushion
@@ -135,7 +135,7 @@ Sephora::Application.routes.draw do
     get "sephoraholiday", :to => 'holiday#index', :as => "mobile_sephoraholiday"
     get "sharethelove", :to => 'holiday#quotes', :as => "mobile_sharethelove"
 
-    match '/:seccion', :to => 'mobile/secciones#show'
+    get '/:seccion', :to => 'mobile/secciones#show'
   end
 
   #Usuarios
@@ -196,7 +196,7 @@ Sephora::Application.routes.draw do
   get "navidadsephora/suscribir", :to => 'instagram#suscribe', :as => "navidadsephora_suscribe"
   post "navidadsephora/suscribir", :to => 'instagram#fetcher', :as => "navidadsephora_suscribe_post"
   scope path: :mobile, as: "m" do
-    match "navidadsephora", :to => 'instagram#index', :as => "navidadsephora"
+    get "navidadsephora", :to => 'instagram#index', :as => "navidadsephora"
   end
 
   get 'monterrey', :to => 'paginas#monterrey', as: :monterrey
@@ -420,8 +420,8 @@ Sephora::Application.routes.draw do
   resources :animation_carousels, controller: "administracion/animation_carousels"
   resources :carousels, controller: "administracion/carousels"
 
-  match 'carrusel/:slug', to: "carrusel#show", as: :ver_carrusel
-  match 'landing/:slug', to: "campaing_landings#show", as: :ver_landing
+  get 'carrusel/:slug', to: "carrusel#show", as: :ver_carrusel
+  get 'landing/:slug', to: "campaing_landings#show", as: :ver_landing
 
   resources :popups do
     collection do
@@ -440,28 +440,28 @@ Sephora::Application.routes.draw do
     resources :store_events, except: :index, controller: "administracion/store_events"
     resources :carousels, controller: "administracion/carousels"
     resources :animation_carousels, controller: "administracion/animation_carousels" do
-      match :add_carousel, to: 'administracion/animation_carousels#add_carousel', via: [:put, :post]
+      get :add_carousel, to: 'administracion/animation_carousels#add_carousel', via: [:put, :post]
     end
 
-    match 'photogram/suscribe', to: 'administracion/photogram#suscribe', via: :get
-    match 'photogram/suscribe', to: 'administracion/photogram#fetch', via: :post
+    get 'photogram/suscribe', to: 'administracion/photogram#suscribe', via: :get
+    get 'photogram/suscribe', to: 'administracion/photogram#fetch', via: :post
 
     resources :photogram, except: :index, controller: "administracion/photogram"
 
-    match 'landings', to: 'administracion#landings', via: :get
-    match 'events', to: 'administracion#events', via: :get
-    match 'store_events', to: 'administracion#store_events', via: :get
-    match 'photogram', to: 'administracion#photogram', via: :get
+    get 'landings', to: 'administracion#landings', via: :get
+    get 'events', to: 'administracion#events', via: :get
+    get 'store_events', to: 'administracion#store_events', via: :get
+    get 'photogram', to: 'administracion#photogram', via: :get
 
     scope "/productos" do 
-      match 'prices', to: 'administracion#prices', via: :get
-      match 'update_prices', to: 'administracion#update_prices', via: :post
+      get 'prices', to: 'administracion#prices', via: :get
+      get 'update_prices', to: 'administracion#update_prices', via: :post
 
-      match 'descontinuados', to: 'administracion#descontinuados', via: :get
-      match 'update_descontinuados', to: 'administracion#update_descontinuados', via: :post
+      get 'descontinuados', to: 'administracion#descontinuados', via: :get
+      get 'update_descontinuados', to: 'administracion#update_descontinuados', via: :post
 
-      match 'files', to: 'administracion#files', via: :get
-      match 'upload_file', to: 'administracion#upload_file', via: :post
+      get 'files', to: 'administracion#files', via: :get
+      get 'upload_file', to: 'administracion#upload_file', via: :post
     end
   end
 
@@ -505,11 +505,11 @@ Sephora::Application.routes.draw do
   
   
   scope :animacion do
-    #match "/commodity", to: "animacion#commodity", via:[:get], as: "commodity"
-    #match "/clean", to: "animacion#clean", via:[:get], as: "clean"
-    #match "/tocca", to: "animacion#tocca", via:[:get], as: "tocca"
-    #match "/nest", to: "animacion#nest", via:[:get], as: "nest"
-    match "/beautyclasses", to: "animacion#beautyclasses", via:[:get], as: "beautyclasses"
+    #get "/commodity", to: "animacion#commodity", via:[:get], as: "commodity"
+    #get "/clean", to: "animacion#clean", via:[:get], as: "clean"
+    #get "/tocca", to: "animacion#tocca", via:[:get], as: "tocca"
+    #get "/nest", to: "animacion#nest", via:[:get], as: "nest"
+    get "/beautyclasses", to: "animacion#beautyclasses", via:[:get], as: "beautyclasses"
   end
 
   scope '/beautyfair2016', as: "beautyfair" do
@@ -521,15 +521,15 @@ Sephora::Application.routes.draw do
     match '/antara', :to => 'beautyfair#antara', via: [:get, :post], as: "antara"
   end
 
-  match "/bellezaparallevar", to: "animacion#index", via:[:get], as: "bellezaparallevar"
+  get "/bellezaparallevar", to: "animacion#index", via:[:get], as: "bellezaparallevar"
 
-  match "/google73f11619b8774ed8.html", to: "paginas#verify_google_console", via:[:get], as: "verify_google_console"
+  get "/google73f11619b8774ed8.html", to: "paginas#verify_google_console", via:[:get], as: "verify_google_console"
 
   #sitemap
   get '/sitemap', :to => 'paginas#sitemap'
 
-  # última línea, hace match con el resto de las rutas y muestra 404
-  #match  '*a', :to => 'paginas#error_404'
+  # última línea, hace get con el resto de las rutas y muestra 404
+  #get  '*a', :to => 'paginas#error_404'
 
   get '/:seccion', :to => 'secciones#ver'
 
