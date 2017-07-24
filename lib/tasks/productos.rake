@@ -490,6 +490,27 @@ namespace :productos do
     })
   end
 
+  task :full_with_image => :environment do
+    #AWS S3 SETUP
+    bucket_name = "sephoramexico"
+    temp_file = Tempfile.new("full_info_#{Date.today.to_s}")
+    key_path = "productos/"+File.basename(temp_file)+".csv"
+    s3 = AWS::S3.new
+
+    all_p = Producto.select(:id).all.map(&:id)
+    p_without_image = Producto.select(:id).where({:foto_file_name => nil}).map(&:id)
+    p_with_image = all_p - p_without_image
+
+    productos = Producto.where(id: p_with_image)
+
+    CSV.open(temp_file, "w") do |csv|
+      csv << ["sap", "upc", "marca", "nombre", "imagen", "download_url"]
+      productos.each do |p|
+        csv << [p.sap, p.upc, marca_name, p.nombre, p.foto_file_name, p.foto.url(:original, false)]
+      end
+    end
+  end
+
   task :full_info => :environment do
     #AWS S3 SETUP
     bucket_name = "sephoramexico"
