@@ -12,8 +12,3 @@ end
 ActiveSupport.on_load(:active_record) do
   self.include_root_in_json = false
 end
-
-# H13 fix
-if Rack::Utils.respond_to?("key_space_limit=")
-  Rack::Utils.key_space_limit = 524288
-end

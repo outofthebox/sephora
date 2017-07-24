@@ -1,6 +1,6 @@
 class Event < ActiveRecord::Base
 		has_many :store_events, dependent: :destroy
-	  attr_accessible :id, :title, :description, :photo
+	  attr_accessor :id, :title, :description, :photo
 		attr_accessor :photo
 		
 	  has_attached_file :photo, {

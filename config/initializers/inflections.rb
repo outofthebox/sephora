@@ -13,7 +13,3 @@
 # ActiveSupport::Inflector.inflections do |inflect|
 #   inflect.acronym 'RESTful'
 # end
-ActiveSupport::Inflector.inflections do |inflect|
-  inflect.irregular 'categoria', 'categorias'
-  inflect.irregular 'seccion', 'secciones'
-end

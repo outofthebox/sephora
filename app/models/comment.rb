@@ -1,5 +1,5 @@
 class Comment < ActiveRecord::Base
-  attr_accessible :post_id, :usuario_id, :padre, :comentario, :publicado
+  attr_accessor :post_id, :usuario_id, :padre, :comentario, :publicado
   has_one :post
   validate :validar
   def validar

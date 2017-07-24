@@ -1,5 +1,5 @@
 class Tienda < ActiveRecord::Base
-  attr_accessible :nombre, :direccion, :horario, :latitud, :longitud, :contacto, :foto, :slug, :mapa
+  attr_accessor :nombre, :direccion, :horario, :latitud, :longitud, :contacto, :foto, :slug, :mapa
   has_many :eventotiendas
   has_many :store_events
 

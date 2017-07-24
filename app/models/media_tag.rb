@@ -1,5 +1,5 @@
 class MediaTag < ActiveRecord::Base
-  attr_accessible :instagram_id, :instagram_link, :thumb_url, :pic_url, :video_url, :fullname, :username, :approved
+  attr_accessor :instagram_id, :instagram_link, :thumb_url, :pic_url, :video_url, :fullname, :username, :approved
 
   scope :approved, -> { where(:approved => true) }
 

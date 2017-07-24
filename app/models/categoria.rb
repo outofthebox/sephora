@@ -2,7 +2,7 @@ require "csv"
 
 class Categoria < ActiveRecord::Base
   acts_as_nested_set
-  attr_accessible :nombre, :parent_id, :cover, :urlslug, :remove_cover, :descripcion
+  attr_accessor :nombre, :parent_id, :cover, :urlslug, :remove_cover, :descripcion
   attr_accessor :cover, :remove_cover
 
   has_attached_file :cover, {

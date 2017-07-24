@@ -1,5 +1,5 @@
 class Marca < ActiveRecord::Base
-  attr_accessible :marca, :descripcion, :slug, :logo, :promo, :behindthebrand, :remove_promo, :remove_logo, :video, :vista
+  attr_accessor :marca, :descripcion, :slug, :logo, :promo, :behindthebrand, :remove_promo, :remove_logo, :video, :vista
   attr_accessor :logo, :promo, :remove_promo, :remove_logo
   default_scope :order => "marca ASC"
 

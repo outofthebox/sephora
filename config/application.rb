@@ -1,8 +1,6 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
-require "disqus"
-require "dotenv"
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -13,21 +11,6 @@ end
 
 module Sephora
   class Application < Rails::Application
-    $usuario_roles = { :admin => 'Admin', :editor => 'Editor', :usuario => 'Usuario', :suspendido => 'Suspendido' }
-
-
-    Disqus::defaults[:api_key]         = "j1CJAeCXd09glueixRrFbESoNCGrlL7qJHq5dmsJ4e2Un8TiWhRdH126wOoQkSXn" # your api key
-    Disqus::defaults[:account]         = "sephoramx", # your disqus account
-    Disqus::defaults[:developer]       = true, # allows threads to work on localhost
-    Disqus::defaults[:container_id]    = 'disqus_thread', # desired thread container
-    Disqus::defaults[:avatar_size]     = 48, # squared pixel size of avatars
-    Disqus::defaults[:color]           = "grey", # theme color
-    Disqus::defaults[:default_tab]     = "popular", # default widget tab
-    Disqus::defaults[:hide_avatars]    = false, # hide or show avatars
-    Disqus::defaults[:hide_mods]       = true, # hide or show moderation
-    Disqus::defaults[:num_items]       = 15, # number of comments to display
-    Disqus::defaults[:show_powered_by] = false, # show or hide powered by line
-
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -48,7 +31,7 @@ module Sephora
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    config.i18n.default_locale = :es
+    # config.i18n.default_locale = :de
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
@@ -64,42 +47,13 @@ module Sephora
     # Enforce whitelist mode for mass assignment.
     # This will create an empty whitelist of attributes available for mass-assignment for all models
     # in your app. As such, your models will need to explicitly whitelist or blacklist accessible
-    # parameters by using an attr_accessible or attr_protected declaration.
+    # parameters by using an attr_accessor or attr_protected declaration.
     # config.active_record.whitelist_attributes = true
-
-    config.assets.initialize_on_precompile = false
 
     # Enable the asset pipeline
     config.assets.enabled = true
 
-    config.to_prepare do
-        Devise::SessionsController.layout "mobile"
-        Devise::RegistrationsController.layout "mobile"
-        Devise::ConfirmationsController.layout "mobile"
-        Devise::UnlocksController.layout "mobile"
-        Devise::PasswordsController.layout "mobile"
-    end
-
-
-    config.generators do |g|
-      g.test_framework :rspec,
-        fixtures: true,
-        view_specs: false,
-        helper_specs: false,
-        routing_specs: false,
-        controller_specs: false,
-        request_specs: false
-      g.fixture_replacement :factory_girl, dir: "spec/factories"
-    end
-
-    config.autoload_paths += %W(#{config.root}/lib)
-
-    config.time_zone = "Mexico City"
-
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-    config.action_view.field_error_proc = Proc.new { |html_tag, instance| 
-      "#{html_tag}".html_safe 
-    }
   end
 end
