@@ -506,6 +506,7 @@ namespace :productos do
     CSV.open(temp_file, "w") do |csv|
       csv << ["sap", "upc", "marca", "nombre", "imagen", "download_url"]
       productos.each do |p|
+        marca_name = p.marca.marca rescue ""
         csv << [p.sap, p.upc, marca_name, p.nombre, p.foto_file_name, p.foto.url(:original, false)]
       end
     end
