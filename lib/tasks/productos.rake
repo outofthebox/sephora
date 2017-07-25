@@ -510,6 +510,19 @@ namespace :productos do
         csv << [p.sap, p.upc, marca_name, p.nombre, p.foto_file_name, p.foto.url(:original, false)]
       end
     end
+
+    s3.buckets[bucket_name].objects[key_path].write(:file => temp_file.path, :acl => :public_read)
+    url_for_read = s3.buckets[bucket_name].objects[key_path].url_for(:read) rescue "/"
+    url_for_download = url_for_read.to_s.split("?")[0] rescue url_for_read
+
+    puts "Uploading file #{temp_file.path} to bucket #{bucket_name}."
+    puts "Download from: #{url_for_read}"
+
+    template_email({
+      link: url_for_read,
+      message: "Esta es la lista de todos los productos, los podras encontrar en el siguiente link",
+      title: "Resumen de productos con imagen en el sitio"
+    })
   end
 
   task :full_info => :environment do
