@@ -4,7 +4,7 @@
     %span.hide Close
   .imagen=image_tag(popup.image, {width: "100%"})
   = form_tag(subscribe_popups_path(format: :js), method: "post", remote: true) do
-    %input{type: "hidden", name: "source", value: popup.campaing}
+    %input{type: "hidden", name: "reference", value: popup.campaing}
     .attributes
       - if popup.email.present?
         .form-group
@@ -25,7 +25,7 @@
       %button.btn.btn-black.btn-enviar ENVIAR
 :coffee
   $(document).ready ->
-    $("#modal-home").modal() unless $.cookie("modal-nuevo-registro")
+    $("#modal-home").modal() unless $.cookie("#{popup.campaing}")
 
     $("#btn_mail_enviar").live "click", (e) ->
       e.preventDefault()

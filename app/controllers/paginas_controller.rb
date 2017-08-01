@@ -3,7 +3,7 @@ class PaginasController < ApplicationController
   before_filter :auth, :only => [:colorful, :colorful_show] if ENV['color_activo'] == '0'
 
   def home
-    @popup = Popup.active_popup
+    @popup = params[:popup].present? ? Popup.find_by_campaing(params[:popup]) : Popup.find(1)
     @bestsellers = Seccion.seccion_actual(Seccion.by_slug(:sephorapicks))
     @lonuevo = Seccion.seccion_actual(Seccion.by_slug(:lonuevo))
     @seccion = Seccion.includes(:productos).by_slug('hotnow')
