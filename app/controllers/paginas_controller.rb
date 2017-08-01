@@ -3,7 +3,7 @@ class PaginasController < ApplicationController
   before_filter :auth, :only => [:colorful, :colorful_show] if ENV['color_activo'] == '0'
 
   def home
-    @popup = params[:popup].present? ? Popup.find_by_campaing(params[:popup]) : Popup.find(1)
+    @popup = Popup.find(1)
     @bestsellers = Seccion.seccion_actual(Seccion.by_slug(:sephorapicks))
     @lonuevo = Seccion.seccion_actual(Seccion.by_slug(:lonuevo))
     @seccion = Seccion.includes(:productos).by_slug('hotnow')
@@ -14,22 +14,6 @@ class PaginasController < ApplicationController
 
     @careoca_makeup = Producto.where(:upc => ["3378872080497","3378872080473", "3378872080572","3378872080442"])
     @careoca_bath = Producto.where(:upc => ["3378872079781", "3378872079743", "3378872079750", "3378872079767", "3378872079736"])
-  end
-
-  def fenty
-    @popup = Popup.find(2)
-    @bestsellers = Seccion.seccion_actual(Seccion.by_slug(:sephorapicks))
-    @lonuevo = Seccion.seccion_actual(Seccion.by_slug(:lonuevo))
-    @seccion = Seccion.includes(:productos).by_slug('hotnow')
-    @contenido = Seccion.seccion_actual(@seccion)
-    @registro = Registro.new
-    @banners = Banner.principal.in_range.prioritise
-    @minis = {izq: Banner.get_mini_izquierdo, der: Banner.get_mini_derecho}
-
-    @careoca_makeup = Producto.where(:upc => ["3378872080497","3378872080473", "3378872080572","3378872080442"])
-    @careoca_bath = Producto.where(:upc => ["3378872079781", "3378872079743", "3378872079750", "3378872079767", "3378872079736"])
-
-    render :home
   end
 
   def beautyfair; end

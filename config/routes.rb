@@ -427,7 +427,7 @@ Sephora::Application.routes.draw do
   resources :popups do
     collection do
       match 'subscribe', to: 'popups#subscribe', via: [:get, :post], as: :subscribe
-      match 'campaing/:popup', to: 'paginas#home', via: [:get], as: :campaing
+      match 'campaing/:popup', to: 'popups#campaing', via: [:get], as: :campaing
     end
   end
   resources :animations, controller: "administracion/animations"

@@ -1,4 +1,4 @@
-.modal#modal-home{
+#modal-home, #modal-campaing{
   width: 720px;
   max-height: 596px;
   margin: auto;
@@ -54,6 +54,13 @@
       line-height: 1em;
     }
   }
+}
+
+#modal-campaing{
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  max-height: auto;
   &.half-form{
     .attributes{
       position: absolute;
@@ -62,7 +69,7 @@
       left: inherit;
       width: 53%;
       height: 100%;
-      padding-top: 30%;
+      padding-top: 44%;
       padding-left: 0px;
       padding-right: 3%;
       input{
@@ -83,10 +90,12 @@
         margin: auto;
         font-weight: 100;
         letter-spacing: 2px;
-        height: 26px;
+        height: 38px;
         line-height: 1em;
-        margin-top: 39px;
+        margin-top: 88px;
         min-width: 93px;
+        width: 121px;
+        font-weight: bold;
       }
     }
   }

@@ -19,4 +19,9 @@ class PopupsController < Administracion::PopupsController
       format.js { render "subscribe", locals: {campaing: @campaing} }
     end
   end
+
+  def campaing
+    @popup = Popup.find_by_campaing(params[:popup])
+    render 'campaing', layout: 'application'
+  end
 end
