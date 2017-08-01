@@ -13,9 +13,10 @@ class PopupsController < Administracion::PopupsController
     information[:REFERENCE] = params[:reference].present? ? params[:reference] : "home"
 
     @response = 200 if information[:EMAIL].present? && sc.suscribe_to(information)
+    @campaing = params[:reference]
 
     respond_to do |format|
-      format.js
+      format.js { render "subscribe", locals: {campaing: @campaing} }
     end
   end
 end

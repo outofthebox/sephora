@@ -36,7 +36,7 @@ Sephora::Application.routes.draw do
     end
 
     #Landings
-    match "/fenty-beauty", to: "mobile/landings#fenty", via:[:get], as: "fenty"
+    #match "/fenty-beauty", to: "mobile/landings#fenty", via:[:get], as: "fenty"
     match "/beautyclasses", to: "mobile/landings#beautyclasses", via:[:get], as: "beautyclasses"
     match "/beautyfair", to: "mobile/landings#beautyfair", via: [:get, :post], as: "beautyfair"
     match "/masterclass", to: "mobile/landings#masterclass", via: [:get, :post], as: "masterclass"
@@ -427,6 +427,7 @@ Sephora::Application.routes.draw do
   resources :popups do
     collection do
       match 'subscribe', to: 'popups#subscribe', via: [:get, :post], as: :subscribe
+      match 'campaing/:popup', to: 'paginas#home', via: [:get], as: :campaing
     end
   end
   resources :animations, controller: "administracion/animations"
@@ -513,7 +514,7 @@ Sephora::Application.routes.draw do
     match "/beautyclasses", to: "animacion#beautyclasses", via:[:get], as: "beautyclasses"
   end
 
-  match "/fenty-beauty", to: "paginas#fenty", via:[:get], as: "fenty"
+  #match "/fenty-beauty", to: "paginas#fenty", via:[:get], as: "fenty"
 
   scope '/beautyfair2016', as: "beautyfair" do
     match '/', :to => 'beautyfair#home', via: [:get, :post], as: "home"
