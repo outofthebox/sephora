@@ -14,14 +14,14 @@ class SeccionesController < ApplicationController
 
       slugs[:animation] = AnimationCarousel.all.map(&:slug)
       slugs[:campaings] = CampaingLanding.all.map(&:vanity_url)
-      slugs[:popups] = Popup.all.map(&:campaing).map(&:parameterize)
+      #slugs[:popups] = Popup.all.map(&:campaing).map(&:parameterize)
 
       if slugs[:animation].include?(params[:seccion])
         redirect_to ver_carrusel_path(slug: params[:seccion])
       elsif slugs[:campaings].include?(params[:seccion])
         redirect_to ver_landing_path(slug: params[:seccion])
-      elsif slugs[:popups].include?(params[:seccion])
-        redirect_to root_path(popup: params[:seccion])
+      #elsif slugs[:popups].include?(params[:seccion])
+      #  redirect_to root_path(popup: params[:seccion])
       else
         redirect_to root_path
       end
