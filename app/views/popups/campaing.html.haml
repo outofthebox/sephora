@@ -1,15 +1,13 @@
 #modal-campaing.half-form
   .imagen=image_tag('fenty-landing.jpg', {width: "100%"})
   = form_tag(subscribe_popups_path(format: :js), method: "post", remote: true) do
-    %input{type: "hidden", name: "reference", value: @popup.campaing}
+    %input{type: "hidden", name: "reference", value: @campaing.campaing}
     .attributes
       .form-group
         %input{type: "text", name: "email", class: "form-control"}
       %button.btn.btn-black.btn-enviar ENVIAR
 :coffee
   $(document).ready ->
-    $("#modal-home").modal() unless $.cookie("#{@popup.campaing}")
-
     $("#btn_mail_enviar").live "click", (e) ->
       e.preventDefault()
       $("#modal-home").modal()

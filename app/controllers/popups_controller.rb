@@ -21,7 +21,7 @@ class PopupsController < Administracion::PopupsController
   end
 
   def campaing
-    @popup = Popup.find_by_campaing(params[:popup])
+    @campaing = Popup.find_by_campaing(params[:popup])
     render 'campaing', layout: 'application'
   end
 end
