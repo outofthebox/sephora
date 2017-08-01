@@ -36,6 +36,7 @@ Sephora::Application.routes.draw do
     end
 
     #Landings
+    match "/fenty-beauty", to: "mobile/landings#fenty", via:[:get], as: "fenty"
     match "/beautyclasses", to: "mobile/landings#beautyclasses", via:[:get], as: "beautyclasses"
     match "/beautyfair", to: "mobile/landings#beautyfair", via: [:get, :post], as: "beautyfair"
     match "/masterclass", to: "mobile/landings#masterclass", via: [:get, :post], as: "masterclass"
@@ -502,8 +503,8 @@ Sephora::Application.routes.draw do
 
   match '/cliniquecrayola', :to => 'paginas#crayola', via: [:get, :post], as: "crayola"
   match '/promociondiadelasmadres', :to => 'paginas#promociondiadelasmadres', via: [:get, :post], as: "promociondiadelasmadres"
-  
-  
+
+
   scope :animacion do
     #match "/commodity", to: "animacion#commodity", via:[:get], as: "commodity"
     #match "/clean", to: "animacion#clean", via:[:get], as: "clean"
@@ -511,6 +512,8 @@ Sephora::Application.routes.draw do
     #match "/nest", to: "animacion#nest", via:[:get], as: "nest"
     match "/beautyclasses", to: "animacion#beautyclasses", via:[:get], as: "beautyclasses"
   end
+
+  match "/fenty-beauty", to: "paginas#fenty", via:[:get], as: "fenty"
 
   scope '/beautyfair2016', as: "beautyfair" do
     match '/', :to => 'beautyfair#home', via: [:get, :post], as: "home"

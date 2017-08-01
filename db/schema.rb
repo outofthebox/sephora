@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20170529163328) do
+ActiveRecord::Schema.define(:version => 20170801060710) do
 
   create_table "animation_carousels", :force => true do |t|
     t.string   "name"
@@ -332,6 +332,8 @@ ActiveRecord::Schema.define(:version => 20170529163328) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.boolean  "half_form"
+    t.string   "campaing"
   end
 
   create_table "post_favs", :force => true do |t|

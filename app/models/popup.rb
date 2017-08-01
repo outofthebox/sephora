@@ -5,9 +5,9 @@ class Popup < ActiveRecord::Base
 
   validates :popup_type, presence: true, inclusion: { in: POPUP_TYPES, message: "is not a valid popup type" }
   validates :image, presence: true
-  
+
   has_attached_file :image, {
-    :styles => { :one_attribute => "720x560>" },
+    :styles => { :one_attribute => "720x560>", thumb: "250x250#" },
     :default_url => "//s3.amazonaws.com/sephoramexico/estatico/popups/default_:style_popup.png"
   }.merge(PAPERCLIP_STORAGE_OPTIONS)
 
@@ -16,6 +16,10 @@ class Popup < ActiveRecord::Base
   def self.active_popup
   	popups = self.in_range
   	return popups.first if popups.present?
+  end
+
+  def half_form?
+    half_form.present?
   end
 end
 

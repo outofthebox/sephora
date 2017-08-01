@@ -2,6 +2,12 @@
   .col-md-4
     .row
       .form-group.col-md-12
+        = f.label "Campaing"
+        = f.text_field :campaing, {class: "form-control"}
+        - unless @popup.errors[:campaing].empty?
+          .error.pull-right.small.text-danger
+            =@popup.errors.messages[:campaing].join(",")
+      .form-group.col-md-12
         = f.label "Valid From"
         %br/
         = f.date_select :valid_from, {default: Date.today}

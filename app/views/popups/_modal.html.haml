@@ -1,9 +1,10 @@
-#modal-home.modal.fade.index-popup{role: "dialog"}
+#modal-home.modal.fade.index-popup{role: "dialog", class: popup.half_form? ? "half-form" : ""}
   %button.close-modal.pull-right{:title => "Close", :type => "button"}
     %span{"aria-hidden" => "true"} &#215;
     %span.hide Close
   .imagen=image_tag(popup.image, {width: "100%"})
   = form_tag(subscribe_popups_path(format: :js), method: "post", remote: true) do
+    %input{type: "hidden", name: "source", value: popup.campaing}
     .attributes
       - if popup.email.present?
         .form-group
@@ -33,5 +34,3 @@
     $("button.close-modal").live "click", (e) ->
       e.preventDefault()
       $("#modal-home").modal("hide")
-    
-

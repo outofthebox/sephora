@@ -7,25 +7,9 @@
       .clearfix
     .page-body
       - @popups.each do |popup|
-        .index-popup
-          .imagen=link_to image_tag(popup.image, {width: "100%"}), admin_popup_path(popup)
-          .attributes
-            - if popup.email.present?
-              .form-group
-                %input{type: "text", name: "email", class: "form-control"}
-                %label Email
-            - if popup.name.present?
-              .form-group
-                %input{type: "text", name: "name", class: "form-control"}
-                %label Nombre
-            - if popup.dob.present?
-              .form-group
-                %input{type: "date", name: "dob", class: "form-control"}
-                %label Cumpleaños
-            - if popup.store.present?
-              .form-group
-                %input{type: "text", name: "store", class: "form-control"}
-                %label Tienda
-            %button.btn.btn-black Enviar
+        .index-popup.col-md-3
+          .alert.alert-info
+            %p=popup.campaing
+          .imagen=link_to image_tag(popup.image(:thumb)), admin_popup_path(popup)
           %span.badge.valid-date=popup.valid_from.to_s
           %span.badge.valid-date=popup.valid_to.to_s
