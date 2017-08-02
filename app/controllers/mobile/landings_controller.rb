@@ -4,7 +4,11 @@ class Mobile::LandingsController < MobileController
     @campaing_landing = CampaingLanding.find_by_vanity_url(params[:slug])
   end
 
-	def beautyfair; end
+	def fenty
+    @campaing = Popup.find_by_campaing("fenty-beauty")
+  end
+
+  def beautyfair; end
   def masterclass; end
   def oasis; end
   def brow_collection; end

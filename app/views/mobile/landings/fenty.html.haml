@@ -1,0 +1,21 @@
+#modal-campaing.mobile
+  .imagen=image_tag('fenty-landing-mobile.jpg', {width: "100%"})
+  = form_tag(subscribe_popups_path(format: :js), method: "post", remote: true, class: "campaing-sumbit") do
+    %input{type: "hidden", name: "reference", value: @campaing.campaing}
+    .attributes
+      .form-group
+        %input{type: "text", name: "email", class: "form-control"}
+      %button#btn_mail_enviar.btn.btn-black.btn-enviar ENVIAR
+:coffee
+  $(document).ready ->
+    $("#btn_mail_enviar").live "click", (e) ->
+      e.preventDefault()
+      $("#btn_mail_enviar").text("GRACIAS")
+      $("#btn_mail_enviar").attr("disabled", "disabled")
+      $("#modal-campaing form").submit()
+
+
+:css
+  body{
+    background: black;
+  }

@@ -99,4 +99,25 @@
       }
     }
   }
+  &.mobile{
+    .attributes{
+      padding-top: 73%;
+      input{
+        width: 55%;
+        height: 16px;
+      }
+      button.btn-black{
+        background-color: white;
+        color: black;
+        width: 25%;
+        font-size: 10px;
+        height: 20px;
+        margin-top: 22px;
+        &:disabled{
+          background: white !important;
+          opacity: 1;
+        }
+      }
+    }
+  }
 }
